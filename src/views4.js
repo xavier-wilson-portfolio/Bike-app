@@ -51,8 +51,8 @@ VIEWS.home = {
       </div></section>
     <section class="stack"><div class="sechead"><div class="eyebrow">The course</div><h2 class="disp">Your 14 parts</h2><p>Open any part, any time. The highlighted one is where you are now.</p></div>
       <div class="lessons">${sorted("phases").map((p, i) => lessonCard(p, i, p.id === nx.id)).join("")}</div></section>
-    ${X.garage3d ? `<section class="band full"><div class="band-in stack"><div class="sechead"><div class="eyebrow">Up close</div><h2 class="disp">Know every piece</h2><p>Click a picture to pull that part out of the bike in the 3D garage.</p></div>
-      <div class="gallery2">${GALLERY.map(([img, t, d, g], i) => `<button class="gtile" data-3d="${g}"><img src="img/${img}.svg" alt="${esc(t)}" loading="lazy"><span><b>${esc(t)}</b><small>${esc(d)}</small></span></button>`).join("")}</div></div></section>` : ""}
+    ${X.diagrams3d && GALLERY.some(([, , , g]) => galleryDiags(g).length) ? `<section class="band full"><div class="band-in stack"><div class="sechead"><div class="eyebrow">Up close</div><h2 class="disp">Know every piece</h2><p>Click a picture to open its 3D diagrams and see how every part fits together.</p></div>
+      <div class="gallery2">${GALLERY.filter(([, , , g]) => galleryDiags(g).length).map(([img, t, d, g], i) => { const n = galleryDiags(g).length; return `<button class="gtile" data-gal="${g}"><img src="img/${img}.svg" alt="${esc(t)}" loading="lazy"><span><b>${esc(t)}</b><small>${esc(d)} ${n > 1 ? n + " 3D diagrams." : "1 3D diagram."}</small></span></button>`; }).join("")}</div></div></section>` : ""}
     ${X.videos ? `<section class="vband"><div class="vb-text stack"><div class="eyebrow">Watch & learn</div><h2 class="disp">See a ${BIKE.short} rebuilt, start to finish</h2><p class="muted" style="margin:0">A 20-part video series following one ${BIKE.short} restoration. Watch an episode before you start the matching job.</p>
         <div class="row"><button class="btn pri" data-go="videos">${ic("play")} Watch the series</button><span class="hint-text">${VIDEOS.length} videos · ${totalRuntime()}</span></div></div>
       <button class="vb-art" data-go="videos" aria-label="Open the video series">${vidThumb(6, "big")}<span class="vp-btn">${ic("play")}</span></button></section>` : ""}
@@ -74,7 +74,7 @@ VIEWS.home = {
     </div>
     <details class="more"><summary>Show all the numbers ${ic("chev")}</summary><div class="stack" style="margin-top:12px">${VIEWS.overview.render()}</div></details>`;
   },
-  bind(root) { bindHeroPhoto(root); bindSetup(root); bindTables(root); bindLessonLinks(root); bindStepChecks(root); $$("[data-3d]", root).forEach(b => b.onclick = () => openIn3D(b.dataset["3d"])); $("#qPhoto", root) && ($("#qPhoto", root).onclick = () => uploadPhotos({})); }
+  bind(root) { $$("[data-gal]", root).forEach(b => b.onclick = () => galleryOpen(b.dataset.gal)); bindHeroPhoto(root); bindSetup(root); bindTables(root); bindLessonLinks(root); bindStepChecks(root); $$("[data-3d]", root).forEach(b => b.onclick = () => openIn3D(b.dataset["3d"])); $("#qPhoto", root) && ($("#qPhoto", root).onclick = () => uploadPhotos({})); }
 };
 
 /* ---------- Paint studio ---------- */
@@ -197,3 +197,25 @@ VIEWS.videos = {
     $$("[data-watch]", root).forEach(b => b.onclick = async () => { const m = clone(meta()); m.videosWatched = Object.assign({}, m.videosWatched || {}); const id = b.dataset.watch; if (m.videosWatched[id]) delete m.videosWatched[id]; else m.videosWatched[id] = today(); await store.put("meta", m, { action: `${m.videosWatched[id] ? "watched" : "unmarked"} video part ${VIDEOS.findIndex(v => v[0] === id) + 1}` }); });
   }
 };
+
+/* "Know every piece": which 3D diagrams belong to each picture on the home page */
+const GALLERY_DIAG = {
+  engine: /^(Camshaft|Crankshaft|Clutch|Cam Chain|Clutch Release|Crankcase|Cylinder|Cylinder Head|Cylinder Head Cover|Gear Shifting|Kick Starter|Oil Pan|Oil Pump|Starter Clutch|Transmission)\b/,
+  brakeF: /^(Front fork leg|Front brake caliper|Front wheel|Front Brake Hose|Front Calipers|Front Fork|Front Master Cylinder|Front Wheel|Steering Stem|Handlebar)/,
+  gauges: /^(Speedometer|Headlamp|Left Handle Switch|Right Handle Switch|Handlebar)/,
+  tank: /^(Fuel Tank|Fuel Cock)/,
+  exhaust: /^Muffler/,
+  shocks: /^(Rear Wheel|Rear Swinging Arm|Rear Calipers|Rear Brake Hose|Rear Master Cylinder|Chain Case|Rear Fender|Rear Combination Lamp)/,
+};
+function galleryDiags(g) { const rx = GALLERY_DIAG[g]; return rx && typeof D3_MODELS !== "undefined" ? DIAGRAMS.filter(d => D3_MODELS[d.id] && rx.test(d.title)) : []; }
+function galleryOpen(g) {
+  const list = galleryDiags(g), G = GALLERY.find(x => x[3] === g) || [];
+  const open = id => { closeModal(); DV.ret = "home"; DV.id = null; go("diagram-" + id); };
+  if (!list.length) return; if (list.length === 1) { open(list[0].id); return; }
+  modal(`<div class="galpick stack"><div class="row" style="justify-content:space-between;flex-wrap:nowrap"><h3 style="margin:0">${esc(G[1] || "Diagrams")}: pick a 3D diagram</h3><button class="linkbtn" data-galx aria-label="Close">✕</button></div>
+    <div class="galgrid">${list.map(d => `<button class="galitem" data-galgo="${d.id}">${D3_THUMBS[d.id] ? `<img src="${D3_THUMBS[d.id]}" alt="" loading="lazy">` : `<span class="galph">${ic("cube")}</span>`}<b>${esc(d.title)}</b>${d.models && list.filter(x => x.title === d.title).length > 1 ? `<small>${esc(d.models)}</small>` : ""}</button>`).join("")}</div></div>`, m => {
+    m.classList.add("galmodal");
+    $$("[data-galgo]", m).forEach(b => b.onclick = () => open(b.dataset.galgo));
+    $("[data-galx]", m).onclick = closeModal;
+  });
+}

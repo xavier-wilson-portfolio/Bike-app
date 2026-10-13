@@ -1314,3 +1314,13 @@ article.gt::before{content:"";position:absolute;left:14px;top:19px;width:10px;he
 @media (max-width:600px){.top .search{display:none}}
 .top .brand .bt{display:block!important}
 @media (max-width:560px){.top .brand .bt b{font-size:17px}}
+/* "Know every piece" diagram picker */
+.modal.galmodal{max-width:760px}
+.galgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.galitem{all:unset;cursor:pointer;box-sizing:border-box;border:1px solid var(--line);border-radius:12px;padding:8px;display:flex;flex-direction:column;gap:5px;background:var(--surface)}
+.galitem:hover{border-color:var(--blue);box-shadow:var(--shadow)}
+.galitem:focus-visible{outline:2px solid var(--blue-ink)}
+.galitem img,.galph{width:100%;aspect-ratio:4/3;object-fit:contain;border-radius:8px;background:var(--stage-bg);display:grid;place-items:center}
+.galph svg{width:28px;height:28px;color:var(--faint)}
+.galitem b{font-size:13.5px;line-height:1.25}
+.galitem small{font-size:11.5px;color:var(--muted)}
