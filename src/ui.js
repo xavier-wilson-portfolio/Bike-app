@@ -63,12 +63,13 @@ function shell() {
     <header class="top" id="top">
       <div class="top-in">
         <button class="brand" data-goto="home" aria-label="Home"><span class="logo">${ic("bike")}</span><span class="bt"><b id="brandName">Revora</b><span id="brandBike">${BIKE.name}</span></span></button>
-        <div class="vbox" id="vbox"></div>
-        <nav class="mainnav" id="nav" aria-label="Main"></nav>
+        <div class="progline" id="progLine" role="img"></div>
+        <nav class="mainnav" id="nav" aria-label="Main" hidden></nav>
         <div class="top-r">
+          <div class="vbox" id="vbox"></div>
+          ${window.rvHasAccounts && rvHasAccounts() ? `<button class="btn sm tan garagebtn" onclick="rvAccount()">My garage</button>` : ""}
           <div class="search"><span>${ic("search")}</span><input id="gsearch" type="search" placeholder="Search" autocomplete="off" aria-label="Search everything"><div class="sresults" id="sresults" hidden></div></div>
           <span class="savebadge" id="saveBadge" title=""><i></i><span>Loading…</span></span>
-          ${window.rvHasAccounts && rvHasAccounts() ? `<button class="btn sm acctbtn" onclick="rvAccount()">${window.RV_CLOUD ? "My projects" : "Sign in"}</button>` : ""}
           <button class="iconbtn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">${ic("menu")}</button>
         </div>
       </div>
@@ -100,7 +101,7 @@ function megaHtml() {
 }
 function renderMobMenu() {
   const cur = R.sec === "lesson" ? "course" : R.sec;
-  $("#mobmenu").innerHTML = `<div class="mob-in"><div class="row" style="justify-content:space-between"><b class="eyebrow">Menu</b><button class="iconbtn" id="mobX" aria-label="Close menu">${ic("x")}</button></div>
+  $("#mobmenu").innerHTML = `<div class="mob-in"><div class="row" style="justify-content:space-between"><b class="eyebrow">Menu</b><button class="iconbtn" id="mobX" aria-label="Close menu">${ic("x")}</button></div>${window.rvHasAccounts && rvHasAccounts() ? `<div class="row mob-acct"><button class="btn sm tan garagebtn" onclick="rvAccount()">My garage</button>${window.RV_CLOUD ? `<button class="btn sm" onclick="rvSignOut()">Sign out</button>` : ""}</div>` : ""}
     <div class="moblist">${SECTIONS.filter(s => s.id === "home" || s.main).map(s => `<button class="mlink ${cur === s.id ? "on" : ""}" data-goto="${s.id}">${ic(s.i)}<span><b>${esc(s.t)}</b><small>${esc(s.d || "Overview and progress")}</small></span></button>`).join("")}</div>
     ${NAV_GROUPS.map(([k, l]) => `<div class="eyebrow" style="margin-top:14px">${esc(l)}</div><div class="moblist grp">${SECTIONS.filter(s => s.grp === k).map(s => `<button class="mlink ${cur === s.id ? "on" : ""}" data-goto="${s.id}">${ic(s.i)}<span><b>${esc(s.t)}</b></span></button>`).join("")}</div>`).join("")}</div>`;
   $("#mobX").onclick = closeMenus;
@@ -113,8 +114,11 @@ function renderNav() {
   const m = meta(), prog = overallProgress();
   $("#brandName").textContent = "Revora";
   $("#brandBike").textContent = m.bike || "" + BIKE.name + "";
-  const vq = $("#vq"); if (vq) vq.placeholder = vehLabel(curVehicle()); const vp = $("#vpop"); if (vp && !vp.hidden && document.activeElement === vq) { /* keep open popover fresh */ vp.innerHTML = vehResultHtml(vq.value); }
+  const vq = $("#vq"); if (vq) vq.placeholder = window.RV_CLOUD ? (RV_CLOUD.projectName || vehLabel(curVehicle())) : vehLabel(curVehicle()); const vp = $("#vpop"); if (vp && !vp.hidden && document.activeElement === vq) { /* keep open popover fresh */ vp.innerHTML = vehResultHtml(vq.value); }
   $("#progChip").innerHTML = `<i style="--p:${Math.round(prog * 100)}"></i>${pct(prog)} restored`;
+  const pp = Math.round(prog * 100), pl = $("#progLine");
+  if (pl) { pl.setAttribute("aria-label", pp + "% restored"); pl.title = pp + "% of the bike restored";
+    pl.innerHTML = `<svg class="pl-bike" viewBox="0 0 34 20" aria-hidden="true"><circle cx="7" cy="14" r="5"/><circle cx="27" cy="14" r="5"/><path d="M7 14l6-7h7l4 7M13 7l-2-3h-3M20 7l3-3h3M15 11h6"/></svg><span class="pl-track"><i style="width:${pp}%"></i><b style="left:${pp}%"></b></span><svg class="pl-flag" viewBox="0 0 20 22" aria-hidden="true"><path d="M3 21V2" class="pole"/><rect x="3" y="2" width="15" height="10" class="cloth"/><path d="M3 2h5v5H3zM13 2h5v5h-5zM8 7h5v5H8z" class="chk"/></svg><span class="pl-pc">${pp}%</span>`; }
   $("#modeBadge").textContent = window.RV_CLOUD ? (ME.canWrite ? "Saved to your account" : "View only") : ME.mode === "shared" ? (ME.canWrite ? "Team data · live" : "View only") : "This browser only";
   $("#modeBadge").title = ME.mode === "shared" ? "Everyone you share this page with sees the same records, live." : "Records are saved in this browser only. Export backups often.";
   const sec = SEC[R.sec], L = R.sec === "lesson" ? sorted("phases").findIndex(p => p.id === R.lesson) + 1 : 0;

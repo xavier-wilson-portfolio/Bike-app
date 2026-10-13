@@ -1271,3 +1271,28 @@ article.gt::before{content:"";position:absolute;left:14px;top:19px;width:10px;he
 @media (prefers-reduced-motion:reduce){.tach .needle{animation:none}}
 .bench-txt{text-align:left;align-items:flex-start}
 @media (max-width:560px){.pk-acct .muted{display:none}.pk-top{margin-top:-36px}}
+/* ===== header v4: everything in the menu, progress line in the middle ===== */
+.top .top-in{display:flex;align-items:center;gap:14px}
+.top .mainnav,.top .mega,.subbar .progchip{display:none!important}
+.top .menu-btn{display:grid!important;flex:none}
+.top .top-r{margin-left:0;display:flex;gap:8px;align-items:center;flex:none}
+.top .vbox{flex:0 0 200px}
+.top .search{flex:0 0 170px;display:block}
+.garagebtn{white-space:nowrap}
+.progline{flex:1 1 auto;display:flex;align-items:center;justify-content:center;gap:8px;min-width:0;max-width:440px;margin:0 auto}
+.pl-bike{width:30px;height:18px;flex:none;fill:none;stroke:var(--navy-2);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.pl-flag{width:17px;height:19px;flex:none}
+.pl-flag .pole{stroke:var(--navy-2);stroke-width:1.8;stroke-linecap:round}
+.pl-flag .cloth{fill:#fff;stroke:var(--navy-2);stroke-width:1.2}
+.pl-flag .chk{fill:var(--navy-2)}
+.pl-track{position:relative;flex:1 1 auto;height:6px;border-radius:3px;background:var(--gray-bg);min-width:60px}
+.pl-track i{position:absolute;left:0;top:0;bottom:0;border-radius:3px;background:var(--st-green)}
+.pl-track b{position:absolute;top:50%;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;background:#fff;border:3px solid var(--st-green);box-sizing:border-box}
+.pl-pc{font-family:var(--f-display);font-weight:700;font-size:15px;color:var(--navy-2);min-width:3.2ch}
+.mob-acct{gap:8px;padding:6px 10px 2px}
+@media (max-width:1240px){.top .vbox{flex-basis:160px}.top .search{flex-basis:130px}.top .savebadge{display:none}}
+@media (max-width:1020px){.top .search{display:none}.top .brand .bt span{display:none}}
+@media (max-width:820px){.top .top-in{flex-wrap:wrap;row-gap:6px}.progline{order:5;flex:1 1 100%;max-width:none;margin:0}.top .top-r{margin-left:auto}}
+@media (max-width:560px){.top .vbox{flex-basis:120px}.garagebtn{padding:4px 9px}.top .brand .bt{display:none}}
+.btn.tan.garagebtn{background:#D9BF8E;border-color:#C2A06A;color:#2B2112}
+.btn.tan.garagebtn:hover{background:#CDAF78;border-color:#A9884F}
