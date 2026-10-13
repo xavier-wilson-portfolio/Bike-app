@@ -207,10 +207,10 @@
   /* ---------- open a bike ---------- */
   async function openApp(bikeId, cloud) {
     spin();
-    try { window.PACK = await getJson("packs/" + encodeURIComponent(bikeId) + "/pack.json"); }
+    try { window.PACK = await getJson("packs/" + encodeURIComponent(bikeId) + "/pack.json?v=" + (window.RV_BUILD || "")); }
     catch (e) { return fail("Couldn't load the data for this bike. Check your internet and try again."); }
     window.RV_CLOUD = cloud || null;
-    try { await loadScript("app.js"); } catch (e) { fail("Couldn't load the app. Check your internet and try again."); }
+    try { await loadScript("app.js?v=" + (window.RV_BUILD || Date.now())); } catch (e) { fail("Couldn't load the app. Check your internet and try again."); }
   }
   async function openProject(pid) {
     spin();
@@ -244,7 +244,7 @@
 
   async function start() {
     spin();
-    try { INDEX = await getJson("packs/index.json"); } catch (e) { return fail("Couldn't load the bike library. Check your internet and try again."); }
+    try { INDEX = await getJson("packs/index.json?v=" + (window.RV_BUILD || "")); } catch (e) { return fail("Couldn't load the bike library. Check your internet and try again."); }
     window.PACK_INDEX = INDEX;
     if (CFG.supabaseUrl && CFG.supabaseKey) {
       try { await loadScript("https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"); sb = window.supabase.createClient(CFG.supabaseUrl, CFG.supabaseKey); }

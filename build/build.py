@@ -46,6 +46,9 @@ css = (src / 'style.css').read_text()
 loader = (src / 'cloud.js').read_text() + '\n' + (src / 'loader.js').read_text()
 cfg_file = ROOT / 'data' / 'config.json'   # public settings only: Supabase URL and publishable key
 cfg = json.loads(cfg_file.read_text()) if cfg_file.exists() else {}
+import hashlib
+build_id = hashlib.sha1((app + css).encode()).hexdigest()[:10]
+loader = 'window.RV_BUILD = "' + build_id + '";\n' + loader
 loader = 'window.RV_CONFIG = ' + json.dumps({k: cfg.get(k) for k in ['supabaseUrl', 'supabaseKey'] if cfg.get(k)}) + ';\n' + loader
 html = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Revora</title>
