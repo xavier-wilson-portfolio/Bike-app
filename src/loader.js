@@ -23,9 +23,9 @@
   /* ---------- page frame ---------- */
   function frame(inner, opts = {}) {
     const right = !sb ? "" : session
-      ? `<div class="pk-acct"><button class="linkbtn" data-nav="projects">My projects</button><span class="muted">${esc(profile?.display_name || session.user.email)}</span><button class="btn sm" data-act="signout">Sign out</button></div>`
+      ? `<div class="pk-acct"><button class="linkbtn" data-nav="projects">Your garage</button><span class="muted">${esc(profile?.display_name || session.user.email)}</span><button class="btn sm" data-act="signout">Sign out</button></div>`
       : `<div class="pk-acct"><button class="btn sm" data-nav="signin">Sign in</button><button class="btn sm pri" data-nav="signup">Create account</button></div>`;
-    app.innerHTML = `<div class="pick"><div class="pk-top"><button class="pk-logo" data-nav="home"><b>Revora</b></button>${right}</div><div class="pick-in ${opts.wide ? "wide" : ""}">${inner}</div></div>`;
+    app.innerHTML = `<div class="pick${opts.garage ? " is-garage" : ""}"><div class="pk-top"><button class="pk-logo" data-nav="home"><b>Revora</b></button>${right}</div><div class="pick-in ${opts.wide ? "wide" : ""}">${inner}</div></div>`;
   }
   const fail = msg => frame(`<h1 class="disp">Something went wrong</h1><p class="muted">${esc(msg)}</p><button class="btn pri" data-act="reload">Try again</button>`);
   const spin = () => frame(`<div class="spinner"></div>`);
@@ -108,16 +108,68 @@
   }
 
   /* ---------- projects ---------- */
+  /* ---------- the garage (signed-in home) ---------- */
+  // progress for each project: how many course steps are done, and the next one to do
+  async function projectProgress(ids) {
+    const out = {}; ids.forEach(id => out[id] = { done: 0, total: 0, next: null });
+    if (!ids.length) return out;
+    const { data } = await sb.from("records").select("project_id,rec_id,status:data->>status,title:data->>title,phase:data->>phase,ord:data->>order,archived:data->>archived").eq("coll", "tasks").in("project_id", ids);
+    const byP = {}; (data || []).forEach(t => { if (t.archived === "true" || t.status === "Cancelled") return; (byP[t.project_id] = byP[t.project_id] || []).push(t); });
+    Object.entries(byP).forEach(([pid, ts]) => {
+      ts.sort((a, b) => String(a.phase).localeCompare(String(b.phase)) || (+a.ord || 0) - (+b.ord || 0) || String(a.rec_id).localeCompare(String(b.rec_id), undefined, { numeric: true }));
+      const o = out[pid]; o.total = ts.length; o.done = ts.filter(t => t.status === "Complete").length; o.next = (ts.find(t => t.status !== "Complete") || {}).title || null;
+    });
+    return out;
+  }
+  // a tachometer: the needle shows how much of the course is done, 0 to 100
+  function tach(pct) {
+    const R = 92, cx = 110, cy = 110, a0 = 240, sweep = 240, rad = d => (d - 90) * Math.PI / 180;
+    const pt = (deg, r) => [cx + r * Math.cos(rad(deg)), cy + r * Math.sin(rad(deg))].map(v => v.toFixed(2));
+    const arc = (from, to, r) => { const [x1, y1] = pt(from, r), [x2, y2] = pt(to, r); return `M${x1} ${y1} A${r} ${r} 0 ${to - from > 180 ? 1 : 0} 1 ${x2} ${y2}`; };
+    let ticks = "";
+    for (let i = 0; i <= 50; i++) { const d = a0 + sweep * i / 50, big = i % 5 === 0, [x1, y1] = pt(d, R - (big ? 14 : 7)), [x2, y2] = pt(d, R); ticks += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" class="${big ? "tk big" : "tk"}${i >= 40 ? " red" : ""}"/>`; }
+    let nums = ""; for (let i = 0; i <= 10; i++) { const [x, y] = pt(a0 + sweep * i / 10, R - 27); nums += `<text x="${x}" y="${y}" class="${i >= 8 ? "red" : ""}">${i}</text>`; }
+    const deg = a0 + sweep * Math.max(0, Math.min(1, pct / 100));
+    return `<svg class="tach" viewBox="0 0 220 196" role="img" aria-label="${Math.round(pct)}% of the course done">
+      <path d="${arc(a0, a0 + sweep, R + 6)}" class="rim"/><path d="${arc(a0 + sweep * .8, a0 + sweep, R - 3)}" class="redzone"/>${ticks}${nums}
+      <text x="110" y="160" class="pc">${Math.round(pct)}<tspan>%</tspan></text><text x="110" y="184" class="unit">course done</text>
+      <g class="needle" style="--deg:${deg}deg"><line x1="110" y1="110" x2="110" y2="34"/><circle cx="110" cy="110" r="7"/></g></svg>`;
+  }
+  function greeting() { const h = new Date().getHours(); return h < 5 ? "Late night in the garage" : h < 12 ? "Good morning" : h < 18 ? "Good afternoon" : "Good evening"; }
+
   async function showProjects() {
-    document.title = "My projects · Revora"; spin();
+    document.title = "Your garage · Revora"; spin();
     const { data, error } = await sb.from("my_projects").select("*").order("created_at", { ascending: false });
     if (error) return fail(friendly(error));
-    frame(`<div class="pk-head"><div><div class="eyebrow">Your garage</div><h1 class="disp">My projects</h1></div><button class="btn pri" data-nav="new">+ Start a new project</button></div>
-      ${data.length ? `<div class="pk-projects">${data.map(p => { const b = bikeOf(p.bike_id); return `<div class="pk-proj">
-        <button class="pk-open" data-project="${esc(p.id)}"><span class="pick-yr">${esc(bikeName(b))}</span><b>${esc(p.name || bikeName(b))}</b>
-          <span class="muted">${p.role === "owner" ? "Yours" : p.role === "viewer" ? "Shared with you · view only" : "Shared with you"}${p.members > 1 ? ` · ${p.members} people` : ""}</span></button>
-        ${p.role === "owner" ? `<div class="pk-acts"><button class="btn sm" data-share="${esc(p.id)}">Share</button><button class="btn sm" data-rename="${esc(p.id)}">Rename</button></div>` : ""}</div>`; }).join("")}</div>`
-      : `<div class="pick-none"><b>No projects yet.</b><span class="muted">Start one for the bike you're working on. You can add your team after.</span><div><button class="btn pri" data-nav="new">Start a project</button></div></div>`}`, { wide: true });
+    const prog = await projectProgress(data.map(p => p.id));
+    const first = String(profile?.display_name || session.user.email || "").split(/[\s@]/)[0];
+    const lastId = ls.get("rv.project"), feat = data.find(p => p.id === lastId) || data[0];
+    const pctOf = p => { const g = prog[p.id]; return g && g.total ? g.done / g.total * 100 : 0; };
+    const who = p => p.role === "owner" ? (p.members > 1 ? `You and ${p.members - 1} other${p.members > 2 ? "s" : ""}` : "Just you") : p.role === "viewer" ? "Shared with you, view only" : "Shared with you";
+    const tag = p => { const b = bikeOf(p.bike_id), g = prog[p.id], pc = pctOf(p); return `<article class="gt">
+        <button class="gt-open" data-project="${esc(p.id)}" aria-label="Open ${esc(p.name || bikeName(b))}">
+          <span class="gt-bike">${esc((p.name && p.name !== bikeName(b)) ? bikeName(b) : (b && b.variant) || "")}</span><b class="gt-name">${esc(p.name || bikeName(b))}</b>
+          <span class="gt-bar" aria-hidden="true"><i style="width:${pc.toFixed(1)}%"></i></span>
+          <span class="gt-meta">${g && g.total ? `${g.done} of ${g.total} steps` : "Not started"}<span>${esc(who(p))}</span></span></button>
+        ${p.role === "owner" ? `<div class="gt-acts"><button class="linkbtn" data-share="${esc(p.id)}">Share</button><button class="linkbtn" data-rename="${esc(p.id)}">Rename</button></div>` : ""}</article>`; };
+    const fb = feat && bikeOf(feat.bike_id), fg = feat && prog[feat.id];
+    frame(`<section class="gh">
+        <div class="gh-hi"><h1 class="gh-title">${esc(greeting())}${first ? `, ${esc(first)}` : ""}.</h1>
+          <p class="muted">${data.length ? (data.length === 1 ? "One bike in your garage." : `${data.length} bikes in your garage.`) : "Your garage is empty. Add the bike you're working on to get started."}</p></div>
+        ${feat ? `<div class="bench">
+          <div class="bench-dial">${tach(pctOf(feat))}</div>
+          <div class="bench-txt"><span class="bench-k">${lastId === feat.id ? "Last opened" : "Newest project"}</span>
+            <h2>${esc(feat.name || bikeName(fb))}</h2><span class="bench-bike">${esc([feat.name && feat.name !== bikeName(fb) ? bikeName(fb) : "", fb && fb.variant].filter(Boolean).join(", "))}</span>
+            ${fg && fg.next ? `<div class="bench-next"><span>Next step</span><b>${esc(fg.next)}</b></div>` : fg && fg.total ? `<div class="bench-next"><span>Course</span><b>Every step is done. Time to ride.</b></div>` : ""}
+            <div class="bench-go"><button class="btn tan big" data-project="${esc(feat.id)}">Open project</button><button class="btn ghost-l" data-nav="new">Start another bike</button></div></div>
+          <img class="bench-art" src="img/bike.svg" alt=""></div>`
+        : `<div class="bench empty"><div class="bench-txt"><h2>What are you restoring?</h2><p>Pick your bike and you get its parts diagrams, part numbers, a step-by-step course and a tracker for every piece.</p>
+            <div class="bench-go"><button class="btn tan big" data-nav="new">Add your bike</button></div></div><img class="bench-art" src="img/bike.svg" alt=""></div>`}
+      </section>
+      ${data.length ? `<section class="garage"><div class="garage-h"><h2>Your garage</h2><button class="btn sm" data-nav="new">+ New project</button></div>
+        <div class="gts">${data.map(tag).join("")}<button class="gt gt-new" data-nav="new"><b>Add a bike</b><span>Start a new project for another bike</span></button></div></section>` : ""}
+      <section class="gfoot"><div><b>Working with a team?</b><span>Share a project and everyone sees the same parts, steps and photos, live. Owners can give edit or view access.</span></div>
+        <div><b>Bike not listed?</b><span>The library is growing. Browse what's there now.</span><button class="linkbtn" data-nav="browse">Browse bikes</button></div></section>`, { wide: true, garage: true });
     app.querySelectorAll("[data-rename]").forEach(b => b.onclick = async () => {
       const p = data.find(x => x.id === b.dataset.rename); const name = prompt("Project name", p.name || ""); if (name === null) return;
       const { error } = await sb.from("projects").update({ name: name.trim().slice(0, 80) }).eq("id", p.id); if (error) note(friendly(error), true); else showProjects();
@@ -186,6 +238,7 @@
     if (!n) return; const v = n.dataset.nav;
     if (v === "home" || v === "projects") goUrl(session ? {} : { pick: 1 });
     else if (v === "new") showPicker("new");
+    else if (v === "browse") showPicker("new");
     else showAuth(v);
   });
 
