@@ -63,11 +63,10 @@ function shell() {
     <header class="top" id="top">
       <div class="top-in">
         <button class="brand" data-goto="home" aria-label="Home"><span class="logo">${ic("bike")}</span><span class="bt"><b id="brandName">Revora</b><span id="brandBike">${BIKE.name}</span></span></button>
+        ${window.rvHasAccounts && rvHasAccounts() ? `<button class="btn sm tan garagebtn" onclick="rvAccount()">My garage</button>` : ""}
         <div class="progline" id="progLine" role="img"></div>
         <nav class="mainnav" id="nav" aria-label="Main" hidden></nav>
         <div class="top-r">
-          <div class="vbox" id="vbox"></div>
-          ${window.rvHasAccounts && rvHasAccounts() ? `<button class="btn sm tan garagebtn" onclick="rvAccount()">My garage</button>` : ""}
           <div class="search"><span>${ic("search")}</span><input id="gsearch" type="search" placeholder="Search" autocomplete="off" aria-label="Search everything"><div class="sresults" id="sresults" hidden></div></div>
           <span class="savebadge" id="saveBadge" title=""><i></i><span>Loading…</span></span>
           <button class="iconbtn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">${ic("menu")}</button>
@@ -118,7 +117,7 @@ function renderNav() {
   $("#progChip").innerHTML = `<i style="--p:${Math.round(prog * 100)}"></i>${pct(prog)} restored`;
   const pp = Math.round(prog * 100), pl = $("#progLine");
   if (pl) { pl.setAttribute("aria-label", pp + "% restored"); pl.title = pp + "% of the bike restored";
-    pl.innerHTML = `<svg class="pl-bike" viewBox="0 0 34 20" aria-hidden="true"><circle cx="7" cy="14" r="5"/><circle cx="27" cy="14" r="5"/><path d="M7 14l6-7h7l4 7M13 7l-2-3h-3M20 7l3-3h3M15 11h6"/></svg><span class="pl-track"><i style="width:${pp}%"></i><b style="left:${pp}%"></b></span><svg class="pl-flag" viewBox="0 0 20 22" aria-hidden="true"><path d="M3 21V2" class="pole"/><rect x="3" y="2" width="15" height="10" class="cloth"/><path d="M3 2h5v5H3zM13 2h5v5h-5zM8 7h5v5H8z" class="chk"/></svg><span class="pl-pc">${pp}%</span>`; }
+    pl.innerHTML = `<svg class="pl-bike" viewBox="0 0 48 28" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="9.5" cy="20.5" r="5.8"/><circle cx="38.5" cy="20.5" r="5.8"/></g> <g fill="currentColor"> <circle cx="9.5" cy="20.5" r="1.4"/><circle cx="38.5" cy="20.5" r="1.4"/> <path d="M5.5 11.6c.2-1 1-1.6 2-1.6h10.6l1 1.6z"/> <path d="M18.6 11.6c.4-2.4 2.6-3.9 5.6-3.9 2.6 0 4.3 1.1 4.9 3.1l-.8 1.4h-9.4z"/> <path d="M19.6 13.4h8l-.6 6.1h-6.9z"/> <circle cx="35.6" cy="9.9" r="1.9"/> </g> <g fill="none" stroke="var(--surface)" stroke-width=".7"><path d="M20.4 15.2h6.6M20.6 16.9h6.2"/></g> <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"> <path d="M9.5 20.5l11.2-1.6"/> <path d="M8.4 12.6l2.6 7"/> <path d="M29 11.4l4.4-1.6M27.4 19.2l5.4-9"/> <path d="M38.5 20.5l-4.6-13.4M33.9 7.1l-2.6-1.2"/> <path d="M24.6 19.6c-4 .3-8.8.1-14.4-1.6"/> </g></svg><span class="pl-track"><i style="width:${pp}%"></i><b style="left:${pp}%"></b></span><svg class="pl-flag" viewBox="0 0 20 22" aria-hidden="true"><path d="M3 21V2" class="pole"/><rect x="3" y="2" width="15" height="10" class="cloth"/><path d="M3 2h5v5H3zM13 2h5v5h-5zM8 7h5v5H8z" class="chk"/></svg><span class="pl-pc">${pp}%</span>`; }
   $("#modeBadge").textContent = window.RV_CLOUD ? (ME.canWrite ? "Saved to your account" : "View only") : ME.mode === "shared" ? (ME.canWrite ? "Team data · live" : "View only") : "This browser only";
   $("#modeBadge").title = ME.mode === "shared" ? "Everyone you share this page with sees the same records, live." : "Records are saved in this browser only. Export backups often.";
   const sec = SEC[R.sec], L = R.sec === "lesson" ? sorted("phases").findIndex(p => p.id === R.lesson) + 1 : 0;

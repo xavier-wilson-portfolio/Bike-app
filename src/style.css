@@ -1296,3 +1296,20 @@ article.gt::before{content:"";position:absolute;left:14px;top:19px;width:10px;he
 @media (max-width:560px){.top .vbox{flex-basis:120px}.garagebtn{padding:4px 9px}.top .brand .bt{display:none}}
 .btn.tan.garagebtn{background:#D9BF8E;border-color:#C2A06A;color:#2B2112}
 .btn.tan.garagebtn:hover{background:#CDAF78;border-color:#A9884F}
+/* header v5 */
+.top .top-in{position:relative}
+.top .brand .bt span{display:none}
+.btn.tan.garagebtn{font-weight:800;font-size:13.5px;letter-spacing:.01em;margin-left:-4px}
+.progline{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(440px,34vw);max-width:none;margin:0}
+.top .top-r{margin-left:auto}
+.pl-bike{width:40px;height:23px;color:var(--navy-2);fill:currentColor;stroke:none}
+.top .search{flex:0 0 220px}
+.top .search input{border:1px solid #B9D9EB;background:#EAF4F8;font-weight:600;color:#111418}
+.top .search input::placeholder{color:#233746;opacity:.8}
+.top .search input:focus{outline:2px solid #8CC0DE;background:#fff}
+.top .search>span svg{color:#2C5F7C}
+@media (max-width:1240px){.top .search{flex-basis:170px;display:block}.progline{width:min(360px,32vw)}}
+@media (max-width:1020px){.top .search{flex-basis:150px}}
+@media (max-width:820px){.progline{position:static;transform:none;order:5;flex:1 1 100%;width:auto}}
+@media (max-width:600px){.top .search{display:none}}
+@media (max-width:560px){.top .brand .bt{display:block}.top .brand .bt b{font-size:17px}}
