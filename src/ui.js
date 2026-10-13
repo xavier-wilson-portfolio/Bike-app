@@ -68,6 +68,7 @@ function shell() {
         <div class="top-r">
           <div class="search"><span>${ic("search")}</span><input id="gsearch" type="search" placeholder="Search" autocomplete="off" aria-label="Search everything"><div class="sresults" id="sresults" hidden></div></div>
           <span class="savebadge" id="saveBadge" title=""><i></i><span>Loading…</span></span>
+          ${window.rvHasAccounts && rvHasAccounts() ? `<button class="btn sm acctbtn" onclick="rvAccount()">${window.RV_CLOUD ? "My projects" : "Sign in"}</button>` : ""}
           <button class="iconbtn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">${ic("menu")}</button>
         </div>
       </div>
@@ -114,7 +115,7 @@ function renderNav() {
   $("#brandBike").textContent = m.bike || "" + BIKE.name + "";
   const vq = $("#vq"); if (vq) vq.placeholder = vehLabel(curVehicle()); const vp = $("#vpop"); if (vp && !vp.hidden && document.activeElement === vq) { /* keep open popover fresh */ vp.innerHTML = vehResultHtml(vq.value); }
   $("#progChip").innerHTML = `<i style="--p:${Math.round(prog * 100)}"></i>${pct(prog)} restored`;
-  $("#modeBadge").textContent = ME.mode === "shared" ? (ME.canWrite ? "Team data · live" : "View only") : "This browser only";
+  $("#modeBadge").textContent = window.RV_CLOUD ? (ME.canWrite ? "Saved to your account" : "View only") : ME.mode === "shared" ? (ME.canWrite ? "Team data · live" : "View only") : "This browser only";
   $("#modeBadge").title = ME.mode === "shared" ? "Everyone you share this page with sees the same records, live." : "Records are saved in this browser only. Export backups often.";
   const sec = SEC[R.sec], L = R.sec === "lesson" ? sorted("phases").findIndex(p => p.id === R.lesson) + 1 : 0;
   const tail = R.sec === "lesson" ? `<button data-crumb="course">Course</button><span>›</span><b>Part ${L}</b>` : R.sec === "guides" && R.guide ? `<button data-crumb="guides">Guides</button><span>›</span><b>${esc(GUIDES[R.guide]?.title || "")}</b>` : `<b>${esc(sec.t)}</b>`;

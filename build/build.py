@@ -43,7 +43,10 @@ for pdir in sorted((ROOT / 'data' / 'packs').iterdir()):
 shutil.copytree(ROOT / 'img', out / 'img', dirs_exist_ok=True)
 
 css = (src / 'style.css').read_text()
-loader = (src / 'loader.js').read_text()
+loader = (src / 'cloud.js').read_text() + '\n' + (src / 'loader.js').read_text()
+cfg_file = ROOT / 'data' / 'config.json'   # public settings only: Supabase URL and publishable key
+cfg = json.loads(cfg_file.read_text()) if cfg_file.exists() else {}
+loader = 'window.RV_CONFIG = ' + json.dumps({k: cfg.get(k) for k in ['supabaseUrl', 'supabaseKey'] if cfg.get(k)}) + ';\n' + loader
 html = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Revora</title>
 <meta name="description" content="Restore your motorcycle: parts diagrams, part numbers, a step-by-step course and a parts tracker for your exact bike.">

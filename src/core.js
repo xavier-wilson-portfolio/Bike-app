@@ -203,6 +203,11 @@ const store = {
   db: null, ready: false, loaded: new Set(), listeners: [],
   async init() {
     let db = null, user = null;
+    const cloud = window.RV_CLOUD;
+    if (cloud) { // signed in to an account project
+      this.db = cloud.db; ME.mode = "shared"; ME.id = cloud.user.id; ME.name = cloud.profile.display_name || cloud.user.email || "";
+      ME.canWrite = cloud.role !== "viewer"; this.subscribe(); return;
+    }
     try { if (window.claude && window.claude.use) { [db, user] = await Promise.all([window.claude.use("db"), window.claude.use("user")]); } } catch (e) { db = null; }
     if (db) {
       this.db = db; ME.mode = "shared";

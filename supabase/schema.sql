@@ -104,3 +104,29 @@ create policy "editors upload files" on storage.objects for insert
   with check (bucket_id = 'project-files' and public.is_member(((storage.foldername(name))[1])::uuid, true));
 create policy "editors delete files" on storage.objects for delete
   using (bucket_id = 'project-files' and public.is_member(((storage.foldername(name))[1])::uuid, true));
+
+-- ---------- team helpers ----------
+-- see the names of people you share a project with
+create policy "read teammates" on public.profiles for select using (
+  exists (select 1 from public.project_members a join public.project_members b on a.project_id = b.project_id
+          where a.user_id = auth.uid() and b.user_id = profiles.id));
+
+-- owner adds someone who already has an account, by email
+create function public.add_member(p uuid, member_email text, member_role text default 'editor') returns text
+language plpgsql security definer set search_path = public as $$
+declare uid uuid;
+begin
+  if not exists (select 1 from projects where id = p and owner = auth.uid()) then return 'not_owner'; end if;
+  if member_role not in ('editor', 'viewer') then return 'bad_role'; end if;
+  select id into uid from auth.users where lower(email) = lower(trim(member_email));
+  if uid is null then return 'no_account'; end if;
+  insert into project_members (project_id, user_id, role) values (p, uid, member_role)
+    on conflict (project_id, user_id) do update set role = excluded.role where project_members.role <> 'owner';
+  return 'ok';
+end $$;
+
+-- the project list with your role and the owner's name
+create view public.my_projects with (security_invoker = true) as
+  select p.id, p.bike_id, p.name, p.created_at, p.owner, m.role,
+         (select count(*) from public.project_members x where x.project_id = p.id) as members
+  from public.projects p join public.project_members m on m.project_id = p.id and m.user_id = auth.uid();
