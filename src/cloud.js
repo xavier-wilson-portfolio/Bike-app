@@ -51,5 +51,12 @@ function rvCloudDb(sb, pid) {
       })
     };
   }
-  return { collection: c => query(c, {}) };
+  async function bulkSet(items) { // [{c, id, body}] in chunks, one request each
+    for (let i = 0; i < items.length; i += 200) {
+      const chunk = items.slice(i, i + 200), now = new Date().toISOString();
+      const { error } = await sb.from("records").upsert(chunk.map(x => ({ project_id: pid, coll: x.c, rec_id: x.id, data: x.body, updated_at: now })));
+      if (error) throw errOf(error); chunk.forEach(x => coll(x.c).set(x.id, x.body));
+    }
+  }
+  return { collection: c => query(c, {}), bulkSet };
 }

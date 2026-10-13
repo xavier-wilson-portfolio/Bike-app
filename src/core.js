@@ -285,6 +285,12 @@ const store = {
   },
   async bulk(writes, onProgress) {
     // writes: [{c, rec}] — sequential with light concurrency to respect rate limits
+    if (this.db && this.db.bulkSet) { // account projects: send records in big batches
+      if (!ME.canWrite) throw new Error("readonly");
+      const items = writes.map(w => { const rec = clone(w.rec); rec.updatedAt = nowISO(); rec.updatedBy = whoName(); rec.updatedById = ME.id || ""; if (!rec.createdAt) rec.createdAt = rec.updatedAt; S[w.c][rec.id] = rec; const body = { ...rec }; delete body.id; return { c: w.c, id: rec.id, body }; });
+      setSave("busy"); try { await this.db.bulkSet(items); setSave("ok"); } catch (e) { this.fail(e); throw e; }
+      onProgress && onProgress(writes.length, writes.length); scheduleRender(); return;
+    }
     let done = 0; const q = writes.slice(); const workers = [];
     const run = async () => { while (q.length) { const w = q.shift(); await this.put(w.c, w.rec, { silent: true, noLog: true }); done++; onProgress && onProgress(done, writes.length); } };
     for (let i = 0; i < (this.db ? 3 : 1); i++) workers.push(run());
