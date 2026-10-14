@@ -1324,3 +1324,7 @@ article.gt::before{content:"";position:absolute;left:14px;top:19px;width:10px;he
 .galph svg{width:28px;height:28px;color:var(--faint)}
 .galitem b{font-size:13.5px;line-height:1.25}
 .galitem small{font-size:11.5px;color:var(--muted)}
+
+/* Revora icon in the header */
+.brand img.logo,.top .brand img.logo{background:none;padding:0;border-radius:9px;object-fit:contain;display:block}
+.pk-logo{display:inline-flex;align-items:center;gap:10px}.pk-logo img{width:36px;height:36px;border-radius:9px;display:block}

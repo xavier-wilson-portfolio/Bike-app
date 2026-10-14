@@ -53,7 +53,7 @@ loader = 'window.RV_CONFIG = ' + json.dumps({k: cfg.get(k) for k in ['supabaseUr
 html = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Revora</title>
 <meta name="description" content="Restore your motorcycle: parts diagrams, part numbers, a step-by-step course and a parts tracker for your exact bike.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" type="image/svg+xml" href="img/revora-icon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;1,6..12,400&display=swap">
 <style>:root{{color-scheme:light}}[hidden]{{display:none!important}}body{{margin:0}}img{{max-width:100%}}
 {css}

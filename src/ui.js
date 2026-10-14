@@ -62,7 +62,7 @@ function shell() {
   <div class="app">
     <header class="top" id="top">
       <div class="top-in">
-        <button class="brand" data-goto="home" aria-label="Home"><span class="logo">${ic("bike")}</span><span class="bt"><b id="brandName">Revora</b><span id="brandBike">${BIKE.name}</span></span></button>
+        <button class="brand" data-goto="home" aria-label="Home"><img class="logo" src="img/revora-icon.svg" alt=""><span class="bt"><b id="brandName">Revora</b><span id="brandBike">${BIKE.name}</span></span></button>
         ${window.rvHasAccounts && rvHasAccounts() ? `<button class="btn sm tan garagebtn" onclick="rvAccount()">My garage</button>` : ""}
         <div class="progline" id="progLine" role="img"></div>
         <nav class="mainnav" id="nav" aria-label="Main" hidden></nav>
