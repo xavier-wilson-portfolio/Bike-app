@@ -28,6 +28,7 @@ const SECTIONS = [
   { id: "settings", t: "Settings & backups", i: "gear", grp: "records", d: "Budget, backups, data" },
   { id: "lesson", t: "Lesson", i: "book", hidden: true },
 ].filter(s => !s.x || X[s.x]);
+if (GENERIC) { const keep = new Set(["home", "maintenance", "inventory", "tasks", "budget", "purchasing", "shops", "diagrams", "docs", "problems", "team", "settings", "help"]); for (let i = SECTIONS.length - 1; i >= 0; i--) if (!keep.has(SECTIONS[i].id)) SECTIONS.splice(i, 1); SECTIONS.forEach(s => { if (["inventory", "tasks", "budget", "maintenance", "docs", "diagrams"].includes(s.id)) s.main = 1; else delete s.main; }); const t = SECTIONS.find(s => s.id === "tasks"); if (t) t.d = "Jobs to do on the bike"; }
 if (CT.sections) SECTIONS.forEach(s => CT.sections[s.id] && Object.assign(s, CT.sections[s.id]));
 const NAV_GROUPS = [["areas", "Workshop areas"], ["learn", "Learn"], ["records", "Records & admin"]];
 const SEC = Object.fromEntries(SECTIONS.filter(s => s.id).map(s => [s.id, s]));

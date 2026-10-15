@@ -53,10 +53,25 @@
     const make = rest[0] ? rest[0][0].toUpperCase() + rest[0].slice(1) : "";
     return { year, make, model: rest.slice(1).map(x => /\d/.test(x) ? x.toUpperCase() : x[0].toUpperCase() + x.slice(1)).join(" ") };
   }
+  const BIKE_STYLES = [["standard", "Standard / naked"], ["cruiser", "Cruiser"], ["sport", "Sport"], ["adventure", "Adventure"], ["dualsport", "Dual-sport / dirt"], ["touring", "Touring"], ["cafe", "Cafe racer / classic"], ["scooter", "Scooter"]];
+  // a sensible first guess at the kind of bike from the model name; the user can change it
+  function guessStyle(make, model) {
+    const s = (make + " " + model).toLowerCase();
+    if (/strom|africa|gs\s?\d{3,4}\s?(adv|gs)|tenere|tiger|ktm.*adv|versys|tracer|adv|multistrada|transalp|klr|nc750x|crf1100/.test(s)) return /klr|drz|xr|crf|wr|exc|klx|dr\d/.test(s) ? "dualsport" : "adventure";
+    if (/drz|xr\d|crf|wr\d|exc|klx|dr\d{3}|xt\d|ttr|yz|rm\d|kx\d|cr\d/.test(s)) return "dualsport";
+    if (/harley|softail|sportster|dyna|shadow|vulcan|boulevard|intruder|virago|v-?star|rebel|indian|bolt|fat|road king|vt\d|vn\d/.test(s)) return /road king|glide|gold ?wing|electra/.test(s) ? "touring" : "cruiser";
+    if (/glide|gold ?wing|fjr|concours|k1600|rt\b|st1300|voyager/.test(s)) return "touring";
+    if (/cbr|gsx-?r|ninja|zx-?\d|yzf|r1\b|r6\b|panigale|rsv|daytona|sv650s|hayabusa|busa/.test(s)) return "sport";
+    if (/cafe|thruxton|bonneville|w650|w800|sr400|xsr|scrambler|gs\d{3}|cb\d{3}|kz\d|xs\d{3}|rd\d{3}/.test(s)) return "cafe";
+    if (/vespa|scooter|burgman|pcx|ruckus|metropolitan|grom/.test(s)) return "scooter";
+    return "standard";
+  }
   function reqFormHtml() {
     return `<form class="pk-req" id="reqF" novalidate><div class="pk-req-h"><b>Request this bike</b><span class="muted">Tell us the year, make and model. We'll build its page, course and parts list and have it ready in about ${REQ_DAYS} days.</span></div>
-      <div class="pk-req-row"><label>Year<input name="year" inputmode="numeric" maxlength="4" placeholder="1981" autocomplete="off"></label><label>Make<input name="make" placeholder="Honda" autocomplete="off"></label><label class="wide">Model<input name="model" placeholder="CB750F" autocomplete="off"></label></div>
-      <div class="pk-req-go"><button class="btn pri" type="submit">Request it</button><span class="muted pk-small">${esc(etaTxt())}</span></div></form>`;
+      <div class="pk-req-row"><label>Year<input name="year" inputmode="numeric" maxlength="4" placeholder="1981" autocomplete="off"></label><label>Make<input name="make" placeholder="Honda" autocomplete="off"></label><label class="wide">Model<input name="model" placeholder="CB750F" autocomplete="off"></label>
+        <label class="wide">Kind of bike<select name="style">${BIKE_STYLES.map(([k, t]) => `<option value="${k}">${t}</option>`).join("")}</select></label></div>
+      <div class="pk-req-go"><button class="btn pri" type="submit">Request it</button><span class="muted pk-small">${esc(etaTxt())}</span></div>
+      <div class="pk-req-now"><b>Don't want to wait?</b><span class="muted">Start your project now for maintenance, parts, jobs and receipts. When the bike's page is ready, connect it and keep everything.</span><button class="btn tan" type="button" data-startnow>Request it and start now</button></div></form>`;
   }
   async function submitReq(r) {
     const key = reqKey(r.year, r.make, r.model), label = `${r.year} ${r.make} ${r.model}`.replace(/\s+/g, " ").trim();
@@ -70,20 +85,68 @@
     if (!r || !session) return;
     try { const row = await submitReq(r); ls.set("rv.pendingReq", ""); note(`Requested the ${row.label}. ${etaTxt(row.created_at, row.status)}.`); } catch (e) {}
   }
+  const labelOf = r => `${r.year} ${r.make} ${r.model}`.replace(/\s+/g, " ").trim();
+  // the library bike that answers a request, if it's been added
+  function packForKey(key) {
+    if (!key) return null;
+    const [y, mk, ...rest] = key.split("-"), mdl = rest.join("");
+    return INDEX.find(b => !b.generic && ((b.reqKeys || []).includes(key) || (String(b.year) === y && norm(b.make) === mk && [b.model, b.short, ...(b.match || [])].some(m => norm(m) === mdl)))) || null;
+  }
+  // a project for a bike that isn't in the library yet: request it, then open the general bike with the user's year, make and model
+  async function startGeneric(r) {
+    const key = reqKey(r.year, r.make, r.model), label = labelOf(r);
+    const m = { id: "project", projectName: label, bike: label, year: r.year, make: r.make, model: r.model, style: r.style || guessStyle(r.make, r.model), requestKey: key, requestedAt: new Date().toISOString(), units: "in", currency: "USD", baseBudget: 0, contingencyPct: 10, budgetChanges: [], meshMap: {}, archived: false };
+    if (sb && session) {
+      spin();
+      try { await submitReq(r); } catch (e) {}
+      const { data, error } = await sb.from("projects").insert({ bike_id: "custom-bike", name: label }).select("id").single();
+      if (error) return fail(friendly(error));
+      await sb.from("records").upsert({ project_id: data.id, coll: "meta", rec_id: "project", data: m });
+      return goUrl({ project: data.id });
+    }
+    // no account: keep it in this browser (one general bike at a time)
+    let cur = null; try { cur = JSON.parse(ls.get("rv.data.custom-bike") || "null"); } catch (e) {}
+    const curName = cur && cur.meta && cur.meta.project && cur.meta.project.bike;
+    if (curName && curName !== label && !confirm(`This browser already has a project for the ${curName}. Replace it with the ${label}? Create a free account to keep more than one.`)) return;
+    if (sb) ls.set("rv.pendingReq", JSON.stringify(r));
+    ls.set("rv.data.custom-bike", JSON.stringify(curName === label ? cur : { meta: { project: m } }));
+    ls.set("rv.bike", "custom-bike"); goUrl({ bike: "custom-bike" });
+  }
+  async function connectProject(p, pack) {
+    if (!confirm(`Connect "${p.name}" to the ${bikeName(pack)} page? Its course, parts list and service schedule get added, and everything you've logged stays.`)) return;
+    spin();
+    const { error } = await sb.from("projects").update({ bike_id: pack.id }).eq("id", p.id);
+    if (error) return fail(friendly(error));
+    const { data: rec } = await sb.from("records").select("data").eq("project_id", p.id).eq("coll", "meta").eq("rec_id", "project").maybeSingle();
+    await sb.from("records").upsert({ project_id: p.id, coll: "meta", rec_id: "project", data: Object.assign({}, rec && rec.data, { mergePack: pack.id }) });
+    goUrl({ project: p.id });
+  }
+  // no account: move this browser's general bike onto the real bike's page
+  function connectLocal(pack) {
+    let cur = null; try { cur = JSON.parse(ls.get("rv.data.custom-bike") || "null"); } catch (e) {}
+    if (!cur) return;
+    if (ls.get("rv.data." + pack.id) && !confirm(`This browser already has a ${bikeName(pack)} project. Replace it with your records?`)) return;
+    cur.meta.project.mergePack = pack.id; ls.set("rv.data." + pack.id, JSON.stringify(cur)); ls.set("rv.data.custom-bike", "");
+    ls.set("rv.bike", pack.id); goUrl({ bike: pack.id });
+  }
+  function localGeneric() { try { const d = JSON.parse(ls.get("rv.data.custom-bike") || "null"); return d && d.meta && d.meta.project; } catch (e) { return null; } }
   async function myRequests() {
     if (!sb || !session) return [];
     const { data } = await sb.from("bike_requests").select("*").contains("votes", [session.user.id]).order("created_at", { ascending: false });
     return data || [];
   }
-  const reqListHtml = rows => rows.length ? `<section class="pk-reqs"><h2>Bikes you requested</h2>${rows.map(r => `<div class="pk-reqi"><b>${esc(r.label)}</b><span class="pk-reqs-st ${r.status === "Added" ? "ok" : ""}">${r.status === "Added" ? "Ready" : "In progress"}</span><span class="muted">${esc(etaTxt(r.created_at, r.status))}</span></div>`).join("")}</section>` : "";
+  const reqListHtml = rows => rows.length ? `<section class="pk-reqs"><h2>Bikes you requested</h2>${rows.map(r => `<div class="pk-reqi"><b>${esc(r.label)}</b>${(() => { const ok = r.status === "Added" || !!packForKey(r.key); return `<span class="pk-reqs-st ${ok ? "ok" : ""}">${ok ? "Ready" : "In progress"}</span><span class="muted">${esc(ok ? "Search for it to start a project, or connect your project from the garage" : etaTxt(r.created_at, r.status))}</span>`; })()}</div>`).join("")}</section>` : "";
   function bindReqForm(form, onDone) {
     form.addEventListener("input", e => { if (e.target.name) e.target.dataset.touched = "1"; });
+    form.querySelector("[data-startnow]")?.addEventListener("click", () => { form.dataset.now = "1"; form.requestSubmit(); });
     form.onsubmit = async e => {
       e.preventDefault();
-      const r = { year: form.year.value.trim(), make: form.make.value.trim(), model: form.model.value.trim() };
+      const now = form.dataset.now === "1"; form.dataset.now = "";
+      const r = { year: form.year.value.trim(), make: form.make.value.trim(), model: form.model.value.trim(), style: form.style.value };
       if (!/^(19|20)\d{2}$/.test(r.year)) { note("Enter the 4-digit year, like 1981.", true); form.year.focus(); return; }
       if (!r.make) { note("Enter the make, like Honda.", true); form.make.focus(); return; }
       if (!r.model) { note("Enter the model, like CB750F.", true); form.model.focus(); return; }
+      if (now) return startGeneric(r);
       if (!sb || !session) { ls.set("rv.pendingReq", JSON.stringify(r)); if (!sb) { note("Requests need an account, and accounts aren't set up on this site yet.", true); return; } showAuth("signup"); note("Create a free account and we'll send in your request for the " + r.year + " " + r.make + " " + r.model + "."); return; }
       const btn = form.querySelector("button[type=submit]"); btn.disabled = true; btn.textContent = "Sending…";
       try { const row = await submitReq(r); onDone(row); }
@@ -93,7 +156,7 @@
 
   function showPicker(mode) { // mode "try" (no account) or "new" (start a project)
     document.title = mode === "new" ? "New project · Revora" : "Find your bike · Revora";
-    const makes = [...new Set(INDEX.map(b => b.make))].sort();
+    const makes = [...new Set(INDEX.filter(b => !b.generic).map(b => b.make))].sort();
     frame(`${mode === "new" ? `<div class="eyebrow">New project</div><h1 class="disp">Which bike are you restoring?</h1>` : `<div class="eyebrow">Motorcycle restoration</div><h1 class="disp">Find your bike</h1>
       <p class="muted">Pick your bike to get its parts diagrams, part numbers, a step-by-step restoration course and a tracker for every part.</p>`}
       <div class="pick-search"><input type="search" id="pickQ" placeholder="Year, make, model, e.g. 1977 Suzuki GS750" autocomplete="off" autofocus aria-label="Search for your bike"></div>
@@ -102,14 +165,18 @@
       <div class="pk-reqwrap" id="pickReq"></div>
       <div id="pickMine"></div>
       ${mode === "try" && sb && !session ? `<p class="muted pk-small">Trying it without an account saves to this browser only. <button class="linkbtn" data-nav="signup">Create a free account</button> to keep your project and share it with your team.</p>` : ""}`, { wide: true });
+    const lg = !session && localGeneric(), lgPack = lg && packForKey(lg.requestKey);
+    if (lg) app.querySelector(".pick-in").insertAdjacentHTML("afterbegin", lgPack ? `<div class="pk-ready"><b>The ${esc(bikeName(lgPack))} page is ready.</b><span>Move your ${esc(lg.bike)} records onto it to get its course, parts list and service schedule.</span><button class="btn tan" data-connect-local>Connect my project</button></div>` : `<div class="pk-ready plain"><b>Your ${esc(lg.bike)} project</b><span>Saved in this browser while we build the bike's page.</span><button class="btn" data-open-local>Open it</button></div>`);
+    app.querySelector("[data-connect-local]")?.addEventListener("click", () => connectLocal(lgPack));
+    app.querySelector("[data-open-local]")?.addEventListener("click", () => { ls.set("rv.bike", "custom-bike"); goUrl({ bike: "custom-bike" }); });
     const q = document.getElementById("pickQ"), list = document.getElementById("pickList");
     const reqBox = document.getElementById("pickReq"); let reqOpen = false;
-    const fillReq = () => { const f = document.getElementById("reqF"); if (!f) return; const g = guessBike(q.value); ["year", "make", "model"].forEach(k => { if (!f[k].dataset.touched) f[k].value = g[k]; }); };
-    const done = row => { reqBox.innerHTML = `<div class="pk-req done"><b>Request sent: ${esc(row.label)}</b><span>${esc(etaTxt(row.created_at, row.status))}. When it's ready it shows up in this search${mode === "new" ? " and you can start a project on it" : ""}.</span></div>`; drawMine(); };
+    const fillReq = () => { const f = document.getElementById("reqF"); if (!f) return; const g = guessBike(q.value); ["year", "make", "model"].forEach(k => { if (!f[k].dataset.touched) f[k].value = g[k]; }); if (!f.style.dataset.touched) f.style.value = guessStyle(f.make.value, f.model.value); };
+    const done = row => { reqBox.innerHTML = `<div class="pk-req done"><b>Request sent: ${esc(row.label)}</b><span>${esc(etaTxt(row.created_at, row.status))}. When it's ready it shows up in this search${mode === "new" ? " and you can start a project on it" : ""}.</span><button class="btn tan sm" data-startrow>Start my project now</button></div>`; reqBox.querySelector("[data-startrow]").onclick = () => { const [y, mk, ...md] = row.label.split(" "); startGeneric({ year: y, make: mk, model: md.join(" ") }); }; drawMine(); };
     const openReq = () => { reqOpen = true; reqBox.innerHTML = reqFormHtml(); fillReq(); bindReqForm(document.getElementById("reqF"), done); };
     const drawMine = async () => { const box = document.getElementById("pickMine"); if (box) box.innerHTML = reqListHtml(await myRequests()); };
     const draw = () => {
-      const hits = INDEX.filter(b => match(b, q.value)).sort((a, b) => a.make.localeCompare(b.make) || a.model.localeCompare(b.model) || a.year - b.year);
+      const hits = INDEX.filter(b => !b.generic && match(b, q.value)).sort((a, b) => a.make.localeCompare(b.make) || a.model.localeCompare(b.model) || a.year - b.year);
       list.innerHTML = hits.length ? hits.map(card).join("") : `<div class="pick-none"><b>We don't have that bike yet.</b><span class="muted">Request it below and we'll add it in about ${REQ_DAYS} days.</span></div>`;
       if (!hits.length) { if (!reqOpen) openReq(); else fillReq(); }
       else if (!reqOpen) reqBox.innerHTML = `<button class="linkbtn pk-reqlink" type="button">Don't see your exact bike? Request it</button>`;
@@ -195,6 +262,7 @@
       <text x="110" y="160" class="pc">${Math.round(pct)}<tspan>%</tspan></text><text x="110" y="184" class="unit">course done</text>
       <g class="needle" style="--deg:${deg}deg"><line x1="110" y1="110" x2="110" y2="34"/><circle cx="110" cy="110" r="7"/></g></svg>`;
   }
+  const benchArt = () => { const f = ((CFG.sil) || []).find(x => /^bike-standard\./.test(x)); return f ? `<img class="bench-art" src="img/sil/${f}" alt="">` : ""; };
   function greeting() { const h = new Date().getHours(); return h < 5 ? "Late night in the garage" : h < 12 ? "Good morning" : h < 18 ? "Good afternoon" : "Good evening"; }
 
   async function showProjects() {
@@ -202,16 +270,20 @@
     const { data, error } = await sb.from("my_projects").select("*").order("created_at", { ascending: false });
     if (error) return fail(friendly(error));
     const prog = await projectProgress(data.map(p => p.id));
+    // projects on the general bike: which request they're waiting on, and whether that bike's page is ready
+    const gen = data.filter(p => bikeOf(p.bike_id)?.generic), genKey = {};
+    if (gen.length) { const { data: ms } = await sb.from("records").select("project_id,key:data->>requestKey").eq("coll", "meta").in("project_id", gen.map(p => p.id)); (ms || []).forEach(m => genKey[m.project_id] = m.key); }
+    const readyFor = p => bikeOf(p.bike_id)?.generic ? packForKey(genKey[p.id]) : null;
     const first = String(profile?.display_name || session.user.email || "").split(/[\s@]/)[0];
     const lastId = ls.get("rv.project"), feat = data.find(p => p.id === lastId) || data[0];
     const pctOf = p => { const g = prog[p.id]; return g && g.total ? g.done / g.total * 100 : 0; };
     const who = p => p.role === "owner" ? (p.members > 1 ? `You and ${p.members - 1} other${p.members > 2 ? "s" : ""}` : "Just you") : p.role === "viewer" ? "Shared with you, view only" : "Shared with you";
     const tag = p => { const b = bikeOf(p.bike_id), g = prog[p.id], pc = pctOf(p); return `<article class="gt">
         <button class="gt-open" data-project="${esc(p.id)}" aria-label="Open ${esc(p.name || bikeName(b))}">
-          <span class="gt-bike">${esc((p.name && p.name !== bikeName(b)) ? bikeName(b) : (b && b.variant) || "")}</span><b class="gt-name">${esc(p.name || bikeName(b))}</b>
+          <span class="gt-bike">${b && b.generic ? (readyFor(p) ? "Bike page ready" : "Bike page coming soon") : esc((p.name && p.name !== bikeName(b)) ? bikeName(b) : (b && b.variant) || "")}</span><b class="gt-name">${esc(p.name || bikeName(b))}</b>
           <span class="gt-bar" aria-hidden="true"><i style="width:${pc.toFixed(1)}%"></i></span>
-          <span class="gt-meta">${g && g.total ? `${g.done} of ${g.total} steps` : "Not started"}<span>${esc(who(p))}</span></span></button>
-        ${p.role === "owner" ? `<div class="gt-acts"><button class="linkbtn" data-share="${esc(p.id)}">Share</button><button class="linkbtn" data-rename="${esc(p.id)}">Rename</button></div>` : ""}</article>`; };
+          <span class="gt-meta">${b && b.generic ? "Maintenance and records" : g && g.total ? `${g.done} of ${g.total} steps` : "Not started"}<span>${esc(who(p))}</span></span></button>
+        ${p.role === "owner" && readyFor(p) ? `<div class="gt-ready"><span>The ${esc(bikeName(readyFor(p)))} page is ready.</span><button class="btn tan sm" data-connect="${esc(p.id)}">Connect</button></div>` : ""}${p.role === "owner" ? `<div class="gt-acts"><button class="linkbtn" data-share="${esc(p.id)}">Share</button><button class="linkbtn" data-rename="${esc(p.id)}">Rename</button></div>` : ""}</article>`; };
     const fb = feat && bikeOf(feat.bike_id), fg = feat && prog[feat.id];
     frame(`<section class="gh">
         <div class="gh-hi"><h1 class="gh-title">${esc(greeting())}${first ? `, ${esc(first)}` : ""}.</h1>
@@ -219,12 +291,12 @@
         ${feat ? `<div class="bench">
           <div class="bench-dial">${tach(pctOf(feat))}</div>
           <div class="bench-txt"><span class="bench-k">${lastId === feat.id ? "Last opened" : "Newest project"}</span>
-            <h2>${esc(feat.name || bikeName(fb))}</h2><span class="bench-bike">${esc([feat.name && feat.name !== bikeName(fb) ? bikeName(fb) : "", fb && fb.variant].filter(Boolean).join(", "))}</span>
+            <h2>${esc(feat.name || bikeName(fb))}</h2><span class="bench-bike">${fb && fb.generic ? (readyFor(feat) ? "The " + esc(bikeName(readyFor(feat))) + " page is ready to connect" : "We're building this bike's page") : esc([feat.name && feat.name !== bikeName(fb) ? bikeName(fb) : "", fb && fb.variant].filter(Boolean).join(", "))}</span>
             ${fg && fg.next ? `<div class="bench-next"><span>Next step</span><b>${esc(fg.next)}</b></div>` : fg && fg.total ? `<div class="bench-next"><span>Course</span><b>Every step is done. Time to ride.</b></div>` : ""}
-            <div class="bench-go"><button class="btn tan big" data-project="${esc(feat.id)}">Open project</button><button class="btn ghost-l" data-nav="new">Start another bike</button></div></div>
-          <img class="bench-art" src="img/bike.svg" alt=""></div>`
+            <div class="bench-go">${fb && fb.generic && readyFor(feat) && feat.role === "owner" ? `<button class="btn tan big" data-connect="${esc(feat.id)}">Connect to its page</button><button class="btn ghost-l" data-project="${esc(feat.id)}">Open project</button>` : `<button class="btn tan big" data-project="${esc(feat.id)}">Open project</button>`}<button class="btn ghost-l" data-nav="new">Start another bike</button></div></div>
+          ${benchArt()}</div>`
         : `<div class="bench empty"><div class="bench-txt"><h2>What are you restoring?</h2><p>Pick your bike and you get its parts diagrams, part numbers, a step-by-step course and a tracker for every piece.</p>
-            <div class="bench-go"><button class="btn tan big" data-nav="new">Add your bike</button></div></div><img class="bench-art" src="img/bike.svg" alt=""></div>`}
+            <div class="bench-go"><button class="btn tan big" data-nav="new">Add your bike</button></div></div>${benchArt()}</div>`}
       </section>
       ${data.length ? `<section class="garage"><div class="garage-h"><h2>Your garage</h2><button class="btn sm" data-nav="new">+ New project</button></div>
         <div class="gts">${data.map(tag).join("")}<button class="gt gt-new" data-nav="new"><b>Add a bike</b><span>Start a new project for another bike</span></button></div></section>` : ""}
@@ -232,6 +304,7 @@
         <div><b>Bike not listed?</b><span>Request it and we'll add it in about ${REQ_DAYS} days.</span><button class="linkbtn" data-nav="browse">Find or request a bike</button></div></section>
       <div id="garageReqs"></div>`, { wide: true, garage: true });
     myRequests().then(rows => { const box = document.getElementById("garageReqs"); if (box) box.innerHTML = reqListHtml(rows); });
+    app.querySelectorAll("[data-connect]").forEach(b => b.onclick = e => { e.stopPropagation(); const p = data.find(x => x.id === b.dataset.connect); connectProject(p, readyFor(p)); });
     app.querySelectorAll("[data-rename]").forEach(b => b.onclick = async () => {
       const p = data.find(x => x.id === b.dataset.rename); const name = prompt("Project name", p.name || ""); if (name === null) return;
       const { error } = await sb.from("projects").update({ name: name.trim().slice(0, 80) }).eq("id", p.id); if (error) note(friendly(error), true); else showProjects();
@@ -272,6 +345,12 @@
     try { window.PACK = await getJson("packs/" + encodeURIComponent(bikeId) + "/pack.json?v=" + (window.RV_BUILD || "")); }
     catch (e) { return fail("Couldn't load the data for this bike. Check your internet and try again."); }
     window.RV_CLOUD = cloud || null;
+    if (bikeOf(bikeId)?.generic) {
+      let m = null;
+      if (cloud) { const { data } = await sb.from("records").select("data").eq("project_id", cloud.projectId).eq("coll", "meta").eq("rec_id", "project").maybeSingle(); m = data && data.data; }
+      else m = localGeneric();
+      window.RV_BIKE_LABEL = m ? { year: m.year, make: m.make, model: m.model, style: m.style || guessStyle(m.make || "", m.model || "") } : null;
+    }
     try { await loadScript("app.js?v=" + (window.RV_BUILD || Date.now())); } catch (e) { fail("Couldn't load the app. Check your internet and try again."); }
   }
   async function openProject(pid) {

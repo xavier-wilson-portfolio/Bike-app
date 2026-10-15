@@ -2,7 +2,8 @@
 function heroPhotoDoc() { const id = meta().heroPhoto, d = id && S.docs[id]; return d && !d.archived && d.file && d.file.startsWith("data:image") ? d : null; }
 const HERO_STOCK = BIKE.hero;
 function heroPhotoHtml() {
-  const d = heroPhotoDoc(), bike = meta().bike || BIKE.name, H = HERO_STOCK || { src: BIKE.art || "img/bike.svg", alt: "Motorcycle illustration", cap: "", none: true };
+  const d = heroPhotoDoc(), bike = meta().bike || BIKE.name, H = HERO_STOCK || (LEGACY ? { src: "img/bike.svg", alt: "Motorcycle illustration", cap: "", none: true } : silImg(BIKE.silhouette || (BIKE.style ? "bike-" + BIKE.style : "") || (GENERIC ? "bike-standard" : "")) || (GENERIC && silImg("bike-standard")) ? { src: silImg(BIKE.silhouette || "bike-" + BIKE.style) || silImg("bike-standard"), alt: "Motorcycle silhouette", cap: "", none: true, sil: true } : null);
+  if (!H && !d) return `<figure class="herophoto nophoto"><div class="np-in">${ic("camera")}<b>Add a photo of your ${esc(BIKE.short || "bike")}</b><span class="muted">It shows here and on your garage card.</span>${ME.canWrite ? `<button class="btn tan" id="hpAdd">${ic("image")} Add my photo</button>` : ""}</div></figure>`;
   return `<figure class="herophoto has${d ? "" : " cutout"}">${d ? `<img src="${d.file}" alt="${esc(d.title || "Photo of the " + bike)}">` : `<img class="hp-cut" src="${H.src}" alt="${esc(H.alt)}" width="1097" height="633">${H.none ? "" : `<figcaption class="hp-cap">${esc(H.cap)} Photo: <a href="${H.page}" target="_blank" rel="noopener">${esc(H.credit)}</a>, <a href="${H.licUrl}" target="_blank" rel="noopener">${esc(H.lic)}</a></figcaption>`}`}
     ${ME.canWrite ? `<div class="hp-tools">${d ? `<button class="btn sm" id="hpChange">${ic("image")} Change photo</button><button class="btn sm" id="hpRemove">Use the stock photo</button>` : `<button class="btn sm" id="hpAdd">${ic("image")} Use my own photo</button>`}</div>` : ""}</figure>`;
 }
@@ -139,14 +140,14 @@ VIEWS.paint = {
 VIEWS.guides = {
   render() {
     const g = R.guide && GUIDES[R.guide];
-    if (!g || g.sec) return `${pageHead("guides")}<div class="guidegrid">${Object.entries(GUIDES).map(([k, x]) => `<button class="gcard" data-guide="${k}">${x.img ? `<img src="img/${x.img}.svg" alt="" loading="lazy">` : `<span class="gc-ico">${ic(x.icon || "book")}</span>`}<span><b>${esc(x.title)}</b><small>${esc(x.sum)}</small><em>Read the guide ${ic("next")}</em></span></button>`).join("")}</div>
+    if (!g || g.sec) return `${pageHead("guides")}<div class="guidegrid">${Object.entries(GUIDES).map(([k, x]) => `<button class="gcard" data-guide="${k}">${x.img ? `<img src="img/${x.img}.svg" alt="" loading="lazy">` : silImg(x.cover) ? `<img class="silcover" src="${silImg(x.cover)}" alt="" loading="lazy">` : `<span class="gc-ico">${ic(x.icon || "book")}</span>`}<span><b>${esc(x.title)}</b><small>${esc(x.sum)}</small><em>Read the guide ${ic("next")}</em></span></button>`).join("")}</div>
       <div class="row center">${askBtn("", "", "btn ask")}</div>`;
     const others = Object.entries(GUIDES).filter(([k]) => k !== R.guide).slice(0, 4);
     return `<div class="ph" data-own="1"><div class="eyebrow">Guide</div><h1>${esc(g.title)}</h1><p>${esc(g.sum)}</p></div>
-      ${g.img ? `<img class="guide-img" src="img/${g.img}.svg" alt="">` : ""}
+      ${g.img ? `<img class="guide-img" src="img/${g.img}.svg" alt="">` : silImg(g.cover) ? `<img class="guide-img silcover" src="${silImg(g.cover)}" alt="">` : ""}
       <article class="article">${g.body.map(([h, t]) => `<section><h2>${esc(h)}</h2><p>${esc(t)}</p></section>`).join("")}
         <div class="panel blue row center" style="gap:12px"><span>Still have a question about ${esc(g.title.toLowerCase())}?</span>${askBtn("", g.title, "btn pri ask")}</div></article>
-      <div class="stack"><h2 class="sec">More guides</h2><div class="guidegrid">${others.map(([k, x]) => `<button class="gcard" data-guide="${k}">${x.img ? `<img src="img/${x.img}.svg" alt="" loading="lazy">` : `<span class="gc-ico">${ic(x.icon || "book")}</span>`}<span><b>${esc(x.title)}</b><small>${esc(x.sum)}</small></span></button>`).join("")}</div></div>
+      <div class="stack"><h2 class="sec">More guides</h2><div class="guidegrid">${others.map(([k, x]) => `<button class="gcard" data-guide="${k}">${x.img ? `<img src="img/${x.img}.svg" alt="" loading="lazy">` : silImg(x.cover) ? `<img class="silcover" src="${silImg(x.cover)}" alt="" loading="lazy">` : `<span class="gc-ico">${ic(x.icon || "book")}</span>`}<span><b>${esc(x.title)}</b><small>${esc(x.sum)}</small></span></button>`).join("")}</div></div>
       <div class="row center"><button class="btn" data-goto="guides">${ic("back")} All guides</button></div>`;
   },
   bind(root) { $$("[data-guide]", root).forEach(b => b.onclick = () => { const k = b.dataset.guide; if (GUIDES[k].sec) go(GUIDES[k].sec); else go("guide-" + k); }); }

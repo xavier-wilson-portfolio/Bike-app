@@ -1,5 +1,5 @@
 /* lesson picture: the drawn art when a bike has it, otherwise the bike's own art or an icon */
-const lessonArt = (L, mode) => L.img ? `<img src="img/${L.img}.svg" alt=""${mode === "lazy" ? ' loading="lazy"' : ""}>` : mode === "big" ? "" : mode === "card" && BIKE.art ? `<img src="${BIKE.art}" alt="">` : `<span class="lart">${ic(L.icon || "wrench")}</span>`;
+const lessonArt = (L, mode) => !L.img && silImg(L.cover) ? `<img class="silcover" src="${silImg(L.cover)}" alt=""${mode === "lazy" ? ' loading="lazy"' : ""}>` : L.img ? `<img src="img/${L.img}.svg" alt=""${mode === "lazy" ? ' loading="lazy"' : ""}>` : mode === "big" ? "" : mode === "card" && BIKE.art ? `<img src="${BIKE.art}" alt="">` : `<span class="lart">${ic(L.icon || "wrench")}</span>`;
 /* ============ HOME, COURSE, LESSONS, SHOPS ============ */
 const lessonIndex = id => sorted("phases").findIndex(p => p.id === id);
 function lessonState(ph) { const s = phaseStats(ph); if (s.total && s.done === s.total) return "done"; if (s.done > 0 || s.tasks.some(t => t.status === "In progress")) return "doing"; return "todo"; }

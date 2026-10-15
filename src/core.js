@@ -4,12 +4,16 @@
    BIKE is who the bike is; X says which extras this bike has (3D, paint studio, videos). */
 const PACK = window.PACK || { bike: {}, catalogue: {}, thumbs: {} };
 const BIKE = Object.assign({ id: "bike", year: "", make: "", model: "", short: "", name: "", variant: "", variantShort: "", catalogueName: "", engine: "", specs: [], specSource: null, links: {}, hero: null, extras: {} }, PACK.bike);
+if (BIKE.generic && window.RV_BIKE_LABEL) { const L = window.RV_BIKE_LABEL; Object.assign(BIKE, { year: L.year || "", make: L.make || "", model: L.model || "", name: [L.year, L.make, L.model].filter(Boolean).join(" ") || "Your bike", short: L.model || "bike", variant: "", style: L.style || "standard" }); }
 if (!BIKE.short) BIKE.short = BIKE.model; if (!BIKE.name) BIKE.name = [BIKE.year, BIKE.make, BIKE.model].join(" "); if (!BIKE.variantShort) BIKE.variantShort = BIKE.short;
 const X = BIKE.extras || {};
 const CMS_DATA = PACK.catalogue || {};
+const GENERIC = !!BIKE.generic;                    // a bike that isn't in the library yet: records only, no course
 const LEGACY = !!BIKE.legacyContent;              // the GS750 pack: content written into the app itself
 const HAS_CAT = Object.keys(CMS_DATA).length > 0;  // the bike has parts-catalogue diagrams
-const CT = BIKE.content || {};                      // per-bike text from the pack (content.json)
+const CT = BIKE.content || {};
+const SIL = new Set((window.RV_CONFIG && window.RV_CONFIG.sil) || []);
+const silImg = name => { if (!name) return null; const f = ["webp", "png", "jpg", "svg"].map(x => name + "." + x).find(x => SIL.has(x)); return f ? "img/sil/" + f : null; };                      // per-bike text from the pack (content.json)
 const D3_THUMBS = PACK.thumbs || {};
 const DATA_KEY = "rv.data." + BIKE.id;
 /* ============ utilities ============ */
@@ -334,7 +338,8 @@ const titleOf = (c, r) => r ? (r[SCHEMA[c]?.title] || r.name || r.title || r.id)
 function nextId(c) {
   const sc = SCHEMA[c]; let max = 0;
   all(c).forEach(r => { const m = String(r.id).match(/(\d+)$/); if (String(r.id).startsWith(sc.prefix) && m) max = Math.max(max, +m[1]); });
-  let id; do { max++; id = sc.prefix + String(max).padStart(sc.pad, "0"); } while (S[c][id]);
+  const pre = sc.prefix + (GENERIC && sc.prefix ? "U" : "");
+  let id; do { max++; id = pre + String(max).padStart(sc.pad, "0"); } while (S[c][id]);
   return id;
 }
 function blank(c, init = {}) {

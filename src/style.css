@@ -1411,3 +1411,30 @@ article.gt::before{content:"";position:absolute;left:14px;top:19px;width:10px;he
 .tl .lart{width:64px;height:48px;min-height:0;border-radius:8px}.tl .lart svg{width:24px;height:24px}
 .gc-ico{display:grid;place-items:center;height:120px;background:var(--panel);color:var(--blue-ink);border-radius:10px}.gc-ico svg{width:40px;height:40px}
 a.shop{text-decoration:none;color:inherit}a.shop b{color:var(--fg)}
+/* request: start now */
+.pk-req-now{display:flex;flex-direction:column;gap:6px;align-items:flex-start;border-top:1px dashed var(--line-2);padding-top:12px}
+.pk-req.done .btn{margin-top:8px;align-self:flex-start}
+.pk-ready{width:100%;max-width:640px;margin:0 auto 18px;display:flex;flex-direction:column;gap:6px;align-items:flex-start;text-align:left;background:var(--green-bg);border-radius:14px;padding:14px 16px}
+.pk-ready.plain{background:var(--panel)}
+.gt-ready{display:flex;gap:10px;align-items:center;justify-content:space-between;background:var(--green-bg);border-radius:10px;padding:8px 10px;font-size:13.5px;margin-top:8px}
+/* general bike home */
+.is-generic #progLine{visibility:hidden}
+.ghero{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;max-width:980px;margin:0 auto}
+.ghero h1{font-size:clamp(30px,5vw,48px);margin:0}.ghero p{max-width:62ch;margin:0}
+.ghero .act{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:6px 0 10px}
+.gtiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;max-width:980px;margin:0 auto;width:100%}
+.gtile2{all:unset;box-sizing:border-box;cursor:pointer;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:2px;box-shadow:var(--shadow)}
+.gtile2:hover{border-color:var(--blue)}.gtile2:focus-visible{outline:2px solid var(--blue-ink)}
+.gt2-ic{color:var(--blue-ink)}.gt2-ic svg{width:22px;height:22px}
+.gt2-t{font-weight:700;font-size:13px;color:var(--muted);margin-top:6px}.gt2-v{font-family:var(--f-display);font-size:24px;font-weight:700}.gt2-s{font-size:12.5px;color:var(--faint)}
+.gtile2.red .gt2-v{color:var(--red)}
+/* diagram site choices */
+.dsites{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;max-width:980px;margin:0 auto;width:100%}
+.dsite{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:6px;text-decoration:none;color:inherit;box-shadow:var(--shadow)}
+.dsite:hover{border-color:var(--blue)}.dsite-top{display:flex;gap:8px;align-items:center;justify-content:space-between;flex-wrap:wrap}.dsite .linkbtn{margin-top:auto}
+.tag.plain{background:var(--panel-2)}
+@media (max-width:640px){.gtiles{grid-template-columns:1fr 1fr}.gtile2{padding:12px}.gt2-v{font-size:20px}}
+/* black silhouette covers and the no-photo hero */
+img.silcover{object-fit:contain;background:#fff;padding:10px}
+.herophoto.nophoto{display:grid;place-items:center;min-height:260px;background:var(--panel);border:2px dashed var(--line-2);border-radius:20px}
+.np-in{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;padding:24px}.np-in>svg{width:34px;height:34px;color:var(--blue-ink)}

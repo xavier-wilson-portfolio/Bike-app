@@ -1,0 +1,15 @@
+{
+ "id": "custom-bike",
+ "year": "",
+ "make": "",
+ "model": "",
+ "short": "bike",
+ "name": "Your bike",
+ "variant": "Not in the library yet",
+ "generic": true,
+ "status": "generic",
+ "specs": [],
+ "links": {"ebay": "motorcycle"},
+ "hero": null,
+ "extras": {}
+}

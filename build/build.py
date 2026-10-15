@@ -38,7 +38,7 @@ for pdir in sorted((ROOT / 'data' / 'packs').iterdir()):
     (od / 'pack.json').write_text(json.dumps(pack, separators=(',', ':'), ensure_ascii=False))
     if (pdir / 'baseline.json').exists():
         shutil.copy(pdir / 'baseline.json', od / 'baseline.json')
-    index.append({k: bike.get(k) for k in ['id', 'year', 'make', 'model', 'variant', 'name', 'short', 'match', 'extras', 'status']}
+    index.append({k: bike.get(k) for k in ['id', 'year', 'make', 'model', 'variant', 'name', 'short', 'match', 'extras', 'status', 'generic', 'reqKeys']}
                  | {'diagrams': len(cms)})
 (out / 'packs' / 'index.json').write_text(json.dumps(index, separators=(',', ':'), ensure_ascii=False))
 
@@ -51,7 +51,8 @@ cfg = json.loads(cfg_file.read_text()) if cfg_file.exists() else {}
 import hashlib
 build_id = hashlib.sha1((app + css).encode()).hexdigest()[:10]
 loader = 'window.RV_BUILD = "' + build_id + '";\n' + loader
-loader = 'window.RV_CONFIG = ' + json.dumps({k: cfg.get(k) for k in ['supabaseUrl', 'supabaseKey'] if cfg.get(k)}) + ';\n' + loader
+sil = sorted(p.name for p in (ROOT / 'img' / 'sil').glob('*') if p.suffix in ('.webp', '.png', '.jpg', '.svg'))   # black silhouette covers that exist
+loader = 'window.RV_CONFIG = ' + json.dumps({**{k: cfg.get(k) for k in ['supabaseUrl', 'supabaseKey'] if cfg.get(k)}, 'sil': sil}) + ';\n' + loader
 html = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Revora</title>
 <meta name="description" content="Restore your motorcycle: parts diagrams, part numbers, a step-by-step course and a parts tracker for your exact bike.">

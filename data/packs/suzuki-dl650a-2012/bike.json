@@ -62,6 +62,29 @@
  "hero": null,
  "extras": {},
  "status": "basic",
- "art": "img/adv.svg",
- "specNote": "Published specs for the 2012–13 V-Strom 650 ABS."
+ "specNote": "Published specs for the 2012–13 V-Strom 650 ABS.",
+ "reqKeys": [
+  "2012-suzuki-vstrom650",
+  "2012-suzuki-vstrom",
+  "2012-suzuki-dl650a",
+  "2012-suzuki-dl650",
+  "2012-suzuki-vstrom650abs",
+  "2012-suzuki-vstrom650adventure"
+ ],
+ "diagramSites": [
+  {
+   "k": "revzilla",
+   "name": "RevZilla OEM parts",
+   "url": "https://www.revzilla.com/oem/suzuki/2012-suzuki-v-strom-650",
+   "what": "Factory diagrams for the 2012 V-Strom 650, by area of the bike."
+  },
+  {
+   "k": "msp",
+   "name": "MotorcycleSpareParts.eu",
+   "url": "https://www.motorcyclespareparts.eu/en/suzuki-parts/2012-dl650a-v-strom-motorcycles",
+   "what": "Factory diagrams for the 2012 DL650A, by model code."
+  }
+ ],
+ "silhouette": "bike-adventure",
+ "style": "adventure"
 }

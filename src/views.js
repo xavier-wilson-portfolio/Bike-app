@@ -45,7 +45,7 @@ function importJson(mode) {
   inp.click();
 }
 function bindSetup(root) { $("#loadBase", root) && ($("#loadBase", root).onclick = () => loadBaseline(false)); $("#importJson", root) && ($("#importJson", root).onclick = () => importJson()); }
-const isEmptyProject = () => !Object.keys(S.tasks).length && !Object.keys(S.parts).length;
+const isEmptyProject = () => GENERIC ? !S.meta.project : !Object.keys(S.tasks).length && !Object.keys(S.parts).length;
 
 /* ============ OVERVIEW ============ */
 function partCounts() {

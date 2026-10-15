@@ -17,7 +17,8 @@
     "stromtrooper"
    ],
    "img": null,
-   "focus": null
+   "focus": null,
+   "cover": "tools"
   },
   "B": {
    "title": "Inspect it as it sits",
@@ -34,7 +35,8 @@
     "stromtrooper"
    ],
    "img": null,
-   "focus": null
+   "focus": null,
+   "cover": "bike-adventure"
   },
   "C": {
    "title": "Research, budget & order",
@@ -53,7 +55,8 @@
     "denniskirk"
    ],
    "img": null,
-   "focus": null
+   "focus": null,
+   "cover": "tools"
   },
   "D": {
    "title": "Take off the bodywork",
@@ -71,7 +74,8 @@
     "ebay"
    ],
    "img": null,
-   "focus": null
+   "focus": null,
+   "cover": "bike-adventure"
   },
   "E": {
    "title": "Clean & inspect",
@@ -88,7 +92,8 @@
     "revzilla"
    ],
    "img": null,
-   "focus": null
+   "focus": null,
+   "cover": "tools"
   },
   "F": {
    "title": "Charging & electrical",
@@ -107,7 +112,8 @@
     "stromtrooper"
    ],
    "img": null,
-   "focus": null
+   "focus": null,
+   "cover": "electrical"
   },
   "G": {
    "title": "Cooling system",
@@ -125,7 +131,8 @@
     "revzilla"
    ],
    "img": null,
-   "focus": null
+   "focus": null,
+   "cover": "cooling"
   },
   "H": {
    "title": "Fuel & air",
@@ -144,7 +151,8 @@
     "denniskirk"
    ],
    "img": null,
-   "focus": null
+   "focus": null,
+   "cover": "fuel"
   },
   "I": {
    "title": "Engine service",
@@ -163,7 +171,8 @@
     "stromtrooper"
    ],
    "img": null,
-   "focus": null
+   "focus": null,
+   "cover": "engine"
   },
   "J": {
    "title": "Wheels, tires & chain",
@@ -182,7 +191,8 @@
     "allballs"
    ],
    "img": null,
-   "focus": null
+   "focus": null,
+   "cover": "wheels"
   },
   "K": {
    "title": "Brakes & ABS",
@@ -201,7 +211,8 @@
     "denniskirk"
    ],
    "img": null,
-   "focus": null
+   "focus": null,
+   "cover": "brakes"
   },
   "L": {
    "title": "Suspension & steering",
@@ -220,7 +231,8 @@
     "stromtrooper"
    ],
    "img": null,
-   "focus": null
+   "focus": null,
+   "cover": "suspension"
   },
   "M": {
    "title": "Reassemble & road test",
@@ -237,7 +249,8 @@
     "revzilla"
    ],
    "img": null,
-   "focus": null
+   "focus": null,
+   "cover": "bike-adventure"
   },
   "N": {
    "title": "Keep it running",
@@ -254,7 +267,8 @@
     "manuals"
    ],
    "img": null,
-   "focus": null
+   "focus": null,
+   "cover": "tools"
   }
  },
  "howto": {
@@ -711,6 +725,7 @@
   "efi": {
    "title": "Fuel injection basics",
    "img": null,
+   "cover": "fuel",
    "icon": "fuel",
    "sum": "How the V-Strom's injection works and what you actually service.",
    "body": [
@@ -735,6 +750,7 @@
   "charging": {
    "title": "Charging system checks",
    "img": null,
+   "cover": "electrical",
    "icon": "bolt",
    "sum": "Battery, stator and regulator: how to tell which one is failing.",
    "body": [
@@ -758,16 +774,19 @@
   },
   "electrical": {
    "img": null,
-   "icon": "bolt"
+   "icon": "bolt",
+   "cover": "electrical"
   },
   "brakes": {
    "img": null,
    "icon": "shield",
+   "cover": "brakes",
    "sum": "Disc brakes with ABS, what wears out, and how to change the fluid."
   },
   "wheels": {
    "title": "Wheels & tires",
    "img": null,
+   "cover": "wheels",
    "icon": "wheel",
    "sum": "Reading a tire's age, wheel bearings and the rear cush drive.",
    "body": [

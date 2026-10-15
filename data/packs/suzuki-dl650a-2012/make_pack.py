@@ -90,8 +90,9 @@ LESSONS = {
               tips=["Log today's odometer reading in the Maintenance log.", "Mark the services you just did so their next due dates start counting.", "Keep receipts and part numbers with each service record."],
               shops=["manuals"]),
 }
+COVER = dict(A="tools", B="bike-adventure", C="tools", D="bike-adventure", E="tools", F="electrical", G="cooling", H="fuel", I="engine", J="wheels", K="brakes", L="suspension", M="bike-adventure", N="tools")
 for k, L in LESSONS.items():
-    L.update(img=None, focus=None)
+    L.update(img=None, focus=None, cover=COVER[k])
 
 # ---------------------------------------------------------------- steps of the course
 # (id, title, module, safety, hours, tools, instructions, reason, expected, howto, prereqs)
@@ -512,18 +513,18 @@ content = {
                  "Final drive": ["revzilla", "denniskirk"], "Controls": ["fiche", "revzilla"], "Cosmetics": ["fiche", "ebay"], "_default": ["fiche", "revzilla"]},
     "guides": {
         "paint": None, "carbs": None,
-        "efi": {"title": "Fuel injection basics", "img": None, "icon": "fuel", "sum": "How the V-Strom's injection works and what you actually service.", "body": [
+        "efi": {"title": "Fuel injection basics", "img": None, "cover": "fuel", "icon": "fuel", "sum": "How the V-Strom's injection works and what you actually service.", "body": [
             ["What it does", "The ECU reads sensors (throttle position, air, temperature) and opens an injector for each cylinder for just the right time. There's nothing to jet or adjust like on a carb."],
             ["What you service", "The air filter, the fuel lines and clamps, the throttle cable play and the balance between the two throttle bodies. The injectors themselves rarely need attention."],
             ["Throttle-body sync", "Each cylinder has its own throttle body. Over time they drift apart and the bike gets lumpy at low speed. A two-gauge vacuum tool and the manual's procedure bring them back in balance."],
             ["Warning signs", "A flashing FI light, hard starting or surging. Read the fault code the way the manual shows before replacing anything."]]},
-        "charging": {"title": "Charging system checks", "img": None, "icon": "bolt", "sum": "Battery, stator and regulator: how to tell which one is failing.", "body": [
+        "charging": {"title": "Charging system checks", "img": None, "cover": "electrical", "icon": "bolt", "sum": "Battery, stator and regulator: how to tell which one is failing.", "body": [
             ["How it works", "The stator makes AC power as the engine turns. The regulator/rectifier turns it into DC and holds the voltage steady for the battery and lights."],
             ["Start with the battery", "Charge it fully and test it. A tired battery makes everything else look broken."],
             ["Then the connector", "Look at the plug between the stator and the regulator. Brown, melted or loose pins mean heat, and heat means trouble. The 2012-2016 stators were also recalled."],
             ["Then measure", "Use the manual's charging test: voltage at the battery at set engine speeds, then stator output and resistance. Compare every reading with the manual."]]},
-        "electrical": {"img": None, "icon": "bolt"}, "brakes": {"img": None, "icon": "shield", "sum": "Disc brakes with ABS, what wears out, and how to change the fluid."},
-        "wheels": {"title": "Wheels & tires", "img": None, "icon": "wheel", "sum": "Reading a tire's age, wheel bearings and the rear cush drive.", "body": [
+        "electrical": {"img": None, "icon": "bolt", "cover": "electrical"}, "brakes": {"img": None, "icon": "shield", "cover": "brakes", "sum": "Disc brakes with ABS, what wears out, and how to change the fluid."},
+        "wheels": {"title": "Wheels & tires", "img": None, "cover": "wheels", "icon": "wheel", "sum": "Reading a tire's age, wheel bearings and the rear cush drive.", "body": [
             ["Tire age", "Every tire has a four-digit date code on the sidewall: the week, then the year. Old rubber gets hard and slippery even with tread left."],
             ["Sizes", "The 2012 V-Strom 650 uses a 110/80R19 front and a 150/70R17 rear."],
             ["Bearings", "With the wheel off the ground, rock it at the top and bottom and spin it. Any play or grinding means new bearings."],

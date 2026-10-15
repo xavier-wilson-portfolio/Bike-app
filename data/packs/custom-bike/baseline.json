@@ -1,0 +1,41 @@
+{
+ "meta": [
+  {
+   "id": "project",
+   "projectName": "My bike",
+   "bike": "",
+   "variant": "",
+   "frameNo": "",
+   "engineNo": "",
+   "color": "",
+   "units": "in",
+   "currency": "USD",
+   "baseBudget": 0,
+   "contingencyPct": 10,
+   "budgetChanges": [],
+   "laborRate": 0,
+   "showLaborValue": false,
+   "roadReady": false,
+   "roadReadyBy": "",
+   "roadReadyDate": "",
+   "meshMap": {},
+   "expenseCategories": [
+    "Service parts",
+    "Fluids",
+    "Tires",
+    "Chain and sprockets",
+    "Brake parts",
+    "Electrical parts",
+    "Suspension",
+    "Bodywork",
+    "Tools",
+    "Shop labor",
+    "Other"
+   ],
+   "createdAt": "2026-10-15T00:00:00Z",
+   "updatedAt": "2026-10-15T00:00:00Z",
+   "updatedBy": "Revora starter project",
+   "archived": false
+  }
+ ]
+}
