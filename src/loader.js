@@ -262,7 +262,8 @@
       <text x="110" y="160" class="pc">${Math.round(pct)}<tspan>%</tspan></text><text x="110" y="184" class="unit">course done</text>
       <g class="needle" style="--deg:${deg}deg"><line x1="110" y1="110" x2="110" y2="34"/><circle cx="110" cy="110" r="7"/></g></svg>`;
   }
-  const benchArt = () => { const f = ((CFG.sil) || []).find(x => /^bike-standard\./.test(x)); return f ? `<img class="bench-art" src="img/sil/${f}" alt="">` : ""; };
+  const silFile = n => n && ((CFG.sil) || []).find(x => x.replace(/\.\w+$/, "") === n);
+  const benchArt = (b, style) => { const f = b && !b.generic && silFile(b.silhouette) || silFile("bike-" + (style || (b && b.style) || "standard")) || silFile("bike-standard"); return f ? `<img class="bench-art" src="img/sil/${f}" alt="">` : ""; };
   function greeting() { const h = new Date().getHours(); return h < 5 ? "Late night in the garage" : h < 12 ? "Good morning" : h < 18 ? "Good afternoon" : "Good evening"; }
 
   async function showProjects() {
@@ -271,8 +272,8 @@
     if (error) return fail(friendly(error));
     const prog = await projectProgress(data.map(p => p.id));
     // projects on the general bike: which request they're waiting on, and whether that bike's page is ready
-    const gen = data.filter(p => bikeOf(p.bike_id)?.generic), genKey = {};
-    if (gen.length) { const { data: ms } = await sb.from("records").select("project_id,key:data->>requestKey").eq("coll", "meta").in("project_id", gen.map(p => p.id)); (ms || []).forEach(m => genKey[m.project_id] = m.key); }
+    const gen = data.filter(p => bikeOf(p.bike_id)?.generic), genKey = {}, genStyle = {};
+    if (gen.length) { const { data: ms } = await sb.from("records").select("project_id,key:data->>requestKey,style:data->>style").eq("coll", "meta").in("project_id", gen.map(p => p.id)); (ms || []).forEach(m => { genKey[m.project_id] = m.key; genStyle[m.project_id] = m.style; }); }
     const readyFor = p => bikeOf(p.bike_id)?.generic ? packForKey(genKey[p.id]) : null;
     const first = String(profile?.display_name || session.user.email || "").split(/[\s@]/)[0];
     const lastId = ls.get("rv.project"), feat = data.find(p => p.id === lastId) || data[0];
@@ -294,7 +295,7 @@
             <h2>${esc(feat.name || bikeName(fb))}</h2><span class="bench-bike">${fb && fb.generic ? (readyFor(feat) ? "The " + esc(bikeName(readyFor(feat))) + " page is ready to connect" : "We're building this bike's page") : esc([feat.name && feat.name !== bikeName(fb) ? bikeName(fb) : "", fb && fb.variant].filter(Boolean).join(", "))}</span>
             ${fg && fg.next ? `<div class="bench-next"><span>Next step</span><b>${esc(fg.next)}</b></div>` : fg && fg.total ? `<div class="bench-next"><span>Course</span><b>Every step is done. Time to ride.</b></div>` : ""}
             <div class="bench-go">${fb && fb.generic && readyFor(feat) && feat.role === "owner" ? `<button class="btn tan big" data-connect="${esc(feat.id)}">Connect to its page</button><button class="btn ghost-l" data-project="${esc(feat.id)}">Open project</button>` : `<button class="btn tan big" data-project="${esc(feat.id)}">Open project</button>`}<button class="btn ghost-l" data-nav="new">Start another bike</button></div></div>
-          ${benchArt()}</div>`
+          ${benchArt(fb, genStyle[feat.id])}</div>`
         : `<div class="bench empty"><div class="bench-txt"><h2>What are you restoring?</h2><p>Pick your bike and you get its parts diagrams, part numbers, a step-by-step course and a tracker for every piece.</p>
             <div class="bench-go"><button class="btn tan big" data-nav="new">Add your bike</button></div></div>${benchArt()}</div>`}
       </section>

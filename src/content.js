@@ -232,6 +232,8 @@ if (!LEGACY) {
   put(SHOPS, CT.shops);
   if (CT.catShops) { Object.keys(CAT_SHOPS).forEach(k => delete CAT_SHOPS[k]); Object.assign(CAT_SHOPS, CT.catShops); }
   put(GUIDE, CT.guide); put(GUIDES, CT.guides);
+  // no drawn art on library bikes: every guide gets a silhouette cover (tools for the hands-on ones, the bike itself otherwise)
+  Object.values(GUIDES).forEach(g => { if (g.img) { g.img = null; g.cover = g.cover || "tools"; } if (!g.cover) g.cover = BIKE.silhouette || "bike-" + (BIKE.style || "standard"); });
   if (CT.suggestions) SUGGESTIONS.splice(0, SUGGESTIONS.length, ...CT.suggestions);
   Object.keys(PART_IMG).forEach(k => delete PART_IMG[k]);
 }

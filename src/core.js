@@ -13,6 +13,8 @@ const LEGACY = !!BIKE.legacyContent;              // the GS750 pack: content wri
 const HAS_CAT = Object.keys(CMS_DATA).length > 0;  // the bike has parts-catalogue diagrams
 const CT = BIKE.content || {};
 const SIL = new Set((window.RV_CONFIG && window.RV_CONFIG.sil) || []);
+const SIL_CREDIT = (window.RV_CONFIG && window.RV_CONFIG.silCredit) || {};
+const silCredit = src => src && SIL_CREDIT[src.split("/").pop()];
 const silImg = name => { if (!name) return null; const f = ["webp", "png", "jpg", "svg"].map(x => name + "." + x).find(x => SIL.has(x)); return f ? "img/sil/" + f : null; };                      // per-bike text from the pack (content.json)
 const D3_THUMBS = PACK.thumbs || {};
 const DATA_KEY = "rv.data." + BIKE.id;

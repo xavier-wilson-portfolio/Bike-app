@@ -1,10 +1,14 @@
 /* ============ HOME (car-site layout), PAINT STUDIO, GUIDES ============ */
 function heroPhotoDoc() { const id = meta().heroPhoto, d = id && S.docs[id]; return d && !d.archived && d.file && d.file.startsWith("data:image") ? d : null; }
 const HERO_STOCK = BIKE.hero;
+function silHero() {
+  const src = silImg(BIKE.silhouette || "bike-" + BIKE.style) || silImg("bike-standard"), c = silCredit(src);
+  return c ? { src, alt: "Silhouette of a " + (c.what || "motorcycle"), cap: "Silhouette traced from a photo.", credit: c.artist || "Wikimedia Commons", page: c.page, lic: c.lic, licUrl: c.licUrl, sil: true } : { src, alt: "Motorcycle silhouette", cap: "", none: true, sil: true };
+}
 function heroPhotoHtml() {
-  const d = heroPhotoDoc(), bike = meta().bike || BIKE.name, H = HERO_STOCK || (LEGACY ? { src: "img/bike.svg", alt: "Motorcycle illustration", cap: "", none: true } : silImg(BIKE.silhouette || (BIKE.style ? "bike-" + BIKE.style : "") || (GENERIC ? "bike-standard" : "")) || (GENERIC && silImg("bike-standard")) ? { src: silImg(BIKE.silhouette || "bike-" + BIKE.style) || silImg("bike-standard"), alt: "Motorcycle silhouette", cap: "", none: true, sil: true } : null);
+  const d = heroPhotoDoc(), bike = meta().bike || BIKE.name, H = HERO_STOCK || (LEGACY ? { src: "img/bike.svg", alt: "Motorcycle illustration", cap: "", none: true } : silImg(BIKE.silhouette || (BIKE.style ? "bike-" + BIKE.style : "") || (GENERIC ? "bike-standard" : "")) || (GENERIC && silImg("bike-standard")) ? silHero() : null);
   if (!H && !d) return `<figure class="herophoto nophoto"><div class="np-in">${ic("camera")}<b>Add a photo of your ${esc(BIKE.short || "bike")}</b><span class="muted">It shows here and on your garage card.</span>${ME.canWrite ? `<button class="btn tan" id="hpAdd">${ic("image")} Add my photo</button>` : ""}</div></figure>`;
-  return `<figure class="herophoto has${d ? "" : " cutout"}">${d ? `<img src="${d.file}" alt="${esc(d.title || "Photo of the " + bike)}">` : `<img class="hp-cut" src="${H.src}" alt="${esc(H.alt)}" width="1097" height="633">${H.none ? "" : `<figcaption class="hp-cap">${esc(H.cap)} Photo: <a href="${H.page}" target="_blank" rel="noopener">${esc(H.credit)}</a>, <a href="${H.licUrl}" target="_blank" rel="noopener">${esc(H.lic)}</a></figcaption>`}`}
+  return `<figure class="herophoto has${d ? "" : " cutout"}${!d && H.sil ? " sil" : ""}">${d ? `<img src="${d.file}" alt="${esc(d.title || "Photo of the " + bike)}">` : `<img class="hp-cut" src="${H.src}" alt="${esc(H.alt)}" width="1097" height="633">${H.none ? "" : `<figcaption class="hp-cap">${esc(H.cap)} Photo: <a href="${H.page}" target="_blank" rel="noopener">${esc(H.credit)}</a>, <a href="${H.licUrl}" target="_blank" rel="noopener">${esc(H.lic)}</a></figcaption>`}`}
     ${ME.canWrite ? `<div class="hp-tools">${d ? `<button class="btn sm" id="hpChange">${ic("image")} Change photo</button><button class="btn sm" id="hpRemove">Use the stock photo</button>` : `<button class="btn sm" id="hpAdd">${ic("image")} Use my own photo</button>`}</div>` : ""}</figure>`;
 }
 function heroPhotoPick() {

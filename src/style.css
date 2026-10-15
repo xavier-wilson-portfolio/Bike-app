@@ -1438,3 +1438,5 @@ a.shop{text-decoration:none;color:inherit}a.shop b{color:var(--fg)}
 img.silcover{object-fit:contain;background:#fff;padding:10px}
 .herophoto.nophoto{display:grid;place-items:center;min-height:260px;background:var(--panel);border:2px dashed var(--line-2);border-radius:20px}
 .np-in{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;padding:24px}.np-in>svg{width:34px;height:34px;color:var(--blue-ink)}
+.herophoto.sil .hp-cap{top:12px;bottom:auto;max-width:calc(100% - 24px);font-size:11px;background:rgba(255,255,255,.75)}
+@media (max-width:600px){.herophoto.sil .hp-cap{position:static}}

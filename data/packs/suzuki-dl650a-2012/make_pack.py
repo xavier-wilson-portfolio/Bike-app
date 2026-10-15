@@ -90,7 +90,7 @@ LESSONS = {
               tips=["Log today's odometer reading in the Maintenance log.", "Mark the services you just did so their next due dates start counting.", "Keep receipts and part numbers with each service record."],
               shops=["manuals"]),
 }
-COVER = dict(A="tools", B="bike-adventure", C="tools", D="bike-adventure", E="tools", F="electrical", G="cooling", H="fuel", I="engine", J="wheels", K="brakes", L="suspension", M="bike-adventure", N="tools")
+COVER = dict(A="tools", B="suzuki-dl650-2012", C="tools", D="suzuki-dl650-2012", E="tools", F="electrical", G="cooling", H="fuel", I="engine", J="wheels", K="brakes", L="suspension", M="suzuki-dl650-2012", N="tools")
 for k, L in LESSONS.items():
     L.update(img=None, focus=None, cover=COVER[k])
 
