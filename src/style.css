@@ -1441,6 +1441,6 @@ img.silcover{object-fit:contain;background:#fff;padding:10px}
 .herophoto.sil .hp-cap{top:12px;bottom:auto;max-width:calc(100% - 24px);font-size:11px;background:rgba(255,255,255,.75)}
 @media (max-width:600px){.herophoto.sil .hp-cap{position:static}}
 /* Revora wordmark in the top-left corner */
-.top .brand .wordmark,.pk-logo .wordmark{display:block;height:36px;width:auto;flex:none;border-radius:0}
+.top .brand .wordmark,.pk-logo .wordmark{display:block;height:22px;width:auto;flex:none;border-radius:0}
 .pk-logo{display:flex;align-items:center}
-@media (max-width:560px){.top .brand .wordmark,.pk-logo .wordmark{height:30px}}
+@media (max-width:560px){.top .brand .wordmark,.pk-logo .wordmark{height:20px}}
