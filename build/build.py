@@ -15,7 +15,7 @@ src = ROOT / 'src'
 out = ROOT / 'public'
 out.mkdir(exist_ok=True)
 
-ORDER = ['core.js', 'model.js', 'content.js', 'howto.js', 'art_data.js', 'ui.js', 'vehicle.js', 'views.js', 'views2.js', 'views3.js', 'views4.js',
+ORDER = ['core.js', 'model.js', 'content.js', 'howto.js', 'art_data.js', 'ui.js', 'vehicle.js', 'views.js', 'views2.js', 'views3.js', 'views4.js', 'maint.js',
          'twin_data.js', 'twin_internals.js', 'twin.js', 'viewer.js', 'diag_draw.js', 'diag_data.js', 'diag_data2.js', 'diag_cms.js', 'diag_gen.js',
          *sorted(p.name for p in src.glob('d3_*.js')), 'd3.js', 'diag.js', 'scan.js', 'chat.js']
 app = '\n'.join((src / f).read_text() for f in ORDER) + '\nboot();\n'

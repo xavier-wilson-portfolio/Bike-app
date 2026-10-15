@@ -84,6 +84,8 @@ const ROLES = ["Owner / administrator", "Mechanic / team member", "Inspector / a
 const DOC_KINDS = ["Before photo", "During photo", "After photo", "Part ID photo", "Wiring diagram", "Manual reference", "Receipt", "Machine-shop report", "Inspection evidence", "Supplier document", "Restoration note", "Note"];
 
 /* field types: text, textarea, num, money, date, select(opts), ref(coll), refs(coll), bool, url */
+const MAINT_KINDS = ["Scheduled service", "Repair", "Inspection", "Tires", "Upgrade", "Other"];
+const MAINT_CATS = ["Engine", "Fuel & air", "Drivetrain", "Brakes", "Suspension & steering", "Tires & wheels", "Electrical", "Cooling", "Controls & cables", "General"];
 const F = (k, label, type = "text", extra = {}) => ({ k, label, type, ...extra });
 const SCHEMA = {
   parts: { label: "Part", plural: "Parts", prefix: "INV-", pad: 4, title: "name", fields: [
@@ -165,9 +167,22 @@ const SCHEMA = {
     F("component", "Component", "text", { req: 1 }), F("partId", "Part", "ref", { ref: "parts" }), F("status", "Status", "select", { opts: TASK_STATUS }), F("qc", "Quality approval", "select", { opts: ["Pending", "Pass", "Fail"] }),
     F("work", "Work", "text", { full: 1 }), F("prep", "Surface preparation", "textarea", { full: 1 }), F("process", "Product / process", "text", { full: 1 }), F("protect", "Must protect / do not coat", "text", { full: 1 }),
     F("timing", "Assembly timing", "text"), F("cure", "Cure time / source", "text"), F("approvedBy", "Approved by", "ref", { ref: "team" }), F("completedAt", "Completed", "date"), F("estCost", "Estimated cost", "money"), F("taskId", "Linked task", "ref", { ref: "tasks" }), F("notes", "Notes", "textarea", { full: 1 })] },
-  maintenance: { label: "Maintenance entry", plural: "Maintenance log", prefix: "MAINT-", pad: 3, title: "service", fields: [
-    F("service", "Service performed / item", "text", { req: 1, full: 1 }), F("date", "Date", "date"), F("odometer", "Odometer", "text"), F("interval", "Required interval", "text", { hint: "Only from the factory manual or the rebuilder's instructions." }),
-    F("partsUsed", "Parts used", "text", { full: 1 }), F("cost", "Cost", "money"), F("technician", "Technician", "ref", { ref: "team" }), F("nextDate", "Next service date", "date"), F("nextMiles", "Next service mileage", "text"), F("source", "Source / manual page", "text", { full: 1 }), F("planned", "Planned (not yet performed)", "bool"), F("notes", "Notes", "textarea", { full: 1 })] },
+  maintenance: { label: "Service record", plural: "Service history", prefix: "MAINT-", pad: 3, title: "service", fields: [
+    F("service", "What was done", "text", { req: 1, full: 1, hint: "For example: Oil and filter change, new rear tire, valve adjustment." }),
+    F("date", "Date", "date", { req: 1 }), F("odometer", "Odometer (miles)", "num"),
+    F("kind", "Type", "select", { opts: MAINT_KINDS }), F("items", "Schedule items this covers", "refs", { ref: "schedule", full: 1, hint: "Pick the schedule items this service covers so their next due date resets." }),
+    F("doneBy", "Done by", "select", { opts: ["Myself", "A shop", "A friend"] }), F("shop", "Shop or person", "text"), F("technician", "Team member", "ref", { ref: "team" }), F("laborHours", "Labor (hours)", "num"),
+    F("partsUsed", "Parts and fluids used", "textarea", { full: 1, hint: "One per line: part number, name, quantity. Example: 16510-45412, oil filter, 1" }),
+    F("partsCost", "Parts cost", "money"), F("laborCost", "Labor cost", "money"), F("cost", "Total cost", "money", { hint: "Leave at 0 and it adds parts and labor." }),
+    F("receipt", "Receipt or invoice link", "url", { full: 1 }), F("nextDate", "Reminder date (one-off)", "date"), F("nextMiles", "Reminder mileage (one-off)", "num"),
+    F("source", "Source / manual page", "text", { full: 1 }), F("planned", "Planned (not done yet)", "bool"), F("notes", "Notes", "textarea", { full: 1 })] },
+  schedule: { label: "Schedule item", plural: "Service schedule", prefix: "SVC-", pad: 3, title: "name", fields: [
+    F("name", "Service", "text", { req: 1, full: 1 }), F("category", "System", "select", { opts: MAINT_CATS }),
+    F("everyMiles", "Every (miles)", "num", { hint: "Leave 0 if it only goes by time." }), F("everyMonths", "Every (months)", "num", { hint: "Leave 0 if it only goes by miles." }),
+    F("lastDate", "Last done (before you started logging)", "date"), F("lastMiles", "Odometer when last done", "num", { hint: "Only needed until you log this service here." }),
+    F("source", "Where the interval comes from", "text", { full: 1, hint: "Factory manual page, shop advice, or 'typical, not yet checked'." }), F("notes", "Notes", "textarea", { full: 1 })] },
+  mileage: { label: "Odometer reading", plural: "Odometer readings", prefix: "ODO-", pad: 4, title: "miles", fields: [
+    F("date", "Date", "date", { req: 1 }), F("miles", "Odometer (miles)", "num", { req: 1 }), F("note", "Note", "text", { full: 1 })] },
   tools: { label: "Tool or supply", plural: "Tools & supplies", prefix: "TOOL-", pad: 3, title: "name", fields: [
     F("name", "Tool / material", "text", { req: 1, full: 1 }), F("category", "Category", "text"), F("qty", "Qty needed", "text"), F("available", "Available", "select", { opts: ["Unknown", "Yes", "No", "Borrow"] }), F("status", "Status", "select", { opts: ["Planning", "To buy", "On hand", "Borrowed", "Returned"] }),
     F("cost", "Purchase / rental cost", "money"), F("location", "Storage location", "text"), F("assignee", "Assigned to", "ref", { ref: "team" }), F("usage", "Usage", "textarea", { full: 1 }), F("safety", "Safety requirements", "text", { full: 1 }), F("calibration", "Accuracy / calibration", "text", { full: 1 }), F("notes", "Notes", "textarea", { full: 1 })] },
@@ -326,7 +341,7 @@ function blank(c, init = {}) {
     tasks: { status: "Not started", priority: "Normal", safety: "Medium", approval: "Pending", module: "general", phase: "A", comments: [] }, inspections: { result: "Pending", spec: VERIFY, date: today() },
     purchases: { status: "Requested", qty: 1, fitment: "Pending", qc: "Pending" }, expenses: { status: "Paid", date: today() }, worklogs: { date: today(), approval: "Pending", memberId: ME.actingAs || "" },
     docs: { kind: "During photo", date: today() }, issues: { status: "Open", severity: "Medium", date: today(), type: "Issue" }, decisions: { status: "Open", severity: "Medium" },
-    gates: { status: "Not started", required: true }, checks: { result: "Pending", criticality: "Critical" }, finishes: { status: "Not started", qc: "Pending" }, maintenance: { date: today(), planned: false }, team: { role: ROLES[1] }, steps: { status: "Not started", result: "Pending" } };
+    gates: { status: "Not started", required: true }, checks: { result: "Pending", criticality: "Critical" }, finishes: { status: "Not started", qc: "Pending" }, maintenance: { date: today(), planned: false, kind: "Scheduled service", doneBy: "Myself", items: [] }, schedule: { category: "Engine" }, mileage: { date: today() }, team: { role: ROLES[1] }, steps: { status: "Not started", result: "Pending" } };
   return Object.assign(r, defaults[c] || {}, init);
 }
 

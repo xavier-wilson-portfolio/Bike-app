@@ -188,7 +188,7 @@ table.t{border-collapse:collapse;width:100%;font-size:14px}
 /* forms */
 .form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 14px}
 .fld{display:flex;flex-direction:column;gap:4px;min-width:0}
-.fld.full{grid-column:1/-1}
+.fld.full{grid-column:1/-1;width:auto;margin-left:0;border-radius:revert!important}
 .fld label{font-size:12.5px;font-weight:700;color:var(--muted)}
 .fld input,.fld select,.fld textarea{padding:8px 10px;border:1px solid var(--line-2);border-radius:9px;background:var(--surface);width:100%;min-width:0}
 .fld input[type=checkbox]{width:auto}
@@ -1328,3 +1328,30 @@ article.gt::before{content:"";position:absolute;left:14px;top:19px;width:10px;he
 /* Revora icon in the header */
 .brand img.logo,.top .brand img.logo{background:none;padding:0;border-radius:9px;object-fit:contain;display:block}
 .pk-logo{display:inline-flex;align-items:center;gap:10px}.pk-logo img{width:36px;height:36px;border-radius:9px;display:block}
+
+/* maintenance log */
+.mtgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:12px}
+.mtcard{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--line);border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;gap:10px;box-shadow:var(--shadow)}
+.mtcard.over{border-left-color:var(--red)} .mtcard.soon{border-left-color:var(--amber)} .mtcard.ok{border-left-color:var(--green)}
+.mtname{font-weight:700;font-size:15px;text-align:left}
+.mtbar{height:7px;border-radius:5px;background:var(--gray-bg);overflow:hidden}
+.mtbar span{display:block;height:100%;border-radius:5px;background:var(--green)}
+.mtcard.soon .mtbar span{background:var(--amber)} .mtcard.over .mtbar span{background:var(--red)}
+.mthistlist{display:flex;flex-direction:column;gap:8px}
+.mthist{display:flex;gap:14px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.mtdate{flex:none;width:104px;display:flex;flex-direction:column;font-size:13px}
+.mtdate span{color:var(--muted);font-variant-numeric:tabular-nums}
+.mtcost{flex:none;text-align:right;display:flex;flex-direction:column;gap:2px;font-weight:700;font-variant-numeric:tabular-nums}
+.mtparts{margin:2px 0 0;padding-left:18px;font-size:13px;color:var(--muted)}
+.mtreport{background:#fff;color:#17232C;border:1px solid var(--line);border-radius:12px;padding:22px}
+.mtrep{width:100%;border-collapse:collapse;margin-top:14px;font-size:13px}
+.mtrep th{text-align:left;font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;color:#5b6872;border-bottom:2px solid #17232C;padding:6px 8px}
+.mtrep td{border-bottom:1px solid #dde3e7;padding:7px 8px;vertical-align:top}
+.mtrep .r{text-align:right;white-space:nowrap} .mtrep tfoot td{border-top:2px solid #17232C;border-bottom:0}
+@media (max-width:640px){.mthist{flex-wrap:wrap}.mtdate{width:auto;flex-direction:row;gap:8px}.mtcost{width:100%;flex-direction:row;justify-content:space-between}.mtreport{padding:14px;overflow-x:auto}}
+@media print{body.printing-report *{visibility:hidden!important}body.printing-report #mntReport,body.printing-report #mntReport *{visibility:visible!important}body.printing-report #mntReport{position:absolute;left:0;top:0;width:100%;border:0;padding:0}}
+.mtcard .row{flex-wrap:nowrap}.mtcard .grow,.mthist>.grow{flex:1;min-width:0}
+.mtstart{margin-top:12px;display:flex;flex-direction:column;gap:2px}
+.mtsrow{display:flex;gap:12px;align-items:center;padding:8px 0;border-top:1px solid var(--line)}
+.mtsrow .mtname{font-size:14px}
+@media (max-width:640px){.mtsrow{flex-wrap:wrap}.mtsrow .grow{flex-basis:100%;order:3}}

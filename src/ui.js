@@ -24,7 +24,7 @@ const SECTIONS = [
   { id: "docs", t: "Photos & files", i: "image", grp: "records", d: "Before, during, after" },
   { id: "problems", t: "Problems & decisions", i: "alert", grp: "records", d: "Issues and big choices" },
   { id: "team", t: "Team & work log", i: "users", grp: "records", d: "People and hours" },
-  { id: "maintenance", t: "Maintenance log", i: "wrench", grp: "records", d: "After the build" },
+  { id: "maintenance", t: "Maintenance log", i: "wrench", main: 1, d: "Schedule, service history, reports" },
   { id: "settings", t: "Settings & backups", i: "gear", grp: "records", d: "Budget, backups, data" },
   { id: "lesson", t: "Lesson", i: "book", hidden: true },
 ].filter(s => !s.x || X[s.x]);
