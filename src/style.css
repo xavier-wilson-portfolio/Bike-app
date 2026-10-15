@@ -1355,3 +1355,30 @@ article.gt::before{content:"";position:absolute;left:14px;top:19px;width:10px;he
 .mtsrow{display:flex;gap:12px;align-items:center;padding:8px 0;border-top:1px solid var(--line)}
 .mtsrow .mtname{font-size:14px}
 @media (max-width:640px){.mtsrow{flex-wrap:wrap}.mtsrow .grow{flex-basis:100%;order:3}}
+
+/* phone layout for the newer screens */
+@media (max-width:640px){
+  .guide{flex-wrap:wrap;padding:14px}
+  .guide .grow{flex-basis:calc(100% - 50px)}
+  .guide>.stack{flex-direction:row!important;flex-basis:100%;justify-content:flex-start}
+  .guide>.stack .btn{flex:1}
+  .tabs{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;max-width:100%;align-self:stretch;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .tabs::-webkit-scrollbar{display:none}
+  .tabs button{flex:none;white-space:nowrap}
+  .kpis{grid-template-columns:1fr 1fr}
+  .kpis>:last-child:nth-child(odd){grid-column:1/-1}
+  .kpi .v{font-size:22px}
+  .mt-wide{display:none}
+  .mtgrid{grid-template-columns:1fr}
+  .mthist{flex-direction:column;gap:6px;padding:12px}
+  .mtdate{width:auto;flex-direction:row;gap:8px;align-items:baseline}
+  .mthist>.grow{width:100%}
+  .mtcost{width:100%;flex-direction:row;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:6px}
+  .mtcard .row{flex-wrap:wrap}
+  .mtreport{overflow-x:auto;padding:14px}
+  .mtreport>.row{flex-wrap:wrap}
+  .mtreport>.row>div:last-child{text-align:left!important;width:100%}
+  .mtrep{min-width:620px}
+  .ph .act{flex-wrap:wrap;justify-content:center}
+}
+@media (min-width:641px){.mt-narrow{display:none}}

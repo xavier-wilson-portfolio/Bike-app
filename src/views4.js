@@ -66,6 +66,7 @@ VIEWS.home = {
         <button class="kpi" data-go="tasks"><span class="l">Steps done</span><span class="v">${done} / ${ts.length}</span><span class="s">across all 14 parts</span></button>
         <button class="kpi ${f.forecast > f.total ? "red" : ""}" data-go="budget"><span class="l">Money spent</span><span class="v">${money(f.paid)}</span><span class="s">of ${money(f.total)} budget</span></button>
         <button class="kpi" data-go="gates"><span class="l">Safety checks passed</span><span class="v">${passed} / ${chk.length + gates.length}</span><span class="s">${safetyUnresolved()} open safety issues</span></button>
+        ${(() => { const o = typeof odoNow === "function" ? odoNow() : null, st = sorted("schedule").map(it => svcState(it, o)), ov = st.filter(x => x.status === "over").length, sn = st.filter(x => x.status === "soon").length; return `<button class="kpi ${ov ? "red" : ""}" data-go="maintenance"><span class="l">Maintenance</span><span class="v">${!st.length ? "Set up" : ov ? ov + " overdue" : sn ? sn + " due soon" : "Up to date"}</span><span class="s">${o ? milesFmt(o.miles) + " mi on the clock" : "log your first service"}</span></button>`; })()}
       </div></section>
     <div class="grid g2" style="align-items:start">
       <div class="panel stack"><h2 class="sec left">Ready to do next</h2><p class="hint-text" style="text-align:left">Everything these steps depend on is done. Tick one off when it's finished.</p>

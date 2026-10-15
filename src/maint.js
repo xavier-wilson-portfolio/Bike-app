@@ -150,13 +150,13 @@ VIEWS.maintenance = {
     }
     if (tab === "schedule") {
       body = `<div class="row" style="gap:8px;margin-bottom:10px;flex-wrap:wrap"><span class="grow hint-text">Each item tracks miles, months or both, whichever comes first. Logging a service that covers an item resets it.</span>${ME.canWrite ? `<button class="btn sm" data-presets>Add typical items</button><button class="btn sm pri" data-new="schedule">${ic("plus")} Add item</button>` : ""}</div>` +
-        table("mnt-sched", states.map(s => ({ ...s.item, _st: s })), [
+        `<div class="mtgrid mt-narrow">${states.map(dueCard).join("") || `<div class="empty"><b>No schedule items yet</b>Add items one at a time, or start from a typical schedule.</div>`}</div><div class="mt-wide">` + table("mnt-sched", states.map(s => ({ ...s.item, _st: s })), [
           { k: "name", label: "Service", get: r => `<b style="font-weight:600">${esc(r.name)}</b>${/not yet checked/i.test(r.source || "") ? `<div class="faint" style="font-size:12px">Typical interval, check your manual</div>` : r.source ? `<div class="faint" style="font-size:12px">${esc(r.source)}</div>` : ""}`, cls: "wrap" },
           { k: "category", label: "System" }, { k: "every", label: "Every", get: r => everyTxt(r), sort: r => n(r.everyMiles) || n(r.everyMonths) * 1000 },
           { k: "last", label: "Last done", get: r => r._st.last ? [fmtDate(r._st.last.date), r._st.last.miles ? milesFmt(r._st.last.miles) + " mi" : ""].filter(Boolean).join(" · ") : `<span class="faint">—</span>`, sort: r => r._st.last?.date || "" },
           { k: "next", label: "Next due", get: r => esc(dueTxt(r._st)), sort: r => SVC_RANK[r._st.status] * 1e7 + (r._st.milesLeft ?? r._st.daysLeft ?? 1e6) },
           { k: "status", label: "Status", get: r => pill(...SVC_PILL[r._st.status]), sort: r => SVC_RANK[r._st.status] },
-          { k: "act", label: "", get: r => ME.canWrite && r._st.status !== "none" && r._st.status !== "nointerval" ? `<button class="btn sm" data-logfor="${esc(r.id)}">Log it</button>` : "" }], { coll: "schedule", emptyTitle: "No schedule items yet", empty: "Add items one at a time, or start from a typical schedule and edit it." });
+          { k: "act", label: "", get: r => ME.canWrite && r._st.status !== "none" && r._st.status !== "nointerval" ? `<button class="btn sm" data-logfor="${esc(r.id)}">Log it</button>` : "" }], { coll: "schedule", emptyTitle: "No schedule items yet", empty: "Add items one at a time, or start from a typical schedule and edit it." }) + "</div>";
     }
     if (tab === "history") {
       const f = fstate("maintenance"), years = [...new Set(done.map(r => String(r.date).slice(0, 4)))];
