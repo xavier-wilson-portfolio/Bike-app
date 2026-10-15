@@ -1,0 +1,862 @@
+{
+ "lessons": {
+  "A": {
+   "title": "Get set up",
+   "icon": "book",
+   "short": "Confirm which V-Strom you have, check for open recalls, and set up your space and budget.",
+   "about": "Confirm the exact model from the VIN, look up open recalls, get the service manual, set up a clean place to work and set a budget.",
+   "why": "The 2012 bike had three recalls. Knowing what's been done and what hasn't changes what you need to buy and what the dealer should do for free.",
+   "tips": [
+    "Run the VIN through the NHTSA recall lookup before you spend anything.",
+    "Keep the full VIN out of photos you post online.",
+    "The ABS and the ABS Adventure are the same bike underneath. The Adventure adds side cases, engine bars and an adjustable screen."
+   ],
+   "shops": [
+    "nhtsa",
+    "manuals",
+    "stromtrooper"
+   ],
+   "img": null,
+   "focus": null
+  },
+  "B": {
+   "title": "Inspect it as it sits",
+   "icon": "eye",
+   "short": "Record the mileage, check fluids and leaks, and take a short test ride if it's safe.",
+   "about": "Before taking anything apart, record the odometer, look for leaks and damage, check every fluid, start it and, if it's safe, ride it gently around the block.",
+   "why": "A bike that runs tells you a lot. Noises, warning lights and how it shifts point you at the jobs that matter.",
+   "tips": [
+    "Start it cold if you can. Hard starting and a rattle at start-up are easier to hear cold.",
+    "Watch the ABS light: it should go out once you're moving.",
+    "Write down every warning light, noise and leak, even small ones."
+   ],
+   "shops": [
+    "stromtrooper"
+   ],
+   "img": null,
+   "focus": null
+  },
+  "C": {
+   "title": "Research, budget & order",
+   "icon": "cart",
+   "short": "Turn what you found into a parts list, check part numbers on the fiche, and order.",
+   "about": "Use the inspection notes to build the parts and fluids list, look up part numbers on the factory parts diagrams, price it all and order.",
+   "why": "Ordering once, with the right part numbers, saves weeks of waiting and return shipping.",
+   "tips": [
+    "Order the service parts together: oil filter, air filter, spark plugs, brake pads, fluids.",
+    "The 2012 bike uses two spark plugs per cylinder, so four plugs total.",
+    "Compare the delivered price, not just the sticker price."
+   ],
+   "shops": [
+    "fiche",
+    "revzilla",
+    "denniskirk"
+   ],
+   "img": null,
+   "focus": null
+  },
+  "D": {
+   "title": "Take off the bodywork",
+   "icon": "layers",
+   "short": "Remove the seat, side covers, fairing panels and tank covers, and keep every fastener labeled.",
+   "about": "Remove the seat, side covers, fairing panels and tank covers so you can reach the engine, wiring and cooling system. Bag and label every screw with where it came from.",
+   "why": "Modern bodywork uses many screw lengths and plastic clips. Labeled bags mean no cracked panels or stripped mounts at reassembly.",
+   "tips": [
+    "Photograph each panel before and after you remove it.",
+    "Plastic tabs break when cold. Work in a warm garage.",
+    "Lay panels on a towel, painted side up."
+   ],
+   "shops": [
+    "fiche",
+    "ebay"
+   ],
+   "img": null,
+   "focus": null
+  },
+  "E": {
+   "title": "Clean & inspect",
+   "icon": "spray",
+   "short": "Wash and degrease, then look closely at the frame, subframe, wiring and connectors.",
+   "about": "With the bodywork off, clean the bike and inspect the frame, subframe, swingarm pivot, wiring and connectors for damage, rub marks and corrosion.",
+   "why": "Dirt hides cracks, leaks and chafed wires. This is the cheapest time to find them.",
+   "tips": [
+    "Cover the air intake, exhaust outlets and electrical connectors before washing.",
+    "Don't point a pressure washer at bearings, seals or connectors.",
+    "Look for wiring that rubs on the frame near the steering head."
+   ],
+   "shops": [
+    "revzilla"
+   ],
+   "img": null,
+   "focus": null
+  },
+  "F": {
+   "title": "Charging & electrical",
+   "icon": "bolt",
+   "short": "Test the battery and charging system, check the stator connector and grounds, then lights and switches.",
+   "about": "Test the battery, measure charging output, inspect the stator and regulator/rectifier connectors and the main grounds, then test every light, switch and warning lamp.",
+   "why": "The 2012 to 2016 bikes had a recall for stators that could overheat and short. A weak charging system leaves you stranded, so it's worth testing properly.",
+   "tips": [
+    "Test charging with a multimeter at the battery with the engine running, using the manual's procedure and numbers.",
+    "A brown, melted or loose connector between stator and regulator is a red flag.",
+    "Check that the brake light works from both the front lever and the rear pedal."
+   ],
+   "shops": [
+    "ricks",
+    "fiche",
+    "stromtrooper"
+   ],
+   "img": null,
+   "focus": null
+  },
+  "G": {
+   "title": "Cooling system",
+   "icon": "gauge",
+   "short": "Replace the coolant, check the radiator, hoses, cap and fan.",
+   "about": "Drain and refill the coolant with the type the manual specifies, inspect the radiator for damage and blocked fins, check the hoses and clamps, and confirm the fan switches on.",
+   "why": "The schedule calls for new coolant and radiator hoses every four years. Old coolant corrodes from the inside and old hoses split under pressure.",
+   "tips": [
+    "Only open the cap on a cold engine.",
+    "Bleed air out of the system as the manual describes, then recheck the level after a ride.",
+    "Straighten bent radiator fins gently with a plastic tool."
+   ],
+   "shops": [
+    "fiche",
+    "revzilla"
+   ],
+   "img": null,
+   "focus": null
+  },
+  "H": {
+   "title": "Fuel & air",
+   "icon": "fuel",
+   "short": "Air filter, fuel lines, throttle bodies and cable, then a throttle-body sync.",
+   "about": "Replace or clean the air filter, inspect the fuel lines and clamps, clean the throttle bodies, set the throttle cable play and synchronize the two throttle bodies.",
+   "why": "A dirty filter and out-of-sync throttle bodies make the bike lumpy at low speed and waste fuel.",
+   "tips": [
+    "Plug the intake openings whenever the airbox is off.",
+    "Throttle-body sync needs a two-gauge vacuum tool and the manual's procedure.",
+    "Fuel lines are on a four-year replace schedule even if they look fine."
+   ],
+   "shops": [
+    "fiche",
+    "revzilla",
+    "denniskirk"
+   ],
+   "img": null,
+   "focus": null
+  },
+  "I": {
+   "title": "Engine service",
+   "icon": "engine",
+   "short": "Oil and filter, spark plugs, clutch cable, and a valve clearance check when it's due.",
+   "about": "Change the oil and filter, replace the four spark plugs, set clutch cable play and, if the bike is at or past the interval, check the valve clearances.",
+   "why": "These are the jobs that keep the engine healthy. 2012 to 2014 bikes also had a recall for camshaft and tappet wear, so the valve check matters.",
+   "tips": [
+    "Warm the engine before draining so the oil flows.",
+    "The rear cylinder plugs are harder to reach. Take your time and don't cross-thread them.",
+    "Valve clearance is measured cold, with the manual's procedure and limits."
+   ],
+   "shops": [
+    "fiche",
+    "revzilla",
+    "stromtrooper"
+   ],
+   "img": null,
+   "focus": null
+  },
+  "J": {
+   "title": "Wheels, tires & chain",
+   "icon": "wheel",
+   "short": "Tire age and wear, wheel bearings, chain and sprockets, and the rear cush drive.",
+   "about": "Check tire age, tread and damage, wheel bearings and wheel runout, the chain and sprockets for wear, and the rubber cush drive in the rear hub.",
+   "why": "Tires and the chain wear out on every bike, and both are safety items. Old tires can look fine and still be hard and slippery.",
+   "tips": [
+    "Read the four-digit date code on each tire: week then year.",
+    "Tire sizes are 110/80R19 front and 150/70R17 rear.",
+    "Replace chain and both sprockets together."
+   ],
+   "shops": [
+    "revzilla",
+    "denniskirk",
+    "allballs"
+   ],
+   "img": null,
+   "focus": null
+  },
+  "K": {
+   "title": "Brakes & ABS",
+   "icon": "shield",
+   "short": "Pads, discs, calipers, fresh fluid, hoses, and a check that the ABS works.",
+   "about": "Inspect pads and discs, clean the calipers and pistons, replace the brake fluid, inspect the hoses and confirm the ABS warning light behaves normally.",
+   "why": "Brake fluid is on a two-year replace schedule. With ABS, bleeding has to follow the manual's procedure so no air gets trapped in the ABS unit.",
+   "tips": [
+    "Never let a reservoir run dry while bleeding.",
+    "Use only the fluid type printed on the reservoir cap.",
+    "Brake fluid strips paint. Cover the tank and fairing."
+   ],
+   "shops": [
+    "fiche",
+    "revzilla",
+    "denniskirk"
+   ],
+   "img": null,
+   "focus": null
+  },
+  "L": {
+   "title": "Suspension & steering",
+   "icon": "wrench",
+   "short": "Fork oil and seals, steering head bearings, rear shock and linkage, then set the sag.",
+   "about": "Check the forks for leaks and replace the oil and seals if needed, check and adjust the steering head bearings, inspect the rear shock and grease the linkage, then set preload and rebound.",
+   "why": "Worn steering bearings and tired fork oil make the bike wander and dive. Setting sag for your weight makes a big difference on this bike.",
+   "tips": [
+    "Support the bike securely with the front wheel off the ground before checking steering bearings.",
+    "Fork oil type and level come from the manual.",
+    "Write down your preload and rebound settings before changing them."
+   ],
+   "shops": [
+    "allballs",
+    "revzilla",
+    "stromtrooper"
+   ],
+   "img": null,
+   "focus": null
+  },
+  "M": {
+   "title": "Reassemble & road test",
+   "icon": "check",
+   "short": "Refit the bodywork, check every fastener, then a careful test ride and a recheck.",
+   "about": "Refit the tank covers, fairing, side covers and seat, torque-check the critical fasteners, confirm lights and controls, then do a careful test ride and look the bike over again.",
+   "why": "The test ride is where loose bolts, air in the brakes and leaks show up, while it's still cheap to fix.",
+   "tips": [
+    "Start the ride slowly in a quiet area and test the brakes at walking speed.",
+    "After the ride, look for leaks and recheck fluid levels.",
+    "Have a second person check the safety items."
+   ],
+   "shops": [
+    "revzilla"
+   ],
+   "img": null,
+   "focus": null
+  },
+  "N": {
+   "title": "Keep it running",
+   "icon": "gauge",
+   "short": "Set up the maintenance schedule, record what you did and back up the project.",
+   "about": "Load the bike's service schedule into the Maintenance log, log the work you just did, add receipts and back up the project.",
+   "why": "A full service history makes the next service easy and adds real value when you sell.",
+   "tips": [
+    "Log today's odometer reading in the Maintenance log.",
+    "Mark the services you just did so their next due dates start counting.",
+    "Keep receipts and part numbers with each service record."
+   ],
+   "shops": [
+    "manuals"
+   ],
+   "img": null,
+   "focus": null
+  }
+ },
+ "howto": {
+  "A-001": [
+   "Find the VIN stamped on the right side of the steering head and the label on the frame.",
+   "Photograph both, then write the VIN in Settings (keep it out of public photos).",
+   "Note if the bike has the Adventure's side cases, engine bars and adjustable screen."
+  ],
+  "A-002": [
+   "Go to nhtsa.gov/recalls and enter the VIN.",
+   "Write each open recall in Problems & decisions.",
+   "Call a Suzuki dealer with the VIN to ask what's on record and book any open recall work, which is free."
+  ],
+  "A-003": [
+   "Buy or download the factory service manual for the 2012 DL650A.",
+   "Check the cover lists the DL650A and the 2012 model year.",
+   "Add it to Reference sources so the team knows where it is."
+  ],
+  "A-004": [
+   "Put the bike on a rear stand on a level floor.",
+   "Set up labeled bins or bags for fasteners.",
+   "Keep a drain pan, rags and a fire extinguisher within reach."
+  ],
+  "A-005": [
+   "List the costs you already expect: service parts, tires, chain, brake parts.",
+   "Add a cushion for surprises.",
+   "Enter both in Settings."
+  ],
+  "B-001": [
+   "Log the odometer reading in the Maintenance log.",
+   "Take photos from both sides, front, back and above.",
+   "Close-ups of scratches, cracks, leaks and modifications."
+  ],
+  "B-002": [
+   "Check oil in the sight window with the bike upright and level.",
+   "Check the coolant reserve level and color.",
+   "Check both brake fluid reservoirs: level and color (dark means old).",
+   "Look under the engine, around the radiator, at the fork seals and at the calipers for leaks."
+  ],
+  "B-003": [
+   "Turn the key and watch which lights come on and go off.",
+   "Start it and listen for a rattle at start-up or a steady ticking.",
+   "Let it idle and watch the temperature reading and the fan."
+  ],
+  "B-004": [
+   "Only ride if both brakes work, the tires hold air and the steering is free.",
+   "Test brakes at walking speed first.",
+   "Note clutch feel, shifting, any wobble and whether the ABS light goes out once moving."
+  ],
+  "B-005": [
+   "Add a problem for each issue you found.",
+   "Mark brakes, tires, steering and leaks as high severity.",
+   "Decide which course parts you'll do in full and which you'll skip."
+  ],
+  "C-001": [
+   "Open the parts diagrams for the area you need.",
+   "Find the reference number on the drawing, then the part number in the list.",
+   "Type the part number into that part's record here."
+  ],
+  "C-002": [
+   "Add each part to the Shopping list.",
+   "Add two quotes where you can, with shipping.",
+   "Check the Money page forecast against the budget."
+  ],
+  "C-003": [
+   "Order the service parts together.",
+   "Record the order date and tracking on each item.",
+   "Check each part against the part number when it arrives."
+  ],
+  "D-001": [
+   "Unlock and lift off the seat.",
+   "Remove the side cover screws and unclip the covers gently.",
+   "Bag the screws and write which cover they came from."
+  ],
+  "D-002": [
+   "Follow the manual's order so panels come apart in the right sequence.",
+   "Release clips with a plastic trim tool, not a screwdriver.",
+   "Photograph each panel's screw locations before you bag them."
+  ],
+  "D-003": [
+   "Remove the negative cable first, then the positive.",
+   "Lift the battery out and keep it upright.",
+   "Put it on a smart charger or maintainer."
+  ],
+  "E-001": [
+   "Cover the intake, exhaust outlets and exposed connectors.",
+   "Use a degreaser safe for paint, plastic and aluminum.",
+   "Rinse gently, then dry with air or a towel."
+  ],
+  "E-002": [
+   "Look at welds, mounts and the steering head area for cracks.",
+   "Check the subframe and luggage rack mounts for bends.",
+   "Look for scrape marks that suggest the bike has been dropped."
+  ],
+  "E-003": [
+   "Follow the harness from the headlight back to the tail.",
+   "Look closely where it passes the steering head and frame edges.",
+   "Open the main connectors and look for corrosion or melted plastic."
+  ],
+  "F-001": [
+   "Charge it fully with a smart charger.",
+   "Let it rest, then measure the voltage.",
+   "Load-test it or have a shop test it. Replace it if it fails."
+  ],
+  "F-002": [
+   "Find the regulator/rectifier and follow its wires to the stator connector.",
+   "Unplug it and look for brown, melted or loose pins.",
+   "Photograph it and log anything that isn't clean and tight."
+  ],
+  "F-003": [
+   "Refit the charged battery.",
+   "Follow the manual's charging test with the engine running at the stated speeds.",
+   "Record each reading in Measurements and compare with the manual."
+  ],
+  "F-004": [
+   "Clean and tighten the battery and frame ground points.",
+   "Test headlight high and low, turn signals, tail and brake light from both the lever and the pedal.",
+   "Check the horn, kill switch and side-stand switch.",
+   "Confirm the ABS light comes on with the key and goes out once moving."
+  ],
+  "G-001": [
+   "Only open the system with the engine cold.",
+   "Drain into a pan; coolant is poisonous to pets.",
+   "Refill with the specified coolant and bleed air as the manual describes.",
+   "Run it to temperature, let it cool, recheck the level."
+  ],
+  "G-002": [
+   "Look through the radiator for bugs and dirt; rinse gently from behind.",
+   "Squeeze each hose: replace any that are hard, soft or cracked.",
+   "Check the hose clamps and the cap seal."
+  ],
+  "G-003": [
+   "Idle the engine with the bike in a ventilated area.",
+   "Watch the temperature reading and listen for the fan.",
+   "If it never comes on, check the fuse and connector before replacing parts."
+  ],
+  "H-001": [
+   "Remove the tank or covers as the manual describes to reach the airbox.",
+   "Lift out the filter and check for dirt, oil and damage.",
+   "Fit a new one if it's due on the schedule or dirty."
+  ],
+  "H-002": [
+   "Follow each fuel line from the tank to the throttle bodies.",
+   "Bend gently and look for cracks or hardness.",
+   "Replace any that fail or are past four years."
+  ],
+  "H-003": [
+   "Remove the airbox to reach the throttle bodies.",
+   "Clean the plates with throttle body cleaner on a rag, never forcing them.",
+   "Set cable play with the adjuster and check the throttle snaps shut with the bars turned both ways."
+  ],
+  "H-004": [
+   "Warm the engine fully.",
+   "Connect the gauges to the vacuum ports the manual shows.",
+   "Adjust with the balance screw until the readings match, then refit the caps."
+  ],
+  "I-001": [
+   "Warm the engine, then shut it off.",
+   "Remove the drain bolt and let it drain fully.",
+   "Fit a new filter and drain washer, torqued to the manual's values.",
+   "Refill, run briefly, then check the level in the window with the bike upright."
+  ],
+  "I-002": [
+   "Let the engine cool fully.",
+   "Blow dirt away from each plug well before removing the plug.",
+   "Start new plugs by hand to avoid cross-threading, then torque to spec."
+  ],
+  "I-003": [
+   "Measure the play at the lever tip.",
+   "Adjust at the lever or the lower cable adjuster.",
+   "Check the clutch fully disengages and the bike doesn't creep in gear."
+  ],
+  "I-004": [
+   "Confirm with the dealer whether the cam recall was done.",
+   "With the engine cold, remove the covers and set each cylinder as the manual describes.",
+   "Measure every valve and record it.",
+   "Adjust any out of spec using the manual's method."
+  ],
+  "J-001": [
+   "Find the four-digit date code on each sidewall (week, then year).",
+   "Measure the tread in the center and the edges.",
+   "Look for cracks, cuts, plugs and squared-off wear.",
+   "Set the pressures from the label on the bike or the owner's manual."
+  ],
+  "J-002": [
+   "Lift the wheel off the ground.",
+   "Rock it side to side at the top and bottom; feel for play.",
+   "Spin it and listen for grinding."
+  ],
+  "J-003": [
+   "Clean the chain so you can see the rollers and O-rings.",
+   "Measure wear over the length the manual gives.",
+   "Look for hooked sprocket teeth.",
+   "With the wheel out, check the cush rubbers for cracks and play."
+  ],
+  "K-001": [
+   "Look at the pad wear indicators.",
+   "Measure disc thickness and compare with the minimum stamped on the disc.",
+   "Spin the wheel and watch for warping or rubbing."
+  ],
+  "K-002": [
+   "Remove the caliper as the manual describes.",
+   "Clean around the pistons and push them back evenly.",
+   "Fit the pads and pins, then torque the caliper bolts to spec.",
+   "Pump the lever before moving the bike."
+  ],
+  "K-003": [
+   "Cover painted parts; brake fluid strips paint.",
+   "Bleed in the order the manual gives for the ABS system.",
+   "Never let the reservoir run dry.",
+   "Finish with firm lever and pedal and no leaks."
+  ],
+  "K-004": [
+   "Follow each hose from master cylinder to caliper.",
+   "Look for cracks, bulges and wet spots.",
+   "Have a helper squeeze the lever while you watch for bulging."
+  ],
+  "L-001": [
+   "Wipe the tubes and look for oil after a few compressions.",
+   "Check the chrome for pits that would cut new seals.",
+   "If serviced, use the oil type and level from the manual."
+  ],
+  "L-002": [
+   "Lift the front wheel safely.",
+   "Turn the bars slowly lock to lock; feel for notches.",
+   "Grip the fork legs and push and pull to feel for play.",
+   "Adjust or replace as the manual describes."
+  ],
+  "L-003": [
+   "Look for oil on the shock body.",
+   "Lift the rear and check the linkage for play.",
+   "Clean and grease the linkage bearings."
+  ],
+  "L-004": [
+   "Measure the unloaded and loaded height at the rear.",
+   "Adjust preload until sag is in the range you're aiming for.",
+   "Set rebound, then write the settings down."
+  ],
+  "M-001": [
+   "Work through your labeled bags in reverse order.",
+   "Start every screw by hand before tightening.",
+   "Check that no wires or hoses are trapped behind a panel."
+  ],
+  "M-002": [
+   "List the fasteners from the manual's torque table.",
+   "Check each one and mark it with a paint pen.",
+   "Record who checked it."
+  ],
+  "M-003": [
+   "Start in a quiet area at low speed.",
+   "Test both brakes and confirm the ABS light is out once moving.",
+   "Afterward, look for leaks and recheck oil, coolant and brake fluid."
+  ],
+  "N-001": [
+   "Open the Maintenance log.",
+   "Check each interval against your owner's manual and edit it if needed.",
+   "Set when each was last done."
+  ],
+  "N-002": [
+   "Use Log service in the Maintenance log.",
+   "Pick the schedule items it covered so they reset.",
+   "Add parts, costs and receipt links."
+  ],
+  "N-003": [
+   "Open Settings & backups.",
+   "Download a full backup.",
+   "Keep it with the bike's paperwork."
+  ]
+ },
+ "sections": {
+  "fuel": {
+   "t": "Fuel & air",
+   "d": "Injection, air filter, sync"
+  },
+  "finish": {
+   "t": "Cleaning & bodywork",
+   "d": "Washing, panels, fasteners"
+  },
+  "chassis": {
+   "t": "Wheels, brakes & suspension",
+   "d": "Tires, chain, ABS brakes, forks, shock"
+  }
+ },
+ "moduleIntro": {
+  "engine": "Oil and filter, spark plugs, cooling system, clutch and valve clearances. Every number comes from the factory service manual.",
+  "fuel": "Air filter, fuel lines, throttle bodies, throttle cable and a two-cylinder sync. The fuel injection itself rarely needs touching.",
+  "electrical": "Battery, charging system (stator and regulator), grounds, lights, switches and the ABS warning light.",
+  "chassis": "Tires, wheel bearings, chain and sprockets, ABS brakes, forks, steering bearings and the rear shock. Most items here are safety-critical.",
+  "finish": "Cleaning, bodywork removal and refitting. Label every fastener."
+ },
+ "guide": {
+  "fuel": {
+   "title": "Fuel & air",
+   "sub": "Air filter, fuel lines, throttle bodies, cable play and sync.",
+   "how": [
+    "Plug intake openings whenever the airbox is off.",
+    "Sync the throttle bodies with a vacuum gauge set.",
+    "Replace fuel lines on the four-year schedule."
+   ]
+  },
+  "engine": {
+   "title": "Engine & cooling",
+   "sub": "Oil, plugs, coolant, clutch and valve clearances.",
+   "how": [
+    "Work the procedure top to bottom and tick each step as you go.",
+    "Measurements and torque values come from the factory manual.",
+    "Check the cam recall with a dealer before the valve check."
+   ]
+  },
+  "chassis": {
+   "title": "Wheels, brakes & suspension",
+   "sub": "Tires, chain, ABS brakes, forks, steering and shock.",
+   "how": [
+    "Most items here are safety-critical and need a second person to check.",
+    "Check tire date codes, not just tread.",
+    "Bleed the ABS brakes exactly as the manual describes."
+   ]
+  },
+  "finish": {
+   "title": "Cleaning & bodywork",
+   "sub": "Washing, removing and refitting panels.",
+   "how": [
+    "Bag and label every fastener with where it came from.",
+    "Release clips with plastic tools.",
+    "Keep water out of connectors and the intake."
+   ]
+  },
+  "diagrams": {
+   "title": "Parts diagrams",
+   "sub": "Factory parts diagrams for the 2012 V-Strom 650."
+  },
+  "shops": {
+   "sub": "Places to find parts, diagrams and help for a 2012 V-Strom 650. Prices change, so the app never guesses them.",
+   "how": [
+    "Start with the factory parts diagrams to get the right part number.",
+    "Compare prices across shops, including shipping.",
+    "Every part's detail panel also has its own links."
+   ]
+  },
+  "course": {
+   "title": "The course",
+   "sub": "Fourteen parts that take a used 2012 V-Strom 650 to fully sorted, in the order the work usually happens."
+  },
+  "home": {
+   "how": [
+    "Follow the course from Part 1 to Part 14. You can skip parts that don't apply to your bike.",
+    "Tick steps off as you finish them. Progress updates everywhere.",
+    "Set up the Maintenance log at the end so you always know what's due."
+   ]
+  }
+ },
+ "shops": {
+  "fiche": {
+   "name": "Factory parts diagrams",
+   "url": "https://www.revzilla.com/oem/suzuki/2012-suzuki-v-strom-650",
+   "short": "2012 V-Strom 650 diagrams",
+   "what": "Exploded diagrams and part numbers for the 2012 V-Strom 650, by area of the bike.",
+   "tags": [
+    "Original parts",
+    "Diagrams"
+   ]
+  },
+  "nhtsa": {
+   "name": "NHTSA recall lookup",
+   "url": "https://www.nhtsa.gov/recalls",
+   "short": "Check recalls by VIN",
+   "what": "Enter the VIN to see open safety recalls. Recall repairs are free at a Suzuki dealer.",
+   "tags": [
+    "Recalls",
+    "Free"
+   ]
+  },
+  "stromtrooper": {
+   "name": "StromTrooper",
+   "url": "https://stromtrooper.com",
+   "short": "V-Strom owners' forum",
+   "what": "A big V-Strom owners' community with how-tos and troubleshooting threads for the DL650.",
+   "tags": [
+    "Help",
+    "Forum"
+   ]
+  },
+  "manuals": {
+   "name": "Service manuals",
+   "url": "https://haynes.com",
+   "short": "Repair manuals",
+   "what": "Repair manuals that cover the V-Strom 650. The factory service manual is still the one to get for exact specs.",
+   "tags": [
+    "Manuals"
+   ]
+  },
+  "sudco": null,
+  "z1": null,
+  "gsr": null,
+  "caswell": null,
+  "por15": null,
+  "cmsnl": null,
+  "partzilla": null
+ },
+ "catShops": {
+  "Engine": [
+   "fiche",
+   "revzilla"
+  ],
+  "Cooling": [
+   "fiche",
+   "revzilla"
+  ],
+  "Fuel": [
+   "fiche",
+   "revzilla"
+  ],
+  "Exhaust": [
+   "fiche"
+  ],
+  "Electrical": [
+   "ricks",
+   "fiche"
+  ],
+  "Chassis": [
+   "allballs",
+   "fiche"
+  ],
+  "Wheels": [
+   "allballs",
+   "revzilla",
+   "denniskirk"
+  ],
+  "Brakes": [
+   "fiche",
+   "revzilla",
+   "denniskirk"
+  ],
+  "Final drive": [
+   "revzilla",
+   "denniskirk"
+  ],
+  "Controls": [
+   "fiche",
+   "revzilla"
+  ],
+  "Cosmetics": [
+   "fiche",
+   "ebay"
+  ],
+  "_default": [
+   "fiche",
+   "revzilla"
+  ]
+ },
+ "guides": {
+  "paint": null,
+  "carbs": null,
+  "efi": {
+   "title": "Fuel injection basics",
+   "img": null,
+   "icon": "fuel",
+   "sum": "How the V-Strom's injection works and what you actually service.",
+   "body": [
+    [
+     "What it does",
+     "The ECU reads sensors (throttle position, air, temperature) and opens an injector for each cylinder for just the right time. There's nothing to jet or adjust like on a carb."
+    ],
+    [
+     "What you service",
+     "The air filter, the fuel lines and clamps, the throttle cable play and the balance between the two throttle bodies. The injectors themselves rarely need attention."
+    ],
+    [
+     "Throttle-body sync",
+     "Each cylinder has its own throttle body. Over time they drift apart and the bike gets lumpy at low speed. A two-gauge vacuum tool and the manual's procedure bring them back in balance."
+    ],
+    [
+     "Warning signs",
+     "A flashing FI light, hard starting or surging. Read the fault code the way the manual shows before replacing anything."
+    ]
+   ]
+  },
+  "charging": {
+   "title": "Charging system checks",
+   "img": null,
+   "icon": "bolt",
+   "sum": "Battery, stator and regulator: how to tell which one is failing.",
+   "body": [
+    [
+     "How it works",
+     "The stator makes AC power as the engine turns. The regulator/rectifier turns it into DC and holds the voltage steady for the battery and lights."
+    ],
+    [
+     "Start with the battery",
+     "Charge it fully and test it. A tired battery makes everything else look broken."
+    ],
+    [
+     "Then the connector",
+     "Look at the plug between the stator and the regulator. Brown, melted or loose pins mean heat, and heat means trouble. The 2012-2016 stators were also recalled."
+    ],
+    [
+     "Then measure",
+     "Use the manual's charging test: voltage at the battery at set engine speeds, then stator output and resistance. Compare every reading with the manual."
+    ]
+   ]
+  },
+  "electrical": {
+   "img": null,
+   "icon": "bolt"
+  },
+  "brakes": {
+   "img": null,
+   "icon": "shield",
+   "sum": "Disc brakes with ABS, what wears out, and how to change the fluid."
+  },
+  "wheels": {
+   "title": "Wheels & tires",
+   "img": null,
+   "icon": "wheel",
+   "sum": "Reading a tire's age, wheel bearings and the rear cush drive.",
+   "body": [
+    [
+     "Tire age",
+     "Every tire has a four-digit date code on the sidewall: the week, then the year. Old rubber gets hard and slippery even with tread left."
+    ],
+    [
+     "Sizes",
+     "The 2012 V-Strom 650 uses a 110/80R19 front and a 150/70R17 rear."
+    ],
+    [
+     "Bearings",
+     "With the wheel off the ground, rock it at the top and bottom and spin it. Any play or grinding means new bearings."
+    ],
+    [
+     "Cush drive",
+     "Rubber blocks in the rear hub soak up driveline shock. With the wheel out, check them for cracks and play."
+    ]
+   ]
+  },
+  "cleaning": {
+   "img": null,
+   "icon": "spray",
+   "sum": "Washing a modern bike without soaking the electrics.",
+   "body": [
+    [
+     "Protect first",
+     "Cover the air intake, the exhaust outlets and any open connectors before you wash."
+    ],
+    [
+     "Gentle cleaners",
+     "Use a degreaser that's safe on paint, plastic and aluminum. Avoid strong acids and wheel cleaners on bare metal."
+    ],
+    [
+     "Go easy with pressure",
+     "Keep a pressure washer away from bearings, seals, the instrument cluster and connectors."
+    ],
+    [
+     "Dry it",
+     "Blow or wipe it dry, then run the engine briefly to drive off moisture."
+    ]
+   ]
+  },
+  "organizing": {
+   "img": null,
+   "icon": "box",
+   "title": "Labeling fasteners and panels",
+   "sum": "Keep screws and panels in order so the bodywork goes back on easily.",
+   "body": [
+    [
+     "Bag by panel",
+     "Each panel's screws go in their own bag, labeled with the panel name."
+    ],
+    [
+     "Photograph first",
+     "Take a photo of each panel before removing it, showing where every screw goes."
+    ],
+    [
+     "Store panels safely",
+     "Lay panels on a towel, painted side up, away from where you're working."
+    ]
+   ]
+  }
+ },
+ "suggestions": [
+  [
+   "Check recalls first",
+   "Recall repairs are free at a dealer. Run the VIN through NHTSA before buying parts for the same job."
+  ],
+  [
+   "Get the factory service manual",
+   "Torque values, clearances and procedures come from the manual for the 2012 DL650A."
+  ],
+  [
+   "Order service parts together",
+   "Oil filter, air filter, four spark plugs, coolant and brake fluid in one order."
+  ],
+  [
+   "Replace aged rubber",
+   "Fuel lines, radiator hoses and brake hoses are on four-year replace schedules even if they look fine."
+  ],
+  [
+   "Compare the delivered price",
+   "Add shipping and tax before deciding which shop is cheapest."
+  ],
+  [
+   "Ask the owners' forum",
+   "V-Strom owners have solved most problems before."
+  ]
+ ]
+}

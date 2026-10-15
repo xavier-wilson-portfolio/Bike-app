@@ -36,8 +36,8 @@ const GROUP_DIAG = !X.handDiagrams ? (BIKE.groupDiag || {}) : { frame: "CMS-BLCK
   boots: "CMS-BLCK0001", airbox: "CMS-BLCK0001", exhaust: "CMS-BLCK0048", tank: "CMS-BLCK0037", tap: "CMS-BLCK0036", seat: "CMS-BLCK0062", coverL: "CMS-BLCK0025",
   coverR: "CMS-BLCK0025", fenders: "CMS-BLCK0054", swingarm: "CMS-BLCK0057", shocks: "CMS-BLCK0008", chain: "CMS-BLCK0058", headlight: "CMS-BLCK0043",
   gauges: "CMS-BLCK0065", sigF: "CMS-BLCK0076", tail: "CMS-BLCK0053", harness: "CMS-BLCK0020", ignition: "CMS-BLCK0011", pegs: "CMS-BLCK0021" };
-const scanBtn = (did, label = "Scan parts", cls = "btn sm") => did && scanParts(did).length ? `<button type="button" class="${cls}" data-scan="${did}" title="Take a photo of these parts and check them off">${ic("camera")} ${esc(label)}</button>` : "";
-const scanPickBtn = (label = "Scan a tray of parts", cls = "btn sm") => `<button type="button" class="${cls}" data-scanpick title="Pick which diagram the parts belong to, then take a photo">${ic("camera")} ${esc(label)}</button>`;
+const scanBtn = (did, label = "Scan parts", cls = "btn sm") => HAS_CAT && did && scanParts(did).length ? `<button type="button" class="${cls}" data-scan="${did}" title="Take a photo of these parts and check them off">${ic("camera")} ${esc(label)}</button>` : "";
+const scanPickBtn = (label = "Scan a tray of parts", cls = "btn sm") => !HAS_CAT ? "" : `<button type="button" class="${cls}" data-scanpick title="Pick which diagram the parts belong to, then take a photo">${ic("camera")} ${esc(label)}</button>`;
 document.addEventListener("click", e => {
   const b = e.target.closest("[data-scan]"); if (b) { e.preventDefault(); scanStart(b.dataset.scan); return; }
   const p = e.target.closest("[data-scanpick]"); if (p) { e.preventDefault(); scanPick(); }

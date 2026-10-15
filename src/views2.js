@@ -9,7 +9,7 @@ VIEWS.settings = {
     <div class="grid g2" style="align-items:start">
       <div class="panel stack"><h2 class="sec">Project & motorcycle</h2><form class="form" id="setForm">
         ${inp("projectName", "Project name")}${inp("bike", "Motorcycle")}
-        <div class="fld full"><label for="set-variant">Model variant</label><input id="set-variant" data-mk="variant" value="${esc(m.variant || "")}" ${ME.canWrite ? "" : "disabled"}><span class="hint">${esc(BIKE.variantHint || "Parts catalogs often split one model year into several model letters.")} Confirm from frame and engine IDs before using part numbers, wiring diagrams or carb settings.</span></div>
+        <div class="fld full"><label for="set-variant">Model variant</label><input id="set-variant" data-mk="variant" value="${esc(m.variant || "")}" ${ME.canWrite ? "" : "disabled"}><span class="hint">${esc(BIKE.variantHint || "Parts catalogs often split one model year into several model letters.")} Confirm from frame and engine IDs before using part numbers, wiring diagrams or ${BIKE.fuel === "efi" ? "service specs" : "carb settings"}.</span></div>
         ${inp("frameNo", "Frame number (keep private)")}${inp("engineNo", "Engine number (keep private)")}${inp("color", "Color / paint code")}
         <div class="fld"><label for="set-units">Measurement units</label><select id="set-units" data-mk="units" ${ME.canWrite ? "" : "disabled"}>${[["in", "Inches / ft-lb"], ["mm", "Millimetres / N·m"]].map(([v, l]) => `<option value="${v}" ${m.units === v ? "selected" : ""}>${l}</option>`).join("")}</select></div>
         <div class="fld full"><h2 class="sec" style="margin:8px 0 0">Budget</h2></div>
@@ -72,7 +72,7 @@ async function addExamples() {
 VIEWS.help = { render() { return `<div class="ph"><div><h1>Help & workflow</h1><p>How the team uses Revora from teardown to first ride.</p></div></div>
   <div class="panel help">
   <h3>The order of work</h3>
-  <ol><li><b>Confirm the bike.</b> Task A-001: record frame and engine IDs and the exact variant in Settings. Part numbers, wiring diagrams and carb settings depend on it.</li>
+  <ol><li><b>Confirm the bike.</b> Task A-001: record frame and engine IDs and the exact variant in Settings. Part numbers, wiring diagrams and ${BIKE.fuel === "efi" ? "service specs" : "carb settings"} depend on it.</li>
   <li><b>Get the references.</b> The factory service manual and the parts fiche for your variant (C-001, C-002). Until a value comes from the manual, inspections show <span class="verify">VERIFY IN FSM</span>.</li>
   <li><b>Inventory and photograph</b> everything before cleaning (phase A–B). Give each tray, bag and assembly a location and bin number.</li>
   <li><b>Assess before deciding.</b> Measure, then decide repair or replace. Log surprises under Problems; log big choices under Decisions.</li>

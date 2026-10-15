@@ -40,7 +40,7 @@
   function card(b) {
     const x = b.extras || {};
     return `<button class="pick-card" data-bike="${esc(b.id)}"><span class="pick-yr">${esc(b.year)}</span><b>${esc(b.make)} ${esc(b.model)}</b><span class="muted">${esc(b.variant || "")}</span>
-      <span class="pick-tags"><span class="tag">${b.diagrams} parts diagrams</span><span class="tag">Parts list</span><span class="tag">Course</span>${x.diagrams3d ? `<span class="tag pro">3D</span>` : ""}</span></button>`;
+      <span class="pick-tags">${b.diagrams ? `<span class="tag">${b.diagrams} parts diagrams</span>` : ""}<span class="tag">Course</span><span class="tag">Parts list</span><span class="tag">Maintenance log</span>${x.diagrams3d ? `<span class="tag pro">3D</span>` : ""}</span></button>`;
   }
   /* ---------- bike requests ---------- */
   const REQ_DAYS = 3;

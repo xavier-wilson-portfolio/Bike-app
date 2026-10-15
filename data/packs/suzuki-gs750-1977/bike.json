@@ -1,26 +1,74 @@
 {
-  "id": "suzuki-gs750-1977",
-  "year": 1977,
-  "make": "Suzuki",
-  "model": "GS750",
-  "short": "GS750",
-  "variant": "GS750 (B), USA",
-  "variantShort": "GS750 (B)",
-  "catalogueName": "GS750B 1977 USA",
-  "name": "1977 Suzuki GS750",
-  "variantHint": "1977 catalogs split GS750B and GS750E/EC and other model letters.",
-  "fitsRx": "GS750B|All 1977|^GS750$",
-  "match": ["gs750", "gs750b", "gs 750"],
-  "engine": "air-cooled DOHC inline four, 748 cc, four Mikuni VM26SS carbs, wire wheels, front and rear disc brakes",
-  "specs": [["748 cc", "air-cooled inline four"], ["DOHC", "two valves per cylinder"], ["4 × Mikuni", "VM26SS slide carburetors"], ["5-speed", "chain final drive"], ["19\" / 18\"", "wire-spoke wheels"], ["Disc", "brakes front and rear"]],
-  "specSource": { "name": "MotorcycleSpecs: Suzuki GS750 (1976-77)", "url": "https://www.motorcyclespecs.co.za/model/suzu/suzuki_gs750%2076.htm" },
-  "links": {
-    "cmsnl": "https://www.cmsnl.com/suzuki-gs750b-1977-b-usa-e03_model16048/partslist/",
-    "cmsnlPages": "https://www.cmsnl.com/suzuki-gs750-1977-b-usa-e03_model34273/partslist/",
-    "partzilla": "https://www.partzilla.com/catalog/suzuki/motorcycle/1977/gs750b",
-    "ebay": "suzuki gs750"
-  },
-  "hero": { "src": "img/gs750-cutout.webp", "alt": "Blue early Suzuki GS750 with wire-spoke wheels, side view, background removed", "cap": "Early Suzuki GS750 with wire-spoke wheels, the 1977 look. The photographer didn't record the exact year.", "credit": "Cédric Janodet", "page": "https://www.flickr.com/photos/35083786@N04/15037249471", "lic": "CC BY-NC-SA 2.0, background removed", "licUrl": "https://creativecommons.org/licenses/by-nc-sa/2.0/" },
-  "extras": { "garage3d": true, "paint": true, "diagrams3d": true, "videos": true, "handDiagrams": true },
-  "status": "full"
+ "id": "suzuki-gs750-1977",
+ "year": 1977,
+ "make": "Suzuki",
+ "model": "GS750",
+ "short": "GS750",
+ "variant": "GS750 (B), USA",
+ "variantShort": "GS750 (B)",
+ "catalogueName": "GS750B 1977 USA",
+ "name": "1977 Suzuki GS750",
+ "variantHint": "1977 catalogs split GS750B and GS750E/EC and other model letters.",
+ "fitsRx": "GS750B|All 1977|^GS750$",
+ "match": [
+  "gs750",
+  "gs750b",
+  "gs 750"
+ ],
+ "engine": "air-cooled DOHC inline four, 748 cc, four Mikuni VM26SS carbs, wire wheels, front and rear disc brakes",
+ "specs": [
+  [
+   "748 cc",
+   "air-cooled inline four"
+  ],
+  [
+   "DOHC",
+   "two valves per cylinder"
+  ],
+  [
+   "4 × Mikuni",
+   "VM26SS slide carburetors"
+  ],
+  [
+   "5-speed",
+   "chain final drive"
+  ],
+  [
+   "19\" / 18\"",
+   "wire-spoke wheels"
+  ],
+  [
+   "Disc",
+   "brakes front and rear"
+  ]
+ ],
+ "specSource": {
+  "name": "MotorcycleSpecs: Suzuki GS750 (1976-77)",
+  "url": "https://www.motorcyclespecs.co.za/model/suzu/suzuki_gs750%2076.htm"
+ },
+ "links": {
+  "cmsnl": "https://www.cmsnl.com/suzuki-gs750b-1977-b-usa-e03_model16048/partslist/",
+  "cmsnlPages": "https://www.cmsnl.com/suzuki-gs750-1977-b-usa-e03_model34273/partslist/",
+  "partzilla": "https://www.partzilla.com/catalog/suzuki/motorcycle/1977/gs750b",
+  "ebay": "suzuki gs750"
+ },
+ "hero": {
+  "src": "img/gs750-cutout.webp",
+  "alt": "Blue early Suzuki GS750 with wire-spoke wheels, side view, background removed",
+  "cap": "Early Suzuki GS750 with wire-spoke wheels, the 1977 look. The photographer didn't record the exact year.",
+  "credit": "Cédric Janodet",
+  "page": "https://www.flickr.com/photos/35083786@N04/15037249471",
+  "lic": "CC BY-NC-SA 2.0, background removed",
+  "licUrl": "https://creativecommons.org/licenses/by-nc-sa/2.0/"
+ },
+ "extras": {
+  "garage3d": true,
+  "paint": true,
+  "diagrams3d": true,
+  "videos": true,
+  "handDiagrams": true
+ },
+ "status": "full",
+ "legacyContent": true,
+ "specNote": "Published specs for the 1976–77 GS750."
 }

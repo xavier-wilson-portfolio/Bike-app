@@ -1,0 +1,67 @@
+{
+ "id": "suzuki-dl650a-2012",
+ "year": 2012,
+ "make": "Suzuki",
+ "model": "V-Strom 650",
+ "short": "V-Strom",
+ "variant": "V-Strom 650 ABS (DL650A), USA",
+ "variantShort": "DL650A",
+ "catalogueName": "DL650A 2012",
+ "name": "2012 Suzuki V-Strom 650",
+ "variantHint": "In the US the 2012 bike was sold as the V-Strom 650 ABS and the V-Strom 650 ABS Adventure (side cases, engine bars, adjustable screen). Mechanically they're the same bike.",
+ "fitsRx": "DL650A|V-Strom 650|2012",
+ "match": [
+  "vstrom",
+  "v-strom",
+  "v strom",
+  "dl650",
+  "dl650a",
+  "vstrom650",
+  "wee strom",
+  "weestrom",
+  "wee"
+ ],
+ "engine": "liquid-cooled 645 cc 90-degree V-twin, DOHC with four valves per cylinder, fuel injection with two 39 mm throttle bodies, 6-speed, chain drive, ABS brakes",
+ "fuel": "efi",
+ "cooling": "liquid",
+ "specs": [
+  [
+   "645 cc",
+   "liquid-cooled 90° V-twin"
+  ],
+  [
+   "DOHC",
+   "four valves per cylinder"
+  ],
+  [
+   "EFI",
+   "fuel injection, two 39 mm throttle bodies"
+  ],
+  [
+   "6-speed",
+   "O-ring chain final drive"
+  ],
+  [
+   "19\" / 17\"",
+   "110/80R19 front, 150/70R17 rear"
+  ],
+  [
+   "ABS",
+   "dual 310 mm front discs, 260 mm rear"
+  ]
+ ],
+ "specSource": {
+  "name": "MotorcycleSpecs: Suzuki DL650 V-Strom (2012-13)",
+  "url": "https://www.motorcyclespecs.co.za/model/suzu/suzuki_dl650_v%2012.htm"
+ },
+ "links": {
+  "revzilla": "https://www.revzilla.com/oem/suzuki/2012-suzuki-v-strom-650",
+  "fiche": "https://www.revzilla.com/oem/suzuki/2012-suzuki-v-strom-650",
+  "ebay": "suzuki v-strom 650 2012"
+ },
+ "hero": null,
+ "extras": {},
+ "status": "basic",
+ "art": "img/adv.svg",
+ "specNote": "Published specs for the 2012–13 V-Strom 650 ABS."
+}

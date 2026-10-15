@@ -298,6 +298,7 @@ const MODULE_INTRO = {
   chassis: "Frame, steering, swingarm, forks, shocks, wheels, bearings, tires, chain, brakes and axles. Most items here are safety-critical and need an independent check.",
   finish: "Degreasing, corrosion removal, paint and powder, tank and bodywork, exhaust, chrome and seat. Record products and protect machined, bearing and sealing surfaces.",
 };
+if (!LEGACY && CT.moduleIntro) Object.assign(MODULE_INTRO, CT.moduleIntro);
 ["engine", "fuel", "electrical", "chassis", "finish"].forEach(m => VIEWS[m] = moduleView(m));
 
 /* ============ INSPECTIONS ============ */
@@ -313,7 +314,7 @@ VIEWS.inspections = {
     const f = fstate("inspections"), q = (f.q || "").toLowerCase();
     const rows = sorted("inspections").filter(i => (!q || [i.id, i.point, i.component, i.partId, S.parts[i.partId]?.name].join(" ").toLowerCase().includes(q)) && (!f.result || i.result === f.result) && (!f.part || i.partId === f.part) && (!f.safety || (f.safety === "1") === !!i.safetyCritical) && (!f.spec || (f.spec === "verify") === (!i.spec || i.spec === VERIFY)));
     const unv = sorted("inspections").filter(i => !i.spec || i.spec === VERIFY).length;
-    return `<div class="ph"><div><h1>Inspections & measurements</h1><p>Several measurements per part are fine. No torque values, wear limits, clearances, wire colors or carb settings are filled in by the app: anything unverified shows <span class="verify">VERIFY IN FSM</span>.</p></div><div class="act"><button class="btn" id="insCsv">${ic("download")} Export CSV</button><button class="btn pri" data-new="inspections">${ic("plus")} Add inspection</button></div></div>
+    return `<div class="ph"><div><h1>Inspections & measurements</h1><p>Several measurements per part are fine. No torque values, wear limits, clearances, wire colors or ${BIKE.fuel === "efi" ? "fuel settings" : "carb settings"} are filled in by the app: anything unverified shows <span class="verify">VERIFY IN FSM</span>.</p></div><div class="act"><button class="btn" id="insCsv">${ic("download")} Export CSV</button><button class="btn pri" data-new="inspections">${ic("plus")} Add inspection</button></div></div>
     ${unv ? `<div class="banner warn"><div class="grow">${unv} inspection${unv > 1 ? "s" : ""} still need the factory specification and manual page entered.</div><button class="btn sm" id="fVerify">Show them</button></div>` : ""}
     ${filterBar("inspections", [{ k: "q", type: "search", label: "Search inspections" }, { k: "result", label: "Result", opts: optsOf(RESULT) }, { k: "part", label: "Part", opts: sorted("parts").map(p => [p.id, p.id + " " + p.name]) }, { k: "safety", label: "Safety-critical", opts: [["1", "Safety-critical only"], ["0", "Not safety-critical"]] }, { k: "spec", label: "Spec", opts: [["verify", "Spec unverified"], ["ok", "Spec entered"]] }])}
     ${table("ins", rows, INS_COLS(), { coll: "inspections", emptyTitle: "No inspections match" })}`;
@@ -418,7 +419,7 @@ VIEWS.docs = {
   00_Admin/        identity photos (blur serial numbers in shared copies), title, notes
   01_Inventory/    tray and bag photos, labels, counts
   02_Engine/       teardown, measurements, machine-shop reports
-  03_Fuel/         carb markings, jets, float heights, tank interior
+  03_Fuel/         ${BIKE.fuel === "efi" ? "air filter, fuel lines, throttle bodies, sync readings" : "carb markings, jets, float heights, tank interior"}
   04_Electrical/   harness routing, connectors, wiring diagrams
   05_Chassis/      frame, forks, wheels, brakes
   06_Finish/       before / after, products, cure records

@@ -96,7 +96,7 @@ const HOWTO = {
 };
 
 function howtoList(t, always) {
-  const h = HOWTO[t.id] || HOWTO[t.taskId];
+  const H = LEGACY ? HOWTO : (CT.howto || {}); const h = H[t.id] || H[t.taskId];
   if (!h) return t.instructions && always ? `<p>${esc(t.instructions)}</p>` : "";
   return `<ol class="howto">${h.map(x => `<li>${esc(x)}</li>`).join("")}</ol>`;
 }

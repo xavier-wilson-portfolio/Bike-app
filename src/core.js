@@ -7,6 +7,9 @@ const BIKE = Object.assign({ id: "bike", year: "", make: "", model: "", short: "
 if (!BIKE.short) BIKE.short = BIKE.model; if (!BIKE.name) BIKE.name = [BIKE.year, BIKE.make, BIKE.model].join(" "); if (!BIKE.variantShort) BIKE.variantShort = BIKE.short;
 const X = BIKE.extras || {};
 const CMS_DATA = PACK.catalogue || {};
+const LEGACY = !!BIKE.legacyContent;              // the GS750 pack: content written into the app itself
+const HAS_CAT = Object.keys(CMS_DATA).length > 0;  // the bike has parts-catalogue diagrams
+const CT = BIKE.content || {};                      // per-bike text from the pack (content.json)
 const D3_THUMBS = PACK.thumbs || {};
 const DATA_KEY = "rv.data." + BIKE.id;
 /* ============ utilities ============ */
@@ -79,7 +82,7 @@ const TASK_STATUS = ["Not started", "In progress", "Blocked", "Awaiting parts", 
 const PUR_STATUS = ["Research", "Quote", "Requested", "Ordered", "Shipped", "Delivered", "Inspected", "Returned", "Cancelled"];
 const RESULT = ["Pending", "Pass", "Fail", "N/A"];
 const SEV = ["Low", "Medium", "High", "Critical"];
-const MODULES = { engine: "Engine & transmission", fuel: "Carburetors & fuel", electrical: "Electrical", chassis: "Chassis, suspension & brakes", finish: "Cleaning & refinishing", general: "General" };
+const MODULES = { engine: "Engine & transmission", fuel: BIKE.fuel === "efi" ? "Fuel injection & air" : "Carburetors & fuel", electrical: "Electrical", chassis: "Chassis, suspension & brakes", finish: "Cleaning & refinishing", general: "General" };
 const ROLES = ["Owner / administrator", "Mechanic / team member", "Inspector / approver", "Read-only viewer"];
 const DOC_KINDS = ["Before photo", "During photo", "After photo", "Part ID photo", "Wiring diagram", "Manual reference", "Receipt", "Machine-shop report", "Inspection evidence", "Supplier document", "Restoration note", "Note"];
 

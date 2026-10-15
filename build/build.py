@@ -17,7 +17,7 @@ out.mkdir(exist_ok=True)
 
 ORDER = ['core.js', 'model.js', 'content.js', 'howto.js', 'art_data.js', 'ui.js', 'vehicle.js', 'views.js', 'views2.js', 'views3.js', 'views4.js', 'maint.js',
          'twin_data.js', 'twin_internals.js', 'twin.js', 'viewer.js', 'diag_draw.js', 'diag_data.js', 'diag_data2.js', 'diag_cms.js', 'diag_gen.js',
-         *sorted(p.name for p in src.glob('d3_*.js')), 'd3.js', 'diag.js', 'scan.js', 'chat.js']
+         *sorted(p.name for p in src.glob('d3_*.js')), 'd3.js', 'diag.js', 'scan.js', 'chat.js', 'generic.js']
 app = '\n'.join((src / f).read_text() for f in ORDER) + '\nboot();\n'
 (out / 'app.js').write_text(app)
 
@@ -27,6 +27,8 @@ for pdir in sorted((ROOT / 'data' / 'packs').iterdir()):
     if not pdir.is_dir():
         continue
     bike = json.loads((pdir / 'bike.json').read_text())
+    if (pdir / 'content.json').exists():   # per-bike course, guides, shops and how-tos
+        bike['content'] = json.loads((pdir / 'content.json').read_text())
     cms = {pathlib.Path(f).stem: json.load(open(f)) for f in sorted(glob.glob(str(pdir / 'cms' / '*.json')))}
     thumbs = {pathlib.Path(f).stem: 'data:image/webp;base64,' + base64.b64encode(open(f, 'rb').read()).decode()
               for f in sorted(glob.glob(str(pdir / 'thumbs' / '*.webp')))}

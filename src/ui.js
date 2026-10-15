@@ -28,6 +28,7 @@ const SECTIONS = [
   { id: "settings", t: "Settings & backups", i: "gear", grp: "records", d: "Budget, backups, data" },
   { id: "lesson", t: "Lesson", i: "book", hidden: true },
 ].filter(s => !s.x || X[s.x]);
+if (CT.sections) SECTIONS.forEach(s => CT.sections[s.id] && Object.assign(s, CT.sections[s.id]));
 const NAV_GROUPS = [["areas", "Workshop areas"], ["learn", "Learn"], ["records", "Records & admin"]];
 const SEC = Object.fromEntries(SECTIONS.filter(s => s.id).map(s => [s.id, s]));
 const ALIAS = { overview: "home", roadmap: "course" };

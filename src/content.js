@@ -88,7 +88,7 @@ const SHOPS = {
 };
 const CAT_SHOPS = { Engine: ["z1", "cmsnl", "partzilla"], Fuel: ["sudco", "z1", "caswell"], Exhaust: ["z1", "cmsnl"], Electrical: ["ricks", "z1", "cmsnl"], Chassis: ["allballs", "z1", "partzilla"], Wheels: ["allballs", "revzilla", "denniskirk"], Brakes: ["z1", "partzilla", "denniskirk"], "Final drive": ["revzilla", "denniskirk"], Controls: ["z1", "partzilla"], Cosmetics: ["cmsnl", "partzilla"], Hardware: ["z1", "cmsnl"], Consumables: ["z1", "allballs"] };
 function shopLinksFor(p) {
-  const keys = CAT_SHOPS[p.category] || ["cmsnl", "partzilla"];
+  const keys = (CAT_SHOPS[p.category] || CAT_SHOPS._default || ["cmsnl", "partzilla"]).filter(k => SHOPS[k]);
   const list = keys.map(k => SHOPS[k]);
   list.push({ name: "Search eBay for this part", url: "https://www.ebay.com/sch/i.html?_nkw=" + encodeURIComponent("" + BIKE.links.ebay + " " + "" + p.name.replace(/[\/()]/g, " ")), short: "Used and new-old-stock listings" });
   return list;
@@ -222,3 +222,16 @@ const GUIDES = {
     ["Fire", "Keep a fire extinguisher where you can reach it, especially during first start and fuel tests."],
     ["Before you ride", "Every safety check in the app must pass first."]] },
 };
+
+/* ---------- per-bike content ----------
+   The GS750 pack uses the text above as written. Any other bike brings its own course, guides, shops and
+   how-tos in content.json; anything it leaves out falls back to the general text above. */
+if (!LEGACY) {
+  const put = (dst, src) => src && Object.entries(src).forEach(([k, v]) => { if (v === null) delete dst[k]; else dst[k] = v && typeof v === "object" && !Array.isArray(v) && dst[k] && typeof dst[k] === "object" && !Array.isArray(dst[k]) ? Object.assign({}, dst[k], v) : v; });
+  if (CT.lessons) { Object.keys(LESSONS).forEach(k => delete LESSONS[k]); Object.assign(LESSONS, CT.lessons); }
+  put(SHOPS, CT.shops);
+  if (CT.catShops) { Object.keys(CAT_SHOPS).forEach(k => delete CAT_SHOPS[k]); Object.assign(CAT_SHOPS, CT.catShops); }
+  put(GUIDE, CT.guide); put(GUIDES, CT.guides);
+  if (CT.suggestions) SUGGESTIONS.splice(0, SUGGESTIONS.length, ...CT.suggestions);
+  Object.keys(PART_IMG).forEach(k => delete PART_IMG[k]);
+}

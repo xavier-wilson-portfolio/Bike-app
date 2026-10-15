@@ -1,3 +1,5 @@
+/* lesson picture: the drawn art when a bike has it, otherwise the bike's own art or an icon */
+const lessonArt = (L, mode) => L.img ? `<img src="img/${L.img}.svg" alt=""${mode === "lazy" ? ' loading="lazy"' : ""}>` : mode === "big" ? "" : mode === "card" && BIKE.art ? `<img src="${BIKE.art}" alt="">` : `<span class="lart">${ic(L.icon || "wrench")}</span>`;
 /* ============ HOME, COURSE, LESSONS, SHOPS ============ */
 const lessonIndex = id => sorted("phases").findIndex(p => p.id === id);
 function lessonState(ph) { const s = phaseStats(ph); if (s.total && s.done === s.total) return "done"; if (s.done > 0 || s.tasks.some(t => t.status === "In progress")) return "doing"; return "todo"; }
@@ -6,7 +8,7 @@ const statePill = st => st === "done" ? pill("green", "Done") : st === "doing" ?
 function lessonCard(ph, i, isNext) {
   const L = LESSONS[ph.id] || {}, s = phaseStats(ph), st = lessonState(ph);
   return `<button class="lesson ${isNext ? "next" : ""}" data-lesson="${ph.id}" aria-label="Part ${i + 1}: ${esc(L.title || ph.name)}">
-    <div class="limg"><img src="img/${L.img || "hero"}.svg" alt="" loading="lazy"><span class="lnum">Part ${i + 1}</span><span class="lstate">${isNext ? pill("amber", "Up next").replace("amber", "amber") : statePill(st)}</span></div>
+    <div class="limg">${lessonArt(L, "lazy")}<span class="lnum">Part ${i + 1}</span><span class="lstate">${isNext ? pill("amber", "Up next").replace("amber", "amber") : statePill(st)}</span></div>
     <div class="lbody"><b>${esc(L.title || ph.name)}</b><span>${esc(L.short || "")}</span><span class="num">${s.done} of ${s.total} steps</span><div class="progress"><i style="width:${s.pct * 100}%"></i></div></div></button>`;
 }
 function bindLessonLinks(root) { $$("[data-lesson]", root).forEach(b => b.onclick = () => go("lesson-" + b.dataset.lesson)); }
@@ -64,7 +66,7 @@ VIEWS.course = {
     return `${pageHead("course")}
     <div class="panel" style="max-width:940px;margin:0 auto;width:100%"><div class="row" style="justify-content:space-between"><b>Overall progress</b><b class="num">${pct(prog)}</b></div><div class="progress" style="margin-top:8px"><i style="width:${prog * 100}%"></i></div></div>
     <div class="timeline">${phs.map((p, i) => { const L = LESSONS[p.id] || {}, s = phaseStats(p), st = lessonState(p), isN = p.id === nx.id;
-      return `<div class="tl" data-lesson="${p.id}" tabindex="0" role="button" aria-label="Open part ${i + 1}"><span class="tn ${st === "done" ? "done" : isN ? "next" : ""}">${st === "done" ? ic("tick").replace('stroke-width="1.7"', 'stroke-width="3" width="20" height="20"') : i + 1}</span><img src="img/${L.img}.svg" alt="" loading="lazy">
+      return `<div class="tl" data-lesson="${p.id}" tabindex="0" role="button" aria-label="Open part ${i + 1}"><span class="tn ${st === "done" ? "done" : isN ? "next" : ""}">${st === "done" ? ic("tick").replace('stroke-width="1.7"', 'stroke-width="3" width="20" height="20"') : i + 1}</span>${lessonArt(L, "lazy")}
         <div class="tb"><div class="row"><span class="eyebrow">Part ${i + 1}</span>${isN ? pill("amber", "Up next") : statePill(st)}</div><b>${esc(L.title || p.name)}</b><p>${esc(L.short || "")}</p>
         <div class="meta"><span class="num">${s.done}/${s.total} steps</span><span>·</span><span>${s.ready} ready now</span>${s.deps.length ? `<span>·</span><span>Builds on Part ${s.deps.map(d => lessonIndex(d) + 1).join(", ")}</span>` : ""}</div>
         <div class="progress" style="height:6px"><i style="width:${s.pct * 100}%"></i></div></div></div>`; }).join("")}</div>
@@ -83,7 +85,7 @@ VIEWS.lesson = {
     return `<div class="lhero"><div class="eyebrow">Part ${i + 1} of ${phs.length}</div><h1>${esc(L.title || ph.name)}</h1><p>${esc(L.short || "")}</p>
       <div class="row center" style="margin-top:12px">${statePill(lessonState(ph))}<span class="num muted">${s.done} of ${s.total} steps done</span></div>
       <div class="progress" style="width:min(420px,80%);margin:8px auto 0"><i style="width:${s.pct * 100}%"></i></div><div class="row center" style="margin-top:12px">${askBtn(`I'm on Part ${i + 1} of my ${BIKE.short} restoration: ${L.title}. Give me a simple plan for this part.`, "Part " + (i + 1), "btn ask")}${(L.focus && GROUP_DIAG[L.focus] && scanBtn(GROUP_DIAG[L.focus], "Scan parts", "btn")) || scanPickBtn("Scan parts", "btn")}</div>
-      <img src="img/${L.img}.svg" alt=""></div>
+      ${lessonArt(L, "big")}</div>
     <div class="ph" style="display:none"></div>
     <div class="lcol">
       <div class="why"><div class="panel"><h3>${ic("book")} What you'll do</h3><p>${esc(L.about || "")}</p></div><div class="panel"><h3>${ic("star")} Why it matters</h3><p>${esc(L.why || "")}</p></div></div>

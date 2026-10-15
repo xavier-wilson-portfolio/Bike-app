@@ -1404,3 +1404,10 @@ article.gt::before{content:"";position:absolute;left:14px;top:19px;width:10px;he
 #garageReqs .pk-reqs{max-width:none;margin:8px 0 26px}
 @media (max-width:560px){.pk-req-row{grid-template-columns:1fr 1fr}.pk-req-row .wide{grid-column:1/-1}.pk-req{padding:14px}}
 .pk-req-row label{min-width:0}.pk-req-row input{width:100%;box-sizing:border-box}
+
+/* bikes without drawn lesson art */
+.lart{display:grid;place-items:center;width:100%;height:100%;min-height:120px;color:var(--blue-ink);background:linear-gradient(160deg,var(--panel),var(--surface))}
+.lart svg{width:44px;height:44px;opacity:.85}
+.tl .lart{width:64px;height:48px;min-height:0;border-radius:8px}.tl .lart svg{width:24px;height:24px}
+.gc-ico{display:grid;place-items:center;height:120px;background:var(--panel);color:var(--blue-ink);border-radius:10px}.gc-ico svg{width:40px;height:40px}
+a.shop{text-decoration:none;color:inherit}a.shop b{color:var(--fg)}

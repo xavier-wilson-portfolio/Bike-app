@@ -2,7 +2,7 @@
 function heroPhotoDoc() { const id = meta().heroPhoto, d = id && S.docs[id]; return d && !d.archived && d.file && d.file.startsWith("data:image") ? d : null; }
 const HERO_STOCK = BIKE.hero;
 function heroPhotoHtml() {
-  const d = heroPhotoDoc(), bike = meta().bike || BIKE.name, H = HERO_STOCK || { src: "img/bike.svg", alt: "Motorcycle illustration", cap: "", none: true };
+  const d = heroPhotoDoc(), bike = meta().bike || BIKE.name, H = HERO_STOCK || { src: BIKE.art || "img/bike.svg", alt: "Motorcycle illustration", cap: "", none: true };
   return `<figure class="herophoto has${d ? "" : " cutout"}">${d ? `<img src="${d.file}" alt="${esc(d.title || "Photo of the " + bike)}">` : `<img class="hp-cut" src="${H.src}" alt="${esc(H.alt)}" width="1097" height="633">${H.none ? "" : `<figcaption class="hp-cap">${esc(H.cap)} Photo: <a href="${H.page}" target="_blank" rel="noopener">${esc(H.credit)}</a>, <a href="${H.licUrl}" target="_blank" rel="noopener">${esc(H.lic)}</a></figcaption>`}`}
     ${ME.canWrite ? `<div class="hp-tools">${d ? `<button class="btn sm" id="hpChange">${ic("image")} Change photo</button><button class="btn sm" id="hpRemove">Use the stock photo</button>` : `<button class="btn sm" id="hpAdd">${ic("image")} Use my own photo</button>`}</div>` : ""}</figure>`;
 }
@@ -30,15 +30,15 @@ VIEWS.home = {
     <section class="hero2 full">
       <div class="hero2-text"><div class="eyebrow">${esc(m.bike || BIKE.name)} · Restoration course</div>
         <h1>Let's bring this ${BIKE.short} back to life</h1>
-        <p>Fourteen parts, one step at a time. Every step tells you what to do and why, ${X.diagrams3d ? "the 3D diagrams show" : "the diagrams show"} every piece, and the mechanic is a click away if you get stuck.</p>
-        <div class="act"><button class="btn tan big" data-lesson="${nx.id}">${ic("play")} ${lessonState(nx) === "todo" && nxi === 0 ? "Start Part 1" : "Continue Part " + (nxi + 1)}</button>${(L.focus && GROUP_DIAG[L.focus] && scanBtn(GROUP_DIAG[L.focus], "Scan parts", "btn big")) || scanPickBtn("Scan parts", "btn big")}<button class="btn big" data-go="diagrams">${ic("cube")} ${X.diagrams3d ? "Explore 3D diagrams" : "Explore the diagrams"}</button></div></div>
+        <p>Fourteen parts, one step at a time. Every step tells you what to do and why, ${X.diagrams3d ? "the 3D diagrams show every piece" : HAS_CAT || X.handDiagrams ? "the diagrams show every piece" : "the factory parts diagrams are one click away"}, and the mechanic is a click away if you get stuck.</p>
+        <div class="act"><button class="btn tan big" data-lesson="${nx.id}">${ic("play")} ${lessonState(nx) === "todo" && nxi === 0 ? "Start Part 1" : "Continue Part " + (nxi + 1)}</button>${(L.focus && GROUP_DIAG[L.focus] && scanBtn(GROUP_DIAG[L.focus], "Scan parts", "btn big")) || scanPickBtn("Scan parts", "btn big")}<button class="btn big" data-go="diagrams">${ic(X.diagrams3d ? "cube" : "layers")} ${X.diagrams3d ? "Explore 3D diagrams" : HAS_CAT || X.handDiagrams ? "Explore the diagrams" : "Parts diagrams"}</button></div></div>
       ${heroPhotoHtml()}
       <div class="specstrip">${SPECS.map(([v, l]) => `<div><b>${esc(v)}</b><span>${esc(l)}</span></div>`).join("")}</div>
-      <p class="specsrc">Published specs for the 1976–77 ${BIKE.short}. <a href="${SPEC_SOURCE.url}" target="_blank" rel="noopener">Source</a>. Always check against your bike and its factory manual.</p>
+      <p class="specsrc">${esc(BIKE.specNote || "Published specs for the " + BIKE.name + ".")} <a href="${SPEC_SOURCE.url}" target="_blank" rel="noopener">Source</a>. Always check against your bike and its factory manual.</p>
     </section>
     <div class="ph" style="display:none"></div>
     <section class="contcard">
-      <img src="img/${L.img}.svg" alt="">
+      ${lessonArt(L, "card")}
       <div class="stack" style="gap:8px"><div class="eyebrow">${lessonState(nx) === "todo" && nxi === 0 ? "Start here" : "Pick up where you left off"} · Part ${nxi + 1} of 14</div><h2 class="disp">${esc(L.title || nx.name)}</h2><p class="muted" style="margin:0">${esc(L.short || "")}</p>
         <div class="row"><span class="num muted">${ns.done} of ${ns.total} steps</span><div class="progress" style="flex:1;min-width:120px"><i style="width:${ns.pct * 100}%"></i></div></div>
         <div class="row"><button class="btn pri" data-lesson="${nx.id}">Open Part ${nxi + 1} ${ic("next")}</button>${askBtn(`I'm starting Part ${nxi + 1} (${L.title}). What should I do first, in simple steps?`, "Part " + (nxi + 1), "btn ask")}${(L.focus && GROUP_DIAG[L.focus] && scanBtn(GROUP_DIAG[L.focus], "Scan parts", "btn")) || scanPickBtn("Scan parts", "btn")}</div></div>
@@ -46,7 +46,7 @@ VIEWS.home = {
     <section class="stack"><div class="sechead"><div class="eyebrow">How it works</div><h2 class="disp">Three things to remember</h2></div>
       <div class="steps3">
         <div class="step3"><span class="ico">${ic("book")}</span><span class="n">01</span><h3>Follow the course</h3><p>Start at Part 1. Tick off each step as you finish it.</p><button class="btn sm" data-go="course">See the course</button></div>
-        <div class="step3"><span class="ico">${ic("cube")}</span><span class="n">02</span><h3>Look before you wrench</h3><p>Open the ${X.diagrams3d ? "3D " : ""}diagram for any area to see how every piece fits together.</p><button class="btn sm" data-go="diagrams">Open ${X.diagrams3d ? "3D " : ""}diagrams</button></div>
+        ${!HAS_CAT && !X.handDiagrams ? `<div class="step3"><span class="ico">${ic("layers")}</span><span class="n">02</span><h3>Look before you wrench</h3><p>Open the factory parts diagrams for the area you're working on so you know how it goes back together.</p><button class="btn sm" data-go="diagrams">Parts diagrams</button></div>` : `<div class="step3"><span class="ico">${ic("cube")}</span><span class="n">02</span><h3>Look before you wrench</h3><p>Open the ${X.diagrams3d ? "3D " : ""}diagram for any area to see how every piece fits together.</p><button class="btn sm" data-go="diagrams">Open ${X.diagrams3d ? "3D " : ""}diagrams</button></div>`}
         <div class="step3"><span class="ico">${ic("chat")}</span><span class="n">03</span><h3>Ask when you're stuck</h3><p>The mechanic answers questions on every page and every step.</p><button class="btn sm ask" data-ask="" data-ask-ctx="">${ic("chat")} Ask the mechanic</button></div>
       </div></section>
     <section class="stack"><div class="sechead"><div class="eyebrow">The course</div><h2 class="disp">Your 14 parts</h2><p>Open any part, any time. The highlighted one is where you are now.</p></div>
@@ -66,7 +66,7 @@ VIEWS.home = {
         <button class="kpi" data-go="tasks"><span class="l">Steps done</span><span class="v">${done} / ${ts.length}</span><span class="s">across all 14 parts</span></button>
         <button class="kpi ${f.forecast > f.total ? "red" : ""}" data-go="budget"><span class="l">Money spent</span><span class="v">${money(f.paid)}</span><span class="s">of ${money(f.total)} budget</span></button>
         <button class="kpi" data-go="gates"><span class="l">Safety checks passed</span><span class="v">${passed} / ${chk.length + gates.length}</span><span class="s">${safetyUnresolved()} open safety issues</span></button>
-        ${(() => { const o = typeof odoNow === "function" ? odoNow() : null, st = sorted("schedule").map(it => svcState(it, o)), ov = st.filter(x => x.status === "over").length, sn = st.filter(x => x.status === "soon").length; return `<button class="kpi ${ov ? "red" : ""}" data-go="maintenance"><span class="l">Maintenance</span><span class="v">${!st.length ? "Set up" : ov ? ov + " overdue" : sn ? sn + " due soon" : "Up to date"}</span><span class="s">${o ? milesFmt(o.miles) + " mi on the clock" : "log your first service"}</span></button>`; })()}
+        ${(() => { const o = typeof odoNow === "function" ? odoNow() : null, st = sorted("schedule").map(it => svcState(it, o)), ov = st.filter(x => x.status === "over").length, sn = st.filter(x => x.status === "soon").length; return `<button class="kpi ${ov ? "red" : ""}" data-go="maintenance"><span class="l">Maintenance</span><span class="v">${!st.length ? "Set up" : ov ? ov + " overdue" : sn ? sn + " due soon" : st.every(x => x.status === "none" || x.status === "nointerval") ? "Set up" : "Up to date"}</span><span class="s">${o ? milesFmt(o.miles) + " mi on the clock" : st.length ? st.length + " items to start tracking" : "log your first service"}</span></button>`; })()}
       </div></section>
     <div class="grid g2" style="align-items:start">
       <div class="panel stack"><h2 class="sec left">Ready to do next</h2><p class="hint-text" style="text-align:left">Everything these steps depend on is done. Tick one off when it's finished.</p>
@@ -139,14 +139,14 @@ VIEWS.paint = {
 VIEWS.guides = {
   render() {
     const g = R.guide && GUIDES[R.guide];
-    if (!g || g.sec) return `${pageHead("guides")}<div class="guidegrid">${Object.entries(GUIDES).map(([k, x]) => `<button class="gcard" data-guide="${k}"><img src="img/${x.img}.svg" alt="" loading="lazy"><span><b>${esc(x.title)}</b><small>${esc(x.sum)}</small><em>Read the guide ${ic("next")}</em></span></button>`).join("")}</div>
+    if (!g || g.sec) return `${pageHead("guides")}<div class="guidegrid">${Object.entries(GUIDES).map(([k, x]) => `<button class="gcard" data-guide="${k}">${x.img ? `<img src="img/${x.img}.svg" alt="" loading="lazy">` : `<span class="gc-ico">${ic(x.icon || "book")}</span>`}<span><b>${esc(x.title)}</b><small>${esc(x.sum)}</small><em>Read the guide ${ic("next")}</em></span></button>`).join("")}</div>
       <div class="row center">${askBtn("", "", "btn ask")}</div>`;
     const others = Object.entries(GUIDES).filter(([k]) => k !== R.guide).slice(0, 4);
     return `<div class="ph" data-own="1"><div class="eyebrow">Guide</div><h1>${esc(g.title)}</h1><p>${esc(g.sum)}</p></div>
-      <img class="guide-img" src="img/${g.img}.svg" alt="">
+      ${g.img ? `<img class="guide-img" src="img/${g.img}.svg" alt="">` : ""}
       <article class="article">${g.body.map(([h, t]) => `<section><h2>${esc(h)}</h2><p>${esc(t)}</p></section>`).join("")}
         <div class="panel blue row center" style="gap:12px"><span>Still have a question about ${esc(g.title.toLowerCase())}?</span>${askBtn("", g.title, "btn pri ask")}</div></article>
-      <div class="stack"><h2 class="sec">More guides</h2><div class="guidegrid">${others.map(([k, x]) => `<button class="gcard" data-guide="${k}"><img src="img/${x.img}.svg" alt="" loading="lazy"><span><b>${esc(x.title)}</b><small>${esc(x.sum)}</small></span></button>`).join("")}</div></div>
+      <div class="stack"><h2 class="sec">More guides</h2><div class="guidegrid">${others.map(([k, x]) => `<button class="gcard" data-guide="${k}">${x.img ? `<img src="img/${x.img}.svg" alt="" loading="lazy">` : `<span class="gc-ico">${ic(x.icon || "book")}</span>`}<span><b>${esc(x.title)}</b><small>${esc(x.sum)}</small></span></button>`).join("")}</div></div>
       <div class="row center"><button class="btn" data-goto="guides">${ic("back")} All guides</button></div>`;
   },
   bind(root) { $$("[data-guide]", root).forEach(b => b.onclick = () => { const k = b.dataset.guide; if (GUIDES[k].sec) go(GUIDES[k].sec); else go("guide-" + k); }); }
