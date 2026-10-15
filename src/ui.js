@@ -64,7 +64,7 @@ function shell() {
   <div class="app">
     <header class="top" id="top">
       <div class="top-in">
-        <button class="brand" data-goto="home" aria-label="Home"><img class="logo" src="img/revora-icon.svg" alt=""><span class="bt"><b id="brandName">Revora</b><span id="brandBike">${BIKE.name}</span></span></button>
+        <button class="brand" data-goto="home" aria-label="Revora home"><img class="wordmark" src="img/revora-word.svg" alt="Revora"></button>
         ${window.rvHasAccounts && rvHasAccounts() ? `<button class="btn sm tan garagebtn" onclick="rvAccount()">My garage</button>` : ""}
         <div class="progline" id="progLine" role="img"></div>
         <nav class="mainnav" id="nav" aria-label="Main" hidden></nav>
@@ -113,8 +113,6 @@ function renderNav() {
     `<button class="nl ${inMore ? "on" : ""} ${mg && !mg.hidden ? "open" : ""}" data-more aria-expanded="${mg && !mg.hidden}">More ${ic("chev")}</button>`;
   $("#nav [data-more]").onclick = e => { e.stopPropagation(); const m = $("#mega"); if (m.hidden) { m.innerHTML = megaHtml(); m.hidden = false; } else m.hidden = true; renderNav(); };
   const m = meta(), prog = overallProgress();
-  $("#brandName").textContent = "Revora";
-  $("#brandBike").textContent = m.bike || "" + BIKE.name + "";
   const vq = $("#vq"); if (vq) vq.placeholder = window.RV_CLOUD ? (RV_CLOUD.projectName || vehLabel(curVehicle())) : vehLabel(curVehicle()); const vp = $("#vpop"); if (vp && !vp.hidden && document.activeElement === vq) { /* keep open popover fresh */ vp.innerHTML = vehResultHtml(vq.value); }
   $("#progChip").innerHTML = `<i style="--p:${Math.round(prog * 100)}"></i>${pct(prog)} restored`;
   const pp = Math.round(prog * 100), pl = $("#progLine");
