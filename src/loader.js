@@ -189,10 +189,14 @@
   }
 
   /* ---------- accounts ---------- */
+  // on the sign-up page: a way back to a project kept in this browser, and a way to look around first
+  const guestLinks = () => { const last = ls.get("rv.bike"), b = last && bikeOf(last);
+    return (b ? `<span>Started without an account? <button class="linkbtn" data-open-guest="${esc(last)}">Open the ${esc(b.generic ? "project" : bikeName(b))} saved on this browser</button></span>` : "")
+      + `<span>Just looking? <button class="linkbtn" data-nav="projects">Browse the bikes first</button></span>`; };
   function showAuth(kind) {
     const T = { signin: ["Sign in", "Sign in"], signup: ["Create your account", "Create account"], forgot: ["Reset your password", "Email me a reset link"], newpass: ["Choose a new password", "Save password"] }[kind];
     document.title = T[0] + " · Revora";
-    frame(`<h1 class="disp">${T[0]}</h1>
+    frame(`<h1 class="disp">${T[0]}</h1>${kind === "signup" ? `<p class="muted">Free. Your bike's restoration course, parts, jobs and maintenance log in one place, saved to your account and shareable with your team.</p>` : ""}
       <form class="pk-form" id="authF" novalidate>
         ${kind === "signup" ? `<label>Your name<input name="name" autocomplete="name" required></label>` : ""}
         ${kind !== "newpass" ? `<label>Email<input name="email" type="email" autocomplete="email" required></label>` : ""}
@@ -201,7 +205,7 @@
         <div class="pk-err" id="authErr" hidden></div>
         <button class="btn pri big" type="submit">${T[1]}</button>
       </form>
-      <div class="pk-links">${kind === "signin" ? `<button class="linkbtn" data-nav="forgot">Forgot your password?</button><span>No account? <button class="linkbtn" data-nav="signup">Create one</button></span>` : kind === "signup" ? `<span>Already have an account? <button class="linkbtn" data-nav="signin">Sign in</button></span>` : `<button class="linkbtn" data-nav="signin">Back to sign in</button>`}</div>`);
+      <div class="pk-links">${kind === "signin" ? `<button class="linkbtn" data-nav="forgot">Forgot your password?</button><span>No account? <button class="linkbtn" data-nav="signup">Create one</button></span>` : kind === "signup" ? `<span>Already have an account? <button class="linkbtn" data-nav="signin">Sign in</button></span>${guestLinks()}` : `<button class="linkbtn" data-nav="signin">Back to sign in</button>`}</div>`);
     const f = document.getElementById("authF"), err = document.getElementById("authErr");
     f.querySelector("input").focus();
     f.onsubmit = async e => {
@@ -377,6 +381,7 @@
     const n = e.target.closest("[data-nav]"), a = e.target.closest("[data-act]"), pr = e.target.closest("[data-project]");
     if (pr) { goUrl({ project: pr.dataset.project }); return; }
     if (a) { if (a.dataset.act === "signout") window.rvSignOut(); if (a.dataset.act === "reload") location.reload(); return; }
+    const og = e.target.closest("[data-open-guest]"); if (og) { goUrl({ bike: og.dataset.openGuest }); return; }
     if (!n) return; const v = n.dataset.nav;
     if (v === "home" || v === "projects") goUrl(session ? {} : { pick: 1 });
     else if (v === "new") showPicker("new");
@@ -405,8 +410,10 @@
     if (pid) { if (!sb) return fail("Accounts aren't set up on this site yet."); if (!session) return showAuth("signin"); return openProject(pid); }
     if (bid && bikeOf(bid)) { ls.set("rv.bike", bid); return openApp(bid, null); }
     if (session) return showProjects();
+    // signed out: the plain link always lands on sign-up (browsing and guest projects stay one click away)
+    if (sb && !qs.has("pick")) return showAuth("signup");
     const last = ls.get("rv.bike");
-    if (!qs.has("pick") && last && bikeOf(last)) return openApp(last, null);
+    if (!sb && !qs.has("pick") && last && bikeOf(last)) return openApp(last, null);
     showPicker("try");
   }
   start();
