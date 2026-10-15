@@ -1382,3 +1382,25 @@ article.gt::before{content:"";position:absolute;left:14px;top:19px;width:10px;he
   .ph .act{flex-wrap:wrap;justify-content:center}
 }
 @media (min-width:641px){.mt-narrow{display:none}}
+
+/* bike requests */
+.pk-reqwrap{width:100%;display:flex;justify-content:center;margin-top:14px}
+.pk-reqlink{font-size:14.5px}
+.pk-req{width:100%;max-width:640px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:14px;text-align:left;box-shadow:var(--shadow)}
+.pk-req-h{display:flex;flex-direction:column;gap:4px}
+.pk-req-h b{font-size:17px}
+.pk-req-row{display:grid;grid-template-columns:90px 1fr 1.4fr;gap:10px}
+.pk-req-row label{display:flex;flex-direction:column;gap:4px;font-weight:700;font-size:13px;color:var(--muted)}
+.pk-req-row input{padding:11px 12px;border:1px solid var(--line-2);border-radius:10px;font-size:16px;background:var(--surface);color:var(--fg);min-width:0}
+.pk-req-go{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.pk-req.done{background:var(--green-bg);border-color:transparent;gap:4px}
+.pk-req.done b{color:var(--green)}
+.pk-reqs{width:100%;max-width:640px;margin:22px auto 0;text-align:left;display:flex;flex-direction:column;gap:6px}
+.pk-reqs h2{font-size:16px;margin:0 0 4px}
+.pk-reqi{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:10px 14px;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+.pk-reqi b{flex:1;min-width:160px}
+.pk-reqs-st{font-size:12px;font-weight:700;padding:2px 10px;border-radius:20px;background:var(--amber-bg);color:var(--amber)}
+.pk-reqs-st.ok{background:var(--green-bg);color:var(--green)}
+#garageReqs .pk-reqs{max-width:none;margin:8px 0 26px}
+@media (max-width:560px){.pk-req-row{grid-template-columns:1fr 1fr}.pk-req-row .wide{grid-column:1/-1}.pk-req{padding:14px}}
+.pk-req-row label{min-width:0}.pk-req-row input{width:100%;box-sizing:border-box}

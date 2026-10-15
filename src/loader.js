@@ -42,6 +42,55 @@
     return `<button class="pick-card" data-bike="${esc(b.id)}"><span class="pick-yr">${esc(b.year)}</span><b>${esc(b.make)} ${esc(b.model)}</b><span class="muted">${esc(b.variant || "")}</span>
       <span class="pick-tags"><span class="tag">${b.diagrams} parts diagrams</span><span class="tag">Parts list</span><span class="tag">Course</span>${x.diagrams3d ? `<span class="tag pro">3D</span>` : ""}</span></button>`;
   }
+  /* ---------- bike requests ---------- */
+  const REQ_DAYS = 3;
+  const reqKey = (y, mk, md) => [y, mk, md].map(norm).join("-");
+  const etaDate = created => { const d = new Date(created || Date.now()); d.setDate(d.getDate() + REQ_DAYS); return d; };
+  const etaTxt = (created, status) => status === "Added" ? "Ready now" : etaDate(created) < new Date() ? "Ready any day now" : "Estimated ready by " + etaDate(created).toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
+  function guessBike(q) {
+    const w = String(q || "").trim().split(/\s+/).filter(Boolean); let year = ""; const rest = [];
+    w.forEach(x => { if (!year && /^(19|20)\d{2}$/.test(x)) year = x; else if (!year && /^\d{2}$/.test(x)) year = (+x > 30 ? "19" : "20") + x; else rest.push(x); });
+    const make = rest[0] ? rest[0][0].toUpperCase() + rest[0].slice(1) : "";
+    return { year, make, model: rest.slice(1).map(x => /\d/.test(x) ? x.toUpperCase() : x[0].toUpperCase() + x.slice(1)).join(" ") };
+  }
+  function reqFormHtml() {
+    return `<form class="pk-req" id="reqF" novalidate><div class="pk-req-h"><b>Request this bike</b><span class="muted">Tell us the year, make and model. We'll build its page, course and parts list and have it ready in about ${REQ_DAYS} days.</span></div>
+      <div class="pk-req-row"><label>Year<input name="year" inputmode="numeric" maxlength="4" placeholder="1981" autocomplete="off"></label><label>Make<input name="make" placeholder="Honda" autocomplete="off"></label><label class="wide">Model<input name="model" placeholder="CB750F" autocomplete="off"></label></div>
+      <div class="pk-req-go"><button class="btn pri" type="submit">Request it</button><span class="muted pk-small">${esc(etaTxt())}</span></div></form>`;
+  }
+  async function submitReq(r) {
+    const key = reqKey(r.year, r.make, r.model), label = `${r.year} ${r.make} ${r.model}`.replace(/\s+/g, " ").trim();
+    const { error } = await sb.rpc("vote_bike", { k: key, l: label });
+    if (error) throw error;
+    const { data } = await sb.from("bike_requests").select("*").eq("key", key).maybeSingle();
+    return data || { key, label, status: "Queued", created_at: new Date().toISOString() };
+  }
+  async function flushPendingReq() {
+    let r = null; try { r = JSON.parse(ls.get("rv.pendingReq") || "null"); } catch (e) {}
+    if (!r || !session) return;
+    try { const row = await submitReq(r); ls.set("rv.pendingReq", ""); note(`Requested the ${row.label}. ${etaTxt(row.created_at, row.status)}.`); } catch (e) {}
+  }
+  async function myRequests() {
+    if (!sb || !session) return [];
+    const { data } = await sb.from("bike_requests").select("*").contains("votes", [session.user.id]).order("created_at", { ascending: false });
+    return data || [];
+  }
+  const reqListHtml = rows => rows.length ? `<section class="pk-reqs"><h2>Bikes you requested</h2>${rows.map(r => `<div class="pk-reqi"><b>${esc(r.label)}</b><span class="pk-reqs-st ${r.status === "Added" ? "ok" : ""}">${r.status === "Added" ? "Ready" : "In progress"}</span><span class="muted">${esc(etaTxt(r.created_at, r.status))}</span></div>`).join("")}</section>` : "";
+  function bindReqForm(form, onDone) {
+    form.addEventListener("input", e => { if (e.target.name) e.target.dataset.touched = "1"; });
+    form.onsubmit = async e => {
+      e.preventDefault();
+      const r = { year: form.year.value.trim(), make: form.make.value.trim(), model: form.model.value.trim() };
+      if (!/^(19|20)\d{2}$/.test(r.year)) { note("Enter the 4-digit year, like 1981.", true); form.year.focus(); return; }
+      if (!r.make) { note("Enter the make, like Honda.", true); form.make.focus(); return; }
+      if (!r.model) { note("Enter the model, like CB750F.", true); form.model.focus(); return; }
+      if (!sb || !session) { ls.set("rv.pendingReq", JSON.stringify(r)); if (!sb) { note("Requests need an account, and accounts aren't set up on this site yet.", true); return; } showAuth("signup"); note("Create a free account and we'll send in your request for the " + r.year + " " + r.make + " " + r.model + "."); return; }
+      const btn = form.querySelector("button[type=submit]"); btn.disabled = true; btn.textContent = "Sending…";
+      try { const row = await submitReq(r); onDone(row); }
+      catch (err) { btn.disabled = false; btn.textContent = "Request it"; note(friendly(err), true); }
+    };
+  }
+
   function showPicker(mode) { // mode "try" (no account) or "new" (start a project)
     document.title = mode === "new" ? "New project · Revora" : "Find your bike · Revora";
     const makes = [...new Set(INDEX.map(b => b.make))].sort();
@@ -50,13 +99,24 @@
       <div class="pick-search"><input type="search" id="pickQ" placeholder="Year, make, model, e.g. 1977 Suzuki GS750" autocomplete="off" autofocus aria-label="Search for your bike"></div>
       <div class="pick-makes">${makes.map(m => `<button class="chip" data-make="${esc(m)}">${esc(m)}</button>`).join("")}</div>
       <div class="pick-list" id="pickList"></div>
+      <div class="pk-reqwrap" id="pickReq"></div>
+      <div id="pickMine"></div>
       ${mode === "try" && sb && !session ? `<p class="muted pk-small">Trying it without an account saves to this browser only. <button class="linkbtn" data-nav="signup">Create a free account</button> to keep your project and share it with your team.</p>` : ""}`, { wide: true });
     const q = document.getElementById("pickQ"), list = document.getElementById("pickList");
+    const reqBox = document.getElementById("pickReq"); let reqOpen = false;
+    const fillReq = () => { const f = document.getElementById("reqF"); if (!f) return; const g = guessBike(q.value); ["year", "make", "model"].forEach(k => { if (!f[k].dataset.touched) f[k].value = g[k]; }); };
+    const done = row => { reqBox.innerHTML = `<div class="pk-req done"><b>Request sent: ${esc(row.label)}</b><span>${esc(etaTxt(row.created_at, row.status))}. When it's ready it shows up in this search${mode === "new" ? " and you can start a project on it" : ""}.</span></div>`; drawMine(); };
+    const openReq = () => { reqOpen = true; reqBox.innerHTML = reqFormHtml(); fillReq(); bindReqForm(document.getElementById("reqF"), done); };
+    const drawMine = async () => { const box = document.getElementById("pickMine"); if (box) box.innerHTML = reqListHtml(await myRequests()); };
     const draw = () => {
       const hits = INDEX.filter(b => match(b, q.value)).sort((a, b) => a.make.localeCompare(b.make) || a.model.localeCompare(b.model) || a.year - b.year);
-      list.innerHTML = hits.length ? hits.map(card).join("") : `<div class="pick-none"><b>We don't have that bike yet.</b><span class="muted">The library is growing. Check back soon, or try a nearby year or model.</span></div>`;
+      list.innerHTML = hits.length ? hits.map(card).join("") : `<div class="pick-none"><b>We don't have that bike yet.</b><span class="muted">Request it below and we'll add it in about ${REQ_DAYS} days.</span></div>`;
+      if (!hits.length) { if (!reqOpen) openReq(); else fillReq(); }
+      else if (!reqOpen) reqBox.innerHTML = `<button class="linkbtn pk-reqlink" type="button">Don't see your exact bike? Request it</button>`;
+      else fillReq();
     };
-    q.oninput = draw; draw();
+    reqBox.addEventListener("click", e => { if (e.target.closest(".pk-reqlink")) { openReq(); document.querySelector("#reqF input[name=year]")?.focus(); } });
+    q.oninput = draw; draw(); drawMine();
     list.onclick = async e => { const b = e.target.closest("[data-bike]"); if (!b) return; if (mode === "new") await createProject(b.dataset.bike); else { ls.set("rv.bike", b.dataset.bike); goUrl({ bike: b.dataset.bike }); } };
     app.querySelector(".pick-makes").onclick = e => { const m = e.target.closest("[data-make]"); if (m) { q.value = m.dataset.make; draw(); q.focus(); } };
   }
@@ -169,7 +229,9 @@
       ${data.length ? `<section class="garage"><div class="garage-h"><h2>Your garage</h2><button class="btn sm" data-nav="new">+ New project</button></div>
         <div class="gts">${data.map(tag).join("")}<button class="gt gt-new" data-nav="new"><b>Add a bike</b><span>Start a new project for another bike</span></button></div></section>` : ""}
       <section class="gfoot"><div><b>Working with a team?</b><span>Share a project and everyone sees the same parts, steps and photos, live. Owners can give edit or view access.</span></div>
-        <div><b>Bike not listed?</b><span>The library is growing. Browse what's there now.</span><button class="linkbtn" data-nav="browse">Browse bikes</button></div></section>`, { wide: true, garage: true });
+        <div><b>Bike not listed?</b><span>Request it and we'll add it in about ${REQ_DAYS} days.</span><button class="linkbtn" data-nav="browse">Find or request a bike</button></div></section>
+      <div id="garageReqs"></div>`, { wide: true, garage: true });
+    myRequests().then(rows => { const box = document.getElementById("garageReqs"); if (box) box.innerHTML = reqListHtml(rows); });
     app.querySelectorAll("[data-rename]").forEach(b => b.onclick = async () => {
       const p = data.find(x => x.id === b.dataset.rename); const name = prompt("Project name", p.name || ""); if (name === null) return;
       const { error } = await sb.from("projects").update({ name: name.trim().slice(0, 80) }).eq("id", p.id); if (error) note(friendly(error), true); else showProjects();
@@ -254,6 +316,7 @@
         sb.auth.onAuthStateChange(ev => { if (ev === "PASSWORD_RECOVERY") showAuth("newpass"); });
         session = (await sb.auth.getSession()).data.session;
         if (session) { const r = await sb.from("profiles").select("display_name,plan").eq("id", session.user.id).maybeSingle(); profile = r.data; }
+        if (session) await flushPendingReq();
         if (recovering) return;
       }
     }
