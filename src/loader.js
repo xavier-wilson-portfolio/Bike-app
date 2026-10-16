@@ -487,7 +487,7 @@
       ["cal", "Papers and renewals", "Insurance, registration and warranties with a reminder before anything runs out.", "Free"],
       ["check", "Checklists", "Spring wake-up, winter storage, before every ride and before a big trip.", "Free"],
       ["wheel", "Tire and chain wear", "Readings and photos over time, and roughly how many miles are left.", "Free"],
-      ["phone", "On your phone", "Install it to your home screen and it opens like an app.", "Free"]];
+      ["camera", "Build page", "A public page for your bike with photos, the story, mods and a before-and-after slider. Post the link anywhere.", "Free"]];
     const sil = n => { const f = (CFG.sil || []).find(x => x.replace(/\.\w+$/, "") === n); return f ? "img/sil/" + f : ""; };
     app.innerHTML = `<div class="ld">
       <header class="ld-top"><a class="pk-logo" href="${esc(url({}))}" aria-label="Revora"><img class="brand-icon" src="img/revora-icon.svg" alt=""><img class="wordmark" src="img/revora-word.svg" alt="Revora"></a>
@@ -534,6 +534,21 @@
         <div class="hr-bar-r"><button class="btn sm" id="hrPrint">Print or save as PDF</button><a class="btn sm tan" href="${esc(url(session ? {} : { auth: "signup" }))}">Keep a log for your bike</a></div></div>
       ${window.rvReportHtml(data)}</div>`;
     document.getElementById("hrPrint").onclick = () => { document.body.classList.add("printing-hr"); window.print(); setTimeout(() => document.body.classList.remove("printing-hr"), 600); };
+  }
+
+  /* ---------- a public build page (no account needed) ---------- */
+  async function showBuild(token) {
+    spin(); document.title = "Build page · Revora";
+    if (!sb) return fail("Build pages can't be opened on this copy of Revora.");
+    const ok = /^[A-Za-z0-9]{16,40}$/.test(token);
+    const { data, error } = ok ? await sb.rpc("get_build", { t: token }) : { data: null };
+    if (error || !data) return frame(`<h1 class="disp">This build page isn't available</h1><p class="muted">The owner may have stopped sharing it, or the link is incomplete.</p><button class="btn pri" data-nav="home">Go to Revora</button>`);
+    document.title = (data.title || (data.bike && data.bike.name) || "Build") + " · Revora";
+    app.innerHTML = `<div class="bp-page"><div class="hr-bar"><a class="pk-logo" href="${esc(url({}))}" aria-label="Revora"><img class="brand-icon" src="img/revora-icon.svg" alt=""><img class="wordmark" src="img/revora-word.svg" alt="Revora"></a>
+        <div class="hr-bar-r"><a class="btn sm tan" href="${esc(url(session ? {} : { auth: "signup" }))}">${session ? "Your garage" : "Make a page for your bike"}</a></div></div>
+      ${window.rvBuildHtml(data)}
+      ${session ? "" : `<section class="bp-cta"><h2>Got a bike of your own?</h2><p>Revora keeps your service log, mods, receipts and photos in one place, and makes a page like this one for free.</p><a class="btn pri" href="${esc(url({ auth: "signup" }))}">Start free</a></section>`}</div>`;
+    window.rvBuildBind(app, data, { token, onLike: async () => { const r = await sb.rpc("like_build", { t: token }); return r.error ? null : r.data; } });
   }
 
   /* ---------- open a bike ---------- */
@@ -644,6 +659,7 @@
       }
     }
     if (qs.get("report")) return showReport(qs.get("report"));
+    if (qs.get("build")) return showBuild(qs.get("build"));
     if (qs.has("plans")) return showPlans();
     const auth = qs.get("auth"); if (sb && !session && ["signin", "signup"].includes(auth)) return showAuth(auth);
     const pid = qs.get("project"), bid = qs.get("bike");
