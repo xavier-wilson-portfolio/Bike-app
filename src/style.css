@@ -1737,11 +1737,15 @@ img.silcover{object-fit:contain;background:#fff;padding:10px}
 /* garage cards: brand color at the top, fading to white */
 .gt{overflow:hidden;--top:#E6F1F8;--mid:#F4F9FC;--edge:#2C5F7C;background:linear-gradient(180deg,var(--top) 0,var(--mid) 46%,#fff 100%);border-color:color-mix(in srgb,var(--edge) 22%,#fff);box-shadow:0 1px 0 var(--line),0 8px 20px -14px var(--edge)}
 .gt::after{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:var(--edge)}
-.gt.th-blue{--top:#CFE5F2;--mid:#EEF6FB;--edge:#2C5F7C}
-.gt.th-tan{--top:#EBD7AE;--mid:#F8F0E0;--edge:#B8954F}
-.gt.th-ink{--top:#B7CEDC;--mid:#E8F0F5;--edge:#17232C}
-.gt.th-sky{--top:#B9D9EB;--mid:#E9F3F9;--edge:#4C86A8}
-.gt.th-sage{--top:#CFE3D6;--mid:#EEF6F0;--edge:#3E7A55}
+/* one color per kind of bike */
+.gt.th-standard{--top:#B9D9EB;--mid:#E9F3F9;--edge:#4C86A8}
+.gt.th-cruiser{--top:#EBD7AE;--mid:#F8F0E0;--edge:#B8954F}
+.gt.th-sport{--top:#F0C4BA;--mid:#FBEDEA;--edge:#B4483A}
+.gt.th-adventure{--top:#CFE3D6;--mid:#EEF6F0;--edge:#3E7A55}
+.gt.th-dualsport{--top:#F2CFA8;--mid:#FCF0E2;--edge:#C26A1E}
+.gt.th-touring{--top:#B7CEDC;--mid:#E8F0F5;--edge:#17232C}
+.gt.th-cafe{--top:#DCC7AE;--mid:#F5EDE3;--edge:#6E4B2A}
+.gt.th-scooter{--top:#BFE3DF;--mid:#EAF6F4;--edge:#2E7D78}
 article.gt::before{box-shadow:inset 0 0 0 2px color-mix(in srgb,var(--edge) 35%,#fff),0 0 0 4px rgba(255,255,255,.7);background:#fff}
 .gt .gt-bike{color:color-mix(in srgb,var(--edge) 80%,#000)}
 .gt-bar{background:rgba(255,255,255,.75)}

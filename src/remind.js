@@ -72,7 +72,7 @@ VIEWS.reminders = {
     const reads = sorted("mileage").map(r => ({ miles: n(r.miles), date: r.date, src: r.note || "" })).concat(svcDone().filter(r => n(r.odometer)).map(r => ({ miles: n(r.odometer), date: r.date, src: r.service }))).filter(r => r.date).sort((a, b) => b.date.localeCompare(a.date) || b.miles - a.miles).slice(0, 5);
     const months = {}; dated.forEach(f => { const k = f.due.slice(0, 7); (months[k] = months[k] || []).push(f); });
     const monthName = k => new Date(k + "-15T12:00:00").toLocaleDateString("en-US", { month: "long", year: "numeric" });
-    const emailTo = set.to || (window.RV_CLOUD && RV_CLOUD.user && RV_CLOUD.user.email) || "";
+    const emailTo = (window.RV_CLOUD && RV_CLOUD.user && RV_CLOUD.user.email) || "";   // reminders only ever go to the signed-in account's own email
     const row = f => { const [col, lbl] = SVC_PILL[f.st.status]; const days = daysBetween(t, f.due);
       return `<div class="rm-item ${f.st.status}"><div class="rm-date"><b>${new Date(f.due + "T12:00:00").getDate()}</b><span>${new Date(f.due + "T12:00:00").toLocaleDateString("en-US", { weekday: "short" })}</span></div>
         <div class="rm-body"><button class="linkbtn rm-name" data-open="schedule|${esc(f.it.id)}">${esc(f.it.name)}</button>
@@ -90,7 +90,7 @@ VIEWS.reminders = {
           <div class="rm-card rm-how"><div class="rm-k">${ic("bell")} How you're reminded</div>
             <div class="rm-opt"><div><b>Email</b><span class="muted">An email ${n(set.daysAhead)} days before anything is due, or ${milesFmt(set.milesAhead)} miles before at your pace.</span></div>
               <label class="rm-sw"><input type="checkbox" id="rmEmail" ${set.email ? "checked" : ""} ${W ? "" : "disabled"}><span></span></label></div>
-            ${set.email ? `<div class="rm-email"><input type="email" id="rmTo" value="${esc(emailTo)}" placeholder="you@example.com" aria-label="Email for reminders" ${W ? "" : "disabled"}><span class="tag">Sending starts once Revora's email is switched on</span></div>` : ""}
+            ${set.email ? `<div class="rm-email"><span class="rm-to">Sent to <b>${esc(emailTo || "your account email")}</b></span><span class="tag">Sending starts once Revora's email is switched on</span></div>` : ""}
             <div class="rm-grid"><label>Remind me<select id="rmDays" ${W ? "" : "disabled"}>${[3, 7, 14, 21, 30].map(d => `<option value="${d}" ${n(set.daysAhead) === d ? "selected" : ""}>${d} days before</option>`).join("")}</select></label>
               <label>or<select id="rmMiles" ${W ? "" : "disabled"}>${[100, 250, 500, 1000].map(d => `<option value="${d}" ${n(set.milesAhead) === d ? "selected" : ""}>${milesFmt(d)} mi before</option>`).join("")}</select></label></div>
             <label class="rm-check"><input type="checkbox" id="rmNudge" ${set.odoNudge ? "checked" : ""} ${W ? "" : "disabled"}> Nudge me to update the odometer if it's been a month</label>
@@ -120,7 +120,6 @@ VIEWS.reminders = {
     const v = id => $("#" + id, root);
     if (v("rmPaceSave")) v("rmPaceSave").onclick = () => saveRem({ monthlyMiles: Math.max(0, n(v("rmMonthly").value)) });
     if (v("rmEmail")) v("rmEmail").onchange = () => saveRem({ email: v("rmEmail").checked, owner: window.RV_CLOUD && RV_CLOUD.user ? RV_CLOUD.user.id : "", to: remSettings().to || (window.RV_CLOUD && RV_CLOUD.user && RV_CLOUD.user.email) || "" }, true).then(() => toast(v("rmEmail")?.checked === false ? "Email reminders off" : "Email reminders on. Sending starts once Revora's email is switched on."));
-    if (v("rmTo")) v("rmTo").onchange = () => { const e = v("rmTo").value.trim(); if (e && !/^\S+@\S+\.\S+$/.test(e)) return toast("That email doesn't look right", "err"); saveRem({ to: e }); };
     if (v("rmDays")) v("rmDays").onchange = () => saveRem({ daysAhead: n(v("rmDays").value) });
     if (v("rmMiles")) v("rmMiles").onchange = () => saveRem({ milesAhead: n(v("rmMiles").value) });
     if (v("rmNudge")) v("rmNudge").onchange = () => saveRem({ odoNudge: v("rmNudge").checked });
@@ -145,7 +144,7 @@ VIEWS.reminders = {
 /* ---------- email delivery: keep this bike's upcoming reminders in the reminder_queue table; a daily worker sends them ---------- */
 function remRows() {
   const set = remSettings(), t = today(), rows = [];
-  if (!set.email || !set.to) return rows;
+  if (!set.email || !(window.RV_CLOUD && RV_CLOUD.user && RV_CLOUD.user.email)) return rows;
   forecastAll().filter(f => f.due && f.remind).forEach(f => {
     const days = daysBetween(t, f.due);
     rows.push({ send_on: f.remind, due_on: f.due, kind: "service", item_key: f.it.id, title: `${BIKE.short}: ${f.it.name} ${days < 0 ? "is overdue" : "is coming due"}`,
@@ -158,7 +157,7 @@ let remSyncT = null, remSyncLast = "", remSyncOff = false;
 async function syncReminders() {
   const C = window.RV_CLOUD; if (!C || !C.sb || remSyncOff || !store.ready) return;
   const set = remSettings(); if (set.owner && set.owner !== C.user.id) return;          // only the person who switched email on sends them
-  const rows = remRows().map(r => Object.assign(r, { project_id: C.projectId, email: set.to, bike: BIKE.name }));
+  const rows = remRows().map(r => Object.assign(r, { project_id: C.projectId, email: RV_CLOUD.user.email, bike: BIKE.name }));
   const sig = JSON.stringify(rows); if (sig === remSyncLast) return;
   const del = await C.sb.from("reminder_queue").delete().eq("project_id", C.projectId).eq("user_id", C.user.id).is("sent_at", null);
   if (del.error) { if (/reminder_queue|relation|schema cache|404/i.test(del.error.message || "")) remSyncOff = true; return; }

@@ -55,6 +55,7 @@
     const make = rest[0] ? rest[0][0].toUpperCase() + rest[0].slice(1) : "";
     return { year, make, model: rest.slice(1).map(x => /\d/.test(x) ? x.toUpperCase() : x[0].toUpperCase() + x.slice(1)).join(" ") };
   }
+  const STYLE_NAME = { standard: "Standard", cruiser: "Cruiser", sport: "Sport", adventure: "Adventure", dualsport: "Dual-sport", touring: "Touring", cafe: "Cafe racer", scooter: "Scooter" };
   const BIKE_STYLES = [["standard", "Standard / naked"], ["cruiser", "Cruiser"], ["sport", "Sport"], ["adventure", "Adventure"], ["dualsport", "Dual-sport / dirt"], ["touring", "Touring"], ["cafe", "Cafe racer / classic"], ["scooter", "Scooter"]];
   // a sensible first guess at the kind of bike from the model name; the user can change it
   function guessStyle(make, model) {
@@ -338,14 +339,15 @@
     const first = String(profile?.display_name || session.user.email || "").split(/[\s@]/)[0];
     const pins = (PREFS.pinned || []).filter(id => data.some(p => p.id === id)), isPin = p => pins.includes(p.id);
     data.sort((a, b) => (isPin(a) ? pins.indexOf(a.id) : 1e6) - (isPin(b) ? pins.indexOf(b.id) : 1e6));
-    const theme = p => { let h = 0; for (const c of String(p.id)) h = (h * 31 + c.charCodeAt(0)) >>> 0; return isLog(p) ? ["th-blue", "th-sky", "th-sage"][h % 3] : ["th-tan", "th-ink", "th-tan", "th-sage"][h % 4]; };
+    const styleOf = p => { const b = bikeOf(p.bike_id); return genStyle[p.id] || (b && b.style) || "standard"; };
+    const theme = p => "th-" + styleOf(p);
     const lastId = ls.get("rv.project"), feat = data.find(p => p.id === lastId) || data[0];
     const pctOf = p => { const g = prog[p.id]; return g && g.total ? g.done / g.total * 100 : 0; };
     const who = p => p.role === "owner" ? (p.members > 1 ? `You and ${p.members - 1} other${p.members > 2 ? "s" : ""}` : "Just you") : p.role === "viewer" ? "Shared with you, view only" : "Shared with you";
     const tag = p => { const b = bikeOf(p.bike_id), g = prog[p.id], pc = pctOf(p); return `<article class="gt ${theme(p)}${isPin(p) ? " pinned" : ""}">
         <button class="gt-pin" data-pin="${esc(p.id)}" aria-pressed="${isPin(p)}" aria-label="${isPin(p) ? "Unpin" : "Pin"} ${esc(p.name || bikeName(b))}" title="${isPin(p) ? "Unpin" : "Pin to the top"}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></button>
         <button class="gt-open" data-project="${esc(p.id)}" aria-label="Open ${esc(p.name || bikeName(b))}">
-          <span class="gt-bike">${isPin(p) ? `<span class="gt-pintag">Pinned</span>` : ""}${isLog(p) ? "Maintenance log" : isUni(p) ? esc(uniTxt(p)) : b && b.generic ? (readyFor(p) ? "Bike page ready" : "Bike page coming soon") : esc((p.name && p.name !== bikeName(b)) ? bikeName(b) : (b && b.variant) || "")}</span><b class="gt-name">${esc(p.name || bikeName(b))}</b>
+          <span class="gt-bike">${isPin(p) ? `<span class="gt-pintag">Pinned</span>` : ""}${isLog(p) ? "Maintenance log · " + esc(STYLE_NAME[styleOf(p)] || "Standard") : isUni(p) ? esc(uniTxt(p)) : b && b.generic ? (readyFor(p) ? "Bike page ready" : "Bike page coming soon") : esc((p.name && p.name !== bikeName(b)) ? bikeName(b) : (b && b.variant) || "")}</span><b class="gt-name">${esc(p.name || bikeName(b))}</b>
           ${isLog(p) ? "" : `<span class="gt-bar" aria-hidden="true"><i style="width:${pc.toFixed(1)}%"></i></span>`}
           <span class="gt-meta">${b && b.generic ? "Maintenance and records" : g && g.total ? `${g.done} of ${g.total} steps` : "Not started"}<span>${esc(who(p))}</span></span></button>
         ${p.role === "owner" && readyFor(p) ? `<div class="gt-ready"><span>The ${esc(bikeName(readyFor(p)))} page is ready.</span><button class="btn tan sm" data-connect="${esc(p.id)}">Connect</button></div>` : ""}${p.role === "owner" ? `<div class="gt-acts"><button class="linkbtn" data-share="${esc(p.id)}">Share</button><button class="linkbtn" data-rename="${esc(p.id)}">Rename</button></div>` : ""}</article>`; };
