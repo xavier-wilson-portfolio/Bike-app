@@ -1444,3 +1444,6 @@ img.silcover{object-fit:contain;background:#fff;padding:10px}
 .top .brand .wordmark,.pk-logo .wordmark{display:block;height:22px;width:auto;flex:none;border-radius:0}
 .pk-logo{display:flex;align-items:center}
 @media (max-width:560px){.top .brand .wordmark,.pk-logo .wordmark{height:20px}}
+.top .brand .brand-icon,.pk-logo .brand-icon{display:block;width:36px;height:36px;border-radius:9px;flex:none}
+.top .brand,.pk-logo{gap:10px}
+@media (max-width:560px){.top .brand .brand-icon,.pk-logo .brand-icon{width:32px;height:32px;border-radius:8px}}
