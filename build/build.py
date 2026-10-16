@@ -17,7 +17,7 @@ out.mkdir(exist_ok=True)
 
 ORDER = ['core.js', 'model.js', 'content.js', 'howto.js', 'art_data.js', 'ui.js', 'vehicle.js', 'views.js', 'views2.js', 'views3.js', 'views4.js', 'maint.js', 'remind.js', 'mods.js', 'report.js', 'receipts.js',
          'twin_data.js', 'twin_internals.js', 'twin.js', 'viewer.js', 'diag_draw.js', 'diag_data.js', 'diag_data2.js', 'diag_cms.js', 'diag_gen.js',
-         *sorted(p.name for p in src.glob('d3_*.js')), 'd3.js', 'diag.js', 'scan.js', 'chat.js', 'universal.js', 'feedback.js', 'generic.js', 'costs.js', 'papers.js', 'checklists.js', 'wear.js', 'recalls.js']
+         *sorted(p.name for p in src.glob('d3_*.js')), 'd3.js', 'diag.js', 'scan.js', 'chat.js', 'universal.js', 'feedback.js', 'generic.js', 'costs.js', 'papers.js', 'checklists.js', 'wear.js', 'recalls.js', 'plans.js']
 app = '\n'.join((src / f).read_text() for f in ORDER) + '\nboot();\n'
 (out / 'app.js').write_text(app)
 
@@ -45,7 +45,7 @@ for pdir in sorted((ROOT / 'data' / 'packs').iterdir()):
 shutil.copytree(ROOT / 'img', out / 'img', dirs_exist_ok=True)
 
 css = (src / 'style.css').read_text()
-loader = (src / 'cloud.js').read_text() + '\n' + (src / 'report_view.js').read_text() + '\n' + (src / 'loader.js').read_text()
+loader = (src / 'cloud.js').read_text() + '\n' + (src / 'report_view.js').read_text() + '\n' + (src / 'plans_view.js').read_text() + '\n' + (src / 'loader.js').read_text()
 cfg_file = ROOT / 'data' / 'config.json'   # public settings only: Supabase URL and publishable key
 cfg = json.loads(cfg_file.read_text()) if cfg_file.exists() else {}
 import hashlib

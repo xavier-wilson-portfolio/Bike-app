@@ -369,6 +369,7 @@
         <div class="gts">${data.map(tag).join("")}<button class="gt gt-new" data-nav="new"><b>Add a bike</b><span>Start a new project for another bike</span></button></div></section>` : ""}
       ${!(matchMedia("(display-mode: standalone)").matches || navigator.standalone) ? `<section class="ins-band"><img src="img/app-192.png" alt="" width="44" height="44"><div><b>Put Revora on your home screen</b><span>It opens like an app, full screen, one tap from your phone's home screen.</span></div><button class="btn tan" data-act="install">Install the app</button></section>` : ""}
       <section class="gfoot"><div><b>Working with a team?</b><span>Share a project and everyone sees the same parts, steps and photos, live. Owners can give edit or view access.</span></div>
+        <div><b>Plans</b><span>One bike is free for good. Paid plans add AI receipts, email reminders, share links and teams.</span><button class="linkbtn" data-plans>See plans</button></div>
         <div><b>Any bike works</b><span>Restoring or maintaining a bike we don't list? Add it with its year, make and model. Restorations get a course built for its kind of bike.</span><button class="linkbtn" data-nav="browse">Add a bike</button></div></section>`, { wide: true, garage: true });
     app.querySelectorAll("[data-connect]").forEach(b => b.onclick = e => { e.stopPropagation(); const p = data.find(x => x.id === b.dataset.connect); connectProject(p, readyFor(p)); });
     app.querySelectorAll("[data-pin]").forEach(b => b.onclick = e => { e.stopPropagation(); const id = b.dataset.pin, cur = (PREFS.pinned || []).filter(x => x !== id); window.rvPrefs.set({ pinned: b.getAttribute("aria-pressed") === "true" ? cur : [id].concat(cur) }); showProjects(); });
@@ -404,6 +405,14 @@
         if (msg) { err.textContent = msg; err.hidden = false; } else draw(); };
     };
     document.body.appendChild(box); draw();
+  }
+
+  /* ---------- plans (public) ---------- */
+  function showPlans(yearly) {
+    document.title = "Plans · Revora";
+    frame(`<div class="eyebrow">Plans</div><h1 class="disp">Start free. Upgrade when you need more.</h1><p class="muted">One bike is free for good. Paid plans add AI receipts, email reminders, share links, restoration courses and teams.</p>${window.rvPlansHtml({ yearly, current: session ? (profile && profile.plan === "pro" ? "rider" : (profile && profile.plan) || "free") : "" })}
+      <div class="pk-links">${session ? `<button class="btn pri" data-nav="projects">Back to your garage</button>` : `<button class="btn pri" data-nav="signup">Create a free account</button>`}</div>`, { wide: true });
+    app.querySelectorAll("[data-pl-bill]").forEach(b => b.onclick = () => showPlans(b.dataset.plBill === "y"));
   }
 
   /* ---------- a shared bike history report (read-only, no account needed) ---------- */
@@ -501,6 +510,7 @@
     const n = e.target.closest("[data-nav]"), a = e.target.closest("[data-act]"), pr = e.target.closest("[data-project]");
     if (pr) { goUrl({ project: pr.dataset.project }); return; }
     if (a) { if (a.dataset.act === "signout") window.rvSignOut(); if (a.dataset.act === "reload") location.reload(); if (a.dataset.act === "install") window.rvInstall().then(o => { if (o === "accepted") showProjects(); }); return; }
+    if (e.target.closest("[data-plans]")) { showPlans(); return; }
     const og = e.target.closest("[data-open-guest]"); if (og) { goUrl({ bike: og.dataset.openGuest }); return; }
     if (!n) return; const v = n.dataset.nav;
     if (v === "home" || v === "projects") goUrl(session ? {} : { pick: 1 });
@@ -527,6 +537,7 @@
       }
     }
     if (qs.get("report")) return showReport(qs.get("report"));
+    if (qs.has("plans")) return showPlans();
     const auth = qs.get("auth"); if (sb && !session && ["signin", "signup"].includes(auth)) return showAuth(auth);
     const pid = qs.get("project"), bid = qs.get("bike");
     if (pid) { if (!sb) return fail("Accounts aren't set up on this site yet."); if (!session) return showAuth("signin"); return openProject(pid); }

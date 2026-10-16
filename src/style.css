@@ -2011,3 +2011,21 @@ article.gt::before{box-shadow:inset 0 0 0 2px color-mix(in srgb,var(--edge) 35%,
 .ins-band img{border-radius:12px}.ins-band>div{display:flex;flex-direction:column;flex:1;min-width:200px}.ins-band span{color:#B9D9EB;font-size:13.5px}
 .mob-ins{background:#2C5F7C}
 .ins-steps{margin:8px 0 0;padding-left:20px;line-height:1.7}
+/* ---------- plans ---------- */
+.pl{max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+.pl-early{display:flex;flex-direction:column;gap:3px;padding:14px 18px;border-radius:14px;background:#EAF4EC;border:1px solid #C6E0CC;color:#2F5E41;text-align:center}
+.pl-tog{align-self:center}.pl-tog small{font-size:11px;color:#3E7A55;margin-left:4px}
+.pl-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;align-items:stretch}
+.pl-card{position:relative;display:flex;flex-direction:column;gap:12px;padding:20px 18px;border-radius:18px;border:1px solid var(--line);box-shadow:var(--shadow);background:linear-gradient(180deg,var(--pt,#E6F1F8) 0,#fff 42%)}
+.pl-card.free{--pt:#EEF2F5}.pl-card.rider{--pt:#E6F1F8}.pl-card.restorer{--pt:#F6EEDD}.pl-card.shop{--pt:#DDE6EC}
+.pl-card.best{border:2px solid #B8954F}.pl-card.cur{border:2px solid #2C5F7C}
+.pl-best{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:#B8954F;color:#fff;font-size:11.5px;font-weight:700;border-radius:999px;padding:3px 11px;white-space:nowrap}
+.pl-top h3{margin:0;font-family:var(--f-display);font-size:24px}.pl-tag{font-size:13px;color:var(--muted)}
+.pl-price{display:flex;flex-direction:column}.pl-price b{font-family:var(--f-display);font-size:34px;color:#17232C}.pl-price span{font-size:12.5px;color:var(--muted)}
+.pl-card ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px;font-size:14px;flex:1}
+.pl-card li{padding-left:22px;position:relative}.pl-card li::before{content:"";position:absolute;left:3px;top:6px;width:9px;height:5px;border-left:2px solid #3E7A55;border-bottom:2px solid #3E7A55;transform:rotate(-45deg)}
+.pl-cur{text-align:center;font-weight:700;color:#2C5F7C;padding:9px;border-radius:10px;background:#E6F1F8}
+.pl-faq{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.pl-faq div{display:flex;flex-direction:column;gap:4px;font-size:14px}.pl-faq span{color:var(--muted)}
+@media (max-width:1000px){.pl-grid{grid-template-columns:1fr 1fr}.pl-faq{grid-template-columns:1fr}}
+@media (max-width:560px){.pl-grid{grid-template-columns:1fr}}
+.pl-card,.pl-faq{text-align:left}.pl-card .btn{align-self:stretch}
