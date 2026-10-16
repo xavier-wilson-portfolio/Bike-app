@@ -74,7 +74,7 @@ if (GENERIC) {
           ${stat("c-navy", ic("dollar") + "Spent this year", money(mm.year), mm.perMile ? "$" + mm.perMile.toFixed(2) + " per mile overall" : mm.total ? money(mm.total) + " all time" : "Add costs when you log", 'data-mh="hist"')}
         </div>
         <div class="mh-row">
-          <section class="mh-panel p-due"><div class="mh-ph"><h2><span class="mh-hi">${ic("calendar")}</span>Coming up</h2><button class="linkbtn" data-go="maintenance">Full schedule ${ic("next")}</button></div>
+          <section class="mh-panel p-due"><div class="mh-ph"><h2><span class="mh-hi">${ic("calendar")}</span>Coming up</h2><button class="linkbtn" data-go="reminders">${ic("bell")} Reminders</button></div>
             ${st.length ? `<div class="stack" style="gap:10px">${st.slice(0, 3).map(dueCard).join("")}</div>`
               : `<div class="mh-empty"><b>No service schedule yet</b><span class="muted">Start from a typical motorcycle schedule (oil, chain, brakes, tires and more) and adjust it to your manual, or add your own items.</span>${W ? `<div class="row" style="gap:8px;flex-wrap:wrap"><button class="btn mh-pri" data-mh="presets">Add a typical schedule</button><button class="btn" data-new="schedule">Add my own</button></div>` : ""}</div>`}
           </section>
