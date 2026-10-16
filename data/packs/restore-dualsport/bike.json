@@ -1,0 +1,49 @@
+{
+ "id": "restore-dualsport",
+ "year": "",
+ "make": "",
+ "model": "",
+ "short": "bike",
+ "name": "Any dual-sport",
+ "variant": "Restoration course for any dual-sport",
+ "universal": true,
+ "style": "dualsport",
+ "status": "universal",
+ "specs": [],
+ "links": {
+  "ebay": "motorcycle"
+ },
+ "hero": null,
+ "extras": {},
+ "styleName": "Dual-sport",
+ "styleIntro": "A dual-sport or dirt bike: light, simple, spoked wheels, and hard on air filters and bearings.",
+ "styleFocus": [
+  [
+   "Foam air filter",
+   "Clean and re-oil"
+  ],
+  [
+   "Spoked wheels",
+   "Tension, rim locks, tubes"
+  ],
+  [
+   "Linkage bearings",
+   "Mud and water"
+  ],
+  [
+   "Plastics",
+   "Fenders and side panels"
+  ],
+  [
+   "Simple electrics",
+   "Often minimal"
+  ]
+ ],
+ "drive": "chain",
+ "drives": [
+  "chain",
+  "belt",
+  "shaft"
+ ],
+ "specNote": ""
+}

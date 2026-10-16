@@ -1,0 +1,47 @@
+{
+ "id": "restore-scooter",
+ "year": "",
+ "make": "",
+ "model": "",
+ "short": "bike",
+ "name": "Any scooter",
+ "variant": "Restoration course for any scooter",
+ "universal": true,
+ "style": "scooter",
+ "status": "universal",
+ "specs": [],
+ "links": {
+  "ebay": "motorcycle"
+ },
+ "hero": null,
+ "extras": {},
+ "styleName": "Scooter",
+ "styleIntro": "A scooter: automatic CVT, small wheels, body panels that cover everything, and often under-seat storage.",
+ "styleFocus": [
+  [
+   "Body panels",
+   "Many clips and screws"
+  ],
+  [
+   "Small wheels",
+   "Tire age and pressures"
+  ],
+  [
+   "Final gear oil",
+   "Easy to forget"
+  ],
+  [
+   "Vacuum fuel petcock",
+   "Common failure"
+  ],
+  [
+   "Under-seat storage",
+   "Battery and wiring"
+  ]
+ ],
+ "drive": "cvt",
+ "drives": [
+  "cvt"
+ ],
+ "specNote": ""
+}

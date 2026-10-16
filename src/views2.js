@@ -19,7 +19,7 @@ VIEWS.settings = {
         <div class="fld full"><label for="set-cats">Expense categories (one per line)</label><textarea id="set-cats" data-mk="expenseCategories" ${ME.canWrite ? "" : "disabled"}>${esc((m.expenseCategories || []).join("\n"))}</textarea></div>
       </form>${ME.canWrite ? `<div class="row"><button class="btn pri" id="setSave">Save settings</button><span class="muted" id="setMsg"></span></div>` : ""}</div>
       <div class="stack">
-        ${vehSettingsHtml()}
+        ${typeof driveSettingsHtml === "function" ? driveSettingsHtml() : ""}${vehSettingsHtml()}
         <div class="panel stack"><h2 class="sec">Where your data lives</h2>
           ${window.RV_CLOUD ? `<p style="margin:0">Records are saved to this project in your account (${esc(RV_CLOUD.projectName || BIKE.name)}). Everyone on the project sees the same data and changes appear live. ${ME.canWrite ? "" : "<b>You have view-only access to this project.</b>"}</p>` : ME.mode === "shared" ? `<p style="margin:0">Records are stored in this page's shared database. Everyone you share the page with sees the same data and changes appear live. People with Contributor access or above can edit; Viewers and Commenters can only read. ${ME.canWrite ? "" : "<b>You have view-only access.</b>"}</p>` : `<p style="margin:0"><b>This copy keeps data in this browser only.</b> It does not sync between people or devices. Export a backup regularly, and open the published page to use the shared team database.</p>`}
           <p class="muted" style="margin:0;font-size:12.5px">${counts.map(([c, v]) => `${SCHEMA[c]?.plural || c}: ${v}`).join(" · ")}</p></div>

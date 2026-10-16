@@ -38,7 +38,7 @@ VIEWS.home = {
         <div class="mh-hero-l">
           <div class="mh-eyebrow">${ic("book")} Restoration course</div>
           <h1>${esc(m.bike || BIKE.name)}</h1>
-          <div class="mh-chips"><span>Part ${nxi + 1} of ${phases.length}</span><span>${pct}% done</span>${SPECS.slice(0, 2).map(([v]) => `<span>${esc(v)}</span>`).join("")}</div>
+          <div class="mh-chips">${UNIVERSAL && BIKE.styleName ? `<span>${esc(BIKE.styleName)}</span>` : ""}<span>Part ${nxi + 1} of ${phases.length}</span><span>${pct}% done</span>${SPECS.slice(0, 2).map(([v]) => `<span>${esc(v)}</span>`).join("")}</div>
           <p>${phases.length} parts, one step at a time. Every step says what to do and why, and the mechanic is a click away if you get stuck.</p>
           <div class="mh-acts"><button class="btn mh-pri" data-lesson="${nx.id}">${ic("play")} ${fresh ? "Start Part 1" : "Continue Part " + (nxi + 1)}</button><button class="btn mh-sec" data-go="${X.diagrams3d ? "viewer" : "diagrams"}">${ic(X.diagrams3d ? "cube" : "layers")} ${diagLbl}</button></div>
         </div>
@@ -61,10 +61,13 @@ VIEWS.home = {
         </section>
       </div>
       <div class="mh-row">
-        <section class="mh-panel p-parts"><div class="mh-ph"><h2><span class="mh-hi">${ic("gauge")}</span>Bike specs</h2><a class="linkbtn" href="${SPEC_SOURCE.url}" target="_blank" rel="noopener">Source ${ic("next")}</a></div>
+        ${UNIVERSAL ? `<section class="mh-panel p-parts"><div class="mh-ph"><h2><span class="mh-hi">${ic("gauge")}</span>Tailored for a ${esc(String(BIKE.styleName || "bike").toLowerCase())}</h2><button class="linkbtn" data-go="guides">Guide ${ic("next")}</button></div>
+          <div class="rs-specs">${(BIKE.styleFocus || []).map(([v, l]) => `<div><b>${esc(v)}</b><span>${esc(l)}</span></div>`).join("")}</div>
+          <p class="faint" style="margin:auto 0 0;font-size:12.5px">${esc(BIKE.styleIntro || "")} Mark any step that doesn't fit your bike as Cancelled, and take every number from its factory manual.</p>
+        </section>` : `<section class="mh-panel p-parts"><div class="mh-ph"><h2><span class="mh-hi">${ic("gauge")}</span>Bike specs</h2><a class="linkbtn" href="${SPEC_SOURCE.url}" target="_blank" rel="noopener">Source ${ic("next")}</a></div>
           <div class="rs-specs">${SPECS.map(([v, l]) => `<div><b>${esc(v)}</b><span>${esc(l)}</span></div>`).join("")}</div>
           <p class="faint" style="margin:auto 0 0;font-size:12.5px">${esc(BIKE.specNote || "Published specs for the " + BIKE.name + ".")} Always check against your bike and its factory manual.</p>
-        </section>
+        </section>`}
         <section class="mh-panel p-hist"><div class="mh-ph"><h2><span class="mh-hi">${ic("clock")}</span>Recent activity</h2><button class="linkbtn" data-go="team">Work log ${ic("next")}</button></div>
           ${act.length ? `<ol class="mh-tl">${act.map(a => `<li><div class="mh-tli"><span class="mh-tld">${esc(fmtTime(a.ts))}</span><b>${esc(a.by)} ${esc(a.summary)}</b>${a.title && SCHEMA[a.coll] ? `<span class="faint">${esc(String(a.title).slice(0, 60))}</span>` : ""}</div></li>`).join("")}</ol>` : `<div class="mh-empty"><b>Nothing yet</b><span class="muted">Steps you finish, parts you update and photos you add show up here for the whole team.</span></div>`}
           ${act.length < 3 ? `<div class="rs-jump">${[["docs", "camera", "Photos"], ["purchasing", "cart", "Shopping list"], ["gates", "shield", "Safety checks"], ["shops", "store", "Where to buy"]].filter(([k]) => SEC[k]).map(([k, i, t]) => `<button data-go="${k}">${ic(i)}<span>${t}</span></button>`).join("")}</div>` : ""}

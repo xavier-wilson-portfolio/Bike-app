@@ -1,0 +1,49 @@
+{
+ "id": "restore-standard",
+ "year": "",
+ "make": "",
+ "model": "",
+ "short": "bike",
+ "name": "Any standard",
+ "variant": "Restoration course for any standard",
+ "universal": true,
+ "style": "standard",
+ "status": "universal",
+ "specs": [],
+ "links": {
+  "ebay": "motorcycle"
+ },
+ "hero": null,
+ "extras": {},
+ "styleName": "Standard",
+ "styleIntro": "A standard or naked bike: upright, simple, with most of the engine in plain view.",
+ "styleFocus": [
+  [
+   "Exposed engine",
+   "Leaks and finish show"
+  ],
+  [
+   "Simple bodywork",
+   "Tank, seat, side covers"
+  ],
+  [
+   "Carbs or EFI",
+   "Both are covered"
+  ],
+  [
+   "Disc brakes",
+   "Calipers and fluid"
+  ],
+  [
+   "Twin shocks or mono",
+   "Rear suspension check"
+  ]
+ ],
+ "drive": "chain",
+ "drives": [
+  "chain",
+  "belt",
+  "shaft"
+ ],
+ "specNote": ""
+}

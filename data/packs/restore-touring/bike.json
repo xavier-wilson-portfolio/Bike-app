@@ -1,0 +1,49 @@
+{
+ "id": "restore-touring",
+ "year": "",
+ "make": "",
+ "model": "",
+ "short": "bike",
+ "name": "Any touring bike",
+ "variant": "Restoration course for any touring bike",
+ "universal": true,
+ "style": "touring",
+ "status": "universal",
+ "specs": [],
+ "links": {
+  "ebay": "motorcycle"
+ },
+ "hero": null,
+ "extras": {},
+ "styleName": "Touring",
+ "styleIntro": "A touring bike: big fairing, luggage, comfort features, and often a shaft drive and linked brakes.",
+ "styleFocus": [
+  [
+   "Big fairing",
+   "Many panels and fasteners"
+  ],
+  [
+   "Luggage and locks",
+   "Hinges, seals, mounts"
+  ],
+  [
+   "Accessory wiring",
+   "Radios, grips, lights"
+  ],
+  [
+   "Linked or ABS brakes",
+   "Bleeding procedure"
+  ],
+  [
+   "Heavy bike",
+   "Stand and lifting"
+  ]
+ ],
+ "drive": "shaft",
+ "drives": [
+  "chain",
+  "belt",
+  "shaft"
+ ],
+ "specNote": ""
+}

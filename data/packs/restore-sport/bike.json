@@ -1,0 +1,49 @@
+{
+ "id": "restore-sport",
+ "year": "",
+ "make": "",
+ "model": "",
+ "short": "bike",
+ "name": "Any sport bike",
+ "variant": "Restoration course for any sport bike",
+ "universal": true,
+ "style": "sport",
+ "status": "universal",
+ "specs": [],
+ "links": {
+  "ebay": "motorcycle"
+ },
+ "hero": null,
+ "extras": {},
+ "styleName": "Sport",
+ "styleIntro": "A sport bike: full fairings, liquid cooling, high revs and adjustable suspension.",
+ "styleFocus": [
+  [
+   "Full fairings",
+   "Mounts, tabs and crash damage"
+  ],
+  [
+   "Liquid cooling",
+   "Radiator, fan, coolant"
+  ],
+  [
+   "High-rev engine",
+   "Valves and sync"
+  ],
+  [
+   "Adjustable suspension",
+   "Sag, preload, damping"
+  ],
+  [
+   "Sport tires",
+   "Age and profile"
+  ]
+ ],
+ "drive": "chain",
+ "drives": [
+  "chain",
+  "belt",
+  "shaft"
+ ],
+ "specNote": ""
+}

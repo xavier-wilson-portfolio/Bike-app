@@ -17,9 +17,17 @@ function setupPanel() {
   <div id="loadProg" class="muted"></div>
   <p class="muted" style="margin:0">${window.RV_CLOUD ? "Records go into this project in your account, so everyone on the project sees the same data." : ME.mode === "shared" ? "Records go into this page's shared database, so everyone you share the page with sees the same data." : "This copy is running without the shared database, so records are saved in this browser only."}</p></div>`;
 }
+// universal courses ship one bundle per final drive; use the one for this bike (its procedure steps replace the core set)
+function withDrive(data, drive) {
+  if (!data || !data.drives) return data;
+  const d = data.drives[drive || (S.meta.project && S.meta.project.drive) || BIKE.drive] || Object.values(data.drives)[0];
+  delete data.drives;
+  Object.entries(d).forEach(([c, rows]) => { data[c] = c === "steps" ? rows : (data[c] || []).concat(rows); });
+  return data;
+}
 async function loadBaseline(replace, quiet) {
   const prog = $("#loadProg"); let data;
-  try { const r = await fetch("packs/" + encodeURIComponent(BIKE.id) + "/baseline.json", { cache: "no-store" }); if (!r.ok) throw 0; data = await r.json(); }
+  try { const r = await fetch("packs/" + encodeURIComponent(BIKE.id) + "/baseline.json", { cache: "no-store" }); if (!r.ok) throw 0; data = withDrive(await r.json()); }
   catch (e) { toast("Couldn't load the workbook file. Use Import JSON backup instead.", "err"); if (quiet) render(true); return; }
   const writes = [];
   Object.entries(data).forEach(([c, rows]) => rows.forEach(rec => { if (replace || !S[c][rec.id]) writes.push({ c, rec }); }));

@@ -1,0 +1,49 @@
+{
+ "id": "restore-cruiser",
+ "year": "",
+ "make": "",
+ "model": "",
+ "short": "bike",
+ "name": "Any cruiser",
+ "variant": "Restoration course for any cruiser",
+ "universal": true,
+ "style": "cruiser",
+ "status": "universal",
+ "specs": [],
+ "links": {
+  "ebay": "motorcycle"
+ },
+ "hero": null,
+ "extras": {},
+ "styleName": "Cruiser",
+ "styleIntro": "A cruiser: low seat, big twin, lots of chrome, and often a belt or shaft instead of a chain.",
+ "styleFocus": [
+  [
+   "Big V-twin",
+   "Valves, leaks, primary drive"
+  ],
+  [
+   "Chrome and polish",
+   "The look of the bike"
+  ],
+  [
+   "Tins and fenders",
+   "Paint and dents"
+  ],
+  [
+   "Bags and accessories",
+   "Mounts and wiring"
+  ],
+  [
+   "Long cables",
+   "Lube and routing"
+  ]
+ ],
+ "drive": "belt",
+ "drives": [
+  "chain",
+  "belt",
+  "shaft"
+ ],
+ "specNote": ""
+}

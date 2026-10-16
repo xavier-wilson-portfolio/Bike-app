@@ -136,7 +136,7 @@ VIEWS.maintenance = {
     const done = svcDone().sort((a, b) => String(b.date).localeCompare(String(a.date)) || n(b.odometer) - n(a.odometer));
     const planned = sorted("maintenance").filter(r => r.planned);
     const reminders = sorted("maintenance").filter(r => !r.planned && (r.nextDate || n(r.nextMiles))).filter(r => !done.some(d => d !== r && d.date > r.date && d.service === r.service));
-    const act = ME.canWrite ? `<button class="btn" id="mntOdo">${ic("gauge")} Update odometer</button><button class="btn pri" data-new="maintenance|${esc(JSON.stringify({ odometer: o ? Math.round(o.miles) : 0 }))}">${ic("plus")} Log service</button>` : "";
+    const act = `<button class="btn" data-go="mods">${ic("tune")} Mods${sorted("mods").length ? " (" + sorted("mods").filter(m => m.status === "Installed").length + ")" : ""}</button>` + (ME.canWrite ? `<button class="btn" id="mntOdo">${ic("gauge")} Update odometer</button><button class="btn pri" data-new="maintenance|${esc(JSON.stringify({ odometer: o ? Math.round(o.miles) : 0 }))}">${ic("plus")} Log service</button>` : "");
     const tabs = [["overview", "Overview"], ["schedule", "Schedule" + (over ? ` (${over} overdue)` : "")], ["history", "Service history"], ["report", "Report"]];
     let body = "";
     if (tab === "overview") {

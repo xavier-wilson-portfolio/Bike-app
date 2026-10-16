@@ -1,0 +1,1097 @@
+{
+ "lessons": {
+  "A": {
+   "title": "Get set up",
+   "icon": "book",
+   "cover": "tools",
+   "short": "Identify your bike exactly, check recalls, get the manual, and set up your space and budget.",
+   "about": "Pin down exactly which {bike} you have from the VIN and engine number, check for open recalls, get the service manual, and set up a safe place to work and a budget.",
+   "why": "Parts, specs and recalls all depend on the exact model and year. Ten minutes here saves ordering the wrong parts later.",
+   "tips": [
+    "Photograph the VIN plate and the engine number before anything gets dirty or painted.",
+    "Keep the full VIN out of photos you post online.",
+    "Buy the factory service manual if it exists for your bike. It's the source for every number in this course."
+   ],
+   "shops": [
+    "nhtsa",
+    "manuals"
+   ]
+  },
+  "B": {
+   "title": "Inspect it as it sits",
+   "icon": "eye",
+   "cover": "{sil}",
+   "short": "Photos, fluids, compression and, if it's safe, a start and a short ride.",
+   "about": "Before taking anything apart, record the mileage, photograph everything, check every fluid, test compression, and start it if it's safe to. A short ride tells you even more.",
+   "why": "A bike that runs tells you where the real work is. A compression test tells you whether the engine needs opening up, which is the biggest cost decision in the whole project.",
+   "tips": [
+    "If it has sat for months, don't just crank it. Fresh fuel, fresh oil and a charged battery first.",
+    "Do the compression test before you spend money on anything else.",
+    "Write down every noise, leak and warning light, even small ones."
+   ],
+   "shops": [
+    "manuals"
+   ]
+  },
+  "C": {
+   "title": "Research, budget & order",
+   "icon": "cart",
+   "cover": "tools",
+   "short": "Turn what you found into a parts list, check part numbers on the diagrams, price it and order.",
+   "about": "Use your inspection notes to build the parts and supplies list, look up part numbers on the factory parts diagrams for your year and model, price everything and order.",
+   "why": "Ordering once, with the right part numbers, saves weeks of waiting and return shipping.",
+   "tips": [
+    "Order rebuild kits as sets: gaskets, seals, carb kits.",
+    "Compare the delivered price, not the sticker price.",
+    "Check each part number against your exact year and model. Many bikes changed mid-year."
+   ],
+   "shops": [
+    "fiche",
+    "partzilla",
+    "revzilla"
+   ]
+  },
+  "D": {
+   "title": "Strip it down",
+   "icon": "layers",
+   "cover": "{sil}",
+   "short": "Take off the seat, tank and bodywork, and keep every fastener labeled.",
+   "about": "Remove the seat, tail section, side and lower fairings, upper fairing if needed, and the fuel tank. Many fairing panels are held by hidden screws and plastic tabs, so follow the manual's order. Bag and label every fastener.",
+   "why": "Labeled bags and photos are what make reassembly easy. Most restorations that stall do it at reassembly.",
+   "tips": [
+    "Fairing tabs crack when cold. Work in a warm garage.",
+    "Use a plastic trim tool, never a screwdriver, on clips.",
+    "Photograph each panel's screw locations; sport bikes use many lengths."
+   ],
+   "shops": [
+    "fiche",
+    "ebay"
+   ]
+  },
+  "E": {
+   "title": "Clean, frame & rust",
+   "icon": "spray",
+   "cover": "tools",
+   "short": "Clean it, inspect the frame and swingarm, treat rust, and check the wiring.",
+   "about": "With the bike stripped, clean everything so you can see it, inspect the frame and swingarm for cracks and crash damage, deal with rust and look the wiring harness over.",
+   "why": "Dirt hides cracks, leaks and chafed wires. This is the cheapest time to find them.",
+   "tips": [
+    "Cover the intake, exhaust and electrical connectors before washing.",
+    "Look hardest at welds, the steering head and the swingarm pivot.",
+    "Rust on a structural part means inspect first, decide second."
+   ],
+   "shops": [
+    "por15",
+    "revzilla"
+   ]
+  },
+  "F": {
+   "title": "Electrical & charging",
+   "icon": "bolt",
+   "cover": "electrical",
+   "short": "Battery, charging system, grounds, starter and ignition, then every light and switch.",
+   "about": "Test the battery and the charging system, clean the grounds and connectors, check the starter and ignition, then test every light, switch and warning lamp.",
+   "why": "Most electrical trouble is a tired battery, a bad ground or a dirty connector. Working through it in order finds the fault instead of throwing parts at it.",
+   "tips": [
+    "Every electrical test is meaningless with a weak battery. Start there.",
+    "Use the wiring diagram for your exact model and year.",
+    "Disconnect the battery before working on wiring."
+   ],
+   "shops": [
+    "ricks",
+    "fiche"
+   ]
+  },
+  "G": {
+   "title": "Fuel system",
+   "icon": "fuel",
+   "cover": "fuel",
+   "short": "Tank, petcock or pump, lines and filters, then carbs or injection, air filter and sync.",
+   "about": "Clean the tank inside, service the petcock or fuel pump, replace the fuel lines and filters, rebuild the carburetors or check the fuel injection, and finish with the air filter and a sync.",
+   "why": "Old fuel turns to varnish and blocks carb jets and injector screens. Most bikes that have sat won't run right until the fuel system is cleaned out.",
+   "tips": [
+    "No sparks or flames near fuel, ever.",
+    "Work on one carb at a time so parts never get mixed.",
+    "Write down jet sizes and settings before you change anything."
+   ],
+   "shops": [
+    "fiche",
+    "caswell",
+    "revzilla"
+   ]
+  },
+  "H": {
+   "title": "Engine service",
+   "icon": "engine",
+   "cover": "engine",
+   "short": "Oil and filter, plugs, valves, cooling, clutch, and leaks.",
+   "about": "Change the oil and filter, replace the spark plugs, check the valve clearances, service the cooling system, set up the clutch, and fix oil leaks and exhaust leaks.",
+   "why": "These are the jobs that keep the engine healthy for years. Valve clearances in particular get skipped and quietly wear an engine out.",
+   "tips": [
+    "Warm the engine before draining the oil.",
+    "Valve clearances are measured with the engine cold.",
+    "Start spark plugs by hand to avoid cross-threading."
+   ],
+   "shops": [
+    "fiche",
+    "revzilla"
+   ]
+  },
+  "I": {
+   "title": "Chain & sprockets",
+   "icon": "wrench",
+   "cover": "tools",
+   "short": "Chain wear and slack, sprockets, alignment and the rear cush drive.",
+   "about": "Measure the chain for wear, check the sprockets, set the slack and wheel alignment, and check the rubber cush drive in the rear hub.",
+   "why": "A worn chain can jump the sprockets or break. A chain and sprockets are a set and wear out together.",
+   "tips": [
+    "Replace the chain and both sprockets together.",
+    "Set slack with the bike the way the manual says (stand or rider on).",
+    "Check the alignment marks on both sides of the swingarm match."
+   ],
+   "shops": [
+    "revzilla",
+    "denniskirk"
+   ]
+  },
+  "J": {
+   "title": "Wheels & tires",
+   "icon": "wheel",
+   "cover": "wheels",
+   "short": "Tire age and wear, wheel bearings, rims and spokes, and new tires.",
+   "about": "Check the tires' age, tread and damage, the wheel bearings, and the rims and spokes or cast wheels, then fit and balance new tires if they need it.",
+   "why": "Tires age out even with tread left, and old rubber is hard and slippery. Tires are one of the few parts where cheap is never a good deal.",
+   "tips": [
+    "Read the four-digit date code on each sidewall: week, then year.",
+    "Use the sizes, load and speed ratings your manual or tire placard gives.",
+    "Replace wheel bearings in pairs, with new seals."
+   ],
+   "shops": [
+    "revzilla",
+    "denniskirk",
+    "allballs"
+   ]
+  },
+  "K": {
+   "title": "Brakes",
+   "icon": "shield",
+   "cover": "brakes",
+   "short": "Pads or shoes, discs or drums, calipers, master cylinders, hoses and fresh fluid.",
+   "about": "Inspect the pads or shoes and the discs or drums, rebuild or clean the calipers and master cylinders, check the hoses, and bleed in fresh fluid.",
+   "why": "Brakes on a bike that has sat are almost always sticky, and old fluid absorbs water. This part is safety-critical from start to finish.",
+   "tips": [
+    "Use only the fluid type printed on the reservoir cap.",
+    "Brake fluid strips paint. Cover the tank and bodywork.",
+    "Never let a reservoir run dry while bleeding."
+   ],
+   "shops": [
+    "fiche",
+    "revzilla",
+    "denniskirk"
+   ]
+  },
+  "L": {
+   "title": "Suspension, steering & controls",
+   "icon": "wrench",
+   "cover": "suspension",
+   "short": "Fork oil and seals, steering bearings, shocks and swingarm, cables and controls.",
+   "about": "Service the forks, check and adjust the steering head bearings, inspect the rear shocks and swingarm bearings, lube and adjust the control cables, and set the sag for your weight.",
+   "why": "Tired fork oil and worn bearings make a bike wander, dive and feel vague. Fresh suspension changes how a bike rides more than almost anything else.",
+   "tips": [
+    "Support the bike securely with the front wheel off the ground before checking steering bearings.",
+    "Fork oil type and amount come from the manual.",
+    "Write down any suspension settings before changing them."
+   ],
+   "shops": [
+    "allballs",
+    "revzilla"
+   ]
+  },
+  "M": {
+   "title": "Fairings & finish",
+   "icon": "spray",
+   "cover": "{sil}",
+   "short": "Fairing repair and paint, crash damage, and screen and decals.",
+   "about": "Repair cracked fairing tabs and panels, paint or replace damaged bodywork, and refit a clean screen and decals.",
+   "why": "Cracked fairing tabs let panels vibrate and break further, and crash damage often hides under bodywork.",
+   "tips": [
+    "Plastic welding kits repair most cracked tabs.",
+    "Use flexible primer and adhesion promoter on plastic.",
+    "Aftermarket fairings rarely fit as well as original ones."
+   ],
+   "shops": [
+    "por15",
+    "ebay"
+   ]
+  },
+  "N": {
+   "title": "Reassemble, road test & keep it running",
+   "icon": "check",
+   "cover": "{sil}",
+   "short": "Put it back together, check every safety fastener, first start, road test, then the maintenance log.",
+   "about": "Reassemble the bike from your labeled bags and photos, torque-check the safety-critical fasteners, do the first start, take a careful test ride, then set up the Maintenance log so it stays sorted.",
+   "why": "The test ride is where loose bolts, air in the brakes and leaks show up, while they're still cheap to fix.",
+   "tips": [
+    "Start every fastener by hand before you tighten it.",
+    "Have a second person check the safety items.",
+    "Start the first ride slowly in a quiet area."
+   ],
+   "shops": [
+    "manuals"
+   ]
+  }
+ },
+ "howto": {
+  "A-001": [
+   "Find the VIN, usually on the steering head or a frame plate.",
+   "Find the engine number, stamped on the crankcase.",
+   "Photograph both and enter them in Settings (keep the VIN out of public photos).",
+   "Note anything that looks non-original: exhaust, seat, lights, bars."
+  ],
+  "A-002": [
+   "Go to nhtsa.gov/recalls and enter the 17-digit VIN. Bikes from before 1981 have shorter VINs and usually no online recall record.",
+   "Log any open recall in Problems & decisions.",
+   "Call a dealer for your make with the VIN to book any open recall work."
+  ],
+  "A-003": [
+   "Search for the factory service manual for your model code and year.",
+   "If there isn't one, a Haynes or Clymer manual is the next best thing.",
+   "Add it to Reference sources so the whole team knows where it is."
+  ],
+  "A-004": [
+   "Put the bike on a stand or lift on a level floor.",
+   "Set up labeled bins or bags for fasteners.",
+   "Keep a drain pan, rags and a fire extinguisher within reach."
+  ],
+  "A-005": [
+   "List the costs you already expect: tires, battery, brake parts, fluids, a carb or service kit.",
+   "Add a cushion of 15 to 25 percent for surprises.",
+   "Enter both in Settings."
+  ],
+  "B-001": [
+   "Log the odometer in the Maintenance log.",
+   "Photograph both sides, front, back and from above.",
+   "Close-ups of wiring routes, cable routes, damage, leaks and modifications."
+  ],
+  "B-002": [
+   "Check oil on the dipstick or sight glass the way the manual says (upright or on the side stand).",
+   "Milky oil can mean water or coolant in it. Log it.",
+   "Check brake fluid color: dark means old.",
+   "Look under the engine, at the fork seals, the calipers and any final-drive housing for leaks."
+  ],
+  "B-003": [
+   "Warm the engine if it runs; if not, test it cold and note that.",
+   "Remove all spark plugs and ground the plug leads or disable the ignition.",
+   "Hold the throttle wide open and crank until the gauge stops rising.",
+   "Record each cylinder. A big difference between cylinders matters more than the exact number."
+  ],
+  "B-004": [
+   "Never force an engine that won't turn over. Log it instead.",
+   "Use fresh fuel and a charged battery.",
+   "Listen for knocking, ticking and rattles, and watch for smoke.",
+   "Watch the temperature and the warning lights."
+  ],
+  "B-005": [
+   "Only ride if both brakes work, the tires hold air and the steering is free.",
+   "Test the brakes at walking speed first.",
+   "Note clutch feel, shifting, wobbles and any warning lights."
+  ],
+  "B-006": [
+   "Add a problem for each issue you found.",
+   "Mark brakes, tires, steering and fuel leaks as high severity.",
+   "Mark any course steps that don't apply to your bike as Cancelled."
+  ],
+  "C-001": [
+   "Open the parts diagrams site and pick your make, year and model.",
+   "Find the reference number on the drawing, then the part number in the list.",
+   "Type the part number into that part's record here."
+  ],
+  "C-002": [
+   "Add each part to the Shopping list.",
+   "Add two quotes where you can, with shipping.",
+   "Check the Money page forecast against the budget."
+  ],
+  "C-003": [
+   "Order kits and service parts together.",
+   "Record the order date and tracking on each item.",
+   "Check each part against its part number when it arrives."
+  ],
+  "D-001": [
+   "Unlock or unbolt the seat and lift it off.",
+   "Remove the side covers gently; many have rubber grommets or clips.",
+   "Bag the fasteners and write where they came from."
+  ],
+  "D-002": [
+   "Remove the negative cable first, then the positive.",
+   "Lift the battery out and keep it upright.",
+   "Put it on a smart charger or maintainer."
+  ],
+  "D-003": [
+   "Work outside or with plenty of airflow, no flames or sparks nearby.",
+   "Drain into an approved fuel can.",
+   "Label and disconnect the fuel lines, vent hoses and any pump or gauge wiring.",
+   "Store the tank on a soft surface away from heat."
+  ],
+  "E-001": [
+   "Cover the intake, exhaust outlets and exposed connectors.",
+   "Use a degreaser safe for paint, plastic and aluminum.",
+   "Rinse gently, then dry with air or a towel."
+  ],
+  "E-002": [
+   "Look closely at welds, engine mounts, the steering head and the swingarm pivot.",
+   "Check the subframe and footpeg mounts for bends.",
+   "Scrapes on bar ends, levers and pegs suggest the bike has been down. Look harder there."
+  ],
+  "E-003": [
+   "Wire brush or use rust remover on light rust.",
+   "Never wire-wheel bearing seats, gasket faces or threads.",
+   "Prime bare steel the same day so it doesn't flash rust.",
+   "Log any deep pitting on frame, swingarm or brackets as a problem."
+  ],
+  "E-004": [
+   "Follow the harness from the headlight back to the tail.",
+   "Look closely where it passes the steering head and frame edges.",
+   "Open the main connectors and look for corrosion or melted plastic.",
+   "Note any taped-up or non-original repairs."
+  ],
+  "F-001": [
+   "Charge it fully with a smart charger.",
+   "Let it rest, then measure the voltage.",
+   "Load-test it or have a shop test it. Replace it if it fails or is more than a few years old."
+  ],
+  "F-002": [
+   "Refit the charged battery.",
+   "Measure battery voltage with the engine off, then at the engine speed the manual gives.",
+   "Follow the manual's stator and regulator tests.",
+   "Look at the stator-to-regulator connector for brown, melted or loose pins."
+  ],
+  "F-003": [
+   "Find the battery ground, the frame ground and the engine ground.",
+   "Clean each to bare metal and refit tight.",
+   "Check each fuse's rating against the manual and look for corrosion in the holders.",
+   "Clean connectors with contact cleaner and a light film of dielectric grease."
+  ],
+  "F-004": [
+   "Crank it and listen: a slow or clicking starter points at the battery, cables, relay or starter.",
+   "Check for spark on each cylinder with a spark tester.",
+   "On points ignition, check the points gap and timing as the manual describes.",
+   "Check plug leads and caps for cracks."
+  ],
+  "F-005": [
+   "Test headlight high and low, turn signals and tail light.",
+   "Test the brake light from the front lever and the rear pedal.",
+   "Check the horn, kill switch, neutral light and side-stand switch if fitted.",
+   "Check the warning lamps come on with the key."
+  ],
+  "G-001": [
+   "Carburetors have float bowls at the bottom and a choke lever or knob.",
+   "Fuel injection has throttle bodies with wiring, a fuel pump and usually an FI warning light.",
+   "Write it on the project in Settings under notes.",
+   "Cancel the carb steps on an injected bike, or the injection step on a carbureted one."
+  ],
+  "G-002": [
+   "Look inside with a flashlight for rust, scale and varnish.",
+   "Use a tank rust remover following its instructions.",
+   "Rinse and dry it right away so flash rust can't form.",
+   "Only use a tank liner rated for ethanol fuel, and let it cure fully."
+  ],
+  "G-003": [
+   "Rebuild or replace the petcock seals on gravity-fed bikes.",
+   "On bikes with a pump, check it runs when the key is turned on and replace the filter.",
+   "Replace all rubber fuel lines with ethanol-rated hose and new clamps.",
+   "Make sure the tank vent isn't blocked."
+  ],
+  "G-004": [
+   "Skip this step on fuel-injected bikes (mark it Cancelled).",
+   "Photograph each carb and record jet sizes, needle clip position and screw settings before you start.",
+   "Work on one carb at a time so no parts get mixed.",
+   "Clean every jet and passage, fit the kit's new parts, and set float height to the manual."
+  ],
+  "G-005": [
+   "Skip this step on carbureted bikes (mark it Cancelled).",
+   "Read fault codes the way the manual shows before replacing anything.",
+   "Clean the throttle plates with throttle body cleaner on a rag, never forcing them.",
+   "Check the injector and sensor connectors are clean and tight."
+  ],
+  "G-006": [
+   "Fit a new filter of the right type, or clean and re-oil a foam or cotton one.",
+   "Flex each intake boot and look for cracks.",
+   "Check the airbox is sealed and the drain is clear."
+  ],
+  "G-007": [
+   "Skip this on single-cylinder bikes.",
+   "Warm the engine fully.",
+   "Connect the gauges to the vacuum ports the manual shows.",
+   "Adjust until the readings match, then set the idle speed."
+  ],
+  "H-001": [
+   "Warm the engine, then shut it off.",
+   "Remove the drain bolt and let it drain fully.",
+   "Fit a new filter and drain washer, torqued to the manual's values.",
+   "Refill with the specified oil and check the level the way the manual says."
+  ],
+  "H-002": [
+   "Let the engine cool.",
+   "Blow dirt out of each plug well before removing the plug.",
+   "Read the old plugs' color: it tells you how each cylinder was running.",
+   "Start new plugs by hand, then torque to spec."
+  ],
+  "H-003": [
+   "Some engines have hydraulic lifters that need no adjustment. Check the manual and cancel this step if so.",
+   "With the engine cold, set each cylinder as the manual describes.",
+   "Measure every valve and record it.",
+   "Adjust any out of spec using screws, shims or buckets as your engine uses."
+  ],
+  "H-004": [
+   "Only open a radiator cap on a cold engine.",
+   "Drain and refill with the coolant type the manual specifies, then bleed out the air.",
+   "Squeeze each hose: replace any that are hard, soft or cracked.",
+   "On air-cooled bikes, clean between the fins and check oil cooler lines for leaks."
+  ],
+  "H-005": [
+   "Cable clutch: lube the cable and set the free play at the lever.",
+   "Hydraulic clutch: replace the fluid and bleed it like a brake.",
+   "Check the bike doesn't creep in gear with the clutch pulled in."
+  ],
+  "H-006": [
+   "Clean the engine, run it, and look for fresh oil to find the real source.",
+   "Replace cover gaskets and seals with new ones.",
+   "Check the exhaust gaskets at the head and look for rust-through or cracks.",
+   "Tighten the exhaust mounts to the manual's values."
+  ],
+  "J-001": [
+   "Find the four-digit date code on each sidewall (week, then year).",
+   "Measure the tread in the center and the edges.",
+   "Look for cracks, cuts, plugs and squared-off wear.",
+   "Most riders replace tires older than about five years regardless of tread."
+  ],
+  "J-002": [
+   "Lift the wheel off the ground.",
+   "Rock it side to side at the top and bottom; feel for play.",
+   "Spin it and listen for grinding.",
+   "Replace bearings in pairs with new seals."
+  ],
+  "J-003": [
+   "Spoked: tap each spoke with a wrench; dull ones are loose.",
+   "Spin the wheel and watch the rim edge for wobble.",
+   "Cast: look closely at the spokes and rim edge for cracks, especially near the hub.",
+   "Any crack in a cast wheel means replace it."
+  ],
+  "J-004": [
+   "Mark this Cancelled if the tires passed.",
+   "Check the rotation arrow on each tire.",
+   "Fit new valve stems on tubeless wheels or new tubes and rim tape on tubed wheels.",
+   "Balance the wheels and set the pressures from the manual."
+  ],
+  "K-001": [
+   "Look at the pad wear lines or measure the friction material.",
+   "Measure disc thickness and compare with the minimum stamped on the disc.",
+   "Drum brakes: check the wear indicator and the inside of the drum.",
+   "Spin the wheel and watch for a warped disc."
+  ],
+  "K-002": [
+   "Remove the caliper as the manual describes.",
+   "Push the pistons out carefully and look for pitting or rust.",
+   "Fit new seals from a kit and lube with clean brake fluid.",
+   "Fit the pads and pins, torque the caliper bolts, and pump the lever before moving the bike."
+  ],
+  "K-003": [
+   "Check the master cylinder pistons return freely.",
+   "Rebuild with a kit if the lever or pedal feels sticky.",
+   "Replace rubber hoses that are cracked, bulging or more than about ten years old.",
+   "Use new sealing washers on every banjo bolt."
+  ],
+  "K-004": [
+   "Cover painted parts; brake fluid strips paint.",
+   "Bleed in the order the manual gives. ABS bikes may need a specific procedure.",
+   "Never let the reservoir run dry.",
+   "Finish when the lever and pedal are firm with no bubbles."
+  ],
+  "L-001": [
+   "Check the tubes for pitting where the seals ride and roll them to check for bends.",
+   "Drain the old oil and replace the seals and dust wipers.",
+   "Fill with the oil type and level the manual gives, both legs the same.",
+   "Pump the forks and check for leaks."
+  ],
+  "L-002": [
+   "Lift the front wheel safely.",
+   "Turn the bars slowly lock to lock; feel for notches.",
+   "Grip the fork legs and push and pull to feel for play.",
+   "Adjust or replace as the manual describes. Tapered roller bearings are a common upgrade on older bikes."
+  ],
+  "L-003": [
+   "Look for oil on each shock body.",
+   "Push down on the rear and watch how it returns: one smooth return is good.",
+   "With the rear wheel lifted, push the swingarm side to side to feel for play.",
+   "Clean and grease the pivot and any linkage bearings."
+  ],
+  "L-004": [
+   "Lube each cable with a cable luber.",
+   "Replace any cable that's frayed or kinked.",
+   "Set throttle play and check it snaps shut with the bars turned fully both ways.",
+   "Check the levers, pedals and pegs for play and damage."
+  ],
+  "L-005": [
+   "Measure the height with the bike unloaded, then with you on it.",
+   "Adjust preload until sag is in the range the manual or your suspension maker gives.",
+   "Write the settings down in the project."
+  ],
+  "M-001": [
+   "List each part that needs work: paint, powder coat, chrome, polish or leave.",
+   "Decide what you do and what goes to a shop.",
+   "Record it in Problems & decisions so the team agrees."
+  ],
+  "N-001": [
+   "Work through your labeled bags in reverse order.",
+   "Start every fastener by hand before tightening.",
+   "Route cables and wiring exactly as your before photos show.",
+   "Turn the bars lock to lock and check nothing pulls or pinches."
+  ],
+  "N-002": [
+   "List the fasteners from the manual's torque table.",
+   "Check each one and mark it with a paint pen.",
+   "Have a second person check the list.",
+   "Record who checked it."
+  ],
+  "N-003": [
+   "Check the oil level and look for fuel leaks with the fuel on before cranking.",
+   "Keep a fire extinguisher within reach.",
+   "Start it and let it idle; watch for leaks, smoke and the warning lights.",
+   "Shut it off and recheck the oil and coolant levels."
+  ],
+  "N-004": [
+   "Start in a quiet area at low speed.",
+   "Test both brakes at walking speed, then a bit faster.",
+   "Check that the steering is free and nothing rubs.",
+   "Afterward, look for leaks, recheck every fluid and the chain or belt."
+  ],
+  "N-005": [
+   "Open the Maintenance log.",
+   "Check each interval against your owner's manual and edit it.",
+   "Log a service for the work you just did and pick the items it covered.",
+   "Add receipts so the history holds up when you sell."
+  ],
+  "N-006": [
+   "Open Settings & backups.",
+   "Download a full backup.",
+   "Keep it with the bike's paperwork."
+  ],
+  "M-002": [
+   "Clean and identify the plastic (often stamped inside, like ABS or PP).",
+   "Repair from the back with a plastic welder and mesh.",
+   "Replace panels with large cracks across the face."
+  ],
+  "M-003": [
+   "Scuff, clean and use adhesion promoter on plastic.",
+   "Use a flexible primer and clear made for plastic.",
+   "Replace a scratched or crazed screen.",
+   "Check every panel fits before final paint."
+  ],
+  "E-005": [
+   "Check the clip-ons and the triple clamp for bends.",
+   "Look at the fairing stay and subframe for cracks.",
+   "Check engine covers and frame sliders for scrapes and cracks.",
+   "Check the rearsets and shift and brake pedals."
+  ]
+ },
+ "drives": {
+  "chain": {
+   "lesson": {
+    "title": "Chain & sprockets",
+    "short": "Chain wear and slack, sprockets, alignment and the rear cush drive.",
+    "about": "Measure the chain for wear, check the sprockets, set the slack and wheel alignment, and check the rubber cush drive in the rear hub.",
+    "why": "A worn chain can jump the sprockets or break. A chain and sprockets are a set and wear out together.",
+    "tips": [
+     "Replace the chain and both sprockets together.",
+     "Set slack with the bike the way the manual says (stand or rider on).",
+     "Check the alignment marks on both sides of the swingarm match."
+    ]
+   },
+   "howto": {
+    "I-001": [
+     "Clean the chain so you can see the rollers and O-rings.",
+     "Measure wear over the length the manual gives, or use a chain gauge.",
+     "Rotate the wheel and feel for tight spots.",
+     "Look for hooked or pointed sprocket teeth."
+    ],
+    "I-002": [
+     "Mark this Cancelled if the chain and sprockets passed.",
+     "Fit the sprockets and torque their nuts or bolts to spec.",
+     "Use a rivet link on high-power bikes; follow the chain maker's instructions.",
+     "Check the master link before every ride for the first week."
+    ],
+    "I-003": [
+     "Set slack at the tightest point of the chain.",
+     "Match the alignment marks on both sides.",
+     "Torque the axle nut and fit a new cotter pin if it uses one.",
+     "With the wheel out, check the cush rubbers for cracks and play."
+    ]
+   },
+   "tile": [
+    "Chain drive",
+    "Chain, sprockets and alignment"
+   ]
+  },
+  "belt": {
+   "lesson": {
+    "title": "Belt drive & primary",
+    "short": "Belt condition and tension, pulleys, and the primary drive.",
+    "about": "Inspect the drive belt and pulleys, set the belt tension with a gauge, and service the primary drive if your bike has a separate primary case.",
+    "why": "A belt can look fine and still be close to failing. Stones between belt and pulley are a common killer, and a broken belt leaves you stranded.",
+    "tips": [
+     "Never twist, kink or pry a drive belt. It damages the cords inside.",
+     "Set tension with a belt tension gauge the way the manual says.",
+     "Many cruisers with belts also have a primary chaincase with its own oil."
+    ]
+   },
+   "howto": {
+    "I-001": [
+     "Rotate the wheel and look at the whole belt, both faces and both edges.",
+     "Replace it if a tooth is missing or cords show.",
+     "Look for stones caught in the pulley teeth.",
+     "Check the pulley teeth for hooks or sharp edges."
+    ],
+    "I-002": [
+     "Set the tension with the bike as the manual says (on the stand or on its wheels).",
+     "Measure deflection with a belt tension gauge at the stated force.",
+     "Adjust both sides evenly so the wheel stays aligned.",
+     "Torque the axle nut and fit a new cotter pin if it uses one."
+    ],
+    "I-003": [
+     "Cancel this if the primary drive shares the engine oil.",
+     "Drain the primary case and refill with the type and amount the manual gives.",
+     "Check and set the primary chain adjuster.",
+     "Fit a new gasket or O-ring on the cover."
+    ]
+   },
+   "tile": [
+    "Belt drive",
+    "Belt tension, pulleys, primary"
+   ]
+  },
+  "shaft": {
+   "lesson": {
+    "title": "Shaft drive",
+    "short": "Final drive oil, splines, U-joint and leaks.",
+    "about": "Change the final drive oil, check the rear drive for play and leaks, and clean and grease the drive splines.",
+    "why": "Shaft drives last a long time when the oil is changed and the splines are greased. Dry splines wear out quickly and are expensive to replace.",
+    "tips": [
+     "Use the exact gear oil the manual gives for the final drive.",
+     "Grease the splines with the moly grease the manual specifies.",
+     "Clunks when getting on and off the throttle can be a worn U-joint or splines."
+    ]
+   },
+   "howto": {
+    "I-001": [
+     "Warm it with a short ride if you can.",
+     "Drain and look at the oil and the drain plug magnet for metal flakes.",
+     "Refill with the specified gear oil to the level the manual gives.",
+     "Fit new sealing washers and torque the plugs."
+    ],
+    "I-002": [
+     "Rock the wheel back and forth and feel for excessive free play.",
+     "Spin it and listen for grinding.",
+     "Look for oil at the pinion seal, the wheel-side seal and the boot."
+    ],
+    "I-003": [
+     "Follow the manual's order for removing the wheel and rear drive.",
+     "Clean the splines and look for worn, sharp or stepped teeth.",
+     "Grease with the specified moly grease.",
+     "Reassemble and torque every fastener to spec."
+    ]
+   },
+   "tile": [
+    "Shaft drive",
+    "Gear oil, splines and leaks"
+   ]
+  }
+ },
+ "sections": {
+  "fuel": {
+   "t": "Fuel system",
+   "d": "Tank, carbs or injection"
+  },
+  "finish": {
+   "t": "Cleaning & finish",
+   "d": "Cleaning, paint, bodywork"
+  },
+  "chassis": {
+   "t": "Wheels, brakes & suspension",
+   "d": "Tires, brakes, forks, shocks"
+  }
+ },
+ "moduleIntro": {
+  "engine": "Compression, oil, plugs, valves, cooling, clutch and leaks. Every number comes from the factory service manual.",
+  "fuel": "Tank, petcock or pump, lines and filters, carbs or injection, air filter and sync.",
+  "electrical": "Battery, charging, grounds, starter, ignition, lights and switches.",
+  "chassis": "Frame, final drive, wheels and tires, brakes, forks, steering bearings and shocks. Most items here are safety-critical.",
+  "finish": "Cleaning, stripping down, rust, paint and finish, and reassembly. Label every fastener."
+ },
+ "guide": {
+  "fuel": {
+   "title": "Fuel system",
+   "sub": "Tank, lines and filters, carbs or injection, air filter and sync.",
+   "how": [
+    "Mark the carb or injection steps that don't apply as Cancelled.",
+    "Work on one carb at a time.",
+    "Leak-test before the first start."
+   ]
+  },
+  "engine": {
+   "title": "Engine & cooling",
+   "sub": "Compression, oil, plugs, valves, cooling and clutch.",
+   "how": [
+    "Work the procedure top to bottom and tick each step as you go.",
+    "Measurements and torque values come from the factory manual.",
+    "Do the compression test before spending on the engine."
+   ]
+  },
+  "chassis": {
+   "title": "Wheels, brakes & suspension",
+   "sub": "Final drive, tires, brakes, forks, steering and shocks.",
+   "how": [
+    "Most items here are safety-critical and need a second person to check.",
+    "Check tire date codes, not just tread.",
+    "Bleed brakes exactly as the manual describes."
+   ]
+  },
+  "finish": {
+   "title": "Cleaning & finish",
+   "sub": "Stripping, cleaning, rust, paint and bodywork.",
+   "how": [
+    "Bag and label every fastener with where it came from.",
+    "Mask bearing seats, threads and gasket faces.",
+    "Record products and cure times."
+   ]
+  },
+  "diagrams": {
+   "title": "Parts diagrams",
+   "sub": "Factory parts diagrams for the {bike}. Pick your make, year and model on the site."
+  },
+  "shops": {
+   "sub": "Places to find parts, diagrams and help for the {bike}. Prices change, so the app never guesses them.",
+   "how": [
+    "Start with the factory parts diagrams to get the right part number.",
+    "Compare prices across shops, including shipping.",
+    "Every part's detail panel also has its own links."
+   ]
+  },
+  "course": {
+   "title": "The course",
+   "sub": "Fourteen parts that take a tired sport bike to fully sorted, in the order the work usually happens. Mark any step that doesn't apply to your bike as Cancelled."
+  },
+  "home": {
+   "how": [
+    "Follow the course from Part 1 to Part 14. Skip steps that don't apply to your bike.",
+    "Tick steps off as you finish them. Progress updates everywhere.",
+    "Set up the Maintenance log at the end so you always know what's due."
+   ]
+  }
+ },
+ "shops": {
+  "fiche": {
+   "name": "Factory parts diagrams",
+   "url": "https://www.revzilla.com/oem",
+   "short": "Diagrams for your bike",
+   "what": "Exploded diagrams and part numbers by area of the bike. Pick your make, year and model.",
+   "tags": [
+    "Original parts",
+    "Diagrams"
+   ]
+  },
+  "nhtsa": {
+   "name": "NHTSA recall lookup",
+   "url": "https://www.nhtsa.gov/recalls",
+   "short": "Check recalls by VIN",
+   "what": "Enter the VIN to see open safety recalls. Recall repairs are free at a dealer.",
+   "tags": [
+    "Recalls",
+    "Free"
+   ]
+  },
+  "manuals": {
+   "name": "Haynes / Clymer manuals",
+   "url": "https://haynes.com",
+   "short": "Repair manuals",
+   "what": "Repair manuals for most popular bikes. Still try to get the factory service manual for exact specs.",
+   "tags": [
+    "Manuals"
+   ]
+  },
+  "cmsnl": {
+   "name": "CMSNL",
+   "url": "https://www.cmsnl.com",
+   "short": "Original parts diagrams",
+   "what": "Factory diagrams and part numbers going back to the 1960s, strong on older Japanese bikes. Ships worldwide.",
+   "tags": [
+    "Original parts",
+    "Diagrams"
+   ]
+  },
+  "partzilla": {
+   "name": "Partzilla",
+   "url": "https://www.partzilla.com",
+   "short": "Diagrams, US shipping",
+   "what": "Factory diagrams and part numbers for most Japanese brands, shipped from the US.",
+   "tags": [
+    "Original parts",
+    "Diagrams"
+   ]
+  },
+  "gsr": null,
+  "sudco": null,
+  "z1": {
+   "name": "Z1 Enterprises",
+   "url": "https://www.z1enterprises.com",
+   "short": "Vintage Japanese bike parts",
+   "what": "Gaskets, seals, cables, carb kits and hardware for older Japanese bikes.",
+   "tags": [
+    "Vintage",
+    "Kits"
+   ]
+  }
+ },
+ "catShops": {
+  "Engine": [
+   "fiche",
+   "partzilla",
+   "cmsnl"
+  ],
+  "Cooling": [
+   "fiche",
+   "revzilla"
+  ],
+  "Fuel": [
+   "fiche",
+   "partzilla",
+   "caswell"
+  ],
+  "Exhaust": [
+   "fiche",
+   "ebay"
+  ],
+  "Electrical": [
+   "ricks",
+   "fiche"
+  ],
+  "Chassis": [
+   "allballs",
+   "fiche"
+  ],
+  "Wheels": [
+   "allballs",
+   "revzilla",
+   "denniskirk"
+  ],
+  "Brakes": [
+   "fiche",
+   "revzilla",
+   "denniskirk"
+  ],
+  "Final drive": [
+   "revzilla",
+   "denniskirk"
+  ],
+  "Controls": [
+   "fiche",
+   "revzilla"
+  ],
+  "Cosmetics": [
+   "fiche",
+   "ebay"
+  ],
+  "_default": [
+   "fiche",
+   "partzilla"
+  ]
+ },
+ "guides": {
+  "paint": null,
+  "carbs": {
+   "cover": "fuel",
+   "icon": "fuel",
+   "title": "Carburetors 101",
+   "img": null,
+   "sum": "How carbs work, why they fail and how to rebuild them.",
+   "body": [
+    [
+     "What they do",
+     "A carburetor mixes fuel with air. Opening the throttle lets in more air, and jets and a needle meter in more fuel to match."
+    ],
+    [
+     "Why they fail",
+     "Old fuel turns to varnish and blocks the tiny jets and passages. Rubber parts harden and leak. Floats stick, so carbs overflow or starve."
+    ],
+    [
+     "Rebuild basics",
+     "Work on one carb at a time so parts never mix. Photograph everything, clean every passage, fit new gaskets, O-rings and needle valves, and set the float height to the manual's figure."
+    ],
+    [
+     "Settings",
+     "Jet sizes, needle positions and float height come from the manual for your carb model. Write down what you find before changing anything, in case someone modified them."
+    ],
+    [
+     "After the rebuild",
+     "On multi-cylinder bikes, the carbs are synchronized with vacuum gauges so each cylinder pulls the same. Then set the idle."
+    ]
+   ]
+  },
+  "efi": {
+   "title": "Fuel injection basics",
+   "img": null,
+   "cover": "fuel",
+   "icon": "fuel",
+   "sum": "How injection works and what you actually service.",
+   "body": [
+    [
+     "What it does",
+     "A computer reads sensors (throttle position, air, temperature) and opens an injector for each cylinder for just the right time. There's nothing to jet like on a carb."
+    ],
+    [
+     "What you service",
+     "The fuel filter and pump, the fuel lines, the air filter, the throttle cable play and, on multi-cylinder bikes, the balance between throttle bodies."
+    ],
+    [
+     "Warning signs",
+     "A flashing or steady FI light, hard starting or surging. Read the fault code the way the manual shows before replacing anything."
+    ]
+   ]
+  },
+  "charging": {
+   "title": "Charging system checks",
+   "img": null,
+   "cover": "electrical",
+   "icon": "bolt",
+   "sum": "Battery, stator and regulator: how to tell which one is failing.",
+   "body": [
+    [
+     "How it works",
+     "The stator or alternator makes power as the engine turns. The regulator/rectifier turns it into steady DC for the battery and lights."
+    ],
+    [
+     "Start with the battery",
+     "Charge it fully and test it. A tired battery makes everything else look broken."
+    ],
+    [
+     "Then the connector",
+     "Look at the plug between the stator and the regulator. Brown, melted or loose pins mean heat, and heat means trouble."
+    ],
+    [
+     "Then measure",
+     "Use the manual's charging test: voltage at the battery at set engine speeds, then the stator and regulator tests. Compare every reading with the manual."
+    ]
+   ]
+  },
+  "electrical": {
+   "img": null,
+   "icon": "bolt",
+   "cover": "electrical"
+  },
+  "brakes": {
+   "img": null,
+   "icon": "shield",
+   "cover": "brakes",
+   "sum": "Disc and drum brakes, what wears out, and how to bleed them."
+  },
+  "wheels": {
+   "title": "Wheels & tires",
+   "img": null,
+   "cover": "wheels",
+   "icon": "wheel",
+   "sum": "Reading a tire's age, wheel bearings, spokes and cast wheels.",
+   "body": [
+    [
+     "Tire age",
+     "Every tire has a four-digit date code on the sidewall: the week, then the year (2319 is week 23 of 2019). Old rubber gets hard and slippery even with tread left."
+    ],
+    [
+     "Sizes",
+     "Use the sizes and load and speed ratings in your manual or on the tire placard on the bike."
+    ],
+    [
+     "Bearings",
+     "With the wheel off the ground, rock it at the top and bottom and spin it. Any play or grinding means new bearings."
+    ],
+    [
+     "Spokes and cast wheels",
+     "Spoked wheels need tight spokes and a true rim. Cast wheels need checking for cracks. A cracked cast wheel is replaced, never repaired."
+    ]
+   ]
+  },
+  "cleaning": {
+   "img": null,
+   "icon": "spray",
+   "cover": "tools"
+  },
+  "organizing": {
+   "img": null,
+   "icon": "box",
+   "cover": "tools"
+  },
+  "measuring": {
+   "img": null,
+   "icon": "gauge",
+   "cover": "tools"
+  },
+  "safety": {
+   "img": null,
+   "icon": "shield",
+   "cover": "tools"
+  },
+  "sport": {
+   "title": "Restoring a sport bike",
+   "img": null,
+   "cover": "{sil}",
+   "icon": "book",
+   "sum": "Fairings, cooling, suspension and crash damage.",
+   "body": [
+    [
+     "Look under the plastic",
+     "Sport bikes are often dropped. Take the fairings off and check brackets, clip-ons, the subframe and the radiator for damage."
+    ],
+    [
+     "Cooling",
+     "Liquid cooling works hard on a sport bike. Fresh coolant, straight radiator fins and a working fan matter."
+    ],
+    [
+     "Suspension",
+     "Most sport bikes have adjustable suspension. Set the sag for your weight, then start damping from the manual's standard settings."
+    ],
+    [
+     "Tires",
+     "Sport tires age and wear quickly. Check the date codes, not just the tread."
+    ]
+   ]
+  }
+ },
+ "suggestions": [
+  [
+   "Buy the fairing screw kit",
+   "A full fairing bolt kit is cheap and replaces the mismatched screws most used sport bikes have."
+  ],
+  [
+   "Get the service manual first",
+   "Every spec in this course says VERIFY until it comes from the manual for your exact model and year."
+  ],
+  [
+   "Do the compression test early",
+   "It decides whether the engine needs opening up, the biggest cost decision in the project."
+  ],
+  [
+   "Buy kits as sets",
+   "Gasket sets, carb kits and seal kits usually cost less than single pieces and nothing gets missed."
+  ],
+  [
+   "Replace old rubber",
+   "Fuel lines, brake hoses, intake boots and tires harden with age even if they look fine."
+  ],
+  [
+   "Compare the delivered price",
+   "Add shipping and tax before deciding which shop is cheapest."
+  ],
+  [
+   "Ask an owners' forum",
+   "Owners of your model have solved most of its problems before."
+  ]
+ ]
+}

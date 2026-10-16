@@ -1,0 +1,49 @@
+{
+ "id": "restore-adventure",
+ "year": "",
+ "make": "",
+ "model": "",
+ "short": "bike",
+ "name": "Any adventure bike",
+ "variant": "Restoration course for any adventure bike",
+ "universal": true,
+ "style": "adventure",
+ "status": "universal",
+ "specs": [],
+ "links": {
+  "ebay": "motorcycle"
+ },
+ "hero": null,
+ "extras": {},
+ "styleName": "Adventure",
+ "styleIntro": "An adventure bike: long-travel suspension, tall stance, crash protection and luggage.",
+ "styleFocus": [
+  [
+   "Crash bars and skid plate",
+   "Damage hides behind them"
+  ],
+  [
+   "Luggage mounts",
+   "Racks and side cases"
+  ],
+  [
+   "Long-travel suspension",
+   "Fork, shock, linkage"
+  ],
+  [
+   "Spoked or cast wheels",
+   "Spokes or cracks"
+  ],
+  [
+   "ABS",
+   "Sensors and warning light"
+  ]
+ ],
+ "drive": "chain",
+ "drives": [
+  "chain",
+  "belt",
+  "shaft"
+ ],
+ "specNote": ""
+}

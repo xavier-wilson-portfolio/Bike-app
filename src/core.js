@@ -4,11 +4,22 @@
    BIKE is who the bike is; X says which extras this bike has (3D, paint studio, videos). */
 const PACK = window.PACK || { bike: {}, catalogue: {}, thumbs: {} };
 const BIKE = Object.assign({ id: "bike", year: "", make: "", model: "", short: "", name: "", variant: "", variantShort: "", catalogueName: "", engine: "", specs: [], specSource: null, links: {}, hero: null, extras: {} }, PACK.bike);
+if (BIKE.universal && window.RV_BIKE_LABEL) { const L = window.RV_BIKE_LABEL; Object.assign(BIKE, { year: L.year || "", make: L.make || "", model: L.model || "", name: [L.year, L.make, L.model].filter(Boolean).join(" ") || BIKE.name, short: L.model || BIKE.short, variant: (BIKE.styleName || "") + " restoration", silhouette: L.silhouette || "", goal: "restore", drive: (BIKE.drives || []).includes(L.drive) ? L.drive : BIKE.drive }); }
+// universal courses: fill in the rider's own bike wherever the text says {bike}, {short} or {sil}
+if (BIKE.universal) {
+  const sil = BIKE.silhouette || "bike-" + (BIKE.style || "standard"), fill = v => typeof v === "string" ? v.replace(/\{bike\}/g, BIKE.name).replace(/\{short\}/g, BIKE.short).replace(/\{sil\}/g, sil) : Array.isArray(v) ? v.map(fill) : v && typeof v === "object" ? Object.fromEntries(Object.entries(v).map(([k, x]) => [k, fill(x)])) : v;
+  if (BIKE.content) BIKE.content = fill(BIKE.content);
+  // the final drive the rider picked: its lesson text, how-tos and home-page tile
+  const dv = BIKE.content && BIKE.content.drives && BIKE.content.drives[BIKE.drive];
+  if (dv) { Object.assign(BIKE.content.lessons.I, dv.lesson); Object.assign(BIKE.content.howto, dv.howto); BIKE.styleFocus = [dv.tile].concat(BIKE.styleFocus || []); }
+  BIKE.links = Object.assign({}, BIKE.links, { ebay: [BIKE.make, BIKE.model].filter(Boolean).join(" ") || "motorcycle", fiche: "https://www.revzilla.com/oem" });
+}
 if (BIKE.generic && window.RV_BIKE_LABEL) { const L = window.RV_BIKE_LABEL; Object.assign(BIKE, { year: L.year || "", make: L.make || "", model: L.model || "", name: [L.year, L.make, L.model].filter(Boolean).join(" ") || "Your bike", short: L.model || "bike", variant: "", style: L.style || "standard", silhouette: L.silhouette || "", goal: L.goal || "" }); }
 if (!BIKE.short) BIKE.short = BIKE.model; if (!BIKE.name) BIKE.name = [BIKE.year, BIKE.make, BIKE.model].join(" "); if (!BIKE.variantShort) BIKE.variantShort = BIKE.short;
 const X = BIKE.extras || {};
 const CMS_DATA = PACK.catalogue || {};
 const GENERIC = !!BIKE.generic;                    // a bike that isn't in the library yet: records only, no course
+const UNIVERSAL = !!BIKE.universal;                // a restoration course for any bike of one kind (the rider's bike comes from the project)
 const LEGACY = !!BIKE.legacyContent;              // the GS750 pack: content written into the app itself
 const HAS_CAT = Object.keys(CMS_DATA).length > 0;  // the bike has parts-catalogue diagrams
 const CT = BIKE.content || {};
@@ -36,6 +47,8 @@ const lsGet = (k, d) => { try { const v = localStorage.getItem(k); return v == n
 const lsSet = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch (e) { return false; } };
 const VERIFY = "VERIFY IN FACTORY SERVICE MANUAL";
 const ICON = {
+  copy: '<rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/>',
+  tune: '<path d="M4 6h9 M17 6h3 M4 12h3 M11 12h9 M4 18h11 M19 18h1"/><circle cx="15" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="18" r="2"/>',
   camera: '<path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.5"/>',
   expand: '<path d="M4 9V4h5 M20 9V4h-5 M4 15v5h5 M20 15v5h-5"/>', shrink: '<path d="M9 4v5H4 M15 4v5h5 M9 20v-5H4 M15 20v-5h5"/>',
   eye: '<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>', undo: '<path d="M9 14L4 9l5-5 M4 9h10a6 6 0 010 12h-3"/>', refresh: '<path d="M20 11a8 8 0 10-2.3 5.7 M20 4v7h-7"/>',
@@ -97,6 +110,8 @@ const DOC_KINDS = ["Before photo", "During photo", "After photo", "Part ID photo
 
 /* field types: text, textarea, num, money, date, select(opts), ref(coll), refs(coll), bool, url */
 const MAINT_KINDS = ["Scheduled service", "Repair", "Inspection", "Tires", "Upgrade", "Other"];
+const MOD_STATUS = ["Installed", "Planned", "Ordered", "Removed"];
+const MOD_CATS = ["Performance", "Exhaust", "Intake & fuel", "Suspension", "Brakes", "Wheels & tires", "Lighting", "Electrical & electronics", "Controls & ergonomics", "Protection", "Luggage", "Comfort", "Appearance", "Other"];
 const MAINT_CATS = ["Engine", "Fuel & air", "Drivetrain", "Brakes", "Suspension & steering", "Tires & wheels", "Electrical", "Cooling", "Controls & cables", "General"];
 const F = (k, label, type = "text", extra = {}) => ({ k, label, type, ...extra });
 const SCHEMA = {
@@ -193,6 +208,17 @@ const SCHEMA = {
     F("everyMiles", "Every (miles)", "num", { hint: "Leave 0 if it only goes by time." }), F("everyMonths", "Every (months)", "num", { hint: "Leave 0 if it only goes by miles." }),
     F("lastDate", "Last done (before you started logging)", "date"), F("lastMiles", "Odometer when last done", "num", { hint: "Only needed until you log this service here." }),
     F("source", "Where the interval comes from", "text", { full: 1, hint: "Factory manual page, shop advice, or 'typical, not yet checked'." }), F("notes", "Notes", "textarea", { full: 1 })] },
+  mods: { label: "Mod", plural: "Mods & upgrades", prefix: "MOD-", pad: 3, title: "name", fields: [
+    F("name", "What you fitted", "text", { req: 1, full: 1, hint: "For example: Yoshimura slip-on exhaust, LED headlight, Öhlins rear shock." }),
+    F("status", "Status", "select", { opts: MOD_STATUS }), F("category", "Category", "select", { opts: MOD_CATS }),
+    F("brand", "Brand", "text"), F("partNo", "Part number", "text", { hint: "The maker's part or SKU number, so you can buy it again or prove what's fitted." }),
+    F("price", "Part price", "money"), F("labor", "Install cost (labor)", "money", { hint: "Leave at 0 if you fitted it yourself." }),
+    F("date", "Install date", "date"), F("odometer", "Odometer at install (miles)", "num"),
+    F("installedBy", "Fitted by", "select", { opts: ["Myself", "A shop", "A friend"] }), F("shop", "Shop or person", "text"),
+    F("vendor", "Bought from", "text"), F("url", "Product link", "url", { full: 1 }), F("receipt", "Receipt or invoice link", "url", { full: 1 }), F("warranty", "Warranty", "text", { hint: "For example: 2 years, until 2027-06." }),
+    F("replaced", "Stock part it replaced", "text", { full: 1, hint: "Leave empty if it's an add-on, like heated grips or a phone mount." }), F("stockPartNo", "Stock part number", "text"),
+    F("stockKept", "Stock part", "select", { opts: ["Kept", "Sold", "Thrown away", "Not applicable"] }), F("stockLocation", "Where the stock part is stored", "text"),
+    F("notes", "Notes", "textarea", { full: 1, hint: "Settings, jetting or tuning changes, and anything a future owner or shop should know." })] },
   mileage: { label: "Odometer reading", plural: "Odometer readings", prefix: "ODO-", pad: 4, title: "miles", fields: [
     F("date", "Date", "date", { req: 1 }), F("miles", "Odometer (miles)", "num", { req: 1 }), F("note", "Note", "text", { full: 1 })] },
   tools: { label: "Tool or supply", plural: "Tools & supplies", prefix: "TOOL-", pad: 3, title: "name", fields: [

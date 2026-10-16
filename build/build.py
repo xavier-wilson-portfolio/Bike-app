@@ -15,9 +15,9 @@ src = ROOT / 'src'
 out = ROOT / 'public'
 out.mkdir(exist_ok=True)
 
-ORDER = ['core.js', 'model.js', 'content.js', 'howto.js', 'art_data.js', 'ui.js', 'vehicle.js', 'views.js', 'views2.js', 'views3.js', 'views4.js', 'maint.js', 'remind.js',
+ORDER = ['core.js', 'model.js', 'content.js', 'howto.js', 'art_data.js', 'ui.js', 'vehicle.js', 'views.js', 'views2.js', 'views3.js', 'views4.js', 'maint.js', 'remind.js', 'mods.js',
          'twin_data.js', 'twin_internals.js', 'twin.js', 'viewer.js', 'diag_draw.js', 'diag_data.js', 'diag_data2.js', 'diag_cms.js', 'diag_gen.js',
-         *sorted(p.name for p in src.glob('d3_*.js')), 'd3.js', 'diag.js', 'scan.js', 'chat.js', 'generic.js']
+         *sorted(p.name for p in src.glob('d3_*.js')), 'd3.js', 'diag.js', 'scan.js', 'chat.js', 'universal.js', 'generic.js']
 app = '\n'.join((src / f).read_text() for f in ORDER) + '\nboot();\n'
 (out / 'app.js').write_text(app)
 
@@ -38,7 +38,7 @@ for pdir in sorted((ROOT / 'data' / 'packs').iterdir()):
     (od / 'pack.json').write_text(json.dumps(pack, separators=(',', ':'), ensure_ascii=False))
     if (pdir / 'baseline.json').exists():
         shutil.copy(pdir / 'baseline.json', od / 'baseline.json')
-    index.append({k: bike.get(k) for k in ['id', 'year', 'make', 'model', 'variant', 'name', 'short', 'match', 'extras', 'status', 'generic', 'reqKeys', 'style', 'silhouette']}
+    index.append({k: bike.get(k) for k in ['id', 'year', 'make', 'model', 'variant', 'name', 'short', 'match', 'extras', 'status', 'generic', 'universal', 'styleName', 'reqKeys', 'style', 'silhouette']}
                  | {'diagrams': len(cms)})
 (out / 'packs' / 'index.json').write_text(json.dumps(index, separators=(',', ':'), ensure_ascii=False))
 

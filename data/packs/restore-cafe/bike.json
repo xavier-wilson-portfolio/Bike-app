@@ -1,0 +1,49 @@
+{
+ "id": "restore-cafe",
+ "year": "",
+ "make": "",
+ "model": "",
+ "short": "bike",
+ "name": "Any classic",
+ "variant": "Restoration course for any classic",
+ "universal": true,
+ "style": "cafe",
+ "status": "universal",
+ "specs": [],
+ "links": {
+  "ebay": "motorcycle"
+ },
+ "hero": null,
+ "extras": {},
+ "styleName": "Cafe racer / classic",
+ "styleIntro": "A cafe racer or classic: usually older, often carbureted, with spoked wheels, chrome and simple electrics.",
+ "styleFocus": [
+  [
+   "Carburetors",
+   "Rebuild and sync"
+  ],
+  [
+   "Points or early electronic ignition",
+   "Gap and timing"
+  ],
+  [
+   "Spoked wheels",
+   "Spokes and chrome rims"
+  ],
+  [
+   "Drum or early disc brakes",
+   "Shoes and calipers"
+  ],
+  [
+   "Old wiring",
+   "Often worth replacing"
+  ]
+ ],
+ "drive": "chain",
+ "drives": [
+  "chain",
+  "belt",
+  "shaft"
+ ],
+ "specNote": ""
+}

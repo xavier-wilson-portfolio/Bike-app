@@ -69,16 +69,25 @@
     return "standard";
   }
   function reqFormHtml(goal) {
-    if (goal === "maintain") return `<form class="pk-req" id="reqF" data-goal="maintain" novalidate><div class="pk-req-h"><b>Add your bike</b><span class="muted">Year, make and model is all it takes. You get a maintenance log, a parts and jobs tracker and a place for receipts. Pick the kind of bike so its picture matches.</span></div>
-      <div class="pk-req-row"><label>Year<input name="year" inputmode="numeric" maxlength="4" placeholder="2012" autocomplete="off"></label><label>Make<input name="make" placeholder="Suzuki" autocomplete="off"></label><label class="wide">Model<input name="model" placeholder="V-Strom 650" autocomplete="off"></label>
-        <label class="wide">Kind of bike<select name="style">${BIKE_STYLES.map(([k, t]) => `<option value="${k}">${t}</option>`).join("")}</select></label></div>
-      <div class="pk-req-go"><button class="btn pri" type="submit">Start my maintenance log</button></div></form>`;
-    return `<form class="pk-req" id="reqF" novalidate><div class="pk-req-h"><b>Request this bike</b><span class="muted">Tell us the year, make and model. We'll build its page, course and parts list and have it ready in about ${REQ_DAYS} days.</span></div>
-      <div class="pk-req-row"><label>Year<input name="year" inputmode="numeric" maxlength="4" placeholder="1981" autocomplete="off"></label><label>Make<input name="make" placeholder="Honda" autocomplete="off"></label><label class="wide">Model<input name="model" placeholder="CB750F" autocomplete="off"></label>
-        <label class="wide">Kind of bike<select name="style">${BIKE_STYLES.map(([k, t]) => `<option value="${k}">${t}</option>`).join("")}</select></label></div>
-      <div class="pk-req-go"><button class="btn pri" type="submit">Request it</button><span class="muted pk-small">${esc(etaTxt())}</span></div>
-      <div class="pk-req-now"><b>Don't want to wait?</b><span class="muted">Start your project now for maintenance, parts, jobs and receipts. When the bike's page is ready, connect it and keep everything.</span><button class="btn tan" type="button" data-startnow>Request it and start now</button></div></form>`;
+    const keep = goal === "maintain";
+    return `<form class="pk-req" id="reqF" data-goal="${keep ? "maintain" : "restore"}" novalidate><div class="pk-req-h"><b>Add your bike</b><span class="muted">${keep ? "Year, make and model is all it takes. You get a maintenance log, a parts and jobs tracker and a place for receipts. Pick the kind of bike so its picture matches." : "Year, make and model is all it takes. You get a full restoration course, parts list, safety checks and maintenance log, tailored to the kind of bike you pick."}</span></div>
+      <div class="pk-req-row"><label>Year<input name="year" inputmode="numeric" maxlength="4" placeholder="${keep ? "2012" : "1981"}" autocomplete="off"></label><label>Make<input name="make" placeholder="${keep ? "Suzuki" : "Honda"}" autocomplete="off"></label><label class="wide">Model<input name="model" placeholder="${keep ? "V-Strom 650" : "CB750F"}" autocomplete="off"></label></div>
+      <div class="pk-req-row two"><label>Kind of bike<select name="style">${BIKE_STYLES.map(([k, t]) => `<option value="${k}">${t}</option>`).join("")}</select></label>
+        ${keep ? "" : `<label id="pkDrive">Final drive<select name="drive">${DRIVES.map(([k, t]) => `<option value="${k}">${t}</option>`).join("")}</select></label>`}</div>
+      ${keep ? "" : `<div class="pk-style" id="pkStyle"></div>`}
+      <div class="pk-req-go"><button class="btn pri" type="submit">${keep ? "Start my maintenance log" : "Start my restoration"}</button></div></form>`;
   }
+  const DRIVES = [["chain", "Chain"], ["belt", "Belt"], ["shaft", "Shaft"]];
+  // a first guess at how power gets to the back wheel; the rider can change it
+  function guessDrive(make, model, style) {
+    const s = (make + " " + model).toLowerCase();
+    if (style === "scooter") return "cvt";
+    if (/harley|h-?d\b|buell|indian|victory|vulcan ?(900|1700|2000)|\bbolt\b|stryker|roadliner|stratoliner|raider|v-?rod/.test(s)) return "belt";
+    if (/bmw.*\b[rk] ?\d|moto ?guzzi|guzzi|gold ?wing|gl ?\d{3,4}|st ?1[13]00|pan.?european|fjr|venture|royal star|v-?star ?1[13]00|xs ?(750|850|1100)|xj ?(650|750|900)|concours|1400 ?gtr|voyager|nomad|vulcan ?(1500|1600)|shadow|vt ?1100|vtx|fury|sabre|valkyrie|intruder|vs ?(800|1400)|boulevard|m109|c50|m50|c90|cx ?\d{3}|gs ?(850|1000g|1100g|1150)|rocket|trophy|super ?tenere|xt1200z|tiger explorer/.test(s)) return "shaft";
+    return style === "touring" ? "shaft" : style === "cruiser" && /honda|yamaha|suzuki|kawasaki/.test(s) ? "shaft" : style === "cruiser" ? "belt" : "chain";
+  }
+  // what the restoration course covers for each kind of bike, shown under the form
+  const STYLE_TXT = { standard: "Simple bodywork, exposed engine, tank and side cover paint.", cruiser: "Big twin and primary drive, saddlebags and accessories, chrome and tins.", sport: "Fairings and crash damage, liquid cooling, adjustable suspension.", adventure: "Crash bars and skid plate, luggage, long-travel suspension, spokes.", dualsport: "Foam air filter, spokes and tubes, bearings, plastics and graphics.", touring: "Fairing and luggage, accessories, linked or ABS brakes.", cafe: "Carbs and points, old wiring, spoked wheels, paint, chrome and period details.", scooter: "CVT belt and rollers, body panels and clips, vacuum petcock." };
   async function submitReq(r) {
     const key = reqKey(r.year, r.make, r.model), label = `${r.year} ${r.make} ${r.model}`.replace(/\s+/g, " ").trim();
     const { error } = await sb.rpc("vote_bike", { k: key, l: label });
@@ -96,7 +105,7 @@
   function packForKey(key) {
     if (!key) return null;
     const [y, mk, ...rest] = key.split("-"), mdl = rest.join("");
-    return INDEX.find(b => !b.generic && ((b.reqKeys || []).includes(key) || (String(b.year) === y && norm(b.make) === mk && [b.model, b.short, ...(b.match || [])].some(m => norm(m) === mdl)))) || null;
+    return INDEX.find(b => !b.generic && !b.universal && ((b.reqKeys || []).includes(key) || (String(b.year) === y && norm(b.make) === mk && [b.model, b.short, ...(b.match || [])].some(m => norm(m) === mdl)))) || null;
   }
   // a project for a bike that isn't in the library yet: request it, then open the general bike with the user's year, make and model
   // goal "maintain": just a maintenance log for the bike, nothing to request. Otherwise the bike is requested so its course can be built.
@@ -121,13 +130,34 @@
     ls.set("rv.data.custom-bike", JSON.stringify(curName === label ? cur : { meta: { project: m } }));
     ls.set("rv.bike", "custom-bike"); goUrl({ bike: "custom-bike" });
   }
+  const universalFor = style => bikeOf("restore-" + (style || "standard")) || bikeOf("restore-standard");
+  async function startRestore(r) {
+    const label = labelOf(r), style = r.style || guessStyle(r.make, r.model), pack = universalFor(style), drive = (pack && pack.style === "scooter") ? "cvt" : r.drive || guessDrive(r.make, r.model, style);
+    if (!pack) return fail("Couldn't find the restoration course. Reload the page and try again.");
+    const m = { id: "project", projectName: label, bike: label, year: r.year, make: r.make, model: r.model, style: pack.style, drive, goal: "restore", units: "in", currency: "USD", baseBudget: 0, contingencyPct: 20, budgetChanges: [], meshMap: {}, archived: false,
+      expenseCategories: ["Parts", "Kits and gaskets", "Fluids", "Tires", "Brake parts", "Electrical parts", "Paint and finish", "Tools", "Shop labor", "Other"] };
+    if (r.silhouette) m.silhouette = r.silhouette;
+    if (sb && session) {
+      spin();
+      const { data, error } = await sb.from("projects").insert({ bike_id: pack.id, name: label }).select("id").single();
+      if (error) return fail(friendly(error));
+      await sb.from("records").upsert({ project_id: data.id, coll: "meta", rec_id: "project", data: m });
+      return goUrl({ project: data.id });
+    }
+    // no account: keep it in this browser (one restoration per kind of bike)
+    const cur = localMeta(pack.id), curName = cur && cur.bike;
+    if (curName && curName !== label && !confirm(`This browser already has a restoration for the ${curName}. Replace it with the ${label}? Create a free account to keep more than one.`)) return;
+    if (curName !== label) ls.set("rv.data." + pack.id, JSON.stringify({ meta: { project: m } }));
+    ls.set("rv.bike", pack.id); goUrl({ bike: pack.id });
+  }
   async function connectProject(p, pack) {
-    if (!confirm(`Connect "${p.name}" to the ${bikeName(pack)} page? Its course, parts list and service schedule get added, and everything you've logged stays.`)) return;
+    if (!confirm(pack.universal ? `Start the restoration course for "${p.name}"? Its steps, parts list and safety checks get added, and everything you've logged stays.` : `Connect "${p.name}" to the ${bikeName(pack)} page? Its course, parts list and service schedule get added, and everything you've logged stays.`)) return;
     spin();
     const { error } = await sb.from("projects").update({ bike_id: pack.id }).eq("id", p.id);
     if (error) return fail(friendly(error));
     const { data: rec } = await sb.from("records").select("data").eq("project_id", p.id).eq("coll", "meta").eq("rec_id", "project").maybeSingle();
-    await sb.from("records").upsert({ project_id: p.id, coll: "meta", rec_id: "project", data: Object.assign({}, rec && rec.data, { mergePack: pack.id }) });
+    const md = rec && rec.data || {};
+    await sb.from("records").upsert({ project_id: p.id, coll: "meta", rec_id: "project", data: Object.assign({}, md, { mergePack: pack.id }, pack.universal ? { drive: md.drive || guessDrive(md.make || "", md.model || "", pack.style), style: pack.style } : {}) });
     goUrl({ project: p.id });
   }
   // no account: move this browser's general bike onto the real bike's page
@@ -135,10 +165,11 @@
     let cur = null; try { cur = JSON.parse(ls.get("rv.data.custom-bike") || "null"); } catch (e) {}
     if (!cur) return;
     if (ls.get("rv.data." + pack.id) && !confirm(`This browser already has a ${bikeName(pack)} project. Replace it with your records?`)) return;
-    cur.meta.project.mergePack = pack.id; ls.set("rv.data." + pack.id, JSON.stringify(cur)); ls.set("rv.data.custom-bike", "");
+    cur.meta.project.mergePack = pack.id; if (pack.universal) { const md = cur.meta.project; md.drive = md.drive || guessDrive(md.make || "", md.model || "", pack.style); md.style = pack.style; } ls.set("rv.data." + pack.id, JSON.stringify(cur)); ls.set("rv.data.custom-bike", "");
     ls.set("rv.bike", pack.id); goUrl({ bike: pack.id });
   }
-  function localGeneric() { try { const d = JSON.parse(ls.get("rv.data.custom-bike") || "null"); return d && d.meta && d.meta.project; } catch (e) { return null; } }
+  function localMeta(id) { try { const d = JSON.parse(ls.get("rv.data." + id) || "null"); return d && d.meta && d.meta.project; } catch (e) { return null; } }
+  const localGeneric = () => localMeta("custom-bike");
   async function myRequests() {
     if (!sb || !session) return [];
     const { data } = await sb.from("bike_requests").select("*").contains("votes", [session.user.id]).order("created_at", { ascending: false });
@@ -151,11 +182,12 @@
     form.onsubmit = async e => {
       e.preventDefault();
       const now = form.dataset.now === "1"; form.dataset.now = "";
-      const r = { year: form.year.value.trim(), make: form.make.value.trim(), model: form.model.value.trim(), style: form.style.value };
+      const r = { year: form.year.value.trim(), make: form.make.value.trim(), model: form.model.value.trim(), style: form.style.value, drive: form.drive ? form.drive.value : "" };
       if (!/^(19|20)\d{2}$/.test(r.year)) { note("Enter the 4-digit year, like 1981.", true); form.year.focus(); return; }
       if (!r.make) { note("Enter the make, like Honda.", true); form.make.focus(); return; }
       if (!r.model) { note("Enter the model, like CB750F.", true); form.model.focus(); return; }
       if (form.dataset.goal === "maintain") return startGeneric(r, "maintain");
+      if (form.dataset.goal === "restore") return startRestore(r);
       if (now) return startGeneric(r);
       if (!sb || !session) { ls.set("rv.pendingReq", JSON.stringify(r)); if (!sb) { note("Requests need an account, and accounts aren't set up on this site yet.", true); return; } showAuth("signup"); note("Create a free account and we'll send in your request for the " + r.year + " " + r.make + " " + r.model + "."); return; }
       const btn = form.querySelector("button[type=submit]"); btn.disabled = true; btn.textContent = "Sending…";
@@ -164,21 +196,20 @@
     };
   }
 
-  const GOALS = { restore: ["I'm restoring it", "A step-by-step restoration course, parts list, diagrams and safety checks for your exact bike."], maintain: ["I'm keeping it running", "Log services, see what's due, and keep parts, jobs and receipts in one place. Works for any bike."] };
+  const GOALS = { restore: ["I'm restoring it", "A step-by-step restoration course, parts list and safety checks, tailored to your kind of bike. Works for any bike."], maintain: ["I'm keeping it running", "Log services, see what's due, and keep parts, jobs and receipts in one place. Works for any bike."] };
   function showPicker(mode, goalIn) { // mode "try" (no account) or "new" (start a project)
     let goal = goalIn || (qs.get("goal") in GOALS ? qs.get("goal") : "");
     document.title = mode === "new" ? "New project · Revora" : "Find your bike · Revora";
-    const makes = [...new Set(INDEX.filter(b => !b.generic).map(b => b.make))].sort();
+    const makes = [...new Set(INDEX.filter(b => !b.generic && !b.universal).map(b => b.make))].sort();
     const head = !goal ? `<div class="eyebrow">${mode === "new" ? "New project" : "Add your bike"}</div><h1 class="disp">What are you doing with your bike?</h1><p class="muted">This sets up your bike's page. You can start restoring later from the menu.</p>`
       : goal === "maintain" ? `<div class="eyebrow">Maintenance and records</div><h1 class="disp">Which bike is it?</h1><p class="muted">Search for it, or add it with the year, make and model. Any bike works.</p>`
-      : `<div class="eyebrow">${mode === "new" ? "New project" : "Motorcycle restoration"}</div><h1 class="disp">Which bike are you restoring?</h1><p class="muted">Pick your bike to get its parts diagrams, part numbers, a step-by-step restoration course and a tracker for every part.</p>`;
+      : `<div class="eyebrow">${mode === "new" ? "New project" : "Motorcycle restoration"}</div><h1 class="disp">Which bike are you restoring?</h1><p class="muted">Any bike works. Search for it, or add it with the year, make and model, and you get a step-by-step restoration course built for its kind of bike.</p>`;
     frame(`${head}
       <div class="pk-goal" role="radiogroup" aria-label="What are you doing with your bike?">${Object.entries(GOALS).map(([k, [t, d]]) => `<button type="button" class="pk-goal-o${goal === k ? " on" : ""}" role="radio" aria-checked="${goal === k}" data-goal="${k}"><span class="pk-goal-dot" aria-hidden="true"></span><b>${t}</b><span class="muted">${d}</span></button>`).join("")}</div>
       ${goal ? `<div class="pick-search"><input type="search" id="pickQ" placeholder="Year, make, model, e.g. ${goal === "maintain" ? "2012 Suzuki V-Strom 650" : "1977 Suzuki GS750"}" autocomplete="off" aria-label="Search for your bike"></div>
       <div class="pick-makes">${makes.map(m => `<button class="chip" data-make="${esc(m)}">${esc(m)}</button>`).join("")}</div>
       <div class="pick-list" id="pickList"></div>
-      <div class="pk-reqwrap" id="pickReq"></div>
-      ${goal === "restore" ? `<div id="pickMine"></div>` : ""}` : ""}
+      <div class="pk-reqwrap" id="pickReq"></div>` : ""}
       ${mode === "try" && sb && !session ? `<p class="muted pk-small">Trying it without an account saves to this browser only. <button class="linkbtn" data-nav="signup">Create a free account</button> to keep your project and share it with your team.</p>` : ""}`, { wide: true });
     app.querySelector(".pk-goal").onclick = e => { const o = e.target.closest("[data-goal]"); if (!o || o.dataset.goal === goal) return; ls.set("rv.goal", o.dataset.goal); showPicker(mode, o.dataset.goal); setTimeout(() => document.getElementById("pickQ")?.focus(), 30); };
     const lg = !session && localGeneric(), lgPack = lg && packForKey(lg.requestKey);
@@ -189,15 +220,16 @@
     const keep = goal === "maintain";
     const q = document.getElementById("pickQ"), list = document.getElementById("pickList");
     const reqBox = document.getElementById("pickReq"); let reqOpen = false;
-    const fillReq = () => { const f = document.getElementById("reqF"); if (!f) return; const g = guessBike(q.value); ["year", "make", "model"].forEach(k => { if (!f[k].dataset.touched) f[k].value = g[k]; }); if (!f.style.dataset.touched) f.style.value = guessStyle(f.make.value, f.model.value); };
+    const styleNote = () => { const f = document.getElementById("reqF"), box = document.getElementById("pkStyle"), dv = document.getElementById("pkDrive"); if (f && dv) { dv.hidden = f.style.value === "scooter"; if (!f.drive.dataset.touched) f.drive.value = guessDrive(f.make.value, f.model.value, f.style.value) === "cvt" ? "chain" : guessDrive(f.make.value, f.model.value, f.style.value); } if (f && box) box.innerHTML = `<b>Tailored for a ${esc((BIKE_STYLES.find(x => x[0] === f.style.value) || [, ""])[1].toLowerCase())}</b><span class="muted">${esc(STYLE_TXT[f.style.value] || "")}${f.style.value === "scooter" ? "" : " " + esc((DRIVES.find(x => x[0] === f.drive.value) || [, "Chain"])[1]) + " drive steps."} Plus the full core restoration: inspection, electrical, fuel, engine, wheels, brakes, suspension and a road test.</span>`; };
+    const fillReq = () => { const f = document.getElementById("reqF"); if (!f) return; const g = guessBike(q.value); ["year", "make", "model"].forEach(k => { if (!f[k].dataset.touched) f[k].value = g[k]; }); if (!f.style.dataset.touched) f.style.value = guessStyle(f.make.value, f.model.value); styleNote(); };
     const done = row => { reqBox.innerHTML = `<div class="pk-req done"><b>Request sent: ${esc(row.label)}</b><span>${esc(etaTxt(row.created_at, row.status))}. When it's ready it shows up in this search${mode === "new" ? " and you can start a project on it" : ""}.</span><button class="btn tan sm" data-startrow>Start my project now</button></div>`; reqBox.querySelector("[data-startrow]").onclick = () => { const [y, mk, ...md] = row.label.split(" "); startGeneric({ year: y, make: mk, model: md.join(" ") }); }; drawMine(); };
-    const openReq = () => { reqOpen = true; reqBox.innerHTML = reqFormHtml(goal); fillReq(); bindReqForm(document.getElementById("reqF"), done); };
-    const drawMine = async () => { const box = document.getElementById("pickMine"); if (box) box.innerHTML = reqListHtml(await myRequests()); };
+    const openReq = () => { reqOpen = true; reqBox.innerHTML = reqFormHtml(goal); fillReq(); const f = document.getElementById("reqF"); bindReqForm(f, done); f.addEventListener("change", e => { if (["style", "make", "model", "year"].includes(e.target.name)) { if (e.target.name !== "style" && !f.style.dataset.touched) f.style.value = guessStyle(f.make.value, f.model.value); styleNote(); } }); };
+    const drawMine = () => {};
     const draw = () => {
-      const hits = INDEX.filter(b => !b.generic && match(b, q.value)).sort((a, b) => a.make.localeCompare(b.make) || a.model.localeCompare(b.model) || a.year - b.year);
-      list.innerHTML = hits.length ? hits.map(b => card(b, goal)).join("") : keep ? "" : `<div class="pick-none"><b>We don't have that bike yet.</b><span class="muted">Request it below and we'll add it in about ${REQ_DAYS} days.</span></div>`;
+      const hits = INDEX.filter(b => !b.generic && !b.universal && match(b, q.value)).sort((a, b) => a.make.localeCompare(b.make) || a.model.localeCompare(b.model) || a.year - b.year);
+      list.innerHTML = hits.length ? hits.map(b => card(b, goal)).join("") : keep ? "" : `<div class="pick-none"><b>No problem, any bike works.</b><span class="muted">Add it below and pick the kind of bike. The restoration course is tailored to it.</span></div>`;
       if (!hits.length) { if (!reqOpen) openReq(); else fillReq(); }
-      else if (!reqOpen) reqBox.innerHTML = `<button class="linkbtn pk-reqlink" type="button">${keep ? "Don't see your bike? Add it" : "Don't see your exact bike? Request it"}</button>`;
+      else if (!reqOpen) reqBox.innerHTML = `<button class="linkbtn pk-reqlink" type="button">Don't see your bike? Add it</button>`;
       else fillReq();
     };
     reqBox.addEventListener("click", e => { if (e.target.closest(".pk-reqlink")) { openReq(); document.querySelector("#reqF input[name=year]")?.focus(); } });
@@ -213,7 +245,7 @@
   /* ---------- accounts ---------- */
   // on the sign-up page: a way back to a project kept in this browser, and a way to look around first
   const guestLinks = () => { const last = ls.get("rv.bike"), b = last && bikeOf(last);
-    return (b ? `<span>Started without an account? <button class="linkbtn" data-open-guest="${esc(last)}">Open the ${esc(b.generic ? "project" : bikeName(b))} saved on this browser</button></span>` : "")
+    return (b ? `<span>Started without an account? <button class="linkbtn" data-open-guest="${esc(last)}">Open the ${esc(b.generic || b.universal ? "project" : bikeName(b))} saved on this browser</button></span>` : "")
       + `<span>Just looking? <button class="linkbtn" data-nav="projects">Browse the bikes first</button></span>`; };
   function showAuth(kind) {
     const T = { signin: ["Sign in", "Sign in"], signup: ["Create your account", "Create account"], forgot: ["Reset your password", "Email me a reset link"], newpass: ["Choose a new password", "Save password"] }[kind];
@@ -298,9 +330,10 @@
     if (error) return fail(friendly(error));
     const prog = await projectProgress(data.map(p => p.id));
     // projects on the general bike: which request they're waiting on, and whether that bike's page is ready
-    const gen = data.filter(p => bikeOf(p.bike_id)?.generic), genKey = {}, genStyle = {}, genSil = {};
+    const gen = data.filter(p => bikeOf(p.bike_id)?.generic || bikeOf(p.bike_id)?.universal), genKey = {}, genStyle = {}, genSil = {};
     if (gen.length) { const { data: ms } = await sb.from("records").select("project_id,key:data->>requestKey,style:data->>style,sil:data->>silhouette").eq("coll", "meta").in("project_id", gen.map(p => p.id)); (ms || []).forEach(m => { genKey[m.project_id] = m.key; genStyle[m.project_id] = m.style; genSil[m.project_id] = m.sil; }); }
     const isLog = p => bikeOf(p.bike_id)?.generic && !genKey[p.id];
+    const isUni = p => !!bikeOf(p.bike_id)?.universal, uniTxt = p => (bikeOf(p.bike_id)?.styleName || "") + " restoration";
     const readyFor = p => bikeOf(p.bike_id)?.generic ? packForKey(genKey[p.id]) : null;
     const first = String(profile?.display_name || session.user.email || "").split(/[\s@]/)[0];
     const lastId = ls.get("rv.project"), feat = data.find(p => p.id === lastId) || data[0];
@@ -308,7 +341,7 @@
     const who = p => p.role === "owner" ? (p.members > 1 ? `You and ${p.members - 1} other${p.members > 2 ? "s" : ""}` : "Just you") : p.role === "viewer" ? "Shared with you, view only" : "Shared with you";
     const tag = p => { const b = bikeOf(p.bike_id), g = prog[p.id], pc = pctOf(p); return `<article class="gt">
         <button class="gt-open" data-project="${esc(p.id)}" aria-label="Open ${esc(p.name || bikeName(b))}">
-          <span class="gt-bike">${isLog(p) ? "Maintenance log" : b && b.generic ? (readyFor(p) ? "Bike page ready" : "Bike page coming soon") : esc((p.name && p.name !== bikeName(b)) ? bikeName(b) : (b && b.variant) || "")}</span><b class="gt-name">${esc(p.name || bikeName(b))}</b>
+          <span class="gt-bike">${isLog(p) ? "Maintenance log" : isUni(p) ? esc(uniTxt(p)) : b && b.generic ? (readyFor(p) ? "Bike page ready" : "Bike page coming soon") : esc((p.name && p.name !== bikeName(b)) ? bikeName(b) : (b && b.variant) || "")}</span><b class="gt-name">${esc(p.name || bikeName(b))}</b>
           ${isLog(p) ? "" : `<span class="gt-bar" aria-hidden="true"><i style="width:${pc.toFixed(1)}%"></i></span>`}
           <span class="gt-meta">${b && b.generic ? "Maintenance and records" : g && g.total ? `${g.done} of ${g.total} steps` : "Not started"}<span>${esc(who(p))}</span></span></button>
         ${p.role === "owner" && readyFor(p) ? `<div class="gt-ready"><span>The ${esc(bikeName(readyFor(p)))} page is ready.</span><button class="btn tan sm" data-connect="${esc(p.id)}">Connect</button></div>` : ""}${p.role === "owner" ? `<div class="gt-acts"><button class="linkbtn" data-share="${esc(p.id)}">Share</button><button class="linkbtn" data-rename="${esc(p.id)}">Rename</button></div>` : ""}</article>`; };
@@ -319,7 +352,7 @@
         ${feat ? `<div class="bench${isLog(feat) ? " nodial" : ""}">
           ${isLog(feat) ? "" : `<div class="bench-dial">${tach(pctOf(feat))}</div>`}
           <div class="bench-txt"><span class="bench-k">${lastId === feat.id ? "Last opened" : "Newest project"}</span>
-            <h2>${esc(feat.name || bikeName(fb))}</h2><span class="bench-bike">${isLog(feat) ? "Maintenance log" : fb && fb.generic ? (readyFor(feat) ? "The " + esc(bikeName(readyFor(feat))) + " page is ready to connect" : "We're building this bike's page") : esc([feat.name && feat.name !== bikeName(fb) ? bikeName(fb) : "", fb && fb.variant].filter(Boolean).join(", "))}</span>
+            <h2>${esc(feat.name || bikeName(fb))}</h2><span class="bench-bike">${isLog(feat) ? "Maintenance log" : isUni(feat) ? esc(uniTxt(feat)) : fb && fb.generic ? (readyFor(feat) ? "The " + esc(bikeName(readyFor(feat))) + " page is ready to connect" : "We're building this bike's page") : esc([feat.name && feat.name !== bikeName(fb) ? bikeName(fb) : "", fb && fb.variant].filter(Boolean).join(", "))}</span>
             ${fg && fg.next ? `<div class="bench-next"><span>Next step</span><b>${esc(fg.next)}</b></div>` : fg && fg.total ? `<div class="bench-next"><span>Course</span><b>Every step is done. Time to ride.</b></div>` : ""}
             <div class="bench-go">${fb && fb.generic && readyFor(feat) && feat.role === "owner" ? `<button class="btn tan big" data-connect="${esc(feat.id)}">Connect to its page</button><button class="btn ghost-l" data-project="${esc(feat.id)}">Open project</button>` : `<button class="btn tan big" data-project="${esc(feat.id)}">Open project</button>`}<button class="btn ghost-l" data-nav="new">Start another bike</button></div></div>
           ${benchArt(fb, genStyle[feat.id], genSil[feat.id])}</div>`
@@ -329,9 +362,7 @@
       ${data.length ? `<section class="garage"><div class="garage-h"><h2>Your garage</h2><button class="btn sm" data-nav="new">+ New project</button></div>
         <div class="gts">${data.map(tag).join("")}<button class="gt gt-new" data-nav="new"><b>Add a bike</b><span>Start a new project for another bike</span></button></div></section>` : ""}
       <section class="gfoot"><div><b>Working with a team?</b><span>Share a project and everyone sees the same parts, steps and photos, live. Owners can give edit or view access.</span></div>
-        <div><b>Bike not listed?</b><span>Request it and we'll add it in about ${REQ_DAYS} days.</span><button class="linkbtn" data-nav="browse">Find or request a bike</button></div></section>
-      <div id="garageReqs"></div>`, { wide: true, garage: true });
-    myRequests().then(rows => { const box = document.getElementById("garageReqs"); if (box) box.innerHTML = reqListHtml(rows); });
+        <div><b>Any bike works</b><span>Restoring or maintaining a bike we don't list? Add it with its year, make and model. Restorations get a course built for its kind of bike.</span><button class="linkbtn" data-nav="browse">Add a bike</button></div></section>`, { wide: true, garage: true });
     app.querySelectorAll("[data-connect]").forEach(b => b.onclick = e => { e.stopPropagation(); const p = data.find(x => x.id === b.dataset.connect); connectProject(p, readyFor(p)); });
     app.querySelectorAll("[data-rename]").forEach(b => b.onclick = async () => {
       const p = data.find(x => x.id === b.dataset.rename); const name = prompt("Project name", p.name || ""); if (name === null) return;
@@ -373,11 +404,11 @@
     try { window.PACK = await getJson("packs/" + encodeURIComponent(bikeId) + "/pack.json?v=" + (window.RV_BUILD || "")); }
     catch (e) { return fail("Couldn't load the data for this bike. Check your internet and try again."); }
     window.RV_CLOUD = cloud || null;
-    if (bikeOf(bikeId)?.generic) {
+    if (bikeOf(bikeId)?.generic || bikeOf(bikeId)?.universal) {
       let m = null;
       if (cloud) { const { data } = await sb.from("records").select("data").eq("project_id", cloud.projectId).eq("coll", "meta").eq("rec_id", "project").maybeSingle(); m = data && data.data; }
-      else m = localGeneric();
-      window.RV_BIKE_LABEL = m ? { year: m.year, make: m.make, model: m.model, style: m.style || guessStyle(m.make || "", m.model || ""), silhouette: m.silhouette || "", goal: m.goal || (m.requestKey ? "restore" : "maintain") } : null;
+      else m = localMeta(bikeId);
+      window.RV_BIKE_LABEL = m ? { year: m.year, make: m.make, model: m.model, style: m.style || guessStyle(m.make || "", m.model || ""), silhouette: m.silhouette || "", goal: m.goal || (m.requestKey ? "restore" : "maintain"), drive: m.drive || (bikeOf(bikeId)?.universal ? guessDrive(m.make || "", m.model || "", bikeOf(bikeId).style) : "") } : null;
     }
     try { await loadScript("app.js?v=" + (window.RV_BUILD || Date.now())); } catch (e) { fail("Couldn't load the app. Check your internet and try again."); }
   }
@@ -394,6 +425,7 @@
   /* ---------- for the app ---------- */
   // the library bike for this year, make and model, if Revora has its course
   window.rvRestoreFor = m => m ? packForKey(m.requestKey) || packForKey(reqKey(m.year, m.make, m.model)) : null;
+  window.rvUniversalFor = style => universalFor(style);
   window.rvEta = (created, status) => etaTxt(created, status);
   window.rvBikeName = bikeName;
   // move this project onto its bike's restoration course; everything logged stays
