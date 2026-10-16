@@ -114,6 +114,7 @@ function renderMobMenu() {
   $("#mobmenu").innerHTML = `<div class="mob-in"><div class="row" style="justify-content:space-between"><b class="eyebrow">Menu</b><button class="iconbtn" id="mobX" aria-label="Close menu">${ic("x")}</button></div>${window.rvHasAccounts && rvHasAccounts() ? `<div class="row mob-acct"><button class="btn sm tan garagebtn" onclick="rvAccount()">My garage</button>${window.RV_CLOUD ? `<button class="btn sm" onclick="rvSignOut()">Sign out</button>` : ""}</div>` : ""}
     <div class="moblist">${SECTIONS.filter(s => s.id === "home" || s.main).map(s => `<button class="mlink ${cur === s.id ? "on" : ""}" data-goto="${s.id}">${ic(s.i)}<span><b>${esc(s.t)}</b><small>${esc(s.d || "Overview and progress")}</small></span></button>`).join("")}</div>
     ${NAV_GROUPS.filter(([k]) => SECTIONS.some(s => s.grp === k)).map(([k, l]) => `<div class="eyebrow" style="margin-top:14px">${esc(l)}</div><div class="moblist grp">${SECTIONS.filter(s => s.grp === k).map(s => `<button class="mlink ${cur === s.id ? "on" : ""}" data-goto="${s.id}">${ic(s.i)}<span><b>${esc(s.t)}</b></span></button>`).join("")}</div>`).join("")}
+    <button class="mob-fb mob-ins" onclick="rvInstall && rvInstall()">${ic("download")}<span><b>Install the app</b><small>Revora on your home screen</small></span>${ic("next")}</button>
     <button class="mob-fb" data-feedback>${ic("chat")}<span><b>Send feedback</b><small>Tell us what to fix or add</small></span>${ic("next")}</button></div>`;
   $("#mobX").onclick = closeMenus;
 }

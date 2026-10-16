@@ -2004,3 +2004,10 @@ article.gt::before{box-shadow:inset 0 0 0 2px color-mix(in srgb,var(--edge) 35%,
 .wr-r{display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid #EEF2F5}.wr-r span{flex:1;color:var(--muted)}
 .wr-ph{all:unset;cursor:pointer;width:34px;height:26px;border-radius:5px;overflow:hidden}.wr-ph img{width:100%;height:100%;object-fit:cover}
 .wr-foot{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:14px;font-size:13px}.wr-foot select{padding:6px 8px;border-radius:8px;border:1px solid var(--line-2);font:inherit}
+/* install as an app */
+.ins-band,.mob-ins{display:none!important}
+.can-install .ins-band,.ios-install .ins-band{display:flex!important}.can-install .mob-ins,.ios-install .mob-ins{display:flex!important}
+.ins-band{align-items:center;gap:14px;flex-wrap:wrap;margin:18px 0 0;padding:14px 18px;border-radius:16px;background:linear-gradient(120deg,#17232C,#2C5F7C);color:#fff}
+.ins-band img{border-radius:12px}.ins-band>div{display:flex;flex-direction:column;flex:1;min-width:200px}.ins-band span{color:#B9D9EB;font-size:13.5px}
+.mob-ins{background:#2C5F7C}
+.ins-steps{margin:8px 0 0;padding-left:20px;line-height:1.7}

@@ -27,7 +27,7 @@
       : `<div class="pk-acct"><button class="btn sm" data-nav="signin">Sign in</button><button class="btn sm pri" data-nav="signup">Create account</button></div>`;
     app.innerHTML = `<div class="pick${opts.garage ? " is-garage" : ""}"><div class="pk-top"><button class="pk-logo" data-nav="home" aria-label="Revora home"><img class="brand-icon" src="img/revora-icon.svg" alt=""><img class="wordmark" src="img/revora-word.svg" alt="Revora"></button>${right}</div><div class="pick-in ${opts.wide ? "wide" : ""}">${inner}</div></div>`;
   }
-  const fail = msg => frame(`<h1 class="disp">Something went wrong</h1><p class="muted">${esc(msg)}</p><button class="btn pri" data-act="reload">Try again</button>`);
+  const fail = msg => !navigator.onLine ? frame(`<h1 class="disp">You're offline</h1><p class="muted">Revora needs a connection to load your bikes. Check your Wi-Fi or data, then try again.</p><button class="btn pri" data-act="reload">Try again</button>`) : frame(`<h1 class="disp">Something went wrong</h1><p class="muted">${esc(msg)}</p><button class="btn pri" data-act="reload">Try again</button>`);
   const spin = () => frame(`<div class="spinner"></div>`);
   let toastT; function note(msg, bad) { let t = document.getElementById("pkNote"); if (!t) { t = document.createElement("div"); t.id = "pkNote"; document.body.appendChild(t); } t.className = "pk-note" + (bad ? " bad" : ""); t.textContent = msg; t.hidden = false; clearTimeout(toastT); toastT = setTimeout(() => t.hidden = true, 5000); }
 
@@ -367,6 +367,7 @@
       </section>
       ${data.length ? `<section class="garage"><div class="garage-h"><h2>Your garage</h2><button class="btn sm" data-nav="new">+ New project</button></div>
         <div class="gts">${data.map(tag).join("")}<button class="gt gt-new" data-nav="new"><b>Add a bike</b><span>Start a new project for another bike</span></button></div></section>` : ""}
+      ${!(matchMedia("(display-mode: standalone)").matches || navigator.standalone) ? `<section class="ins-band"><img src="img/app-192.png" alt="" width="44" height="44"><div><b>Put Revora on your home screen</b><span>It opens like an app, full screen, one tap from your phone's home screen.</span></div><button class="btn tan" data-act="install">Install the app</button></section>` : ""}
       <section class="gfoot"><div><b>Working with a team?</b><span>Share a project and everyone sees the same parts, steps and photos, live. Owners can give edit or view access.</span></div>
         <div><b>Any bike works</b><span>Restoring or maintaining a bike we don't list? Add it with its year, make and model. Restorations get a course built for its kind of bike.</span><button class="linkbtn" data-nav="browse">Add a bike</button></div></section>`, { wide: true, garage: true });
     app.querySelectorAll("[data-connect]").forEach(b => b.onclick = e => { e.stopPropagation(); const p = data.find(x => x.id === b.dataset.connect); connectProject(p, readyFor(p)); });
@@ -499,7 +500,7 @@
   app.addEventListener("click", async e => {
     const n = e.target.closest("[data-nav]"), a = e.target.closest("[data-act]"), pr = e.target.closest("[data-project]");
     if (pr) { goUrl({ project: pr.dataset.project }); return; }
-    if (a) { if (a.dataset.act === "signout") window.rvSignOut(); if (a.dataset.act === "reload") location.reload(); return; }
+    if (a) { if (a.dataset.act === "signout") window.rvSignOut(); if (a.dataset.act === "reload") location.reload(); if (a.dataset.act === "install") window.rvInstall().then(o => { if (o === "accepted") showProjects(); }); return; }
     const og = e.target.closest("[data-open-guest]"); if (og) { goUrl({ bike: og.dataset.openGuest }); return; }
     if (!n) return; const v = n.dataset.nav;
     if (v === "home" || v === "projects") goUrl(session ? {} : { pick: 1 });
@@ -537,5 +538,21 @@
     if (!sb && !qs.has("pick") && last && bikeOf(last)) return openApp(last, null);
     showPicker("try");
   }
+  /* ---------- install as an app ---------- */
+  let installEv = null;
+  window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); installEv = e; document.documentElement.classList.add("can-install"); });
+  window.addEventListener("appinstalled", () => { installEv = null; document.documentElement.classList.remove("can-install"); note("Revora is installed. Open it from your home screen."); });
+  const standalone = () => matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
+  const isIOS = () => /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  if (isIOS() && !standalone()) document.documentElement.classList.add("ios-install");
+  window.rvCanInstall = () => !standalone() && (!!installEv || isIOS());
+  window.rvInstall = async () => {
+    if (installEv) { installEv.prompt(); const r = await installEv.userChoice.catch(() => null); installEv = null; document.documentElement.classList.remove("can-install"); return r && r.outcome; }
+    const box = document.createElement("div"); box.className = "pk-modal";
+    box.innerHTML = `<div class="pk-card"><h2 class="disp-s">Add Revora to your home screen</h2><ol class="ins-steps"><li>Tap the <b>Share</b> button at the bottom of Safari (the square with an arrow).</li><li>Scroll down and tap <b>Add to Home Screen</b>.</li><li>Tap <b>Add</b>. Revora opens like an app from then on.</li></ol><div class="pk-links"><button class="btn pri" data-close>Got it</button></div></div>`;
+    box.querySelector("[data-close]").onclick = () => box.remove(); document.body.appendChild(box); return "shown";
+  };
+  if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+
   start();
 })();

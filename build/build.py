@@ -56,7 +56,7 @@ loader = 'window.RV_CONFIG = ' + json.dumps({**{k: cfg.get(k) for k in ['supabas
 html = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Revora</title>
 <meta name="description" content="Restore your motorcycle: parts diagrams, part numbers, a step-by-step course and a parts tracker for your exact bike.">
-<link rel="icon" type="image/svg+xml" href="img/revora-icon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" type="image/svg+xml" href="img/revora-icon.svg"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#17232C"><link rel="apple-touch-icon" href="img/apple-touch-icon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Revora"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;1,6..12,400&display=swap">
 <style>:root{{color-scheme:light}}[hidden]{{display:none!important}}body{{margin:0}}img{{max-width:100%}}
 {css}
@@ -74,4 +74,12 @@ html = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name
 </body></html>
 '''
 (out / 'index.html').write_text(html)
+
+# ---- install as an app: manifest and a small service worker that keeps the app shell for offline starts ----
+(out / 'manifest.webmanifest').write_text(json.dumps({
+    "name": "Revora", "short_name": "Revora", "description": "Your bike's restoration course, maintenance log, receipts and records.",
+    "start_url": "./", "scope": "./", "display": "standalone", "background_color": "#17232C", "theme_color": "#17232C",
+    "icons": [{"src": "img/app-192.png", "sizes": "192x192", "type": "image/png"}, {"src": "img/app-512.png", "sizes": "512x512", "type": "image/png"},
+              {"src": "img/app-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}]}, indent=1))
+(out / 'sw.js').write_text((src / 'sw.js').read_text().replace('__BUILD__', build_id))
 print('app.js', len(app), 'bikes', len(index))
