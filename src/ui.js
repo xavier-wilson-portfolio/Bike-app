@@ -100,13 +100,14 @@ function closeMobMenu() { const m = $("#mobmenu"), b = $("#mobback"); if (!m || 
 function closeMenus() { const mg = $("#mega"); if (mg) mg.hidden = true; closeMobMenu(); }
 function megaHtml() {
   return `<div class="mega-in">${NAV_GROUPS.filter(([k]) => SECTIONS.some(s => s.grp === k)).map(([k, l]) => `<div class="mcol"><div class="eyebrow">${esc(l)}</div>${SECTIONS.filter(s => s.grp === k).map(s => `<button class="mlink" data-goto="${s.id}">${ic(s.i)}<span><b>${esc(s.t)}</b><small>${esc(s.d || "")}</small></span></button>`).join("")}</div>`).join("")}
-    <div class="mcol mfeature">${GENERIC ? `<b>Want to restore it?</b><small>Get a step-by-step restoration course for your bike. Everything you've logged stays.</small><div class="row"><button class="btn sm tan" data-goto="restore">Restore this bike</button>` : `<img src="img/d-engine.svg" alt=""><b>Not sure where to start?</b><small>Open Part 1 of the course, or ask the mechanic.</small><div class="row"><button class="btn sm tan" data-goto="course">Open the course</button>`}<button class="btn sm ask" data-ask="" data-ask-ctx="">${ic("chat")} Ask</button></div></div></div>`;
+    <div class="mcol mfeature">${GENERIC ? `<b>Want to restore it?</b><small>Get a step-by-step restoration course for your bike. Everything you've logged stays.</small><div class="row"><button class="btn sm tan" data-goto="restore">Restore this bike</button>` : `<img src="img/d-engine.svg" alt=""><b>Not sure where to start?</b><small>Open Part 1 of the course, or ask the mechanic.</small><div class="row"><button class="btn sm tan" data-goto="course">Open the course</button>`}<button class="btn sm ask" data-ask="" data-ask-ctx="">${ic("chat")} Ask</button></div><button class="mlink mfb" data-feedback>${ic("chat")}<span><b>Send feedback</b><small>Ideas, problems, anything</small></span></button></div></div>`;
 }
 function renderMobMenu() {
   const cur = R.sec === "lesson" ? "course" : R.sec;
   $("#mobmenu").innerHTML = `<div class="mob-in"><div class="row" style="justify-content:space-between"><b class="eyebrow">Menu</b><button class="iconbtn" id="mobX" aria-label="Close menu">${ic("x")}</button></div>${window.rvHasAccounts && rvHasAccounts() ? `<div class="row mob-acct"><button class="btn sm tan garagebtn" onclick="rvAccount()">My garage</button>${window.RV_CLOUD ? `<button class="btn sm" onclick="rvSignOut()">Sign out</button>` : ""}</div>` : ""}
     <div class="moblist">${SECTIONS.filter(s => s.id === "home" || s.main).map(s => `<button class="mlink ${cur === s.id ? "on" : ""}" data-goto="${s.id}">${ic(s.i)}<span><b>${esc(s.t)}</b><small>${esc(s.d || "Overview and progress")}</small></span></button>`).join("")}</div>
-    ${NAV_GROUPS.filter(([k]) => SECTIONS.some(s => s.grp === k)).map(([k, l]) => `<div class="eyebrow" style="margin-top:14px">${esc(l)}</div><div class="moblist grp">${SECTIONS.filter(s => s.grp === k).map(s => `<button class="mlink ${cur === s.id ? "on" : ""}" data-goto="${s.id}">${ic(s.i)}<span><b>${esc(s.t)}</b></span></button>`).join("")}</div>`).join("")}</div>`;
+    ${NAV_GROUPS.filter(([k]) => SECTIONS.some(s => s.grp === k)).map(([k, l]) => `<div class="eyebrow" style="margin-top:14px">${esc(l)}</div><div class="moblist grp">${SECTIONS.filter(s => s.grp === k).map(s => `<button class="mlink ${cur === s.id ? "on" : ""}" data-goto="${s.id}">${ic(s.i)}<span><b>${esc(s.t)}</b></span></button>`).join("")}</div>`).join("")}
+    <button class="mob-fb" data-feedback>${ic("chat")}<span><b>Send feedback</b><small>Tell us what to fix or add</small></span>${ic("next")}</button></div>`;
   $("#mobX").onclick = closeMenus;
 }
 function renderNav() {
@@ -153,10 +154,20 @@ function pageHead(sec, opts = {}) {
   const g = GUIDE[sec] || {};
   return `<div class="ph">${opts.eyebrow || g.eyebrow ? `<div class="eyebrow">${esc(opts.eyebrow || g.eyebrow)}</div>` : ""}<h1>${esc(opts.title || g.title || SEC[sec]?.t || "")}</h1>${opts.sub || g.sub ? `<p>${opts.sub || g.sub}</p>` : ""}${opts.act ? `<div class="act">${opts.act}</div>` : ""}</div>`;
 }
+/* "How this page works": shown the first time you open each page, then only as a small link. Saved to the account. */
 const guideHidden = lsGet("rv.guides", {});
+const tipPrefs = () => (window.rvPrefs ? rvPrefs.get() : lsGet("rv.tipPrefs", {}));
+const setTipPrefs = patch => { if (window.rvPrefs) rvPrefs.set(patch); else lsSet("rv.tipPrefs", Object.assign(tipPrefs(), patch)); };
+const tipsShownNow = new Set();   // pages whose tip box is open during this visit
+let tipAsk = null;                // page where we just asked "turn off all tips?"
 function guideHtml(sec) {
   const g = GUIDE[sec]; if (!g || !g.how) return "";
-  if (guideHidden[sec]) return `<div class="guide-mini row center"><button class="linkbtn" data-guide-show="${sec}">${ic("help")} How does this page work?</button>${askBtn("", "", "linkbtn ask")}</div>`;
+  const P = tipPrefs(), seen = new Set(P.seen || []);
+  const mini = `<div class="guide-mini row center"><button class="linkbtn" data-guide-show="${sec}">${ic("help")} How does this page work?</button>${askBtn("", "", "linkbtn ask")}</div>`;
+  if (tipAsk === sec) return `<div class="guide-off" role="status"><span>${ic("check")} Got it. Hide these tips on every page from now on?</span><div class="row" style="gap:8px"><button class="btn sm pri" data-tips-off>Don't show tips again</button><button class="btn sm" data-tips-keep>Keep them for new pages</button></div></div>`;
+  const forced = guideHidden["show:" + sec];
+  if (!forced && (P.tipsOff || guideHidden[sec] || (seen.has(sec) && !tipsShownNow.has(sec)))) return mini;
+  if (!seen.has(sec)) { seen.add(sec); tipsShownNow.add(sec); setTipPrefs({ seen: [...seen] }); }
   return `<div class="guide" role="note"><span class="gi">${ic("bulb")}</span><div class="grow"><b class="t">${esc(g.howTitle || "How this page works")}</b><ul>${g.how.map(x => `<li>${x}</li>`).join("")}</ul></div><div class="stack" style="gap:6px;align-items:stretch"><button class="btn sm" data-guide-hide="${sec}">Got it</button>${askBtn("", "", "btn sm ask")}</div></div>`;
 }
 const MONEY_TABS = [["budget", "Money overview"], ["purchasing", "Shopping list"], ["shops", "Where to buy"]];
@@ -182,8 +193,10 @@ function render(full) {
   const ph = c.querySelector(".ph");
   if (ph) { ph.insertAdjacentHTML("afterend", guideHtml(R.sec)); if (MONEY_TABS.some(t => t[0] === R.sec)) ph.insertAdjacentHTML("beforebegin", `<div class="subnav">${MONEY_TABS.map(([k, l]) => `<button data-go="${k}" class="${R.sec === k ? "on" : ""}">${l}</button>`).join("")}</div>`); }
   const gd = GUIDE[R.sec]; if (gd && ph && !ph.dataset.own) { const h1 = ph.querySelector("h1"); if (gd.title && h1) h1.textContent = gd.title; const pp = ph.querySelector("p"); if (gd.sub && pp) pp.innerHTML = gd.sub; if (gd.eyebrow && !ph.querySelector(".eyebrow")) ph.insertAdjacentHTML("afterbegin", `<div class="eyebrow">${esc(gd.eyebrow)}</div>`); }
-  $$("[data-guide-hide]", c).forEach(b => b.onclick = () => { guideHidden[b.dataset.guideHide] = 1; lsSet("rv.guides", guideHidden); render(false); });
-  $$("[data-guide-show]", c).forEach(b => b.onclick = () => { delete guideHidden[b.dataset.guideShow]; lsSet("rv.guides", guideHidden); render(false); });
+  $$("[data-guide-hide]", c).forEach(b => b.onclick = () => { const sec = b.dataset.guideHide; tipsShownNow.delete(sec); delete guideHidden["show:" + sec]; guideHidden[sec] = 1; lsSet("rv.guides", guideHidden); tipAsk = tipPrefs().tipsOff || tipPrefs().tipsAsked ? null : sec; render(false); });
+  $$("[data-guide-show]", c).forEach(b => b.onclick = () => { guideHidden["show:" + b.dataset.guideShow] = 1; render(false); });
+  $$("[data-tips-off]", c).forEach(b => b.onclick = () => { setTipPrefs({ tipsOff: true, tipsAsked: true }); tipAsk = null; toast("Page tips are off. You can turn them back on in Settings."); render(false); });
+  $$("[data-tips-keep]", c).forEach(b => b.onclick = () => { setTipPrefs({ tipsAsked: true }); tipAsk = null; render(false); });
   $$(".subnav [data-go]", c).forEach(b => b.onclick = () => go(b.dataset.go));
   view.bind && view.bind(c);
   if (!full) window.scrollTo(0, sy);

@@ -336,12 +336,16 @@
     const isUni = p => !!bikeOf(p.bike_id)?.universal, uniTxt = p => (bikeOf(p.bike_id)?.styleName || "") + " restoration";
     const readyFor = p => bikeOf(p.bike_id)?.generic ? packForKey(genKey[p.id]) : null;
     const first = String(profile?.display_name || session.user.email || "").split(/[\s@]/)[0];
+    const pins = (PREFS.pinned || []).filter(id => data.some(p => p.id === id)), isPin = p => pins.includes(p.id);
+    data.sort((a, b) => (isPin(a) ? pins.indexOf(a.id) : 1e6) - (isPin(b) ? pins.indexOf(b.id) : 1e6));
+    const theme = p => { let h = 0; for (const c of String(p.id)) h = (h * 31 + c.charCodeAt(0)) >>> 0; return isLog(p) ? ["th-blue", "th-sky", "th-sage"][h % 3] : ["th-tan", "th-ink", "th-tan", "th-sage"][h % 4]; };
     const lastId = ls.get("rv.project"), feat = data.find(p => p.id === lastId) || data[0];
     const pctOf = p => { const g = prog[p.id]; return g && g.total ? g.done / g.total * 100 : 0; };
     const who = p => p.role === "owner" ? (p.members > 1 ? `You and ${p.members - 1} other${p.members > 2 ? "s" : ""}` : "Just you") : p.role === "viewer" ? "Shared with you, view only" : "Shared with you";
-    const tag = p => { const b = bikeOf(p.bike_id), g = prog[p.id], pc = pctOf(p); return `<article class="gt">
+    const tag = p => { const b = bikeOf(p.bike_id), g = prog[p.id], pc = pctOf(p); return `<article class="gt ${theme(p)}${isPin(p) ? " pinned" : ""}">
+        <button class="gt-pin" data-pin="${esc(p.id)}" aria-pressed="${isPin(p)}" aria-label="${isPin(p) ? "Unpin" : "Pin"} ${esc(p.name || bikeName(b))}" title="${isPin(p) ? "Unpin" : "Pin to the top"}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></button>
         <button class="gt-open" data-project="${esc(p.id)}" aria-label="Open ${esc(p.name || bikeName(b))}">
-          <span class="gt-bike">${isLog(p) ? "Maintenance log" : isUni(p) ? esc(uniTxt(p)) : b && b.generic ? (readyFor(p) ? "Bike page ready" : "Bike page coming soon") : esc((p.name && p.name !== bikeName(b)) ? bikeName(b) : (b && b.variant) || "")}</span><b class="gt-name">${esc(p.name || bikeName(b))}</b>
+          <span class="gt-bike">${isPin(p) ? `<span class="gt-pintag">Pinned</span>` : ""}${isLog(p) ? "Maintenance log" : isUni(p) ? esc(uniTxt(p)) : b && b.generic ? (readyFor(p) ? "Bike page ready" : "Bike page coming soon") : esc((p.name && p.name !== bikeName(b)) ? bikeName(b) : (b && b.variant) || "")}</span><b class="gt-name">${esc(p.name || bikeName(b))}</b>
           ${isLog(p) ? "" : `<span class="gt-bar" aria-hidden="true"><i style="width:${pc.toFixed(1)}%"></i></span>`}
           <span class="gt-meta">${b && b.generic ? "Maintenance and records" : g && g.total ? `${g.done} of ${g.total} steps` : "Not started"}<span>${esc(who(p))}</span></span></button>
         ${p.role === "owner" && readyFor(p) ? `<div class="gt-ready"><span>The ${esc(bikeName(readyFor(p)))} page is ready.</span><button class="btn tan sm" data-connect="${esc(p.id)}">Connect</button></div>` : ""}${p.role === "owner" ? `<div class="gt-acts"><button class="linkbtn" data-share="${esc(p.id)}">Share</button><button class="linkbtn" data-rename="${esc(p.id)}">Rename</button></div>` : ""}</article>`; };
@@ -364,6 +368,7 @@
       <section class="gfoot"><div><b>Working with a team?</b><span>Share a project and everyone sees the same parts, steps and photos, live. Owners can give edit or view access.</span></div>
         <div><b>Any bike works</b><span>Restoring or maintaining a bike we don't list? Add it with its year, make and model. Restorations get a course built for its kind of bike.</span><button class="linkbtn" data-nav="browse">Add a bike</button></div></section>`, { wide: true, garage: true });
     app.querySelectorAll("[data-connect]").forEach(b => b.onclick = e => { e.stopPropagation(); const p = data.find(x => x.id === b.dataset.connect); connectProject(p, readyFor(p)); });
+    app.querySelectorAll("[data-pin]").forEach(b => b.onclick = e => { e.stopPropagation(); const id = b.dataset.pin, cur = (PREFS.pinned || []).filter(x => x !== id); window.rvPrefs.set({ pinned: b.getAttribute("aria-pressed") === "true" ? cur : [id].concat(cur) }); showProjects(); });
     app.querySelectorAll("[data-rename]").forEach(b => b.onclick = async () => {
       const p = data.find(x => x.id === b.dataset.rename); const name = prompt("Project name", p.name || ""); if (name === null) return;
       const { error } = await sb.from("projects").update({ name: name.trim().slice(0, 80) }).eq("id", p.id); if (error) note(friendly(error), true); else showProjects();
@@ -422,6 +427,37 @@
     await openApp(p.bike_id, { sb, db: rvCloudDb(sb, pid), user: session.user, profile: profile || {}, role: p.role, projectId: pid, projectName: p.name, plan: profile?.plan || "free" });
   }
 
+  /* ---------- per-person settings (pinned projects, page tips), saved to the account when there is one ---------- */
+  let PREFS = {}, prefT = null;
+  const prefKey = () => "rv.prefs." + (session ? session.user.id : "guest");
+  async function loadPrefs() {
+    try { PREFS = JSON.parse(ls.get(prefKey()) || "{}") || {}; } catch (e) { PREFS = {}; }
+    if (!sb || !session) return;
+    const { data, error } = await sb.from("profiles").select("prefs").eq("id", session.user.id).maybeSingle();
+    if (error || !data || !data.prefs) return;
+    const local = PREFS; PREFS = Object.assign({}, local, data.prefs);
+    PREFS.seen = [...new Set([...(local.seen || []), ...(data.prefs.seen || [])])];
+    ls.set(prefKey(), JSON.stringify(PREFS));
+  }
+  window.rvPrefs = {
+    get: () => PREFS,
+    set(patch) {
+      Object.assign(PREFS, patch); ls.set(prefKey(), JSON.stringify(PREFS));
+      clearTimeout(prefT); if (sb && session) prefT = setTimeout(() => sb.from("profiles").update({ prefs: PREFS }).eq("id", session.user.id).then(() => {}, () => {}), 700);
+    }
+  };
+  // feedback goes to the feedback table; if it can't be sent it waits in this browser and goes with the next one
+  window.rvFeedback = async row => {
+    const r = Object.assign({ created_at: new Date().toISOString() }, row);
+    let queue = []; try { queue = JSON.parse(ls.get("rv.feedbackQueue") || "[]"); } catch (e) {}
+    queue.push(r);
+    if (!sb) { ls.set("rv.feedbackQueue", JSON.stringify(queue)); return { queued: true }; }
+    const rows = queue.map(x => Object.assign({}, x, { user_id: session ? session.user.id : null, email: x.email || (session ? session.user.email : null) }));
+    const { error } = await sb.from("feedback").insert(rows);
+    if (error) { ls.set("rv.feedbackQueue", JSON.stringify(queue.slice(-20))); return { queued: true }; }
+    ls.set("rv.feedbackQueue", "[]"); return { ok: true };
+  };
+
   /* ---------- for the app ---------- */
   // the library bike for this year, make and model, if Revora has its course
   window.rvRestoreFor = m => m ? packForKey(m.requestKey) || packForKey(reqKey(m.year, m.make, m.model)) : null;
@@ -469,6 +505,7 @@
         session = (await sb.auth.getSession()).data.session;
         if (session) { const r = await sb.from("profiles").select("display_name,plan").eq("id", session.user.id).maybeSingle(); profile = r.data; }
         if (session) await flushPendingReq();
+        await loadPrefs();
         if (recovering) return;
       }
     }

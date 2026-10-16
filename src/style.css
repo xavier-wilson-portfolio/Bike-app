@@ -1734,3 +1734,48 @@ img.silcover{object-fit:contain;background:#fff;padding:10px}
 @media (max-width:900px){.md-grid{grid-template-columns:1fr}}
 @media (max-width:560px){.md-card{grid-template-columns:36px minmax(0,1fr);padding:12px}.md-ico{width:36px;height:36px}.md-side{grid-column:2;align-items:flex-start;text-align:left;flex-direction:row;flex-wrap:wrap;gap:8px 12px}}
 .md-stats{--b-navy:#17232C;--b-ink:#2C5F7C;--b-blue:#B9D9EB;--b-tan:#D9BF8E;--b-tan-soft:#F6EEDD;--b-blue-soft:#E6F1F8}
+/* garage cards: brand color at the top, fading to white */
+.gt{overflow:hidden;--top:#E6F1F8;--mid:#F4F9FC;--edge:#2C5F7C;background:linear-gradient(180deg,var(--top) 0,var(--mid) 46%,#fff 100%);border-color:color-mix(in srgb,var(--edge) 22%,#fff);box-shadow:0 1px 0 var(--line),0 8px 20px -14px var(--edge)}
+.gt::after{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:var(--edge)}
+.gt.th-blue{--top:#CFE5F2;--mid:#EEF6FB;--edge:#2C5F7C}
+.gt.th-tan{--top:#EBD7AE;--mid:#F8F0E0;--edge:#B8954F}
+.gt.th-ink{--top:#B7CEDC;--mid:#E8F0F5;--edge:#17232C}
+.gt.th-sky{--top:#B9D9EB;--mid:#E9F3F9;--edge:#4C86A8}
+.gt.th-sage{--top:#CFE3D6;--mid:#EEF6F0;--edge:#3E7A55}
+article.gt::before{box-shadow:inset 0 0 0 2px color-mix(in srgb,var(--edge) 35%,#fff),0 0 0 4px rgba(255,255,255,.7);background:#fff}
+.gt .gt-bike{color:color-mix(in srgb,var(--edge) 80%,#000)}
+.gt-bar{background:rgba(255,255,255,.75)}
+.gt-pin{all:unset;cursor:pointer;position:absolute;top:10px;right:10px;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.7);z-index:2}
+.gt-pin svg{width:18px;height:18px;fill:none;stroke:#5B6B76;stroke-width:1.7;stroke-linejoin:round}
+.gt-pin:hover svg,.gt-pin:focus-visible svg{stroke:#17232C}
+.gt-pin:focus-visible{outline:2px solid #2C5F7C}
+.gt.pinned .gt-pin{background:#17232C}
+.gt.pinned .gt-pin svg{fill:#D9BF8E;stroke:#D9BF8E}
+.gt-pintag{display:inline-block;margin-right:6px;padding:1px 7px;border-radius:999px;background:#17232C;color:#D9BF8E;font-size:11px;letter-spacing:.04em;text-transform:uppercase;vertical-align:1px}
+.gt-open{padding-right:48px}
+.gt.gt-new{background:transparent;box-shadow:none;border-color:var(--line-2)}.gt.gt-new::after{display:none}
+/* feedback form */
+.fb-kinds{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px}
+.fb-k{all:unset;cursor:pointer;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;gap:6px;padding:10px 6px;border:1.5px solid var(--line-2);border-radius:12px;font-size:13px;font-weight:600;text-align:center;background:#fff}
+.fb-k svg{width:20px;height:20px;color:#2C5F7C}
+.fb-k.on{border-color:#17232C;background:#E6F1F8}
+.fb-k:focus-visible{outline:2px solid #2C5F7C}
+.fb-l{display:flex;flex-direction:column;gap:5px;font-weight:600;font-size:13.5px;margin-top:4px}
+.fb-l textarea,.fb-l input{font:inherit;font-weight:400;font-size:15px;padding:10px 12px;border:1px solid var(--line-2);border-radius:10px;width:100%;box-sizing:border-box;resize:vertical}
+.fb-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:12px 0 6px;flex-wrap:wrap}
+.fb-q{font-weight:600;font-size:13.5px}
+.fb-rate{display:flex;gap:2px}
+.fb-rate button{all:unset;cursor:pointer;width:34px;height:34px;display:grid;place-items:center;border-radius:8px}
+.fb-rate svg{width:24px;height:24px;color:#9AA5AE}
+.fb-rate button.on svg{color:#B8954F;fill:#D9BF8E}
+.fb-rate button:focus-visible{outline:2px solid #2C5F7C}
+@media (max-width:480px){.fb-kinds{grid-template-columns:1fr 1fr}}
+.mfb{margin-top:10px}
+.mob-fb{all:unset;cursor:pointer;box-sizing:border-box;width:100%;margin-top:16px;display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:14px;background:#17232C;color:#fff}
+.mob-fb svg{width:20px;height:20px;color:#D9BF8E;flex:none}
+.mob-fb span{display:flex;flex-direction:column;flex:1}
+.mob-fb small{color:#B9D9EB;font-size:12.5px}
+.mob-fb:focus-visible{outline:2px solid #D9BF8E}
+.guide-off{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:12px 16px;border-radius:14px;background:#F6EEDD;border:1px solid #E7D3AA;max-width:880px;margin:0 auto 14px;font-size:14px}
+.guide-off>span{display:flex;align-items:center;gap:8px}
+.guide-off svg{width:18px;height:18px;color:#3E7A55}
