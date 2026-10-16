@@ -110,6 +110,7 @@ const DOC_KINDS = ["Before photo", "During photo", "After photo", "Part ID photo
 
 /* field types: text, textarea, num, money, date, select(opts), ref(coll), refs(coll), bool, url */
 const MAINT_KINDS = ["Scheduled service", "Repair", "Inspection", "Tires", "Upgrade", "Other"];
+const PAPER_KINDS = ["Insurance", "Registration", "Inspection", "Title", "License", "Warranty", "Roadside assistance", "Loan", "Storage", "Other"];
 const MOD_STATUS = ["Installed", "Planned", "Ordered", "Removed"];
 const MOD_CATS = ["Performance", "Exhaust", "Intake & fuel", "Suspension", "Brakes", "Wheels & tires", "Lighting", "Electrical & electronics", "Controls & ergonomics", "Protection", "Luggage", "Comfort", "Appearance", "Other"];
 const MAINT_CATS = ["Engine", "Fuel & air", "Drivetrain", "Brakes", "Suspension & steering", "Tires & wheels", "Electrical", "Cooling", "Controls & cables", "General"];
@@ -219,6 +220,18 @@ const SCHEMA = {
     F("replaced", "Stock part it replaced", "text", { full: 1, hint: "Leave empty if it's an add-on, like heated grips or a phone mount." }), F("stockPartNo", "Stock part number", "text"),
     F("stockKept", "Stock part", "select", { opts: ["Kept", "Sold", "Thrown away", "Not applicable"] }), F("stockLocation", "Where the stock part is stored", "text"),
     F("notes", "Notes", "textarea", { full: 1, hint: "Settings, jetting or tuning changes, and anything a future owner or shop should know." })] },
+  fuel: { label: "Fill-up", plural: "Fuel log", prefix: "FUEL-", pad: 4, title: "date", fields: [
+    F("date", "Date", "date", { req: 1 }), F("odometer", "Odometer (miles)", "num", { req: 1 }), F("gallons", "Gallons", "num", { req: 1 }),
+    F("total", "Total paid", "money"), F("ppg", "Price per gallon", "money", { hint: "Leave at 0 and it works it out from the total." }),
+    F("full", "Filled to full", "bool", { hint: "Miles per gallon is worked out between full tanks." }), F("octane", "Fuel", "select", { opts: ["", "Regular (87)", "Midgrade (89)", "Premium (91-93)", "Ethanol-free", "Other"] }),
+    F("station", "Station", "text"), F("notes", "Notes", "textarea", { full: 1 })] },
+  papers: { label: "Paper", plural: "Papers & renewals", prefix: "PAP-", pad: 3, title: "name", fields: [
+    F("kind", "Type", "select", { opts: PAPER_KINDS }), F("name", "Name", "text", { req: 1, full: 1, hint: "For example: Progressive policy, Ohio registration, extended warranty." }),
+    F("provider", "Company or office", "text"), F("number", "Policy, plate or document number", "text"),
+    F("start", "Start date", "date"), F("expires", "Renews or expires", "date"),
+    F("cost", "Cost", "money"), F("billing", "Cost is paid", "select", { opts: ["Once per term", "Monthly", "One time"] }),
+    F("remindDays", "Remind me this many days before", "num"), F("autoRenew", "Renews by itself", "bool"),
+    F("docId", "Photo or PDF", "ref", { ref: "docs" }), F("notes", "Notes", "textarea", { full: 1, hint: "Coverage, agent phone number, what to bring to renew." })] },
   mileage: { label: "Odometer reading", plural: "Odometer readings", prefix: "ODO-", pad: 4, title: "miles", fields: [
     F("date", "Date", "date", { req: 1 }), F("miles", "Odometer (miles)", "num", { req: 1 }), F("note", "Note", "text", { full: 1 })] },
   tools: { label: "Tool or supply", plural: "Tools & supplies", prefix: "TOOL-", pad: 3, title: "name", fields: [
@@ -380,7 +393,7 @@ function blank(c, init = {}) {
     tasks: { status: "Not started", priority: "Normal", safety: "Medium", approval: "Pending", module: "general", phase: "A", comments: [] }, inspections: { result: "Pending", spec: VERIFY, date: today() },
     purchases: { status: "Requested", qty: 1, fitment: "Pending", qc: "Pending" }, expenses: { status: "Paid", date: today() }, worklogs: { date: today(), approval: "Pending", memberId: ME.actingAs || "" },
     docs: { kind: "During photo", date: today() }, issues: { status: "Open", severity: "Medium", date: today(), type: "Issue" }, decisions: { status: "Open", severity: "Medium" },
-    gates: { status: "Not started", required: true }, checks: { result: "Pending", criticality: "Critical" }, finishes: { status: "Not started", qc: "Pending" }, maintenance: { date: today(), planned: false, kind: "Scheduled service", doneBy: "Myself", items: [] }, schedule: { category: "Engine" }, mileage: { date: today() }, team: { role: ROLES[1] }, steps: { status: "Not started", result: "Pending" } };
+    gates: { status: "Not started", required: true }, checks: { result: "Pending", criticality: "Critical" }, finishes: { status: "Not started", qc: "Pending" }, fuel: { date: today(), full: true }, papers: { kind: "Insurance", billing: "Once per term", remindDays: 30 }, maintenance: { date: today(), planned: false, kind: "Scheduled service", doneBy: "Myself", items: [] }, schedule: { category: "Engine" }, mileage: { date: today() }, team: { role: ROLES[1] }, steps: { status: "Not started", result: "Pending" } };
   return Object.assign(r, defaults[c] || {}, init);
 }
 

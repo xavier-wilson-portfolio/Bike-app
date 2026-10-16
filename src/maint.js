@@ -18,7 +18,7 @@ const svcCost = r => n(r.cost) || n(r.partsCost) + n(r.laborCost);
 
 /* current odometer: the highest reading anywhere, with the date it was seen */
 function odoNow() {
-  const pts = sorted("mileage").map(r => ({ miles: n(r.miles), date: r.date })).concat(svcDone().filter(r => n(r.odometer)).map(r => ({ miles: n(r.odometer), date: r.date })));
+  const pts = sorted("mileage").map(r => ({ miles: n(r.miles), date: r.date })).concat(svcDone().filter(r => n(r.odometer)).map(r => ({ miles: n(r.odometer), date: r.date })), sorted("fuel").filter(r => n(r.odometer)).map(r => ({ miles: n(r.odometer), date: r.date })));
   if (!pts.length) return null;
   return pts.reduce((a, b) => (b.miles > a.miles || (b.miles === a.miles && b.date > a.date) ? b : a));
 }

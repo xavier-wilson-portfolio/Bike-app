@@ -1937,3 +1937,34 @@ article.gt::before{box-shadow:inset 0 0 0 2px color-mix(in srgb,var(--edge) 35%,
 .rcl-vin{max-width:1100px;margin:0 auto}
 @media (max-width:860px){.rcl-wrap{grid-template-columns:1fr}}
 .hr-yes svg{width:14px;height:14px;vertical-align:-2px}.rcl-vin a.btn{text-decoration:none}
+/* ---------- fuel & costs ---------- */
+.co-per{display:flex;justify-content:center;margin:0 auto 14px;width:max-content;max-width:100%}
+.co-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;margin-bottom:16px}
+.co-links{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;font-size:13px}
+.co-bars{display:grid;grid-template-columns:repeat(12,1fr);gap:6px;height:170px;align-items:end;padding-top:6px}
+.co-col{display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;gap:4px}
+.co-col span{font-size:11px;color:var(--muted)}
+.co-stack{width:100%;max-width:28px;min-height:2px;display:flex;flex-direction:column-reverse;border-radius:5px 5px 2px 2px;overflow:hidden;background:#EEF2F5}
+.co-stack i{display:block;min-height:1px}
+.co-fstats{display:grid;grid-template-columns:repeat(4,1fr) 1.6fr;gap:10px;margin-bottom:12px}
+.co-fstats>div{background:#F4F9FC;border-radius:10px;padding:10px 12px;display:flex;flex-direction:column}
+.co-fstats b{font-family:var(--f-display);font-size:22px}.co-fstats span{font-size:12px;color:var(--muted)}
+.co-spark{width:100%;height:46px}.co-spark polyline{fill:none;stroke:#3E7A55;stroke-width:2.5;stroke-linejoin:round}
+.fu-calc{font-size:13.5px;color:#2C5F7C;font-weight:600;min-height:18px;margin-top:6px}
+@media (max-width:900px){.co-grid{grid-template-columns:1fr}.co-fstats{grid-template-columns:1fr 1fr}.co-sp{grid-column:1/-1}}
+/* ---------- papers ---------- */
+.pp-list{display:flex;flex-direction:column;gap:10px;margin-bottom:12px}
+.pp-card{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);border-left:4px solid #3E7A55;border-radius:14px;padding:14px 16px;box-shadow:var(--shadow)}
+.pp-card.soon{border-left-color:#C98A1B;background:linear-gradient(90deg,#FBF4E4,#fff 45%)}.pp-card.over{border-left-color:#C0392B;background:linear-gradient(90deg,#FBE9E6,#fff 45%)}.pp-card.none{border-left-color:#9AA5AE}
+.pp-ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:#E6F1F8;color:#2C5F7C}.pp-ico svg{width:22px;height:22px}
+.pp-main{display:flex;flex-direction:column;gap:5px;min-width:0}
+.pp-st{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.pp-pill{font-size:12px;font-weight:700;border-radius:999px;padding:2px 9px;background:#EAF4EC;color:#2F5E41}
+.pp-pill.soon{background:#FBF1DC;color:#8A5A12}.pp-pill.over{background:#FBE7E4;color:#A23A2C}.pp-pill.none{background:#EEF2F5;color:#5B6B76}
+.pp-bar{width:140px;height:6px;border-radius:3px;background:#EEF2F5;overflow:hidden}.pp-bar i{display:block;height:100%;background:#3E7A55}
+.pp-card.soon .pp-bar i{background:#C98A1B}
+.pp-side{display:flex;flex-direction:column;gap:6px;align-items:flex-end}
+.pp-thumb{all:unset;cursor:pointer;width:64px;height:44px;border-radius:8px;overflow:hidden;border:1px solid var(--line)}.pp-thumb img{width:100%;height:100%;object-fit:cover}
+.pp-view img{width:100%;max-height:70vh;object-fit:contain;border-radius:10px;background:#17232C}
+.rcl-banner.pap{background:#E6F1F8;border-color:#B9D9EB;color:#17232C}.rcl-banner.pap.park{background:#FBE7E4;border-color:#E4A79C;color:#7A2418}
+@media (max-width:560px){.pp-card{grid-template-columns:36px minmax(0,1fr)}.pp-ico{width:36px;height:36px}.pp-side{grid-column:2;flex-direction:row;align-items:center}}

@@ -6,7 +6,7 @@ const DAY = 864e5;
 /* how far the bike goes per day: from the odometer readings and service mileages over the last year, or what the rider told us */
 function ridePace() {
   const set = remSettings();
-  const pts = sorted("mileage").map(r => ({ miles: n(r.miles), date: r.date })).concat(svcDone().filter(r => n(r.odometer)).map(r => ({ miles: n(r.odometer), date: r.date })))
+  const pts = sorted("mileage").map(r => ({ miles: n(r.miles), date: r.date })).concat(svcDone().filter(r => n(r.odometer)).map(r => ({ miles: n(r.odometer), date: r.date })), sorted("fuel").map(r => ({ miles: n(r.odometer), date: r.date })))
     .filter(p => p.miles && p.date).sort((a, b) => a.date.localeCompare(b.date));
   const cut = addDays(today(), -400), recent = pts.filter(p => p.date >= cut);
   let fromReadings = null;
