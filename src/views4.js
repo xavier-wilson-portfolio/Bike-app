@@ -27,60 +27,52 @@ function bindHeroPhoto(root) {
 VIEWS.home = {
   render() {
     const m = meta(), prog = overallProgress(), nx = nextLesson(), nxi = lessonIndex(nx.id), L = LESSONS[nx.id] || {}, ns = phaseStats(nx), pc = partCounts(), f = finance();
-    const ts = sorted("tasks"), done = ts.filter(tasksDone).length, chk = sorted("checks"), gates = sorted("gates");
-    const passed = chk.filter(c => c.result === "Pass").length + gates.filter(g => g.status === "Passed").length;
-    const rec = recommendedTasks(4), act = sorted("activity").sort((a, b) => b.ts.localeCompare(a.ts)).slice(0, 6);
-    const pname = m.paintName || "Candy blue";
-    return `${exampleBanner()}
-    <section class="hero2 full">
-      <div class="hero2-text"><div class="eyebrow">${esc(m.bike || BIKE.name)} · Restoration course</div>
-        <h1>Let's bring this ${BIKE.short} back to life</h1>
-        <p>Fourteen parts, one step at a time. Every step tells you what to do and why, ${X.diagrams3d ? "the 3D diagrams show every piece" : HAS_CAT || X.handDiagrams ? "the diagrams show every piece" : "the factory parts diagrams are one click away"}, and the mechanic is a click away if you get stuck.</p>
-        <div class="act"><button class="btn tan big" data-lesson="${nx.id}">${ic("play")} ${lessonState(nx) === "todo" && nxi === 0 ? "Start Part 1" : "Continue Part " + (nxi + 1)}</button>${(L.focus && GROUP_DIAG[L.focus] && scanBtn(GROUP_DIAG[L.focus], "Scan parts", "btn big")) || scanPickBtn("Scan parts", "btn big")}<button class="btn big" data-go="diagrams">${ic(X.diagrams3d ? "cube" : "layers")} ${X.diagrams3d ? "Explore 3D diagrams" : HAS_CAT || X.handDiagrams ? "Explore the diagrams" : "Parts diagrams"}</button></div></div>
-      ${heroPhotoHtml()}
-      <div class="specstrip">${SPECS.map(([v, l]) => `<div><b>${esc(v)}</b><span>${esc(l)}</span></div>`).join("")}</div>
-      <p class="specsrc">${esc(BIKE.specNote || "Published specs for the " + BIKE.name + ".")} <a href="${SPEC_SOURCE.url}" target="_blank" rel="noopener">Source</a>. Always check against your bike and its factory manual.</p>
-    </section>
-    <div class="ph" style="display:none"></div>
-    <section class="contcard">
-      ${lessonArt(L, "card")}
-      <div class="stack" style="gap:8px"><div class="eyebrow">${lessonState(nx) === "todo" && nxi === 0 ? "Start here" : "Pick up where you left off"} · Part ${nxi + 1} of 14</div><h2 class="disp">${esc(L.title || nx.name)}</h2><p class="muted" style="margin:0">${esc(L.short || "")}</p>
-        <div class="row"><span class="num muted">${ns.done} of ${ns.total} steps</span><div class="progress" style="flex:1;min-width:120px"><i style="width:${ns.pct * 100}%"></i></div></div>
-        <div class="row"><button class="btn pri" data-lesson="${nx.id}">Open Part ${nxi + 1} ${ic("next")}</button>${askBtn(`I'm starting Part ${nxi + 1} (${L.title}). What should I do first, in simple steps?`, "Part " + (nxi + 1), "btn ask")}${(L.focus && GROUP_DIAG[L.focus] && scanBtn(GROUP_DIAG[L.focus], "Scan parts", "btn")) || scanPickBtn("Scan parts", "btn")}</div></div>
-    </section>
-    <section class="stack"><div class="sechead"><div class="eyebrow">How it works</div><h2 class="disp">Three things to remember</h2></div>
-      <div class="steps3">
-        <div class="step3"><span class="ico">${ic("book")}</span><span class="n">01</span><h3>Follow the course</h3><p>Start at Part 1. Tick off each step as you finish it.</p><button class="btn sm" data-go="course">See the course</button></div>
-        ${!HAS_CAT && !X.handDiagrams ? `<div class="step3"><span class="ico">${ic("layers")}</span><span class="n">02</span><h3>Look before you wrench</h3><p>Open the factory parts diagrams for the area you're working on so you know how it goes back together.</p><button class="btn sm" data-go="diagrams">Parts diagrams</button></div>` : `<div class="step3"><span class="ico">${ic("cube")}</span><span class="n">02</span><h3>Look before you wrench</h3><p>Open the ${X.diagrams3d ? "3D " : ""}diagram for any area to see how every piece fits together.</p><button class="btn sm" data-go="diagrams">Open ${X.diagrams3d ? "3D " : ""}diagrams</button></div>`}
-        <div class="step3"><span class="ico">${ic("chat")}</span><span class="n">03</span><h3>Ask when you're stuck</h3><p>The mechanic answers questions on every page and every step.</p><button class="btn sm ask" data-ask="" data-ask-ctx="">${ic("chat")} Ask the mechanic</button></div>
-      </div></section>
-    <section class="stack"><div class="sechead"><div class="eyebrow">The course</div><h2 class="disp">Your 14 parts</h2><p>Open any part, any time. The highlighted one is where you are now.</p></div>
-      <div class="lessons">${sorted("phases").map((p, i) => lessonCard(p, i, p.id === nx.id)).join("")}</div></section>
-    ${X.diagrams3d && GALLERY.some(([, , , g]) => galleryDiags(g).length) ? `<section class="band full"><div class="band-in stack"><div class="sechead"><div class="eyebrow">Up close</div><h2 class="disp">Know every piece</h2><p>Click a picture to open its 3D diagrams and see how every part fits together.</p></div>
-      <div class="gallery2">${GALLERY.filter(([, , , g]) => galleryDiags(g).length).map(([img, t, d, g], i) => { const n = galleryDiags(g).length; return `<button class="gtile" data-gal="${g}"><img src="img/${img}.svg" alt="${esc(t)}" loading="lazy"><span><b>${esc(t)}</b><small>${esc(d)} ${n > 1 ? n + " 3D diagrams." : "1 3D diagram."}</small></span></button>`; }).join("")}</div></div></section>` : ""}
-    ${X.videos ? `<section class="vband"><div class="vb-text stack"><div class="eyebrow">Watch & learn</div><h2 class="disp">See a ${BIKE.short} rebuilt, start to finish</h2><p class="muted" style="margin:0">A 20-part video series following one ${BIKE.short} restoration. Watch an episode before you start the matching job.</p>
-        <div class="row"><button class="btn pri" data-go="videos">${ic("play")} Watch the series</button><span class="hint-text">${VIDEOS.length} videos · ${totalRuntime()}</span></div></div>
-      <button class="vb-art" data-go="videos" aria-label="Open the video series">${vidThumb(6, "big")}<span class="vp-btn">${ic("play")}</span></button></section>` : ""}
-    ${X.paint ? `<section class="paintband"><div class="pb-art">${bikeArt(n(m.paintHex) || PAINTS[pname] || PAINTS["Candy blue"], m.frameFinish || "Gloss black", m.stripe || "gold")}</div>
-      <div class="stack" style="gap:10px"><div class="eyebrow">Paint studio</div><h2 class="disp">Pick your colors</h2><p class="muted" style="margin:0">Try eight classic colors on the bike, choose a frame finish and pinstripe, then follow the step-by-step guide to painting the tank and parts.</p>
-        <div class="swatches small">${Object.entries(PAINTS).map(([nm, hex]) => `<span class="swatch" title="${esc(nm)}" style="--c:#${hex.toString(16).padStart(6, "0")}"></span>`).join("")}</div>
-        <div><button class="btn pri" data-go="paint">Open the Paint Studio ${ic("next")}</button></div></div></section>` : ""}
-    <section class="stack"><div class="sechead"><div class="eyebrow">Progress</div><h2 class="disp">At a glance</h2></div>
-      <div class="kpis">
-        <button class="kpi green" data-go="inventory|${esc(JSON.stringify({ color: "green" }))}"><span class="l">Parts finished</span><span class="v">${pc.green} / ${pc.total}</span><span class="s">restored and checked</span></button>
-        <button class="kpi" data-go="tasks"><span class="l">Steps done</span><span class="v">${done} / ${ts.length}</span><span class="s">across all 14 parts</span></button>
-        <button class="kpi ${f.forecast > f.total ? "red" : ""}" data-go="budget"><span class="l">Money spent</span><span class="v">${money(f.paid)}</span><span class="s">of ${money(f.total)} budget</span></button>
-        <button class="kpi" data-go="gates"><span class="l">Safety checks passed</span><span class="v">${passed} / ${chk.length + gates.length}</span><span class="s">${safetyUnresolved()} open safety issues</span></button>
-        ${(() => { const o = typeof odoNow === "function" ? odoNow() : null, st = sorted("schedule").map(it => svcState(it, o)), ov = st.filter(x => x.status === "over").length, sn = st.filter(x => x.status === "soon").length; return `<button class="kpi ${ov ? "red" : ""}" data-go="maintenance"><span class="l">Maintenance</span><span class="v">${!st.length ? "Set up" : ov ? ov + " overdue" : sn ? sn + " due soon" : st.every(x => x.status === "none" || x.status === "nointerval") ? "Set up" : "Up to date"}</span><span class="s">${o ? milesFmt(o.miles) + " mi on the clock" : st.length ? st.length + " items to start tracking" : "log your first service"}</span></button>`; })()}
-      </div></section>
-    <div class="grid g2" style="align-items:start">
-      <div class="panel stack"><h2 class="sec left">Ready to do next</h2><p class="hint-text" style="text-align:left">Everything these steps depend on is done. Tick one off when it's finished.</p>
-        ${rec.length ? `<div class="stepl">${rec.map(t => `<div class="st"><div class="st-h" data-open="tasks|${t.id}">${stepCheck(t)}<div class="st-t"><b>${esc(t.title)}</b><span>Part ${lessonIndex(t.phase) + 1} · ${esc(LESSONS[t.phase]?.title || "")}${t.safety === "Critical" ? " · safety-critical" : ""}</span></div>${ic("next")}</div></div>`).join("")}</div>` : `<div class="empty">Nothing is ready right now. Check the To-do list for blocked steps.</div>`}</div>
-      <div class="panel stack"><h2 class="sec left">Recent activity</h2>${act.length ? `<div class="feed">${act.map(a => `<div><time>${fmtTime(a.ts)}</time><span><b>${esc(a.by)}</b> ${esc(a.summary)}${a.title && SCHEMA[a.coll] ? ` · ${esc(String(a.title).slice(0, 40))}` : ""}</span></div>`).join("")}</div>` : `<div class="empty">Changes by the team show up here.</div>`}</div>
-    </div>
-    <details class="more"><summary>Show all the numbers ${ic("chev")}</summary><div class="stack" style="margin-top:12px">${VIEWS.overview.render()}</div></details>`;
+    const ts = sorted("tasks").filter(t => t.status !== "Cancelled"), done = ts.filter(tasksDone).length, W = ME.canWrite;
+    const rec = recommendedTasks(4), recIds = new Set(rec.map(t => t.id)), waiting = rec.length < 4 ? ts.filter(t => !tasksClosed(t) && !recIds.has(t.id)).sort((a, b) => lessonIndex(a.phase) - lessonIndex(b.phase) || a.id.localeCompare(b.id, undefined, { numeric: true })).slice(0, 4 - rec.length) : [], act = sorted("activity").sort((a, b) => b.ts.localeCompare(a.ts)).slice(0, 5);
+    const phases = sorted("phases"), upcoming = phases.slice(nxi + 1, nxi + 4), pct = Math.round(prog * 100), fresh = lessonState(nx) === "todo" && nxi === 0;
+    const r = 26, c = 2 * Math.PI * r, ring = `<svg class="mh-ring" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="${r}" class="bg"/><circle cx="32" cy="32" r="${r}" class="fg green" stroke-dasharray="${c.toFixed(1)}" stroke-dashoffset="${(c * (1 - prog)).toFixed(1)}"/></svg>`;
+    const stat = (cls, k, v, sub, attrs) => `<button class="mh-stat ${cls}" ${attrs}><span class="mh-k">${k}</span><span class="mh-v">${v}</span><span class="mh-s">${sub}</span></button>`;
+    const diagLbl = X.diagrams3d ? "3D diagrams" : "Parts diagrams";
+    return `${exampleBanner()}<section class="mh rs-home">
+      <div class="mh-hero">
+        <div class="mh-hero-l">
+          <div class="mh-eyebrow">${ic("book")} Restoration course</div>
+          <h1>${esc(m.bike || BIKE.name)}</h1>
+          <div class="mh-chips"><span>Part ${nxi + 1} of ${phases.length}</span><span>${pct}% done</span>${SPECS.slice(0, 2).map(([v]) => `<span>${esc(v)}</span>`).join("")}</div>
+          <p>${phases.length} parts, one step at a time. Every step says what to do and why, and the mechanic is a click away if you get stuck.</p>
+          <div class="mh-acts"><button class="btn mh-pri" data-lesson="${nx.id}">${ic("play")} ${fresh ? "Start Part 1" : "Continue Part " + (nxi + 1)}</button><button class="btn mh-sec" data-go="${X.diagrams3d ? "viewer" : "diagrams"}">${ic(X.diagrams3d ? "cube" : "layers")} ${diagLbl}</button></div>
+        </div>
+        <div class="mh-stage">${heroPhotoHtml()}</div>
+      </div>
+      <div class="mh-stats">
+        ${stat("ring c-green", ic("book") + "Course", `${ring}<span>${pct}%</span>`, `${done} of ${ts.length} steps done`, 'data-go="course"')}
+        ${stat("c-tan txt", ic("play") + "Up next", esc(L.title || nx.name), `Part ${nxi + 1} · ${ns.done} of ${ns.total} steps`, `data-lesson="${nx.id}"`)}
+        ${stat("c-blue", ic("box") + "Parts finished", `${pc.green}<small> / ${pc.total}</small>`, "restored and checked", 'data-go="inventory"')}
+        ${stat(f.forecast > f.total && f.total ? "c-red" : "c-navy", ic("dollar") + "Money spent", money(f.paid), f.total ? "of " + money(f.total) + " budget" : "Set a budget in Money", 'data-go="budget"')}
+      </div>
+      <div class="mh-row">
+        <section class="mh-panel p-due"><div class="mh-ph"><h2><span class="mh-hi">${ic("book")}</span>Your course</h2><button class="linkbtn" data-go="course">All ${phases.length} parts ${ic("next")}</button></div>
+          <button class="rs-cur" data-lesson="${nx.id}"><span class="rs-art">${lessonArt(L, "card")}</span><span class="rs-cur-t"><span class="rs-k">${fresh ? "Start here" : "Up next"} · Part ${nxi + 1}</span><b>${esc(L.title || nx.name)}</b><span class="muted">${esc(L.short || "")}</span><span class="rs-prog"><i style="width:${(ns.pct * 100).toFixed(1)}%"></i></span><span class="rs-n">${ns.done} of ${ns.total} steps</span></span></button>
+          ${upcoming.length ? `<div class="rs-next">${upcoming.map((p, k) => { const LL = LESSONS[p.id] || {}, sp = phaseStats(p); return `<button class="rs-nx" data-lesson="${p.id}"><span class="rs-num">${nxi + 2 + k}</span><span><b>${esc(LL.title || p.name)}</b><span class="faint">${sp.total} steps</span></span>${ic("next")}</button>`; }).join("")}</div>` : ""}
+        </section>
+        <section class="mh-panel p-jobs"><div class="mh-ph"><h2><span class="mh-hi">${ic("check")}</span>Ready to do next</h2><button class="linkbtn" data-go="tasks">To-do list ${ic("next")}</button></div>
+          ${rec.length || waiting.length ? `<div class="stepl">${rec.map(t => `<div class="st"><div class="st-h" data-open="tasks|${t.id}">${stepCheck(t)}<div class="st-t"><b>${esc(t.title)}</b><span>Part ${lessonIndex(t.phase) + 1} · ${esc(LESSONS[t.phase]?.title || "")}${t.safety === "Critical" ? " · safety-critical" : ""}</span></div>${ic("next")}</div></div>`).join("")}${waiting.map(t => `<div class="st rs-wait"><div class="st-h" data-open="tasks|${t.id}"><span class="rs-lock">${ic("clock")}</span><div class="st-t"><b>${esc(t.title)}</b><span>Part ${lessonIndex(t.phase) + 1} · after the steps before it</span></div>${ic("next")}</div></div>`).join("")}</div>` : `<div class="mh-empty"><b>Nothing is ready right now</b><span class="muted">Steps are waiting on earlier ones. Check the To-do list to see what's blocking them.</span></div>`}
+          <p class="faint" style="margin:auto 0 0;font-size:13px">Everything these steps depend on is done. Tick one off when it's finished.</p>
+        </section>
+      </div>
+      <div class="mh-row">
+        <section class="mh-panel p-parts"><div class="mh-ph"><h2><span class="mh-hi">${ic("gauge")}</span>Bike specs</h2><a class="linkbtn" href="${SPEC_SOURCE.url}" target="_blank" rel="noopener">Source ${ic("next")}</a></div>
+          <div class="rs-specs">${SPECS.map(([v, l]) => `<div><b>${esc(v)}</b><span>${esc(l)}</span></div>`).join("")}</div>
+          <p class="faint" style="margin:auto 0 0;font-size:12.5px">${esc(BIKE.specNote || "Published specs for the " + BIKE.name + ".")} Always check against your bike and its factory manual.</p>
+        </section>
+        <section class="mh-panel p-hist"><div class="mh-ph"><h2><span class="mh-hi">${ic("clock")}</span>Recent activity</h2><button class="linkbtn" data-go="team">Work log ${ic("next")}</button></div>
+          ${act.length ? `<ol class="mh-tl">${act.map(a => `<li><div class="mh-tli"><span class="mh-tld">${esc(fmtTime(a.ts))}</span><b>${esc(a.by)} ${esc(a.summary)}</b>${a.title && SCHEMA[a.coll] ? `<span class="faint">${esc(String(a.title).slice(0, 60))}</span>` : ""}</div></li>`).join("")}</ol>` : `<div class="mh-empty"><b>Nothing yet</b><span class="muted">Steps you finish, parts you update and photos you add show up here for the whole team.</span></div>`}
+          ${act.length < 3 ? `<div class="rs-jump">${[["docs", "camera", "Photos"], ["purchasing", "cart", "Shopping list"], ["gates", "shield", "Safety checks"], ["shops", "store", "Where to buy"]].filter(([k]) => SEC[k]).map(([k, i, t]) => `<button data-go="${k}">${ic(i)}<span>${t}</span></button>`).join("")}</div>` : ""}
+        </section>
+      </div>
+    </section>`;
   },
-  bind(root) { $$("[data-gal]", root).forEach(b => b.onclick = () => galleryOpen(b.dataset.gal)); bindHeroPhoto(root); bindSetup(root); bindTables(root); bindLessonLinks(root); bindStepChecks(root); $$("[data-3d]", root).forEach(b => b.onclick = () => openIn3D(b.dataset["3d"])); $("#qPhoto", root) && ($("#qPhoto", root).onclick = () => uploadPhotos({})); }
+  bind(root) { bindHeroPhoto(root); bindSetup(root); bindTables(root); bindLessonLinks(root); bindStepChecks(root); }
 };
 
 /* ---------- Paint studio ---------- */

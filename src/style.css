@@ -1583,3 +1583,40 @@ img.silcover{object-fit:contain;background:#fff;padding:10px}
 .mh-donej .linkbtn{display:flex;align-items:center;gap:8px;color:var(--faint);text-decoration:line-through;text-align:left;font-size:14px}
 .mh-donej .linkbtn svg{width:16px;height:16px;color:var(--green);flex:none}
 .mh-hfoot.jf div{background:var(--b-blue-soft)}.mh-hfoot.jf span{color:var(--b-ink)}
+/* restoration home: same layout as the maintenance home */
+.rs-cur{all:unset;box-sizing:border-box;cursor:pointer;display:grid;grid-template-columns:150px minmax(0,1fr);gap:14px;align-items:center;padding:12px;border-radius:14px;background:linear-gradient(135deg,var(--b-blue-soft),#fff);border:1px solid var(--line)}
+.rs-cur:hover{border-color:var(--b-ink)}
+.rs-cur:focus-visible{outline:2px solid var(--b-ink);outline-offset:2px}
+.rs-art{display:block;aspect-ratio:4/3;border-radius:10px;overflow:hidden;background:#fff}
+.rs-art img{width:100%;height:100%;object-fit:contain;display:block}
+.rs-art .lart{display:grid;place-items:center;height:100%;color:var(--b-ink)}.rs-art .lart svg{width:40px;height:40px}
+.rs-cur-t{display:flex;flex-direction:column;gap:3px;min-width:0}
+.rs-k{font-size:11.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#8A6B32}
+.rs-cur-t b{font-family:var(--f-display);font-size:21px;color:var(--b-navy);line-height:1.15}
+.rs-cur-t .muted{font-size:13.5px;line-height:1.4}
+.rs-prog{display:block;height:7px;border-radius:5px;background:#fff;border:1px solid var(--line);overflow:hidden;margin-top:4px}.rs-prog i{display:block;height:100%;background:var(--b-tan)}
+.rs-n{font-size:12.5px;color:var(--b-ink);font-weight:700}
+.rs-next{display:flex;flex-direction:column;gap:6px}
+.rs-nx{all:unset;box-sizing:border-box;cursor:pointer;display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;padding:10px 12px;border-radius:12px;border:1px solid var(--line)}
+.rs-nx:hover{border-color:var(--b-ink);background:var(--b-blue-soft)}
+.rs-nx>span:nth-child(2){display:flex;flex-direction:column}.rs-nx b{color:var(--b-navy)}.rs-nx .faint{font-size:12.5px}
+.rs-nx svg{width:16px;height:16px;color:var(--b-ink)}
+.rs-num{display:grid;place-items:center;width:30px;height:30px;border-radius:9px;background:var(--b-navy);color:var(--b-tan);font-weight:800;font-size:13px}
+.rs-specs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.rs-specs div{background:var(--b-blue-soft);border-radius:12px;padding:10px 12px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.rs-specs b{font-family:var(--f-display);font-size:19px;color:var(--b-navy);line-height:1.1}
+.rs-specs span{font-size:12px;color:var(--b-ink);line-height:1.3}
+.rs-specs div:nth-child(3n+2){background:var(--b-tan-soft)}.rs-specs div:nth-child(3n+2) span{color:#8A6B32}
+.rs-home .stepl .st{border-radius:12px}
+@media (max-width:600px){.rs-cur{grid-template-columns:96px minmax(0,1fr);gap:10px}.rs-cur-t b{font-size:18px}.rs-specs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.p-jobs .mh-add{margin-top:auto}
+.rs-wait{opacity:.75}.rs-wait .st-h{background:#F4F6F7}
+.rs-lock{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;border:2px dashed var(--line-2);color:var(--faint);flex:none}.rs-lock svg{width:16px;height:16px}
+.rs-jump{margin-top:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.rs-jump button{all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;gap:10px;padding:11px 12px;border-radius:12px;font-weight:700;font-size:14px;color:var(--b-navy)}
+.rs-jump button svg{width:20px;height:20px}
+.rs-jump button:nth-child(1){background:var(--b-blue-soft)}.rs-jump button:nth-child(1) svg{color:var(--b-ink)}
+.rs-jump button:nth-child(2){background:var(--b-tan-soft)}.rs-jump button:nth-child(2) svg{color:#8A6B32}
+.rs-jump button:nth-child(3){background:var(--b-navy);color:#fff}.rs-jump button:nth-child(3) svg{color:var(--b-tan)}
+.rs-jump button:nth-child(4){background:var(--b-ink);color:#fff}.rs-jump button:nth-child(4) svg{color:var(--b-blue)}
+.rs-jump button:hover{filter:brightness(1.04);transform:translateY(-1px)}

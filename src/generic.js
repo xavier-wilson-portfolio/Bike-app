@@ -73,12 +73,6 @@ if (GENERIC) {
           ${stat((next && next.status === "over" ? "c-red" : next && next.status === "soon" ? "c-amber" : "c-tan") + " txt", ic("clock") + "Next up", next ? esc(next.item.name) : "—", next ? esc(dueTxt(next)) : "Nothing scheduled yet", next && W && next.status !== "ok" ? `data-logfor="${esc(next.item.id)}"` : 'data-go="maintenance"')}
           ${stat("c-navy", ic("dollar") + "Spent this year", money(mm.year), mm.perMile ? "$" + mm.perMile.toFixed(2) + " per mile overall" : mm.total ? money(mm.total) + " all time" : "Add costs when you log", 'data-mh="hist"')}
         </div>
-        <div class="mh-tiles">
-          <button class="mh-tile t-blue" data-go="inventory">${ic("box")}<b>${parts.length}</b><span>Parts tracked</span></button>
-          <button class="mh-tile t-tan" data-go="docs">${ic("camera")}<b>${photos.length}</b><span>Photos & receipts</span></button>
-          <button class="mh-tile t-navy" data-go="budget">${ic("dollar")}<b>${money(mm.total)}</b><span>Spent on service</span></button>
-          <button class="mh-tile t-ink" data-mh="report">${ic("download")}<b>Report</b><span>Print the service history</span></button>
-        </div>
         <div class="mh-row">
           <section class="mh-panel p-due"><div class="mh-ph"><h2><span class="mh-hi">${ic("calendar")}</span>Coming up</h2><button class="linkbtn" data-go="maintenance">Full schedule ${ic("next")}</button></div>
             ${st.length ? `<div class="stack" style="gap:10px">${st.slice(0, 3).map(dueCard).join("")}</div>`
@@ -93,8 +87,6 @@ if (GENERIC) {
           <section class="mh-panel p-jobs"><div class="mh-ph"><h2><span class="mh-hi">${ic("check")}</span>Jobs to do</h2><button class="linkbtn" data-go="tasks">All jobs ${ic("next")}</button></div>
             ${open.length ? `<ul class="mh-jobs">${open.map(t => `<li>${W ? `<input type="checkbox" data-done="${esc(t.id)}" aria-label="Mark ${esc(t.title)} done">` : ""}<button class="linkbtn" data-open="tasks|${esc(t.id)}">${esc(t.title)}</button>${t.due ? `<span class="faint">${esc(fmtDate(t.due))}</span>` : ""}</li>`).join("")}</ul>` : `<p class="muted" style="margin:0">Nothing on the list. Add things like "replace grips" or "fix the tail light".</p>`}
             ${W ? `<form class="mh-add" data-mh-add><input name="t" placeholder="Add a job and press Enter" aria-label="New job" autocomplete="off"><button class="btn sm" type="submit">Add</button></form>` : ""}
-            ${doneJobs.length ? `<div class="mh-donej"><span class="mh-k">Done recently</span>${doneJobs.map(t => `<button class="linkbtn" data-open="tasks|${esc(t.id)}">${ic("check")}${esc(t.title)}</button>`).join("")}</div>` : ""}
-            <div class="mh-hfoot jf"><div><b>${allJobs.filter(t => !tasksClosed(t)).length}</b><span>open jobs</span></div><div><b>${allJobs.filter(tasksDone).length}</b><span>finished</span></div><div><b>${allJobs.filter(isOverdue).length}</b><span>past due date</span></div></div>
           </section>
           <section class="mh-panel p-quick"><div class="mh-ph"><h2><span class="mh-hi">${ic("plus")}</span>Quick log</h2><span class="faint" style="font-size:13px">One tap, then save</span></div>
             <div class="mh-quick">${QUICK.map((q, i) => `<button class="mh-q q${i % 3}" data-quick="${i}"${W ? "" : " disabled"}>${ic(q[1])}<b>${esc(q[0])}</b><span>${esc(q[2])}</span></button>`).join("")}</div>
