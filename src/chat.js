@@ -86,6 +86,7 @@ function fmtAnswer(t) {
 const CHAT_ERR = { not_granted: "The mechanic needs your OK to use Claude. Ask again and choose Allow.", rate_limited: "Lots of questions at once. Wait a moment and try again.", too_large: "That question is too long. Try a shorter one.", unavailable: "The mechanic can't answer right now. Try again in a minute." };
 async function sendChat(asked, more) {
   const inp = $("#chatIn"); const q = (typeof asked === "string" ? asked : inp?.value || "").trim(); if (!q || CHAT.busy) return;
+  if (typeof chatAllowed === "function" && !chatAllowed()) return;
   const turn = { role: "user", content: more ? q + "\n\nDetails from the app:\n" + more : q, show: q };
   if (!CHAT.sample) { CHAT.turns.push(turn, { role: "assistant", content: "The mechanic works when this page is open in Claude. It isn't available in this copy." }); inp.value = ""; renderChat(); return; }
   inp.value = ""; CHAT.turns.push(turn); CHAT.turns.push({ role: "assistant", content: "", pending: true }); CHAT.busy = true; renderChat();

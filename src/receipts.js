@@ -46,6 +46,7 @@ async function rcAI(dataUrl) {
 
 /* ---- 1. take or pick the photo ---- */
 function snapReceipt(preset) {
+  if (typeof gate === "function" && !gate("restorer", "receipts", "Snap a receipt")) return;
   if (!ME.canWrite) { toast("You have view-only access to this project.", "err"); return; }
   const inp = document.createElement("input"); inp.type = "file"; inp.accept = "image/*"; inp.setAttribute("capture", "environment");
   inp.onchange = () => { const f = inp.files && inp.files[0]; if (f) rcFlow(f, preset); };

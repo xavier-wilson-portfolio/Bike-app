@@ -90,6 +90,7 @@ VIEWS.report = {
     const sb = window.RV_CLOUD && RV_CLOUD.sb, fail = err => toast(/does not exist|schema cache/i.test(err && err.message || "") ? "Share links aren't set up in the database yet." : "Couldn't save the link. Check your internet and try again.", "err");
     const share = $("#rpShare", root);
     if (share) share.onclick = async () => {
+      if (typeof gate === "function" && !gate("rider", "share", "share links")) return;
       share.disabled = true; const id = repToken();
       const { error } = await sb.from("shared_reports").insert({ id, project_id: RV_CLOUD.projectId, title: BIKE.name, data: reportData(REP_OPTS()) });
       share.disabled = false; if (error) return fail(error);

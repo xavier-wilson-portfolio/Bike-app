@@ -23,7 +23,7 @@
   /* ---------- page frame ---------- */
   function frame(inner, opts = {}) {
     const right = !sb ? "" : session
-      ? `<div class="pk-acct"><button class="linkbtn" data-nav="projects">Your garage</button><span class="muted">${esc(profile?.display_name || session.user.email)}</span><button class="btn sm" data-act="signout">Sign out</button></div>`
+      ? `<div class="pk-acct"><button class="linkbtn" data-nav="projects">Your garage</button>${window.rvPlanOf ? `<button class="pk-plan" data-plans>${esc((planInfo(myPlan().id).name || "Free") + (myPlan().trial ? " trial" : ""))}</button>` : ""}<span class="muted">${esc(profile?.display_name || session.user.email)}</span><button class="btn sm" data-act="signout">Sign out</button></div>`
       : `<div class="pk-acct"><button class="btn sm" data-nav="signin">Sign in</button><button class="btn sm pri" data-nav="signup">Create account</button></div>`;
     app.innerHTML = `<div class="pick${opts.garage ? " is-garage" : ""}"><div class="pk-top"><button class="pk-logo" data-nav="home" aria-label="Revora home"><img class="brand-icon" src="img/revora-icon.svg" alt=""><img class="wordmark" src="img/revora-word.svg" alt="Revora"></button>${right}</div><div class="pick-in ${opts.wide ? "wide" : ""}">${inner}</div></div>`;
   }
@@ -116,6 +116,7 @@
     if (r.silhouette) m.silhouette = r.silhouette;
     if (!keep) { m.requestKey = key; m.requestedAt = new Date().toISOString(); }
     if (sb && session) {
+      if (!(await roomForBike())) return;
       spin();
       if (!keep) try { await submitReq(r); } catch (e) {}
       const { data, error } = await sb.from("projects").insert({ bike_id: "custom-bike", name: label }).select("id").single();
@@ -133,6 +134,8 @@
   }
   const universalFor = style => bikeOf("restore-" + (style || "standard")) || bikeOf("restore-standard");
   async function startRestore(r) {
+    if (!restoreAllowed()) return;
+    if (!(await roomForBike())) return;
     const label = labelOf(r), style = r.style || guessStyle(r.make, r.model), pack = universalFor(style), drive = (pack && pack.style === "scooter") ? "cvt" : r.drive || guessDrive(r.make, r.model, style);
     if (!pack) return fail("Couldn't find the restoration course. Reload the page and try again.");
     const m = { id: "project", projectName: label, bike: label, year: r.year, make: r.make, model: r.model, style: pack.style, drive, goal: "restore", units: "in", currency: "USD", baseBudget: 0, contingencyPct: 20, budgetChanges: [], meshMap: {}, archived: false,
@@ -152,6 +155,7 @@
     ls.set("rv.bike", pack.id); goUrl({ bike: pack.id });
   }
   async function connectProject(p, pack) {
+    if (!restoreAllowed()) return;
     if (!confirm(pack.universal ? `Start the restoration course for "${p.name}"? Its steps, parts list and safety checks get added, and everything you've logged stays.` : `Connect "${p.name}" to the ${bikeName(pack)} page? Its course, parts list and service schedule get added, and everything you've logged stays.`)) return;
     spin();
     const { error } = await sb.from("projects").update({ bike_id: pack.id }).eq("id", p.id);
@@ -163,6 +167,7 @@
   }
   // no account: move this browser's general bike onto the real bike's page
   function connectLocal(pack) {
+    if (!restoreAllowed()) return;
     let cur = null; try { cur = JSON.parse(ls.get("rv.data.custom-bike") || "null"); } catch (e) {}
     if (!cur) return;
     if (ls.get("rv.data." + pack.id) && !confirm(`This browser already has a ${bikeName(pack)} project. Replace it with your records?`)) return;
@@ -204,7 +209,7 @@
     const makes = [...new Set(INDEX.filter(b => !b.generic && !b.universal).map(b => b.make))].sort();
     const head = !goal ? `<div class="eyebrow">${mode === "new" ? "New project" : "Add your bike"}</div><h1 class="disp">What are you doing with your bike?</h1><p class="muted">This sets up your bike's page. You can start restoring later from the menu.</p>`
       : goal === "maintain" ? `<div class="eyebrow">Maintenance and records</div><h1 class="disp">Which bike is it?</h1><p class="muted">Search for it, or add it with the year, make and model. Any bike works.</p>`
-      : `<div class="eyebrow">${mode === "new" ? "New project" : "Motorcycle restoration"}</div><h1 class="disp">Which bike are you restoring?</h1><p class="muted">Any bike works. Search for it, or add it with the year, make and model, and you get a step-by-step restoration course built for its kind of bike.</p>`;
+      : `${sb && !hasPlanL("restorer") ? `<div class="pk-uprest"><b>Restoration courses are in Restorer.</b><span>${session && !myPlan().trialUsed ? "Try it free for 30 days. No card needed." : !session ? "Create a free account to start the 30-day free trial." : "Upgrade to start a restoration."}</span><button class="btn tan sm" data-plans>See plans</button></div>` : ""}<div class="eyebrow">${mode === "new" ? "New project" : "Motorcycle restoration"}</div><h1 class="disp">Which bike are you restoring?</h1><p class="muted">Any bike works. Search for it, or add it with the year, make and model, and you get a step-by-step restoration course built for its kind of bike.</p>`;
     frame(`${head}
       <div class="pk-goal" role="radiogroup" aria-label="What are you doing with your bike?">${Object.entries(GOALS).map(([k, [t, d]]) => `<button type="button" class="pk-goal-o${goal === k ? " on" : ""}" role="radio" aria-checked="${goal === k}" data-goal="${k}"><span class="pk-goal-dot" aria-hidden="true"></span><b>${t}</b><span class="muted">${d}</span></button>`).join("")}</div>
       ${goal ? `<div class="pick-search"><input type="search" id="pickQ" placeholder="Year, make, model, e.g. ${goal === "maintain" ? "2012 Suzuki V-Strom 650" : "1977 Suzuki GS750"}" autocomplete="off" aria-label="Search for your bike"></div>
@@ -377,10 +382,11 @@
       const p = data.find(x => x.id === b.dataset.rename); const name = prompt("Project name", p.name || ""); if (name === null) return;
       const { error } = await sb.from("projects").update({ name: name.trim().slice(0, 80) }).eq("id", p.id); if (error) note(friendly(error), true); else showProjects();
     });
-    app.querySelectorAll("[data-share]").forEach(b => b.onclick = () => shareBox(data.find(x => x.id === b.dataset.share)));
+    app.querySelectorAll("[data-share]").forEach(b => b.onclick = () => hasPlanL("restorer") ? shareBox(data.find(x => x.id === b.dataset.share)) : upsellBox("restorer", "Sharing projects is in Restorer", "Share a bike with friends or a shop so everyone sees the same parts, jobs and photos live."));
   }
   async function createProject(bikeId) {
-    const b = bikeOf(bikeId); spin();
+    if (!(await roomForBike())) return;
+    const b = bikeOf(bikeId); if (!b.generic && !restoreAllowed()) return; spin();
     const { data, error } = await sb.from("projects").insert({ bike_id: bikeId, name: bikeName(b) }).select("id").single();
     if (error) return fail(friendly(error));
     goUrl({ project: data.id });
@@ -407,12 +413,113 @@
     document.body.appendChild(box); draw();
   }
 
+  /* ---------- plans and limits ---------- */
+  async function loadProfile() {
+    let r = await sb.from("profiles").select("display_name,plan,plan_until,trial_used,plan_chosen").eq("id", session.user.id).maybeSingle();
+    if (r.error) r = await sb.from("profiles").select("display_name,plan").eq("id", session.user.id).maybeSingle();
+    profile = r.data;
+  }
+  const myPlan = () => window.rvPlanOf ? rvPlanOf(profile, session && session.user.email) : { id: "shop", admin: true };
+  const planInfo = id => (window.RV_PLANS || []).find(p => p.id === id) || {};
+  const rankOf = id => (window.RV_PLAN_RANK || {})[id] || 0;
+  const hasPlanL = need => rankOf(myPlan().id) >= rankOf(need);
+  function upsellBox(need, title, text) {
+    const P = planInfo(need), trial = session && !myPlan().trialUsed && myPlan().id === "free";
+    const box = document.createElement("div"); box.className = "pk-modal";
+    box.innerHTML = `<div class="pk-card up"><span class="up-ico">🔒</span><span class="up-k">Included in ${esc(P.name || need)}${P.m ? ` · <s>$${P.was.toFixed(2)}</s> $${P.m.toFixed(2)} a month` : ""}</span><h2>${esc(title)}</h2><p>${esc(text)}</p>
+      <div class="pk-links" style="justify-content:center">${trial ? `<button class="btn tan" data-up="trial">${need === "restorer" ? "Start 30-day free trial" : "Try Restorer free for 30 days"}</button>` : ""}${!session && sb ? `<button class="btn tan" data-up="signup">Create a free account</button>` : ""}<button class="btn pri" data-up="plans">See plans</button><button class="btn" data-up="close">Not now</button></div></div>`;
+    box.querySelector(".up-ico").innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>';
+    box.onclick = async e => { const b = e.target.closest("[data-up]"); if (!b && e.target !== box) return; const k = b ? b.dataset.up : "close"; box.remove();
+      if (k === "plans") showPlans(); if (k === "signup") showAuth("signup"); if (k === "trial") { if (await startTrialL()) showProjects(); } };
+    document.body.appendChild(box);
+  }
+  async function startTrialL() {
+    const { data, error } = await sb.rpc("start_trial");
+    if (error) { note(/function|schema cache/i.test(error.message || "") ? "The free trial isn't switched on yet." : friendly(error), true); return false; }
+    if (data === "used") { note("You've already had the free trial.", true); return false; }
+    await loadProfile(); note("Your 30-day Restorer trial has started."); return true;
+  }
+  // how many bikes the plan allows; returns false (and shows the upgrade box) when the garage is full
+  async function roomForBike() {
+    if (!sb || !session) return true;
+    const P = myPlan(); if (P.admin) return true;
+    const lim = planInfo(P.id).bikes || 1, { data } = await sb.from("my_projects").select("id,role");
+    const owned = (data || []).filter(p => p.role === "owner").length;
+    if (owned < lim) return true;
+    const next = (window.RV_PLANS || []).find(p => p.bikes > lim);
+    upsellBox(next ? next.id : "shop", `Your ${planInfo(P.id).name || "Free"} plan has room for ${lim} bike${lim === 1 ? "" : "s"}`, `You have ${owned} in your garage. Upgrade to add more. Nothing you've logged is ever removed.`);
+    return false;
+  }
+  function restoreAllowed() {
+    if (sb && !session) { upsellBox("restorer", "Restoration courses are in Restorer", "Create a free account and start the 30-day Restorer trial to get a step-by-step course for your bike."); return false; }
+    if (hasPlanL("restorer")) return true;
+    upsellBox("restorer", "Restoration courses are in Restorer", "A step-by-step course tailored to your bike, with a parts list, safety checks and a budget. Try it free for 30 days.");
+    return false;
+  }
+  function showChoosePlan(yearly) {
+    document.title = "Pick your plan · Revora";
+    frame(`<div class="eyebrow">Welcome${profile && profile.display_name ? ", " + esc(String(profile.display_name).split(" ")[0]) : ""}</div><h1 class="disp">Pick your plan</h1><p class="muted">Start free with one bike, or try Restorer free for 30 days. You can change plans any time.</p>${window.rvPlansHtml({ yearly, mode: "choose", trialUsed: profile && profile.trial_used })}`, { wide: true });
+    app.querySelectorAll("[data-pl-bill]").forEach(b => b.onclick = () => showChoosePlan(b.dataset.plBill === "y"));
+    app.querySelectorAll("[data-pl-pick]").forEach(b => b.onclick = async () => {
+      const k = b.dataset.plPick; b.disabled = true;
+      if (k === "trial") { if (await startTrialL()) return showProjects(); b.disabled = false; return; }
+      if (k === "free") { await sb.from("profiles").update({ plan_chosen: true }).eq("id", session.user.id); if (profile) profile.plan_chosen = true; return showProjects(); }
+      note("Checkout opens soon. Start free or take the Restorer trial for now.", true); b.disabled = false;
+    });
+  }
+
+  /* ---------- landing page for people who aren't signed in ---------- */
+  function showLanding(yearly) {
+    document.title = "Revora · Restore it, ride it, keep the records";
+    const I = d => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+    const ICO = { wrench: '<path d="M14.7 6.3a4 4 0 0 0 5 5L12 19l-3-3 7.7-7.7z M4 20l3-3"/>', bell: '<path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z M10 20a2 2 0 0 0 4 0"/>', camera: '<path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.5"/>',
+      shield: '<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/>', book: '<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z M8 7h7"/>', doc: '<path d="M6 3h9l4 4v14H6z M14 3v5h5 M9 13h6 M9 17h6"/>',
+      tune: '<path d="M4 6h9 M17 6h3 M4 12h3 M11 12h9 M4 18h11 M19 18h1"/><circle cx="15" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="18" r="2"/>', fuel: '<path d="M5 20V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v15 M4 20h12 M15 9h2l2 2v6a1.5 1.5 0 0 1-3 0v-3"/>',
+      cal: '<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16 M9 3v4 M15 3v4"/>', check: '<path d="M5 12l4 4 10-10"/>', wheel: '<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.5"/><path d="M12 4v5.5 M12 14.5V20 M4 12h5.5 M14.5 12H20"/>', phone: '<rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18.5h2"/>' };
+    const F = [["wrench", "Maintenance log", "Every service with mileage, parts and cost. See what's due next at a glance.", "Free"],
+      ["bell", "Service reminders", "Revora learns how much you ride and tells you before oil, chain, brakes or tires come due.", "Rider"],
+      ["shield", "Recall alerts", "Safety recalls for your exact bike from NHTSA, with a heads-up when a new one appears.", "Rider"],
+      ["book", "Restoration courses", "A step-by-step course for any bike, tailored to its kind: cruiser, sport, cafe racer, scooter and more.", "Restorer"],
+      ["camera", "Snap a receipt", "Take a photo. The AI reads the store, parts and total and files it with the right service.", "Restorer"],
+      ["doc", "Bike history report", "A clean history with an odometer chart and a record score to hand a buyer, or share as a link.", "Free"],
+      ["tune", "Mods and upgrades", "Every aftermarket part with its part number, price and where the stock part is.", "Rider"],
+      ["fuel", "Fuel and costs", "Miles per gallon and what the bike really costs you per mile and per month.", "Rider"],
+      ["cal", "Papers and renewals", "Insurance, registration and warranties with a reminder before anything runs out.", "Free"],
+      ["check", "Checklists", "Spring wake-up, winter storage, before every ride and before a big trip.", "Free"],
+      ["wheel", "Tire and chain wear", "Readings and photos over time, and roughly how many miles are left.", "Free"],
+      ["phone", "On your phone", "Install it to your home screen and it opens like an app.", "Free"]];
+    const sil = n => { const f = (CFG.sil || []).find(x => x.replace(/\.\w+$/, "") === n); return f ? "img/sil/" + f : ""; };
+    app.innerHTML = `<div class="ld">
+      <header class="ld-top"><a class="pk-logo" href="${esc(url({}))}" aria-label="Revora"><img class="brand-icon" src="img/revora-icon.svg" alt=""><img class="wordmark" src="img/revora-word.svg" alt="Revora"></a>
+        <nav class="ld-nav"><a href="#ld-features">Features</a><a href="#ld-plans">Plans</a><button class="btn sm" data-nav="signin">Sign in</button><button class="btn sm tan" data-nav="signup">Get started</button></nav></header>
+      <section class="ld-hero"><div class="ld-hero-t"><span class="ld-k">For riders, restorers and shops</span>
+          <h1>Restore it. Ride it. Keep every record.</h1>
+          <p>Revora keeps your bike's whole life in one place: services and reminders, receipts read by AI, recalls, mods, papers, and a step-by-step restoration course for any bike.</p>
+          <div class="ld-cta"><button class="btn tan big" data-nav="signup">Get started free</button><button class="btn ghost-l big" data-nav="signin">Sign in</button></div>
+          <span class="ld-small">Free for one bike. Restorer free for 30 days. No card needed.</span></div>
+        <div class="ld-art">${["bike-cafe", "bike-adventure", "bike-cruiser"].map((n, i) => sil(n) ? `<img class="ld-s s${i}" src="${sil(n)}" alt="">` : "").join("")}</div></section>
+      <section class="ld-strip"><div><b>Any bike</b><span>Search the library or add yours by year, make and model</span></div><div><b>8 kinds of bike</b><span>Courses tailored to cruisers, sport bikes, scooters and more</span></div><div><b>Your records stay yours</b><span>Export or print them any time</span></div></section>
+      <section class="ld-sec" id="ld-features"><h2>Everything your bike needs, in one place</h2><p class="ld-sub">Start with the free maintenance log. Add more when you want it.</p>
+        <div class="ld-grid">${F.map(([i, t, d, p]) => `<article class="ld-f"><span class="ld-fi">${I(ICO[i])}</span><b>${t}</b><span>${d}</span><em class="ld-p ${p.toLowerCase()}">${p}</em></article>`).join("")}</div></section>
+      <section class="ld-sec ld-how"><h2>How it works</h2><div class="ld-steps">
+        <div><span>1</span><b>Add your bike</b><p>Search for it or type the year, make and model. Pick whether you're restoring it or keeping it running.</p></div>
+        <div><span>2</span><b>Log as you go</b><p>Snap receipts, log services and fill-ups, and tick off checklists. It takes seconds.</p></div>
+        <div><span>3</span><b>Know what's next</b><p>Reminders, recall alerts and renewal dates come to you, and the history report builds itself.</p></div></div></section>
+      <section class="ld-sec" id="ld-plans"><h2>Plans</h2><p class="ld-sub">Limited-time prices on every paid plan.</p>${window.rvPlansHtml({ yearly, mode: "choose" })}</section>
+      <section class="ld-end"><h2>Your bike's whole story, kept right.</h2><button class="btn tan big" data-nav="signup">Get started free</button><button class="linkbtn" data-nav-pick>Look around first</button></section>
+      <footer class="ld-foot"><span>Revora</span><span>Made for people who work on their own bikes.</span></footer></div>`;
+    app.querySelectorAll("[data-pl-bill]").forEach(b => b.onclick = () => { showLanding(b.dataset.plBill === "y"); document.getElementById("ld-plans").scrollIntoView(); });
+    app.querySelectorAll("[data-pl-pick]").forEach(b => b.onclick = () => showAuth("signup"));
+    app.querySelector("[data-nav-pick]").onclick = () => goUrl({ pick: 1 });
+  }
+
   /* ---------- plans (public) ---------- */
   function showPlans(yearly) {
     document.title = "Plans · Revora";
-    frame(`<div class="eyebrow">Plans</div><h1 class="disp">Start free. Upgrade when you need more.</h1><p class="muted">One bike is free for good. Paid plans add AI receipts, email reminders, share links, restoration courses and teams.</p>${window.rvPlansHtml({ yearly, current: session ? (profile && profile.plan === "pro" ? "rider" : (profile && profile.plan) || "free") : "" })}
+    frame(`<div class="eyebrow">Plans</div><h1 class="disp">Start free. Upgrade when you need more.</h1><p class="muted">One bike is free for good. Paid plans add AI receipts, email reminders, share links, restoration courses and teams.</p>${window.rvPlansHtml({ yearly, current: session ? myPlan().id : "", until: session ? myPlan().until : null, trialUsed: !session || myPlan().trialUsed })}
       <div class="pk-links">${session ? `<button class="btn pri" data-nav="projects">Back to your garage</button>` : `<button class="btn pri" data-nav="signup">Create a free account</button>`}</div>`, { wide: true });
     app.querySelectorAll("[data-pl-bill]").forEach(b => b.onclick = () => showPlans(b.dataset.plBill === "y"));
+    app.querySelectorAll("[data-pl-pick]").forEach(b => b.onclick = async () => { if (b.dataset.plPick === "trial") { if (!session) return showAuth("signup"); if (await startTrialL()) showProjects(); } else note("Checkout opens soon.", true); });
   }
 
   /* ---------- a shared bike history report (read-only, no account needed) ---------- */
@@ -530,7 +637,7 @@
         const recovering = /type=recovery/.test(location.hash);
         sb.auth.onAuthStateChange(ev => { if (ev === "PASSWORD_RECOVERY") showAuth("newpass"); });
         session = (await sb.auth.getSession()).data.session;
-        if (session) { const r = await sb.from("profiles").select("display_name,plan").eq("id", session.user.id).maybeSingle(); profile = r.data; }
+        if (session) await loadProfile();
         if (session) await flushPendingReq();
         await loadPrefs();
         if (recovering) return;
@@ -542,9 +649,10 @@
     const pid = qs.get("project"), bid = qs.get("bike");
     if (pid) { if (!sb) return fail("Accounts aren't set up on this site yet."); if (!session) return showAuth("signin"); return openProject(pid); }
     if (bid && bikeOf(bid)) { ls.set("rv.bike", bid); return openApp(bid, null); }
+    if (session && profile && profile.plan_chosen === false && !myPlan().admin) return showChoosePlan();
     if (session) return showProjects();
-    // signed out: the plain link always lands on sign-up (browsing and guest projects stay one click away)
-    if (sb && !qs.has("pick")) return showAuth("signup");
+    // signed out: the plain link lands on the page that explains Revora, with sign-up one click away
+    if (sb && !qs.has("pick")) return showLanding();
     const last = ls.get("rv.bike");
     if (!sb && !qs.has("pick") && last && bikeOf(last)) return openApp(last, null);
     showPicker("try");

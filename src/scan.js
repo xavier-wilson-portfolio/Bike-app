@@ -75,6 +75,7 @@ async function scanAI(dataUrl, blob, prompt) {
 
 /* ---- picker: which tray / diagram ---- */
 function scanPick() {
+  if (typeof gate === "function" && !gate("restorer", "scan", "the parts scan")) return;
   const ds = scanDiagrams(), sys = [...new Set(ds.map(d => d.system))];
   modal(`<h3>${ic("camera")} Scan a tray of parts</h3><p class="hint-text" style="text-align:left;margin:0">Pick the area the parts are from. The scan only looks for that diagram's parts, which makes it far more accurate.</p>
     <input type="search" id="scQ" placeholder="Search, e.g. carburetor, fork, clutch" autofocus>

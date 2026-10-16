@@ -107,14 +107,14 @@ function openMobMenu() { const m = $("#mobmenu"), b = $("#mobback"); renderMobMe
 function closeMobMenu() { const m = $("#mobmenu"), b = $("#mobback"); if (!m || m.hidden) return; m.classList.add("closing"); b && b.classList.add("closing"); $("#menuBtn")?.setAttribute("aria-expanded", "false"); setTimeout(() => { m.hidden = true; m.classList.remove("closing"); if (b) { b.hidden = true; b.classList.remove("closing"); } }, 230); }
 function closeMenus() { const mg = $("#mega"); if (mg) mg.hidden = true; closeMobMenu(); }
 function megaHtml() {
-  return `<div class="mega-in">${NAV_GROUPS.filter(([k]) => SECTIONS.some(s => s.grp === k)).map(([k, l]) => `<div class="mcol"><div class="eyebrow">${esc(l)}</div>${SECTIONS.filter(s => s.grp === k).map(s => `<button class="mlink" data-goto="${s.id}">${ic(s.i)}<span><b>${esc(s.t)}</b><small>${esc(s.d || "")}</small></span></button>`).join("")}</div>`).join("")}
+  return `<div class="mega-in">${NAV_GROUPS.filter(([k]) => SECTIONS.some(s => s.grp === k)).map(([k, l]) => `<div class="mcol"><div class="eyebrow">${esc(l)}</div>${SECTIONS.filter(s => s.grp === k).map(s => `<button class="mlink" data-goto="${s.id}">${ic(s.i)}<span><b>${esc(s.t)}${typeof secLock === "function" ? secLock(s.id) : ""}</b><small>${esc(s.d || "")}</small></span></button>`).join("")}</div>`).join("")}
     <div class="mcol mfeature">${GENERIC ? `<b>Want to restore it?</b><small>Get a step-by-step restoration course for your bike. Everything you've logged stays.</small><div class="row"><button class="btn sm tan" data-goto="restore">Restore this bike</button>` : `<img src="img/d-engine.svg" alt=""><b>Not sure where to start?</b><small>Open Part 1 of the course, or ask the mechanic.</small><div class="row"><button class="btn sm tan" data-goto="course">Open the course</button>`}<button class="btn sm ask" data-ask="" data-ask-ctx="">${ic("chat")} Ask</button></div><button class="mlink mfb" data-feedback>${ic("chat")}<span><b>Send feedback</b><small>Ideas, problems, anything</small></span></button></div></div>`;
 }
 function renderMobMenu() {
   const cur = R.sec === "lesson" ? "course" : R.sec;
   $("#mobmenu").innerHTML = `<div class="mob-in"><div class="row" style="justify-content:space-between"><b class="eyebrow">Menu</b><button class="iconbtn" id="mobX" aria-label="Close menu">${ic("x")}</button></div>${window.rvHasAccounts && rvHasAccounts() ? `<div class="row mob-acct"><button class="btn sm tan garagebtn" onclick="rvAccount()">My garage</button>${window.RV_CLOUD ? `<button class="btn sm" onclick="rvSignOut()">Sign out</button>` : ""}</div>` : ""}
-    <div class="moblist">${SECTIONS.filter(s => s.id === "home" || s.main).map(s => `<button class="mlink ${cur === s.id ? "on" : ""}" data-goto="${s.id}">${ic(s.i)}<span><b>${esc(s.t)}</b><small>${esc(s.d || "Overview and progress")}</small></span></button>`).join("")}</div>
-    ${NAV_GROUPS.filter(([k]) => SECTIONS.some(s => s.grp === k)).map(([k, l]) => `<div class="eyebrow" style="margin-top:14px">${esc(l)}</div><div class="moblist grp">${SECTIONS.filter(s => s.grp === k).map(s => `<button class="mlink ${cur === s.id ? "on" : ""}" data-goto="${s.id}">${ic(s.i)}<span><b>${esc(s.t)}</b></span></button>`).join("")}</div>`).join("")}
+    <div class="moblist">${SECTIONS.filter(s => s.id === "home" || s.main).map(s => `<button class="mlink ${cur === s.id ? "on" : ""}" data-goto="${s.id}">${ic(s.i)}<span><b>${esc(s.t)}${typeof secLock === "function" ? secLock(s.id) : ""}</b><small>${esc(s.d || "Overview and progress")}</small></span></button>`).join("")}</div>
+    ${NAV_GROUPS.filter(([k]) => SECTIONS.some(s => s.grp === k)).map(([k, l]) => `<div class="eyebrow" style="margin-top:14px">${esc(l)}</div><div class="moblist grp">${SECTIONS.filter(s => s.grp === k).map(s => `<button class="mlink ${cur === s.id ? "on" : ""}" data-goto="${s.id}">${ic(s.i)}<span><b>${esc(s.t)}${typeof secLock === "function" ? secLock(s.id) : ""}</b></span></button>`).join("")}</div>`).join("")}
     <button class="mob-fb mob-ins" onclick="rvInstall && rvInstall()">${ic("download")}<span><b>Install the app</b><small>Revora on your home screen</small></span>${ic("next")}</button>
     <button class="mob-fb" data-feedback>${ic("chat")}<span><b>Send feedback</b><small>Tell us what to fix or add</small></span>${ic("next")}</button></div>`;
   $("#mobX").onclick = closeMenus;
@@ -193,7 +193,7 @@ function onData(first, coll) {
 function render(full) {
   if (!store.ready) { $("#content").innerHTML = `<div class="empty" style="padding-top:80px"><span class="spinner" style="display:block;margin:0 auto 12px"></span><b>Opening the garage…</b>Loading your restoration records.</div>`; return; }
   renderNav();
-  const view = isEmptyProject() && !["settings", "help"].includes(R.sec) ? { render: setupPanel, bind: bindSetup } : (VIEWS[R.sec] || VIEWS.home);
+  const view = isEmptyProject() && !["settings", "help"].includes(R.sec) ? { render: setupPanel, bind: bindSetup } : typeof planLockFor === "function" && planLockFor(R.sec) && VIEWS.locked ? VIEWS.locked : (VIEWS[R.sec] || VIEWS.home);
   if (view.live && !full && view.live()) { refreshDrawer(); return; }
   const ae = document.activeElement, aid = ae && ae.id, sel = ae && "selectionStart" in ae ? [ae.selectionStart, ae.selectionEnd] : null;
   const sy = window.scrollY, c = $("#content");
