@@ -56,7 +56,7 @@ VIEWS.mods = {
             ${t.total ? `<div class="md-split"><div><b>${money(t.parts)}</b><span>parts</span></div><div><b>${money(t.labor)}</b><span>labor</span></div><div><b>${money(t.year)}</b><span>this year</span></div></div>` : ""}
           </section>
           <section class="mh-panel md-tip"><div class="mh-ph"><h2><span class="mh-hi">${ic("bulb")}</span>Selling it one day?</h2></div>
-            <p style="margin:0">A list of mods with part numbers and receipts, plus the stock parts in a box, is worth real money to the next owner. It's also in the service report you can print from the Maintenance log.</p>
+            <p style="margin:0">A list of mods with part numbers and receipts, plus the stock parts in a box, is worth real money to the next owner. It's all in the bike history report, which you can print or share as a link.</p>
             <button class="linkbtn" data-go-report style="align-self:flex-start">Open the report ${ic("next")}</button></section>
         </aside></div>`;
     }
@@ -94,7 +94,7 @@ VIEWS.mods = {
     $$("[data-fit]", root).forEach(b => b.onclick = async () => { const m = clone(S.mods[b.dataset.fit]); if (!m) return; m.status = "Installed"; m.date = m.date || today(); m.odometer = n(m.odometer) || od(); if (m.stockKept === "Not applicable" && m.replaced) m.stockKept = "Kept";
       await store.put("mods", m, { action: "fitted " + m.name }); toast(m.name + " is on the bike."); openRecord("mods", m.id); });
     $$("[data-copy]", root).forEach(b => b.onclick = e => { e.stopPropagation(); const v = b.dataset.copy; (navigator.clipboard ? navigator.clipboard.writeText(v) : Promise.reject()).then(() => toast("Copied " + v), () => toast(v)); });
-    const rp = $("[data-go-report]", root); if (rp) rp.onclick = () => { R.tab.maintenance = "report"; go("maintenance"); };
+    const rp = $("[data-go-report]", root); if (rp) rp.onclick = () => go("report");
     const csv = $("#mdCsv", root); if (csv) csv.onclick = () => saveFile("revora-mods-" + today() + ".csv", csvOf(sorted("mods").map(m => ({ ...m, total: modCost(m) })),
       ["name", "status", "category", "brand", "partNo", "price", "labor", "total", "date", "odometer", "installedBy", "shop", "vendor", "url", "receipt", "warranty", "replaced", "stockPartNo", "stockKept", "stockLocation", "notes"].map(k => ({ k, label: k }))), "text/csv");
   }

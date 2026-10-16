@@ -26,11 +26,12 @@ const SECTIONS = [
   { id: "team", t: "Team & work log", i: "users", grp: "records", d: "People and hours" },
   { id: "maintenance", t: "Maintenance log", i: "wrench", main: 1, d: "Schedule, service history, reports" },
   { id: "reminders", t: "Reminders", i: "bell", grp: "records", d: "When each service comes due" },
+  { id: "report", t: "History report", i: "book", grp: "records", d: "Print it or share a link with a buyer" },
   { id: "mods", t: "Mods & upgrades", i: "tune", grp: "records", d: "Aftermarket parts, part numbers, prices" },
   { id: "settings", t: "Settings & backups", i: "gear", grp: "records", d: "Budget, backups, data" },
   { id: "lesson", t: "Lesson", i: "book", hidden: true },
 ].filter(s => !s.x || X[s.x]);
-if (GENERIC) { const keep = new Set(["home", "maintenance", "reminders", "mods", "inventory", "tasks", "budget", "purchasing", "shops", "diagrams", "docs", "problems", "team", "settings", "help"]); for (let i = SECTIONS.length - 1; i >= 0; i--) if (!keep.has(SECTIONS[i].id)) SECTIONS.splice(i, 1); SECTIONS.forEach(s => { if (["inventory", "tasks", "budget", "maintenance", "reminders", "mods", "docs", "diagrams"].includes(s.id)) s.main = 1; else delete s.main; }); const t = SECTIONS.find(s => s.id === "tasks"); if (t) t.d = "Jobs to do on the bike"; SECTIONS.splice(SECTIONS.findIndex(s => s.id === "maintenance") + 1, 0, { id: "restore", t: "Restore this bike", i: "book", main: 1, d: "Get a step-by-step restoration course" }); }
+if (GENERIC) { const keep = new Set(["home", "maintenance", "reminders", "mods", "report", "inventory", "tasks", "budget", "purchasing", "shops", "diagrams", "docs", "problems", "team", "settings", "help"]); for (let i = SECTIONS.length - 1; i >= 0; i--) if (!keep.has(SECTIONS[i].id)) SECTIONS.splice(i, 1); SECTIONS.forEach(s => { if (["inventory", "tasks", "budget", "maintenance", "reminders", "mods", "docs", "diagrams"].includes(s.id)) s.main = 1; else delete s.main; }); const t = SECTIONS.find(s => s.id === "tasks"); if (t) t.d = "Jobs to do on the bike"; SECTIONS.splice(SECTIONS.findIndex(s => s.id === "maintenance") + 1, 0, { id: "restore", t: "Restore this bike", i: "book", main: 1, d: "Get a step-by-step restoration course" }); }
 if (CT.sections) SECTIONS.forEach(s => CT.sections[s.id] && Object.assign(s, CT.sections[s.id]));
 const NAV_GROUPS = [["areas", "Workshop areas"], ["learn", "Learn"], ["records", "Records & admin"]];
 const SEC = Object.fromEntries(SECTIONS.filter(s => s.id).map(s => [s.id, s]));

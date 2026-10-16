@@ -405,6 +405,20 @@
     document.body.appendChild(box); draw();
   }
 
+  /* ---------- a shared bike history report (read-only, no account needed) ---------- */
+  async function showReport(token) {
+    spin(); document.title = "Bike history report · Revora";
+    if (!sb) return fail("Reports can't be opened on this copy of Revora.");
+    const ok = /^[A-Za-z0-9]{16,40}$/.test(token);
+    const { data, error } = ok ? await sb.rpc("get_report", { t: token }) : { data: null };
+    if (error || !data) return frame(`<h1 class="disp">This report isn't available</h1><p class="muted">The owner may have stopped sharing it, or the link is incomplete.</p><button class="btn pri" data-nav="home">Go to Revora</button>`);
+    document.title = (data.bike && data.bike.name ? data.bike.name + " · " : "") + "Bike history report";
+    app.innerHTML = `<div class="hr-page"><div class="hr-bar"><a class="pk-logo" href="${esc(url({}))}" aria-label="Revora"><img class="brand-icon" src="img/revora-icon.svg" alt=""><img class="wordmark" src="img/revora-word.svg" alt="Revora"></a>
+        <div class="hr-bar-r"><button class="btn sm" id="hrPrint">Print or save as PDF</button><a class="btn sm tan" href="${esc(url(session ? {} : { auth: "signup" }))}">Keep a log for your bike</a></div></div>
+      ${window.rvReportHtml(data)}</div>`;
+    document.getElementById("hrPrint").onclick = () => { document.body.classList.add("printing-hr"); window.print(); setTimeout(() => document.body.classList.remove("printing-hr"), 600); };
+  }
+
   /* ---------- open a bike ---------- */
   async function openApp(bikeId, cloud) {
     spin();
@@ -511,6 +525,7 @@
         if (recovering) return;
       }
     }
+    if (qs.get("report")) return showReport(qs.get("report"));
     const auth = qs.get("auth"); if (sb && !session && ["signin", "signup"].includes(auth)) return showAuth(auth);
     const pid = qs.get("project"), bid = qs.get("bike");
     if (pid) { if (!sb) return fail("Accounts aren't set up on this site yet."); if (!session) return showAuth("signin"); return openProject(pid); }
