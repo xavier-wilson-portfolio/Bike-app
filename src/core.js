@@ -4,7 +4,7 @@
    BIKE is who the bike is; X says which extras this bike has (3D, paint studio, videos). */
 const PACK = window.PACK || { bike: {}, catalogue: {}, thumbs: {} };
 const BIKE = Object.assign({ id: "bike", year: "", make: "", model: "", short: "", name: "", variant: "", variantShort: "", catalogueName: "", engine: "", specs: [], specSource: null, links: {}, hero: null, extras: {} }, PACK.bike);
-if (BIKE.generic && window.RV_BIKE_LABEL) { const L = window.RV_BIKE_LABEL; Object.assign(BIKE, { year: L.year || "", make: L.make || "", model: L.model || "", name: [L.year, L.make, L.model].filter(Boolean).join(" ") || "Your bike", short: L.model || "bike", variant: "", style: L.style || "standard" }); }
+if (BIKE.generic && window.RV_BIKE_LABEL) { const L = window.RV_BIKE_LABEL; Object.assign(BIKE, { year: L.year || "", make: L.make || "", model: L.model || "", name: [L.year, L.make, L.model].filter(Boolean).join(" ") || "Your bike", short: L.model || "bike", variant: "", style: L.style || "standard", silhouette: L.silhouette || "", goal: L.goal || "" }); }
 if (!BIKE.short) BIKE.short = BIKE.model; if (!BIKE.name) BIKE.name = [BIKE.year, BIKE.make, BIKE.model].join(" "); if (!BIKE.variantShort) BIKE.variantShort = BIKE.short;
 const X = BIKE.extras || {};
 const CMS_DATA = PACK.catalogue || {};

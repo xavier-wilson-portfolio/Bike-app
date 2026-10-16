@@ -64,6 +64,35 @@ if (GENERIC) {
   };
 }
 
+/* ---------- restore this bike (menu): from a maintenance log to a restoration course ---------- */
+if (GENERIC) {
+  VIEWS.restore = {
+    render() {
+      const m = meta(), pack = window.rvRestoreFor ? rvRestoreFor(m) : null, name = BIKE.name;
+      const gets = `<ul class="rs-list"><li><b>A step-by-step course</b> for the ${esc(name)}, from first inspection to the road test, with how-to for every step.</li><li><b>A parts list</b> with part numbers, so you know what to check, order or replace.</li><li><b>Factory parts diagrams</b> and the right shops for your bike.</li><li><b>Safety checks</b> before it goes back on the road, and a restoration budget.</li></ul>
+        <p class="muted">Your maintenance log, parts, jobs, photos and receipts all stay where they are.</p>`;
+      let act;
+      if (pack) act = `<div class="rs-act"><b>The ${esc(rvBikeName(pack))} course is ready.</b>${ME.canWrite ? `<button class="btn tan big" id="rsGo">${ic("play")} Start restoring</button>` : `<span class="muted">Ask the project owner to start it.</span>`}</div>`;
+      else if (m.requestKey) act = `<div class="rs-act"><b>Course requested.</b><span class="muted">${esc(rvEta(m.requestedAt))}. When it's ready, a Start restoring button shows up here and in your garage. Keep logging in the meantime.</span></div>`;
+      else act = `<div class="rs-act"><b>We don't have a course for the ${esc(name)} yet.</b><span class="muted">Request it and we'll build it in about 3 days. Keep logging in the meantime.</span>${ME.canWrite ? `<button class="btn tan big" id="rsReq">Request the course</button>` : ""}</div>`;
+      return `<div class="ph" data-own="1"><div class="eyebrow">Restore</div><h1>Restore your ${esc(BIKE.short || "bike")}</h1><p>Turn this maintenance log into a full restoration project.</p></div>
+        <div class="panel stack rs">${(() => { const src = silImg(BIKE.silhouette || "bike-" + (BIKE.style || "standard")) || silImg("bike-standard"); return src ? `<img class="rs-sil" src="${src}" alt="">` : ""; })()}${act}<h2 class="sec">What you get</h2>${gets}</div>`;
+    },
+    bind(root) {
+      const goBtn = $("#rsGo", root), rq = $("#rsReq", root);
+      if (goBtn) goBtn.onclick = () => rvStartRestoring(rvRestoreFor(meta()));
+      if (rq) rq.onclick = async () => {
+        rq.disabled = true;
+        let res; try { res = await rvRequestCourse(meta()); } catch (e) { rq.disabled = false; toast("Couldn't send the request. Check your internet and try again.", "err"); return; }
+        if (res.needAccount) { toast("Create a free account and we'll send in your request."); location.href = location.pathname + "?auth=signup"; return; }
+        const r = clone(meta()); r.requestKey = res.key; r.requestedAt = res.row && res.row.created_at || new Date().toISOString(); r.goal = "restore";
+        await store.put("meta", r, { action: "requested a restoration course for the " + BIKE.name });
+        toast("Requested. We'll have the course ready in about 3 days."); go("restore");
+      };
+    }
+  };
+}
+
 /* ---------- after connecting a project to its bike: bring in that bike's course, parts and schedule ---------- */
 (function () {
   const base = onData;
