@@ -4,6 +4,7 @@
    CLAUDE mode (optional, paid): add secret ANTHROPIC_API_KEY and variable PROVIDER = anthropic.
    Other settings: ALLOWED_ORIGINS (comma list), MODEL (overrides the default model), VISION_MODEL (overrides the parts-scan model).
    PARTS SCAN: POST { scan: { image: "data:image/jpeg;base64,...", prompt: "..." } } returns { text }. Uses a free Workers AI vision model.
+   RECEIPTS: the same, with scan.kind = "receipt" (reads a receipt photo into JSON).
 */
 const VISION_MODELS = ["@cf/meta/llama-3.2-11b-vision-instruct"];
 const MAX_IMAGE = 2400000; // about 1.8 MB of photo as base64
@@ -78,7 +79,8 @@ async function scanParts(scan, env, h) {
   const image = typeof scan.image === "string" ? scan.image : "", prompt = typeof scan.prompt === "string" ? scan.prompt.slice(0, 12000) : "";
   if (!/^data:image\/(jpeg|png|webp);base64,/.test(image) || !prompt) return deny(400, "bad scan", h);
   if (image.length > MAX_IMAGE) return deny(413, "photo too large", h);
-  const run = model => env.AI.run(model, { messages: [{ role: "system", content: "You identify motorcycle parts in workshop photos. Answer with JSON only." }, { role: "user", content: prompt }], image, max_tokens: 1200 });
+  const system = scan.kind === "receipt" ? "You read receipts and invoices for motorcycle owners. Copy what is printed exactly. Answer with JSON only." : "You identify motorcycle parts in workshop photos. Answer with JSON only.";
+  const run = model => env.AI.run(model, { messages: [{ role: "system", content: system }, { role: "user", content: prompt }], image, max_tokens: 1200 });
   let lastErr = "";
   for (const model of (env.VISION_MODEL ? [env.VISION_MODEL] : VISION_MODELS)) {
     for (let attempt = 0; attempt < 2; attempt++) {
