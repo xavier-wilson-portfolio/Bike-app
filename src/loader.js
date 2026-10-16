@@ -475,7 +475,7 @@
     const ICO = { wrench: '<path d="M14.7 6.3a4 4 0 0 0 5 5L12 19l-3-3 7.7-7.7z M4 20l3-3"/>', bell: '<path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z M10 20a2 2 0 0 0 4 0"/>', camera: '<path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.5"/>',
       shield: '<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/>', book: '<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z M8 7h7"/>', doc: '<path d="M6 3h9l4 4v14H6z M14 3v5h5 M9 13h6 M9 17h6"/>',
       tune: '<path d="M4 6h9 M17 6h3 M4 12h3 M11 12h9 M4 18h11 M19 18h1"/><circle cx="15" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="18" r="2"/>', fuel: '<path d="M5 20V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v15 M4 20h12 M15 9h2l2 2v6a1.5 1.5 0 0 1-3 0v-3"/>',
-      cal: '<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16 M9 3v4 M15 3v4"/>', check: '<path d="M5 12l4 4 10-10"/>', wheel: '<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.5"/><path d="M12 4v5.5 M12 14.5V20 M4 12h5.5 M14.5 12H20"/>', phone: '<rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18.5h2"/>' };
+      cal: '<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16 M9 3v4 M15 3v4"/>', check: '<path d="M5 12l4 4 10-10"/>', dollar: '<path d="M12 3v18 M16.5 7.5c-.8-1.3-2.4-2-4.5-2-2.6 0-4.3 1.3-4.3 3.2 0 4.6 9 2.4 9 7 0 1.9-1.9 3.3-4.7 3.3-2.2 0-4-.8-4.9-2.3"/>', wheel: '<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.5"/><path d="M12 4v5.5 M12 14.5V20 M4 12h5.5 M14.5 12H20"/>', phone: '<rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18.5h2"/>' };
     const F = [["wrench", "Maintenance log", "Every service with mileage, parts and cost. See what's due next at a glance.", "Free"],
       ["bell", "Service reminders", "Revora learns how much you ride and tells you before oil, chain, brakes or tires come due.", "Rider"],
       ["shield", "Recall alerts", "Safety recalls for your exact bike from NHTSA, with a heads-up when a new one appears.", "Rider"],
@@ -483,7 +483,7 @@
       ["camera", "Snap a receipt", "Take a photo. The AI reads the store, parts and total and files it with the right service.", "Restorer"],
       ["doc", "Bike history report", "A clean history with an odometer chart and a record score to hand a buyer, or share as a link.", "Free"],
       ["tune", "Mods and upgrades", "Every aftermarket part with its part number, price and where the stock part is.", "Rider"],
-      ["fuel", "Fuel and costs", "Miles per gallon and what the bike really costs you per mile and per month.", "Rider"],
+      ["dollar", "Value and selling", "What the bike is worth next to what you've put in, and a listing written from your records when you sell.", "Rider"],
       ["cal", "Papers and renewals", "Insurance, registration and warranties with a reminder before anything runs out.", "Free"],
       ["check", "Checklists", "Spring wake-up, winter storage, before every ride and before a big trip.", "Free"],
       ["wheel", "Tire and chain wear", "Readings and photos over time, and roughly how many miles are left.", "Free"],
