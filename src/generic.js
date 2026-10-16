@@ -49,40 +49,52 @@ if (GENERIC) {
       const eta = m.requestKey ? (() => { const d = new Date(m.requestedAt || Date.now()); d.setDate(d.getDate() + 3); return d < new Date() ? "any day now" : "by " + d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }); })() : "";
       const ring = pct => { const r = 26, c = 2 * Math.PI * r, f = pct == null ? 0 : pct / 100; return `<svg class="mh-ring" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="${r}" class="bg"/><circle cx="32" cy="32" r="${r}" class="fg ${ov ? "red" : sn ? "amber" : "green"}" stroke-dasharray="${c.toFixed(1)}" stroke-dashoffset="${(c * (1 - f)).toFixed(1)}"/></svg>`; };
       const stat = (cls, k, v, s, attrs) => `<button class="mh-stat ${cls}" ${attrs}><span class="mh-k">${k}</span><span class="mh-v">${v}</span><span class="mh-s">${s}</span></button>`;
+      const styleName = { standard: "Standard", cruiser: "Cruiser", sport: "Sport", adventure: "Adventure", dualsport: "Dual-sport", touring: "Touring", cafe: "Cafe racer", scooter: "Scooter" }[BIKE.style] || "";
       return `<section class="mh">
-        <div class="mh-top"><div><div class="eyebrow">Maintenance log</div><h1>${esc(BIKE.name)}</h1>
-          <p class="muted">${m.requestKey ? `We're building this bike's restoration course, ready ${esc(eta)}. Everything you log here stays when you connect it.` : "Every service, part, job and receipt for this bike, in one place."}</p></div>
-          ${W ? `<div class="mh-acts"><button class="btn tan big" data-mh="log">${ic("wrench")} Log a service</button><button class="btn big" data-mh="odo">${ic("gauge")} Update odometer</button></div>` : ""}</div>
-        <div class="mh-stage">${heroPhotoHtml()}</div>
-        <div class="mh-stats">
-          ${stat("", "Odometer", o ? milesFmt(o.miles) + `<small> mi</small>` : "—", o ? "Read " + fmtDate(o.date) : W ? "Tap to add a reading" : "No reading yet", W ? 'data-mh="odo"' : "")}
-          ${stat("ring " + (ov ? "red" : sn ? "amber" : ""), "Service health", `${ring(health)}<span>${health == null ? "—" : health + "%"}</span>`, !st.length ? "Add a schedule to start" : ov ? ov + " overdue" + (sn ? ", " + sn + " due soon" : "") : sn ? sn + " due soon" : tracked.length ? "Everything up to date" : "Set when items were last done", 'data-go="maintenance"')}
-          ${stat((next && next.status !== "ok" ? next.status : "") + " txt", "Next up", next ? esc(next.item.name) : "—", next ? esc(dueTxt(next)) : "Nothing scheduled yet", next && W && next.status !== "ok" ? `data-logfor="${esc(next.item.id)}"` : 'data-go="maintenance"')}
-          ${stat("", "Spent this year", money(mm.year), mm.perMile ? "$" + mm.perMile.toFixed(2) + " per mile overall" : mm.total ? money(mm.total) + " all time" : "Add costs when you log", 'data-mh="hist"')}
+        <div class="mh-hero">
+          <div class="mh-hero-l">
+            <div class="mh-eyebrow">${ic("wrench")} Maintenance log</div>
+            <h1>${esc(BIKE.name)}</h1>
+            <div class="mh-chips">${styleName ? `<span>${esc(styleName)}</span>` : ""}${o ? `<span>${milesFmt(o.miles)} mi</span>` : ""}<span>${st.length} schedule item${st.length === 1 ? "" : "s"}</span><span>${svcDone().length} service${svcDone().length === 1 ? "" : "s"} logged</span></div>
+            <p>${m.requestKey ? `We're building this bike's restoration course, ready ${esc(eta)}. Everything you log here stays when you connect it.` : "Every service, part, job and receipt for this bike, in one place."}</p>
+            ${W ? `<div class="mh-acts"><button class="btn mh-pri" data-mh="log">${ic("wrench")} Log a service</button><button class="btn mh-sec" data-mh="odo">${ic("gauge")} Update odometer</button></div>` : ""}
+          </div>
+          <div class="mh-stage">${heroPhotoHtml()}</div>
         </div>
-        <div class="mh-grid">
-          <section class="mh-panel mh-due"><div class="mh-ph"><h2>Coming up</h2><button class="linkbtn" data-go="maintenance">Full schedule ${ic("next")}</button></div>
+        <div class="mh-stats">
+          ${stat("c-blue", ic("gauge") + "Odometer", o ? milesFmt(o.miles) + `<small> mi</small>` : "—", o ? "Read " + fmtDate(o.date) : W ? "Tap to add a reading" : "No reading yet", W ? 'data-mh="odo"' : "")}
+          ${stat("ring " + (ov ? "c-red" : sn ? "c-amber" : "c-green"), ic("shield") + "Service health", `${ring(health)}<span>${health == null ? "—" : health + "%"}</span>`, !st.length ? "Add a schedule to start" : ov ? ov + " overdue" + (sn ? ", " + sn + " due soon" : "") : sn ? sn + " due soon" : tracked.length ? "Everything up to date" : "Set when items were last done", 'data-go="maintenance"')}
+          ${stat((next && next.status === "over" ? "c-red" : next && next.status === "soon" ? "c-amber" : "c-tan") + " txt", ic("clock") + "Next up", next ? esc(next.item.name) : "—", next ? esc(dueTxt(next)) : "Nothing scheduled yet", next && W && next.status !== "ok" ? `data-logfor="${esc(next.item.id)}"` : 'data-go="maintenance"')}
+          ${stat("c-navy", ic("dollar") + "Spent this year", money(mm.year), mm.perMile ? "$" + mm.perMile.toFixed(2) + " per mile overall" : mm.total ? money(mm.total) + " all time" : "Add costs when you log", 'data-mh="hist"')}
+        </div>
+        <div class="mh-tiles">
+          <button class="mh-tile t-blue" data-go="inventory">${ic("box")}<b>${parts.length}</b><span>Parts tracked</span></button>
+          <button class="mh-tile t-tan" data-go="docs">${ic("camera")}<b>${photos.length}</b><span>Photos & receipts</span></button>
+          <button class="mh-tile t-navy" data-go="budget">${ic("dollar")}<b>${money(mm.total)}</b><span>Spent on service</span></button>
+          <button class="mh-tile t-ink" data-mh="report">${ic("download")}<b>Report</b><span>Print the service history</span></button>
+        </div>
+        <div class="mh-cols">
+          <div class="mh-col">
+          <section class="mh-panel p-due"><div class="mh-ph"><h2><span class="mh-hi">${ic("calendar")}</span>Coming up</h2><button class="linkbtn" data-go="maintenance">Full schedule ${ic("next")}</button></div>
             ${st.length ? `<div class="stack" style="gap:10px">${st.slice(0, 4).map(dueCard).join("")}</div>`
-              : `<div class="mh-empty"><b>No service schedule yet</b><span class="muted">Start from a typical motorcycle schedule (oil, chain, brakes, tires and more) and adjust it to your manual, or add your own items.</span>${W ? `<div class="row" style="gap:8px;flex-wrap:wrap"><button class="btn tan" data-mh="presets">Add a typical schedule</button><button class="btn" data-new="schedule">Add my own</button></div>` : ""}</div>`}
+              : `<div class="mh-empty"><b>No service schedule yet</b><span class="muted">Start from a typical motorcycle schedule (oil, chain, brakes, tires and more) and adjust it to your manual, or add your own items.</span>${W ? `<div class="row" style="gap:8px;flex-wrap:wrap"><button class="btn mh-pri" data-mh="presets">Add a typical schedule</button><button class="btn" data-new="schedule">Add my own</button></div>` : ""}</div>`}
           </section>
-          <section class="mh-panel"><div class="mh-ph"><h2>Recent services</h2><button class="linkbtn" data-mh="hist">All history ${ic("next")}</button></div>
+          </div>
+          <div class="mh-col">
+          <section class="mh-panel p-hist"><div class="mh-ph"><h2><span class="mh-hi">${ic("clock")}</span>Recent services</h2><button class="linkbtn" data-mh="hist">All history ${ic("next")}</button></div>
             ${hist.length ? `<ol class="mh-tl">${hist.map(r => `<li><button class="mh-tli" data-open="maintenance|${esc(r.id)}"><span class="mh-tld">${esc(fmtDate(r.date))}${n(r.odometer) ? ` · ${milesFmt(r.odometer)} mi` : ""}</span><b>${esc(r.service)}</b><span class="faint">${svcCost(r) ? money2(svcCost(r)) : ""}${r.doneBy === "A shop" && r.shop ? " · " + esc(r.shop) : ""}</span></button></li>`).join("")}</ol>`
               : `<div class="mh-empty"><b>No services logged yet</b><span class="muted">Log the last oil change or anything else you remember. Even rough dates help the schedule.</span>${W ? `<button class="btn" data-mh="log">Log a service</button>` : ""}</div>`}
           </section>
-          <section class="mh-panel"><div class="mh-ph"><h2>Jobs to do</h2><button class="linkbtn" data-go="tasks">All jobs ${ic("next")}</button></div>
-            ${open.length ? `<ul class="mh-jobs">${open.map(t => `<li>${W ? `<input type="checkbox" data-done="${esc(t.id)}" aria-label="Mark ${esc(t.title)} done">` : ""}<button class="linkbtn" data-open="tasks|${esc(t.id)}">${esc(t.title)}</button>${t.due ? `<span class="faint">${esc(fmtDate(t.due))}</span>` : ""}</li>`).join("")}</ul>` : `<div class="mh-empty"><span class="muted">Nothing on the list. Add things like "replace grips" or "fix the tail light".</span></div>`}
+          <section class="mh-panel p-jobs"><div class="mh-ph"><h2><span class="mh-hi">${ic("check")}</span>Jobs to do</h2><button class="linkbtn" data-go="tasks">All jobs ${ic("next")}</button></div>
+            ${open.length ? `<ul class="mh-jobs">${open.map(t => `<li>${W ? `<input type="checkbox" data-done="${esc(t.id)}" aria-label="Mark ${esc(t.title)} done">` : ""}<button class="linkbtn" data-open="tasks|${esc(t.id)}">${esc(t.title)}</button>${t.due ? `<span class="faint">${esc(fmtDate(t.due))}</span>` : ""}</li>`).join("")}</ul>` : `<p class="muted" style="margin:0">Nothing on the list. Add things like "replace grips" or "fix the tail light".</p>`}
             ${W ? `<form class="mh-add" data-mh-add><input name="t" placeholder="Add a job and press Enter" aria-label="New job" autocomplete="off"><button class="btn sm" type="submit">Add</button></form>` : ""}
           </section>
-          <section class="mh-panel mh-more"><div class="mh-ph"><h2>Your records</h2></div>
-            <div class="mh-tiles">
-              <button class="mh-tile" data-go="inventory">${ic("box")}<b>${parts.length}</b><span>Parts</span></button>
-              <button class="mh-tile" data-go="docs">${ic("camera")}<b>${photos.length}</b><span>Photos & files</span></button>
-              <button class="mh-tile" data-go="budget">${ic("dollar")}<b>${money(mm.total)}</b><span>Service spend</span></button>
-              <button class="mh-tile" data-go="diagrams">${ic("layers")}<b>${diagramSites().length}</b><span>Diagram sites</span></button>
-            </div>
-            ${W ? `<button class="linkbtn" data-mh="report">${ic("download")} Print a service report</button>` : ""}
+          </div>
+        </div>
+          <section class="mh-panel p-parts mh-wide"><div class="mh-ph"><h2><span class="mh-hi">${ic("layers")}</span>Parts diagrams</h2><button class="linkbtn" data-go="diagrams">All sites ${ic("next")}</button></div>
+            <div class="mh-sites">${diagramSites().slice(0, 4).map(x => `<a class="mh-site" href="${esc(x.url)}" target="_blank" rel="noopener"><b>${esc(x.name)}</b><span>${x.own ? "Opens your " + esc(BIKE.short) : "Pick your bike"}</span></a>`).join("")}</div>
           </section>
-        </div></section>`;
+      </section>`;
     },
     bind(root) {
       $$("[data-mh]", root).forEach(b => b.onclick = () => { const k = b.dataset.mh; if (k === "odo") logMileage(); else if (k === "presets") addPresets(); else if (k === "log") openRecord("maintenance", null, { odometer: odoNow() ? Math.round(odoNow().miles) : 0 }); else if (k === "report" || k === "hist") { R.tab.maintenance = k === "report" ? "report" : "history"; go("maintenance"); } });
