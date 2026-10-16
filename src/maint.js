@@ -114,7 +114,7 @@ function svcHistoryCard(r) {
     <div class="faint" style="font-size:13px">${[r.doneBy === "A shop" ? (r.shop ? esc(r.shop) : "Shop") : r.doneBy === "A friend" ? (r.shop ? esc(r.shop) : "A friend") : r.technician && S.team[r.technician] ? esc(S.team[r.technician].name) : "Done myself", n(r.laborHours) ? r.laborHours + " h labor" : "", items.length ? "Covers: " + items.map(i => esc(i.name)).join(", ") : ""].filter(Boolean).join(" · ")}</div>
     ${parts.length ? `<ul class="mtparts">${parts.slice(0, 6).map(p => `<li>${esc(p)}</li>`).join("")}${parts.length > 6 ? `<li class="faint">+${parts.length - 6} more</li>` : ""}</ul>` : ""}
     ${r.notes ? `<div style="font-size:13px">${esc(r.notes)}</div>` : ""}</div>
-    <div class="mtcost">${cost ? money2(cost) : `<span class="faint">—</span>`}${r.receipt ? `<a href="${esc(r.receipt)}" target="_blank" rel="noopener" class="faint" style="font-size:12px">Receipt</a>` : ""}</div></div>`;
+    <div class="mtcost">${cost ? money2(cost) : `<span class="faint">—</span>`}${typeof rcptLinkHtml === "function" ? rcptLinkHtml(r, "faint rc-sm") : ""}</div></div>`;
 }
 function maintReport() {
   const done = svcDone().sort((a, b) => String(a.date).localeCompare(String(b.date))), o = odoNow(), mm = maintMoney(), name = (meta().name || BIKE.name);
@@ -136,7 +136,7 @@ VIEWS.maintenance = {
     const done = svcDone().sort((a, b) => String(b.date).localeCompare(String(a.date)) || n(b.odometer) - n(a.odometer));
     const planned = sorted("maintenance").filter(r => r.planned);
     const reminders = sorted("maintenance").filter(r => !r.planned && (r.nextDate || n(r.nextMiles))).filter(r => !done.some(d => d !== r && d.date > r.date && d.service === r.service));
-    const act = `<button class="btn" data-go="mods">${ic("tune")} Mods${sorted("mods").length ? " (" + sorted("mods").filter(m => m.status === "Installed").length + ")" : ""}</button>` + (ME.canWrite ? `<button class="btn" id="mntOdo">${ic("gauge")} Update odometer</button><button class="btn pri" data-new="maintenance|${esc(JSON.stringify({ odometer: o ? Math.round(o.miles) : 0 }))}">${ic("plus")} Log service</button>` : "");
+    const act = (ME.canWrite ? `<button class="btn" data-snap="service">${ic("camera")} Snap a receipt</button>` : "") + `<button class="btn" data-go="mods">${ic("tune")} Mods${sorted("mods").length ? " (" + sorted("mods").filter(m => m.status === "Installed").length + ")" : ""}</button>` + (ME.canWrite ? `<button class="btn" id="mntOdo">${ic("gauge")} Update odometer</button><button class="btn pri" data-new="maintenance|${esc(JSON.stringify({ odometer: o ? Math.round(o.miles) : 0 }))}">${ic("plus")} Log service</button>` : "");
     const tabs = [["overview", "Overview"], ["schedule", "Schedule" + (over ? ` (${over} overdue)` : "")], ["history", "Service history"], ["report", "Report"]];
     let body = "";
     if (tab === "overview") {

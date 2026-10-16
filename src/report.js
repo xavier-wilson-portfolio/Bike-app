@@ -8,7 +8,7 @@ function reportData(o) {
   const vin = String(m.frameNo || "").trim(), vinOut = !vin || o.vin === "none" ? "" : o.vin === "full" ? vin : vin.length > 6 ? "…" + vin.slice(-6) : vin;
   const by = r => r.doneBy === "A shop" ? (r.shop || "A shop") : r.doneBy === "A friend" ? (r.shop || "A friend") : "Owner";
   const services = done.map(r => ({ date: r.date, miles: n(r.odometer) || 0, service: r.service, kind: r.kind || "", by: by(r), cost: o.costs ? svcCost(r) : 0,
-    parts: String(r.partsUsed || "").split(/\n+/).map(x => x.trim()).filter(Boolean).slice(0, 6), receipt: !!r.receipt }));
+    parts: String(r.partsUsed || "").split(/\n+/).map(x => x.trim()).filter(Boolean).slice(0, 6), receipt: !!(r.receipt || r.receiptDoc) }));
   const states = sorted("schedule").map(it => svcState(it, od)).sort((a, b) => SVC_RANK[a.status] - SVC_RANK[b.status]);
   // odometer: readings plus mileage on services, one point per day (highest)
   const pts = {}; sorted("mileage").map(r => ({ date: r.date, miles: n(r.miles) })).concat(done.filter(r => n(r.odometer)).map(r => ({ date: r.date, miles: n(r.odometer) })))
@@ -25,7 +25,7 @@ function reportData(o) {
   }
   // how much a buyer can trust the records
   const span = odometer.length > 1 ? daysBetween(odometer[0].date, odometer[odometer.length - 1].date) : 0;
-  const withRcpt = done.filter(r => r.receipt).length, overdue = states.filter(x => x.status === "over").length;
+  const withRcpt = done.filter(r => r.receipt || r.receiptDoc).length, overdue = states.filter(x => x.status === "over").length;
   const lastDate = done[0] ? done[0].date : "", recent = lastDate && daysBetween(lastDate, today()) <= 365;
   const why = [
     { ok: done.length >= 5, pts: Math.min(25, done.length * 5), t: done.length ? `${done.length} service${done.length === 1 ? "" : "s"} logged` : "No services logged yet" },

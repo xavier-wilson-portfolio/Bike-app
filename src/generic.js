@@ -63,7 +63,7 @@ if (GENERIC) {
             <h1>${esc(BIKE.name)}</h1>
             <div class="mh-chips">${styleName ? `<span>${esc(styleName)}</span>` : ""}${o ? `<span>${milesFmt(o.miles)} mi</span>` : ""}<span>${st.length} schedule item${st.length === 1 ? "" : "s"}</span><span>${svcDone().length} service${svcDone().length === 1 ? "" : "s"} logged</span></div>
             <p>${m.requestKey ? `We're building this bike's restoration course, ready ${esc(eta)}. Everything you log here stays when you connect it.` : "Every service, part, job and receipt for this bike, in one place."}</p>
-            ${W ? `<div class="mh-acts"><button class="btn mh-pri" data-mh="log">${ic("wrench")} Log a service</button><button class="btn mh-sec" data-mh="odo">${ic("gauge")} Update odometer</button></div>` : ""}
+            ${W ? `<div class="mh-acts"><button class="btn mh-pri" data-mh="log">${ic("wrench")} Log a service</button><button class="btn mh-sec" data-mh="odo">${ic("gauge")} Update odometer</button><button class="btn mh-sec" data-snap="service">${ic("camera")} Snap a receipt</button></div>` : ""}
           </div>
           <div class="mh-stage">${heroPhotoHtml()}</div>
         </div>

@@ -30,7 +30,7 @@ function modCard(m) {
       ${m.replaced ? `<div class="md-stock">${ic("box")}<span>Replaced the stock ${esc(m.replaced)}${m.stockPartNo ? ` <code>${esc(m.stockPartNo)}</code>` : ""}${m.stockKept && m.stockKept !== "Not applicable" ? ` · ${esc(m.stockKept.toLowerCase())}${m.stockKept === "Kept" && m.stockLocation ? ", " + esc(m.stockLocation) : ""}` : ""}</span></div>` : ""}
     </div>
     <div class="md-side"><b class="md-price">${c ? money2(c) : `<span class="faint">—</span>`}</b>${n(m.labor) && n(m.price) ? `<span class="faint">${money(m.price)} part · ${money(m.labor)} labor</span>` : ""}
-      <span class="md-links">${m.url ? `<a href="${esc(m.url)}" target="_blank" rel="noopener">Product</a>` : ""}${m.receipt ? `<a href="${esc(m.receipt)}" target="_blank" rel="noopener">Receipt</a>` : ""}</span>
+      <span class="md-links">${m.url ? `<a href="${esc(m.url)}" target="_blank" rel="noopener">Product</a>` : ""}${typeof rcptLinkHtml === "function" ? rcptLinkHtml(m) : ""}</span>
       ${wish && W ? `<button class="btn sm pri" data-fit="${esc(m.id)}">${ic("check")} Mark fitted</button>` : ""}</div>
   </article>`;
 }
