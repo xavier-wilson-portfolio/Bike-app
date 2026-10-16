@@ -36,6 +36,9 @@ if (!HAS_CAT && !X.handDiagrams) {
 if (GENERIC) {
   document.documentElement.classList.add("is-generic");
   GUIDE.home = { how: ["Log every service in the Maintenance log, with the odometer, parts and cost.", "Add the jobs your bike needs to the to-do list and tick them off.", "Track parts and receipts so your costs add up on their own."] };
+  // one-tap logging for the jobs riders do most; matched to a schedule item when there is one
+  const QUICK = [["Oil change", "engine", "Oil and filter", /oil/i], ["Chain service", "wrench", "Clean, lube, adjust", /chain clean|chain/i], ["Tire check", "wheel", "Pressure and tread", /tire/i],
+    ["Brake check", "shield", "Pads and fluid", /brake pads|brake/i], ["Battery", "bolt", "Check and charge", /battery/i], ["Wash and detail", "spray", "Clean and protect", /wash/i]];
   VIEWS.home = {
     render() {
       const m = meta(), o = odoNow(), W = ME.canWrite;
@@ -44,11 +47,14 @@ if (GENERIC) {
       const ov = st.filter(x => x.status === "over").length, sn = st.filter(x => x.status === "soon").length;
       const health = tracked.length ? Math.round(ok / tracked.length * 100) : null;
       const next = st.find(x => x.status === "over" || x.status === "soon" || x.status === "ok");
-      const mm = maintMoney(), hist = svcDone().sort((a, b) => String(b.date).localeCompare(String(a.date))).slice(0, 4);
-      const open = sorted("tasks").filter(t => !tasksClosed(t)).slice(0, 5), parts = sorted("parts"), photos = sorted("docs").filter(d => d.file || d.link);
+      const mm = maintMoney(), hist = svcDone().sort((a, b) => String(b.date).localeCompare(String(a.date))).slice(0, 5);
+      const allJobs = sorted("tasks"), doneJobs = allJobs.filter(tasksDone).sort((a, b) => String(b.updated || b.ts || "").localeCompare(String(a.updated || a.ts || ""))).slice(0, 3);
+      const open = allJobs.filter(t => !tasksClosed(t)).slice(0, 5), parts = sorted("parts"), photos = sorted("docs").filter(d => d.file || d.link);
       const eta = m.requestKey ? (() => { const d = new Date(m.requestedAt || Date.now()); d.setDate(d.getDate() + 3); return d < new Date() ? "any day now" : "by " + d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }); })() : "";
       const ring = pct => { const r = 26, c = 2 * Math.PI * r, f = pct == null ? 0 : pct / 100; return `<svg class="mh-ring" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="${r}" class="bg"/><circle cx="32" cy="32" r="${r}" class="fg ${ov ? "red" : sn ? "amber" : "green"}" stroke-dasharray="${c.toFixed(1)}" stroke-dashoffset="${(c * (1 - f)).toFixed(1)}"/></svg>`; };
       const stat = (cls, k, v, s, attrs) => `<button class="mh-stat ${cls}" ${attrs}><span class="mh-k">${k}</span><span class="mh-v">${v}</span><span class="mh-s">${s}</span></button>`;
+      const y = String(new Date().getFullYear()), doneY = svcDone().filter(r => String(r.date).startsWith(y));
+      const histFoot = `<div class="mh-hfoot"><div><b>${doneY.length}</b><span>services in ${y}</span></div><div><b>${money(mm.year)}</b><span>spent in ${y}</span></div><div><b>${doneY.length ? money(mm.year / doneY.length) : "—"}</b><span>average per service</span></div></div>`;
       const styleName = { standard: "Standard", cruiser: "Cruiser", sport: "Sport", adventure: "Adventure", dualsport: "Dual-sport", touring: "Touring", cafe: "Cafe racer", scooter: "Scooter" }[BIKE.style] || "";
       return `<section class="mh">
         <div class="mh-hero">
@@ -73,23 +79,26 @@ if (GENERIC) {
           <button class="mh-tile t-navy" data-go="budget">${ic("dollar")}<b>${money(mm.total)}</b><span>Spent on service</span></button>
           <button class="mh-tile t-ink" data-mh="report">${ic("download")}<b>Report</b><span>Print the service history</span></button>
         </div>
-        <div class="mh-cols">
-          <div class="mh-col">
+        <div class="mh-row">
           <section class="mh-panel p-due"><div class="mh-ph"><h2><span class="mh-hi">${ic("calendar")}</span>Coming up</h2><button class="linkbtn" data-go="maintenance">Full schedule ${ic("next")}</button></div>
-            ${st.length ? `<div class="stack" style="gap:10px">${st.slice(0, 4).map(dueCard).join("")}</div>`
+            ${st.length ? `<div class="stack" style="gap:10px">${st.slice(0, 3).map(dueCard).join("")}</div>`
               : `<div class="mh-empty"><b>No service schedule yet</b><span class="muted">Start from a typical motorcycle schedule (oil, chain, brakes, tires and more) and adjust it to your manual, or add your own items.</span>${W ? `<div class="row" style="gap:8px;flex-wrap:wrap"><button class="btn mh-pri" data-mh="presets">Add a typical schedule</button><button class="btn" data-new="schedule">Add my own</button></div>` : ""}</div>`}
           </section>
-          </div>
-          <div class="mh-col">
           <section class="mh-panel p-hist"><div class="mh-ph"><h2><span class="mh-hi">${ic("clock")}</span>Recent services</h2><button class="linkbtn" data-mh="hist">All history ${ic("next")}</button></div>
-            ${hist.length ? `<ol class="mh-tl">${hist.map(r => `<li><button class="mh-tli" data-open="maintenance|${esc(r.id)}"><span class="mh-tld">${esc(fmtDate(r.date))}${n(r.odometer) ? ` · ${milesFmt(r.odometer)} mi` : ""}</span><b>${esc(r.service)}</b><span class="faint">${svcCost(r) ? money2(svcCost(r)) : ""}${r.doneBy === "A shop" && r.shop ? " · " + esc(r.shop) : ""}</span></button></li>`).join("")}</ol>`
+            ${hist.length ? `<ol class="mh-tl">${hist.map(r => `<li><button class="mh-tli" data-open="maintenance|${esc(r.id)}"><span class="mh-tld">${esc(fmtDate(r.date))}${n(r.odometer) ? ` · ${milesFmt(r.odometer)} mi` : ""}</span><b>${esc(r.service)}</b><span class="faint">${svcCost(r) ? money2(svcCost(r)) : ""}${r.doneBy === "A shop" && r.shop ? " · " + esc(r.shop) : ""}</span></button></li>`).join("")}</ol>${histFoot}`
               : `<div class="mh-empty"><b>No services logged yet</b><span class="muted">Log the last oil change or anything else you remember. Even rough dates help the schedule.</span>${W ? `<button class="btn" data-mh="log">Log a service</button>` : ""}</div>`}
           </section>
+        </div>
+        <div class="mh-row">
           <section class="mh-panel p-jobs"><div class="mh-ph"><h2><span class="mh-hi">${ic("check")}</span>Jobs to do</h2><button class="linkbtn" data-go="tasks">All jobs ${ic("next")}</button></div>
             ${open.length ? `<ul class="mh-jobs">${open.map(t => `<li>${W ? `<input type="checkbox" data-done="${esc(t.id)}" aria-label="Mark ${esc(t.title)} done">` : ""}<button class="linkbtn" data-open="tasks|${esc(t.id)}">${esc(t.title)}</button>${t.due ? `<span class="faint">${esc(fmtDate(t.due))}</span>` : ""}</li>`).join("")}</ul>` : `<p class="muted" style="margin:0">Nothing on the list. Add things like "replace grips" or "fix the tail light".</p>`}
             ${W ? `<form class="mh-add" data-mh-add><input name="t" placeholder="Add a job and press Enter" aria-label="New job" autocomplete="off"><button class="btn sm" type="submit">Add</button></form>` : ""}
+            ${doneJobs.length ? `<div class="mh-donej"><span class="mh-k">Done recently</span>${doneJobs.map(t => `<button class="linkbtn" data-open="tasks|${esc(t.id)}">${ic("check")}${esc(t.title)}</button>`).join("")}</div>` : ""}
+            <div class="mh-hfoot jf"><div><b>${allJobs.filter(t => !tasksClosed(t)).length}</b><span>open jobs</span></div><div><b>${allJobs.filter(tasksDone).length}</b><span>finished</span></div><div><b>${allJobs.filter(isOverdue).length}</b><span>past due date</span></div></div>
           </section>
-          </div>
+          <section class="mh-panel p-quick"><div class="mh-ph"><h2><span class="mh-hi">${ic("plus")}</span>Quick log</h2><span class="faint" style="font-size:13px">One tap, then save</span></div>
+            <div class="mh-quick">${QUICK.map((q, i) => `<button class="mh-q q${i % 3}" data-quick="${i}"${W ? "" : " disabled"}>${ic(q[1])}<b>${esc(q[0])}</b><span>${esc(q[2])}</span></button>`).join("")}</div>
+          </section>
         </div>
           <section class="mh-panel p-parts mh-wide"><div class="mh-ph"><h2><span class="mh-hi">${ic("layers")}</span>Parts diagrams</h2><button class="linkbtn" data-go="diagrams">All sites ${ic("next")}</button></div>
             <div class="mh-sites">${diagramSites().slice(0, 4).map(x => `<a class="mh-site" href="${esc(x.url)}" target="_blank" rel="noopener"><b>${esc(x.name)}</b><span>${x.own ? "Opens your " + esc(BIKE.short) : "Pick your bike"}</span></a>`).join("")}</div>
@@ -99,6 +108,7 @@ if (GENERIC) {
     bind(root) {
       $$("[data-mh]", root).forEach(b => b.onclick = () => { const k = b.dataset.mh; if (k === "odo") logMileage(); else if (k === "presets") addPresets(); else if (k === "log") openRecord("maintenance", null, { odometer: odoNow() ? Math.round(odoNow().miles) : 0 }); else if (k === "report" || k === "hist") { R.tab.maintenance = k === "report" ? "report" : "history"; go("maintenance"); } });
       $$("[data-logfor]", root).forEach(b => b.onclick = () => logFor([b.dataset.logfor]));
+      $$("[data-quick]", root).forEach(b => b.onclick = () => { const q = QUICK[+b.dataset.quick], it = sorted("schedule").find(x => q[3].test(x.name)); if (it) return logFor([it.id]); const od = odoNow(); openRecord("maintenance", null, { service: q[0], odometer: od ? Math.round(od.miles) : 0, kind: "Scheduled service" }); });
       $$("[data-done]", root).forEach(c => c.onchange = async () => { const t = clone(S.tasks[c.dataset.done]); if (!t) return; t.status = "Complete"; c.closest("li").classList.add("done"); await store.put("tasks", t, { action: "finished " + t.title }); toast("Nice. " + t.title + " is done."); });
       const f = $("[data-mh-add]", root); if (f) f.onsubmit = async e => { e.preventDefault(); const v = f.t.value.trim(); if (!v) return; await store.put("tasks", blank("tasks", { title: v.slice(0, 120) }), { action: "added a job" }); toast("Added to your jobs."); };
       typeof bindHeroPhoto === "function" && bindHeroPhoto(root);
