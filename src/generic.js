@@ -38,28 +38,59 @@ if (GENERIC) {
   GUIDE.home = { how: ["Log every service in the Maintenance log, with the odometer, parts and cost.", "Add the jobs your bike needs to the to-do list and tick them off.", "Track parts and receipts so your costs add up on their own."] };
   VIEWS.home = {
     render() {
-      const m = meta(), o = typeof odoNow === "function" ? odoNow() : null, st = sorted("schedule").map(it => svcState(it, o));
+      const m = meta(), o = odoNow(), W = ME.canWrite;
+      const st = sorted("schedule").map(it => svcState(it, o)).sort((a, b) => SVC_RANK[a.status] - SVC_RANK[b.status] || (a.milesLeft ?? 1e9) - (b.milesLeft ?? 1e9) || (a.daysLeft ?? 1e9) - (b.daysLeft ?? 1e9));
+      const tracked = st.filter(x => x.status === "ok" || x.status === "soon" || x.status === "over"), ok = tracked.filter(x => x.status === "ok").length;
       const ov = st.filter(x => x.status === "over").length, sn = st.filter(x => x.status === "soon").length;
-      const open = sorted("tasks").filter(t => !tasksClosed(t)), f = finance(), parts = sorted("parts"), photos = sorted("docs").filter(d => d.file || d.link);
-      const eta = m.requestedAt ? (() => { const d = new Date(m.requestedAt); d.setDate(d.getDate() + 3); return d < new Date() ? "any day now" : "by " + d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }); })() : "";
-      const tile = (sec, i, t, v, s, cls = "") => `<button class="gtile2 ${cls}" data-go="${sec}"><span class="gt2-ic">${ic(i)}</span><span class="gt2-t">${t}</span><span class="gt2-v">${v}</span><span class="gt2-s">${s}</span></button>`;
-      return `<section class="ghero"><div class="eyebrow">Your bike</div><h1>${esc(BIKE.name)}</h1>
-          <p class="muted">${m.requestKey ? `We're building this bike's page, with its course, parts list and service schedule. Estimated ready ${esc(eta)}. Until then, keep your maintenance, parts, jobs and receipts here. When it's ready you can connect this project to it from My garage and nothing here is lost.` : "Keep your maintenance, parts, jobs and receipts in one place."}</p>
-          <div class="act">${ME.canWrite ? `<button class="btn tan big" data-go="maintenance">${ic("wrench")} Log a service</button><button class="btn big" data-go="tasks">${ic("check")} Add a job</button><button class="btn big" data-go="docs">${ic("camera")} Add photos</button>` : ""}</div>
-          ${heroPhotoHtml()}</section>
-        ${guideHtml("home")}
-        <div class="gtiles">
-          ${tile("maintenance", "gauge", "Maintenance", !st.length ? "Set up" : ov ? ov + " overdue" : sn ? sn + " due soon" : st.every(x => x.status === "none" || x.status === "nointerval") ? "Set up" : "Up to date", o ? milesFmt(o.miles) + " mi on the clock" : "Add your schedule and odometer", ov ? "red" : "")}
-          ${tile("tasks", "check", "Jobs to do", open.length, open.length ? "open jobs" : "Add the jobs your bike needs")}
-          ${tile("inventory", "box", "Parts", parts.length, parts.length ? "parts tracked" : "Track parts you buy or replace")}
-          ${tile("budget", "dollar", "Money spent", money(f.paid), f.total ? "of " + money(f.total) + " budget" : "Log receipts as you go")}
-          ${tile("docs", "camera", "Photos & files", photos.length, "Receipts, before and after")}
-          ${tile("diagrams", "layers", "Parts diagrams", diagramSites().length + " sites", "Factory diagrams by make and model")}
-        </div>`;
+      const health = tracked.length ? Math.round(ok / tracked.length * 100) : null;
+      const next = st.find(x => x.status === "over" || x.status === "soon" || x.status === "ok");
+      const mm = maintMoney(), hist = svcDone().sort((a, b) => String(b.date).localeCompare(String(a.date))).slice(0, 4);
+      const open = sorted("tasks").filter(t => !tasksClosed(t)).slice(0, 5), parts = sorted("parts"), photos = sorted("docs").filter(d => d.file || d.link);
+      const eta = m.requestKey ? (() => { const d = new Date(m.requestedAt || Date.now()); d.setDate(d.getDate() + 3); return d < new Date() ? "any day now" : "by " + d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }); })() : "";
+      const ring = pct => { const r = 26, c = 2 * Math.PI * r, f = pct == null ? 0 : pct / 100; return `<svg class="mh-ring" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="${r}" class="bg"/><circle cx="32" cy="32" r="${r}" class="fg ${ov ? "red" : sn ? "amber" : "green"}" stroke-dasharray="${c.toFixed(1)}" stroke-dashoffset="${(c * (1 - f)).toFixed(1)}"/></svg>`; };
+      const stat = (cls, k, v, s, attrs) => `<button class="mh-stat ${cls}" ${attrs}><span class="mh-k">${k}</span><span class="mh-v">${v}</span><span class="mh-s">${s}</span></button>`;
+      return `<section class="mh">
+        <div class="mh-top"><div><div class="eyebrow">Maintenance log</div><h1>${esc(BIKE.name)}</h1>
+          <p class="muted">${m.requestKey ? `We're building this bike's restoration course, ready ${esc(eta)}. Everything you log here stays when you connect it.` : "Every service, part, job and receipt for this bike, in one place."}</p></div>
+          ${W ? `<div class="mh-acts"><button class="btn tan big" data-mh="log">${ic("wrench")} Log a service</button><button class="btn big" data-mh="odo">${ic("gauge")} Update odometer</button></div>` : ""}</div>
+        <div class="mh-stage">${heroPhotoHtml()}</div>
+        <div class="mh-stats">
+          ${stat("", "Odometer", o ? milesFmt(o.miles) + `<small> mi</small>` : "—", o ? "Read " + fmtDate(o.date) : W ? "Tap to add a reading" : "No reading yet", W ? 'data-mh="odo"' : "")}
+          ${stat("ring " + (ov ? "red" : sn ? "amber" : ""), "Service health", `${ring(health)}<span>${health == null ? "—" : health + "%"}</span>`, !st.length ? "Add a schedule to start" : ov ? ov + " overdue" + (sn ? ", " + sn + " due soon" : "") : sn ? sn + " due soon" : tracked.length ? "Everything up to date" : "Set when items were last done", 'data-go="maintenance"')}
+          ${stat((next && next.status !== "ok" ? next.status : "") + " txt", "Next up", next ? esc(next.item.name) : "—", next ? esc(dueTxt(next)) : "Nothing scheduled yet", next && W && next.status !== "ok" ? `data-logfor="${esc(next.item.id)}"` : 'data-go="maintenance"')}
+          ${stat("", "Spent this year", money(mm.year), mm.perMile ? "$" + mm.perMile.toFixed(2) + " per mile overall" : mm.total ? money(mm.total) + " all time" : "Add costs when you log", 'data-mh="hist"')}
+        </div>
+        <div class="mh-grid">
+          <section class="mh-panel mh-due"><div class="mh-ph"><h2>Coming up</h2><button class="linkbtn" data-go="maintenance">Full schedule ${ic("next")}</button></div>
+            ${st.length ? `<div class="stack" style="gap:10px">${st.slice(0, 4).map(dueCard).join("")}</div>`
+              : `<div class="mh-empty"><b>No service schedule yet</b><span class="muted">Start from a typical motorcycle schedule (oil, chain, brakes, tires and more) and adjust it to your manual, or add your own items.</span>${W ? `<div class="row" style="gap:8px;flex-wrap:wrap"><button class="btn tan" data-mh="presets">Add a typical schedule</button><button class="btn" data-new="schedule">Add my own</button></div>` : ""}</div>`}
+          </section>
+          <section class="mh-panel"><div class="mh-ph"><h2>Recent services</h2><button class="linkbtn" data-mh="hist">All history ${ic("next")}</button></div>
+            ${hist.length ? `<ol class="mh-tl">${hist.map(r => `<li><button class="mh-tli" data-open="maintenance|${esc(r.id)}"><span class="mh-tld">${esc(fmtDate(r.date))}${n(r.odometer) ? ` · ${milesFmt(r.odometer)} mi` : ""}</span><b>${esc(r.service)}</b><span class="faint">${svcCost(r) ? money2(svcCost(r)) : ""}${r.doneBy === "A shop" && r.shop ? " · " + esc(r.shop) : ""}</span></button></li>`).join("")}</ol>`
+              : `<div class="mh-empty"><b>No services logged yet</b><span class="muted">Log the last oil change or anything else you remember. Even rough dates help the schedule.</span>${W ? `<button class="btn" data-mh="log">Log a service</button>` : ""}</div>`}
+          </section>
+          <section class="mh-panel"><div class="mh-ph"><h2>Jobs to do</h2><button class="linkbtn" data-go="tasks">All jobs ${ic("next")}</button></div>
+            ${open.length ? `<ul class="mh-jobs">${open.map(t => `<li>${W ? `<input type="checkbox" data-done="${esc(t.id)}" aria-label="Mark ${esc(t.title)} done">` : ""}<button class="linkbtn" data-open="tasks|${esc(t.id)}">${esc(t.title)}</button>${t.due ? `<span class="faint">${esc(fmtDate(t.due))}</span>` : ""}</li>`).join("")}</ul>` : `<div class="mh-empty"><span class="muted">Nothing on the list. Add things like "replace grips" or "fix the tail light".</span></div>`}
+            ${W ? `<form class="mh-add" data-mh-add><input name="t" placeholder="Add a job and press Enter" aria-label="New job" autocomplete="off"><button class="btn sm" type="submit">Add</button></form>` : ""}
+          </section>
+          <section class="mh-panel mh-more"><div class="mh-ph"><h2>Your records</h2></div>
+            <div class="mh-tiles">
+              <button class="mh-tile" data-go="inventory">${ic("box")}<b>${parts.length}</b><span>Parts</span></button>
+              <button class="mh-tile" data-go="docs">${ic("camera")}<b>${photos.length}</b><span>Photos & files</span></button>
+              <button class="mh-tile" data-go="budget">${ic("dollar")}<b>${money(mm.total)}</b><span>Service spend</span></button>
+              <button class="mh-tile" data-go="diagrams">${ic("layers")}<b>${diagramSites().length}</b><span>Diagram sites</span></button>
+            </div>
+            ${W ? `<button class="linkbtn" data-mh="report">${ic("download")} Print a service report</button>` : ""}
+          </section>
+        </div></section>`;
     },
     bind(root) {
-      $$("[data-go]", root).forEach(b => b.onclick = () => go(b.dataset.go));
+      $$("[data-mh]", root).forEach(b => b.onclick = () => { const k = b.dataset.mh; if (k === "odo") logMileage(); else if (k === "presets") addPresets(); else if (k === "log") openRecord("maintenance", null, { odometer: odoNow() ? Math.round(odoNow().miles) : 0 }); else if (k === "report" || k === "hist") { R.tab.maintenance = k === "report" ? "report" : "history"; go("maintenance"); } });
+      $$("[data-logfor]", root).forEach(b => b.onclick = () => logFor([b.dataset.logfor]));
+      $$("[data-done]", root).forEach(c => c.onchange = async () => { const t = clone(S.tasks[c.dataset.done]); if (!t) return; t.status = "Complete"; c.closest("li").classList.add("done"); await store.put("tasks", t, { action: "finished " + t.title }); toast("Nice. " + t.title + " is done."); });
+      const f = $("[data-mh-add]", root); if (f) f.onsubmit = async e => { e.preventDefault(); const v = f.t.value.trim(); if (!v) return; await store.put("tasks", blank("tasks", { title: v.slice(0, 120) }), { action: "added a job" }); toast("Added to your jobs."); };
       typeof bindHeroPhoto === "function" && bindHeroPhoto(root);
+      bindTables(root);
     }
   };
 }
