@@ -14,9 +14,11 @@ create policy "owner edits project" on public.projects for update
 -- sharing: owners add people only through add_member (which checks the email has an account),
 -- and the owner row can't be changed or removed
 drop policy if exists "owner manages members" on public.project_members;
+drop policy if exists "owner changes member roles" on public.project_members;
 create policy "owner changes member roles" on public.project_members for update
   using (role <> 'owner' and exists (select 1 from public.projects p where p.id = project_id and p.owner = auth.uid()))
   with check (role in ('editor', 'viewer'));
+drop policy if exists "owner removes members" on public.project_members;
 create policy "owner removes members" on public.project_members for delete
   using (role <> 'owner' and exists (select 1 from public.projects p where p.id = project_id and p.owner = auth.uid()));
 
@@ -29,10 +31,29 @@ begin
   insert into bike_requests (key, label, votes) values (k, l, array[auth.uid()])
   on conflict (key) do update set votes = (select array(select distinct unnest(bike_requests.votes || auth.uid())));
 end $$;
+drop policy if exists "admin manages requests" on public.bike_requests;
 create policy "admin manages requests" on public.bike_requests for update using (public.is_admin()) with check (public.is_admin());
+drop policy if exists "admin deletes requests" on public.bike_requests;
 create policy "admin deletes requests" on public.bike_requests for delete using (public.is_admin());
 
--- reminders: only ever emailed to the account's own address
+-- reminders: the queue the email worker reads (from reminders.sql), only ever emailed to the account's own address
+create table if not exists public.reminder_queue (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null default auth.uid() references auth.users(id) on delete cascade,
+  project_id uuid not null references public.projects(id) on delete cascade,
+  email text not null,
+  send_on date not null,
+  due_on date,
+  kind text not null default 'service',
+  item_key text not null,
+  bike text,
+  title text not null,
+  body text,
+  sent_at timestamptz,
+  created_at timestamptz not null default now()
+);
+create index if not exists reminder_queue_due on public.reminder_queue (send_on) where sent_at is null;
+alter table public.reminder_queue enable row level security;
 drop policy if exists "own reminders" on public.reminder_queue;
 create policy "own reminders" on public.reminder_queue for all
   using (user_id = auth.uid())
