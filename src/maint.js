@@ -8,6 +8,22 @@ const MAINT_PRESETS = [
   ["Fuel lines and filter check", "Fuel & air", 6000, 12], ["Control cables lube and adjust", "Controls & cables", 3000, 12],
 ];
 const TYPICAL_SRC = "Typical interval, not yet checked against the service manual";
+// the typical list fitted to this bike: chain items only for chain bikes, plus shaft, belt or scooter items
+function bikeDrive() { const d = String(BIKE.drive || (meta() && meta().drive) || "").toLowerCase(); return BIKE.style === "scooter" ? "cvt" : /shaft/.test(d) ? "shaft" : /belt/.test(d) ? "belt" : /cvt/.test(d) ? "cvt" : "chain"; }
+function maintPresets() {
+  const dr = bikeDrive(), out = MAINT_PRESETS.filter(p => dr === "chain" || p[1] !== "Drivetrain");
+  if (dr === "shaft") out.splice(1, 0, ["Final drive (shaft) oil change", "Drivetrain", 12000, 24], ["Drive shaft splines lube", "Drivetrain", 24000, 0]);
+  if (dr === "belt") out.splice(1, 0, ["Drive belt tension and wear check", "Drivetrain", 5000, 12]);
+  if (dr === "cvt") out.splice(1, 0, ["CVT belt check", "Drivetrain", 6000, 12], ["CVT belt and rollers replace", "Drivetrain", 12000, 0], ["Final gear (transmission) oil change", "Drivetrain", 6000, 24]);
+  if (BIKE.style === "dirt" || BIKE.style === "dual") out.push(["Air filter clean and oil (off-road)", "Fuel & air", 0, 1]);
+  return out;
+}
+// adds one typical item to the schedule and returns its id, so a service can say it covered it
+async function addPresetItem(p) {
+  const have = sorted("schedule").find(s => s.name.toLowerCase() === p[0].toLowerCase()); if (have) return have.id;
+  const r = blank("schedule", { name: p[0], category: p[1], everyMiles: p[2], everyMonths: p[3], source: TYPICAL_SRC, order: sorted("schedule").length + 1 });
+  await store.put("schedule", r, { action: "added to the schedule" }); return r.id;
+}
 
 const isoDay = d => d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
 function addMonths(iso, m) { const d = new Date(iso + "T12:00:00"); const day = d.getDate(); d.setMonth(d.getMonth() + m); if (d.getDate() < day) d.setDate(0); return isoDay(d); }
@@ -76,13 +92,14 @@ function logMileage() {
 }
 function addPresets() {
   const have = new Set(sorted("schedule").map(s => s.name.toLowerCase()));
-  const rows = MAINT_PRESETS.map((p, i) => `<label class="chk" style="display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-bottom:1px solid var(--line)"><input type="checkbox" data-p="${i}" ${have.has(p[0].toLowerCase()) ? "disabled" : p[0].startsWith("Coolant") ? "" : "checked"}><span class="grow"><b style="font-weight:600">${esc(p[0])}</b>${have.has(p[0].toLowerCase()) ? ' <span class="tag">Already added</span>' : ""}<br><span class="faint" style="font-size:12.5px">${esc(p[1])} · every ${everyTxt({ everyMiles: p[2], everyMonths: p[3] })}</span></span></label>`).join("");
+  const PRE = maintPresets();
+  const rows = PRE.map((p, i) => `<label class="chk" style="display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-bottom:1px solid var(--line)"><input type="checkbox" data-p="${i}" ${have.has(p[0].toLowerCase()) ? "disabled" : p[0].startsWith("Coolant") ? "" : "checked"}><span class="grow"><b style="font-weight:600">${esc(p[0])}</b>${have.has(p[0].toLowerCase()) ? ' <span class="tag">Already added</span>' : ""}<br><span class="faint" style="font-size:12.5px">${esc(p[1])} · every ${everyTxt({ everyMiles: p[2], everyMonths: p[3] })}</span></span></label>`).join("");
   modal(`<h2>Start from a typical schedule</h2><p class="hint-text" style="margin-top:0">These are common starting intervals for motorcycles, not the numbers for your bike. Check each one against your service manual and edit it. Items stay marked "not yet checked" until you change where the interval comes from.</p>
     <div style="max-height:52vh;overflow:auto;margin:8px 0">${rows}</div>
     <div class="row" style="justify-content:flex-end;gap:8px;margin-top:10px"><button class="btn" data-x>Cancel</button><button class="btn pri" data-ok>Add selected</button></div>`, m => {
     m.querySelector("[data-x]").onclick = closeModal;
     m.querySelector("[data-ok]").onclick = async () => {
-      const pick = [...m.querySelectorAll("[data-p]:checked:not(:disabled)")].map(x => MAINT_PRESETS[+x.dataset.p]);
+      const pick = [...m.querySelectorAll("[data-p]:checked:not(:disabled)")].map(x => PRE[+x.dataset.p]);
       if (!pick.length) { closeModal(); return; }
       closeModal(); const writes = []; let ord = sorted("schedule").length;
       for (const [name, category, everyMiles, everyMonths] of pick) { const r = blank("schedule", { name, category, everyMiles, everyMonths, source: TYPICAL_SRC, order: ++ord }); S.schedule[r.id] = r; writes.push({ c: "schedule", rec: r }); }

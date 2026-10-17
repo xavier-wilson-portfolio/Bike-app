@@ -322,7 +322,7 @@ function closeDrawer() { drawerState.c = null; drawerState.id = null; drawerStat
 function refreshDrawer() {
   if (!drawerState.c) return;
   if (!drawerState.isNew && !S[drawerState.c][drawerState.id]) { closeDrawer(); return; }
-  if (drawerState.dirty) { const n2 = $("#drawerHost .stale"); if (n2) n2.hidden = JSON.stringify(stripMeta(S[drawerState.c][drawerState.id])) === JSON.stringify(stripMeta(drawerState.base)); return; }
+  if (drawerState.dirty) { const n2 = $("#drawerHost .stale"); if (n2) n2.hidden = drawerState.isNew || JSON.stringify(stripMeta(S[drawerState.c][drawerState.id])) === JSON.stringify(stripMeta(drawerState.base)); return; }
   if (!drawerState.isNew) drawerState.draft = clone(S[drawerState.c][drawerState.id]);
   renderDrawer(true);
 }
@@ -335,10 +335,32 @@ function fieldInput(c, f, v) {
   if (f.type === "select") { const opts = f.opts || f.optsFn(); const L = x => f.lbl ? f.lbl[x] || x : f.lblFn ? f.lblFn(x) : x || "—"; const list = opts.includes(v) || v == null || v === "" ? opts : [v, ...opts]; return `<select id="${id}" data-k="${f.k}"${dis}>${list.map(o => `<option value="${esc(o)}" ${o === v ? "selected" : ""}>${esc(L(o))}</option>`).join("")}</select>`; }
   if (f.type === "ref") { const rows = sorted(f.ref).filter(r => !(f.ref === c && r.id === drawerState.id)); return `<select id="${id}" data-k="${f.k}"${dis}><option value="">— none —</option>${rows.map(r => `<option value="${esc(r.id)}" ${r.id === v ? "selected" : ""}>${f.ref === "team" ? esc(r.name) : esc(r.id + " · " + titleOf(f.ref, r)).slice(0, 80)}</option>`).join("")}${v && !S[f.ref][v] ? `<option value="${esc(v)}" selected>${esc(v)} (not found)</option>` : ""}</select>${f.ref === "team" && !sorted("team").length ? `<span class="hint">Add people under Team & work log first.</span>` : ""}`; }
   if (f.type === "refs") { const vals = Array.isArray(v) ? v : []; const rows = sorted(f.ref).filter(r => !vals.includes(r.id) && !(f.ref === c && r.id === drawerState.id));
-    return `<div class="row" data-refs="${f.k}">${vals.map(x => `<span class="tag" style="display:inline-flex;gap:4px;align-items:center"><button type="button" class="btn sm" style="border:0;padding:0 2px;background:none" data-open="${f.ref}|${esc(x)}">${esc(x)}</button>${ME.canWrite ? `<button type="button" aria-label="Remove ${esc(x)}" data-rm="${esc(x)}" style="all:unset;cursor:pointer">×</button>` : ""}</span>`).join("") || `<span class="faint">none</span>`}
-    ${ME.canWrite ? `<select id="${id}" data-addref="${f.k}" style="max-width:220px"><option value="">+ add…</option>${rows.map(r => `<option value="${esc(r.id)}">${esc(r.id + " · " + titleOf(f.ref, r)).slice(0, 70)}</option>`).join("")}</select>` : ""}</div>`; }
+    return `<div class="row" data-refs="${f.k}">${vals.map(x => `<span class="tag" style="display:inline-flex;gap:4px;align-items:center"><button type="button" class="btn sm" style="border:0;padding:0 2px;background:none" data-open="${f.ref}|${esc(x)}">${esc(f.ref === "schedule" && S.schedule[x] ? S.schedule[x].name : x)}</button>${ME.canWrite ? `<button type="button" aria-label="Remove ${esc(x)}" data-rm="${esc(x)}" style="all:unset;cursor:pointer">×</button>` : ""}</span>`).join("") || `<span class="faint">none</span>`}
+    ${ME.canWrite ? `<select id="${id}" data-addref="${f.k}" style="max-width:260px"><option value="">+ add…</option>${f.ref === "schedule" ? schedRefOpts(rows) : rows.map(r => `<option value="${esc(r.id)}">${esc(r.id + " · " + titleOf(f.ref, r)).slice(0, 70)}</option>`).join("")}</select>` : ""}</div>`; }
   const type = f.type === "num" || f.type === "money" ? "number" : f.type === "date" ? "date" : f.type === "url" ? "url" : "text";
   return `<input id="${id}" data-k="${f.k}" type="${type}" ${type === "number" ? 'step="any" inputmode="decimal"' : ""} value="${esc(v ?? "")}"${req}${dis} ${f.list ? `list="dl-${f.list}"` : ""}>`;
+}
+// the schedule picker on a service: this bike's items first, then common ones that get added to the schedule when picked
+function schedRefOpts(rows) {
+  const mine = rows.map(r => `<option value="${esc(r.id)}">${esc(titleOf("schedule", r)).slice(0, 70)}</option>`).join("");
+  const have = new Set(sorted("schedule").map(s => s.name.toLowerCase()));
+  const pre = typeof maintPresets === "function" ? maintPresets().map((p, i) => [p, i]).filter(([p]) => !have.has(p[0].toLowerCase())) : [];
+  return (mine ? `<optgroup label="On this bike's schedule">${mine}</optgroup>` : "") +
+    (pre.length ? `<optgroup label="Common items (adds them to the schedule)">${pre.map(([p, i]) => `<option value="preset:${i}">${esc(p[0])}</option>`).join("")}</optgroup>` : "") +
+    `<option value="custom:">Something else…</option>`;
+}
+async function schedRefPick(v) {
+  if (v.startsWith("preset:")) return addPresetItem(maintPresets()[+v.slice(7)]);
+  const name = await new Promise(res => modal(`<h2>Add a schedule item</h2><p class="hint-text" style="margin-top:0">Name the job, for example "Coolant flush". You can set how often it's due on the Maintenance page.</p>
+    <input id="schedNew" type="text" maxlength="80" style="width:100%" placeholder="What was done">
+    <div class="row" style="justify-content:flex-end;gap:8px;margin-top:12px"><button class="btn" data-x>Cancel</button><button class="btn pri" data-ok>Add</button></div>`, m => {
+      const i = m.querySelector("#schedNew"); setTimeout(() => i.focus(), 30);
+      m.querySelector("[data-x]").onclick = () => { closeModal(); res(""); };
+      const ok = () => { const t = i.value.trim(); closeModal(); res(t); };
+      m.querySelector("[data-ok]").onclick = ok; i.onkeydown = e => { if (e.key === "Enter") { e.preventDefault(); ok(); } };
+    }));
+  if (!name) return null;
+  return addPresetItem([name, "General", 0, 0]);
 }
 function datalists() {
   const cats = [...new Set(all("parts").map(p => p.category).filter(Boolean))], ex = meta().expenseCategories || [], fol = ["/00_Admin/", "/01_Inventory/", "/02_Engine/", "/03_Fuel/", "/04_Electrical/", "/05_Chassis/", "/06_Finish/", "/07_Assembly/", "/08_Testing/", "/09_Receipts/", "/10_Manuals/"];
@@ -368,7 +390,11 @@ function renderDrawer(keepScroll) {
   const form = $("#recForm");
   const mark = () => { drawerState.dirty = true; };
   $$("[data-k]", form).forEach(el => el.addEventListener(el.type === "checkbox" || el.tagName === "SELECT" ? "change" : "input", () => { const f = sc.fields.find(x => x.k === el.dataset.k); r[f.k] = el.type === "checkbox" ? el.checked : (f.type === "num" || f.type === "money") ? (el.value === "" ? "" : n(el.value)) : el.value; mark(); }));
-  $$("[data-addref]", form).forEach(el => el.addEventListener("change", () => { if (!el.value) return; const k = el.dataset.addref; r[k] = [...(r[k] || []), el.value]; mark(); renderDrawerKeep(); }));
+  $$("[data-addref]", form).forEach(el => el.addEventListener("change", async () => { if (!el.value) return; const k = el.dataset.addref; let v = el.value;
+    if (/^(preset|custom):/.test(v)) { el.disabled = true; try { v = await schedRefPick(v); } catch (e) { v = null; } el.disabled = false; if (!v) { el.value = ""; return; } }
+    if (!(r[k] || []).includes(v)) r[k] = [...(r[k] || []), v];
+    if (k === "items" && c === "maintenance" && !String(r.service || "").trim()) r.service = (r[k] || []).map(id => S.schedule[id] && S.schedule[id].name).filter(Boolean).join(", ");
+    mark(); renderDrawerKeep(); }));
   $$("[data-rm]", form).forEach(b => b.onclick = e => { e.preventDefault(); const k = b.closest("[data-refs]").dataset.refs; r[k] = (r[k] || []).filter(x => x !== b.dataset.rm); mark(); renderDrawerKeep(); });
   form.addEventListener("submit", e => { e.preventDefault(); saveDrawer(); });
   form.addEventListener("keydown", e => { if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) { e.preventDefault(); saveDrawer(); } });
