@@ -24,7 +24,7 @@ function modCard(m) {
     <span class="md-ico c${(MOD_CATS.indexOf(m.category) + 3) % 3}">${ic(MOD_ICON[m.category] || "tune")}</span>
     <div class="md-main">
       <div class="md-top"><button class="linkbtn md-name" data-open="mods|${esc(m.id)}">${esc(m.name)}</button>${m.status !== "Installed" ? `<span class="tag ${m.status === "Ordered" ? "md-ord" : ""}">${esc(m.status)}</span>` : ""}</div>
-      <div class="md-meta">${[m.category ? `<span>${esc(m.category)}</span>` : "", m.brand ? `<span>${esc(m.brand)}</span>` : "", m.partNo ? `<span class="md-pn"><code>${esc(m.partNo)}</code><button class="md-copy" data-copy="${esc(m.partNo)}" aria-label="Copy part number ${esc(m.partNo)}" title="Copy">${ic("copy")}</button></span>` : ""].filter(Boolean).join("")}</div>
+      <div class="md-meta">${[m.category ? `<span>${esc(m.category)}</span>` : "", m.brand ? `<span>${esc(m.brand)}</span>` : "", m.partNo ? `<span class="md-pn"><code>${esc(m.partNo)}</code><button class="md-copy" data-copy="${esc(m.partNo)}" aria-label="Copy part number ${esc(m.partNo)}" title="Copy">${ic("copy")}</button><button class="md-copy" data-find="${esc(m.partNo)}" aria-label="Find part ${esc(m.partNo)} in stores" title="Find it in stores">${ic("search")}</button></span>` : ""].filter(Boolean).join("")}</div>
       ${wish ? `<div class="md-sub">${[m.vendor ? "From " + esc(m.vendor) : "", m.notes ? esc(String(m.notes).slice(0, 90)) : ""].filter(Boolean).join(" · ") || `<span class="faint">Add where to buy it and a link</span>`}</div>`
         : `<div class="md-sub">${[m.date ? esc(fmtDate(m.date)) : "", n(m.odometer) ? milesFmt(m.odometer) + " mi" : "", esc(by)].filter(Boolean).join(" · ")}</div>`}
       ${m.replaced ? `<div class="md-stock">${ic("box")}<span>Replaced the stock ${esc(m.replaced)}${m.stockPartNo ? ` <code>${esc(m.stockPartNo)}</code>` : ""}${m.stockKept && m.stockKept !== "Not applicable" ? ` · ${esc(m.stockKept.toLowerCase())}${m.stockKept === "Kept" && m.stockLocation ? ", " + esc(m.stockLocation) : ""}` : ""}</span></div>` : ""}
@@ -93,6 +93,7 @@ VIEWS.mods = {
     $$("[data-idea]", root).forEach(b => b.onclick = () => { const [c, nm] = MOD_IDEAS[+b.dataset.idea]; openRecord("mods", null, { name: nm, category: c, status: "Installed", date: today(), odometer: od() }); });
     $$("[data-fit]", root).forEach(b => b.onclick = async () => { const m = clone(S.mods[b.dataset.fit]); if (!m) return; m.status = "Installed"; m.date = m.date || today(); m.odometer = n(m.odometer) || od(); if (m.stockKept === "Not applicable" && m.replaced) m.stockKept = "Kept";
       await store.put("mods", m, { action: "fitted " + m.name }); toast(m.name + " is on the bike."); openRecord("mods", m.id); });
+    $$("[data-find]", root).forEach(b => b.onclick = e => { e.stopPropagation(); findPart(b.dataset.find); });
     $$("[data-copy]", root).forEach(b => b.onclick = e => { e.stopPropagation(); const v = b.dataset.copy; (navigator.clipboard ? navigator.clipboard.writeText(v) : Promise.reject()).then(() => toast("Copied " + v), () => toast(v)); });
     const rp = $("[data-go-report]", root); if (rp) rp.onclick = () => go("report");
     const csv = $("#mdCsv", root); if (csv) csv.onclick = () => saveFile("revora-mods-" + today() + ".csv", csvOf(sorted("mods").map(m => ({ ...m, total: modCost(m) })),

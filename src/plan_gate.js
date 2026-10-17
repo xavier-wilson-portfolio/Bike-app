@@ -6,7 +6,7 @@ const planNow = () => window.rvPlanOf ? rvPlanOf(window.RV_CLOUD && RV_CLOUD.pro
 const hasPlan = need => !need || ((window.RV_PLAN_RANK || {})[planNow().id] || 0) >= ((window.RV_PLAN_RANK || {})[need] || 0);
 const SEC_PLAN = { reminders: "rider", recalls: "rider", mods: "rider", costs: "rider", value: "rider", budget: "restorer", purchasing: "restorer", receipts: "restorer", team: "restorer", viewer: "restorer" };
 // on a restoration project, the course and its workshop pages are Restorer; the everyday pages follow their own plan
-const RESTORE_OPEN = new Set(["maintenance", "reminders", "mods", "costs", "recalls", "papers", "checklists", "wear", "report", "build", "value", "docs", "settings", "help", "plans", "shops", "guides", "receipts", "problems"]);
+const RESTORE_OPEN = new Set(["maintenance", "reminders", "mods", "costs", "recalls", "papers", "checklists", "wear", "report", "build", "value", "finder", "docs", "settings", "help", "plans", "shops", "guides", "receipts", "problems"]);
 function needFor(sec) { if (!GENERIC && !RESTORE_OPEN.has(sec) && sec !== "plans") return "restorer"; return SEC_PLAN[sec] || null; }
 const planLockFor = sec => { const need = needFor(sec); return need && !hasPlan(need) ? need : null; };
 const secLock = id => planLockFor(id) ? `<span class="lockb" title="Included in ${PLAN_NAME[planLockFor(id)]}">${ic("lock")}${PLAN_NAME[planLockFor(id)]}</span>` : "";
