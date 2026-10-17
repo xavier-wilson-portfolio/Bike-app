@@ -370,12 +370,14 @@
         : `<div class="bench empty"><div class="bench-txt"><h2>Add your bike</h2><p>Restoring it? Get its parts diagrams, part numbers and a step-by-step course. Just keeping it running? Get a maintenance log with parts, jobs and receipts.</p>
             <div class="bench-go"><button class="btn tan big" data-nav="new">Add your bike</button></div></div>${benchArt()}</div>`}
       </section>
+      <div id="woBoard"></div>
       ${data.length ? `<section class="garage"><div class="garage-h"><h2>Your garage</h2><button class="btn sm" data-nav="new">+ New project</button></div>
         <div class="gts">${data.map(tag).join("")}<button class="gt gt-new" data-nav="new"><b>Add a bike</b><span>Start a new project for another bike</span></button></div></section>` : ""}
       ${!(matchMedia("(display-mode: standalone)").matches || navigator.standalone) ? `<section class="ins-band"><img src="img/app-192.png" alt="" width="44" height="44"><div><b>Put Revora on your home screen</b><span>It opens like an app, full screen, one tap from your phone's home screen.</span></div><button class="btn tan" data-act="install">Install the app</button></section>` : ""}
       <section class="gfoot"><div><b>Working with a team?</b><span>Share a project and everyone sees the same parts, steps and photos, live. Owners can give edit or view access.</span></div>
         <div><b>Plans</b><span>One bike is free for good. Paid plans add AI receipts, email reminders, share links and teams.</span><button class="linkbtn" data-plans>See plans</button></div>
         <div><b>Any bike works</b><span>Restoring or maintaining a bike we don't list? Add it with its year, make and model. Restorations get a course built for its kind of bike.</span><button class="linkbtn" data-nav="browse">Add a bike</button></div></section>`, { wide: true, garage: true });
+    if (hasPlanL("shop") && data.length) woBoard(data);
     app.querySelectorAll("[data-connect]").forEach(b => b.onclick = e => { e.stopPropagation(); const p = data.find(x => x.id === b.dataset.connect); connectProject(p, readyFor(p)); });
     app.querySelectorAll("[data-pin]").forEach(b => b.onclick = e => { e.stopPropagation(); const id = b.dataset.pin, cur = (PREFS.pinned || []).filter(x => x !== id); window.rvPrefs.set({ pinned: b.getAttribute("aria-pressed") === "true" ? cur : [id].concat(cur) }); showProjects(); });
     app.querySelectorAll("[data-rename]").forEach(b => b.onclick = async () => {
@@ -383,6 +385,21 @@
       const { error } = await sb.from("projects").update({ name: name.trim().slice(0, 80) }).eq("id", p.id); if (error) note(friendly(error), true); else showProjects();
     });
     app.querySelectorAll("[data-share]").forEach(b => b.onclick = () => hasPlanL("restorer") ? shareBox(data.find(x => x.id === b.dataset.share)) : upsellBox("restorer", "Sharing projects is in Restorer", "Share a bike with friends or a shop so everyone sees the same parts, jobs and photos live."));
+  }
+  // Shop plan: every open work order across the garage, soonest due first
+  async function woBoard(projects) {
+    const host = document.getElementById("woBoard"); if (!host) return;
+    const { data: rows, error } = await sb.from("records").select("project_id,rec_id,data").eq("coll", "workorders").in("project_id", projects.map(p => p.id));
+    if (error || !rows) return;
+    const done = ["Picked up", "Declined"], open = rows.map(r => Object.assign({ pid: r.project_id, id: r.rec_id }, r.data)).filter(w => w && !w.archived && !done.includes(w.status))
+      .sort((a, b) => String(a.promised || "9999").localeCompare(String(b.promised || "9999")) || String(a.dateIn || "").localeCompare(String(b.dateIn || "")));
+    if (!open.length) return;
+    const pname = id => { const p = projects.find(x => x.id === id); return p ? p.name || bikeName(bikeOf(p.bike_id)) : ""; };
+    const today = new Date().toISOString().slice(0, 10), fmt = d => d ? new Date(d + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" }) : "";
+    const cols = [["Waiting on the customer", ["Checked in", "Waiting for approval"]], ["In the shop", ["Approved", "In progress", "Waiting for parts"]], ["Ready for pickup", ["Done"]]];
+    host.innerHTML = `<section class="wob"><div class="garage-h"><h2>Open work orders</h2><span class="muted">${open.length} open</span></div>
+      <div class="wob-cols">${cols.map(([t, ss]) => { const L = open.filter(w => ss.includes(w.status)); return `<div class="wob-col"><h3>${esc(t)} <span>${L.length}</span></h3>${L.map(w => `<button class="wob-card${w.promised && w.promised < today && w.status !== "Done" ? " late" : ""}" data-wob="${esc(w.pid)}|${esc(w.id)}"><b>${esc(w.title || "Work order")}</b><span>${esc(pname(w.pid))}</span><small>${esc(w.id)} · ${esc(w.status)}${w.promised ? " · ready by " + esc(fmt(w.promised)) : ""}</small></button>`).join("") || `<p class="faint">Nothing here.</p>`}</div>`; }).join("")}</div></section>`;
+    host.querySelectorAll("[data-wob]").forEach(b => b.onclick = () => { const [pid, wid] = b.dataset.wob.split("|"); try { sessionStorage.setItem("rv.woOpen", wid); } catch (e) {} location.href = url({ project: pid }); });
   }
   async function createProject(bikeId) {
     if (!(await roomForBike())) return;
@@ -551,6 +568,41 @@
     window.rvBuildBind(app, data, { token, onLike: async () => { const r = await sb.rpc("like_build", { t: token }); return r.error ? null : r.data; } });
   }
 
+  /* ---------- a work order estimate the shop sent the customer (no account needed) ---------- */
+  async function showWo(token) {
+    spin(); document.title = "Estimate · Revora";
+    if (!sb) return fail("Estimates can't be opened on this copy of Revora.");
+    const ok = /^[A-Za-z0-9]{16,40}$/.test(token);
+    const { data, error } = ok ? await sb.rpc("get_wo", { t: token }) : { data: null };
+    if (error || !data) return frame(`<h1 class="disp">This estimate isn't available</h1><p class="muted">The shop may have replaced it with a newer one, or the link is incomplete. Ask them to send it again.</p>`);
+    document.title = "Estimate from " + ((data.shop && data.shop.name) || "your shop");
+    const decided = data.decision ? { decision: data.decision, name: data.decided_name, at: data.decided_at } : null;
+    const draw = (d2, note) => {
+      app.innerHTML = `<div class="bp-page wo-page"><div class="hr-bar"><span class="wo-from">Estimate from <b>${esc((data.shop && data.shop.name) || "your shop")}</b></span><button class="btn sm" id="woPrint">Print</button></div>
+        ${d2 ? `<div class="wo-done ${d2.decision === "declined" ? "no" : ""}"><b>${d2.decision === "declined" ? "You declined this estimate." : "Approved. Thanks!"}</b><span>${d2.decision === "declined" ? "The shop has been told. Give them a call if you want to talk it over." : "The shop can see your approval and will get started."}${note ? " " + esc(note) : ""}</span></div>` : ""}
+        ${window.rvWoHtml(Object.assign({}, data, { approval: d2 }), { kind: "estimate" })}
+        ${d2 ? "" : `<form class="wo-decide" id="woDec"><h2>Approve this work?</h2><label class="bp-f"><b>Your name</b><input id="wdN" required maxlength="80" autocomplete="name" value="${esc((data.customer && data.customer.name) || "")}"></label>
+          <label class="bp-f"><b>Note for the shop (optional)</b><textarea id="wdT" rows="2" maxlength="500" placeholder="e.g. Go ahead, but call me before anything over $100 more."></textarea></label>
+          <div class="row" style="gap:8px;flex-wrap:wrap"><button class="btn pri" type="submit" data-d="approved">Approve the work</button><button class="btn" type="button" data-d="declined">Decline</button></div>
+          <p class="faint" style="font-size:12.5px;margin:6px 0 0">Typing your name and tapping Approve tells the shop to go ahead at this price.</p></form>`}
+        <p class="faint wo-pw">Sent with Revora</p></div>`;
+      document.getElementById("woPrint").onclick = () => window.print();
+      const f = document.getElementById("woDec"); if (!f) return;
+      const go2 = async d => {
+        const nm = document.getElementById("wdN").value.trim(); if (!nm) { document.getElementById("wdN").focus(); return note2("Type your name first.", true); }
+        f.querySelectorAll("button").forEach(b => b.disabled = true);
+        const { data: r, error: er } = await sb.rpc("decide_wo", { t: token, d, nm, note: document.getElementById("wdT").value.trim() });
+        if (er || r === "bad" || r === "name") { f.querySelectorAll("button").forEach(b => b.disabled = false); return note2("That didn't go through. Check your internet and try again.", true); }
+        draw({ decision: r === "done" ? (data.decision || d) : d, name: nm, at: new Date().toISOString() }, r === "done" ? "An answer was already recorded for this estimate." : "");
+        window.scrollTo(0, 0);
+      };
+      f.onsubmit = ev => { ev.preventDefault(); go2("approved"); };
+      f.querySelector('[data-d="declined"]').onclick = () => go2("declined");
+    };
+    const note2 = (t, bad) => { let n2 = document.querySelector(".wo-decide .wo-msg"); if (!n2) { n2 = document.createElement("p"); n2.className = "wo-msg"; document.querySelector(".wo-decide").appendChild(n2); } n2.textContent = t; n2.style.color = bad ? "var(--red)" : ""; };
+    draw(decided);
+  }
+
   /* ---------- open a bike ---------- */
   async function openApp(bikeId, cloud) {
     spin();
@@ -660,6 +712,7 @@
     }
     if (qs.get("report")) return showReport(qs.get("report"));
     if (qs.get("build")) return showBuild(qs.get("build"));
+    if (qs.get("wo")) return showWo(qs.get("wo"));
     if (qs.has("plans")) return showPlans();
     const auth = qs.get("auth"); if (sb && !session && ["signin", "signup"].includes(auth)) return showAuth(auth);
     const pid = qs.get("project"), bid = qs.get("bike");

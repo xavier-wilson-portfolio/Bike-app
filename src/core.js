@@ -236,6 +236,10 @@ const SCHEMA = {
     F("item", "What", "select", { opts: ["Front tire", "Rear tire", "Chain"] }), F("date", "Date", "date", { req: 1 }), F("odometer", "Odometer (miles)", "num"),
     F("value", "Reading", "num", { hint: "Tires: tread depth. Chain: how worn it is in percent, from a chain wear gauge." }), F("kind", "Type", "select", { opts: ["Reading", "New one fitted"] }),
     F("docId", "Photo", "ref", { ref: "docs" }), F("notes", "Notes", "textarea", { full: 1 })] },
+  workorders: { label: "Work order", plural: "Work orders", prefix: "WO-", pad: 4, title: "title", fields: [
+    F("title", "Job", "text", { full: 1 }), F("status", "Status", "select", { opts: ["Checked in", "Waiting for approval", "Approved", "In progress", "Waiting for parts", "Done", "Picked up", "Declined"] }),
+    F("dateIn", "Checked in", "date"), F("promised", "Ready by", "date"), F("odometer", "Odometer at check-in", "num"),
+    F("complaint", "What the customer asked for", "textarea", { full: 1 }), F("conditionIn", "Condition at check-in", "textarea", { full: 1 }), F("notes", "Shop notes", "textarea", { full: 1 })] },
   mileage: { label: "Odometer reading", plural: "Odometer readings", prefix: "ODO-", pad: 4, title: "miles", fields: [
     F("date", "Date", "date", { req: 1 }), F("miles", "Odometer (miles)", "num", { req: 1 }), F("note", "Note", "text", { full: 1 })] },
   tools: { label: "Tool or supply", plural: "Tools & supplies", prefix: "TOOL-", pad: 3, title: "name", fields: [
