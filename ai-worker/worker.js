@@ -5,7 +5,24 @@
    Other settings: ALLOWED_ORIGINS (comma list), MODEL (overrides the default model), VISION_MODEL (overrides the parts-scan model).
    PARTS SCAN: POST { scan: { image: "data:image/jpeg;base64,...", prompt: "..." } } returns { text }. Uses a free Workers AI vision model.
    RECEIPTS: the same, with scan.kind = "receipt" (reads a receipt photo into JSON).
+   PLAN LIMITS: every request must carry the person's Revora sign-in (Authorization: Bearer ...). The worker asks
+     Supabase use_ai() whether their plan allows it: Ask the mechanic is Rider and up (Rider 10 a day), scans are Restorer and up.
+     Uses the public Supabase URL and publishable key below (or SUPABASE_URL / SUPABASE_KEY variables). No secret key.
 */
+const SUPABASE_URL = "https://fhuksccqsyaomnouxxtb.supabase.co", SUPABASE_KEY = "sb_publishable_0wYtVeKcFJUzy3AfIaFhiw_NrT1wNkz";
+// asks Supabase whether this person's plan allows one more AI request: ok | limit | locked | signin
+async function planCheck(req, env, kind) {
+  const auth = req.headers.get("Authorization") || "";
+  if (!/^Bearer [A-Za-z0-9._-]{20,}$/.test(auth)) return "signin";
+  try {
+    const r = await fetch((env.SUPABASE_URL || SUPABASE_URL) + "/rest/v1/rpc/use_ai", { method: "POST",
+      headers: { apikey: env.SUPABASE_KEY || SUPABASE_KEY, Authorization: auth, "content-type": "application/json" }, body: JSON.stringify({ kind }) });
+    if (r.status === 401 || r.status === 403) return "signin";
+    if (!r.ok) { console.log("plan check failed", r.status, await r.text()); return "error"; }
+    return String(await r.json());
+  } catch (e) { console.log("plan check error", String(e)); return "error"; }
+}
+const PLAN_MSG = { signin: [401, "sign in"], locked: [402, "plan"], limit: [429, "daily limit"], error: [503, "plan check failed"], bad: [400, "bad kind"] };
 const VISION_MODELS = ["@cf/meta/llama-3.2-11b-vision-instruct"];
 const MAX_IMAGE = 2400000; // about 1.8 MB of photo as base64
 const FREE_MODELS = ["@cf/meta/llama-3.3-70b-instruct-fp8-fast", "@cf/meta/llama-3.1-8b-instruct"];
@@ -17,7 +34,7 @@ const MAX_MSGS = 26, MAX_CHARS = 9000, MAX_TOTAL = 40000, PER_10_MIN = 30;
 const hits = new Map();
 
 function cors(origin) {
-  return { "Access-Control-Allow-Origin": origin, "Access-Control-Allow-Methods": "POST, OPTIONS", "Access-Control-Allow-Headers": "content-type", "Access-Control-Max-Age": "86400", "Vary": "Origin" };
+  return { "Access-Control-Allow-Origin": origin, "Access-Control-Allow-Methods": "POST, OPTIONS", "Access-Control-Allow-Headers": "content-type, authorization", "Access-Control-Max-Age": "86400", "Vary": "Origin" };
 }
 const deny = (status, msg, h = {}) => new Response(JSON.stringify({ error: msg }), { status, headers: { ...h, "content-type": "application/json" } });
 
@@ -38,6 +55,8 @@ export default {
     if (list.length > PER_10_MIN) return deny(429, "slow down", h);
 
     let body; try { body = await req.json(); } catch (e) { return deny(400, "bad json", h); }
+    const pc = await planCheck(req, env, body && body.scan ? "scan" : "chat");
+    if (pc !== "ok") { const [st, msg] = PLAN_MSG[pc] || PLAN_MSG.error; return deny(st, msg, h); }
     if (body && body.scan) return scanParts(body.scan, env, h);
     const msgs = Array.isArray(body && body.messages) ? body.messages.slice(-MAX_MSGS) : [];
     let total = 0;

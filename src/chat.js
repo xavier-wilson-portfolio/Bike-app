@@ -17,12 +17,19 @@ How to answer:
 - If something is risky for a beginner, say when to get a pro (machine shop, frame shop, plating shop, paint booth).
 - If you're not sure, say so and suggest how to check.
 - Plain text only. You may use **bold** and simple "- " or "1. " lists. No headings.`;
+// every AI request carries the person's sign-in, so the worker can check their plan
+async function aiHeaders() {
+  const h = { "content-type": "application/json" };
+  try { const t = window.RV_CLOUD && (await RV_CLOUD.sb.auth.getSession()).data.session; if (t && t.access_token) h.Authorization = "Bearer " + t.access_token; } catch (e) {}
+  return h;
+}
+const aiCode = (res, j) => res.status === 401 ? "signin" : res.status === 402 ? "plan" : res.status === 429 && /daily limit/.test((j && j.error) || "") ? "daily_limit" : res.status === 429 ? "rate_limited" : res.status === 413 ? "too_large" : "unavailable";
 /* Same contract as the Claude "sample" call: streams text through onText, resolves { text, truncated }. */
 async function apiSample(messages, { signal, onText } = {}) {
   let res, text = "", stop = null;
-  try { res = await fetch(CHAT_API, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ messages }), signal }); }
+  try { res = await fetch(CHAT_API, { method: "POST", headers: await aiHeaders(), body: JSON.stringify({ messages }), signal }); }
   catch (e) { throw { code: e && e.name === "AbortError" ? "cancelled" : "unavailable", text }; }
-  if (!res.ok || !res.body) throw { code: res.status === 429 ? "rate_limited" : res.status === 413 ? "too_large" : "unavailable" };
+  if (!res.ok || !res.body) { const j = await res.json().catch(() => ({})); throw { code: aiCode(res, j) }; }
   const rd = res.body.getReader(), dec = new TextDecoder(); let buf = "";
   try {
     for (;;) {
@@ -83,7 +90,8 @@ function fmtAnswer(t) {
   lines.forEach(l => { const m = l.match(/^\s*(?:[-•*]|\d+[.)])\s+(.*)/); if (m) { const ol = /^\s*\d/.test(l) ? "ol" : "ul"; if (list !== ol) { if (list) html += `</${list}>`; html += `<${ol}>`; list = ol; } html += `<li>${m[1]}</li>`; } else { if (list) { html += `</${list}>`; list = null; } if (l.trim()) html += `<p>${l}</p>`; } });
   if (list) html += `</${list}>`; return html;
 }
-const CHAT_ERR = { not_granted: "The mechanic needs your OK to use Claude. Ask again and choose Allow.", rate_limited: "Lots of questions at once. Wait a moment and try again.", too_large: "That question is too long. Try a shorter one.", unavailable: "The mechanic can't answer right now. Try again in a minute." };
+const CHAT_ERR = { not_granted: "The mechanic needs your OK to use Claude. Ask again and choose Allow.", rate_limited: "Lots of questions at once. Wait a moment and try again.", too_large: "That question is too long. Try a shorter one.", unavailable: "The mechanic can't answer right now. Try again in a minute.",
+  signin: "Sign in to ask the mechanic.", plan: "Ask the mechanic is included in Rider and up. See Plans to upgrade.", daily_limit: "That's your 10 questions for today on Rider. Restorer has no daily limit, or ask again tomorrow." };
 async function sendChat(asked, more) {
   const inp = $("#chatIn"); const q = (typeof asked === "string" ? asked : inp?.value || "").trim(); if (!q || CHAT.busy) return;
   if (typeof chatAllowed === "function" && !chatAllowed()) return;

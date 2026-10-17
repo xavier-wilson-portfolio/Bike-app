@@ -66,10 +66,10 @@ async function scanAI(dataUrl, blob, prompt) {
   if (SCAN.sample) { let lim = null; try { lim = await SCAN.sample.limits(); } catch (e) {}
     if (lim && lim.images) return scanParse(await SCAN.sample.json(prompt, { images: [blob], modelTier: "default", cache: false })); }
   if (typeof CHAT_API === "undefined" || !CHAT_API) throw new Error("the photo AI isn't set up on this site yet");
-  let res; try { res = await fetch(CHAT_API, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ scan: { image: dataUrl, prompt } }) }); }
+  let res; try { res = await fetch(CHAT_API, { method: "POST", headers: await aiHeaders(), body: JSON.stringify({ scan: { image: dataUrl, prompt } }) }); }
   catch (e) { throw new Error("couldn't reach the photo AI (check your internet)"); }
   const j = await res.json().catch(() => ({}));
-  if (!res.ok) throw new Error(res.status === 429 ? "the free AI is busy or out of today's allowance, try again later" : /bad messages|bad json/.test(j.error || "") ? "the photo AI needs its update (see Settings > AI)" : (j.error || "error " + res.status));
+  if (!res.ok) throw new Error(res.status === 401 ? "you need to be signed in" : res.status === 402 ? "this is included in Restorer and up" : res.status === 429 && /daily limit/.test(j.error || "") ? "you've reached today's limit, try again tomorrow" : res.status === 429 ? "the free AI is busy or out of today's allowance, try again later" : /bad messages|bad json/.test(j.error || "") ? "the photo AI needs its update (see Settings > AI)" : (j.error || "error " + res.status));
   return scanParse(j.text);
 }
 

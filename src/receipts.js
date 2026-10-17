@@ -35,10 +35,10 @@ function rcClean(j) {
 }
 async function rcAI(dataUrl) {
   if (typeof CHAT_API === "undefined" || !CHAT_API) throw new Error("the photo AI isn't set up on this site yet");
-  let res; try { res = await fetch(CHAT_API, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ scan: { image: dataUrl, prompt: RCPT_PROMPT, kind: "receipt" } }) }); }
+  let res; try { res = await fetch(CHAT_API, { method: "POST", headers: await aiHeaders(), body: JSON.stringify({ scan: { image: dataUrl, prompt: RCPT_PROMPT, kind: "receipt" } }) }); }
   catch (e) { throw new Error("couldn't reach the photo AI. Check your internet"); }
   const j = await res.json().catch(() => ({}));
-  if (!res.ok) throw new Error(res.status === 429 ? "the free AI is busy or out of today's allowance" : res.status === 413 ? "the photo is too large" : "the photo AI had a problem");
+  if (!res.ok) throw new Error(res.status === 401 ? "you need to be signed in" : res.status === 402 ? "this is included in Restorer and up" : res.status === 429 && /daily limit/.test(j.error || "") ? "you've reached today's limit, try again tomorrow" : res.status === 429 ? "the free AI is busy or out of today's allowance" : res.status === 413 ? "the photo is too large" : "the photo AI had a problem");
   const r = rcClean(rcParse(j.text));
   if (!r || (!r.vendor && !r.items.length && !r.total)) throw new Error("it couldn't make out the receipt");
   return r;
