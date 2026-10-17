@@ -90,7 +90,7 @@ VIEWS.reminders = {
           <div class="rm-card rm-how"><div class="rm-k">${ic("bell")} How you're reminded</div>
             <div class="rm-opt"><div><b>Email</b><span class="muted">An email ${n(set.daysAhead)} days before anything is due, or ${milesFmt(set.milesAhead)} miles before at your pace.</span></div>
               <label class="rm-sw"><input type="checkbox" id="rmEmail" ${set.email ? "checked" : ""} ${W ? "" : "disabled"}><span></span></label></div>
-            ${set.email ? `<div class="rm-email"><span class="rm-to">Sent to <b>${esc(emailTo || "your account email")}</b></span><span class="tag">Sending starts once Revora's email is switched on</span></div>` : ""}
+            ${set.email ? `<div class="rm-email"><span class="rm-to">Sent to <b>${esc(emailTo || "your account email")}</b></span><span class="tag">Emails go out in the morning when something comes due</span></div>` : ""}
             <div class="rm-grid"><label>Remind me<select id="rmDays" ${W ? "" : "disabled"}>${[3, 7, 14, 21, 30].map(d => `<option value="${d}" ${n(set.daysAhead) === d ? "selected" : ""}>${d} days before</option>`).join("")}</select></label>
               <label>or<select id="rmMiles" ${W ? "" : "disabled"}>${[100, 250, 500, 1000].map(d => `<option value="${d}" ${n(set.milesAhead) === d ? "selected" : ""}>${milesFmt(d)} mi before</option>`).join("")}</select></label></div>
             <label class="rm-check"><input type="checkbox" id="rmNudge" ${set.odoNudge ? "checked" : ""} ${W ? "" : "disabled"}> Nudge me to update the odometer if it's been a month</label>
@@ -119,7 +119,7 @@ VIEWS.reminders = {
     $$("[data-rm]", root).forEach(b => b.onclick = () => b.dataset.rm === "odo" ? logMileage() : addPresets());
     const v = id => $("#" + id, root);
     if (v("rmPaceSave")) v("rmPaceSave").onclick = () => saveRem({ monthlyMiles: Math.max(0, n(v("rmMonthly").value)) });
-    if (v("rmEmail")) v("rmEmail").onchange = () => saveRem({ email: v("rmEmail").checked, owner: window.RV_CLOUD && RV_CLOUD.user ? RV_CLOUD.user.id : "", to: remSettings().to || (window.RV_CLOUD && RV_CLOUD.user && RV_CLOUD.user.email) || "" }, true).then(() => toast(v("rmEmail")?.checked === false ? "Email reminders off" : "Email reminders on. Sending starts once Revora's email is switched on."));
+    if (v("rmEmail")) v("rmEmail").onchange = () => saveRem({ email: v("rmEmail").checked, owner: window.RV_CLOUD && RV_CLOUD.user ? RV_CLOUD.user.id : "", to: remSettings().to || (window.RV_CLOUD && RV_CLOUD.user && RV_CLOUD.user.email) || "" }, true).then(() => toast(v("rmEmail")?.checked === false ? "Email reminders off" : "Email reminders on. You'll get an email when something comes due."));
     if (v("rmDays")) v("rmDays").onchange = () => saveRem({ daysAhead: n(v("rmDays").value) });
     if (v("rmMiles")) v("rmMiles").onchange = () => saveRem({ milesAhead: n(v("rmMiles").value) });
     if (v("rmNudge")) v("rmNudge").onchange = () => saveRem({ odoNudge: v("rmNudge").checked });
