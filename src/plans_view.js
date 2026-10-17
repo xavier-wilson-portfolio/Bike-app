@@ -18,7 +18,7 @@
     const p = profile || {}; let id = p.plan === "pro" ? "rider" : RANK[p.plan] != null ? p.plan : "free";
     const until = p.plan_until ? new Date(p.plan_until) : null;
     if (id !== "free" && until && until < new Date()) id = "free";
-    return { id, admin: false, until: id !== "free" ? until : null, trial: !!(p.trial_used && !p.paid && id === "restorer" && until), trialUsed: !!p.trial_used, paid: !!p.paid && id !== "free" };
+    return { id, admin: false, until: id !== "free" ? until : null, trial: !!(p.trial_used && !p.paid && id === "restorer" && until), trialUsed: !!p.trial_used, paid: !!p.paid && id !== "free", comp: !!p.comp && id !== "free" };
   };
   // Manage billing: ask the billing worker for a signed-in Stripe billing page; if that fails, use the email login page
   window.rvManageBilling = async function (a, getToken) {
@@ -32,6 +32,21 @@
     } catch (er) { if (w) w.location = fallback; else location.href = fallback; }
   };
   window.rvBindManage = (root, getToken) => root.querySelectorAll("[data-manage]").forEach(a => a.onclick = ev => { ev.preventDefault(); rvManageBilling(a, getToken); });
+  // gift codes: someone enters a code the admin made and gets that plan for good
+  window.rvGiftHtml = () => `<details class="pl-gift"><summary>Have a gift code?</summary><form data-gift><input name="code" maxlength="32" autocomplete="off" placeholder="Enter your code" aria-label="Gift code"><button class="btn sm pri" type="submit">Apply</button></form><p class="pl-gift-msg" aria-live="polite"></p></details>`;
+  window.rvBindGift = function (root, getSb, done) {
+    root.querySelectorAll("[data-gift]").forEach(f => f.onsubmit = async ev => {
+      ev.preventDefault(); const msg = f.parentNode.querySelector(".pl-gift-msg"), b = f.querySelector("button"), code = f.code.value.trim().toUpperCase();
+      const say = (t, bad) => { msg.textContent = t; msg.className = "pl-gift-msg" + (bad ? " bad" : " ok"); };
+      if (!code) return say("Type the code first.", true);
+      const sb = getSb && getSb(); if (!sb) return say("Create a free account or sign in first, then enter the code.", true);
+      b.disabled = true; const { data, error } = await sb.rpc("redeem_code", { c: code }); b.disabled = false;
+      if (error) return say(/function|schema cache/i.test(error.message || "") ? "Gift codes aren't switched on yet." : "That didn't go through. Check your internet and try again.", true);
+      const r = String(data || "");
+      if (r.startsWith("ok:")) { const P = (window.RV_PLANS || []).find(x => x.id === r.slice(3)); say("Done! Your account now has " + (P ? P.name : "the full plan") + " for good."); setTimeout(() => done && done(), 1200); }
+      else say({ invalid: "That code doesn't exist or has been switched off.", full: "That code has already been used up.", used: "You've already used this code.", signin: "Sign in first, then enter the code." }[r] || "That code didn't work.", true);
+    });
+  };
   const off = p => Math.round((1 - p.m / p.was) * 100);
   // Stripe payment links, one per plan and billing period, set in data/config.json (payLinks: { rider_m, rider_y, ... })
   // plansLive: true for everyone, or "admin" while testing (checkout only for the admin account)
@@ -49,7 +64,9 @@
       ? `<s>$${(p.was * 12).toFixed(2)}</s><b>$${p.y}</b><span>a year · $${(p.y / 12).toFixed(2)} a month</span>`
       : `<s>$${p.was.toFixed(2)}</s><b>$${p.m.toFixed(2)}</b><span>a month</span>`;
     const act = p => {
-      if (cur === p.id) return `<span class="pl-cur">Your plan${opts.paid ? "" : opts.until && p.id !== "free" ? " until " + e(new Date(opts.until).toLocaleDateString("en-US", { month: "short", day: "numeric" })) : ""}</span>${opts.paid && RV_CONFIG.billingPortal ? `<a class="pl-manage" data-manage href="${e(RV_CONFIG.billingPortal)}" target="_blank" rel="noopener">Manage billing or cancel</a>` : ""}`;
+      if (cur === p.id) return `<span class="pl-cur">Your plan${opts.comp ? " · gifted" : opts.paid ? "" : opts.until && p.id !== "free" ? " until " + e(new Date(opts.until).toLocaleDateString("en-US", { month: "short", day: "numeric" })) : ""}</span>${opts.paid && RV_CONFIG.billingPortal ? `<a class="pl-manage" data-manage href="${e(RV_CONFIG.billingPortal)}" target="_blank" rel="noopener">Manage billing or cancel</a>` : ""}`;
+      // gifted: everything up to their plan is included, nothing to buy
+      if (opts.comp) return RANK[p.id] <= RANK[cur] ? `<button class="btn" disabled>Included</button>` : `<span class="faint" style="font-size:13px">Not in your gift</span>`;
       // already paying: changes go through Stripe's billing page so nobody ends up with two subscriptions
       if (opts.paid && RV_CONFIG.billingPortal) return p.id === "free" ? `<button class="btn" disabled>Included</button>` : `<a class="btn" data-manage href="${e(RV_CONFIG.billingPortal)}" target="_blank" rel="noopener">Switch to ${e(p.name)}</a>`;
       if (p.id === "free") return mode === "choose" ? `<button class="btn" data-pl-pick="free">Start free</button>` : `<button class="btn" disabled>Included</button>`;
@@ -66,6 +83,7 @@
         <div class="pl-act">${act(p)}</div>
       </article>`).join("")}</div>
       ${live || mode !== "choose" ? "" : `<p class="pl-note">Paid checkout opens soon. Start free, or take the Restorer trial and get everything for a month.</p>`}
+      ${opts.comp ? "" : rvGiftHtml()}
       <div class="pl-faq">
         <div><b>What happens to my records if I change plans?</b><span>Nothing is ever deleted. On a smaller plan, features you don't have stay visible and your records stay safe until you upgrade again.</span></div>
         <div><b>Can I cancel any time?</b><span>Yes. You keep the paid features until the end of the month or year you paid for. Payments are handled by Stripe, and Revora never sees your card.</span></div>

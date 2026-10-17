@@ -432,7 +432,8 @@
 
   /* ---------- plans and limits ---------- */
   async function loadProfile() {
-    let r = await sb.from("profiles").select("display_name,plan,plan_until,trial_used,plan_chosen,paid").eq("id", session.user.id).maybeSingle();
+    let r = await sb.from("profiles").select("display_name,plan,plan_until,trial_used,plan_chosen,paid,comp").eq("id", session.user.id).maybeSingle();
+    if (r.error) r = await sb.from("profiles").select("display_name,plan,plan_until,trial_used,plan_chosen,paid").eq("id", session.user.id).maybeSingle();
     if (r.error) r = await sb.from("profiles").select("display_name,plan,plan_until,trial_used,plan_chosen").eq("id", session.user.id).maybeSingle();
     if (r.error) r = await sb.from("profiles").select("display_name,plan").eq("id", session.user.id).maybeSingle();
     profile = r.data;
@@ -493,6 +494,7 @@
     document.title = "Pick your plan · Revora";
     frame(`<div class="eyebrow">Welcome${profile && profile.display_name ? ", " + esc(String(profile.display_name).split(" ")[0]) : ""}</div><h1 class="disp">Pick your plan</h1><p class="muted">Start free with one bike, or try Restorer free for 30 days. You can change plans any time.</p>${window.rvPlansHtml({ yearly, mode: "choose", trialUsed: profile && profile.trial_used })}`, { wide: true });
     app.querySelectorAll("[data-pl-bill]").forEach(b => b.onclick = () => showChoosePlan(b.dataset.plBill === "y"));
+    window.rvBindGift(app, () => session && sb, async () => { await loadProfile(); showProjects(); });
     app.querySelectorAll("[data-pl-pick]").forEach(b => b.onclick = async () => {
       const k = b.dataset.plPick; b.disabled = true;
       if (k === "trial") { if (await startTrialL()) return showProjects(); b.disabled = false; return; }
@@ -549,10 +551,11 @@
   /* ---------- plans (public) ---------- */
   function showPlans(yearly) {
     document.title = "Plans · Revora";
-    frame(`<div class="eyebrow">Plans</div><h1 class="disp">Start free. Upgrade when you need more.</h1><p class="muted">One bike is free for good. Paid plans add AI receipts, email reminders, share links, restoration courses and teams.</p>${window.rvPlansHtml({ yearly, current: session ? myPlan().id : "", until: session ? myPlan().until : null, trialUsed: !session || myPlan().trialUsed, paid: !!session && myPlan().paid })}
+    frame(`<div class="eyebrow">Plans</div><h1 class="disp">Start free. Upgrade when you need more.</h1><p class="muted">One bike is free for good. Paid plans add AI receipts, email reminders, share links, restoration courses and teams.</p>${window.rvPlansHtml({ yearly, current: session ? myPlan().id : "", until: session ? myPlan().until : null, trialUsed: !session || myPlan().trialUsed, paid: !!session && myPlan().paid, comp: !!session && myPlan().comp })}
       <div class="pk-links">${session ? `<button class="btn pri" data-nav="projects">Back to your garage</button>` : `<button class="btn pri" data-nav="signup">Create a free account</button>`}</div>`, { wide: true });
     app.querySelectorAll("[data-pl-bill]").forEach(b => b.onclick = () => showPlans(b.dataset.plBill === "y"));
     window.rvBindManage(app, async () => session && (await sb.auth.getSession()).data.session?.access_token);
+    window.rvBindGift(app, () => session && sb, async () => { await loadProfile(); showPlans(yearly); });
     app.querySelectorAll("[data-pl-pick]").forEach(b => b.onclick = async () => { if (b.dataset.plPick === "trial") { if (!session) return showAuth("signup"); if (await startTrialL()) showProjects(); } else checkout(b.dataset.plPick, !!yearly); });
   }
 
