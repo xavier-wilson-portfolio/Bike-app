@@ -20,6 +20,18 @@
     if (id !== "free" && until && until < new Date()) id = "free";
     return { id, admin: false, until: id !== "free" ? until : null, trial: !!(p.trial_used && !p.paid && id === "restorer" && until), trialUsed: !!p.trial_used, paid: !!p.paid && id !== "free" };
   };
+  // Manage billing: ask the billing worker for a signed-in Stripe billing page; if that fails, use the email login page
+  window.rvManageBilling = async function (a, getToken) {
+    const fallback = a.getAttribute("href"), w = window.open("", "_blank");
+    try {
+      const tok = getToken && await getToken(), api = (RV_CONFIG.billingApi || "https://revora-billing.xavier-j-wilson101.workers.dev") + "/portal";
+      if (!tok) throw 0;
+      const r = await fetch(api, { method: "POST", headers: { Authorization: "Bearer " + tok } }), j = await r.json();
+      if (!r.ok || !j.url || !/^https:\/\/billing\.stripe\.com\//.test(j.url)) throw 0;
+      if (w) w.location = j.url; else location.href = j.url;
+    } catch (er) { if (w) w.location = fallback; else location.href = fallback; }
+  };
+  window.rvBindManage = (root, getToken) => root.querySelectorAll("[data-manage]").forEach(a => a.onclick = ev => { ev.preventDefault(); rvManageBilling(a, getToken); });
   const off = p => Math.round((1 - p.m / p.was) * 100);
   // Stripe payment links, one per plan and billing period, set in data/config.json (payLinks: { rider_m, rider_y, ... })
   // plansLive: true for everyone, or "admin" while testing (checkout only for the admin account)
@@ -37,9 +49,9 @@
       ? `<s>$${(p.was * 12).toFixed(2)}</s><b>$${p.y}</b><span>a year · $${(p.y / 12).toFixed(2)} a month</span>`
       : `<s>$${p.was.toFixed(2)}</s><b>$${p.m.toFixed(2)}</b><span>a month</span>`;
     const act = p => {
-      if (cur === p.id) return `<span class="pl-cur">Your plan${opts.paid ? "" : opts.until && p.id !== "free" ? " until " + e(new Date(opts.until).toLocaleDateString("en-US", { month: "short", day: "numeric" })) : ""}</span>${opts.paid && RV_CONFIG.billingPortal ? `<a class="pl-manage" href="${e(RV_CONFIG.billingPortal)}" target="_blank" rel="noopener">Manage billing or cancel</a>` : ""}`;
+      if (cur === p.id) return `<span class="pl-cur">Your plan${opts.paid ? "" : opts.until && p.id !== "free" ? " until " + e(new Date(opts.until).toLocaleDateString("en-US", { month: "short", day: "numeric" })) : ""}</span>${opts.paid && RV_CONFIG.billingPortal ? `<a class="pl-manage" data-manage href="${e(RV_CONFIG.billingPortal)}" target="_blank" rel="noopener">Manage billing or cancel</a>` : ""}`;
       // already paying: changes go through Stripe's billing page so nobody ends up with two subscriptions
-      if (opts.paid && RV_CONFIG.billingPortal) return p.id === "free" ? `<button class="btn" disabled>Included</button>` : `<a class="btn" href="${e(RV_CONFIG.billingPortal)}" target="_blank" rel="noopener">Switch to ${e(p.name)}</a>`;
+      if (opts.paid && RV_CONFIG.billingPortal) return p.id === "free" ? `<button class="btn" disabled>Included</button>` : `<a class="btn" data-manage href="${e(RV_CONFIG.billingPortal)}" target="_blank" rel="noopener">Switch to ${e(p.name)}</a>`;
       if (p.id === "free") return mode === "choose" ? `<button class="btn" data-pl-pick="free">Start free</button>` : `<button class="btn" disabled>Included</button>`;
       if (p.trial && !opts.trialUsed && !opts.paid) return `<button class="btn tan" data-pl-pick="trial">Start ${p.trial}-day free trial</button><small class="pl-then">Then $${p.m.toFixed(2)} a month. Cancel any time.</small>`;
       return live ? `<button class="btn ${p.best ? "tan" : "pri"}" data-pl-pick="${p.id}">Choose ${e(p.name)}</button>` : `<button class="btn" disabled title="Checkout opens soon">Checkout opens soon</button>`;

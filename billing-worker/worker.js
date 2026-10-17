@@ -5,7 +5,9 @@
      STRIPE_SECRET_KEY      a Stripe restricted key that can read subscriptions (starts with rk_)
      BILLING_SECRET         the value Supabase showed when you ran billing.sql
    Plans are worked out from the price: $4.99 or $49 is Rider, $9.99 or $99 is Restorer, $29 or $290 is Shop.
-   A price can also carry metadata plan = rider / restorer / shop, which wins. */
+   A price can also carry metadata plan = rider / restorer / shop, which wins.
+   MANAGE BILLING: POST /portal with the person's Revora sign-in (Authorization: Bearer ...) returns { url } for Stripe's
+   billing page, already signed in, so nobody waits for an email. The Stripe key needs "Customer portal" write access. */
 const SUPABASE_URL = "https://fhuksccqsyaomnouxxtb.supabase.co", SUPABASE_KEY = "sb_publishable_0wYtVeKcFJUzy3AfIaFhiw_NrT1wNkz";
 const BY_AMOUNT = { 499: "rider", 4900: "rider", 999: "restorer", 9900: "restorer", 2900: "shop", 29000: "shop" };
 const GRACE = 3 * 864e5;   // keep the plan a few days past the renewal date while Stripe retries a card
@@ -37,8 +39,33 @@ async function setPlan(env, uid, cust, plan, until) {
   return out;
 }
 
+const SITES = ["https://revora-9pq.pages.dev", "https://xavier-wilson-portfolio.github.io"];
+const cors = o => ({ "Access-Control-Allow-Origin": o, "Access-Control-Allow-Methods": "POST, OPTIONS", "Access-Control-Allow-Headers": "content-type, authorization", "Vary": "Origin" });
+async function portal(req, env) {
+  const origin = req.headers.get("Origin") || "", h = SITES.includes(origin) ? cors(origin) : {};
+  const out = (o, st = 200) => new Response(JSON.stringify(o), { status: st, headers: { ...h, "content-type": "application/json" } });
+  if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: h });
+  if (!SITES.includes(origin)) return out({ error: "origin" }, 403);
+  const auth = req.headers.get("Authorization") || "";
+  if (!/^Bearer [A-Za-z0-9._-]{20,}$/.test(auth) || !env.STRIPE_SECRET_KEY) return out({ error: "signin" }, 401);
+  const u = await fetch(SUPABASE_URL + "/auth/v1/user", { headers: { apikey: SUPABASE_KEY, Authorization: auth } });
+  if (!u.ok) return out({ error: "signin" }, 401);
+  const user = await u.json();
+  const p = await fetch(SUPABASE_URL + "/rest/v1/profiles?select=stripe_customer&id=eq." + encodeURIComponent(user.id), { headers: { apikey: SUPABASE_KEY, Authorization: auth } });
+  const rows = p.ok ? await p.json() : [], cust = rows[0] && rows[0].stripe_customer;
+  if (!cust) return out({ error: "nocustomer" }, 404);
+  const back = origin + "/?plans=1";
+  const r = await fetch("https://api.stripe.com/v1/billing_portal/sessions", { method: "POST",
+    headers: { Authorization: "Bearer " + env.STRIPE_SECRET_KEY, "content-type": "application/x-www-form-urlencoded" },
+    body: "customer=" + encodeURIComponent(cust) + "&return_url=" + encodeURIComponent(back) });
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok || !j.url) { console.log("portal error", r.status, JSON.stringify(j).slice(0, 300)); return out({ error: "stripe", status: r.status }, 502); }
+  return out({ url: j.url });
+}
+
 export default {
   async fetch(req, env) {
+    if (new URL(req.url).pathname === "/portal") return portal(req, env);
     if (req.method !== "POST") return new Response("Revora billing is running.", { status: 200 });
     if (!env.STRIPE_WEBHOOK_SECRET || !env.BILLING_SECRET) return json({ error: "not configured" }, 503);
     const body = await req.text();

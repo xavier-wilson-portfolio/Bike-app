@@ -552,6 +552,7 @@
     frame(`<div class="eyebrow">Plans</div><h1 class="disp">Start free. Upgrade when you need more.</h1><p class="muted">One bike is free for good. Paid plans add AI receipts, email reminders, share links, restoration courses and teams.</p>${window.rvPlansHtml({ yearly, current: session ? myPlan().id : "", until: session ? myPlan().until : null, trialUsed: !session || myPlan().trialUsed, paid: !!session && myPlan().paid })}
       <div class="pk-links">${session ? `<button class="btn pri" data-nav="projects">Back to your garage</button>` : `<button class="btn pri" data-nav="signup">Create a free account</button>`}</div>`, { wide: true });
     app.querySelectorAll("[data-pl-bill]").forEach(b => b.onclick = () => showPlans(b.dataset.plBill === "y"));
+    window.rvBindManage(app, async () => session && (await sb.auth.getSession()).data.session?.access_token);
     app.querySelectorAll("[data-pl-pick]").forEach(b => b.onclick = async () => { if (b.dataset.plPick === "trial") { if (!session) return showAuth("signup"); if (await startTrialL()) showProjects(); } else checkout(b.dataset.plPick, !!yearly); });
   }
 
