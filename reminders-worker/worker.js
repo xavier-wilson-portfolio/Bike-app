@@ -25,8 +25,8 @@ function emailHtml(rows) {
       <div style="font:700 15px Arial,sans-serif;color:#17232C">${esc(r.title)}</div>
       <div style="font:14px/1.45 Arial,sans-serif;color:#3D4850;margin-top:3px">${esc(r.body)}</div></div>`).join("")).join("");
   return `<!doctype html><html><body style="margin:0;background:#F6EEDD"><div style="max-width:560px;margin:0 auto;padding:24px 16px;font-family:Arial,sans-serif;color:#17232C">
-    <div style="background:#17232C;color:#fff;padding:18px 20px;border-radius:12px"><div style="font:800 12px Arial,sans-serif;letter-spacing:2px;color:#D9BF8E">REVORA</div>
-    <div style="font:700 22px Arial,sans-serif;margin-top:4px">${rows.length === 1 ? "Coming up on your bike" : "Coming up on your bikes"}</div></div>
+    <div style="background:#17232C;color:#fff;padding:18px 20px;border-radius:12px 12px 0 0"><a href="${APP}/" style="text-decoration:none"><img src="${APP}/img/email-logo.png" width="127" height="32" alt="Revora" style="display:block;border:0;width:127px;height:32px;color:#D9BF8E;font:800 18px Arial,sans-serif"></a>
+    <div style="font:700 22px Arial,sans-serif;margin-top:12px">${rows.length === 1 ? "Coming up on your bike" : "Coming up on your bikes"}</div></div>
     <div style="background:#fff;padding:4px 20px 20px;border-radius:0 0 12px 12px">${blocks}
     <p style="margin:22px 0 4px"><a href="${APP}/" style="background:#D9BF8E;color:#17232C;padding:11px 18px;border-radius:999px;text-decoration:none;font:700 14px Arial,sans-serif">Open Revora</a></p></div>
     <p style="font:12px/1.5 Arial,sans-serif;color:#5B6770;margin:16px 4px">You're getting this because email reminders are on for this bike. To stop them, open the bike in Revora, go to Reminders and switch email off.</p>
