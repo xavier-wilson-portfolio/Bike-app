@@ -719,7 +719,7 @@
       if (sb) {
         const recovering = /type=recovery/.test(location.hash);
         sb.auth.onAuthStateChange(ev => { if (ev === "PASSWORD_RECOVERY") showAuth("newpass"); });
-        session = (await sb.auth.getSession()).data.session;
+        session = (await sb.auth.getSession()).data.session; window.RV_EMAIL = session && session.user.email;
         if (session) await loadProfile();
         if (session) await flushPendingReq();
         await loadPrefs();

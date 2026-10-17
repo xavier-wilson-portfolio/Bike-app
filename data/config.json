@@ -9,5 +9,6 @@
     "shop_m": "https://buy.stripe.com/test_fZubJ1f7i1uVaNu4RTabK04",
     "shop_y": "https://buy.stripe.com/test_fZu6oH9MY2yZ8FmestabK05"
   },
-  "billingPortal": "https://billing.stripe.com/p/login/test_fZu28r9MY0qRcVCgABabK00"
+  "billingPortal": "https://billing.stripe.com/p/login/test_fZu28r9MY0qRcVCgABabK00",
+  "plansLive": "admin"
 }

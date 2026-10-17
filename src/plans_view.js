@@ -22,7 +22,9 @@
   };
   const off = p => Math.round((1 - p.m / p.was) * 100);
   // Stripe payment links, one per plan and billing period, set in data/config.json (payLinks: { rider_m, rider_y, ... })
-  window.rvPlansLive = () => !!(window.RV_CONFIG && RV_CONFIG.plansLive && RV_CONFIG.payLinks);
+  // plansLive: true for everyone, or "admin" while testing (checkout only for the admin account)
+  window.rvPlansLive = () => { const c = window.RV_CONFIG || {}; if (!c.plansLive || !c.payLinks) return false;
+    return c.plansLive === "admin" ? String(window.RV_EMAIL || "").toLowerCase() === ADMIN : true; };
   window.rvCheckoutUrl = function (plan, yearly, user) {
     const L = (window.RV_CONFIG && RV_CONFIG.payLinks) || {}, base = L[plan + (yearly ? "_y" : "_m")];
     if (!base || !/^https:\/\/(buy|checkout)\.stripe\.com\//.test(base)) return "";
