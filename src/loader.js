@@ -432,7 +432,8 @@
 
   /* ---------- plans and limits ---------- */
   async function loadProfile() {
-    let r = await sb.from("profiles").select("display_name,plan,plan_until,trial_used,plan_chosen").eq("id", session.user.id).maybeSingle();
+    let r = await sb.from("profiles").select("display_name,plan,plan_until,trial_used,plan_chosen,paid").eq("id", session.user.id).maybeSingle();
+    if (r.error) r = await sb.from("profiles").select("display_name,plan,plan_until,trial_used,plan_chosen").eq("id", session.user.id).maybeSingle();
     if (r.error) r = await sb.from("profiles").select("display_name,plan").eq("id", session.user.id).maybeSingle();
     profile = r.data;
   }
@@ -473,6 +474,21 @@
     upsellBox("restorer", "Restoration courses are in Restorer", "A step-by-step course tailored to your bike, with a parts list, safety checks and a budget. Try it free for 30 days.");
     return false;
   }
+  // send a signed-in person to Stripe checkout for a plan
+  function checkout(plan, yearly) {
+    if (!session) return showAuth("signup");
+    const u = window.rvCheckoutUrl && rvCheckoutUrl(plan, yearly, session.user);
+    if (!u) return note("Checkout opens soon. Start free or take the Restorer trial for now.", true);
+    location.href = u;
+  }
+  // back from Stripe: wait for the payment to switch the plan on
+  async function afterPaid() {
+    frame(`<h1 class="disp">Thanks! Setting up your plan…</h1><p class="muted">This takes a few seconds.</p><div class="spin" aria-hidden="true"></div>`);
+    for (let i = 0; i < 20; i++) { await loadProfile(); if (profile && profile.paid) break; await new Promise(r => setTimeout(r, 1500)); }
+    try { history.replaceState(null, "", location.pathname); } catch (e) {}
+    if (profile && profile.paid) { showProjects(); setTimeout(() => note("You're on " + ((planInfo(myPlan().id).name) || "your new plan") + ". Thanks for supporting Revora."), 600); }
+    else frame(`<h1 class="disp">Payment received</h1><p class="muted">Your plan is still switching on. Refresh in a minute. If it hasn't changed in a few minutes, use Give feedback in the menu and we'll sort it out.</p><button class="btn pri" data-nav="projects">Go to your garage</button>`);
+  }
   function showChoosePlan(yearly) {
     document.title = "Pick your plan · Revora";
     frame(`<div class="eyebrow">Welcome${profile && profile.display_name ? ", " + esc(String(profile.display_name).split(" ")[0]) : ""}</div><h1 class="disp">Pick your plan</h1><p class="muted">Start free with one bike, or try Restorer free for 30 days. You can change plans any time.</p>${window.rvPlansHtml({ yearly, mode: "choose", trialUsed: profile && profile.trial_used })}`, { wide: true });
@@ -481,7 +497,7 @@
       const k = b.dataset.plPick; b.disabled = true;
       if (k === "trial") { if (await startTrialL()) return showProjects(); b.disabled = false; return; }
       if (k === "free") { await sb.from("profiles").update({ plan_chosen: true }).eq("id", session.user.id); if (profile) profile.plan_chosen = true; return showProjects(); }
-      note("Checkout opens soon. Start free or take the Restorer trial for now.", true); b.disabled = false;
+      b.disabled = false; checkout(k, !!yearly);
     });
   }
 
@@ -533,10 +549,10 @@
   /* ---------- plans (public) ---------- */
   function showPlans(yearly) {
     document.title = "Plans · Revora";
-    frame(`<div class="eyebrow">Plans</div><h1 class="disp">Start free. Upgrade when you need more.</h1><p class="muted">One bike is free for good. Paid plans add AI receipts, email reminders, share links, restoration courses and teams.</p>${window.rvPlansHtml({ yearly, current: session ? myPlan().id : "", until: session ? myPlan().until : null, trialUsed: !session || myPlan().trialUsed })}
+    frame(`<div class="eyebrow">Plans</div><h1 class="disp">Start free. Upgrade when you need more.</h1><p class="muted">One bike is free for good. Paid plans add AI receipts, email reminders, share links, restoration courses and teams.</p>${window.rvPlansHtml({ yearly, current: session ? myPlan().id : "", until: session ? myPlan().until : null, trialUsed: !session || myPlan().trialUsed, paid: !!session && myPlan().paid })}
       <div class="pk-links">${session ? `<button class="btn pri" data-nav="projects">Back to your garage</button>` : `<button class="btn pri" data-nav="signup">Create a free account</button>`}</div>`, { wide: true });
     app.querySelectorAll("[data-pl-bill]").forEach(b => b.onclick = () => showPlans(b.dataset.plBill === "y"));
-    app.querySelectorAll("[data-pl-pick]").forEach(b => b.onclick = async () => { if (b.dataset.plPick === "trial") { if (!session) return showAuth("signup"); if (await startTrialL()) showProjects(); } else note("Checkout opens soon.", true); });
+    app.querySelectorAll("[data-pl-pick]").forEach(b => b.onclick = async () => { if (b.dataset.plPick === "trial") { if (!session) return showAuth("signup"); if (await startTrialL()) showProjects(); } else checkout(b.dataset.plPick, !!yearly); });
   }
 
   /* ---------- a shared bike history report (read-only, no account needed) ---------- */
@@ -713,6 +729,7 @@
     if (qs.get("report")) return showReport(qs.get("report"));
     if (qs.get("build")) return showBuild(qs.get("build"));
     if (qs.get("wo")) return showWo(qs.get("wo"));
+    if (qs.has("paid") && session) return afterPaid();
     if (qs.has("plans")) return showPlans();
     const auth = qs.get("auth"); if (sb && !session && ["signin", "signup"].includes(auth)) return showAuth(auth);
     const pid = qs.get("project"), bid = qs.get("bike");
