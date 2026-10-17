@@ -10,6 +10,6 @@
     "shop_y": "https://buy.stripe.com/fZu6oH9MY2yZ8FmestabK05"
   },
   "billingPortal": "https://billing.stripe.com/p/login/fZu28r9MY0qRcVCgABabK00",
-  "plansLive": "admin",
+  "plansLive": true,
   "trialLink": "https://buy.stripe.com/28EaEX1gs2yZf3KacdabK06"
 }
