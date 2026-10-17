@@ -40,7 +40,7 @@ const deny = (status, msg, h = {}) => new Response(JSON.stringify({ error: msg }
 
 export default {
   async fetch(req, env) {
-    const allowed = (env.ALLOWED_ORIGINS || "https://xavier-wilson-portfolio.github.io,https://revora-9pq.pages.dev").split(",").map(s => s.trim()).filter(Boolean);
+    const allowed = (env.ALLOWED_ORIGINS || "https://revoragarage.com,https://www.revoragarage.com,https://revora-9pq.pages.dev,https://xavier-wilson-portfolio.github.io").split(",").map(s => s.trim()).filter(Boolean);
     const origin = req.headers.get("Origin") || "";
     if (!allowed.includes(origin)) return deny(403, "origin not allowed");
     const h = cors(origin);

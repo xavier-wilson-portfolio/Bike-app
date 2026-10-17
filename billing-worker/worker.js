@@ -39,7 +39,7 @@ async function setPlan(env, uid, cust, plan, until) {
   return out;
 }
 
-const SITES = ["https://revora-9pq.pages.dev", "https://xavier-wilson-portfolio.github.io"];
+const SITES = ["https://revoragarage.com", "https://www.revoragarage.com", "https://revora-9pq.pages.dev", "https://xavier-wilson-portfolio.github.io"];
 const cors = o => ({ "Access-Control-Allow-Origin": o, "Access-Control-Allow-Methods": "POST, OPTIONS", "Access-Control-Allow-Headers": "content-type, authorization", "Vary": "Origin" });
 async function portal(req, env) {
   const origin = req.headers.get("Origin") || "", h = SITES.includes(origin) ? cors(origin) : {};

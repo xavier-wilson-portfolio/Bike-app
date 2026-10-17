@@ -7,6 +7,11 @@
 (function () {
   const CFG = window.RV_CONFIG || {};
   const qs = new URLSearchParams(location.search);
+  // the old address sends people to the real domain (unless this browser has projects saved only on the old address)
+  if (CFG.primaryHost && /\.pages\.dev$/.test(location.hostname) && location.hostname.split(".").length === 3) {
+    let local = false; try { local = Object.keys(localStorage).some(k => k.startsWith("rv.data.")); } catch (e) {}
+    if (!local) { location.replace("https://" + CFG.primaryHost + location.pathname + location.search + location.hash); return; }
+  }
   const ls = { get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }, set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} } };
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const norm = s => String(s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
