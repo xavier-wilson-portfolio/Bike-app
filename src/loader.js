@@ -11,6 +11,13 @@
   if (CFG.primaryHost && /\.pages\.dev$/.test(location.hostname) && location.hostname.split(".").length === 3) {
     let local = false; try { local = Object.keys(localStorage).some(k => k.startsWith("rv.data.")); } catch (e) {}
     if (!local) { location.replace("https://" + CFG.primaryHost + location.pathname + location.search + location.hash); return; }
+    const bar = () => { if (document.getElementById("rvMoved")) return; const d = document.createElement("div"); d.id = "rvMoved";
+      d.style.cssText = "position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#17232C;color:#fff;padding:10px 16px;font:14px/1.4 system-ui,sans-serif;display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap";
+      d.innerHTML = 'Revora has moved to <b>' + CFG.primaryHost + '</b>. Projects saved to your account show up there after you sign in. Projects saved only in this browser stay here.' +
+        ' <a href="https://' + CFG.primaryHost + '/" style="background:#D9BF8E;color:#17232C;padding:6px 12px;border-radius:6px;text-decoration:none;font-weight:600">Go to ' + CFG.primaryHost + '</a>' +
+        ' <button type="button" aria-label="Hide" style="background:none;border:0;color:#B9D9EB;font-size:18px;cursor:pointer">×</button>';
+      d.querySelector("button").onclick = () => d.remove(); document.body.appendChild(d); };
+    if (document.body) bar(); else document.addEventListener("DOMContentLoaded", bar);
   }
   const ls = { get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }, set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} } };
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
