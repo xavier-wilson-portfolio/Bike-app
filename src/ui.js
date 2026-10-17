@@ -56,6 +56,12 @@ function parseHash(h) { h = (h || "").replace("#", ""); const m = h.match(/^less
   void fromHash; R.sec = "home";
   if (location.hash) try { history.replaceState(null, "", location.pathname + location.search); } catch (e) {}
 })();
+// the plan tag next to "My garage": tap it to see plans
+function planChip() {
+  if (!window.RV_CLOUD || typeof planNow !== "function") return "";
+  const P = planNow(), name = (typeof PLAN_NAME !== "undefined" && PLAN_NAME[P.id]) || "Free";
+  return `<button class="pk-plan app-plan" onclick="closeMenus&&closeMenus();go('plans')" title="See your plan">${esc(name + (P.trial ? " trial" : P.comp ? " · gifted" : ""))}</button>`;
+}
 function go(sec, f) {
   if (typeof sec === "string" && sec.startsWith("lesson-")) { R.lesson = sec.slice(7); sec = "lesson"; }
   if (typeof sec === "string" && sec.startsWith("diagram-")) { R.diag = sec.slice(8); sec = "diagrams"; } else if (sec === "diagrams") R.diag = null;
@@ -79,7 +85,7 @@ function shell() {
     <header class="top" id="top">
       <div class="top-in">
         <button class="brand" data-goto="home" aria-label="Revora home"><img class="brand-icon" src="img/revora-icon.svg" alt=""><img class="wordmark" src="img/revora-word.svg" alt="Revora"></button>
-        ${window.rvHasAccounts && rvHasAccounts() ? `<button class="btn sm tan garagebtn" onclick="rvAccount()">My garage</button>` : ""}
+        ${window.rvHasAccounts && rvHasAccounts() ? `<button class="btn sm tan garagebtn" onclick="rvAccount()">My garage</button>${planChip()}` : ""}
         <div class="progline" id="progLine" role="img"></div>
         <nav class="mainnav" id="nav" aria-label="Main" hidden></nav>
         <div class="top-r">
@@ -116,7 +122,7 @@ function megaHtml() {
 }
 function renderMobMenu() {
   const cur = R.sec === "lesson" ? "course" : R.sec;
-  $("#mobmenu").innerHTML = `<div class="mob-in"><div class="row" style="justify-content:space-between"><b class="eyebrow">Menu</b><button class="iconbtn" id="mobX" aria-label="Close menu">${ic("x")}</button></div>${window.rvHasAccounts && rvHasAccounts() ? `<div class="row mob-acct"><button class="btn sm tan garagebtn" onclick="rvAccount()">My garage</button>${window.RV_CLOUD ? `<button class="btn sm" onclick="rvSignOut()">Sign out</button>` : ""}</div>` : ""}
+  $("#mobmenu").innerHTML = `<div class="mob-in"><div class="row" style="justify-content:space-between"><b class="eyebrow">Menu</b><button class="iconbtn" id="mobX" aria-label="Close menu">${ic("x")}</button></div>${window.rvHasAccounts && rvHasAccounts() ? `<div class="row mob-acct"><button class="btn sm tan garagebtn" onclick="rvAccount()">My garage</button>${planChip()}${window.RV_CLOUD ? `<button class="btn sm" onclick="rvSignOut()">Sign out</button>` : ""}</div>` : ""}
     <div class="moblist">${SECTIONS.filter(s => s.id === "home" || s.main).map(s => `<button class="mlink ${cur === s.id ? "on" : ""}" data-goto="${s.id}">${ic(s.i)}<span><b>${esc(s.t)}${typeof secLock === "function" ? secLock(s.id) : ""}</b><small>${esc(s.d || "Overview and progress")}</small></span></button>`).join("")}</div>
     ${NAV_GROUPS.filter(([k]) => SECTIONS.some(s => s.grp === k)).map(([k, l]) => `<div class="eyebrow" style="margin-top:14px">${esc(l)}</div><div class="moblist grp">${SECTIONS.filter(s => s.grp === k).map(s => `<button class="mlink ${cur === s.id ? "on" : ""}" data-goto="${s.id}">${ic(s.i)}<span><b>${esc(s.t)}${typeof secLock === "function" ? secLock(s.id) : ""}</b></span></button>`).join("")}</div>`).join("")}
     <button class="mob-fb mob-ins" onclick="rvInstall && rvInstall()">${ic("download")}<span><b>Install the app</b><small>Revora on your home screen</small></span>${ic("next")}</button>
