@@ -1,4 +1,12 @@
 {
   "supabaseUrl": "https://fhuksccqsyaomnouxxtb.supabase.co",
-  "supabaseKey": "sb_publishable_0wYtVeKcFJUzy3AfIaFhiw_NrT1wNkz"
+  "supabaseKey": "sb_publishable_0wYtVeKcFJUzy3AfIaFhiw_NrT1wNkz",
+  "payLinks": {
+    "rider_m": "https://buy.stripe.com/test_fZu28r9MY0qRcVCgABabK00",
+    "rider_y": "https://buy.stripe.com/test_00wcN51gs1uV3l25VXabK01",
+    "restorer_m": "https://buy.stripe.com/test_28EbJ1f7i2yZ2gYbghabK02",
+    "restorer_y": "https://buy.stripe.com/test_5kQeVd2kwgpP5ta845abK03",
+    "shop_m": "https://buy.stripe.com/test_fZubJ1f7i1uVaNu4RTabK04",
+    "shop_y": "https://buy.stripe.com/test_fZu6oH9MY2yZ8FmestabK05"
+  }
 }
