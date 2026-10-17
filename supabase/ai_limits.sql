@@ -15,24 +15,25 @@ create policy "see own ai use" on public.ai_usage for select using (user_id = au
 revoke insert, update, delete on public.ai_usage from authenticated, anon;
 
 create or replace function public.use_ai(kind text) returns text language plpgsql security definer set search_path = public as $$
+#variable_conflict use_column
 declare p record; pl text; used int; cap int;
 begin
   if auth.uid() is null then return 'signin'; end if;
-  if kind not in ('chat', 'scan') then return 'bad'; end if;
+  if use_ai.kind not in ('chat', 'scan') then return 'bad'; end if;
   if lower(coalesce(auth.jwt() ->> 'email', '')) = 'xavier.j.wilson101@gmail.com' then pl := 'shop';
   else
     select plan, plan_until into p from profiles where id = auth.uid();
     pl := coalesce(p.plan, 'free'); if pl = 'pro' then pl := 'rider'; end if;
     if pl <> 'free' and p.plan_until is not null and p.plan_until < now() then pl := 'free'; end if;
   end if;
-  if kind = 'scan' then
+  if use_ai.kind = 'scan' then
     if pl not in ('restorer', 'shop') then return 'locked'; end if;
     cap := 200;                              -- a generous daily ceiling so one account can't run up the bill
   else
     if pl = 'free' then return 'locked'; end if;
     cap := case when pl = 'rider' then 10 else 300 end;
   end if;
-  insert into ai_usage (user_id, day, kind, n) values (auth.uid(), current_date, kind, 1)
+  insert into ai_usage (user_id, day, kind, n) values (auth.uid(), current_date, use_ai.kind, 1)
   on conflict (user_id, day, kind) do update set n = ai_usage.n + 1
   where ai_usage.n < cap
   returning n into used;
