@@ -348,8 +348,8 @@
     if (error) return fail(friendly(error));
     const prog = await projectProgress(data.map(p => p.id));
     // projects on the general bike: which request they're waiting on, and whether that bike's page is ready
-    const gen = data.filter(p => bikeOf(p.bike_id)?.generic || bikeOf(p.bike_id)?.universal), genKey = {}, genStyle = {}, genSil = {};
-    if (gen.length) { const { data: ms } = await sb.from("records").select("project_id,key:data->>requestKey,style:data->>style,sil:data->>silhouette").eq("coll", "meta").in("project_id", gen.map(p => p.id)); (ms || []).forEach(m => { genKey[m.project_id] = m.key; genStyle[m.project_id] = m.style; genSil[m.project_id] = m.sil; }); }
+    const gen = data.filter(p => bikeOf(p.bike_id)?.generic || bikeOf(p.bike_id)?.universal), genKey = {}, genStyle = {}, genSil = {}, genLabel = {};
+    if (gen.length) { const { data: ms } = await sb.from("records").select("project_id,key:data->>requestKey,style:data->>style,sil:data->>silhouette,yr:data->>year,mk:data->>make,md:data->>model").eq("coll", "meta").in("project_id", gen.map(p => p.id)); (ms || []).forEach(m => { genKey[m.project_id] = m.key; genStyle[m.project_id] = m.style; genSil[m.project_id] = m.sil; genLabel[m.project_id] = [m.yr, m.mk, m.md].filter(Boolean).join(" "); }); }
     const isLog = p => bikeOf(p.bike_id)?.generic && !genKey[p.id];
     const isUni = p => !!bikeOf(p.bike_id)?.universal, uniTxt = p => (bikeOf(p.bike_id)?.styleName || "") + " restoration";
     const readyFor = p => bikeOf(p.bike_id)?.generic ? packForKey(genKey[p.id]) : null;
@@ -367,7 +367,7 @@
           <span class="gt-bike">${isPin(p) ? `<span class="gt-pintag">Pinned</span>` : ""}${isLog(p) ? "Maintenance log · " + esc(STYLE_NAME[styleOf(p)] || "Standard") : isUni(p) ? esc(uniTxt(p)) : b && b.generic ? (readyFor(p) ? "Bike page ready" : "Maintenance log · " + esc(STYLE_NAME[styleOf(p)] || "Standard")) : esc((p.name && p.name !== bikeName(b)) ? bikeName(b) : (b && b.variant) || "")}</span><b class="gt-name">${esc(p.name || bikeName(b))}</b>
           ${isLog(p) ? "" : `<span class="gt-bar" aria-hidden="true"><i style="width:${pc.toFixed(1)}%"></i></span>`}
           <span class="gt-meta">${b && b.generic ? "Maintenance and records" : g && g.total ? `${g.done} of ${g.total} steps` : "Not started"}<span>${esc(who(p))}</span></span></button>
-        ${p.role === "owner" && readyFor(p) ? `<div class="gt-ready"><span>The ${esc(bikeName(readyFor(p)))} page is ready.</span><button class="btn tan sm" data-connect="${esc(p.id)}">Connect</button></div>` : ""}${p.role === "owner" ? `<div class="gt-acts"><button class="linkbtn" data-share="${esc(p.id)}">Share</button><button class="linkbtn" data-rename="${esc(p.id)}">Rename</button></div>` : ""}</article>`; };
+        ${p.role === "owner" && readyFor(p) ? `<div class="gt-ready"><span>The ${esc(bikeName(readyFor(p)))} page is ready.</span><button class="btn tan sm" data-connect="${esc(p.id)}">Connect</button></div>` : ""}${p.role === "owner" ? `<div class="gt-acts"><button class="linkbtn" data-share="${esc(p.id)}">Share</button><button class="linkbtn" data-rename="${esc(p.id)}">Rename</button><button class="linkbtn gt-del" data-del="${esc(p.id)}">Delete</button></div>` : `<div class="gt-acts"><button class="linkbtn gt-del" data-leave="${esc(p.id)}">Remove from my garage</button></div>`}</article>`; };
     const fb = feat && bikeOf(feat.bike_id), fg = feat && prog[feat.id];
     frame(`<section class="gh">
         <div class="gh-hi"><h1 class="gh-title">${esc(greeting())}${first ? `, ${esc(first)}` : ""}.</h1>
@@ -385,17 +385,20 @@
       <div id="woBoard"></div>
       ${data.length ? `<section class="garage"><div class="garage-h"><h2>Your garage</h2><button class="btn sm" data-nav="new">+ New project</button></div>
         <div class="gts">${data.map(tag).join("")}<button class="gt gt-new" data-nav="new"><b>Add a bike</b><span>Start a new project for another bike</span></button></div></section>` : ""}
+      ${window.rvShop ? rvShop.html({ kind: "parts", title: "Shop for parts", sub: "Search the big parts stores for any of your bikes. You buy on the store's own site.", bikes: [...new Set(data.map(p => { const b = bikeOf(p.bike_id); return genLabel[p.id] || (b && !b.generic && !b.universal ? bikeName(b) : p.name); }).filter(Boolean))] }) : ""}
       ${!(matchMedia("(display-mode: standalone)").matches || navigator.standalone) ? `<section class="ins-band"><img src="img/app-192.png" alt="" width="44" height="44"><div><b>Put Revora on your home screen</b><span>It opens like an app, full screen, one tap from your phone's home screen.</span></div><button class="btn tan" data-act="install">Install the app</button></section>` : ""}
       <section class="gfoot"><div><b>Working with a team?</b><span>Share a project and everyone sees the same parts, steps and photos, live. Owners can give edit or view access.</span></div>
         <div><b>Plans</b><span>One bike is free for good. Paid plans add AI receipts, email reminders, share links and teams.</span><button class="linkbtn" data-plans>See plans</button></div>
         <div><b>Any bike works</b><span>Restoring or maintaining a bike we don't list? Add it with its year, make and model. Restorations get a course built for its kind of bike.</span><button class="linkbtn" data-nav="browse">Add a bike</button></div></section>`, { wide: true, garage: true });
     if (hasPlanL("shop") && data.length) woBoard(data);
+    if (window.rvShop) rvShop.bind(app, {});
     app.querySelectorAll("[data-connect]").forEach(b => b.onclick = e => { e.stopPropagation(); const p = data.find(x => x.id === b.dataset.connect); connectProject(p, readyFor(p)); });
     app.querySelectorAll("[data-pin]").forEach(b => b.onclick = e => { e.stopPropagation(); const id = b.dataset.pin, cur = (PREFS.pinned || []).filter(x => x !== id); window.rvPrefs.set({ pinned: b.getAttribute("aria-pressed") === "true" ? cur : [id].concat(cur) }); showProjects(); });
     app.querySelectorAll("[data-rename]").forEach(b => b.onclick = async () => {
       const p = data.find(x => x.id === b.dataset.rename); const name = prompt("Project name", p.name || ""); if (name === null) return;
       const { error } = await sb.from("projects").update({ name: name.trim().slice(0, 80) }).eq("id", p.id); if (error) note(friendly(error), true); else showProjects();
     });
+    app.querySelectorAll("[data-del],[data-leave]").forEach(b => b.onclick = e => { e.stopPropagation(); const p = data.find(x => x.id === (b.dataset.del || b.dataset.leave)); deleteProjectBox(Object.assign({}, p, { label: p.name || bikeName(bikeOf(p.bike_id)) }), () => { if (ls.get("rv.project") === p.id) ls.set("rv.project", ""); window.rvPrefs.set({ pinned: (PREFS.pinned || []).filter(x => x !== p.id) }); showProjects(); }); });
     app.querySelectorAll("[data-share]").forEach(b => b.onclick = () => hasPlanL("restorer") ? shareBox(data.find(x => x.id === b.dataset.share)) : upsellBox("restorer", "Sharing projects is in Restorer", "Share a bike with friends or a shop so everyone sees the same parts, jobs and photos live."));
   }
   // Shop plan: every open work order across the garage, soonest due first
@@ -420,6 +423,29 @@
     if (error) return fail(friendly(error));
     goUrl({ project: data.id });
   }
+  // delete a bike for good (owner), or take a shared bike out of your garage (everyone else)
+  function deleteProjectBox(p, done) {
+    const own = p.role === "owner", box = document.createElement("div"); box.className = "pk-modal";
+    box.innerHTML = `<div class="pk-card" role="dialog" aria-modal="true" aria-labelledby="dlH"><h2 class="disp-s" id="dlH">${own ? "Delete" : "Remove"} "${esc(p.label)}"?</h2>
+      ${own ? `<p class="muted">This deletes the bike and everything in it: services, parts, mods, receipts, photos, reminders and work orders.${p.members > 1 ? " Everyone you shared it with loses it too." : ""} It can't be undone.</p>
+        <p class="muted pk-small">Want a copy first? Open the bike, go to Settings and download a full backup.</p>
+        <label class="pk-small">Type <b>DELETE</b> to confirm<input id="dlC" autocomplete="off" aria-label="Type DELETE to confirm" style="display:block;width:100%;margin-top:6px"></label>`
+      : `<p class="muted">It leaves your garage. The owner keeps the bike and everything in it, and can share it with you again.</p>`}
+      <div class="pk-err" id="dlE" hidden></div>
+      <div class="pk-links"><button class="btn" data-x>Cancel</button><button class="btn danger" data-ok ${own ? "disabled" : ""}>${own ? "Delete for good" : "Remove it"}</button></div></div>`;
+    document.body.appendChild(box);
+    const ok = box.querySelector("[data-ok]"), c = box.querySelector("#dlC"), err = box.querySelector("#dlE");
+    box.querySelector("[data-x]").onclick = () => box.remove(); box.onclick = e => { if (e.target === box) box.remove(); };
+    if (c) { c.oninput = () => { ok.disabled = c.value.trim().toUpperCase() !== "DELETE"; }; setTimeout(() => c.focus(), 30); }
+    ok.onclick = async () => {
+      ok.disabled = true; ok.textContent = own ? "Deleting…" : "Removing…";
+      const { error } = own ? await sb.from("projects").delete().eq("id", p.id) : await sb.from("project_members").delete().match({ project_id: p.id, user_id: session.user.id });
+      if (error) { err.textContent = friendly(error); err.hidden = false; ok.disabled = false; ok.textContent = own ? "Delete for good" : "Remove it"; return; }
+      box.remove(); note(own ? `Deleted "${p.label}".` : `Removed "${p.label}" from your garage.`); done && done();
+    };
+  }
+  window.rvDeleteProject = (p, done) => deleteProjectBox(p, done);
+  window.rvGoGarage = () => goUrl({});
   async function shareBox(p) {
     const box = document.createElement("div"); box.className = "pk-modal";
     const draw = async () => {

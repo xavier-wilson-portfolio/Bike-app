@@ -2293,3 +2293,22 @@ article.gt::before{box-shadow:inset 0 0 0 2px color-mix(in srgb,var(--edge) 35%,
 .gift-new select,.gift-new input{border:1px solid var(--line-2);border-radius:8px;padding:8px 10px;background:var(--surface);width:100%}
 .gift-list{display:flex;flex-direction:column;gap:6px;margin-top:12px}.gift-row{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:9px;padding:8px 10px}.gift-row.off{opacity:.6}
 .gift-row code{font-family:var(--f-mono);font-weight:600}.gift-row small{display:block}
+.gt-acts .gt-del{color:var(--red);margin-left:auto}
+.btn.danger:disabled{opacity:.45;cursor:not-allowed}
+/* shop for parts (garage, Parts, Mods) */
+.shop{width:100%;box-sizing:border-box;text-align:left;margin:22px 0 6px;padding:18px 20px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,#E6F1F8,var(--surface) 70%);display:flex;flex-direction:column;gap:12px}
+.shop-h{display:flex;gap:12px;align-items:flex-start}.shop-h h2{margin:0;font-size:18px;color:#17232C}.shop-h p{margin:2px 0 0;color:var(--muted,#5B6770);font-size:13.5px}
+.shop-ic{flex:none;width:38px;height:38px;border-radius:10px;background:#17232C;display:grid;place-items:center}.shop-ic svg{width:20px;height:20px;fill:none;stroke:#D9BF8E;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.shop-f{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.shop-q{flex:1 1 260px;min-width:0;padding:10px 12px;border:1px solid var(--line-2);border-radius:10px;font-size:15px;background:var(--surface)}
+.shop-bike{flex:0 1 220px;min-width:0;padding:9px 10px;border:1px solid var(--line-2);border-radius:10px;background:var(--surface)}
+.shop-tog{display:inline-flex;gap:6px;align-items:center;font-size:13px;white-space:nowrap}
+.shop-chips{display:flex;gap:6px;flex-wrap:wrap}
+.shop-for{font-size:13.5px;margin-bottom:8px}
+.shop-stores{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:8px}
+.shop-st{display:flex;flex-direction:column;gap:2px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--surface);text-decoration:none;color:var(--fg);transition:border-color .15s,transform .15s}
+.shop-st:hover,.shop-st:focus-visible{border-color:#2C5F7C;transform:translateY(-1px)}.shop-st b{font-size:15px}.shop-st span{font-size:12.5px;color:var(--muted,#5B6770)}.shop-st em{font-style:normal;font-weight:700;font-size:12.5px;color:#2C5F7C;margin-top:4px}
+.shop-foot{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-top:8px;font-size:12.5px}
+.shop-pop .pk-card{max-width:620px;width:100%}.shop-pop .shop-stores{margin-top:10px}
+@media (max-width:600px){.shop{padding:14px}.shop-stores{grid-template-columns:1fr 1fr}.shop-bike{flex:1 1 100%}}
+.shop>*{max-width:none!important;margin-left:0!important;margin-right:0!important;width:100%;box-sizing:border-box;text-align:left}
+.shop .shop-h>div{flex:1;min-width:0}

@@ -149,6 +149,7 @@ VIEWS.inventory = {
     return `<div class="ph"><div><h1>Parts inventory</h1><p>${sorted("parts").length} parts cataloged. Part numbers stay blank until verified against the parts fiche for this exact bike.</p></div>
       <div class="act">${scanPickBtn("Scan parts", "btn")}<button class="btn" id="invCsv">${ic("download")} Export CSV</button><button class="btn" id="invPrint">Printable list</button><button class="btn pri" data-new="parts">${ic("plus")} Add part</button></div></div>
       ${partsCheckHtml()}
+      ${window.rvShop ? rvShop.html({ kind: "parts", title: "Shop for parts", sub: "Search the big parts stores at once for this bike. You buy on the store's own site.", bike: shopBike() }) : ""}
       <h2 class="sec left" style="margin-top:8px">Parts records</h2>
       ${filterBar("inventory", [{ k: "q", type: "search", label: "Search name, part no., ID, location" }, { k: "module", label: "Module", opts: optsOf(Object.keys(MODULES), MODULES) }, { k: "subsystem", label: "Subsystem", opts: optsOf(subs) },
         { k: "color", label: "Color status", opts: Object.entries(COLOR_LABEL) }, { k: "status", label: "Status", opts: optsOf(PART_STATUS) }, { k: "condition", label: "Condition", opts: optsOf(SCHEMA.parts.fields.find(x => x.k === "condition").opts) }, { k: "assignee", label: "Assigned", opts: teamOpts() },
@@ -160,7 +161,7 @@ VIEWS.inventory = {
         : table("inv", rows, PART_COLS(), { coll: "parts", select: invSel, emptyTitle: "No parts match these filters", defSort: { k: "id", dir: "asc" } })}`;
   },
   bind(root) {
-    bindTables(root); bindFilters(root, "inventory");
+    bindTables(root); bindFilters(root, "inventory"); if (window.rvShop) rvShop.bind(root, { bike: shopBike() });
     if (R.partsFocus) { const el = $("#partsCheck", root); R.partsFocus = null; el && setTimeout(() => el.scrollIntoView({ block: "start" }), 50); }
     $$("[data-iv]", root).forEach(b => b.onclick = () => { R.view.inventory = b.dataset.iv; lsSet("rv.route", { sec: R.sec, tab: R.tab, view: R.view }); render(false); });
     $$("[data-sel]", root).forEach(c => c.onchange = () => { c.checked ? invSel.add(c.dataset.sel) : invSel.delete(c.dataset.sel); render(false); });
