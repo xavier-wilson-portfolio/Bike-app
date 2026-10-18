@@ -426,21 +426,20 @@
   // delete a bike for good (owner), or take a shared bike out of your garage (everyone else)
   function deleteProjectBox(p, done) {
     const own = p.role === "owner", box = document.createElement("div"); box.className = "pk-modal";
-    box.innerHTML = `<div class="pk-card" role="dialog" aria-modal="true" aria-labelledby="dlH"><h2 class="disp-s" id="dlH">${own ? "Delete" : "Remove"} "${esc(p.label)}"?</h2>
+    box.innerHTML = `<div class="pk-card" role="dialog" aria-modal="true" aria-labelledby="dlH"><h2 class="disp-s" id="dlH">Are you sure you want to ${own ? "delete" : "remove"} "${esc(p.label)}"?</h2>
       ${own ? `<p class="muted">This deletes the bike and everything in it: services, parts, mods, receipts, photos, reminders and work orders.${p.members > 1 ? " Everyone you shared it with loses it too." : ""} It can't be undone.</p>
-        <p class="muted pk-small">Want a copy first? Open the bike, go to Settings and download a full backup.</p>
-        <label class="pk-small">Type <b>DELETE</b> to confirm<input id="dlC" autocomplete="off" aria-label="Type DELETE to confirm" style="display:block;width:100%;margin-top:6px"></label>`
+`
       : `<p class="muted">It leaves your garage. The owner keeps the bike and everything in it, and can share it with you again.</p>`}
       <div class="pk-err" id="dlE" hidden></div>
-      <div class="pk-links"><button class="btn" data-x>Cancel</button><button class="btn danger" data-ok ${own ? "disabled" : ""}>${own ? "Delete for good" : "Remove it"}</button></div></div>`;
+      <div class="pk-links"><button class="btn" data-x>Cancel</button><button class="btn danger" data-ok>${own ? "Delete" : "Remove"}</button></div></div>`;
     document.body.appendChild(box);
-    const ok = box.querySelector("[data-ok]"), c = box.querySelector("#dlC"), err = box.querySelector("#dlE");
+    const ok = box.querySelector("[data-ok]"), err = box.querySelector("#dlE");
     box.querySelector("[data-x]").onclick = () => box.remove(); box.onclick = e => { if (e.target === box) box.remove(); };
-    if (c) { c.oninput = () => { ok.disabled = c.value.trim().toUpperCase() !== "DELETE"; }; setTimeout(() => c.focus(), 30); }
+    setTimeout(() => ok.focus(), 30);
     ok.onclick = async () => {
       ok.disabled = true; ok.textContent = own ? "Deleting…" : "Removing…";
       const { error } = own ? await sb.from("projects").delete().eq("id", p.id) : await sb.from("project_members").delete().match({ project_id: p.id, user_id: session.user.id });
-      if (error) { err.textContent = friendly(error); err.hidden = false; ok.disabled = false; ok.textContent = own ? "Delete for good" : "Remove it"; return; }
+      if (error) { err.textContent = friendly(error); err.hidden = false; ok.disabled = false; ok.textContent = own ? "Delete" : "Remove"; return; }
       box.remove(); note(own ? `Deleted "${p.label}".` : `Removed "${p.label}" from your garage.`); done && done();
     };
   }
