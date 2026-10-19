@@ -15,7 +15,7 @@ src = ROOT / 'src'
 out = ROOT / 'public'
 out.mkdir(exist_ok=True)
 
-ORDER = ['core.js', 'model.js', 'content.js', 'howto.js', 'art_data.js', 'ui.js', 'plan_gate.js', 'vehicle.js', 'views.js', 'views2.js', 'views3.js', 'views4.js', 'maint.js', 'remind.js', 'mods.js', 'report.js', 'build.js', 'value.js', 'finder.js', 'shop.js', 'workorders.js', 'receipts.js',
+ORDER = ['core.js', 'model.js', 'content.js', 'howto.js', 'art_data.js', 'ui.js', 'plan_gate.js', 'vehicle.js', 'views.js', 'views2.js', 'views3.js', 'views4.js', 'maint.js', 'remind.js', 'mods.js', 'report.js', 'build.js', 'value.js', 'finder.js', 'shop.js', 'cart.js', 'workorders.js', 'receipts.js',
          'twin_data.js', 'twin_internals.js', 'twin.js', 'viewer.js', 'diag_draw.js', 'diag_data.js', 'diag_data2.js', 'diag_cms.js', 'diag_gen.js',
          *sorted(p.name for p in src.glob('d3_*.js')), 'd3.js', 'diag.js', 'scan.js', 'chat.js', 'universal.js', 'feedback.js', 'generic.js', 'costs.js', 'papers.js', 'checklists.js', 'wear.js', 'recalls.js', 'plans.js', 'delete_bike.js']
 app = '\n'.join((src / f).read_text() for f in ORDER) + '\nboot();\n'
@@ -52,7 +52,7 @@ import hashlib
 build_id = hashlib.sha1((app + css).encode()).hexdigest()[:10]
 loader = 'window.RV_BUILD = "' + build_id + '";\n' + loader
 sil = sorted(p.name for p in (ROOT / 'img' / 'sil').glob('*') if p.suffix in ('.webp', '.png', '.jpg', '.svg'))   # black silhouette covers that exist
-loader = 'window.RV_CONFIG = ' + json.dumps({**{k: cfg.get(k) for k in ['supabaseUrl', 'supabaseKey', 'aff', 'plansLive', 'payLinks', 'billingPortal', 'primaryHost'] if cfg.get(k)}, 'sil': sil, 'silCredit': json.loads((ROOT / 'img' / 'sil' / 'credits.json').read_text()) if (ROOT / 'img' / 'sil' / 'credits.json').exists() else {}}) + ';\n' + loader
+loader = 'window.RV_CONFIG = ' + json.dumps({**{k: cfg.get(k) for k in ['supabaseUrl', 'supabaseKey', 'aff', 'plansLive', 'payLinks', 'billingPortal', 'primaryHost', 'shopApi'] if cfg.get(k)}, 'sil': sil, 'silCredit': json.loads((ROOT / 'img' / 'sil' / 'credits.json').read_text()) if (ROOT / 'img' / 'sil' / 'credits.json').exists() else {}}) + ';\n' + loader
 html = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Revora</title>
 <meta name="description" content="Restore your motorcycle: parts diagrams, part numbers, a step-by-step course and a parts tracker for your exact bike.">

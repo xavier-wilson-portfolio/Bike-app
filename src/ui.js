@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: "finder", t: "Parts finder", i: "search", grp: "learn", d: "Search every parts store at once" },
   { id: "shops", t: "Where to buy parts", i: "store", grp: "learn", d: "Shops, diagrams, forums" },
   { id: "help", t: "Help", i: "help", grp: "learn", d: "How this app works" },
-  { id: "purchasing", t: "Shopping list", i: "cart", grp: "records", d: "Requests, quotes, orders" },
+  { id: "purchasing", t: "Shopping list", i: "cart", grp: "records", d: "Find parts, add to cart, see the total" },
   { id: "inspections", t: "Measurements", i: "gauge", grp: "records", d: "Checks and limits" },
   { id: "docs", t: "Photos & files", i: "image", grp: "records", d: "Before, during, after" },
   { id: "problems", t: "Problems & decisions", i: "alert", grp: "records", d: "Issues and big choices" },

@@ -84,7 +84,7 @@ VIEWS.lesson = {
     const deps = s.deps.map(d => S.phases[d]).filter(Boolean);
     return `<div class="lhero"><div class="eyebrow">Part ${i + 1} of ${phs.length}</div><h1>${esc(L.title || ph.name)}</h1><p>${esc(L.short || "")}</p>
       <div class="row center" style="margin-top:12px">${statePill(lessonState(ph))}<span class="num muted">${s.done} of ${s.total} steps done</span></div>
-      <div class="progress" style="width:min(420px,80%);margin:8px auto 0"><i style="width:${s.pct * 100}%"></i></div><div class="row center" style="margin-top:12px">${askBtn(`I'm on Part ${i + 1} of my ${BIKE.short} restoration: ${L.title}. Give me a simple plan for this part.`, "Part " + (i + 1), "btn ask")}${(L.focus && GROUP_DIAG[L.focus] && scanBtn(GROUP_DIAG[L.focus], "Scan parts", "btn")) || scanPickBtn("Scan parts", "btn")}</div>
+      <div class="progress" style="width:min(420px,80%);margin:8px auto 0"><i style="width:${s.pct * 100}%"></i></div><div class="row center" style="margin-top:12px">${askBtn(`I'm on Part ${i + 1} of my ${BIKE.short} restoration: ${L.title}. Give me a simple plan for this part.`, "Part " + (i + 1), "btn ask")}${(L.focus && GROUP_DIAG[L.focus] && (walkBtn(GROUP_DIAG[L.focus], "Go through parts", "btn") + scanBtn(GROUP_DIAG[L.focus], "Scan a photo", "btn"))) || (walkPickBtn("Go through parts", "btn") + scanPickBtn("Scan a photo", "btn"))}</div>
       ${lessonArt(L, "big")}</div>
     <div class="ph" style="display:none"></div>
     <div class="lcol">

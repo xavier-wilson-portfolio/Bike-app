@@ -22,7 +22,7 @@ async function startTrial() {
 const LOCK_TXT = {
   reminders: "See when every service comes due, with email and calendar reminders before it does.", recalls: "Get NHTSA safety recalls for your bike and a heads-up when a new one comes out.",
   mods: "Keep every aftermarket part with its part number, price and the stock part it replaced.", costs: "Log fill-ups, see your miles per gallon and what the bike really costs per mile.",
-  budget: "Track spending against your budget, with every expense and order in one place.", purchasing: "Plan, quote and track every part you order.", receipts: "Snap a receipt and the AI files it as a service, mod or expense.",
+  budget: "Track spending against your budget, with every expense and order in one place.", purchasing: "Search for parts, add them to a cart and see the total before you buy.", receipts: "Snap a receipt and the AI files it as a service, mod or expense.",
   team: "Share the project with friends or a shop and see who did what.", viewer: "Explore the bike in 3D.", home: "Follow a step-by-step restoration course for this bike.",
   course: "A step-by-step restoration course for this bike, with how-to for every step.", chat: "Ask the mechanic anything about your bike.", scan: "Point your camera at a tray of parts and see what's there.",
   share: "Share the history report as a link with a buyer or a shop.",

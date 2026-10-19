@@ -31,7 +31,7 @@ function modCard(m) {
     </div>
     <div class="md-side"><b class="md-price">${c ? money2(c) : `<span class="faint">—</span>`}</b>${n(m.labor) && n(m.price) ? `<span class="faint">${money(m.price)} part · ${money(m.labor)} labor</span>` : ""}
       <span class="md-links">${m.url ? `<a href="${esc(m.url)}" target="_blank" rel="noopener">Product</a>` : ""}${typeof rcptLinkHtml === "function" ? rcptLinkHtml(m) : ""}</span>
-      ${wish ? `<button class="btn sm" data-buy="mods" data-q="${esc([m.brand, m.name].filter(Boolean).join(" "))}">Shop for it</button>` : ""}${wish && W ? `<button class="btn sm pri" data-fit="${esc(m.id)}">${ic("check")} Mark fitted</button>` : ""}</div>
+      ${wish ? `<button class="btn sm" data-cartfind="${esc([m.brand, m.name].filter(Boolean).join(" "))}">Shop for it</button>` : ""}${wish && W ? `<button class="btn sm pri" data-fit="${esc(m.id)}">${ic("check")} Mark fitted</button>` : ""}</div>
   </article>`;
 }
 
@@ -82,7 +82,7 @@ VIEWS.mods = {
         ${stat("c-tan", ic("star") + "Wish list", String(t.wish.length), t.wish.length ? money(t.wishCost) + " to buy them all" : "Plan your next upgrade", 'data-mtab="wish"')}
         ${stat("c-green", ic("box") + "Stock parts kept", String(t.kept.length), t.kept.length ? "Ready to go back to stock" : "Record them as you swap", 'data-mtab="stock"')}
       </div>
-      ${window.rvShop ? rvShop.html({ kind: "mods", title: "Shop for upgrades", sub: "Search the big stores for parts and upgrades that fit this bike. You buy on the store's own site.", bike: shopBike(), wish: W }) : ""}
+      <form class="ct-search md-shop" id="mdShop" role="search"><span class="fd-ico">${ic("search")}</span><input id="mdShopQ" type="search" placeholder="Shop for upgrades: slip-on exhaust, heated grips, LED headlight…" aria-label="Shop for an upgrade" autocomplete="off"><button class="btn pri" type="submit">Shop</button></form>
       <div class="tabs">${tabs.map(([k, l]) => `<button data-mtab="${k}" class="${tab === k ? "on" : ""}">${l}</button>`).join("")}</div>${body}`;
   },
   bind(root) {
@@ -95,7 +95,7 @@ VIEWS.mods = {
     $$("[data-fit]", root).forEach(b => b.onclick = async () => { const m = clone(S.mods[b.dataset.fit]); if (!m) return; m.status = "Installed"; m.date = m.date || today(); m.odometer = n(m.odometer) || od(); if (m.stockKept === "Not applicable" && m.replaced) m.stockKept = "Kept";
       await store.put("mods", m, { action: "fitted " + m.name }); toast(m.name + " is on the bike."); openRecord("mods", m.id); });
     $$("[data-find]", root).forEach(b => b.onclick = e => { e.stopPropagation(); findPart(b.dataset.find); });
-    if (window.rvShop) rvShop.bind(root, { bike: shopBike() }, { onWish: q => openRecord("mods", null, { name: q, status: "Planned", stockKept: "Not applicable" }) });
+    const ms = $("#mdShop", root); if (ms) ms.onsubmit = e => { e.preventDefault(); const q = $("#mdShopQ", root).value.trim(); if (!q) return; R.tab.purchasing = ""; go("purchasing"); cartSearch(q, true); };
     $$("[data-copy]", root).forEach(b => b.onclick = e => { e.stopPropagation(); const v = b.dataset.copy; (navigator.clipboard ? navigator.clipboard.writeText(v) : Promise.reject()).then(() => toast("Copied " + v), () => toast(v)); });
     const rp = $("[data-go-report]", root); if (rp) rp.onclick = () => go("report");
     const csv = $("#mdCsv", root); if (csv) csv.onclick = () => saveFile("revora-mods-" + today() + ".csv", csvOf(sorted("mods").map(m => ({ ...m, total: modCost(m) })),

@@ -36,11 +36,15 @@ const GROUP_DIAG = !X.handDiagrams ? (BIKE.groupDiag || {}) : { frame: "CMS-BLCK
   boots: "CMS-BLCK0001", airbox: "CMS-BLCK0001", exhaust: "CMS-BLCK0048", tank: "CMS-BLCK0037", tap: "CMS-BLCK0036", seat: "CMS-BLCK0062", coverL: "CMS-BLCK0025",
   coverR: "CMS-BLCK0025", fenders: "CMS-BLCK0054", swingarm: "CMS-BLCK0057", shocks: "CMS-BLCK0008", chain: "CMS-BLCK0058", headlight: "CMS-BLCK0043",
   gauges: "CMS-BLCK0065", sigF: "CMS-BLCK0076", tail: "CMS-BLCK0053", harness: "CMS-BLCK0020", ignition: "CMS-BLCK0011", pegs: "CMS-BLCK0021" };
+const walkBtn = (did, label = "Go through parts", cls = "btn sm") => HAS_CAT && did && scanParts(did).length ? `<button type="button" class="${cls}" data-walk="${did}" title="Check these parts off one by one">${ic("check")} ${esc(label)}</button>` : "";
 const scanBtn = (did, label = "Scan parts", cls = "btn sm") => HAS_CAT && did && scanParts(did).length ? `<button type="button" class="${cls}" data-scan="${did}" title="Take a photo of these parts and check them off">${ic("camera")} ${esc(label)}</button>` : "";
 const scanPickBtn = (label = "Scan a tray of parts", cls = "btn sm") => !HAS_CAT ? "" : `<button type="button" class="${cls}" data-scanpick title="Pick which diagram the parts belong to, then take a photo">${ic("camera")} ${esc(label)}</button>`;
+// go through an area's parts one by one, no photo
+const walkPickBtn = (label = "Go through parts", cls = "btn sm") => !HAS_CAT ? "" : `<button type="button" class="${cls}" data-scanpick="walk" title="Pick an area and check its parts off one by one">${ic("check")} ${esc(label)}</button>`;
 document.addEventListener("click", e => {
+  const w = e.target.closest("[data-walk]"); if (w) { e.preventDefault(); scanStart(w.dataset.walk, true); return; }
   const b = e.target.closest("[data-scan]"); if (b) { e.preventDefault(); scanStart(b.dataset.scan); return; }
-  const p = e.target.closest("[data-scanpick]"); if (p) { e.preventDefault(); scanPick(); }
+  const p = e.target.closest("[data-scanpick]"); if (p) { e.preventDefault(); scanPick(p.dataset.scanpick === "walk" ? "walk" : ""); }
 });
 
 /* ---- AI ---- */
@@ -74,26 +78,27 @@ async function scanAI(dataUrl, blob, prompt) {
 }
 
 /* ---- picker: which tray / diagram ---- */
-function scanPick() {
-  if (typeof gate === "function" && !gate("restorer", "scan", "the parts scan")) return;
+function scanPick(mode) {
+  const walk = mode === "walk";
+  if (!walk && typeof gate === "function" && !gate("restorer", "scan", "the parts scan")) return;
   const ds = scanDiagrams(), sys = [...new Set(ds.map(d => d.system))];
-  modal(`<h3>${ic("camera")} Scan a tray of parts</h3><p class="hint-text" style="text-align:left;margin:0">Pick the area the parts are from. The scan only looks for that diagram's parts, which makes it far more accurate.</p>
+  modal(`<h3>${walk ? ic("check") + " Go through parts" : ic("camera") + " Scan a photo of parts"}</h3><p class="hint-text" style="text-align:left;margin:0">${walk ? "Pick an area of the bike. You'll go through its parts one at a time and mark what you have." : "Pick the area the parts are from. The scan only looks for that diagram's parts, which makes it far more accurate."}</p>
     <input type="search" id="scQ" placeholder="Search, e.g. carburetor, fork, clutch" autofocus>
     <div class="scpick" id="scList">${sys.map(s => `<div class="scgrp" data-sys="${esc(s)}"><div class="lbl">${esc(s)}</div>${ds.filter(d => d.system === s).map(d => { const h = haveStats(d.id); return `<button type="button" class="scrow" data-pick="${d.id}" data-t="${esc((d.title + " " + s).toLowerCase())}"><b>${esc(d.title)}</b><span>${h.have || h.miss ? `${h.have} have · ${h.miss} missing · ${h.open} to check` : `${h.total} parts`}</span></button>`; }).join("")}</div>`).join("")}</div>
     <div class="row"><button class="btn" data-x>Cancel</button></div>`, m => {
     $("[data-x]", m).onclick = closeModal;
-    $$("[data-pick]", m).forEach(b => b.onclick = () => scanStart(b.dataset.pick));
+    $$("[data-pick]", m).forEach(b => b.onclick = () => scanStart(b.dataset.pick, walk));
     $("#scQ", m).oninput = e => { const q = e.target.value.trim().toLowerCase(); $$("[data-pick]", m).forEach(b => b.hidden = q && !b.dataset.t.includes(q)); $$(".scgrp", m).forEach(g => g.hidden = !$$("[data-pick]", g).some(b => !b.hidden)); };
   });
 }
 
 /* ---- the scan itself ---- */
-function scanStart(did) {
+function scanStart(did, walk) {
   const d = diagById(did), parts = scanParts(did); if (!d || !parts.length) { toast("That area has no parts list to scan yet.", "err"); return; }
   if (!ME.canWrite) { toast("You have view-only access, so scans can't be saved. Ask the owner for Contributor access.", "err"); return; }
   try { if (document.fullscreenElement) (document.exitFullscreen || document.webkitExitFullscreen).call(document); } catch (e) {}
   $$(".d3main.d3full").forEach(x => x.classList.remove("d3full")); document.body.classList.remove("d3lock");
-  const sc = { did, title: d.title, parts, step: "photo", ai: {}, dec: {}, i: 0, photo: null, err: "" };
+  const sc = { did, title: d.title, parts, step: walk ? "walk" : "photo", ai: {}, dec: {}, i: 0, photo: null, err: "" };
   parts.forEach(p => { const h = haveGet(did, p.pid); sc.dec[p.pid] = { have: h.have, note: h.note || "", got: h.got }; });
   scanShow(sc);
 }
@@ -195,9 +200,10 @@ function partsCheckHtml() {
     if (h.miss) scanParts(d.id).forEach(p => { const x = haveGet(d.id, p.pid); if (x.have === false) missing.push([d, p, x]); }); });
   const checked = rows.filter(([, h]) => h.have || h.miss);
   const shops = ["cmsnl", "partzilla", "z1", "allballs"].filter(k => SHOPS[k]);
-  return `<section class="stack pcheck" id="partsCheck"><div class="row" style="justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:8px"><div><h2 class="sec left" style="margin:0">Parts check</h2><p class="sec-sub" style="text-align:left;margin:4px 0 0">Every piece from the Suzuki diagrams, marked from your scans and checks.</p></div>${scanPickBtn("Scan a tray of parts", "btn pri")}</div>
+  if (!ds.length) return "";
+  return `<section class="stack pcheck" id="partsCheck"><div class="row" style="justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:8px"><div><h2 class="sec left" style="margin:0">Parts check</h2><p class="sec-sub" style="text-align:left;margin:4px 0 0">Go through each area and mark what you have and what's missing.</p></div><div class="row" style="gap:8px;flex-wrap:wrap">${walkPickBtn("Go through parts", "btn pri")}${scanPickBtn("Scan a photo", "btn")}</div></div>
     <div class="tcard stack"><div class="sclegend big"><span><i class="g"></i><b class="num">${have}</b> have</span><span><i class="r"></i><b class="num">${miss}</b> missing</span><span><i></i><b class="num">${total - have - miss}</b> not checked yet</span><span class="faint">of ${total} pieces in ${ds.length} diagrams</span></div>
-      ${checked.length ? "" : `<p class="hint-text" style="text-align:left;margin:0">Nothing checked yet. Lay out a tray or bag of parts and press “Scan a tray of parts”, or open any diagram and use the ⚙ parts check.</p>`}</div>
+      ${checked.length ? "" : `<p class="hint-text" style="text-align:left;margin:0">Nothing checked yet. Press “Go through parts” to check them off by hand, or “Scan a photo” to have the AI spot them first.</p>`}</div>
     ${missing.length ? `<div class="tcard stack"><h3 class="vh">What's missing and where to get it (${missing.length})</h3><div class="pmiss">${missing.map(([d, p, x]) => `<div class="pmrow"><div class="grow"><b>${esc(p.name)}</b> <span class="faint">ref ${esc(p.ref)} · ${esc(d.title)}</span>${p.pn ? `<div class="mono">${esc(p.pn)}</div>` : ""}${x.note ? `<div class="hint-text" style="text-align:left">Note: ${esc(x.note)}</div>` : ""}</div>
         <div class="row" style="gap:4px;flex-wrap:wrap">${p.pn ? `<a class="btn sm" href="${cmsSearchUrl(p.pn)}" target="_blank" rel="noopener">CMSNL</a>` : ""}<a class="btn sm" href="${ebaySearchUrl(p.pn, p.name)}" target="_blank" rel="noopener">eBay</a><button class="btn sm" data-godiag2="${d.id}">Diagram</button></div></div>`).join("")}</div>
       <div class="hint-text" style="text-align:left">Your saved shops: ${shops.map(k => `<a href="${esc(SHOPS[k].url)}" target="_blank" rel="noopener">${esc(SHOPS[k].name)}</a>`).join(" · ")} · <button class="linkbtn" data-go="shops">all shops</button>. CMSNL search opens the exact Suzuki number; eBay is good for used and new-old-stock parts.</div></div>` : ""}
