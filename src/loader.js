@@ -579,7 +579,7 @@
         <div><span>3</span><b>Know what's next</b><p>Reminders, recall alerts and renewal dates come to you, and the history report builds itself.</p></div></div></section>
       <section class="ld-sec" id="ld-plans"><h2>Plans</h2><p class="ld-sub">Limited-time prices on every paid plan.</p>${window.rvPlansHtml({ yearly, mode: "choose" })}</section>
       <section class="ld-end"><h2>Your bike's whole story, kept right.</h2><button class="btn tan big" data-nav="signup">Get started free</button><button class="linkbtn" data-nav-pick>Look around first</button></section>
-      <footer class="ld-foot"><span>Revora</span><span>Made for people who work on their own bikes.</span></footer></div>`;
+      <footer class="ld-foot"><span>Revora</span><span>Made for people who work on their own bikes.</span><a href="mailto:info@revoragarage.com">info@revoragarage.com</a></footer></div>`;
     app.querySelectorAll("[data-pl-bill]").forEach(b => b.onclick = () => { showLanding(b.dataset.plBill === "y"); document.getElementById("ld-plans").scrollIntoView(); });
     app.querySelectorAll("[data-pl-pick]").forEach(b => b.onclick = () => showAuth("signup"));
     app.querySelector("[data-nav-pick]").onclick = () => goUrl({ pick: 1 });
@@ -712,7 +712,10 @@
     const rows = queue.map(x => Object.assign({}, x, { user_id: session ? session.user.id : null, email: x.email || (session ? session.user.email : null) }));
     const { error } = await sb.from("feedback").insert(rows);
     if (error) { ls.set("rv.feedbackQueue", JSON.stringify(queue.slice(-20))); return { queued: true }; }
-    ls.set("rv.feedbackQueue", "[]"); return { ok: true };
+    ls.set("rv.feedbackQueue", "[]");
+    // also email it to info@revoragarage.com (the reminders worker sends it); the saved copy above is the record
+    try { fetch("https://revora-reminders.xavier-j-wilson101.workers.dev/notify", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ rows: rows.slice(-5).map(x => ({ kind: x.kind, message: x.message, rating: x.rating, email: x.email, page: x.page, bike: x.bike, device: x.device, user: session ? session.user.email : "" })) }), keepalive: true }).catch(() => {}); } catch (e) {}
+    return { ok: true };
   };
 
   /* ---------- for the app ---------- */

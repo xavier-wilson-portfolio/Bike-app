@@ -4,9 +4,11 @@
    Secrets to add in Cloudflare (Settings > Variables and Secrets, type "Secret"):
      RESEND_API_KEY   the API key from resend.com (starts with re_)
      WORKER_SECRET    the same value as BILLING_SECRET on the revora-billing worker
-   Visiting /run sends anything due right now (it's the same job the schedule runs, so nothing is sent twice). */
+   Visiting /run sends anything due right now (it's the same job the schedule runs, so nothing is sent twice).
+   POST /notify { rows: [feedback] } emails feedback sent from the app to info@revoragarage.com, with Reply-To set to the sender. */
 const SUPABASE_URL = "https://fhuksccqsyaomnouxxtb.supabase.co", SUPABASE_KEY = "sb_publishable_0wYtVeKcFJUzy3AfIaFhiw_NrT1wNkz";
-const FROM = "Revora <reminders@revoragarage.com>", REPLY_TO = "xavier.j.wilson101@gmail.com", APP = "https://revoragarage.com";
+const FROM = "Revora <info@revoragarage.com>", REPLY_TO = "info@revoragarage.com", INBOX = "info@revoragarage.com", APP = "https://revoragarage.com";
+const SITES = ["https://revoragarage.com", "https://www.revoragarage.com", "https://revora-9pq.pages.dev", "https://xavier-wilson-portfolio.github.io"];
 const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const json = (o, status = 200) => new Response(JSON.stringify(o, null, 1), { status, headers: { "content-type": "application/json" } });
 
@@ -29,11 +31,11 @@ function emailHtml(rows) {
     <div style="font:700 22px Arial,sans-serif;margin-top:12px">${rows.length === 1 ? "Coming up on your bike" : "Coming up on your bikes"}</div></div>
     <div style="background:#fff;padding:4px 20px 20px;border-radius:0 0 12px 12px">${blocks}
     <p style="margin:22px 0 4px"><a href="${APP}/" style="background:#D9BF8E;color:#17232C;padding:11px 18px;border-radius:999px;text-decoration:none;font:700 14px Arial,sans-serif">Open Revora</a></p></div>
-    <p style="font:12px/1.5 Arial,sans-serif;color:#5B6770;margin:16px 4px">You're getting this because email reminders are on for this bike. To stop them, open the bike in Revora, go to Reminders and switch email off.</p>
+    <p style="font:12px/1.5 Arial,sans-serif;color:#5B6770;margin:16px 4px">You're getting this because email reminders are on for this bike. To stop them, open the bike in Revora, go to Reminders and switch email off. Questions? Just reply to this email.</p>
   </div></body></html>`;
 }
 function emailText(rows) {
-  return rows.map(r => `${r.bike ? r.bike + ": " : ""}${r.title}\n${r.body || ""}`).join("\n\n") + `\n\nOpen Revora: ${APP}/\nTo stop these, open the bike in Revora, go to Reminders and switch email off.`;
+  return rows.map(r => `${r.bike ? r.bike + ": " : ""}${r.title}\n${r.body || ""}`).join("\n\n") + `\n\nOpen Revora: ${APP}/\nTo stop these, open the bike in Revora, go to Reminders and switch email off. Questions? Reply to this email.`;
 }
 
 async function run(env) {
@@ -55,9 +57,34 @@ async function run(env) {
   return out;
 }
 
+const KIND = { idea: "Idea", problem: "Problem", question: "Question", praise: "Praise", contact: "Contact" };
+async function notify(req, env) {
+  const o = req.headers.get("Origin") || "", h = SITES.includes(o) ? { "Access-Control-Allow-Origin": o, "Access-Control-Allow-Methods": "POST, OPTIONS", "Access-Control-Allow-Headers": "content-type", "Vary": "Origin" } : {};
+  if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: h });
+  if (req.method !== "POST" || !SITES.includes(o)) return new Response("no", { status: 403, headers: h });
+  if (!env.RESEND_API_KEY) return new Response(JSON.stringify({ error: "not configured" }), { status: 503, headers: h });
+  const body = await req.json().catch(() => ({})), rows = (Array.isArray(body.rows) ? body.rows : []).slice(0, 5)
+    .map(r => ({ kind: KIND[r.kind] ? r.kind : "idea", message: String(r.message || "").slice(0, 3000), rating: +r.rating || 0, email: /^\S+@\S+\.\S+$/.test(String(r.email || "")) ? String(r.email).slice(0, 120) : "",
+      page: String(r.page || "").slice(0, 40), bike: String(r.bike || "").slice(0, 80), device: String(r.device || "").slice(0, 200), user: String(r.user || "").slice(0, 120) }))
+    .filter(r => r.message.trim().length >= 3);
+  let sent = 0;
+  for (const r of rows) {
+    const subject = `Revora ${KIND[r.kind].toLowerCase()}: ${r.message.replace(/\s+/g, " ").slice(0, 60)}${r.message.length > 60 ? "…" : ""}`;
+    const meta = [["From", r.email || "No email given"], ["Signed in as", r.user], ["Rating", r.rating ? r.rating + " of 5" : ""], ["Page", r.page], ["Bike", r.bike], ["Device", r.device]].filter(x => x[1]);
+    const html = `<div style="font:15px/1.5 Arial,sans-serif;color:#17232C;max-width:600px"><div style="font:700 12px Arial;letter-spacing:2px;color:#2C5F7C">REVORA ${esc(KIND[r.kind].toUpperCase())}</div>
+      <p style="white-space:pre-wrap;font-size:16px;margin:10px 0 16px">${esc(r.message)}</p><table style="font-size:13px;color:#5B6770">${meta.map(([k, v]) => `<tr><td style="padding:2px 12px 2px 0"><b>${esc(k)}</b></td><td>${esc(v)}</td></tr>`).join("")}</table>
+      ${r.email ? `<p style="font-size:13px;color:#5B6770">Reply to this email to answer them.</p>` : ""}</div>`;
+    const res = await fetch("https://api.resend.com/emails", { method: "POST", headers: { Authorization: "Bearer " + env.RESEND_API_KEY, "content-type": "application/json" },
+      body: JSON.stringify(Object.assign({ from: FROM, to: [INBOX], subject, html, text: r.message + "\n\n" + meta.map(([k, v]) => k + ": " + v).join("\n") }, r.email ? { reply_to: r.email } : {})) });
+    if (res.ok) sent++; else console.log("notify failed", res.status, (await res.text()).slice(0, 200));
+  }
+  return new Response(JSON.stringify({ sent }), { status: 200, headers: Object.assign({ "content-type": "application/json" }, h) });
+}
+
 export default {
   async scheduled(evt, env, ctx) { ctx.waitUntil(run(env)); },
   async fetch(req, env) {
+    if (new URL(req.url).pathname === "/notify") return notify(req, env);
     if (new URL(req.url).pathname === "/run") { try { return json(await run(env)); } catch (e) { return json({ error: String(e.message || e) }, 500); } }
     return new Response("Revora reminders is running. It sends once a day.", { status: 200 });
   },
