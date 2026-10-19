@@ -512,7 +512,7 @@ function pvOptsHtml() {
     : `The main parts a typical ${esc(st)} has, one card at a time: engine, carbs, lights, wiring, tires and more. No bolts or washers.`;
   return `<section class="pv-opts" aria-label="Ways to add parts">
     <div class="pv-opt"><span class="pv-oic">${ic("camera")}</span><div class="pv-ot"><h2>Scan parts</h2><p>Lay out a tray of parts and take a photo. The AI spots them, then you confirm each one.</p></div>
-      ${HAS_CAT ? scanPickBtn("Scan a photo", "btn") : off("Needs a factory parts catalogue for this bike")}</div>
+      ${HAS_CAT && pvSrc() === "oem" ? scanPickBtn("Scan a photo", "btn") : `<button type="button" class="btn" data-pvscan>${ic("camera")} Scan a photo</button>`}</div>
     <div class="pv-opt pv-main"><span class="pv-oic">${ic("check")}</span><div class="pv-ot"><h2>Go through parts</h2><p>${what}</p>
       ${c && started ? `<div class="pv-mini"><div class="pv-bar"><i class="g" style="width:${c.Owned / c.total * 100}%"></i><i class="r" style="width:${c.Missing / c.total * 100}%"></i><i class="a" style="width:${c.Skipped / c.total * 100}%"></i></div><span>${pvNum(c.done)} of ${pvNum(c.total)} checked</span></div>`
         : c ? `<div class="pv-mini"><span>${src === "oem" ? `${pvNum(c.total)} parts in ${pvNum(new Set(cat.map(x => x.did)).size)} assemblies` : `${pvNum(c.total)} main parts`}. Stop any time, it saves as you go.</span></div>` : ""}</div>
@@ -669,3 +669,95 @@ function pvBookHtml() {
     onDrawerClose() { if (R.tab.inventory) pvPaint(); }
   };
 })();
+
+/* ---- scan a photo against the main parts list (any bike, no catalogue needed) ----
+   Same AI call as the catalogue scanner (scanAI). The AI gets this bike type's main parts for the chosen area and says which
+   are in the photo; it can also name things that aren't on the list. You confirm every one before anything is saved. */
+function pvScanPrompt(items, sys) {
+  return `This photo shows motorcycle parts from a ${pvBikeName()} (${/^[aeiou]/.test(PV_STYLE_NOUN[pvGen().profile.style]) ? "an" : "a"} ${PV_STYLE_NOUN[pvGen().profile.style]}).${sys ? ` They should be from the "${sys}" area.` : ""}
+These are the main parts that could be in the photo (number. name: what it covers):
+${items.map((it, i) => `${i + 1}. ${it.name}${it.what ? ": " + it.what : ""}`).join("\n")}
+
+For EVERY numbered part decide whether it is visible in the photo.
+Then list any other clearly visible motorcycle parts that are NOT on the list (main parts only, ignore bolts, nuts, washers and other small hardware).
+Reply with only a JSON array:
+{"n": <number>, "seen": "yes" | "maybe" | "no", "count": <how many you can see>, "note": "<a few words about condition or what you saw, or empty>"} for each numbered part, in order, then
+{"n": 0, "name": "<plain name of an extra part>", "seen": "yes" | "maybe", "count": <how many>, "note": "<a few words>"} for each extra part.
+Use "maybe" when you are not sure. Never guess part numbers.`;
+}
+function pvScan() {
+  if (typeof gate === "function" && !gate("restorer", "scan", "the parts scan")) return;
+  if (!ME.canWrite) { toast("You have view-only access, so scans can't be saved. Ask the owner for Contributor access.", "err"); return; }
+  const sys = [...new Set(pvGen().map(x => x.sys))], idx = pvIndex();
+  const sc = { step: "pick", sys: "", items: [], ai: {}, extra: [], dec: {}, add: {}, photo: null, err: "" };
+  const show = () => {
+    const head = `<div class="row" style="justify-content:space-between;align-items:center"><h3 style="margin:0">${ic("camera")} Scan parts</h3><button class="linkbtn" data-ps="close" aria-label="Close">✕</button></div>`;
+    let body = "";
+    if (sc.step === "pick") body = `<p class="hint-text" style="text-align:left;margin:0">Pick the area the parts are from. The scan checks your photo against the main parts of a typical ${esc(PV_STYLE_NOUN[pvGen().profile.style])}, and also names anything else it spots.</p>
+      <div class="scpick">${sys.map(s => { const its = pvGen().filter(x => x.sys === s), c = pvCounts(its, idx); return `<button type="button" class="scrow" data-psys="${esc(s)}"><b>${esc(s)}</b><span>${its.length} parts${c.done ? ` · ${c.done} checked` : ""}</span></button>`; }).join("")}
+        <button type="button" class="scrow" data-psys=""><b>Not sure, or a mix</b><span>Check against every main part</span></button></div>`;
+    else if (sc.step === "photo") body = `<p style="margin:0">Lay out the ${sc.sys ? esc(sc.sys.toLowerCase()) + " " : ""}parts and take one photo. You'll confirm each one before anything is saved.</p>
+      <ul class="tips scTips"><li>${ic("bulb")}<span>Plain, light surface. Parts spread out, not stacked.</span></li><li>${ic("bulb")}<span>Good light, shot from straight above.</span></li><li>${ic("bulb")}<span>Big parts work best. Bolts and washers are ignored.</span></li></ul>
+      <div class="row" style="gap:8px;flex-wrap:wrap"><label class="btn pri">${ic("camera")} Take a photo<input type="file" accept="image/*" capture="environment" data-psfile hidden></label><label class="btn">${ic("image")} Upload a photo<input type="file" accept="image/*" data-psfile hidden></label><button class="btn" data-ps="back">Back</button></div>`;
+    else if (sc.step === "busy") body = `<img class="scphoto" src="${sc.photo.dataUrl}" alt="Your parts photo"><div class="row center" style="gap:10px"><span class="spinner"></span><b>Looking at your photo…</b></div><p class="hint-text" style="margin:0">This usually takes 5 to 30 seconds.</p>`;
+    else if (sc.step === "error") body = `<img class="scphoto" src="${sc.photo.dataUrl}" alt="Your parts photo"><div class="banner warn"><div class="grow">The scan couldn't run: ${esc(sc.err)}. You can still go through the parts on the cards.</div></div>
+      <div class="row" style="gap:8px"><button class="btn pri" data-ps="retry">Try again</button><button class="btn" data-ps="cards">Go through the cards instead</button></div>`;
+    else if (sc.step === "review") {
+      const seen = sc.items.filter(it => (sc.ai[it.key] || {}).seen && sc.ai[it.key].seen !== "no");
+      const chip = a => a.seen === "yes" ? `<span class="scchip g">Looks like it's here${a.count > 1 ? ` (×${a.count})` : ""}</span>` : `<span class="scchip a">Not sure</span>`;
+      body = `<details class="scphwrap"><summary>Your photo</summary><img class="scphoto" src="${sc.photo.dataUrl}" alt="Your parts photo"></details>
+        <p style="margin:0"><b>Check each one.</b> Only what you mark gets saved.</p>
+        ${seen.length ? `<div class="sclist">${seen.map(it => { const a = sc.ai[it.key], d = sc.dec[it.key]; return `<div class="scli"><div class="grow"><b>${esc(it.name)}</b><div>${chip(a)}${a.note ? ` <span class="hint-text">“${esc(a.note)}”</span>` : ""}</div></div>
+          <div class="row" style="gap:4px"><button class="btn sm ${d === "Owned" ? "have-on" : ""}" data-psd="${esc(it.key)}~Owned">✓ Have it</button><button class="btn sm ${d === "Missing" ? "miss-on" : ""}" data-psd="${esc(it.key)}~Missing">✕ Missing</button><button class="btn sm ${!d ? "on" : ""}" data-psd="${esc(it.key)}~">Skip</button></div></div>`; }).join("")}</div>` : `<p class="hint-text" style="margin:0">None of the main ${sc.sys ? esc(sc.sys.toLowerCase()) + " " : ""}parts were spotted.</p>`}
+        ${sc.extra.length ? `<h4 class="vh" style="margin:6px 0 0">Also spotted</h4><p class="hint-text" style="margin:0">Not on the main parts list. Tick the ones you want to add to your parts.</p>
+          <div class="sclist">${sc.extra.map((x, i) => `<label class="scli pv-psx"><input type="checkbox" data-psx="${i}" ${sc.add[i] ? "checked" : ""}><div class="grow"><b>${esc(x.name)}</b>${x.count > 1 ? ` <span class="faint">×${x.count}</span>` : ""}<div>${chip(x)}${x.note ? ` <span class="hint-text">“${esc(x.note)}”</span>` : ""}</div></div></label>`).join("")}</div>` : ""}
+        <div class="row" style="justify-content:flex-end;gap:8px"><button class="btn" data-ps="close">Cancel</button><button class="btn pri" data-ps="save">Save</button></div>`;
+    } else if (sc.step === "done") body = `<div class="banner good"><div class="grow"><b>Saved.</b> ${sc.saved.have} have it, ${sc.saved.miss} missing${sc.saved.added ? `, ${sc.saved.added} added to your parts` : ""}. The photo is in Photos &amp; files.</div></div>
+      <div class="row" style="gap:8px;flex-wrap:wrap"><button class="btn pri" data-ps="again">Scan another photo</button><button class="btn" data-ps="cards">Go through the rest on the cards</button><button class="btn" data-ps="close">Close</button></div>`;
+    let m = $("#modalHost .modal.scmodal");
+    if (m) { m.innerHTML = `<div class="scan stack">${head}${body}</div>`; m.scrollTop = 0; } else m = modal(`<div class="scan stack">${head}${body}</div>`, () => {});
+    m.classList.add("scmodal");
+    $$("[data-psys]", m).forEach(b => b.onclick = () => { sc.sys = b.dataset.psys; sc.items = pvGen().filter(x => !sc.sys || x.sys === sc.sys); sc.step = "photo"; show(); });
+    $$("[data-psfile]", m).forEach(inp => inp.onchange = async () => { const f = inp.files && inp.files[0]; if (!f) return;
+      let dataUrl; try { dataUrl = await compressImage(f, 520000); } catch (e) { toast("Couldn't read that photo. Try a JPG or PNG.", "err"); return; }
+      sc.photo = { dataUrl, blob: await (await fetch(dataUrl)).blob(), name: f.name }; run(); });
+    $$("[data-psd]", m).forEach(b => b.onclick = () => { const [k, v] = b.dataset.psd.split("~"); if (v) sc.dec[k] = v; else delete sc.dec[k]; show(); });
+    $$("[data-psx]", m).forEach(c => c.onchange = () => { sc.add[+c.dataset.psx] = c.checked; });
+    $$("[data-ps]", m).forEach(b => b.onclick = () => { const a = b.dataset.ps;
+      if (a === "close") { if (sc.step === "review" && (Object.keys(sc.dec).length || Object.values(sc.add).some(Boolean)) && !confirm("Close without saving these marks?")) return; closeModal(); if (R.sec === "inventory") render(false); return; }
+      if (a === "back") { sc.step = "pick"; show(); return; }
+      if (a === "retry") { run(); return; }
+      if (a === "again") { sc.step = "photo"; sc.ai = {}; sc.extra = []; sc.dec = {}; sc.add = {}; sc.photo = null; show(); return; }
+      if (a === "cards") { closeModal(); const f = pvDeckF(); f.src = "main"; f.area = sc.sys ? "sys:" + sc.sys : ""; f.show = "new"; f.i = null; pvPosSet({ src: "main", area: f.area }); R.tab.inventory = "deck"; go("inventory"); return; }
+      if (a === "save") save(); });
+  };
+  const run = async () => {
+    sc.step = "busy"; show();
+    try {
+      const res = await scanAI(sc.photo.dataUrl, sc.photo.blob, pvScanPrompt(sc.items, sc.sys)); sc.ai = {}; sc.extra = []; sc.dec = {}; sc.add = {};
+      res.forEach((r, k) => { const seen = /^(yes|maybe|no)$/i.test(r.seen) ? String(r.seen).toLowerCase() : r.seen === true ? "yes" : "no", note = String(r.note || "").slice(0, 120), count = Math.max(0, parseInt(r.count) || 0);
+        if (+r.n >= 1 && sc.items[+r.n - 1]) { const it = sc.items[+r.n - 1]; sc.ai[it.key] = { seen, count, note }; if (seen === "yes" && !pvHas(pvState(it))) sc.dec[it.key] = "Owned"; }
+        else if ((+r.n === 0 || r.name) && r.name && seen !== "no") { const nm = String(r.name).trim().slice(0, 80); if (nm && !sc.extra.some(x => x.name.toLowerCase() === nm.toLowerCase())) { sc.extra.push({ name: nm.charAt(0).toUpperCase() + nm.slice(1), seen, count: Math.max(1, count), note }); sc.add[sc.extra.length - 1] = seen === "yes"; } } });
+      if (!Object.keys(sc.ai).length && !sc.extra.length) throw new Error("the AI's answer couldn't be read");
+      sc.step = "review";
+    } catch (e) { sc.err = String(e && e.message || e).replace(/^Error:\s*/, ""); sc.step = "error"; }
+    if ($("#modalHost .scan")) show();
+  };
+  const save = async () => {
+    const btn = $('#modalHost [data-ps="save"]'); if (btn) { btn.disabled = true; btn.textContent = "Saving…"; }
+    let have = 0, miss = 0, added = 0, docId = "";
+    try { const d = blank("docs", { title: "Parts scan: " + (sc.sys || "main parts"), kind: "During photo", file: sc.photo.dataUrl, fileName: sc.photo.name || "parts-scan.jpg", folder: "Parts scans", tags: "parts scan",
+        notes: sc.items.filter(it => sc.dec[it.key]).map(it => it.name + ": " + (sc.dec[it.key] === "Owned" ? "have" : "missing")).concat(sc.extra.filter((x, i) => sc.add[i]).map(x => x.name + ": added")).join("\n") });
+      await store.put("docs", d, { silent: true, action: "saved a parts scan photo" }); docId = d.id; } catch (e) { toast("The photo couldn't be saved (storage may be full). Your marks are still saved.", "err"); }
+    for (const it of sc.items) { const v = sc.dec[it.key]; if (!v) continue;
+      if (await pvDecide(it, v, { noUndo: true })) { v === "Owned" ? have++ : miss++;
+        const a = sc.ai[it.key], r = (pvIndex()[it.key] || [])[0];
+        if (r && (a.note || (a.count > 1 && v === "Owned"))) { const x = clone(r); if (a.note && !String(x.notes || "").includes(a.note)) x.notes = [x.notes, "Scan: " + a.note].filter(Boolean).join("\n"); if (v === "Owned" && a.count > 1) { x.qtyFound = a.count; x.qtyMissing = Math.max(0, n(x.qtyExpected) - a.count); } try { await store.put("parts", x, { silent: true, noLog: true }); } catch (e) {} } } }
+    for (let i = 0; i < sc.extra.length; i++) { if (!sc.add[i]) continue; const x = sc.extra[i];
+      const r = pvSyncStatus(blank("parts", { name: x.name, category: sc.sys || "Miscellaneous", inv: "Owned", stage: "Not inspected", qtyExpected: x.count, qtyFound: x.count, condition: "Uninspected", notes: x.note ? "Scan: " + x.note : "", custom: true, fits: pvBikeName() }));
+      try { await store.put("parts", r, { silent: true, action: "added " + x.name + " from a photo scan" }); added++; } catch (e) {} }
+    sc.saved = { have, miss, added }; sc.step = "done"; show();
+  };
+  show();
+}
+document.addEventListener("click", e => { const b = e.target.closest && e.target.closest("[data-pvscan]"); if (!b) return; e.preventDefault(); pvScan(); });
