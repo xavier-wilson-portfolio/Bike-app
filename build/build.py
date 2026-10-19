@@ -54,14 +54,24 @@ loader = 'window.RV_BUILD = "' + build_id + '";\n' + loader
 sil = sorted(p.name for p in (ROOT / 'img' / 'sil').glob('*') if p.suffix in ('.webp', '.png', '.jpg', '.svg'))   # black silhouette covers that exist
 loader = 'window.RV_CONFIG = ' + json.dumps({**{k: cfg.get(k) for k in ['supabaseUrl', 'supabaseKey', 'aff', 'plansLive', 'payLinks', 'billingPortal', 'primaryHost', 'shopApi'] if cfg.get(k)}, 'sil': sil, 'silCredit': json.loads((ROOT / 'img' / 'sil' / 'credits.json').read_text()) if (ROOT / 'img' / 'sil' / 'credits.json').exists() else {}}) + ';\n' + loader
 html = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Revora</title>
-<meta name="description" content="Restore your motorcycle: parts diagrams, part numbers, a step-by-step course and a parts tracker for your exact bike.">
+<title>Revora Garage: motorcycle service log, maintenance reminders and parts tracker</title>
+<meta name="description" content="Revora Garage keeps every motorcycle's service history, maintenance schedule and parts in one place. Log oil changes, get email reminders, find parts on factory diagrams and plan mods and restorations.">
+<link rel="canonical" href="https://revoragarage.com/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Revora Garage"><meta property="og:url" content="https://revoragarage.com/">
+<meta property="og:title" content="Revora Garage"><meta property="og:description" content="Every bike's history, schedule and parts in one place. Service logs, email reminders, parts diagrams, mods and restorations for any motorcycle.">
+<meta property="og:image" content="https://revoragarage.com/img/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Revora Garage logo with three motorcycles">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Revora Garage"><meta name="twitter:description" content="Every bike's history, schedule and parts in one place."><meta name="twitter:image" content="https://revoragarage.com/img/og-image.png">
+<script type="application/ld+json">{{"@context":"https://schema.org","@graph":[{{"@type":"Organization","@id":"https://revoragarage.com/#org","name":"Revora Garage","alternateName":"Revora","url":"https://revoragarage.com/","logo":"https://revoragarage.com/img/app-512.png","email":"info@revoragarage.com","founder":{{"@type":"Person","name":"Xavier Wilson"}}}},{{"@type":"WebSite","name":"Revora Garage","alternateName":"Revora","url":"https://revoragarage.com/","publisher":{{"@id":"https://revoragarage.com/#org"}}}},{{"@type":"WebApplication","name":"Revora Garage","url":"https://revoragarage.com/","applicationCategory":"LifestyleApplication","operatingSystem":"Any (web browser)","description":"Service log, maintenance reminders, parts diagrams and project tracking for any motorcycle.","publisher":{{"@id":"https://revoragarage.com/#org"}}}}]}}</script>
 <link rel="icon" type="image/svg+xml" href="img/revora-icon.svg"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#17232C"><link rel="apple-touch-icon" href="img/apple-touch-icon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Revora"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;1,6..12,400&display=swap">
 <style>:root{{color-scheme:light}}[hidden]{{display:none!important}}body{{margin:0}}img{{max-width:100%}}
 {css}
 </style></head><body>
-<div id="app"></div>
+<div id="app"><main style="max-width:720px;margin:0 auto;padding:40px 20px;font-family:Arial,sans-serif;color:#17232C"><h1>Revora Garage</h1>
+<p>Revora Garage is a web app for motorcycle owners and builders. It keeps every bike's service history, maintenance schedule and parts in one place.</p>
+<h2>What you can do</h2><ul><li>Log oil changes, tires, chains, brakes and every other service, with mileage and receipts.</li><li>Get email reminders when maintenance is coming due by date or by miles.</li><li>Find parts and part numbers on factory parts diagrams, and track what you have and what you need.</li><li>Plan mods and full restorations, and keep a shopping list with prices from the big parts stores.</li><li>Share a bike with friends or a shop so everyone works from the same records.</li></ul>
+<p>Revora started with the restoration of a 1977 Suzuki GS750 and works for any motorcycle. Built by Xavier Wilson. Questions: <a href="mailto:info@revoragarage.com">info@revoragarage.com</a></p>
+<noscript><p>Revora Garage needs JavaScript turned on to run.</p></noscript></main></div>
 <script src="https://cdn.jsdelivr.net/npm/three@0.147.0/build/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.147.0/examples/js/controls/OrbitControls.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.147.0/examples/js/loaders/GLTFLoader.js"></script>
@@ -74,6 +84,9 @@ html = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name
 </body></html>
 '''
 (out / 'index.html').write_text(html)
+(out / 'robots.txt').write_text('User-agent: *\nAllow: /\n\nSitemap: https://revoragarage.com/sitemap.xml\n')
+import datetime
+(out / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url><loc>https://revoragarage.com/</loc><lastmod>' + datetime.date.today().isoformat() + '</lastmod></url>\n</urlset>\n')
 
 # ---- install as an app: manifest and a small service worker that keeps the app shell for offline starts ----
 (out / 'manifest.webmanifest').write_text(json.dumps({
