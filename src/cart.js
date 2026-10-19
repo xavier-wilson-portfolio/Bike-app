@@ -53,7 +53,7 @@ async function cartSearch(q, bike) {
           <span class="ct-th">${x.img ? `<img src="${esc(x.img)}" alt="" loading="lazy">` : ic("box")}</span>
           <div class="grow ct-rm"><a href="${esc(x.url || "#")}" ${x.url ? 'target="_blank" rel="noopener sponsored"' : ""} class="ct-rt">${esc(x.title)}</a><span class="faint">${esc(x.store || "Other")}${n(x.ship) ? " · " + money2(x.ship) + " shipping" : ""}</span></div>
           ${x.bought ? `<span class="tag">Bought</span>` : W ? `<div class="ct-qty" role="group" aria-label="Quantity"><button data-cq="${esc(x.id)}|-1" aria-label="One less">−</button><span>${Math.max(1, n(x.qty) || 1)}</span><button data-cq="${esc(x.id)}|1" aria-label="One more">+</button></div>` : `<span>×${Math.max(1, n(x.qty) || 1)}</span>`}
-          <b class="ct-lp">${money2(cartLine(x))}</b>
+          <b class="ct-lp">${n(x.price) ? money2(cartLine(x)) : `<span class="faint" title="Add the price when you find it">No price yet</span>`}</b>
           ${W ? `<div class="ct-acts">${x.bought ? `<button class="linkbtn" data-cb="${esc(x.id)}">Undo</button>` : `<button class="linkbtn" data-cb="${esc(x.id)}">Bought</button>`}<button class="linkbtn ct-x" data-cx="${esc(x.id)}" aria-label="Remove ${esc(x.title)}">Remove</button></div>` : ""}</div>`;
       return `<div class="ph" data-own="1"><div class="eyebrow">Money</div><h1>Shopping list</h1><p>Find parts, add them to your cart and see what it all costs. You buy on each store's own site.</p></div>
         <form class="ct-search" id="ctForm" role="search"><span class="fd-ico">${ic("search")}</span><input id="ctQ" type="search" value="${esc(f.q || "")}" placeholder="What do you need? e.g. front brake pads, 16510-07J00" aria-label="Search for a part" autocomplete="off">

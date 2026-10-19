@@ -12,7 +12,7 @@ const PV_COND = [["New", "New"], ["Good", "Good"], ["Fair", "Fair"], ["Poor", "P
 const PV_STAGE = ["Not inspected", "Needs cleaning", "Needs repair", "In restoration", "Restored", "Ready for installation", "Installed"];
 const PV_NEEDS = [["needClean", "Cleaning"], ["needRepair", "Repair"], ["needReplace", "Replacement"], ["needInspect", "Inspection"]];
 const PV_MARKS = [["Ordered", "Purchased / ordered"], ["Received", "Received"], ["Repaired", "Repaired"], ["Restored", "Restored"], ["Ready for installation", "Ready to install"], ["Installed", "Installed"]];
-const PV_SYS_MODULE = { Engine: "engine", "Fuel & air": "fuel", Electrical: "electrical", Brakes: "chassis", Chassis: "chassis", Body: "general" };
+const PV_SYS_MODULE = { Engine: "engine", Cooling: "engine", Exhaust: "engine", "Fuel & air": "fuel", Electrical: "electrical", Lights: "electrical", Brakes: "chassis", Chassis: "chassis", "Wheels & tires": "chassis", "Suspension & frame": "chassis", "Final drive": "chassis", Controls: "chassis", Body: "general", "Body & seat": "general" };
 
 /* ---- schema: new fields go next to the old ones, nothing is removed ---- */
 (function () {
@@ -46,6 +46,14 @@ function pvCat() {
   out.byKey = {}; out.byPn = {}; out.forEach(x => { out.byKey[x.key] = x; const k = pvPnKey(x.pn); if (k) (out.byPn[k] = out.byPn[k] || []).push(x); });
   PV.cat = out; PV.catB = b; return out;
 }
+function pvItem(key) {
+  key = String(key || "");
+  if (key.startsWith("gen|")) { const g = pvGen().byKey[key]; if (g) return g; const row = PV_GEN_LIST.find(x => "gen|" + x[0] === key); return row ? { key, gid: row[0], gen: true, did: "gen-" + row[2], pid: row[0], ref: "", name: row[1], pn: "", cat: "", count: row[4], what: row[5], art: row[3], sys: row[2], area: row[2] } : null; }
+  const c = pvCat(); return c.byKey ? c.byKey[key] || null : null;
+}
+const pvHasOem = () => HAS_CAT && pvCat().length > 0;
+function pvSrc() { const f = R.f.pvdeck = R.f.pvdeck || {}; if (!f.src) f.src = pvPos().src || (pvHasOem() ? "oem" : "main"); if (f.src === "oem" && !pvHasOem()) f.src = "main"; return f.src; }
+const pvList = () => pvSrc() === "oem" ? pvCat() : pvGen();
 function pvIndex() {
   const m = {};
   all("parts").forEach(r => { if (r.catKey && !r.archived) (m[r.catKey] = m[r.catKey] || []).push(r); });
@@ -54,16 +62,17 @@ function pvIndex() {
 }
 const pvDeck = () => S.meta.invdeck || { id: "invdeck", skip: {} };
 function pvState(it, idx) {
-  const rec = ((idx || pvIndex())[it.key] || [])[0], h = haveGet(it.did, it.pid).have, ri = rec && rec.inv;
+  const rec = ((idx || pvIndex())[it.key] || [])[0], h = it.gen ? undefined : haveGet(it.did, it.pid).have, ri = rec && rec.inv;
   if (h === true) return ri === "Received" ? "Received" : "Owned";
   if (h === false) return ri === "Ordered" ? "Ordered" : "Missing";
   if (ri) return ri;
+  if ((pvDeck().na || {})[it.key]) return "N/A";
   return (pvDeck().skip || {})[it.key] ? "Skipped" : "Unreviewed";
 }
 const pvHas = s => s === "Owned" || s === "Received";
 const pvMiss = s => s === "Missing" || s === "Ordered";
 function pvRecInv(r) {
-  if (r.catKey) { const it = pvCat().byKey && pvCat().byKey[r.catKey]; if (it) { const s = pvState(it); return s === "Skipped" || s === "Unreviewed" ? (r.inv || "Unreviewed") : s; } }
+  if (r.catKey) { const it = pvItem(r.catKey); if (it) { const s = pvState(it); return s === "Skipped" || s === "Unreviewed" || s === "N/A" ? (r.inv || "Unreviewed") : s; } }
   return r.inv || (r.status === "Missing" || r.condition === "Missing" ? "Missing" : "Owned");
 }
 function pvRecStage(r) {
@@ -73,9 +82,9 @@ function pvRecStage(r) {
 }
 const pvCondLabel = c => ({ Uninspected: "Unknown", "": "Unknown" }[c || ""] ?? c);
 const pvCondGroup = c => ({ Uninspected: "Uninspected", Missing: "Uninspected", Serviceable: "Good", Worn: "Fair", Corroded: "Poor", Unusable: "Damaged" }[c || "Uninspected"] || c);
-const PV_INV_COLOR = { Owned: "blue", Received: "blue", Missing: "red", Ordered: "amber", Unreviewed: "gray", Skipped: "gray" };
+const PV_INV_COLOR = { Owned: "blue", Received: "blue", Missing: "red", Ordered: "amber", Unreviewed: "gray", Skipped: "gray", "N/A": "gray" };
 const PV_STAGE_COLOR = { "Not inspected": "gray", "Needs cleaning": "amber", "Needs repair": "red", "In restoration": "amber", Restored: "green", "Ready for installation": "green", Installed: "green" };
-const pvInvLabel = s => ({ Unreviewed: "Not checked", Skipped: "Skipped" }[s] || s);
+const pvInvLabel = s => ({ Unreviewed: "Not checked", Skipped: "Skipped", "N/A": "Not on this bike" }[s] || s);
 const pvInvPill = s => pill(PV_INV_COLOR[s] || "gray", pvInvLabel(s));
 const pvStagePill = s => s ? `<span class="pill ${PV_STAGE_COLOR[s] || "gray"} plain">${esc(s)}</span>` : "";
 function pvSyncStatus(r) {
@@ -92,8 +101,8 @@ function pvIdMaker() { // unique INV ids for several new records before any is s
   return () => { let id = nextId("parts"); let m = +String(id).match(/(\d+)$/)[1]; const pre = id.replace(/\d+$/, ""), pad = String(id).match(/(\d+)$/)[1].length; while (used.has(id)) { m++; id = pre + String(m).padStart(pad, "0"); } used.add(id); return id; };
 }
 function pvNewRec(it, mk) {
-  const r = blank("parts", { name: it.name, oemPn: it.pn || "", pnVerified: !!it.pn, category: it.sys, subsystem: it.area, module: PV_SYS_MODULE[it.sys] || "general",
-    qtyExpected: it.count, qtyFound: 0, catKey: it.key, catRef: it.ref, catName: it.cat || "", fits: pvBikeName(), inv: "", stage: "" });
+  const r = blank("parts", { name: it.name, oemPn: it.pn || "", pnVerified: !!it.pn, category: it.sys, subsystem: it.gen ? "" : it.area, module: PV_SYS_MODULE[it.sys] || "general",
+    qtyExpected: it.count, qtyFound: 0, catKey: it.key, catRef: it.ref, catName: it.cat || "", fits: pvBikeName(), inv: "", stage: "", desc: it.gen ? it.what || "" : "" });
   if (mk) r.id = mk();
   return r;
 }
@@ -108,12 +117,13 @@ const pvPhotos = id => sorted("docs").filter(d => d.partId === id && d.file && S
 /* ---- deciding on a catalogue part ---- */
 async function pvDecide(it, v, opts = {}) {
   if (!ME.canWrite) { toast("You have view-only access, so marks can't be saved. Ask the owner for Contributor access.", "err"); return false; }
-  const idx = pvIndex(), rec = (idx[it.key] || [])[0], prevH = clone(haveGet(it.did, it.pid)), deck = clone(pvDeck()); deck.skip = deck.skip || {};
-  const u = { key: it.key, prevH, prevRec: rec ? clone(rec) : null, prevSkip: !!deck.skip[it.key], created: null, v };
+  const idx = pvIndex(), rec = (idx[it.key] || [])[0], prevH = it.gen ? {} : clone(haveGet(it.did, it.pid)), deck = clone(pvDeck()); deck.skip = deck.skip || {}; deck.na = deck.na || {};
+  const u = { key: it.key, prevH, prevRec: rec ? clone(rec) : null, prevSkip: !!deck.skip[it.key], prevNa: !!deck.na[it.key], created: null, v };
   try {
-    if (v === "Skipped" || v === null) {
-      if (v === "Skipped") deck.skip[it.key] = 1; else delete deck.skip[it.key];
-      if (prevH.have === true || prevH.have === false) await haveSave(it.did, { [it.pid]: { have: null, got: null } }, "cleared a parts mark");
+    if (v === "Skipped" || v === null || v === "N/A") {
+      delete deck.skip[it.key]; delete deck.na[it.key];
+      if (v === "Skipped") deck.skip[it.key] = 1; if (v === "N/A") deck.na[it.key] = 1;
+      if (!it.gen && (prevH.have === true || prevH.have === false)) await haveSave(it.did, { [it.pid]: { have: null, got: null } }, "cleared a parts mark");
       if (rec && rec.inv) { const r = clone(rec); r.inv = ""; if (r.status === "Missing") r.status = "Not started"; await store.put("parts", r, { silent: true, noLog: true }); }
       await pvDeckSave(deck);
     } else {
@@ -126,8 +136,8 @@ async function pvDecide(it, v, opts = {}) {
       pvSyncStatus(r);
       await store.put("parts", r, { silent: true, action: (have ? "has " : "is missing ") + it.name });
       if (!rec) u.created = r.id;
-      await haveSave(it.did, { [it.pid]: { have, got: have && it.count > 1 ? n(r.qtyFound) : null } }, "checked off " + it.name);
-      if (u.prevSkip) { delete deck.skip[it.key]; await pvDeckSave(deck); }
+      if (!it.gen) await haveSave(it.did, { [it.pid]: { have, got: have && it.count > 1 ? n(r.qtyFound) : null } }, "checked off " + it.name);
+      if (u.prevSkip || u.prevNa) { delete deck.skip[it.key]; delete deck.na[it.key]; await pvDeckSave(deck); }
     }
   } catch (e) { PV.err = "That mark couldn't be saved, so it was put back. Check your connection and try again."; return false; }
   PV.err = ""; if (!opts.noUndo) { PV.undo.push(u); if (PV.undo.length > 30) PV.undo.shift(); }
@@ -135,13 +145,13 @@ async function pvDecide(it, v, opts = {}) {
 }
 async function pvUndo() {
   const u = PV.undo.pop(); if (!u) return;
-  const it = pvCat().byKey[u.key]; if (!it) return;
+  const it = pvItem(u.key); if (!it) return;
   try {
-    await haveSave(it.did, { [it.pid]: pvHavePatch(it, u.prevH) }, "undid a parts mark");
+    if (!it.gen) await haveSave(it.did, { [it.pid]: pvHavePatch(it, u.prevH) }, "undid a parts mark");
     if (u.created) { const r = S.parts[u.created]; if (r && !pvPhotos(r.id).length) await store.del("parts", u.created, { noLog: true }); }
     else if (u.prevRec) await store.put("parts", u.prevRec, { silent: true, noLog: true });
-    const deck = clone(pvDeck()); deck.skip = deck.skip || {};
-    if (u.prevSkip !== !!deck.skip[u.key]) { if (u.prevSkip) deck.skip[u.key] = 1; else delete deck.skip[u.key]; await pvDeckSave(deck); }
+    const deck = clone(pvDeck()); deck.skip = deck.skip || {}; deck.na = deck.na || {};
+    if (u.prevSkip !== !!deck.skip[u.key] || u.prevNa !== !!deck.na[u.key]) { if (u.prevSkip) deck.skip[u.key] = 1; else delete deck.skip[u.key]; if (u.prevNa) deck.na[u.key] = 1; else delete deck.na[u.key]; await pvDeckSave(deck); }
     PV.forceKey = u.key; toast("Undone: " + it.name);
   } catch (e) { toast("Couldn't undo that. Try again.", "err"); }
   pvPaint();
@@ -163,43 +173,47 @@ async function pvSync() {
 
 /* ---- counts ---- */
 function pvAreaItems(area) {
-  const cat = pvCat(); if (!area) return cat;
+  const cat = pvList(); if (!area) return cat;
   if (area.startsWith("sys:")) { const s = area.slice(4); return cat.filter(x => x.sys === s); }
   if (area.startsWith("d:")) { const d = area.slice(2); return cat.filter(x => x.did === d); }
   return cat;
 }
 function pvCounts(items, idx) {
-  idx = idx || pvIndex(); const c = { total: items.length, Owned: 0, Missing: 0, Skipped: 0, Unreviewed: 0 };
-  items.forEach(it => { const s = pvState(it, idx); if (pvHas(s)) c.Owned++; else if (pvMiss(s)) c.Missing++; else if (s === "Skipped") c.Skipped++; else c.Unreviewed++; });
+  idx = idx || pvIndex(); const c = { total: items.length, Owned: 0, Missing: 0, Skipped: 0, Unreviewed: 0, na: 0 };
+  items.forEach(it => { const s = pvState(it, idx); if (pvHas(s)) c.Owned++; else if (pvMiss(s)) c.Missing++; else if (s === "Skipped") c.Skipped++; else if (s === "N/A") c.na++; else c.Unreviewed++; });
+  c.total -= c.na;
   c.done = c.Owned + c.Missing; return c;
 }
 function pvAreaLabel(area) {
   if (!area) return "Whole bike";
   if (area.startsWith("sys:")) return area.slice(4);
-  const d = diagById(area.slice(2)); return d ? d.title : "This area";
+  const d = typeof diagById === "function" && diagById(area.slice(2)); return d ? d.title : "This area";
 }
 function pvAreaOptions(sel) {
-  const cat = pvCat(), sys = [...new Set(cat.map(x => x.sys))], idx = pvIndex();
+  const cat = pvList(), sys = [...new Set(cat.map(x => x.sys))], idx = pvIndex();
+  if (pvSrc() === "main") { const lab = items => { const c = pvCounts(items, idx); return c.Unreviewed ? `${pvNum(c.Unreviewed)} left` : "done"; };
+    return `<option value="">All main parts (${lab(cat)})</option>` + sys.map(s => `<option value="sys:${esc(s)}" ${sel === "sys:" + s ? "selected" : ""}>${esc(s)} (${lab(cat.filter(x => x.sys === s))})</option>`).join(""); }
   const lab = items => { const c = pvCounts(items, idx); return c.Unreviewed ? `${pvNum(c.Unreviewed)} left` : "done"; };
   return `<option value="">Whole bike (${lab(cat)})</option>` + sys.map(s => { const its = cat.filter(x => x.sys === s), ds = [...new Set(its.map(x => x.did))];
     return `<optgroup label="${esc(s)}"><option value="sys:${esc(s)}" ${sel === "sys:" + s ? "selected" : ""}>All ${esc(s.toLowerCase())} (${lab(its)})</option>${ds.map(d => { const di = its.filter(x => x.did === d); return `<option value="d:${esc(d)}" ${sel === "d:" + d ? "selected" : ""}>${esc(di[0].area)} (${lab(di)})</option>`; }).join("")}</optgroup>`; }).join("");
 }
 
 /* ---- the deck ---- */
-function pvDeckF() { const f = R.f.pvdeck = R.f.pvdeck || {}; const p = pvPos(); if (f.area === undefined) f.area = p.area || ""; if (!f.show) f.show = p.show || "new"; return f; }
+function pvDeckF() { pvSrc(); const f = R.f.pvdeck; const p = pvPos(); if (f.area === undefined) f.area = p.area || ""; if (!f.show) f.show = p.show || "new"; return f; }
 function pvQueue() {
   const f = pvDeckF(), idx = pvIndex(), items = pvAreaItems(f.area);
-  if (f.show === "all") return { items, idx, all: true };
+  if (f.show === "all") return { items: items.filter(it => pvState(it, idx) !== "N/A"), idx, all: true };
   return { items: items.filter(it => { const s = pvState(it, idx); return f.show === "skipped" ? s === "Skipped" : s === "Unreviewed"; }), idx };
 }
 function pvCurrent(q) {
   const f = pvDeckF();
-  if (PV.forceKey) { const k = PV.forceKey; PV.forceKey = null; const it = pvCat().byKey[k]; if (it) { const i = q.items.indexOf(it); if (i >= 0) { f.i = i; return it; } if (pvDeckF().show !== "all") return it; } }
+  if (PV.forceKey) { const k = PV.forceKey; PV.forceKey = null; const it = pvItem(k); if (it) { const i = q.items.indexOf(it); if (i >= 0) { f.i = i; return it; } if (pvDeckF().show !== "all") return it; } }
   if (q.all) { const p = pvPos(); if (f.i == null) { const i = q.items.findIndex(x => x.key === p.key); f.i = i >= 0 ? i : 0; } f.i = Math.max(0, Math.min(q.items.length - 1, f.i)); return q.items[f.i] || null; }
   if (PV.holdKey) { const it = q.items.find(x => x.key === PV.holdKey); if (it) return it; }
   return q.items[0] || null;
 }
 function pvArt(it) {
+  if (it.gen) return `<figure class="pv-art pv-silart">${pvSil(it.art, it.name)}<figcaption>A typical ${esc(it.name.toLowerCase())}. Yours may look different.</figcaption></figure>`;
   const d = diagById(it.did), q = d && (d.parts || []).find(x => String(x.ref) === String(it.ref) && typeof x.draw === "function");
   if (q) { try { return `<figure class="pv-art"><svg class="pv-artsvg" viewBox="-60 -60 120 120" role="img" aria-label="Drawing of the ${esc(it.name)}">${dkDefs()}<g class="pv-artg">${q.draw("exploded")}</g></svg><figcaption>Drawing from the ${esc(it.area)} diagram, ref ${esc(it.ref)}</figcaption></figure>`; } catch (e) {} }
   if (typeof D3_THUMBS !== "undefined" && D3_THUMBS[it.did]) return `<figure class="pv-art"><img src="${D3_THUMBS[it.did]}" alt="The ${esc(it.area)} assembly" loading="lazy"><figcaption>The whole ${esc(it.area)} assembly. This part is ref ${esc(it.ref)}.</figcaption></figure>`;
@@ -212,28 +226,35 @@ function pvCardHtml(it, idx, cls) {
   const s = pvState(it, idx), rec = (idx[it.key] || [])[0], details = rec && (rec.location || rec.bin || rec.notes || (rec.condition && rec.condition !== "Uninspected") || pvPhotos(rec.id).length);
   return `<article class="pv-card ${cls || ""}" data-key="${esc(it.key)}" aria-label="${esc(it.name)}">
     <div class="pv-stamp pv-yes" aria-hidden="true">${ic("tick")} Have it</div><div class="pv-stamp pv-no" aria-hidden="true">✕ Missing</div>
-    <div class="pv-ctop"><span class="pv-where">${esc(it.sys)} <span aria-hidden="true">›</span> ${esc(it.area)}</span>${s !== "Unreviewed" ? pvInvPill(s) : ""}</div>
+    <div class="pv-ctop"><span class="pv-where">${it.gen ? "Main parts" : esc(it.sys)} <span aria-hidden="true">›</span> ${esc(it.area)}</span>${s !== "Unreviewed" ? pvInvPill(s) : ""}</div>
     ${pvArt(it)}
     <h2 class="pv-name">${esc(it.name)}</h2>
-    <div class="pv-pn">${it.pn ? `<span class="pv-pnl">OEM no.</span> <span class="mono">${esc(it.pn)}</span>` : `<span class="faint">No OEM number in the catalogue</span>`}</div>
-    <dl class="pv-facts"><div><dt>Ref</dt><dd>${esc(it.ref)}</dd></div><div><dt>Bike uses</dt><dd>${it.count}</dd></div><div><dt>Category</dt><dd>${esc(it.sys)}</dd></div>${it.cat ? `<div class="pv-wide"><dt>Catalogue name</dt><dd>${esc(it.cat)}</dd></div>` : ""}</dl>
-    <div class="pv-cfoot"><button class="btn sm" data-pvdet="${esc(it.key)}">${details ? "Edit details" : "Add details"}</button>${details ? `<span class="faint pv-dnote">${esc([pvCondLabel(rec.condition) !== "Unknown" ? pvCondLabel(rec.condition) : "", rec.location, n(rec.qtyFound) && it.count > 1 ? n(rec.qtyFound) + " of " + it.count : ""].filter(Boolean).join(" · ") || "Details saved")}</span>` : ""}</div>
+    ${it.gen ? `<div class="pv-pn"><span class="faint">General part, no OEM number. ${rec && rec.oemPn ? `Yours: <span class="mono">${esc(rec.oemPn)}</span>` : "Add yours in details if you know it."}</span></div>
+    <dl class="pv-facts"><div><dt>Category</dt><dd>${esc(it.sys)}</dd></div><div><dt>Usually</dt><dd>${it.count}</dd></div><div><dt>Bike type</dt><dd>${esc(PV_STYLES[pvGen().profile.style])}</dd></div>${it.what ? `<div class="pv-wide pv-plain"><dt>Covers</dt><dd>${esc(it.what)}${it.cool ? ". Only if your bike is liquid-cooled." : ""}</dd></div>` : it.cool ? `<div class="pv-wide pv-plain"><dt>Note</dt><dd>Only if your bike is liquid-cooled.</dd></div>` : ""}</dl>`
+    : `<div class="pv-pn">${it.pn ? `<span class="pv-pnl">OEM no.</span> <span class="mono">${esc(it.pn)}</span>` : `<span class="faint">No OEM number in the catalogue</span>`}</div>
+    <dl class="pv-facts"><div><dt>Ref</dt><dd>${esc(it.ref)}</dd></div><div><dt>Bike uses</dt><dd>${it.count}</dd></div><div><dt>Category</dt><dd>${esc(it.sys)}</dd></div>${it.cat ? `<div class="pv-wide"><dt>Catalogue name</dt><dd>${esc(it.cat)}</dd></div>` : ""}</dl>`}
+    <div class="pv-cfoot"><button class="btn sm" data-pvdet="${esc(it.key)}">${details ? "Edit details" : "Add details"}</button>${it.gen && cls === "pv-top" ? `<button class="linkbtn pv-na" data-pvgo="N/A" title="Leave it off the list for this bike (N)">Not on my bike</button>` : ""}${details ? `<span class="faint pv-dnote">${esc([pvCondLabel(rec.condition) !== "Unknown" ? pvCondLabel(rec.condition) : "", rec.location, n(rec.qtyFound) && it.count > 1 ? n(rec.qtyFound) + " of " + it.count : ""].filter(Boolean).join(" · ") || "Details saved")}</span>` : ""}</div>
   </article>`;
+}
+function pvSrcCtl() {
+  const oem = pvHasOem(), src = pvSrc(), pr = pvGen().profile;
+  return `<div class="pv-dctl pv-src">${oem ? `<div class="tabs" role="tablist" aria-label="Which parts list">${[["main", "Main parts", pvGen().length], ["oem", "Full catalogue", pvCat().length]].map(([k, l, nn]) => `<button role="tab" aria-selected="${src === k}" class="${src === k ? "on" : ""}" data-pvsrc="${k}">${l} <span class="faint">${pvNum(nn)}</span></button>`).join("")}</div>` : ""}
+    ${src === "main" ? `<label class="pv-sel"><span>Bike type</span><select id="pvStyle" aria-label="Bike type" ${ME.canWrite ? "" : "disabled"}>${Object.entries(PV_STYLES).map(([k, l]) => `<option value="${k}" ${pr.style === k ? "selected" : ""}>${esc(l)}</option>`).join("")}</select></label>` : ""}</div>`;
 }
 function pvDeckHtml() {
   const f = pvDeckF(), q = pvQueue(), it = pvCurrent(q), area = pvAreaItems(f.area), c = pvCounts(area, q.idx);
   const pc = v => c.total ? (v / c.total * 100).toFixed(2) + "%" : "0%";
-  const last = PV.undo[PV.undo.length - 1], lastIt = last && pvCat().byKey[last.key];
+  const last = PV.undo[PV.undo.length - 1], lastIt = last && pvItem(last.key);
   const head = `<div class="pv-dhead">
       <button class="btn sm" data-pvexit>${ic("back")} Parts</button>
-      <div class="pv-dtitle"><b>Go through parts</b><span class="faint">${esc(pvBikeName())}</span></div>
+      <div class="pv-dtitle"><b>${pvSrc() === "main" ? "Main parts" : "Go through parts"}</b><span class="faint">${esc(pvBikeName())}</span></div>
       <button class="btn sm" data-pvreview ${c.done + c.Skipped ? "" : "disabled"}>Review answers</button></div>
-    <div class="pv-dctl"><label class="pv-sel"><span>Area</span><select id="pvArea" aria-label="Which part of the bike">${pvAreaOptions(f.area)}</select></label>
+    ${pvSrcCtl()}<div class="pv-dctl"><label class="pv-sel"><span>Area</span><select id="pvArea" aria-label="Which part of the bike">${pvAreaOptions(f.area)}</select></label>
       <div class="seg pv-show" role="group" aria-label="Which parts to show">${[["new", "Not checked"], ["skipped", "Skipped" + (c.Skipped ? " (" + c.Skipped + ")" : "")], ["all", "All"]].map(([k, l]) => `<button class="${f.show === k ? "on" : ""}" data-pvshow="${k}" aria-pressed="${f.show === k}">${l}</button>`).join("")}</div></div>
     <div class="pv-prog" aria-label="Progress"><div class="pv-bar" role="progressbar" aria-valuemin="0" aria-valuemax="${c.total}" aria-valuenow="${c.done}" aria-valuetext="${c.done} of ${c.total} checked"><i class="g" style="width:${pc(c.Owned)}"></i><i class="r" style="width:${pc(c.Missing)}"></i><i class="a" style="width:${pc(c.Skipped)}"></i></div>
       <div class="pv-counts"><span><b class="num">${pvNum(c.done)}</b> of ${pvNum(c.total)} checked</span><span><i class="g"></i>${pvNum(c.Owned)} have</span><span><i class="r"></i>${pvNum(c.Missing)} missing</span><span><i class="a"></i>${pvNum(c.Skipped)} skipped</span></div></div>`;
   const err = PV.err ? `<div class="banner bad" role="alert"><div class="grow">${esc(PV.err)}</div></div>` : "";
-  const undo = `<div class="pv-undo" aria-live="polite">${lastIt ? `<span>${last.v === "Skipped" ? "Skipped" : last.v === "Owned" ? "Have it" : last.v === "Missing" ? "Missing" : "Cleared"}: <b>${esc(lastIt.name)}</b></span><button class="linkbtn" data-pvundo>Undo</button>${last.v === "Owned" ? `<button class="linkbtn" data-pvdet="${esc(last.key)}">Add details</button>` : ""}` : `<span class="faint pv-keys">Keys: <kbd>→</kbd> have it · <kbd>←</kbd> missing · <kbd>↓</kbd> skip · <kbd>U</kbd> undo</span>`}</div>`;
+  const undo = `<div class="pv-undo" aria-live="polite">${lastIt ? `<span>${last.v === "Skipped" ? "Skipped" : last.v === "Owned" ? "Have it" : last.v === "Missing" ? "Missing" : last.v === "N/A" ? "Not on this bike" : "Cleared"}: <b>${esc(lastIt.name)}</b></span><button class="linkbtn" data-pvundo>Undo</button>${last.v === "Owned" ? `<button class="linkbtn" data-pvdet="${esc(last.key)}">Add details</button>` : ""}` : `<span class="faint pv-keys">Keys: <kbd>→</kbd> have it · <kbd>←</kbd> missing · <kbd>↓</kbd> skip · <kbd>U</kbd> undo</span>`}</div>`;
   if (!it) {
     const left = pvCounts(area, q.idx), need = sorted("parts").filter(r => r.catKey && pvAreaItems(f.area).some(x => x.key === r.catKey) && pvHas(pvRecInv(r)) && (r.needRepair || pvRecStage(r) === "Needs repair" || r.needInspect || pvRecStage(r) === "Not inspected")).length;
     const msg = f.show === "skipped" ? "No skipped parts here." : f.show === "all" ? "This area has no catalogue parts." : left.Unreviewed ? "" : "You've checked every part in " + (f.area ? "this area" : "the catalogue") + ".";
@@ -265,7 +286,7 @@ function pvPaint() {
 async function pvGo(v, dir) {
   if (PV.busy) return;
   const card = $("#pvDeck .pv-top"); if (!card) return;
-  const it = pvCat().byKey[card.dataset.key]; if (!it) return;
+  const it = pvItem(card.dataset.key); if (!it) return;
   PV.busy = true; PV.holdKey = null;
   const reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
   card.classList.add("pv-out-" + (dir || (v === "Owned" ? "r" : v === "Missing" ? "l" : "d")));
@@ -297,13 +318,15 @@ function pvBindDeck(root) {
   $$("[data-pvexit]", host).forEach(b => b.onclick = () => { R.tab.inventory = ""; PV.holdKey = null; lsSet("rv.route", { sec: R.sec, tab: R.tab, view: R.view }); render(false); window.scrollTo(0, 0); });
   $$("[data-pvreview]", host).forEach(b => b.onclick = () => { R.tab.inventory = "review"; PV.revN = 60; render(false); window.scrollTo(0, 0); });
   $$("[data-pvundo]", host).forEach(b => b.onclick = pvUndo);
-  $$("[data-pvdet]", host).forEach(b => b.onclick = () => { const it = pvCat().byKey[b.dataset.pvdet]; if (it) { PV.holdKey = $(".pv-top", host) ? $(".pv-top", host).dataset.key : null; pvSheet({ it }); } });
+  $$("[data-pvdet]", host).forEach(b => b.onclick = () => { const it = pvItem(b.dataset.pvdet); if (it) { PV.holdKey = $(".pv-top", host) ? $(".pv-top", host).dataset.key : null; pvSheet({ it }); } });
   $$("[data-pvshow]", host).forEach(b => b.onclick = () => { const f = pvDeckF(); f.show = b.dataset.pvshow; f.i = null; PV.holdKey = null; pvPosSet({ show: f.show }); pvPaint(); });
   $$("[data-pvstep]", host).forEach(b => b.onclick = () => { const f = pvDeckF(); f.i = (f.i || 0) + +b.dataset.pvstep; const q = pvQueue(), it = pvCurrent(q); pvPosSet({ key: it ? it.key : "" }); pvPaint(); });
   $$("[data-pvlist]", host).forEach(b => b.onclick = () => { R.tab.inventory = ""; R.f.inventory = { own: b.dataset.pvlist }; R.partsFocus = "list"; render(false); });
+  $$("[data-pvsrc]", host).forEach(b => b.onclick = () => { const f = pvDeckF(); f.src = b.dataset.pvsrc; f.area = ""; f.i = null; PV.holdKey = null; pvPosSet({ src: f.src, area: "", key: "" }); pvPaint(); });
+  const sy = $("#pvStyle", host); if (sy) sy.onchange = async () => { const d = clone(pvDeck()); d.style = sy.value; d.skip = d.skip || {}; await pvDeckSave(d); PV_GEN_CACHE = null; const f = pvDeckF(); f.area = ""; f.i = null; pvPaint(); toast("Showing the main parts of a typical " + PV_STYLE_NOUN[sy.value]); };
   const ar = $("#pvArea", host); if (ar) ar.onchange = () => { const f = pvDeckF(); f.area = ar.value; f.i = null; PV.holdKey = null; pvPosSet({ area: f.area, key: "" }); pvPaint(); };
   // review list
-  $$("[data-pvrv]", host).forEach(b => b.onclick = async () => { const [k, v] = b.dataset.pvrv.split("~"); const it = pvCat().byKey[k]; if (!it) return; b.disabled = true; await pvDecide(it, v === "clear" ? null : v); pvPaint(); });
+  $$("[data-pvrv]", host).forEach(b => b.onclick = async () => { const [k, v] = b.dataset.pvrv.split("~"); const it = pvItem(k); if (!it) return; b.disabled = true; await pvDecide(it, v === "clear" ? null : v); pvPaint(); });
   $$("[data-pvrvtab]", host).forEach(b => b.onclick = () => { R.f.pvrev = b.dataset.pvrvtab; PV.revN = 60; pvPaint(); });
   const more = $("[data-pvrvmore]", host); if (more) more.onclick = () => { PV.revN += 60; pvPaint(); };
   const back = $("[data-pvdeckback]", host); if (back) back.onclick = () => { R.tab.inventory = "deck"; render(false); window.scrollTo(0, 0); };
@@ -318,18 +341,19 @@ document.addEventListener("keydown", e => {
   else if (k === "ArrowLeft") { e.preventDefault(); pvGo("Missing", "l"); }
   else if (k === "ArrowDown" || k === "s") { e.preventDefault(); pvGo("Skipped", "d"); }
   else if (k === "u" || k === "U") { e.preventDefault(); pvUndo(); }
+  else if ((k === "n" || k === "N") && $("#pvDeck .pv-top .pv-na")) { e.preventDefault(); pvGo("N/A", "d"); }
   else if (k === "d" || k === "D") { const b = $("#pvDeck .pv-top [data-pvdet]"); if (b) { e.preventDefault(); b.click(); } }
 });
 
 /* ---- review answers ---- */
 function pvReviewHtml() {
   const f = pvDeckF(), idx = pvIndex(), items = pvAreaItems(f.area), tab = R.f.pvrev || "Owned";
-  const groups = { Owned: [], Missing: [], Skipped: [] }; items.forEach(it => { const s = pvState(it, idx); if (pvHas(s)) groups.Owned.push([it, s]); else if (pvMiss(s)) groups.Missing.push([it, s]); else if (s === "Skipped") groups.Skipped.push([it, s]); });
+  const groups = { Owned: [], Missing: [], Skipped: [], "N/A": [] }; items.forEach(it => { const s = pvState(it, idx); if (pvHas(s)) groups.Owned.push([it, s]); else if (pvMiss(s)) groups.Missing.push([it, s]); else if (s === "Skipped") groups.Skipped.push([it, s]); else if (s === "N/A") groups["N/A"].push([it, s]); });
   const rows = groups[tab] || [];
   return `<div class="pv-deck pv-review" id="pvDeck"><div class="pv-dhead"><button class="btn sm" data-pvdeckback>${ic("back")} Back to the cards</button><div class="pv-dtitle"><b>Review answers</b><span class="faint">${esc(pvAreaLabel(f.area))}</span></div><button class="btn sm" data-pvexit>Parts</button></div>
     <div class="pv-dctl"><label class="pv-sel"><span>Area</span><select id="pvArea" aria-label="Which part of the bike">${pvAreaOptions(f.area)}</select></label>
-      <div class="tabs" role="tablist">${[["Owned", "Have it"], ["Missing", "Missing"], ["Skipped", "Skipped"]].map(([k, l]) => `<button role="tab" aria-selected="${tab === k}" class="${tab === k ? "on" : ""}" data-pvrvtab="${k}">${l} <span class="faint">${pvNum(groups[k].length)}</span></button>`).join("")}</div></div>
-    ${rows.length ? `<div class="pv-rvlist">${rows.slice(0, PV.revN).map(([it, s]) => `<div class="pv-rvrow"><div class="grow pv-rvm"><b>${esc(it.name)}</b><span><span class="mono">${esc(it.pn || "")}</span> <span class="faint">${esc(it.area)} · ref ${esc(it.ref)}</span></span></div>${pvInvPill(s)}
+      <div class="tabs" role="tablist">${[["Owned", "Have it"], ["Missing", "Missing"], ["Skipped", "Skipped"]].concat(groups["N/A"].length ? [["N/A", "Not on this bike"]] : []).map(([k, l]) => `<button role="tab" aria-selected="${tab === k}" class="${tab === k ? "on" : ""}" data-pvrvtab="${k}">${l} <span class="faint">${pvNum(groups[k].length)}</span></button>`).join("")}</div></div>
+    ${rows.length ? `<div class="pv-rvlist">${rows.slice(0, PV.revN).map(([it, s]) => `<div class="pv-rvrow"><div class="grow pv-rvm"><b>${esc(it.name)}</b><span><span class="mono">${esc(it.pn || "")}</span> <span class="faint">${esc(it.area)}${it.ref ? " · ref " + esc(it.ref) : ""}</span></span></div>${pvInvPill(s)}
         <div class="seg pv-rvseg" role="group" aria-label="Change answer for ${esc(it.name)}"><button class="${pvHas(s) ? "on" : ""}" data-pvrv="${esc(it.key)}~Owned">Have</button><button class="${pvMiss(s) ? "on" : ""}" data-pvrv="${esc(it.key)}~Missing">Missing</button><button class="${s === "Skipped" ? "on" : ""}" data-pvrv="${esc(it.key)}~Skipped">Skip</button><button data-pvrv="${esc(it.key)}~clear" title="Clear the answer">Clear</button></div>
         <button class="btn sm" data-pvdet="${esc(it.key)}">Details</button></div>`).join("")}</div>${rows.length > PV.revN ? `<div class="row center"><button class="btn" data-pvrvmore>Show ${pvNum(Math.min(60, rows.length - PV.revN))} more</button></div>` : ""}`
       : `<div class="empty"><b>Nothing here yet</b>${tab === "Skipped" ? "Parts you skip show up here so you can come back to them." : "Parts you mark show up here."}</div>`}</div>`;
@@ -345,15 +369,16 @@ function pvSheet(t) {
   const photos = rec ? pvPhotos(rec.id) : [];
   const bg = document.createElement("div"); bg.className = "pv-sheetbg";
   bg.innerHTML = `<aside class="pv-sheet" role="dialog" aria-modal="true" aria-labelledby="pvShT">
-    <header class="pv-shh"><div class="grow"><span class="eyebrow">${esc(it ? it.sys + " · " + it.area : r.category || "Part")}</span><h3 id="pvShT">${esc(r.name)}</h3><span class="mono faint">${esc(r.oemPn || "")}</span></div><button class="linkbtn" data-shx aria-label="Close">✕</button></header>
+    <header class="pv-shh"><div class="grow"><span class="eyebrow">${esc(it ? (it.gen ? "Main parts · " + it.sys : it.sys + " · " + it.area) : r.category || "Part")}</span><h3 id="pvShT">${esc(r.name)}</h3><span class="mono faint">${esc(r.oemPn || "")}</span></div><button class="linkbtn" data-shx aria-label="Close">✕</button></header>
     <div class="pv-shb">
-      <div class="pv-shstate">${pvInvPill(state)}${it ? `<span class="faint">The bike uses ${cnt}</span>` : ""}${rec ? `<button class="linkbtn" data-shfull>Open full record</button>` : ""}</div>
+      <div class="pv-shstate">${pvInvPill(state)}${it ? `<span class="faint">${it.gen ? "Usually " + cnt : "The bike uses " + cnt}</span>` : ""}${rec ? `<button class="linkbtn" data-shfull>Open full record</button>` : ""}</div>
       ${!W ? `<div class="banner warn"><div class="grow">You have view-only access, so you can look but not change anything.</div></div>` : ""}
       <fieldset class="pv-fs"><legend>Condition</legend><div class="seg pv-cond" role="radiogroup">${PV_COND.map(([v, l]) => `<button type="button" role="radio" aria-checked="${pvCondGroup(r.condition) === v}" class="${pvCondGroup(r.condition) === v ? "on" : ""}" data-shc="${v}">${l}</button>`).join("")}</div>${r.condition && !PV_COND.some(([v]) => v === r.condition) && r.condition !== "Missing" ? `<span class="hint-text">Currently recorded as ${esc(r.condition)}.</span>` : ""}</fieldset>
       <div class="form">
-        <div class="fld"><label for="shQty">Quantity you have</label><div class="pv-qty"><button type="button" class="btn sm" data-shq="-1" aria-label="One fewer">−</button><input id="shQty" type="number" min="0" max="999" inputmode="numeric" value="${rec ? n(r.qtyFound) : pvHas(state) ? cnt : ""}" placeholder="${cnt}"><button type="button" class="btn sm" data-shq="1" aria-label="One more">+</button></div><span class="hint">${it ? "The catalogue lists " + cnt : "Expected: " + cnt}</span></div>
+        <div class="fld"><label for="shQty">Quantity you have</label><div class="pv-qty"><button type="button" class="btn sm" data-shq="-1" aria-label="One fewer">−</button><input id="shQty" type="number" min="0" max="999" inputmode="numeric" value="${rec ? n(r.qtyFound) : pvHas(state) ? cnt : ""}" placeholder="${cnt}"><button type="button" class="btn sm" data-shq="1" aria-label="One more">+</button></div><span class="hint">${it ? (it.gen ? "Most bikes of this type have " + cnt : "The catalogue lists " + cnt) : "Expected: " + cnt}</span></div>
         <div class="fld"><label for="shStage">Restoration stage</label><select id="shStage">${PV_STAGE.map(s => `<option ${s === stage0 ? "selected" : ""}>${esc(s)}</option>`).join("")}</select></div>
         <fieldset class="pv-fs fld full"><legend>Needs</legend><div class="pv-checks">${PV_NEEDS.map(([k, l]) => `<label class="pv-ck"><input type="checkbox" data-shn="${k}" ${needs0[k] ? "checked" : ""}> ${l}</label>`).join("")}</div></fieldset>
+        ${(it && it.gen) || (!it && !r.catKey) || (r.catKey && String(r.catKey).startsWith("gen|")) ? `<div class="fld full"><label for="shPn">Your part number</label><input id="shPn" class="mono" value="${esc(r.oemPn || "")}" placeholder="From the part, its box or your parts book"></div>` : ""}
         <div class="fld"><label for="shLoc">Storage location</label><input id="shLoc" list="shLocs" value="${esc(r.location || "")}" placeholder="e.g. Shelf B, engine box"><datalist id="shLocs">${locs.map(l => `<option value="${esc(l)}">`).join("")}</datalist></div>
         <div class="fld"><label for="shBin">Box or label</label><input id="shBin" value="${esc(r.bin || "")}" placeholder="e.g. Bag 14"></div>
         <div class="fld full"><label for="shNotes">Notes</label><textarea id="shNotes" rows="3" placeholder="e.g. cracked ear, threads need chasing">${esc(r.notes || "")}</textarea></div>
@@ -383,6 +408,7 @@ function pvSheet(t) {
     if (qv !== "") { x.qtyFound = Math.max(0, n(qv)); x.qtyMissing = Math.max(0, (n(x.qtyExpected) || cnt) - x.qtyFound); }
     if (stageTouched || base.stage) x.stage = $("#shStage", bg).value;
     $$("[data-shn]", bg).forEach(c => x[c.dataset.shn] = c.checked);
+    if ($("#shPn", bg)) x.oemPn = $("#shPn", bg).value.trim();
     x.location = $("#shLoc", bg).value.trim(); x.bin = $("#shBin", bg).value.trim(); x.notes = $("#shNotes", bg).value;
     x.paid = n($("#shPaid", bg).value); x.boughtOn = $("#shDate", bg).value; x.supplier = $("#shSup", bg).value.trim(); x.estCost = n($("#shEst", bg).value);
     return pvSyncStatus(x);
@@ -405,7 +431,7 @@ function pvSheet(t) {
     try {
       const base = rec && S.parts[rec.id] ? S.parts[rec.id] : r, x = collect(base);
       await store.put("parts", x, { silent: true, action: "updated details for " + x.name });
-      if (it && pvHas(pvState(it)) && it.count > 1) await haveSave(it.did, { [it.pid]: { got: n(x.qtyFound) } }, "updated a count");
+      if (it && !it.gen && pvHas(pvState(it)) && it.count > 1) await haveSave(it.did, { [it.pid]: { got: n(x.qtyFound) } }, "updated a count");
       dirty = false; bg.remove(); PV.sheet = null; document.removeEventListener("keydown", onKey); toast("Details saved for " + x.name);
       if (R.sec === "inventory") { if (R.tab.inventory) pvPaint(); else render(false); }
     } catch (e) { save.disabled = false; msg.textContent = "Couldn't save. Check your connection and try again."; }
@@ -456,7 +482,7 @@ function pvAdd(init) {
       box.innerHTML = `<div class="banner warn"><div class="grow"><b>This part number is already here.</b> ${recs.length ? `You have it as ${recs.slice(0, 2).map(p => `<b>${esc(p.name)}</b> (${esc(p.id)})`).join(", ")}.` : ""} ${cat.length ? `It's in the catalogue as <b>${esc(cat[0].name)}</b> (${esc(cat[0].area)}).` : ""}
         <div class="row" style="gap:6px;margin-top:8px;justify-content:flex-start">${recs.length ? `<button type="button" class="btn sm" data-dupopen="${esc(recs[0].id)}">Open the existing part</button>` : `<button type="button" class="btn sm" data-dupcat="${esc(cat[0].key)}">Open it from the catalogue</button>`}<button type="button" class="btn sm" data-dupok>Add a separate one anyway</button></div></div></div>`;
       const o = box.querySelector("[data-dupopen]"); if (o) o.onclick = () => { closeModal(); pvSheet({ rid: o.dataset.dupopen }); };
-      const c = box.querySelector("[data-dupcat]"); if (c) c.onclick = () => { closeModal(); pvSheet({ it: pvCat().byKey[c.dataset.dupcat] }); };
+      const c = box.querySelector("[data-dupcat]"); if (c) c.onclick = () => { closeModal(); pvSheet({ it: pvItem(c.dataset.dupcat) }); };
       box.querySelector("[data-dupok]").onclick = () => { dupOk = true; box.innerHTML = `<span class="hint">Adding it as a separate part.</span>`; };
     };
     $("#pvaPn", m).addEventListener("input", debounce(dup, 250)); if (i0.oemPn) dup();
@@ -480,33 +506,36 @@ function pvAdd(init) {
 
 /* ---- Parts home: three ways in, a short summary, the list ---- */
 function pvOptsHtml() {
-  const cat = pvCat(), c = cat.length ? pvCounts(cat) : null, started = c && (c.done + c.Skipped);
-  const off = msg => `<span class="pv-off">${esc(msg)}</span>`;
+  const src = pvSrc(), cat = pvList(), c = cat.length ? pvCounts(cat) : null, started = c && (c.done + c.Skipped + c.na);
+  const off = msg => `<span class="pv-off">${esc(msg)}</span>`, st = PV_STYLE_NOUN[pvGen().profile.style];
+  const what = src === "oem" ? `Every part in the ${esc(BIKE.short || "bike")} catalogue, one card at a time. Swipe right if you have it, left if it's missing. Or just the main parts.`
+    : `The main parts a typical ${esc(st)} has, one card at a time: engine, carbs, lights, wiring, tires and more. No bolts or washers.`;
   return `<section class="pv-opts" aria-label="Ways to add parts">
     <div class="pv-opt"><span class="pv-oic">${ic("camera")}</span><div class="pv-ot"><h2>Scan parts</h2><p>Lay out a tray of parts and take a photo. The AI spots them, then you confirm each one.</p></div>
-      ${HAS_CAT ? scanPickBtn("Scan a photo", "btn") : off("Needs a parts catalogue for this bike")}</div>
-    <div class="pv-opt pv-main"><span class="pv-oic">${ic("check")}</span><div class="pv-ot"><h2>Go through parts</h2><p>${c ? `Every part in the ${esc(BIKE.short || "bike")} catalogue, one card at a time. Swipe right if you have it, left if it's missing.` : "Swipe through the factory parts list one card at a time."}</p>
-      ${c && started ? `<div class="pv-mini"><div class="pv-bar"><i class="g" style="width:${c.Owned / c.total * 100}%"></i><i class="r" style="width:${c.Missing / c.total * 100}%"></i><i class="a" style="width:${c.Skipped / c.total * 100}%"></i></div><span>${pvNum(c.done)} of ${pvNum(c.total)} checked</span></div>` : c ? `<div class="pv-mini"><span>${pvNum(c.total)} parts in ${pvNum(new Set(cat.map(x => x.did)).size)} assemblies. Stop any time, it saves as you go.</span></div>` : ""}</div>
-      ${c ? `<button class="btn pri" data-pvstart>${started ? (c.Unreviewed ? "Continue" : "Review") : "Start"}</button>` : off("No parts catalogue for this bike yet")}</div>
-    <div class="pv-opt"><span class="pv-oic">${ic("plus")}</span><div class="pv-ot"><h2>Add a part</h2><p>Hardware, fabricated or aftermarket pieces, or anything the catalogue doesn't list.</p></div>
+      ${HAS_CAT ? scanPickBtn("Scan a photo", "btn") : off("Needs a factory parts catalogue for this bike")}</div>
+    <div class="pv-opt pv-main"><span class="pv-oic">${ic("check")}</span><div class="pv-ot"><h2>Go through parts</h2><p>${what}</p>
+      ${c && started ? `<div class="pv-mini"><div class="pv-bar"><i class="g" style="width:${c.Owned / c.total * 100}%"></i><i class="r" style="width:${c.Missing / c.total * 100}%"></i><i class="a" style="width:${c.Skipped / c.total * 100}%"></i></div><span>${pvNum(c.done)} of ${pvNum(c.total)} checked</span></div>`
+        : c ? `<div class="pv-mini"><span>${src === "oem" ? `${pvNum(c.total)} parts in ${pvNum(new Set(cat.map(x => x.did)).size)} assemblies` : `${pvNum(c.total)} main parts`}. Stop any time, it saves as you go.</span></div>` : ""}</div>
+      ${c ? `<button class="btn pri" data-pvstart>${started ? (c.Unreviewed ? "Continue" : "Review") : "Start"}</button>` : off("No parts list for this bike yet")}</div>
+    <div class="pv-opt"><span class="pv-oic">${ic("plus")}</span><div class="pv-ot"><h2>Add a part</h2><p>Hardware, fabricated or aftermarket pieces, or anything the list doesn't have.</p></div>
       ${ME.canWrite ? `<button class="btn" data-pvadd>Add a part</button>` : off("View-only access")}</div>
   </section>`;
 }
 function pvSummaryHtml() {
-  const cat = pvCat(), idx = pvIndex(), recs = sorted("parts"), c = cat.length ? pvCounts(cat, idx) : null;
+  const cat = pvList(), idx = pvIndex(), recs = sorted("parts"), c = cat.length ? pvCounts(cat, idx) : null, srcName = pvSrc() === "oem" ? "Catalogue" : "Main parts";
   const own = recs.filter(r => pvHas(pvRecInv(r))), miss = recs.filter(r => pvMiss(pvRecInv(r)));
   if (!recs.length && !(c && c.done + c.Skipped)) return `<section id="partsCheck" hidden></section>`;
-  const ownCat = c ? c.Owned : 0, ownX = own.filter(r => !r.catKey).length, missCat = c ? c.Missing : 0, missX = miss.filter(r => !r.catKey).length;
+  const ownX = own.filter(r => !r.catKey).length;
   const insp = own.filter(r => r.needInspect || pvRecStage(r) === "Not inspected").length, rep = own.filter(r => r.needRepair || pvRecStage(r) === "Needs repair").length;
   const ready = own.filter(r => pvRecStage(r) === "Ready for installation").length, inst = own.filter(r => pvRecStage(r) === "Installed").length;
   const priced = miss.filter(r => n(r.estCost) > 0), cost = priced.reduce((s, r) => s + n(r.estCost) * Math.max(1, n(r.qtyMissing) || 1), 0);
   const tile = (l, v, sub, f, cls) => `<button class="kpi pv-k ${cls || ""}" data-pvf="${esc(JSON.stringify(f))}"><span class="l">${esc(l)}</span><span class="v">${v}</span>${sub ? `<span class="s">${sub}</span>` : ""}</button>`;
   return `<section class="pv-sum stack" id="partsCheck" aria-label="Inventory summary">
-    ${c ? `<div class="pv-cov"><div class="pv-covt"><b>Catalogue coverage</b><span class="faint">${pvNum(c.done)} of ${pvNum(c.total)} parts checked${c.Skipped ? ` · ${pvNum(c.Skipped)} skipped` : ""}</span></div><div class="pv-bar"><i class="g" style="width:${c.Owned / c.total * 100}%"></i><i class="r" style="width:${c.Missing / c.total * 100}%"></i><i class="a" style="width:${c.Skipped / c.total * 100}%"></i></div></div>` : ""}
+    ${c ? `<div class="pv-cov"><div class="pv-covt"><b>${srcName} checked</b><span class="faint">${pvNum(c.done)} of ${pvNum(c.total)} parts checked${c.Skipped ? ` · ${pvNum(c.Skipped)} skipped` : ""}</span></div><div class="pv-bar"><i class="g" style="width:${c.Owned / c.total * 100}%"></i><i class="r" style="width:${c.Missing / c.total * 100}%"></i><i class="a" style="width:${c.Skipped / c.total * 100}%"></i></div></div>` : ""}
     <div class="pv-kpis">
-      ${c ? tile("Catalogue parts", pvNum(c.total), `${pvNum(c.Unreviewed + c.Skipped)} not checked yet`, { pvdeck: 1 }) : ""}
-      ${tile("Owned", pvNum(ownCat + ownX), ownX ? `incl. ${pvNum(ownX)} added by hand` : "in your inventory", { own: "Owned" })}
-      ${tile("Missing", pvNum(missCat + missX), "to buy or find", { own: "Missing" }, missCat + missX ? "red" : "")}
+      ${c ? tile(pvSrc() === "oem" ? "Catalogue parts" : "Main parts", pvNum(c.total), `${pvNum(c.Unreviewed + c.Skipped)} not checked yet`, { pvdeck: 1 }) : ""}
+      ${tile("Owned", pvNum(own.length), ownX ? `incl. ${pvNum(ownX)} added by hand` : "in your inventory", { own: "Owned" })}
+      ${tile("Missing", pvNum(miss.length), "to buy or find", { own: "Missing" }, miss.length ? "red" : "")}
       ${tile("Needs inspection", pvNum(insp), "owned, not inspected", { stage: "Not inspected" }, insp ? "amber" : "")}
       ${tile("Needs repair", pvNum(rep), "owned", { need: "needRepair" }, rep ? "red" : "")}
       ${tile("Ready to install", pvNum(ready), inst ? pvNum(inst) + " installed" : "restored and ready", { stage: "Ready for installation" }, ready ? "green" : "")}
@@ -548,7 +577,7 @@ function pvRowHtml(p) {
       ${pvMiss(s) ? `<button class="btn sm" data-cartfind="${esc(p.oemPn || p.name)}" title="Search stores for this part">${ic("cart")} Shop</button>` : ""}<button class="btn sm" data-pvedit="${esc(p.id)}">Edit</button></div></div>`;
 }
 async function pvMark(id, v) {
-  const p = S.parts[id]; if (!p) return; const r = clone(p), it = r.catKey && pvCat().byKey && pvCat().byKey[r.catKey];
+  const p = S.parts[id]; if (!p) return; const r = clone(p), it = r.catKey && pvItem(r.catKey);
   const was = pvRecInv(r); let label = v;
   if (v === "Ordered") { r.inv = "Ordered"; if (!r.boughtOn) r.boughtOn = today(); label = "purchased"; }
   else if (v === "Received") { r.inv = "Received"; r.qtyFound = Math.max(n(r.qtyFound), n(r.qtyExpected) || 1); r.qtyMissing = 0; if (!r.stage) r.stage = "Not inspected"; }
@@ -560,8 +589,8 @@ async function pvMark(id, v) {
   pvSyncStatus(r);
   try {
     const prev = await store.put("parts", r, { silent: true, action: "marked " + r.name + " as " + label.toLowerCase() });
-    if (it) { const have = pvHas(r.inv); if (have !== (haveGet(it.did, it.pid).have === true) || haveGet(it.did, it.pid).have === undefined) await haveSave(it.did, { [it.pid]: { have } }, "updated " + r.name); }
-    toast(r.name + ": " + (PV_MARKS.find(x => x[0] === v) || [, v])[1].toLowerCase(), null, { label: "Undo", fn: async () => { if (prev) { await store.put("parts", prev, { silent: true, action: "reverted" }); if (it) await haveSave(it.did, { [it.pid]: { have: pvHas(pvRecInv(prev)) ? true : pvMiss(pvRecInv(prev)) ? false : null } }); render(false); } } });
+    if (it && !it.gen) { const have = pvHas(r.inv); if (have !== (haveGet(it.did, it.pid).have === true) || haveGet(it.did, it.pid).have === undefined) await haveSave(it.did, { [it.pid]: { have } }, "updated " + r.name); }
+    toast(r.name + ": " + (PV_MARKS.find(x => x[0] === v) || [, v])[1].toLowerCase(), null, { label: "Undo", fn: async () => { if (prev) { await store.put("parts", prev, { silent: true, action: "reverted" }); if (it && !it.gen) await haveSave(it.did, { [it.pid]: { have: pvHas(pvRecInv(prev)) ? true : pvMiss(pvRecInv(prev)) ? false : null } }); render(false); } } });
   } catch (e) {}
   render(false);
 }
@@ -589,15 +618,32 @@ function pvListHtml() {
     <div class="inv-foot"><button class="linkbtn" id="invCsv">${ic("download")} Export CSV</button><button class="linkbtn" id="invPrint">Printable list</button></div>`;
 }
 
+/* ---- the parts book: factory catalogue, service manual, repair manual ---- */
+function pvBookHtml() {
+  const m = meta() || {}, mk = BIKE.make || m.make || "", md = BIKE.model || m.model || "", yr = BIKE.year || m.year || "", bike = [yr, mk, md].filter(Boolean).join(" ");
+  const books = [["fiche", "Factory parts catalogue", "Exploded diagrams with the OEM part number for every piece. Also called a parts list or microfiche.", "ebay", "parts catalogue", "eBay"],
+    ["fsm", "Factory service manual", "The maker's own workshop manual: specs, torque values, wiring diagrams and procedures.", "ebay", "factory service manual", "eBay"],
+    ["repair", "Clymer or Haynes repair manual", "Step-by-step repair manual written for home mechanics.", "amazon", "Clymer Haynes manual", "Amazon"]];
+  const link = (st, q) => window.rvShop ? rvShop.link(st, q, "") : "#";
+  const inCart = t => (meta().cart || []).some(x => x && !x.bought && x.title === t);
+  return `<section class="pv-books stack" id="pvBooks" aria-labelledby="pvBooksH"><div><h2 class="sec left" id="pvBooksH" style="margin:0">Get the parts book for your bike</h2>
+      <p class="sec-sub" style="text-align:left;margin:4px 0 0">${mk && md ? `The surest way to get part numbers and specs for the ${esc(bike)}.` : `Add your bike's year, make and model in Settings to search for its exact books.`}</p></div>
+    ${mk && md ? `<div class="pv-bgrid">${books.map(([k, t, d, st, q, sn]) => { const title = `${t} for the ${bike}`, url = link(st, bike + " " + q);
+      return `<div class="pv-book"><span class="pv-bic">${ic("book")}</span><div class="pv-ot"><b>${esc(t)}</b><p>${esc(d)}</p></div>
+        <div class="row pv-bact"><a class="btn sm" href="${esc(url)}" target="_blank" rel="noopener sponsored">Find on ${sn} ↗</a>${ME.canWrite ? (inCart(title) ? `<span class="pill green plain">On your list</span>` : `<button class="btn sm pri" data-pvbook="${esc(JSON.stringify({ title, url, store: sn }))}">${ic("cart")} Add to shopping list</button>`) : ""}</div></div>`; }).join("")}</div>
+      <p class="hint-text">Prices vary a lot, especially for older bikes, so the list item has no price until you add one. Free online parts diagrams: <a href="${esc(link("partzilla", bike))}" target="_blank" rel="noopener sponsored">Partzilla</a> · <a href="${esc(link("cmsnl", bike))}" target="_blank" rel="noopener sponsored">CMSNL</a></p>` : ""}
+  </section>`;
+}
+
 (function () {
   const OLD = VIEWS.inventory;
   VIEWS.inventory = {
     render() {
       const tab = R.tab.inventory;
-      if ((tab === "deck" || tab === "review") && pvCat().length) return tab === "review" ? pvReviewHtml() : pvDeckHtml();
+      if ((tab === "deck" || tab === "review") && pvList().length) return tab === "review" ? pvReviewHtml() : pvDeckHtml();
       const total = sorted("parts").length;
       return `<div class="ph" data-own="1"><div class="eyebrow">Everything on the bench</div><h1>Parts</h1><p>${total ? `${pvNum(total)} part${total === 1 ? "" : "s"} in your inventory for the ${esc(pvBikeName())}.` : "What you have, what's missing and what shape it's in."}</p></div>
-        ${pvOptsHtml()}${pvSummaryHtml()}${pvListHtml()}`;
+        ${pvOptsHtml()}${pvSummaryHtml()}${pvListHtml()}${pvBookHtml()}`;
     },
     live() { // while going through cards, refresh in place instead of rebuilding the page
       if (!(R.tab.inventory === "deck" || R.tab.inventory === "review") || !$("#pvDeck") || PV.busy) return !!PV.busy && !!$("#pvDeck");
@@ -610,6 +656,7 @@ function pvListHtml() {
       OLD.bind(root);
       $$("[data-pvstart]", root).forEach(b => b.onclick = () => { R.tab.inventory = "deck"; PV.err = ""; lsSet("rv.route", { sec: R.sec, tab: R.tab, view: R.view }); render(false); window.scrollTo(0, 0); });
       $$("[data-pvadd]", root).forEach(b => b.onclick = () => pvAdd());
+      $$("[data-pvbook]", root).forEach(b => b.onclick = async () => { const d = JSON.parse(b.dataset.pvbook); b.disabled = true; try { await cartAdd({ title: d.title, price: 0, ship: 0, store: d.store, url: d.url, img: "" }); } catch (e) { b.disabled = false; return; } render(false); });
       $$("[data-pvf]", root).forEach(b => b.onclick = () => { const f = JSON.parse(b.dataset.pvf); if (f.pvdeck) { R.tab.inventory = "deck"; render(false); window.scrollTo(0, 0); return; } R.f.inventory = f; PV.listN = 50; render(false); setTimeout(() => $("#pvList")?.scrollIntoView({ block: "start", behavior: "smooth" }), 30); });
       $$("[data-pvrec]", root).forEach(row => { row.onclick = e => { if (e.target.closest("button,select,a,input")) return; pvSheet({ rid: row.dataset.pvrec }); }; row.onkeydown = e => { if (e.key === "Enter" && e.target === row) pvSheet({ rid: row.dataset.pvrec }); }; });
       $$("[data-pvedit]", root).forEach(b => b.onclick = () => pvSheet({ rid: b.dataset.pvedit }));

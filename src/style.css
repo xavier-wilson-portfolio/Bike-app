@@ -2508,3 +2508,18 @@ article.gt::before{box-shadow:inset 0 0 0 2px color-mix(in srgb,var(--edge) 35%,
 .pv-card{gap:4px;padding:14px 18px}
 .pv-facts{margin:4px 0 0}
 @media (max-width:720px){.pv-dtitle b{font-size:17px}.pv-art>svg,.pv-art>img{height:130px}.pv-act{min-height:60px}}
+/* Parts: main-parts list, parts book */
+.pv-silart>svg{width:100%;height:150px;background:#fff;border:1px solid var(--line);border-radius:12px;box-sizing:border-box;padding:14px;pointer-events:none}
+.pv-src{gap:8px}
+.pv-src .tabs button{padding:6px 14px;font-size:13px}
+.pv-facts .pv-plain dd{font-family:inherit;font-size:13.5px;font-weight:500;color:var(--muted)}
+.pv-na{font-size:13px;margin-left:auto}
+.pv-books{margin-top:18px;padding-top:18px;border-top:1px solid var(--line);gap:12px}
+.pv-bgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.pv-book{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:8px;box-shadow:var(--shadow);min-width:0}
+.pv-book .pv-ot b{font-family:var(--f-display);font-size:16px}
+.pv-bic{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;background:var(--panel);color:var(--blue-ink)}
+.pv-bic svg{width:18px;height:18px}
+.pv-bact{gap:6px;flex-wrap:wrap;margin-top:auto}
+@media (max-width:900px){.pv-bgrid{grid-template-columns:1fr}}
+@media (max-width:720px){.pv-silart>svg{height:130px}}
