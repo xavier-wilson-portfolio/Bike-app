@@ -213,7 +213,12 @@ function pvCurrent(q) {
   return q.items[0] || null;
 }
 function pvArt(it) {
-  if (it.gen) return `<figure class="pv-art pv-silart">${pvSil(it.art, it.name)}<figcaption>A typical ${esc(it.name.toLowerCase())}. Yours may look different.</figcaption></figure>`;
+  if (it.gen) {
+    const P = (typeof PV_PHOTO !== "undefined" && (PV_PHOTO[it.gid] || PV_PHOTO[it.art])) || null;
+    if (P) return `<figure class="pv-art pv-silart"><img src="img/sil/parts/${esc(P.f)}.svg" alt="Silhouette of a ${esc(it.name.toLowerCase())}" loading="lazy"><figcaption>A typical ${esc(it.name.toLowerCase())}, traced from a photo by <a href="${esc(P.page)}" target="_blank" rel="noopener">${esc(P.by)}</a> (${esc(P.lic)}). Yours may look different.</figcaption></figure>`;
+    const bs = typeof silImg === "function" && (silImg(BIKE.silhouette || "bike-" + pvGen().profile.style) || silImg("bike-standard"));
+    return `<figure class="pv-art pv-silart pv-nophoto">${bs ? `<img src="${bs}" alt="">` : ""}<figcaption>No photo of this part yet.</figcaption></figure>`;
+  }
   const d = diagById(it.did), q = d && (d.parts || []).find(x => String(x.ref) === String(it.ref) && typeof x.draw === "function");
   if (q) { try { return `<figure class="pv-art"><svg class="pv-artsvg" viewBox="-60 -60 120 120" role="img" aria-label="Drawing of the ${esc(it.name)}">${dkDefs()}<g class="pv-artg">${q.draw("exploded")}</g></svg><figcaption>Drawing from the ${esc(it.area)} diagram, ref ${esc(it.ref)}</figcaption></figure>`; } catch (e) {} }
   if (typeof D3_THUMBS !== "undefined" && D3_THUMBS[it.did]) return `<figure class="pv-art"><img src="${D3_THUMBS[it.did]}" alt="The ${esc(it.area)} assembly" loading="lazy"><figcaption>The whole ${esc(it.area)} assembly. This part is ref ${esc(it.ref)}.</figcaption></figure>`;
