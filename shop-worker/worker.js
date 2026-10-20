@@ -59,6 +59,12 @@ export default {
   async fetch(req, env) {
     const u = new URL(req.url), o = req.headers.get("Origin") || "", h = cors(o);
     if (u.pathname === "/ebay-deletion") return deletion(req, env);
+    if (u.pathname === "/check") { // shape of the saved keys only, never the keys
+      const id = String(env.EBAY_CLIENT_ID || ""), sec = String(env.EBAY_CLIENT_SECRET || ""), t = id.trim(), c = sec.trim();
+      let tokenTest = ""; try { tok = null; await token(env); tokenTest = "ok"; } catch (e) { tokenTest = String(e.message || e); }
+      return json({ clientId: { saved: !!id, length: t.length, extraSpaces: id !== t, hasPRD: /-PRD-/.test(t), hasSBX: /-SBX-/.test(t), startsWithPRD: /^PRD-/.test(t) },
+        clientSecret: { saved: !!sec, length: c.length, extraSpaces: sec !== c, startsWithPRD: /^PRD-/.test(c), startsWithSBX: /^SBX-/.test(c) }, tokenTest });
+    }
     if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: h });
     if (u.pathname !== "/search") return new Response("Revora shop is running.", { status: 200 });
     if (o && !SITES.includes(o)) return json({ error: "origin" }, 403);
