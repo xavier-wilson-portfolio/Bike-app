@@ -2525,7 +2525,7 @@ article.gt::before{box-shadow:inset 0 0 0 2px color-mix(in srgb,var(--edge) 35%,
 @media (max-width:720px){.pv-silart>svg{height:130px}}
 .scan .btn.sm.on{background:var(--panel);border-color:var(--line-2)}
 .pv-psx{cursor:pointer}.pv-psx input{width:18px;height:18px;flex:none}
-.pv-silart>img{width:100%;height:150px;object-fit:contain;background:#fff;border:1px solid var(--line);border-radius:12px;box-sizing:border-box;padding:10px;pointer-events:none}
+.pv-silart>img{width:100%;height:210px;object-fit:contain;background:#fff;border:1px solid var(--line);border-radius:12px;box-sizing:border-box;padding:6px;pointer-events:none}
 .pv-nophoto>img{opacity:.12}
 .pv-art figcaption a{color:inherit}
-@media (max-width:720px){.pv-silart>img{height:130px}}
+@media (max-width:720px){.pv-silart>img{height:170px}}
