@@ -6,7 +6,7 @@
      WORKER_SECRET    the same value as BILLING_SECRET on the revora-billing worker
    Visiting /run sends anything due right now (it's the same job the schedule runs, so nothing is sent twice).
    It also sends the new sign-up emails (thanks, then a trial offer and a plans note to people still on Free) once
-   welcome_settings.enabled is on in Supabase. /welcome-test sends all three to the admin, /welcome-preview counts who'd get one.
+   welcome_settings.enabled is on in Supabase. /welcome-test sends one of each to the admin, /welcome-preview counts who'd get one.
    POST /notify { rows: [feedback] } emails feedback sent from the app to info@revoragarage.com, with Reply-To set to the sender. */
 const SUPABASE_URL = "https://fhuksccqsyaomnouxxtb.supabase.co", SUPABASE_KEY = "sb_publishable_0wYtVeKcFJUzy3AfIaFhiw_NrT1wNkz";
 const FROM = "Revora <info@revoragarage.com>", REPLY_TO = "info@revoragarage.com", INBOX = "info@revoragarage.com", APP = "https://revoragarage.com";
@@ -60,39 +60,88 @@ async function run(env) {
 }
 
 
-/* ---- emails to new sign-ups (step 1 thanks, step 2 day 3 trial offer, step 3 day 8 plans) ---- */
-const WFROM = "Xavier at Revora <info@revoragarage.com>", ADMIN_TO = "xavier.j.wilson101@gmail.com";
+/* ---- emails to new sign-ups: thanks + deals right away, deals reminder day 3, features day 7, check-in day 14, then every 2 weeks ---- */
+const WFROM = "Revora Garage <info@revoragarage.com>", ADMIN_TO = "xavier.j.wilson101@gmail.com";
 async function sig(uid, env) {
   const k = await crypto.subtle.importKey("raw", new TextEncoder().encode(env.WORKER_SECRET), { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
   const b = new Uint8Array(await crypto.subtle.sign("HMAC", k, new TextEncoder().encode("unsub:" + uid)));
   return Array.from(b.slice(0, 16), x => x.toString(16).padStart(2, "0")).join("");
 }
 const first = n => String(n || "").trim().split(/\s+/)[0].replace(/^./, c => c.toUpperCase()) || "there";
+const SOCIAL = [["TikTok", "https://www.tiktok.com/@revora.garage"], ["Instagram", "https://www.instagram.com/revoragarageofficial/"], ["Facebook", "https://www.facebook.com/profile.php?id=61595784891437"]];
+const PRICES = [
+  "Rider: $4.99 a month (was $6.99), or $49 a year. Service reminders by email before things are due, recall alerts for your bike, fuel and cost tracking, and room for 3 bikes.",
+  "Restorer: $9.99 a month (was $19.99), or $99 a year. Everything in Rider, plus the parts scan from a photo, AI that reads your receipts, a shopping list with a budget, step-by-step restoration courses and up to 10 bikes. You can try it free for 30 days, no card needed.",
+  "Shop: $29 a month (was $49.99). For shops and builders: work orders, customer bikes with history reports and a team of up to 10."];
+// step 1 thanks · 2 deals · 3 deals reminder · 4 features + socials · 5 check-in · 6+ every two weeks, rotating
 function welcomeCopy(step, p) {
-  const hi = `Hi ${first(p.name)},`;
-  if (step === 1) return { subject: "Thanks for joining Revora", paras: [hi,
-    "Thanks for signing up. I'm Xavier, and I built Revora after taking apart a 1977 Suzuki GS750 and losing track of half the parts.",
-    p.bikes ? "You've already got your bike in. A good next step is logging the last service you remember, like an oil change or new chain, so the schedule knows where to start." : "First thing to do is add your bike. It takes about a minute, and the service schedule fills itself in for that model.",
-    "If anything is confusing or broken, just reply to this email. It comes straight to me."], button: ["Open Revora", APP + "/"] };
-  if (step === 2) return { subject: "30 days of Restorer, free", paras: [hi,
-    "Quick one. You're on the Free plan, which covers one bike and the basics.",
-    "If you're working on a project, Restorer adds the parts scan from a photo, a shopping list with a running total, AI that reads your receipts, and a step-by-step restoration course for your bike.",
-    "You can try all of it free for 30 days. No card needed, and you drop back to Free on your own if you don't pick a plan."], button: ["Start the free trial", APP + "/?plans"] };
-  return { subject: "Never miss a service on your bike", paras: [hi,
-    "One last note from me about plans, then I'll leave you to it.",
-    "Rider is $4.99 a month. It emails you before a service is due, sends recall alerts for your bike, and tracks fuel and cost of ownership. Restorer is $9.99 and adds everything for a project bike.",
-    "Free stays free for one bike for as long as you want it. If you're riding more than one, or you want the reminders, Rider pays for itself the first time it catches an overdue chain."], button: ["See the plans", APP + "/?plans"] };
+  const hi = `Hi ${first(p.name)},`, plans = ["See the plans", APP + "/?plans"], open = ["Open Revora", APP + "/"];
+  if (step === 1) return { subject: "Welcome to Revora Garage", paras: [hi,
+    "Thanks for joining Revora. We're really glad to have you.",
+    "Here's what you can do with it:",
+    { list: ["Keep a service log for every bike, with a maintenance schedule built for your model",
+      "Get a heads-up before oil, chain, brakes or tires are due",
+      "Go through every part of a project bike and mark what you have and what's missing",
+      "Snap a photo of a pile of parts and let it pick out what's there",
+      "Keep a shopping list with a running total, with eBay listings right in the app",
+      "Follow a step-by-step restoration course for your bike",
+      "Print or share a full history report when it's time to sell"] },
+    p.bikes ? "Your bike is already in, so you're set. Logging the last service you remember is a good next step." : "The best first step is adding your bike. It takes about a minute.",
+    "And if you ride with people who keep their maintenance in a notebook or in their head, send them our way. Revora is free to start."], button: open };
+  if (step === 2) return { subject: "Launch prices on Revora plans", paras: [hi,
+    "You're on the Free plan, which covers one bike and the basics. Here's what you get if you want more. These are launch prices and they won't stay this low.",
+    { list: PRICES },
+    "Once you upgrade, reminders start showing up in your inbox before a service is due, recalls for your bike come to you, and if you're restoring, the scan, shopping list and course open up right away. Your bikes and records stay exactly where they are."], button: plans };
+  if (step === 3) return { subject: "The launch prices are still on", paras: [hi,
+    "A quick reminder that Revora plans are still at launch prices: Rider at $4.99 a month and Restorer at $9.99 a month, down from $6.99 and $19.99.",
+    "If you're working on a project bike, Restorer's 30-day free trial is the easiest way to see if it's worth it. No card needed, and you go back to Free on your own if you don't keep it."], button: plans };
+  if (step === 4) return { subject: "A few things in Revora you might not have tried", paras: [hi,
+    "You've had Revora for a week. Here are a few things people tend to miss:",
+    { list: ["Ask the mechanic: type a question about your bike and get an answer that knows your model",
+      "Checklists for every season, including a 10-step winter storage list",
+      "Tire and chain wear tracking, so you know how much life is left",
+      "Papers and renewals, so registration and insurance dates don't sneak up on you",
+      "A public build page you can share with friends"] },
+    "We post tips, build videos and new features on our pages. Follow along so you see what's coming."], button: open, social: true };
+  if (step === 5) return { subject: "How's Revora working for you?", paras: [hi,
+    "It's been two weeks since you joined, so we wanted to check in. Is Revora doing what you need?",
+    "Reply to this email and tell us what works, what doesn't, and what you wish it did. Every reply gets read, and a lot of what's in the app came from riders asking for it.",
+    "If you're restoring a bike, we'd love to see it. Send a few photos, tag @revoragarageofficial, or share your public build page from the app. Before and after shots are our favorite."], button: open, social: true };
+  const k = (step - 6) % 4;
+  if (k === 0) return { subject: "Things in Revora you might have missed", paras: [hi,
+    "A quick reminder of a few things Revora can do that are easy to forget:",
+    { list: ["The parts scan: take one photo of your parts and it marks what's there",
+      "eBay listings in your shopping list, with prices and shipping, so you can compare without leaving the app",
+      "The history report: every service and receipt in one document, ready to print or send to a buyer",
+      "Ask the mechanic when you're stuck on a job"] }], button: open, social: true };
+  if (k === 1 && p.free) return { subject: "Revora launch prices, a quick reminder", paras: [hi,
+    "Just a reminder that the launch prices are still on.",
+    { list: PRICES }], button: plans };
+  if (k === 1) return { subject: "Getting more out of Revora", paras: [hi,
+    "A couple of quick tips to get more out of your plan:",
+    { list: ["Update your odometer now and then so the reminders stay on time",
+      "Snap your receipts as you go. The AI reads the parts and prices for you",
+      "Share a bike with a friend or your mechanic so you're both working from the same records"] }], button: open, social: true };
+  if (k === 2) return { subject: "A quick check on your bike", paras: [hi,
+    "Good time for a quick look at your bike in Revora. Update the odometer, log anything you've done lately, and check what's coming up next.",
+    "If the season's changing where you are, there's a checklist for it, whether you're getting ready to ride or putting the bike away for winter."], button: open, social: true };
+  return { subject: "What's new at Revora", paras: [hi,
+    "We're adding to Revora all the time, and the quickest way to see what's new is on our pages. We post build tips, feature updates and riders' projects.",
+    "If Revora has helped you, the best thing you can do is tell a friend who rides. And if you're restoring, share your build page. We like seeing them."], button: open, social: true };
 }
 function welcomeHtml(c, unsub) {
+  const para = t => typeof t === "string" ? `<p style="font:15px/1.55 Arial,sans-serif;margin:0 0 14px">${esc(t)}</p>`
+    : `<ul style="font:15px/1.5 Arial,sans-serif;margin:0 0 14px;padding-left:20px">${t.list.map(i => `<li style="margin:0 0 6px">${esc(i)}</li>`).join("")}</ul>`;
+  const soc = `<p style="font:14px/1.5 Arial,sans-serif;margin:0 0 14px">Follow Revora: ${SOCIAL.map(([n, u]) => `<a href="${u}" style="color:#2C5F7C;font-weight:700">${n}</a>`).join(" &middot; ")}</p>`;
   return `<!doctype html><html><body style="margin:0;background:#F6EEDD"><div style="max-width:560px;margin:0 auto;padding:24px 16px;font-family:Arial,sans-serif;color:#17232C">
     <div style="background:#17232C;padding:18px 20px;border-radius:12px 12px 0 0"><a href="${APP}/" style="text-decoration:none"><img src="${APP}/img/email-logo.png" width="127" height="32" alt="Revora" style="display:block;border:0;width:127px;height:32px;color:#D9BF8E;font:800 18px Arial,sans-serif"></a></div>
-    <div style="background:#fff;padding:20px;border-radius:0 0 12px 12px">${c.paras.map(t => `<p style="font:15px/1.55 Arial,sans-serif;margin:0 0 14px">${esc(t)}</p>`).join("")}
-    <p style="margin:18px 0 14px"><a href="${c.button[1]}" style="background:#D9BF8E;color:#17232C;padding:11px 18px;border-radius:999px;text-decoration:none;font:700 14px Arial,sans-serif">${esc(c.button[0])}</a></p>
-    <p style="font:15px/1.55 Arial,sans-serif;margin:0">Xavier<br><span style="color:#5B6770">Revora Garage</span></p></div>
-    <p style="font:12px/1.5 Arial,sans-serif;color:#5B6770;margin:16px 4px">You're getting this because you signed up at revoragarage.com. <a href="${unsub}" style="color:#5B6770">Don't send me these</a>.</p>
+    <div style="background:#fff;padding:20px;border-radius:0 0 12px 12px">${c.paras.map(para).join("")}
+    <p style="margin:18px 0 18px"><a href="${c.button[1]}" style="background:#D9BF8E;color:#17232C;padding:11px 18px;border-radius:999px;text-decoration:none;font:700 14px Arial,sans-serif">${esc(c.button[0])}</a></p>
+    ${c.social ? soc : ""}<p style="font:15px/1.55 Arial,sans-serif;margin:0">The Revora Garage team</p></div>
+    <p style="font:12px/1.5 Arial,sans-serif;color:#5B6770;margin:16px 4px">You're getting this because you signed up at revoragarage.com. ${c.social ? "" : SOCIAL.map(([n, u]) => `<a href="${u}" style="color:#5B6770">${n}</a>`).join(" &middot; ") + " &middot; "}<a href="${unsub}" style="color:#5B6770">Don't send me these</a></p>
   </div></body></html>`;
 }
-const welcomeText = (c, unsub) => c.paras.join("\n\n") + `\n\n${c.button[0]}: ${c.button[1]}\n\nXavier\nRevora Garage\n\nDon't want these? ${unsub}`;
+const welcomeText = (c, unsub) => c.paras.map(t => typeof t === "string" ? t : t.list.map(i => "- " + i).join("\n")).join("\n\n") + `\n\n${c.button[0]}: ${c.button[1]}\n\n` + (c.social ? "Follow Revora: " + SOCIAL.map(([n, u]) => n + " " + u).join(" | ") + "\n\n" : "") + `The Revora Garage team\n\nDon't want these? ${unsub}`;
 async function sendWelcome(env, to, step, p, uid) {
   const c = welcomeCopy(step, p), unsub = `${env.SELF_URL || "https://revora-reminders.xavier-j-wilson101.workers.dev"}/unsub?u=${uid}&t=${await sig(uid, env)}`;
   const res = await fetch("https://api.resend.com/emails", { method: "POST", headers: { Authorization: "Bearer " + env.RESEND_API_KEY, "content-type": "application/json" },
@@ -106,7 +155,9 @@ async function runWelcome(env) {
   const rows = await rpc("welcome_due", { sec: env.WORKER_SECRET, preview: false });
   const out = { due: (rows || []).length, sent: 0, failed: 0 };
   for (const r of rows || []) {
-    if (await sendWelcome(env, r.email, r.step, r, r.user_id)) { await rpc("welcome_mark", { sec: env.WORKER_SECRET, uid: r.user_id, st: r.step }); out.sent++; } else out.failed++;
+    if (await sendWelcome(env, r.email, r.step, r, r.user_id)) { await rpc("welcome_mark", { sec: env.WORKER_SECRET, uid: r.user_id, st: r.step }); out.sent++; } else { out.failed++; continue; }
+    // the deals email goes out right after the thank-you for people on Free
+    if (r.step === 1 && r.free && await sendWelcome(env, r.email, 2, r, r.user_id)) { await rpc("welcome_mark", { sec: env.WORKER_SECRET, uid: r.user_id, st: 2 }); out.sent++; }
   }
   console.log("welcome", JSON.stringify(out));
   return out;
@@ -151,10 +202,10 @@ export default {
     if (path === "/unsub") return unsub(req, env);
     if (path === "/welcome-test") { // sends all three emails to the admin only, to check how they look
       if (!env.RESEND_API_KEY) return json({ error: "not configured" }, 503);
-      let n = 0; for (const st of [1, 2, 3]) if (await sendWelcome(env, ADMIN_TO, st, { name: "Xavier", bikes: st === 1 ? 0 : 1 }, "00000000-0000-0000-0000-000000000000")) n++;
+      let n = 0; for (const st of [1, 2, 3, 4, 5, 6, 7, 8, 9]) if (await sendWelcome(env, ADMIN_TO, st, { name: "Xavier", bikes: 0, free: true }, "00000000-0000-0000-0000-000000000000")) n++;
       return json({ sent: n, to: ADMIN_TO });
     }
-    if (path === "/welcome-preview") { const rows = await rpc("welcome_due", { sec: env.WORKER_SECRET, preview: true }); const c = { 1: 0, 2: 0, 3: 0 }; (rows || []).forEach(r => c[r.step]++); return json({ wouldSend: { thanks: c[1], trialOffer: c[2], plans: c[3] } }); }
+    if (path === "/welcome-preview") { const rows = await rpc("welcome_due", { sec: env.WORKER_SECRET, preview: true }); const c = {}; (rows || []).forEach(r => c["step" + r.step] = (c["step" + r.step] || 0) + 1); return json({ wouldSend: c }); }
     if (path === "/welcome-run") { try { return json(await runWelcome(env)); } catch (e) { return json({ error: String(e.message || e) }, 500); } }
     if (new URL(req.url).pathname === "/run") { try { return json(await run(env)); } catch (e) { return json({ error: String(e.message || e) }, 500); } }
     return new Response("Revora reminders is running. It sends once a day.", { status: 200 });
