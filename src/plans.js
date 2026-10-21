@@ -4,11 +4,11 @@ VIEWS.plans = {
     const P = planNow();
     return `<div class="ph" data-own="1"><div class="eyebrow">Your account</div><h1>Plans</h1><p>${P.admin ? "You're the admin, so every feature is on for you." : P.trial ? "You're on the Restorer free trial." : P.paid ? "Thanks for being a paying member." : "Start free with one bike. Upgrade for reminders, recalls, AI receipts, restoration courses and more."}</p></div>
       ${rvPlansHtml({ yearly: !!R.f.plYear, current: P.id, until: P.until, trialUsed: P.trialUsed || !window.RV_CLOUD, paid: P.paid, comp: P.comp })}
-      ${P.admin && window.RV_CLOUD ? compAdminHtml() + giftAdminHtml() : ""}`;
+      ${P.admin && window.RV_CLOUD ? peopleAdminHtml() + compAdminHtml() + giftAdminHtml() : ""}`;
   },
   bind(root) {
     rvBindGift(root, () => window.RV_CLOUD && RV_CLOUD.sb, () => location.reload());
-    if (planNow().admin && window.RV_CLOUD) { compAdminBind(root); giftAdminBind(root); }
+    if (planNow().admin && window.RV_CLOUD) { peopleAdminBind(root); compAdminBind(root); giftAdminBind(root); }
     rvBindManage(root, async () => window.RV_CLOUD && (await RV_CLOUD.sb.auth.getSession()).data.session?.access_token);
     $$("[data-pl-bill]", root).forEach(b => b.onclick = () => { R.f.plYear = b.dataset.plBill === "y"; render(false); });
     $$("[data-pl-pick]", root).forEach(b => b.onclick = () => { if (b.dataset.plPick === "trial") startTrial(); else { const u = window.RV_CLOUD && rvCheckoutUrl(b.dataset.plPick, !!R.f.plYear, RV_CLOUD.user); if (u) location.href = u; else toast(window.RV_CLOUD ? "Checkout opens soon." : "Create a free account first.", "err"); } });
@@ -95,4 +95,50 @@ function compAdminBind(root) {
     const { data, error } = await sb.rpc("revoke_plan", { em: b.dataset.compOff });
     if (error || data !== "ok") return toast("Couldn't remove it.", "err"); toast("Removed."); loadComps();
   });
+}
+
+/* ---- admin: everyone who signed up, to reach out ---- */
+let PEOPLE = null;
+async function loadPeople() {
+  const { data, error } = await RV_CLOUD.sb.rpc("admin_people");
+  PEOPLE = error ? { err: /does not exist|schema cache|function/i.test(error.message || "") ? "setup" : "load" } : data || [];
+  if (R.sec === "plans") render(false);
+}
+const pplPlan = g => { const over = g.plan_until && new Date(g.plan_until) < new Date(), id = g.plan === "pro" ? "rider" : g.plan;
+  if (id === "free" || over) return { k: "free", t: "Free", c: "gray" };
+  const n = { rider: "Rider", restorer: "Restorer", shop: "Shop" }[id] || id;
+  return g.paid ? { k: "paid", t: n + " · paid", c: "green" } : g.comp ? { k: "gift", t: n + " · gifted", c: "amber" } : g.trial ? { k: "trial", t: n + " · trial", c: "amber" } : { k: "paid", t: n, c: "green" }; };
+function pplRows() {
+  const f = R.f.ppl || {}, q = (f.q || "").toLowerCase(), wk = Date.now() - 7 * 864e5;
+  return (Array.isArray(PEOPLE) ? PEOPLE : []).filter(g => {
+    if (q && !((g.email || "") + " " + (g.name || "")).toLowerCase().includes(q)) return false;
+    const k = pplPlan(g).k;
+    if (f.show === "free") return k === "free"; if (f.show === "paid") return k === "paid"; if (f.show === "gift") return k === "gift" || k === "trial";
+    if (f.show === "nobike") return !g.bikes; if (f.show === "new") return new Date(g.joined) > wk; return true; });
+}
+function peopleAdminHtml() {
+  if (PEOPLE === null) { PEOPLE = []; loadPeople(); }
+  if (PEOPLE.err) return `<section class="mh-panel gift-admin"><div class="mh-ph"><h2><span class="mh-hi">${ic("users")}</span>People</h2></div><p class="muted">${PEOPLE.err === "setup" ? "This needs a one-time setup in the database (supabase/admin_people.sql)." : "Couldn't load the list. Refresh to try again."}</p></section>`;
+  const all = PEOPLE, f = R.f.ppl || {}, wk = Date.now() - 7 * 864e5, rows = pplRows(), day = d => d ? new Date(d).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" }) : "never";
+  const n = k => all.filter(g => pplPlan(g).k === k).length;
+  return `<section class="mh-panel gift-admin ppl"><div class="mh-ph"><h2><span class="mh-hi">${ic("users")}</span>People <span class="faint" style="font-weight:400;font-size:13px">only you can see this</span></h2></div>
+    <div class="ppl-stats"><div><b>${all.length}</b><span>signed up</span></div><div><b>${all.filter(g => new Date(g.joined) > wk).length}</b><span>this week</span></div><div><b>${n("paid")}</b><span>paying</span></div><div><b>${n("gift") + n("trial")}</b><span>gifted or trial</span></div><div><b>${all.filter(g => !g.bikes).length}</b><span>no bike yet</span></div></div>
+    <div class="ppl-tools"><input id="pplQ" type="search" placeholder="Search name or email" value="${esc(f.q || "")}" aria-label="Search people">
+      <select id="pplShow" aria-label="Show"><option value="">Everyone</option><option value="new">Joined this week</option><option value="free">Free</option><option value="paid">Paying</option><option value="gift">Gifted or trial</option><option value="nobike">No bike added yet</option></select>
+      <button class="btn sm" id="pplCopy">${ic("copy")} Copy ${rows.length} emails</button><button class="btn sm" id="pplCsv">Download list</button></div>
+    <div class="ppl-list">${rows.map(g => { const pl = pplPlan(g); return `<div class="ppl-row"><div class="grow"><b>${esc(g.name || (g.email || "").split("@")[0])}</b> <span class="pill ${pl.c}">${esc(pl.t)}</span>
+      <small class="faint">${esc(g.email)} · joined ${esc(day(g.joined))} · last in ${esc(day(g.last_seen))} · ${g.bikes} bike${g.bikes === 1 ? "" : "s"}</small></div>
+      <a class="btn sm" href="mailto:${esc(g.email)}?subject=${encodeURIComponent("Revora Garage")}">Email</a></div>`; }).join("") || `<p class="muted" style="margin:8px 0 0">Nobody matches.</p>`}</div>
+    <p class="faint" style="font-size:12.5px;margin:8px 0 0">For a group email, copy the emails and paste them into BCC so people don't see each other's addresses.</p></section>`;
+}
+function peopleAdminBind(root) {
+  const q = $("#pplQ", root), sh = $("#pplShow", root);
+  if (sh) sh.value = (R.f.ppl || {}).show || "";
+  if (q) q.oninput = () => { R.f.ppl = { ...(R.f.ppl || {}), q: q.value }; clearTimeout(q._t); q._t = setTimeout(() => { render(false); const n = $("#pplQ"); if (n) { n.focus(); n.setSelectionRange(n.value.length, n.value.length); } }, 250); };
+  if (sh) sh.onchange = () => { R.f.ppl = { ...(R.f.ppl || {}), show: sh.value }; render(false); };
+  const cp = $("#pplCopy", root); if (cp) cp.onclick = async () => { const t = pplRows().map(g => g.email).join(", "); try { await navigator.clipboard.writeText(t); toast("Copied " + pplRows().length + " emails."); } catch (e) { prompt("Copy these emails:", t); } };
+  const cv = $("#pplCsv", root); if (cv) cv.onclick = () => {
+    const c = v => '"' + String(v ?? "").replace(/"/g, '""') + '"', d = v => v ? new Date(v).toISOString().slice(0, 10) : "";
+    const csv = ["Name,Email,Joined,Last sign-in,Plan,Bikes"].concat(pplRows().map(g => [g.name, g.email, d(g.joined), d(g.last_seen), pplPlan(g).t, g.bikes].map(c).join(","))).join("\n");
+    const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([csv], { type: "text/csv" })); a.download = "revora-people.csv"; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 2000); };
 }
