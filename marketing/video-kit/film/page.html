@@ -1,0 +1,68 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{box-sizing:border-box}html,body{margin:0;width:1080px;height:1920px;overflow:hidden}
+body{background:radial-gradient(120% 80% at 50% 38%,#22323e 0%,#17232C 55%,#111a21 100%);font-family:'Inter Display','Inter',sans-serif;color:#fff}
+#stage{position:absolute;inset:0;perspective:2200px}
+.phone{position:absolute;left:50%;top:310px;width:668px;height:1150px;margin-left:-334px;border-radius:92px;background:#0d0f12;padding:24px;
+  box-shadow:0 0 0 2px #3a424b inset,0 60px 120px rgba(0,0,0,.45),0 20px 40px rgba(0,0,0,.3);transform-style:preserve-3d;will-change:transform,opacity}
+.phone .scr{width:620px;height:1102px;border-radius:70px;overflow:hidden;background:#fff}
+.phone img{display:block;width:620px;height:1102px}
+.lab{position:absolute;left:0;right:0;top:1560px;text-align:center}
+.lab .m{overflow:hidden;padding:4px 0}
+.lab .k{font-size:30px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#D9BF8E;padding-left:.2em}
+.lab .t{font-size:46px;font-weight:600;letter-spacing:-.015em;color:#fff;margin-top:12px}
+.lab .k,.lab .t{display:block;will-change:transform}
+#logo{position:absolute;left:50%;top:50%;width:760px;will-change:transform}
+#logo svg{display:block;width:100%;height:auto}
+#url{position:absolute;left:0;right:0;top:1250px;text-align:center}
+#url .m{overflow:hidden}
+#url .u{display:block;font-size:40px;font-weight:600;letter-spacing:.08em;color:#D9BF8E}
+#url .s{display:block;font-size:32px;font-weight:500;color:#B9D9EB;margin-top:20px}
+</style></head><body><div id="stage"></div><div id="logo"></div>
+<div id="url"><div class="m"><span class="u">REVORAGARAGE.COM</span></div><div class="m"><span class="s">Free to start</span></div></div>
+<script>
+const SC=[ // id, start, srcStart(s), speed, frames, kicker, line
+ ["s0",3.1,0.3,1.4,194,"Garage",""],
+ ["s1",6.9,0.4,1.2,180,"Service log",""],
+ ["s3",10.7,0.5,1.1,187,"Parts",""],
+ ["s4",14.35,3.8,1.4,256,"Photo scan",""],
+ ["s5",17.6,0.3,1.0,120,"Shopping list",""]];
+const TR=0.75, END=26.2, OUT=20.8, BACK=999, U1=21.8, U2=23.2, FADE=25.5;
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const eio=x=>{x=clamp(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2};
+const eout=x=>{x=clamp(x);return 1-Math.pow(1-x,4)};
+const ein=x=>{x=clamp(x);return x*x*x};
+const stage=document.getElementById('stage');
+const P=SC.map(s=>{const d=document.createElement('div');d.className='phone';d.innerHTML='<div class="scr"><img></div>';stage.appendChild(d);
+  const l=document.createElement('div');l.className='lab';l.innerHTML=`<div class="m"><span class="k">${s[5]}</span></div>`;document.body.appendChild(l);return {d,img:d.querySelector('img'),l,k:l.querySelector('.k'),t:l.querySelector('.t'),cur:''};});
+window.setLogo=svg=>{document.getElementById('logo').innerHTML=svg};
+window.render=async t=>{
+  const lg=document.getElementById('logo'), url=document.getElementById('url');
+  // logo: reveal 0.3-1.3, move up 2.2-3.0, return 20.0-20.9
+  const rev=eout((t-0.3)/1.0), up=eio((t-2.9)/0.8), back=eio((t-BACK)/0.9);
+  const yC=-180, yTop=-915; let y=yC+(yTop-yC)*up+(yC-yTop)*back, sc=1-0.64*up+0.64*back;
+  lg.style.transform=`translate(-50%,${y}px) scale(${sc})`;
+  lg.style.clipPath=`inset(0 0 ${100-100*rev}% 0)`; lg.style.opacity=clamp(rev*1.4)*(1-eio((t-OUT)/0.45));
+  lg.style.filter=`blur(${(1-rev)*6}px)`;
+  const ur=eout((t-U1)/0.7); url.querySelector('.u').style.transform=`translateY(${(1-ur)*110}%)`;
+  const us=eout((t-U2)/0.7); url.querySelector('.s').style.transform=`translateY(${(1-us)*130}%)`;
+  url.style.opacity=0;
+  const jobs=[];
+  SC.forEach((s,i)=>{const p=P[i], st=s[1], nx=SC[i+1]?SC[i+1][1]:OUT;
+    let vis=t>=st-0.01 && t<=nx+TR+0.05; if(i==0) vis=t>=2.8 && t<=nx+TR+0.05;
+    p.d.style.display=vis?'block':'none'; p.l.style.display=vis?'block':'none'; if(!vis) return;
+    let x=0,ry=0,sc=1,op=1,yy=0;
+    if(i==0){ const a=eout((t-3.0)/1.1); yy=(1-a)*900; sc=0.92+0.08*a; ry=0; }
+    else { const a=eio((t-st)/TR); x=(1-a)*760; ry=-(1-a)*26; sc=0.86+0.14*a; op=clamp(a*2); }
+    if(SC[i+1]){ const b=eio((t-nx)/TR); x-=b*760; ry+=b*26; sc-=b*0.14; op*=1-clamp((b-0.5)*2); }
+    else { const b=eio((t-OUT)/0.55); yy+=b*1750; sc-=b*0.06; op*=1-clamp((b-0.6)/0.4); }
+    const drift=1+0.03*clamp((t-st)/(nx-st));
+    p.d.style.transform=`translateX(${x}px) translateY(${yy}px) rotateY(${ry}deg) scale(${sc*drift})`; p.d.style.opacity=op;
+    const f=Math.min(s[4],Math.max(1,Math.round((s[2]+Math.max(0,t-st)*s[3])*30)+1)), src='fr/'+s[0]+'/'+String(f).padStart(4,'0')+'.jpg';
+    if(p.cur!==src){p.cur=src;p.img.src=src;jobs.push(p.img.decode().catch(()=>{}));}
+    const li=eout((t-st-0.35)/0.6), li2=eout((t-st-0.5)/0.6), lo=ein((t-(nx-0.05))/0.35);
+    const lo2=SC[i+1]?lo:ein((t-(OUT-0.1))/0.35);
+    p.k.style.transform=`translateY(${(1-li)*120 - lo2*120}%)`; 
+  });
+  await Promise.all(jobs);
+};
+</script></body></html>

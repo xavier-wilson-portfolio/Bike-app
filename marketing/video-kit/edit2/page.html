@@ -1,0 +1,91 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{box-sizing:border-box}html,body{margin:0;width:1080px;height:1920px;overflow:hidden;background:#0d151b}
+#stage{position:absolute;inset:0;perspective:2400px;overflow:hidden;background:#0d151b}
+.L{position:absolute;inset:0;overflow:hidden;backface-visibility:hidden;will-change:transform}
+.shot{position:absolute;inset:0;background-size:1080px 1920px;background-position:center;background-repeat:no-repeat}
+.card{position:absolute;inset:0;background:radial-gradient(110% 70% at 50% 45%,#22323e 0%,#17232C 55%,#0f181e 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Inter Display','Inter',sans-serif;color:#fff;text-align:center}
+.card .m{overflow:hidden;padding:0 20px;line-height:1}
+.card .w{display:block;font-weight:900;font-size:150px;letter-spacing:-.04em;line-height:1.02}
+.card .w.t{color:#D9BF8E}
+.card .bar{height:12px;background:#D9BF8E;margin-top:44px}
+.grid{position:absolute;inset:0;background:radial-gradient(110% 70% at 50% 45%,#22323e 0%,#17232C 55%,#0f181e 100%)}
+.tile{position:absolute;width:470px;height:836px;border-radius:34px;overflow:hidden;background-size:470px 836px;box-shadow:0 30px 60px rgba(0,0,0,.45),0 0 0 3px rgba(255,255,255,.08)}
+#fx{position:absolute;inset:0;pointer-events:none}
+</style></head><body><div id="stage"><div id="A" class="L"></div><div id="B" class="L"></div></div><div id="fx"></div>
+<script>
+const W=1080,H=1920,FPS=30,B=60/110;
+const N={s0:194,s1:180,s3:187,s4:256,s5:120}, cache=new Map();
+const url=(s,f)=>`fr/${s}/${String(Math.max(1,Math.min(N[s],f))).padStart(4,'0')}.jpg`;
+function load(u){if(cache.has(u))return cache.get(u);const im=new Image();im.src=u;const p=im.decode().catch(()=>{});cache.set(u,p);if(cache.size>300)cache.delete(cache.keys().next().value);return p;}
+const cl=(v,a=0,b=1)=>Math.min(b,Math.max(a,v)), io=t=>{t=cl(t);return t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2}, o3=t=>1-Math.pow(1-cl(t),3), i3=t=>Math.pow(cl(t),3), back=t=>{t=cl(t);const c=1.6;return 1+(c+1)*Math.pow(t-1,3)+c*Math.pow(t-1,2)};
+// segments: type, beats, ...; tr = transition INTO the next segment
+const G=[];
+const shot=(b,s,ss,sp,tr)=>G.push({k:'shot',b,s,ss,sp,tr});
+const card=(b,words,tr)=>G.push({k:'card',b,words,tr});
+card(2,[['YOUR'],['BIKE.']],'strips');
+card(2,[["ITS WHOLE"],['STORY.','t']],'iris');
+shot(2,'s0',2.2,1.2,'cube');
+card(2,[['EVERY'],['SERVICE.','t']],'zoom');
+shot(2,'s1',1.6,1.2,'diag');
+card(2,[['EVERY'],['PART.','t']],'spin');
+shot(3,'s3',0.8,1.15,'split');
+card(2,[['SNAP'],['IT.','t']],'flip');
+shot(2,'s4',4.4,1.45,'push');
+card(2,[['PRICED'],['UP.','t']],'iris');
+shot(2,'s5',0.4,1.3,'strips');
+G.push({k:'grid',b:3,tr:'zoom'});
+shot(2,'s3',2.0,0.6,'cube');
+shot(.5,'s1',3.2,1.2,'pushL'); shot(.5,'s4',6.2,1.2,'pushR'); shot(.5,'s5',2.2,1.2,'pushL'); shot(.5,'s0',4.6,1.2,'flash');
+let acc=0; G.forEach(g=>{g.st=acc*B; g.du=g.b*B; acc+=g.b;}); const END=acc*B; window.DUR=END;
+const TD={strips:.30,iris:.30,cube:.36,zoom:.30,diag:.30,spin:.32,split:.30,flip:.34,push:.27,pushL:.18,pushR:.18,flash:.001};
+G.forEach((g,i)=>{g.din=i?(TD[G[i-1].tr]||.3):0;});
+function fill(el,g,lt,key){ // render segment g at local time lt into element el
+  const jobs=[];
+  if(g.k==='shot'){ let sh=el.querySelector('.shot'); if(!sh||el.dataset.k!=='shot'){el.innerHTML='<div class="shot"></div>';el.dataset.k='shot';sh=el.firstChild;}
+    const u=url(g.s,Math.round((g.ss+Math.max(0,lt)*g.sp)*FPS)+1); jobs.push(load(u)); sh.style.backgroundImage=`url(${u})`;
+    const z=1+0.035*cl(lt/g.du); sh.style.transform=`scale(${z})`; }
+  else if(g.k==='card'){ const id='c'+G.indexOf(g); if(el.dataset.k!==id){el.dataset.k=id; el.innerHTML='<div class="card">'+g.words.map(w=>`<div class="m"><span class="w ${w[1]||''}">${w[0]}</span></div>`).join('')+'<div class="bar"></div></div>';}
+    const la=lt+g.din; const ws=el.querySelectorAll('.w'); ws.forEach((w,i)=>{const a=back((la-0.02-i*0.12)/0.36); w.style.transform=`translateY(${(1-a)*105}%)`;});
+    el.querySelector('.bar').style.width=(o3((la-0.2)/0.45)*260)+'px'; }
+  else if(g.k==='grid'){ lt=lt+g.din; if(el.dataset.k!=='grid'){el.dataset.k='grid'; el.innerHTML='<div class="grid">'+[0,1,2,3].map(i=>`<div class="tile" id="t${key}${i}"></div>`).join('')+'</div>';}
+    const sc=[['s1',2.2],['s3',1.0],['s4',5.0],['s5',0.8]], pos=[[56,108],[554,108],[56,976],[554,976]];
+    el.querySelectorAll('.tile').forEach((tl,i)=>{const a=back((lt-i*B*0.5)/0.3); const u=url(sc[i][0],Math.round((sc[i][1]+Math.max(0,lt-i*B*.5)*1.2)*FPS)+1); jobs.push(load(u));
+      tl.style.backgroundImage=`url(${u})`; tl.style.left=pos[i][0]+'px'; tl.style.top=pos[i][1]+'px'; tl.style.opacity=cl(a*3); tl.style.transform=`scale(${0.6+0.4*a}) rotate(${(1-cl(a))*(i%2?6:-6)}deg)`;});
+    const zz=1+0.04*cl(lt/g.du); el.firstChild.style.transform=`scale(${zz})`; }
+  return jobs;
+}
+function reset(el){el.style.display='block';el.style.transform='';el.style.clipPath='';el.style.opacity=1;el.style.filter='';el.style.transformOrigin='50% 50%';el.style.zIndex='';}
+window.render=async t=>{
+  const A=document.getElementById('A'), Bel=document.getElementById('B'), fx=document.getElementById('fx'); reset(A); reset(Bel); fx.innerHTML='';
+  if(t>=END){A.innerHTML='';Bel.innerHTML='';A.dataset.k='';Bel.dataset.k='';return;}
+  const i=G.findIndex(g=>t>=g.st&&t<g.st+g.du), g=G[i], nx=G[i+1], d=TD[g.tr]||.3, lt=t-g.st;
+  let jobs=fill(A,g,lt,'a'); Bel.style.display='none';
+  const ts=g.st+g.du-d; 
+  if(nx && t>=ts){ const p=(t-ts)/d, e=io(p); Bel.style.display='block'; jobs=jobs.concat(fill(Bel,nx,t-nx.st,'b'));
+    switch(g.tr){
+      case 'cube': A.style.transformOrigin='100% 50%'; A.style.transform=`translateX(${-W*e}px) rotateY(${-90*e}deg)`; A.style.filter=`brightness(${1-0.55*e})`;
+        Bel.style.transformOrigin='0% 50%'; Bel.style.transform=`translateX(${W*(1-e)}px) rotateY(${90*(1-e)}deg)`; Bel.style.filter=`brightness(${0.45+0.55*e})`; break;
+      case 'iris': Bel.style.zIndex=2; Bel.style.clipPath=`circle(${e*1150}px at 50% 50%)`; A.style.transform=`scale(${1+0.08*e})`;
+        fx.innerHTML=`<svg width="1080" height="1920"><circle cx="540" cy="960" r="${e*1150}" fill="none" stroke="#D9BF8E" stroke-width="${10*(1-e)+2}" opacity="${1-e}"/></svg>`; break;
+      case 'strips': { A.style.display='none'; Bel.style.zIndex=1; let h=''; for(let k=0;k<6;k++){const pk=io((p-k*0.07)/0.6); h+=`<div class="L" id="S${k}" style="z-index:3;clip-path:inset(0 ${W-(k+1)*W/6}px 0 ${k*W/6}px);transform:translateY(${(k%2?-1:1)*H*pk}px)"></div>`;}
+        fx.innerHTML=h; const st=document.getElementById('stage'); for(let k=0;k<6;k++){const el=document.getElementById('S'+k); st.appendChild(el); jobs=jobs.concat(fill(el,g,lt,'s'+k));} break; }
+      case 'diag': { Bel.style.zIndex=2; const x1=-700+e*(W+1400); Bel.style.clipPath=`polygon(0 0, ${x1}px 0, ${x1-700}px 100%, 0 100%)`;
+        fx.innerHTML=`<svg width="1080" height="1920"><line x1="${x1}" y1="0" x2="${x1-700}" y2="1920" stroke="#D9BF8E" stroke-width="10"/></svg>`; break; }
+      case 'zoom': A.style.transform=`scale(${1+2.2*i3(p)})`; A.style.opacity=1-cl(p*1.4-0.2); Bel.style.zIndex=-1; Bel.style.transform=`scale(${0.65+0.35*o3(p)})`; Bel.style.opacity=cl(p*1.6); break;
+      case 'spin': A.style.transform=`rotate(${100*i3(p)}deg) scale(${1+0.6*i3(p)})`; A.style.opacity=1-cl((p-0.35)*2); Bel.style.zIndex=-1; Bel.style.transform=`rotate(${-60*(1-o3(p))}deg) scale(${1.4-0.4*o3(p)})`; break;
+      case 'split': { A.style.display='none'; Bel.style.zIndex=1; fx.innerHTML=`<div class="L" id="H0" style="z-index:3;clip-path:inset(0 0 50% 0);transform:translateY(${-H*0.5*e}px)"></div><div class="L" id="H1" style="z-index:3;clip-path:inset(50% 0 0 0);transform:translateY(${H*0.5*e}px)"></div>`;
+        const st=document.getElementById('stage'); ['H0','H1'].forEach(id=>{const el=document.getElementById(id); st.appendChild(el); jobs=jobs.concat(fill(el,g,lt,id));}); Bel.style.transform=`scale(${1.15-0.15*e})`; break; }
+      case 'flip': A.style.transformOrigin='50% 100%'; A.style.transform=`translateY(${-H*e}px) rotateX(${90*e}deg)`; A.style.filter=`brightness(${1-0.5*e})`;
+        Bel.style.transformOrigin='50% 0%'; Bel.style.transform=`translateY(${H*(1-e)}px) rotateX(${-90*(1-e)}deg)`; break;
+      case 'push': A.style.transform=`translateY(${-H*e}px)`; Bel.style.transform=`translateY(${H*(1-e)}px)`; break;
+      case 'pushL': A.style.transform=`translateX(${-W*e}px)`; Bel.style.transform=`translateX(${W*(1-e)}px)`; break;
+      case 'pushR': A.style.transform=`translateX(${W*e}px)`; Bel.style.transform=`translateX(${-W*(1-e)}px)`; break;
+    }
+  }
+  // tiny white hit on each segment start
+  const hit=cl(1-lt/0.07)*0.22; if(hit>0.01) fx.insertAdjacentHTML('beforeend',`<div style="position:absolute;inset:0;background:#fff;opacity:${hit}"></div>`);
+  await Promise.all(jobs);
+};
+// clean up strip clones each frame
+const _r=window.render; window.render=async t=>{document.querySelectorAll('#stage > .L:not(#A):not(#B)').forEach(e=>e.remove()); await _r(t); await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));};
+</script></body></html>
