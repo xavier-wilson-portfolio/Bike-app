@@ -12,5 +12,6 @@
   "billingPortal": "https://billing.stripe.com/p/login/fZu28r9MY0qRcVCgABabK00",
   "plansLive": true,
   "trialLink": "https://buy.stripe.com/28EaEX1gs2yZf3KacdabK06",
-  "primaryHost": "revoragarage.com"
+  "primaryHost": "revoragarage.com",
+  "shopApi": "https://revora-shop.xavier-j-wilson101.workers.dev"
 }
