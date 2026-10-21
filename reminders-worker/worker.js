@@ -142,22 +142,30 @@ function welcomeHtml(c, unsub) {
   </div></body></html>`;
 }
 const welcomeText = (c, unsub) => c.paras.map(t => typeof t === "string" ? t : t.list.map(i => "- " + i).join("\n")).join("\n\n") + `\n\n${c.button[0]}: ${c.button[1]}\n\n` + (c.social ? "Follow Revora: " + SOCIAL.map(([n, u]) => n + " " + u).join(" | ") + "\n\n" : "") + `The Revora Garage team\n\nDon't want these? ${unsub}`;
-async function sendWelcome(env, to, step, p, uid) {
+async function welcomeMsg(env, to, step, p, uid) {
   const c = welcomeCopy(step, p), unsub = `${env.SELF_URL || "https://revora-reminders.xavier-j-wilson101.workers.dev"}/unsub?u=${uid}&t=${await sig(uid, env)}`;
+  return { from: WFROM, to: [to], reply_to: REPLY_TO, subject: c.subject, html: welcomeHtml(c, unsub), text: welcomeText(c, unsub),
+    headers: { "List-Unsubscribe": `<${unsub}>`, "List-Unsubscribe-Post": "List-Unsubscribe=One-Click" } };
+}
+async function sendWelcome(env, to, step, p, uid) {
   const res = await fetch("https://api.resend.com/emails", { method: "POST", headers: { Authorization: "Bearer " + env.RESEND_API_KEY, "content-type": "application/json" },
-    body: JSON.stringify({ from: WFROM, to: [to], reply_to: REPLY_TO, subject: c.subject, html: welcomeHtml(c, unsub), text: welcomeText(c, unsub),
-      headers: { "List-Unsubscribe": `<${unsub}>`, "List-Unsubscribe-Post": "List-Unsubscribe=One-Click" } }) });
+    body: JSON.stringify(await welcomeMsg(env, to, step, p, uid)) });
   if (!res.ok) console.log("welcome failed", res.status, (await res.text()).slice(0, 300));
   return res.ok;
 }
+// one batch call to Resend (up to 100 emails) and one call to log them, so any number of people fits in one run
 async function runWelcome(env) {
   if (!env.RESEND_API_KEY || !env.WORKER_SECRET) return { error: "not configured" };
-  const rows = await rpc("welcome_due", { sec: env.WORKER_SECRET, preview: false });
+  const rows = await rpc("welcome_due", { sec: env.WORKER_SECRET, preview: false }), jobs = [];
+  for (const r of rows || []) { jobs.push([r, r.step]); if (r.step === 1 && r.free) jobs.push([r, 2]); } // deals go out with the thank-you for people on Free
   const out = { due: (rows || []).length, sent: 0, failed: 0 };
-  for (const r of rows || []) {
-    if (await sendWelcome(env, r.email, r.step, r, r.user_id)) { await rpc("welcome_mark", { sec: env.WORKER_SECRET, uid: r.user_id, st: r.step }); out.sent++; } else { out.failed++; continue; }
-    // the deals email goes out right after the thank-you for people on Free
-    if (r.step === 1 && r.free && await sendWelcome(env, r.email, 2, r, r.user_id)) { await rpc("welcome_mark", { sec: env.WORKER_SECRET, uid: r.user_id, st: 2 }); out.sent++; }
+  for (let i = 0; i < jobs.length; i += 100) {
+    const part = jobs.slice(i, i + 100), msgs = [];
+    for (const [r, st] of part) msgs.push(await welcomeMsg(env, r.email, st, r, r.user_id));
+    const res = await fetch("https://api.resend.com/emails/batch", { method: "POST", headers: { Authorization: "Bearer " + env.RESEND_API_KEY, "content-type": "application/json" }, body: JSON.stringify(msgs) });
+    if (!res.ok) { out.failed += part.length; console.log("welcome batch failed", res.status, (await res.text()).slice(0, 300)); continue; }
+    await rpc("welcome_mark_many", { sec: env.WORKER_SECRET, uids: part.map(j => j[0].user_id), steps: part.map(j => j[1]) });
+    out.sent += part.length;
   }
   console.log("welcome", JSON.stringify(out));
   return out;

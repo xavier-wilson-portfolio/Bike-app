@@ -68,6 +68,18 @@ begin
   return 'ok';
 end $$;
 
+create or replace function public.welcome_mark_many(sec text, uids uuid[], steps int[]) returns int
+language plpgsql security definer set search_path = public as $$
+declare n int;
+begin
+  if not welcome_secret_ok(sec) then raise exception 'denied'; end if;
+  insert into welcome_log (user_id, step) select u, s from unnest(uids, steps) as x(u, s) on conflict do nothing;
+  get diagnostics n = row_count;
+  return n;
+end $$;
+revoke all on function public.welcome_mark_many(text, uuid[], int[]) from public;
+grant execute on function public.welcome_mark_many(text, uuid[], int[]) to anon, authenticated;
+
 create or replace function public.welcome_unsub(sec text, uid uuid) returns text
 language plpgsql security definer set search_path = public as $$
 begin
