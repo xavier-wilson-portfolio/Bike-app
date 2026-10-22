@@ -71,7 +71,7 @@ const first = n => String(n || "").trim().split(/\s+/)[0].replace(/^./, c => c.t
 const SOCIAL = [["TikTok", "https://www.tiktok.com/@revora.garage"], ["Instagram", "https://www.instagram.com/revoragarageofficial/"], ["Facebook", "https://www.facebook.com/profile.php?id=61595784891437"]];
 const PRICES = [
   "Rider: $4.99 a month (was $6.99), or $49 a year. Service reminders by email before things are due, recall alerts for your bike, fuel and cost tracking, and room for 3 bikes.",
-  "Restorer: $9.99 a month (was $19.99), or $99 a year. Everything in Rider, plus the parts scan from a photo, AI that reads your receipts, a shopping list with a budget, step-by-step restoration courses and up to 10 bikes. You can try it free for 30 days, no card needed.",
+  "Restorer: $9.99 a month (was $19.99), or $99 a year. Everything in Rider, plus the parts scan from a photo, AI that reads your receipts, a shopping list with a budget, step-by-step restoration courses and up to 10 bikes. You can try it free for 30 days and cancel any time before you're charged.",
   "Shop: $29 a month (was $49.99). For shops and builders: work orders, customer bikes with history reports and a team of up to 10."];
 // step 1 thanks · 2 deals · 3 deals reminder · 4 features + socials · 5 check-in · 6+ every two weeks, rotating
 function welcomeCopy(step, p) {
@@ -94,7 +94,7 @@ function welcomeCopy(step, p) {
     "Once you upgrade, reminders start showing up in your inbox before a service is due, recalls for your bike come to you, and if you're restoring, the scan, shopping list and course open up right away. Your bikes and records stay exactly where they are."], button: plans };
   if (step === 3) return { subject: "The launch prices are still on", paras: [hi,
     "A quick reminder that Revora plans are still at launch prices: Rider at $4.99 a month and Restorer at $9.99 a month, down from $6.99 and $19.99.",
-    "If you're working on a project bike, Restorer's 30-day free trial is the easiest way to see if it's worth it. No card needed, and you go back to Free on your own if you don't keep it."], button: plans };
+    "If you're working on a project bike, Restorer's 30-day free trial is the easiest way to see if it's worth it. Cancel any time in the first 30 days and you won't pay a thing."], button: plans };
   if (step === 4) return { subject: "A few things in Revora you might not have tried", paras: [hi,
     "You've had Revora for a week. Here are a few things people tend to miss:",
     { list: ["Ask the mechanic: type a question about your bike and get an answer that knows your model",

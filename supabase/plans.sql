@@ -14,9 +14,8 @@ declare used boolean;
 begin
   if auth.uid() is null then return 'signin'; end if;
   select trial_used into used from profiles where id = auth.uid();
-  if used then return 'used'; end if;
-  update profiles set plan = 'restorer', plan_until = now() + interval '30 days', trial_used = true, plan_chosen = true where id = auth.uid();
-  return 'ok';
+  -- the trial now starts on Stripe with a card (30 free days, then $9.99 a month), so this no longer hands out free plans
+  return 'card';
 end $$;
 revoke all on function public.start_trial() from public;
 grant execute on function public.start_trial() to authenticated;

@@ -58,6 +58,13 @@
     const u = new URL(base); if (user && user.id) u.searchParams.set("client_reference_id", user.id); if (user && user.email) u.searchParams.set("prefilled_email", user.email);
     return u.toString();
   };
+  // the Restorer free trial: a Stripe link with a 30-day trial on the $9.99 plan. A card goes in at the start and is charged on day 31 unless they cancel
+  window.rvTrialUrl = function (user) {
+    const base = (window.RV_CONFIG && RV_CONFIG.trialLink) || "";
+    if (!/^https:\/\/(buy|checkout)\.stripe\.com\//.test(base)) return "";
+    const u = new URL(base); if (user && user.id) u.searchParams.set("client_reference_id", user.id); if (user && user.email) u.searchParams.set("prefilled_email", user.email);
+    return u.toString();
+  };
   window.rvPlansHtml = function (opts = {}) {
     const yearly = !!opts.yearly, cur = opts.current || "", live = rvPlansLive(), mode = opts.mode || "view";   // view | choose
     const price = p => p.m === 0 ? `<b>$0</b><span>forever</span>` : yearly
@@ -87,7 +94,7 @@
       <div class="pl-faq">
         <div><b>What happens to my records if I change plans?</b><span>Nothing is ever deleted. On a smaller plan, features you don't have stay visible and your records stay safe until you upgrade again.</span></div>
         <div><b>Can I cancel any time?</b><span>Yes. You keep the paid features until the end of the month or year you paid for. Payments are handled by Stripe, and Revora never sees your card.</span></div>
-        <div><b>How does the Restorer trial work?</b><span>You get every Restorer feature for 30 days, no card needed. When it ends you're back on Free unless you choose a plan.</span></div>
+        <div><b>How does the Restorer trial work?</b><span>You get every Restorer feature free for 30 days. You add a card when you start, and it's charged $9.99 on day 31 unless you cancel before then. Cancel in one click from Manage billing.</span></div>
       </div></div>`;
   };
 })();

@@ -14,10 +14,9 @@ const trialOpen = () => !!window.RV_CLOUD && !planNow().trialUsed && planNow().i
 
 async function startTrial() {
   if (!window.RV_CLOUD) { location.href = location.pathname + "?auth=signup"; return; }
-  const { data, error } = await RV_CLOUD.sb.rpc("start_trial");
-  if (error) { toast(/function|schema cache/i.test(error.message || "") ? "The trial isn't switched on yet." : "Couldn't start the trial. Check your internet and try again.", "err"); return; }
-  if (data === "used") { toast("You've already had the free trial.", "err"); return; }
-  toast("Your 30-day Restorer trial has started."); setTimeout(() => location.reload(), 900);
+  const u = window.rvTrialUrl && rvTrialUrl(RV_CLOUD.user);
+  if (!u) { toast("The free trial isn't open right now. See plans to pick one.", "err"); return; }
+  location.href = u;   // Stripe takes the card, starts 30 free days, and charges on day 31 unless they cancel
 }
 const LOCK_TXT = {
   reminders: "See when every service comes due, with email and calendar reminders before it does.", recalls: "Get NHTSA safety recalls for your bike and a heads-up when a new one comes out.",

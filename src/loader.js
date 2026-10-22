@@ -221,7 +221,7 @@
     const makes = [...new Set(INDEX.filter(b => !b.generic && !b.universal).map(b => b.make))].sort();
     const head = !goal ? `<div class="eyebrow">${mode === "new" ? "New project" : "Add your bike"}</div><h1 class="disp">What are you doing with your bike?</h1><p class="muted">This sets up your bike's page. You can start restoring later from the menu.</p>`
       : goal === "maintain" ? `<div class="eyebrow">Maintenance and records</div><h1 class="disp">Which bike is it?</h1><p class="muted">Search for it, or add it with the year, make and model. Any bike works.</p>`
-      : `${sb && !hasPlanL("restorer") ? `<div class="pk-uprest"><b>Restoration courses are in Restorer.</b><span>${session && !myPlan().trialUsed ? "Try it free for 30 days. No card needed." : !session ? "Create a free account to start the 30-day free trial." : "Upgrade to start a restoration."}</span><button class="btn tan sm" data-plans>See plans</button></div>` : ""}<div class="eyebrow">${mode === "new" ? "New project" : "Motorcycle restoration"}</div><h1 class="disp">Which bike are you restoring?</h1><p class="muted">Any bike works. Search for it, or add it with the year, make and model, and you get a step-by-step restoration course built for its kind of bike.</p>`;
+      : `${sb && !hasPlanL("restorer") ? `<div class="pk-uprest"><b>Restoration courses are in Restorer.</b><span>${session && !myPlan().trialUsed ? "Try it free for 30 days. Cancel any time before day 31." : !session ? "Create a free account to start the 30-day free trial." : "Upgrade to start a restoration."}</span><button class="btn tan sm" data-plans>See plans</button></div>` : ""}<div class="eyebrow">${mode === "new" ? "New project" : "Motorcycle restoration"}</div><h1 class="disp">Which bike are you restoring?</h1><p class="muted">Any bike works. Search for it, or add it with the year, make and model, and you get a step-by-step restoration course built for its kind of bike.</p>`;
     frame(`${head}
       <div class="pk-goal" role="radiogroup" aria-label="What are you doing with your bike?">${Object.entries(GOALS).map(([k, [t, d]]) => `<button type="button" class="pk-goal-o${goal === k ? " on" : ""}" role="radio" aria-checked="${goal === k}" data-goal="${k}"><span class="pk-goal-dot" aria-hidden="true"></span><b>${t}</b><span class="muted">${d}</span></button>`).join("")}</div>
       ${goal ? `<div class="pick-search"><input type="search" id="pickQ" placeholder="Year, make, model, e.g. ${goal === "maintain" ? "2012 Suzuki V-Strom 650" : "1977 Suzuki GS750"}" autocomplete="off" aria-label="Search for your bike"></div>
@@ -578,10 +578,9 @@
     document.body.appendChild(box);
   }
   async function startTrialL() {
-    const { data, error } = await sb.rpc("start_trial");
-    if (error) { note(/function|schema cache/i.test(error.message || "") ? "The free trial isn't switched on yet." : friendly(error), true); return false; }
-    if (data === "used") { note("You've already had the free trial.", true); return false; }
-    await loadProfile(); note("Your 30-day Restorer trial has started."); return true;
+    const u = window.rvTrialUrl && rvTrialUrl(session && session.user);
+    if (!u) { note("The free trial isn't open right now. See plans to pick one.", true); return false; }
+    location.href = u; return false;   // Stripe takes the card and starts the 30 free days
   }
   // how many bikes the plan allows; returns false (and shows the upgrade box) when the garage is full
   async function roomForBike() {
@@ -656,7 +655,7 @@
           <h1>Restore it. Ride it. Keep every record.</h1>
           <p>Revora keeps your bike's whole life in one place: services and reminders, receipts read by AI, recalls, mods, papers, and a step-by-step restoration course for any bike.</p>
           <div class="ld-cta"><button class="btn tan big" data-nav="signup">Get started free</button><button class="btn ghost-l big" data-nav="signin">Sign in</button></div>
-          <span class="ld-small">Free for one bike. Restorer free for 30 days. No card needed.</span></div>
+          <span class="ld-small">Free for one bike. Restorer free for 30 days, cancel any time.</span></div>
         <div class="ld-art">${["bike-cafe", "bike-adventure", "bike-cruiser"].map((n, i) => sil(n) ? `<img class="ld-s s${i}" src="${sil(n)}" alt="">` : "").join("")}</div></section>
       <section class="ld-strip"><div><b>Any bike</b><span>Search the library or add yours by year, make and model</span></div><div><b>8 kinds of bike</b><span>Courses tailored to cruisers, sport bikes, scooters and more</span></div><div><b>Your records stay yours</b><span>Export or print them any time</span></div></section>
       <section class="ld-sec" id="ld-features"><h2>Everything your bike needs, in one place</h2><p class="ld-sub">Start with the free maintenance log. Add more when you want it.</p>
