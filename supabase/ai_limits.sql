@@ -1,5 +1,5 @@
 -- Revora: plan limits for the AI, checked by the AI worker on every request.
--- Ask the mechanic: Rider 10 questions a day, Restorer and Shop unlimited. Receipts and parts scan: Restorer and Shop.
+-- Ask the mechanic: Free 3 questions in total to try it, Rider 10 a day, Restorer and Shop unlimited. Receipts and parts scan: Restorer and Shop.
 -- The worker calls use_ai() with the person's own sign-in, so no secret keys are needed.
 -- Run once in the Supabase SQL editor. Safe to run again.
 create table if not exists public.ai_usage (
@@ -30,8 +30,8 @@ begin
     if pl not in ('restorer', 'shop') then return 'locked'; end if;
     cap := 200;                              -- a generous daily ceiling so one account can't run up the bill
   else
-    if pl = 'free' then return 'locked'; end if;
-    cap := case when pl = 'rider' then 10 else 300 end;
+    if pl = 'free' and (select coalesce(sum(n), 0) from ai_usage a where a.user_id = auth.uid() and a.kind = 'chat') >= 3 then return 'limit'; end if;
+    cap := case when pl = 'free' then 3 when pl = 'rider' then 10 else 300 end;
   end if;
   insert into ai_usage (user_id, day, kind, n) values (auth.uid(), current_date, use_ai.kind, 1)
   on conflict (user_id, day, kind) do update set n = ai_usage.n + 1
