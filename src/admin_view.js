@@ -38,7 +38,7 @@
   function overview() {
     const P = arr(D.people), wk = Date.now() - 7 * 864e5, td = new Date(); td.setHours(0, 0, 0, 0);
     const n = k => P.filter(g => planOf(g).k === k).length;
-    const tiles = [[P.length, "Signed up"], [P.filter(g => new Date(g.joined) >= td).length, "Today"], [P.filter(g => new Date(g.joined) > wk).length, "This week"], [n("paid"), "Paying"], [n("gift") + n("trial"), "Gifted or trial"], [P.filter(g => g.last_seen && new Date(g.last_seen) > wk).length, "Active this week"], [P.filter(g => !g.bikes).length, "No bike yet"], [newFb().length, "New feedback", "fb"]];
+    const tiles = [[P.length, "Signed up"], [P.filter(g => new Date(g.joined) >= td).length, "Today"], [P.filter(g => new Date(g.joined) > wk).length, "This week"], [n("paid"), "Paying"], [n("gift") + n("trial"), "Gifted or trial"], [P.filter(g => g.last_seen && new Date(g.last_seen) > wk).length, "Active this week"], [P.filter(g => g.sms_ok).length, "Said yes to texts"], [newFb().length, "New feedback", "fb"]];
     const W = D.welcome;
     return `<div class="adm-tiles">${tiles.map(([v, t, go]) => `<${go ? `button type="button" data-adm-tab="${go}"` : "div"} class="adm-tile${go && v ? " hot" : ""}"><b>${D.people === null ? "…" : esc(v)}</b><span>${esc(t)}</span></${go ? "button" : "div"}>`).join("")}</div>
       ${D.people && D.people.err ? `<p class="muted">${D.people.err === "setup" ? "People need a one-time setup in the database (supabase/admin_people.sql)." : "Couldn't load people. Refresh to try again."}</p>` : `<div class="adm-card"><div class="adm-ch"><b>Sign-ups, last 30 days</b></div>${chart(P)}</div>`}
@@ -56,16 +56,16 @@
     return arr(D.people).slice().sort((a, b) => new Date(b.joined) - new Date(a.joined)).filter(g => {
       if (q && !((g.email || "") + " " + (g.name || "")).toLowerCase().includes(q)) return false; const k = planOf(g).k;
       if (S.show === "free") return k === "free"; if (S.show === "paid") return k === "paid"; if (S.show === "gift") return k === "gift" || k === "trial";
-      if (S.show === "nobike") return !g.bikes; if (S.show === "new") return new Date(g.joined) > wk; if (S.show === "idle") return !g.last_seen || new Date(g.last_seen) < Date.now() - 14 * 864e5; return true; });
+      if (S.show === "nobike") return !g.bikes; if (S.show === "new") return new Date(g.joined) > wk; if (S.show === "texts") return g.sms_ok; if (S.show === "phone") return !!g.phone; if (S.show === "idle") return !g.last_seen || new Date(g.last_seen) < Date.now() - 14 * 864e5; return true; });
   }
   function people() {
     if (D.people === null) return `<p class="muted">Loading…</p>`; if (D.people.err) return D.people.err === "setup" ? setupMsg("admin_people.sql") : `<p class="muted">Couldn't load the list.</p>`;
     const rows = pplRows();
     return `<div class="ppl-tools"><input data-adm-q type="search" placeholder="Search name or email" value="${esc(S.q)}" aria-label="Search people">
-        <select data-adm-show aria-label="Show">${[["", "Everyone"], ["new", "Joined this week"], ["free", "Free"], ["paid", "Paying"], ["gift", "Gifted or trial"], ["nobike", "No bike added yet"], ["idle", "Not back in 2 weeks"]].map(([v, t]) => `<option value="${v}"${S.show === v ? " selected" : ""}>${t}</option>`).join("")}</select>
-        <button class="btn sm" data-adm-copy>Copy ${rows.length} emails</button><button class="btn sm" data-adm-csv>Download list</button></div>
+        <select data-adm-show aria-label="Show">${[["", "Everyone"], ["new", "Joined this week"], ["free", "Free"], ["paid", "Paying"], ["gift", "Gifted or trial"], ["nobike", "No bike added yet"], ["texts", "Said yes to texts"], ["phone", "Gave a number"], ["idle", "Not back in 2 weeks"]].map(([v, t]) => `<option value="${v}"${S.show === v ? " selected" : ""}>${t}</option>`).join("")}</select>
+        <button class="btn sm" data-adm-copy>Copy ${rows.length} emails</button><button class="btn sm" data-adm-phones>Copy texting numbers</button><button class="btn sm" data-adm-csv>Download list</button></div>
       <div class="ppl-list">${rows.map(g => { const pl = planOf(g); return `<div class="ppl-row"><div class="grow"><b>${esc(g.name || (g.email || "").split("@")[0])}</b> <span class="pill ${pl.c}">${esc(pl.t)}</span>
-        <small class="faint">${esc(g.email)} · joined ${esc(day(g.joined))} · last in ${esc(day(g.last_seen))} · ${esc(g.bikes)} bike${g.bikes === 1 ? "" : "s"}</small></div>
+        <small class="faint">${esc(g.email)}${g.phone ? " · " + esc(g.phone) + (g.sms_ok ? " (texts ok)" : " (no texts)") : ""} · joined ${esc(day(g.joined))} · last in ${esc(day(g.last_seen))} · ${esc(g.bikes)} bike${g.bikes === 1 ? "" : "s"}</small></div>
         <button class="btn sm" data-adm-give="${esc(g.email)}">Give plan</button><a class="btn sm" href="mailto:${esc(g.email)}?subject=${encodeURIComponent("Revora Garage")}">Email</a></div>`; }).join("") || `<p class="muted">Nobody matches.</p>`}</div>
       <p class="faint adm-foot">For a group email, paste the copied emails into BCC so people don't see each other's addresses.</p>`;
   }
@@ -133,8 +133,9 @@
     const q = $("[data-adm-q]"); if (q) q.oninput = () => { S.q = q.value; clearTimeout(q._t); q._t = setTimeout(() => { draw(); const n = root.querySelector("[data-adm-q]"); n.focus(); n.setSelectionRange(n.value.length, n.value.length); }, 250); };
     const sh = $("[data-adm-show]"); if (sh) sh.onchange = () => { S.show = sh.value; draw(); };
     const cp = $("[data-adm-copy]"); if (cp) cp.onclick = async () => { const t = pplRows().map(g => g.email).join(", "); try { await navigator.clipboard.writeText(t); toast("Copied " + pplRows().length + " emails."); } catch (e) { prompt("Copy these emails:", t); } };
+    const pp = $("[data-adm-phones]"); if (pp) pp.onclick = async () => { const l = pplRows().filter(g => g.sms_ok && g.phone).map(g => g.phone); if (!l.length) return toast("Nobody in this list has said yes to texts yet.", true); const t = l.join(", "); try { await navigator.clipboard.writeText(t); toast("Copied " + l.length + " numbers."); } catch (e) { prompt("Copy these numbers:", t); } };
     const cv = $("[data-adm-csv]"); if (cv) cv.onclick = () => { const c = v => '"' + String(v ?? "").replace(/"/g, '""') + '"', d = v => v ? new Date(v).toISOString().slice(0, 10) : "";
-      const csv = ["Name,Email,Joined,Last sign-in,Plan,Bikes"].concat(pplRows().map(g => [g.name, g.email, d(g.joined), d(g.last_seen), planOf(g).t, g.bikes].map(c).join(","))).join("\n");
+      const csv = ["Name,Email,Phone,Texts OK,Joined,Last sign-in,Plan,Bikes"].concat(pplRows().map(g => [g.name, g.email, g.phone || "", g.sms_ok ? "yes" : "no", d(g.joined), d(g.last_seen), planOf(g).t, g.bikes].map(c).join(","))).join("\n");
       const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([csv], { type: "text/csv" })); a.download = "revora-people.csv"; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 2000); };
     $$("[data-adm-give]").forEach(b => b.onclick = () => { S.giveTo = b.dataset.admGive; S.tab = "comps"; draw(); const i = root.querySelector('[data-adm-comp] select'); if (i) i.focus(); });
     const cf = $("[data-adm-comp]"); if (cf) cf.onsubmit = async ev => { ev.preventDefault(); const email = cf.email.value.trim().toLowerCase(), b = cf.querySelector("button");

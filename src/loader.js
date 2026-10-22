@@ -272,6 +272,8 @@
       <form class="pk-form" id="authF" novalidate>
         ${kind === "signup" ? `<label>Your name<input name="name" autocomplete="name" required></label>` : ""}
         ${kind !== "newpass" ? `<label>Email<input name="email" type="email" autocomplete="email" required></label>` : ""}
+        ${kind === "signup" ? `<label>Mobile number <span class="muted">(optional)</span><input name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(555) 123-4567"></label>
+        <label class="pk-check"><input type="checkbox" name="sms"><span>Text me service reminders and news about new features. About 4 texts a month. Msg and data rates may apply. Reply STOP to stop.</span></label>` : ""}
         ${kind !== "forgot" ? `<label>Password<input name="password" type="password" autocomplete="${kind === "signin" ? "current-password" : "new-password"}" minlength="8" required></label>` : ""}
         ${kind === "signup" || kind === "newpass" ? `<span class="muted pk-small">At least 8 characters.</span>` : ""}
         <div class="pk-err" id="authErr" hidden></div>
@@ -287,10 +289,13 @@
       if (d.email !== undefined && !/^\S+@\S+\.\S+$/.test(d.email)) return show("Enter a valid email address.");
       if (d.password !== undefined && d.password.length < 8) return show("Your password needs at least 8 characters.");
       if (kind === "signup" && !String(d.name || "").trim()) return show("Enter your name.");
+      const ph = kind === "signup" && String(d.phone || "").trim() ? normPhone(d.phone) : "";
+      if (ph === null) return show("That mobile number doesn't look right. Include the area code.");
+      if (kind === "signup" && d.sms && !ph) return show("Add your mobile number to get texts, or untick the box.");
       const back = url({});
       let r;
       if (kind === "signin") r = await sb.auth.signInWithPassword({ email: d.email, password: d.password });
-      else if (kind === "signup") r = await sb.auth.signUp({ email: d.email, password: d.password, options: { data: { name: d.name.trim() }, emailRedirectTo: back } });
+      else if (kind === "signup") r = await sb.auth.signUp({ email: d.email, password: d.password, options: { data: Object.assign({ name: d.name.trim() }, ph ? { phone: ph, sms_ok: !!d.sms } : {}), emailRedirectTo: back } });
       else if (kind === "forgot") r = await sb.auth.resetPasswordForEmail(d.email, { redirectTo: back });
       else r = await sb.auth.updateUser({ password: d.password });
       if (r.error) return show(friendly(r.error));
@@ -299,6 +304,60 @@
       if (kind === "newpass") note("Password saved.");
       goUrl({});
     };
+  }
+  /* ---------- mobile number and text consent (contact_prefs, own row only) ---------- */
+  // US numbers by default: 10 digits gets +1. Returns +E.164, "" for empty, or null if it doesn't look like a number
+  function normPhone(v) {
+    const raw = String(v || "").trim(); if (!raw) return ""; let dg = raw.replace(/\D/g, "");
+    if (raw.startsWith("+")) return /^[1-9]\d{7,14}$/.test(dg) ? "+" + dg : null;
+    if (dg.length === 11 && dg[0] === "1") dg = dg.slice(1);
+    return dg.length === 10 && /^[2-9]/.test(dg) ? "+1" + dg : null;
+  }
+  const fmtPhone = p => /^\+1\d{10}$/.test(p || "") ? `(${p.slice(2, 5)}) ${p.slice(5, 8)}-${p.slice(8)}` : p || "";
+  let CONTACT;   // undefined: not loaded, null: no row yet
+  async function loadContact() {
+    const { data, error } = await sb.from("contact_prefs").select("phone,sms_ok,asked_at").eq("user_id", session.user.id).maybeSingle();
+    if (error) { CONTACT = { err: 1 }; return CONTACT; }
+    CONTACT = data || null;
+    // a number given at sign-up waits in the account's details until the first sign-in
+    const m = session.user.user_metadata || {};
+    if (!CONTACT && m.phone && normPhone(m.phone)) await saveContact(normPhone(m.phone), !!m.sms_ok, true);
+    return CONTACT;
+  }
+  async function saveContact(phone, smsOk, quiet) {
+    const now = new Date().toISOString(), row = { user_id: session.user.id, phone: phone || null, sms_ok: !!(smsOk && phone), asked_at: now, updated_at: now };
+    if (row.sms_ok && !(CONTACT && CONTACT.sms_ok)) row.sms_ok_at = now;
+    const { error } = await sb.from("contact_prefs").upsert(row, { onConflict: "user_id" });
+    if (error) { if (!quiet) note("Couldn't save that. Try again.", true); return false; }
+    CONTACT = Object.assign({}, CONTACT || {}, row); return true;
+  }
+  function phoneBox(first) {
+    const c = CONTACT && !CONTACT.err ? CONTACT : {};
+    const box = document.createElement("div"); box.className = "pk-modal";
+    box.innerHTML = `<div class="pk-card up ph-card"><span class="up-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg></span>
+      <span class="up-k">${first ? "New" : "Text alerts"}</span><h2>${first ? "Get your reminders by text" : "Texts from Revora"}</h2>
+      <p>${first ? "Add your mobile number and we'll text you when service is coming due, plus a heads-up when something new comes out. Emails keep coming too." : "Service reminders and news about new features, by text as well as email."}</p>
+      <form class="pk-form ph-form" novalidate><label>Mobile number<input name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(555) 123-4567" value="${esc(fmtPhone(c.phone))}"></label>
+        <label class="pk-check"><input type="checkbox" name="sms"${c.sms_ok ? " checked" : ""}><span>Text me service reminders and news about new features. About 4 texts a month. Msg and data rates may apply. Reply STOP to stop.</span></label>
+        <div class="pk-err" hidden></div>
+        <div class="pk-links" style="justify-content:center"><button class="btn tan" type="submit">Save</button><button class="btn" type="button" data-ph="later">${first ? "Not now" : "Close"}</button>${c.phone ? `<button class="linkbtn" type="button" data-ph="remove">Remove my number</button>` : ""}</div></form></div>`;
+    const f = box.querySelector("form"), err = box.querySelector(".pk-err"), close = () => box.remove();
+    f.onsubmit = async e => { e.preventDefault(); const ph = normPhone(f.phone.value);
+      if (!ph) { err.textContent = ph === null ? "That number doesn't look right. Include the area code." : "Enter your mobile number."; err.hidden = false; return; }
+      if (await saveContact(ph, f.sms.checked)) { close(); note(f.sms.checked ? "Saved. You'll get texts at " + fmtPhone(ph) + "." : "Number saved. Texts are off until you tick the box."); } };
+    box.querySelector('[data-ph="later"]').onclick = async () => { close(); if (first) await saveContact(c.phone || "", c.sms_ok, true); };
+    const rm = box.querySelector('[data-ph="remove"]'); if (rm) rm.onclick = async () => { if (await saveContact("", false)) { close(); note("Your number is removed. No more texts."); } };
+    box.onclick = e => { if (e.target === box) box.querySelector('[data-ph="later"]').click(); };
+    document.body.appendChild(box); setTimeout(() => f.phone.focus(), 50);
+  }
+  // signed-in people without a number get asked once (and again 60 days after a "Not now")
+  async function maybeAskPhone() {
+    if (!sb || !session || sessionStorage.getItem("rv.phAsked")) return;
+    const c = CONTACT === undefined ? await loadContact() : CONTACT;
+    if (c && (c.err || c.phone)) return;
+    if (c && c.asked_at && Date.now() - new Date(c.asked_at) < 60 * 864e5) return;
+    try { sessionStorage.setItem("rv.phAsked", "1"); } catch (e) {}
+    setTimeout(() => { if (!document.querySelector(".pk-modal")) phoneBox(true); }, 1200);
   }
   function friendly(e) {
     const m = String(e && e.message || e);
@@ -389,9 +448,12 @@
       ${window.rvShop ? rvShop.html({ kind: "parts", title: "Shop for parts", sub: "Search the big parts stores for any of your bikes. You buy on the store's own site.", bikes: [...new Set(data.map(p => { const b = bikeOf(p.bike_id); return genLabel[p.id] || (b && !b.generic && !b.universal ? bikeName(b) : p.name); }).filter(Boolean))] }) : ""}
       ${!(matchMedia("(display-mode: standalone)").matches || navigator.standalone) ? `<section class="ins-band"><img src="img/app-192.png" alt="" width="44" height="44"><div><b>Put Revora on your home screen</b><span>It opens like an app, full screen, one tap from your phone's home screen.</span></div><button class="btn tan" data-act="install">Install the app</button></section>` : ""}
       <section class="gfoot"><div><b>Working with a team?</b><span>Share a project and everyone sees the same parts, steps and photos, live. Owners can give edit or view access.</span></div>
+        <div><b>Text alerts</b><span>Get service reminders and news about new features by text as well as email.</span><button class="linkbtn" data-texts>Set up texts</button></div>
         <div><b>Plans</b><span>One bike is free for good. Paid plans add AI receipts, email reminders, share links and teams.</span><button class="linkbtn" data-plans>See plans</button></div>
         <div><b>Any bike works</b><span>Restoring or maintaining a bike we don't list? Add it with its year, make and model. Restorations get a course built for its kind of bike.</span><button class="linkbtn" data-nav="browse">Add a bike</button></div></section>`, { wide: true, garage: true });
     const adm = document.getElementById("admHQ"); if (adm) window.rvAdmin.mount(adm, sb, note);
+    maybeAskPhone();
+    app.querySelectorAll("[data-texts]").forEach(b => b.onclick = async () => { if (CONTACT === undefined) await loadContact(); phoneBox(false); });
     if (hasPlanL("shop") && data.length) woBoard(data);
     if (window.rvShop) rvShop.bind(app, {});
     app.querySelectorAll("[data-connect]").forEach(b => b.onclick = e => { e.stopPropagation(); const p = data.find(x => x.id === b.dataset.connect); connectProject(p, readyFor(p)); });

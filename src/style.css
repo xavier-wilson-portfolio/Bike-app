@@ -2568,3 +2568,6 @@ button.adm-tile{cursor:pointer}.adm-tile.hot{border-color:var(--red);background:
 .adm-stars{color:#C9A35F;letter-spacing:1px}.adm-stars i{font-style:normal;color:#DDE3E7}
 .adm-fba{display:flex;gap:6px}
 @media (max-width:760px){.adm-tiles{grid-template-columns:repeat(2,1fr)}.adm-two{grid-template-columns:1fr}.adm-tog small{display:none}.adm-body{padding:12px}.ppl-row{flex-wrap:wrap}}
+.pk-form label.pk-check{display:flex;flex-direction:row;align-items:flex-start;gap:10px;font-size:13px;line-height:1.4;color:var(--muted);font-weight:400;text-align:left}
+.pk-form label.pk-check input{width:18px;height:18px;margin:1px 0 0;flex:0 0 18px;accent-color:#17232C}
+.ph-card .pk-form{margin-top:6px;text-align:left}
