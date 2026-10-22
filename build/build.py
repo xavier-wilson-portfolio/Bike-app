@@ -45,7 +45,7 @@ for pdir in sorted((ROOT / 'data' / 'packs').iterdir()):
 shutil.copytree(ROOT / 'img', out / 'img', dirs_exist_ok=True)
 
 css = (src / 'style.css').read_text()
-loader = (src / 'cloud.js').read_text() + '\n' + (src / 'report_view.js').read_text() + '\n' + (src / 'build_view.js').read_text() + '\n' + (src / 'wo_view.js').read_text() + '\n' + (src / 'plans_view.js').read_text() + '\n' + (src / 'shop_view.js').read_text() + '\n' + (src / 'loader.js').read_text()
+loader = (src / 'cloud.js').read_text() + '\n' + (src / 'report_view.js').read_text() + '\n' + (src / 'build_view.js').read_text() + '\n' + (src / 'wo_view.js').read_text() + '\n' + (src / 'plans_view.js').read_text() + '\n' + (src / 'shop_view.js').read_text() + '\n' + (src / 'admin_view.js').read_text() + '\n' + (src / 'loader.js').read_text()
 cfg_file = ROOT / 'data' / 'config.json'   # public settings only: Supabase URL and publishable key
 cfg = json.loads(cfg_file.read_text()) if cfg_file.exists() else {}
 import hashlib
