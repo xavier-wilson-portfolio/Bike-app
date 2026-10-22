@@ -59,7 +59,7 @@ function photoCount() {
   Object.keys(S).forEach(c => { const coll = S[c]; if (coll && typeof coll === "object") Object.values(coll).forEach(r => walk(r, 0)); });
   return n;
 }
-(function () { const c0 = compressImage;
+(function () { const c0 = compressImage; window.compressImageRaw = c0;
   compressImage = function (file, maxBytes) {
     if (!hasPlan("rider") && photoCount() >= FREE_PHOTOS) {
       modal(upsellBody("rider", { title: "You've used your 5 free photos", text: LOCK_TXT.photos }), m => bindUpsell(m));

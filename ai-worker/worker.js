@@ -5,6 +5,9 @@
    Other settings: ALLOWED_ORIGINS (comma list), MODEL (overrides the default model), VISION_MODEL (overrides the parts-scan model).
    PARTS SCAN: POST { scan: { image: "data:image/jpeg;base64,...", prompt: "..." } } returns { text }. Uses a free Workers AI vision model.
    RECEIPTS: the same, with scan.kind = "receipt" (reads a receipt photo into JSON).
+   LOGBOOK: the same, with scan.kind = "logbook" (reads a photo of a paper service log into JSON). Counts as an import.
+   TASKS: POST { task: { kind: "import" | "plan", text: "..." } } returns { text } (JSON from the model).
+     import turns pasted service notes into records; plan lists the parts, tools, time and rough cost for a job.
    PLAN LIMITS: every request must carry the person's Revora sign-in (Authorization: Bearer ...). The worker asks
      Supabase use_ai() whether their plan allows it: Ask the mechanic is Rider and up (Rider 10 a day), scans are Restorer and up.
      Uses the public Supabase URL and publishable key below (or SUPABASE_URL / SUPABASE_KEY variables). No secret key.
@@ -55,8 +58,11 @@ export default {
     if (list.length > PER_10_MIN) return deny(429, "slow down", h);
 
     let body; try { body = await req.json(); } catch (e) { return deny(400, "bad json", h); }
-    const pc = await planCheck(req, env, body && body.scan ? "scan" : "chat");
+    const task = body && body.task && ["import", "plan"].includes(body.task.kind) ? body.task : null;
+    const kind = task ? task.kind : body && body.scan ? (body.scan.kind === "logbook" ? "import" : "scan") : "chat";
+    const pc = await planCheck(req, env, kind);
     if (pc !== "ok") { const [st, msg] = PLAN_MSG[pc] || PLAN_MSG.error; return deny(st, msg, h); }
+    if (task) return runTask(task, env, h);
     if (body && body.scan) return scanParts(body.scan, env, h);
     const msgs = Array.isArray(body && body.messages) ? body.messages.slice(-MAX_MSGS) : [];
     let total = 0;
@@ -98,7 +104,9 @@ async function scanParts(scan, env, h) {
   const image = typeof scan.image === "string" ? scan.image : "", prompt = typeof scan.prompt === "string" ? scan.prompt.slice(0, 12000) : "";
   if (!/^data:image\/(jpeg|png|webp);base64,/.test(image) || !prompt) return deny(400, "bad scan", h);
   if (image.length > MAX_IMAGE) return deny(413, "photo too large", h);
-  const system = scan.kind === "receipt" ? "You read receipts and invoices for motorcycle owners. Copy what is printed exactly. Answer with JSON only." : "You identify motorcycle parts in workshop photos. Answer with JSON only.";
+  const system = scan.kind === "receipt" ? "You read receipts and invoices for motorcycle owners. Copy what is printed exactly. Answer with JSON only."
+    : scan.kind === "logbook" ? "You read handwritten or printed motorcycle service logbooks and maintenance records. Copy dates, mileage, work done and costs exactly as written. Never guess. Answer with JSON only."
+    : "You identify motorcycle parts in workshop photos. Answer with JSON only.";
   const run = model => env.AI.run(model, { messages: [{ role: "system", content: system }, { role: "user", content: prompt }], image, max_tokens: 1200 });
   let lastErr = "";
   for (const model of (env.VISION_MODEL ? [env.VISION_MODEL] : VISION_MODELS)) {
@@ -110,4 +118,26 @@ async function scanParts(scan, env, h) {
     }
   }
   return deny(/limit|quota|capacity/i.test(lastErr) ? 429 : 502, "vision AI error " + lastErr.slice(0, 200), h);
+}
+
+/* Text tasks: import pasted service notes, or plan a job. Free Workers AI text model, JSON back. */
+const TASK_SYSTEM = {
+  import: `You turn a motorcycle owner's old service notes into records. The notes may be messy, from a notebook, a spreadsheet or memory.
+Return JSON only: {"records":[{"date":"YYYY-MM-DD or empty","odometer":number or 0,"service":"what was done, short","kind":"Scheduled service|Repair|Inspection|Tires|Upgrade|Other","cost":number or 0,"shop":"who did it, if written","notes":"anything else written"}]}.
+One record per service visit. Copy what is written. Never invent dates, mileage or costs: leave them empty or 0 when they are not in the notes. If only a month and year are given, use the first of that month.`,
+  plan: `You help a motorcycle owner plan a job before they start it. Return JSON only:
+{"summary":"one or two plain sentences","hours":number,"difficulty":"Easy|Moderate|Hard|Shop job","tools":["..."],"parts":[{"name":"...","qty":number,"note":"short, optional"}],"steps":["short step", "..."],"cost_low":number,"cost_high":number,"safety":"one short safety note or empty"}.
+Costs are a rough US dollar range for parts only. Never invent part numbers, torque values, clearances or fluid capacities: say "see the service manual" in a step instead. Keep steps to 8 or fewer.`
+};
+async function runTask(task, env, h) {
+  const text = typeof task.text === "string" ? task.text.slice(0, 12000) : "";
+  if (!text.trim()) return deny(400, "bad task", h);
+  if (!env.AI) return deny(503, "not configured: add a Workers AI binding named AI", h);
+  let out = "", lastErr = "";
+  for (const model of (env.MODEL ? [env.MODEL] : FREE_MODELS)) {
+    try { const r = await env.AI.run(model, { messages: [{ role: "system", content: TASK_SYSTEM[task.kind] }, { role: "user", content: text }], max_tokens: task.kind === "import" ? 2400 : 1200 }); out = (r && r.response) || ""; if (typeof out !== "string") out = JSON.stringify(out); if (out) break; }
+    catch (e) { lastErr = String(e && e.message || e); console.log("task error", model, lastErr); }
+  }
+  if (!out) return deny(/limit|quota|capacity/i.test(lastErr) ? 429 : 502, "free AI error " + lastErr.slice(0, 200), h);
+  return new Response(JSON.stringify({ text: out }), { status: 200, headers: { ...h, "content-type": "application/json" } });
 }

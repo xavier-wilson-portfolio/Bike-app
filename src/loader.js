@@ -426,7 +426,7 @@
           <span class="gt-bike">${isPin(p) ? `<span class="gt-pintag">Pinned</span>` : ""}${isLog(p) ? "Maintenance log · " + esc(STYLE_NAME[styleOf(p)] || "Standard") : isUni(p) ? esc(uniTxt(p)) : b && b.generic ? (readyFor(p) ? "Bike page ready" : "Maintenance log · " + esc(STYLE_NAME[styleOf(p)] || "Standard")) : esc((p.name && p.name !== bikeName(b)) ? bikeName(b) : (b && b.variant) || "")}</span><b class="gt-name">${esc(p.name || bikeName(b))}</b>
           ${isLog(p) ? "" : `<span class="gt-bar" aria-hidden="true"><i style="width:${pc.toFixed(1)}%"></i></span>`}
           <span class="gt-meta">${b && b.generic ? "Maintenance and records" : g && g.total ? `${g.done} of ${g.total} steps` : "Not started"}<span>${esc(who(p))}</span></span></button>
-        ${p.role === "owner" && readyFor(p) ? `<div class="gt-ready"><span>The ${esc(bikeName(readyFor(p)))} page is ready.</span><button class="btn tan sm" data-connect="${esc(p.id)}">Connect</button></div>` : ""}${p.role === "owner" ? `<div class="gt-acts"><button class="linkbtn" data-share="${esc(p.id)}">Share</button><button class="linkbtn" data-rename="${esc(p.id)}">Rename</button><button class="linkbtn gt-del" data-del="${esc(p.id)}">Delete</button></div>` : `<div class="gt-acts"><button class="linkbtn gt-del" data-leave="${esc(p.id)}">Remove from my garage</button></div>`}</article>`; };
+        ${p.role === "owner" && readyFor(p) ? `<div class="gt-ready"><span>The ${esc(bikeName(readyFor(p)))} page is ready.</span><button class="btn tan sm" data-connect="${esc(p.id)}">Connect</button></div>` : ""}${p.role === "owner" ? `<div class="gt-acts"><button class="linkbtn" data-share="${esc(p.id)}">Share</button><button class="linkbtn" data-rename="${esc(p.id)}">Rename</button><button class="linkbtn" data-transfer="${esc(p.id)}">Sold it?</button><button class="linkbtn gt-del" data-del="${esc(p.id)}">Delete</button></div>` : `<div class="gt-acts"><button class="linkbtn gt-del" data-leave="${esc(p.id)}">Remove from my garage</button></div>`}</article>`; };
     const fb = feat && bikeOf(feat.bike_id), fg = feat && prog[feat.id];
     frame(`<section class="gh">
         <div class="gh-hi"><h1 class="gh-title">${esc(greeting())}${first ? `, ${esc(first)}` : ""}.</h1>
@@ -448,6 +448,7 @@
       ${window.rvShop ? rvShop.html({ kind: "parts", title: "Shop for parts", sub: "Search the big parts stores for any of your bikes. You buy on the store's own site.", bikes: [...new Set(data.map(p => { const b = bikeOf(p.bike_id); return genLabel[p.id] || (b && !b.generic && !b.universal ? bikeName(b) : p.name); }).filter(Boolean))] }) : ""}
       ${!(matchMedia("(display-mode: standalone)").matches || navigator.standalone) ? `<section class="ins-band"><img src="img/app-192.png" alt="" width="44" height="44"><div><b>Put Revora on your home screen</b><span>It opens like an app, full screen, one tap from your phone's home screen.</span></div><button class="btn tan" data-act="install">Install the app</button></section>` : ""}
       <section class="gfoot"><div><b>Working with a team?</b><span>Share a project and everyone sees the same parts, steps and photos, live. Owners can give edit or view access.</span></div>
+        <div><b>Builds gallery</b><span>See what other riders are restoring and building, and put yours in it from your bike's Build page.</span><a class="linkbtn" href="?builds">Browse builds</a></div>
         <div><b>Text alerts</b><span>Get service reminders and news about new features by text as well as email.</span><button class="linkbtn" data-texts>Set up texts</button></div>
         <div><b>Plans</b><span>One bike is free for good. Paid plans add AI receipts, email reminders, share links and teams.</span><button class="linkbtn" data-plans>See plans</button></div>
         <div><b>Any bike works</b><span>Restoring or maintaining a bike we don't list? Add it with its year, make and model. Restorations get a course built for its kind of bike.</span><button class="linkbtn" data-nav="browse">Add a bike</button></div></section>`, { wide: true, garage: true });
@@ -463,6 +464,7 @@
       const { error } = await sb.from("projects").update({ name: name.trim().slice(0, 80) }).eq("id", p.id); if (error) note(friendly(error), true); else showProjects();
     });
     app.querySelectorAll("[data-del],[data-leave]").forEach(b => b.onclick = e => { e.stopPropagation(); const p = data.find(x => x.id === (b.dataset.del || b.dataset.leave)); deleteProjectBox(Object.assign({}, p, { label: p.name || bikeName(bikeOf(p.bike_id)) }), () => { if (ls.get("rv.project") === p.id) ls.set("rv.project", ""); window.rvPrefs.set({ pinned: (PREFS.pinned || []).filter(x => x !== p.id) }); showProjects(); }); });
+    app.querySelectorAll("[data-transfer]").forEach(b => b.onclick = () => transferBox(data.find(x => x.id === b.dataset.transfer)));
     app.querySelectorAll("[data-share]").forEach(b => b.onclick = () => hasPlanL("restorer") ? shareBox(data.find(x => x.id === b.dataset.share)) : upsellBox("restorer", "Sharing projects is in Restorer", "Share a bike with friends or a shop so everyone sees the same parts, jobs and photos live."));
   }
   // Shop plan: every open work order across the garage, soonest due first
@@ -509,6 +511,28 @@
   }
   window.rvDeleteProject = (p, done) => deleteProjectBox(p, done);
   window.rvGoGarage = () => goUrl({});
+  // selling the bike: the project and its whole history move to the buyer's account
+  function transferBox(p) {
+    const label = p.name || bikeName(bikeOf(p.bike_id));
+    const box = document.createElement("div"); box.className = "pk-modal";
+    box.innerHTML = `<div class="pk-card up ph-card"><span class="up-k">Sold it?</span><h2>Hand ${esc(label)} to the new owner</h2>
+      <p>Its full history goes with it: every service, mod, photo, receipt and the build page. A buyer pays more for a bike with records, and the history stays with the bike for good.</p>
+      <form class="pk-form" novalidate><label>New owner's email<input name="email" type="email" required placeholder="buyer@example.com" autocomplete="off"></label>
+        <p class="muted pk-small" style="text-align:left">If they already have a Revora account it moves right away. If not, it moves the moment they sign up with that email (free). After it moves it leaves your garage, so print or save the history report first if you want a copy.</p>
+        <div class="pk-err" hidden></div>
+        <div class="pk-links" style="justify-content:center"><button class="btn tan" type="submit">Hand it over</button><button class="btn" type="button" data-tx="x">Cancel</button></div></form></div>`;
+    const f = box.querySelector("form"), err = box.querySelector(".pk-err"), close = () => box.remove();
+    box.querySelector('[data-tx="x"]').onclick = close; box.onclick = e => { if (e.target === box) close(); };
+    f.onsubmit = async e => { e.preventDefault(); const em = f.email.value.trim().toLowerCase(); err.hidden = true;
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)) { err.textContent = "That email doesn't look right."; err.hidden = false; return; }
+      if (!confirm(`Hand ${label} to ${em}? Once it moves you can't undo it from here.`)) return;
+      const b = f.querySelector("button[type=submit]"); b.disabled = true;
+      const { data, error } = await sb.rpc("transfer_project", { pid: p.id, em }); b.disabled = false;
+      if (error || !["moved", "waiting"].includes(data)) { err.textContent = data === "self" ? "That's your own email." : data === "denied" ? "Only the owner can hand a bike over." : "Couldn't do that. Try again."; err.hidden = false; return; }
+      close(); if (data === "moved") { if (ls.get("rv.project") === p.id) ls.set("rv.project", ""); note(label + " is now in " + em + "'s garage."); showProjects(); }
+      else note("Saved. " + label + " moves to " + em + " as soon as they sign up with that email. Send them to revoragarage.com."); };
+    document.body.appendChild(box); setTimeout(() => f.email.focus(), 50);
+  }
   async function shareBox(p) {
     const box = document.createElement("div"); box.className = "pk-modal";
     const draw = async () => {
@@ -627,7 +651,7 @@
     const sil = n => { const f = (CFG.sil || []).find(x => x.replace(/\.\w+$/, "") === n); return f ? "img/sil/" + f : ""; };
     app.innerHTML = `<div class="ld">
       <header class="ld-top"><a class="pk-logo" href="${esc(url({}))}" aria-label="Revora"><img class="brand-icon" src="img/revora-icon.svg" alt=""><img class="wordmark" src="img/revora-word.svg" alt="Revora"></a>
-        <nav class="ld-nav"><a href="#ld-features">Features</a><a href="#ld-plans">Plans</a><button class="btn sm" data-nav="signin">Sign in</button><button class="btn sm tan" data-nav="signup">Get started</button></nav></header>
+        <nav class="ld-nav"><a href="#ld-features">Features</a><a href="?builds">Builds</a><a href="#ld-plans">Plans</a><button class="btn sm" data-nav="signin">Sign in</button><button class="btn sm tan" data-nav="signup">Get started</button></nav></header>
       <section class="ld-hero"><div class="ld-hero-t"><span class="ld-k">For riders, restorers and shops</span>
           <h1>Restore it. Ride it. Keep every record.</h1>
           <p>Revora keeps your bike's whole life in one place: services and reminders, receipts read by AI, recalls, mods, papers, and a step-by-step restoration course for any bike.</p>
@@ -685,8 +709,44 @@
     app.innerHTML = `<div class="bp-page"><div class="hr-bar"><a class="pk-logo" href="${esc(url({}))}" aria-label="Revora"><img class="brand-icon" src="img/revora-icon.svg" alt=""><img class="wordmark" src="img/revora-word.svg" alt="Revora"></a>
         <div class="hr-bar-r"><a class="btn sm tan" href="${esc(url(session ? {} : { auth: "signup" }))}">${session ? "Your garage" : "Make a page for your bike"}</a></div></div>
       ${window.rvBuildHtml(data)}
+      <section class="bp-com" id="bpCom"></section>
+      <p class="gal-more"><a class="btn" href="?builds">See more builds</a></p>
       ${session ? "" : `<section class="bp-cta"><h2>Got a bike of your own?</h2><p>Revora keeps your service log, mods, receipts and photos in one place, and makes a page like this one for free.</p><a class="btn pri" href="${esc(url({ auth: "signup" }))}">Start free</a></section>`}</div>`;
     window.rvBuildBind(app, data, { token, onLike: async () => { const r = await sb.rpc("like_build", { t: token }); return r.error ? null : r.data; } });
+    bindComments(token);
+  }
+
+  /* ---------- builds gallery: pages their owners chose to list (no account needed) ---------- */
+  async function showGallery() {
+    spin(); document.title = "Builds · Revora";
+    if (!sb) return fail("The builds gallery can't be opened on this copy of Revora.");
+    const sort = qs.get("sort") === "liked" ? "liked" : "new";
+    const { data, error } = await sb.rpc("list_gallery", { sort, lim: 48, off: 0 });
+    const list = error ? [] : data || [], okImg = v => typeof v === "string" && (/^data:image\/(png|jpe?g|webp);base64,/.test(v) || /^img\/sil\/[a-z0-9-]+\.(svg|webp|png)$/.test(v));
+    app.innerHTML = `<div class="bp-page gal-page"><div class="hr-bar"><a class="pk-logo" href="${esc(url({}))}" aria-label="Revora"><img class="brand-icon" src="img/revora-icon.svg" alt=""><img class="wordmark" src="img/revora-word.svg" alt="Revora"></a>
+        <div class="hr-bar-r"><a class="btn sm tan" href="${esc(url(session ? {} : { auth: "signup" }))}">${session ? "Your garage" : "Share your build"}</a></div></div>
+      <header class="gal-h"><span class="eyebrow">Builds</span><h1>Bikes riders are building on Revora</h1><p class="muted">Restorations, rebuilds and daily riders. Tap one to see the story, the photos and the mods.</p>
+        <div class="gal-sort"><a class="${sort === "new" ? "on" : ""}" href="?builds">Newest</a><a class="${sort === "liked" ? "on" : ""}" href="?builds&sort=liked">Most liked</a></div></header>
+      ${list.length ? `<div class="gal-grid">${list.map(b => `<a class="gal-card" href="?build=${esc(b.id)}"><div class="gal-img${okImg(b.cover) && b.cover.startsWith("img/") ? " sil" : ""}">${okImg(b.cover) ? `<img src="${esc(b.cover)}" alt="" loading="lazy">` : ""}</div>
+          <div class="gal-b"><span class="gal-k">${esc([b.style, b.status].filter(Boolean).join(" · ") || "Build")}</span><b>${esc(b.title || b.bike || "A build")}</b>${b.title && b.bike && b.title !== b.bike ? `<small>${esc(b.bike)}</small>` : ""}
+          <span class="gal-n"><span>♥ ${+b.likes || 0}</span><span>${+b.comments || 0} comment${+b.comments === 1 ? "" : "s"}</span><span>${+b.views || 0} views</span></span></div></a>`).join("")}</div>`
+        : `<div class="bench empty" style="margin-top:20px"><div class="bench-txt"><h2>${error ? "The gallery isn't open yet" : "No builds in the gallery yet"}</h2><p>Publish your bike's build page and tick "Show in the builds gallery" to be one of the first.</p><div class="bench-go"><a class="btn tan big" href="${esc(url(session ? {} : { auth: "signup" }))}">${session ? "Go to your garage" : "Start free"}</a></div></div></div>`}
+      </div>`;
+  }
+  async function bindComments(token) {
+    const box = document.getElementById("bpCom"); if (!box) return;
+    const load = async () => { const { data, error } = await sb.rpc("get_build_comments", { t: token }); if (error) { box.hidden = true; return; }
+      const list = data || [];
+      box.innerHTML = `<h2>Comments${list.length ? " (" + list.length + ")" : ""}</h2>
+        ${list.map(c => `<div class="bpc"><div><b>${esc(c.name)}</b><small>${esc(new Date(c.created_at).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" }))}</small></div><p>${esc(c.body)}</p>${c.can_delete ? `<button class="linkbtn" data-bpc-del="${esc(c.id)}">Delete</button>` : ""}</div>`).join("") || `<p class="muted">No comments yet. Say something nice about the bike.</p>`}
+        ${session ? `<form class="bpc-f"><textarea name="body" rows="3" maxlength="600" placeholder="Nice work on the tank. What paint did you use?" required></textarea><button class="btn pri" type="submit">Post comment</button></form>`
+          : `<p class="muted"><a href="${esc(url({ auth: "signin" }))}">Sign in</a> or <a href="${esc(url({ auth: "signup" }))}">create a free account</a> to comment.</p>`}`;
+      const f = box.querySelector("form"); if (f) f.onsubmit = async e => { e.preventDefault(); const body = f.body.value.trim(); if (!body) return; const b = f.querySelector("button"); b.disabled = true;
+        const name = String(profile?.display_name || session.user.email.split("@")[0]).trim().slice(0, 60);
+        const { error: er } = await sb.from("build_comments").insert({ build_id: token, name, body }); b.disabled = false; if (er) return note("Couldn't post that. Try again.", true); load(); };
+      box.querySelectorAll("[data-bpc-del]").forEach(b => b.onclick = async () => { if (!confirm("Delete this comment?")) return; const { error: er } = await sb.from("build_comments").delete().eq("id", b.dataset.bpcDel); if (er) return note("Couldn't delete it.", true); load(); });
+    };
+    load();
   }
 
   /* ---------- a work order estimate the shop sent the customer (no account needed) ---------- */
@@ -836,6 +896,7 @@
     }
     if (qs.get("report")) return showReport(qs.get("report"));
     if (qs.get("build")) return showBuild(qs.get("build"));
+    if (qs.has("builds")) return showGallery();
     if (qs.get("wo")) return showWo(qs.get("wo"));
     if (qs.has("paid") && session) return afterPaid();
     if (qs.has("plans")) return showPlans();

@@ -1,7 +1,7 @@
 /* ============ Build page: a public page for the bike, with photos, story, mods and a timeline ============ */
 GUIDE.build = { eyebrow: "Share", title: "Build page", sub: "A public page for your bike that you can post on forums, Instagram or Facebook.",
   how: ["Pick your best photos. The first one is the cover.", "Write a few lines about the bike and choose what to show.", "Publish it and share the link. Update it any time and the link stays the same."] };
-const BP_OPTS = () => Object.assign({ title: "", story: "", photos: [], caps: {}, mods: true, timeline: true, restoration: true, money: false, odo: true, name: true, ba: true }, meta().buildPage || {});
+const BP_OPTS = () => Object.assign({ title: "", story: "", photos: [], caps: {}, mods: true, timeline: true, restoration: true, money: false, odo: true, name: true, ba: true, gallery: false }, meta().buildPage || {});
 const bpImgs = () => sorted("docs").filter(d => d.file && /^data:image\//.test(d.file) && d.kind !== "Receipt").sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")));
 const bpCap = (d, o) => { const c = (o.caps || {})[d.id]; if (c != null) return c; const t = d.caption || d.title || ""; return /^(img|dsc|pxl|image|photo|screenshot|whatsapp|\d{6,})[\W_]?/i.test(t) ? "" : t; };
 const bpUrl = id => location.origin + location.pathname + "?build=" + id;
@@ -94,7 +94,7 @@ VIEWS.build = {
           <section class="mh-panel"><div class="mh-ph"><h2><span class="mh-hi">${ic("gear")}</span>What to show</h2></div>
             ${tog("mods", "Mods and upgrades", "Parts you've fitted")}${tog("timeline", "Build timeline", "Services, mods and photos by date")}${!GENERIC ? tog("restoration", "Restoration progress", "How far through the course you are") : ""}
             ${hasBA ? tog("ba", "Before and after slider", "Uses your first Before photo and After photo") : ""}${tog("odo", "Odometer", "Current miles")}${tog("money", "Money spent", "Off by default. Shows what the mods and services cost")}${cloud ? tog("name", "Your first name", "Shown as who built it") : ""}
-          </section>
+          ${cloud ? tog("gallery", "Show in the builds gallery", "Riders browsing revoragarage.com/?builds can find it, like it and comment") : ""}</section>
           ${!cloud ? `<section class="mh-panel"><p class="muted" style="margin:0">Create a free account to publish this page and share the link.</p></section>` : ""}
         </aside>
         <div class="bp-prev"><div class="bp-prev-k">Preview</div>${rvBuildHtml(d, { preview: true })}</div>
@@ -102,7 +102,8 @@ VIEWS.build = {
   },
   bind(root) {
     const save = async patch => { const mm = clone(meta()); mm.buildPage = Object.assign(BP_OPTS(), patch); await store.put("meta", mm, { noLog: true }); };
-    $$("[data-bo]", root).forEach(c => c.onchange = () => save({ [c.dataset.bo]: c.checked }));
+    $$("[data-bo]", root).forEach(c => c.onchange = async () => { await save({ [c.dataset.bo]: c.checked });
+      if (c.dataset.bo === "gallery" && BP_ROW && BP_ROW.id && RV_CLOUD) { const { error } = await RV_CLOUD.sb.from("shared_builds").update({ in_gallery: c.checked }).eq("id", BP_ROW.id); toast(error ? "Couldn't change the gallery setting. Publish the page again." : c.checked ? "Your page is in the builds gallery." : "Taken out of the gallery. The link still works."); } });
     const t = $("#bpTitle", root), s = $("#bpStory", root);
     if (t) t.onchange = () => save({ title: t.value.trim() });
     if (s) s.onchange = () => save({ story: s.value });
@@ -121,9 +122,11 @@ VIEWS.build = {
       const o = BP_OPTS(), wasLive = !!BP_ROW; pub.disabled = true; pub.textContent = "Publishing…";
       const data = await buildDataForPublish(o), title = data.title;
       let error;
-      if (BP_ROW) ({ error } = await sb.from("shared_builds").update({ data, title, updated_at: new Date().toISOString() }).eq("id", BP_ROW.id));
+      if (BP_ROW) ({ error } = await sb.from("shared_builds").update({ data, title, updated_at: new Date().toISOString(), in_gallery: !!o.gallery }).eq("id", BP_ROW.id));
+      if (error && /in_gallery/.test(error.message || "")) ({ error } = await sb.from("shared_builds").update({ data, title, updated_at: new Date().toISOString() }).eq("id", BP_ROW.id));
       else {
-        const id = repToken(); ({ error } = await sb.from("shared_builds").insert({ id, project_id: RV_CLOUD.projectId, title, data }));
+        const id = repToken(); ({ error } = await sb.from("shared_builds").insert({ id, project_id: RV_CLOUD.projectId, title, data, in_gallery: !!o.gallery }));
+        if (error && /in_gallery/.test(error.message || "")) ({ error } = await sb.from("shared_builds").insert({ id, project_id: RV_CLOUD.projectId, title, data }));
         if (error && /duplicate|unique/i.test(error.message || "")) { toast("Someone on this project already published a build page for it.", "err"); loadBuildRow(); return; }
         if (!error) { BP_ROW = { id }; try { await navigator.clipboard.writeText(bpUrl(id)); } catch (e) {} }
       }
