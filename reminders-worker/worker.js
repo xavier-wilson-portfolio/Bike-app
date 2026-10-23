@@ -78,7 +78,7 @@ const PRICES = [
   "Rider: $6.99 a month, or $49 a year. Service reminders by email before things are due, recall alerts for your bike, fuel and cost tracking, and room for 3 bikes.",
   "Restorer: $9.99 a month, or $99 a year. Everything in Rider, plus the parts scan from a photo, AI that reads your receipts, a shopping list with a budget, step-by-step restoration courses and up to 10 bikes.",
   "Shop: $29 a month, or $290 a year. For shops and builders: work orders, customer bikes with history reports and a team of up to 10."];
-// step 1 thanks · 2 the welcome deal · 101 deal: 24 hours left · 102 deal: 3 hours left · 4 features + socials · 5 check-in · 6+ every two weeks, rotating
+// step 1 thanks · 2 the welcome deal · 101 deal: 24 hours left · 102 deal: 3 hours left · 103 deal for members who joined before it started · 4 features + socials · 5 check-in · 6+ every two weeks, rotating
 function welcomeCopy(step, p) {
   const hi = `Hi ${first(p.name)},`, plans = ["See the plans", APP + "/?plans"], open = ["Open Revora", APP + "/"];
   if (step === 1) return { subject: "Welcome to Revora Garage", paras: [hi,
@@ -102,6 +102,11 @@ function welcomeCopy(step, p) {
     "A quick heads-up: your welcome deal ends in about 24 hours.",
     { list: ["Rider: $4.99 a month for your first 3 months (then $6.99)", "Restorer: $6.99 a month for your first 3 months (then $9.99)", "Shop: $19.99 a month for your first 3 months (then $29)"] },
     "If you're working on a project bike, Restorer is the one to look at. You can take the $6.99 deal, or start a 30-day free trial instead and pay $9.99 a month after that."], button: ["See the deal", APP + "/?plans"] };
+  if (step === 103) return { subject: "Your Revora deal: lower prices until Sunday at noon", paras: [hi,
+    "We just started a welcome deal for new members, and since you're already here, you get it too. Until Sunday, Oct 25 at noon Eastern, any paid plan is cheaper for your first 3 months:",
+    { list: DEAL },
+    "After 3 months it goes to the regular price, and you can cancel any time. Sign in and you'll see the deal prices on the plans page, with the countdown on your garage page.",
+    "If Free is all you need, that's fine. One bike stays free for good."], button: ["See the deal", APP + "/?plans"] };
   if (step === 102) return { subject: "Your welcome deal ends in 3 hours", paras: [hi,
     "Last reminder: your welcome deal ends in about 3 hours. After that, plans are the regular price of $6.99 for Rider, $9.99 for Restorer and $29 for Shop.",
     "If you want the lower price, sign in and pick a plan before then. And if Free is all you need, that's fine too. One bike stays free for good."], button: ["See the deal", APP + "/?plans"] };
@@ -167,8 +172,10 @@ async function sendWelcome(env, to, step, p, uid) {
 // one batch call to Resend (up to 100 emails) and one call to log them, so any number of people fits in one run
 async function runWelcome(env) {
   if (!env.RESEND_API_KEY || !env.WORKER_SECRET) return { error: "not configured" };
-  const rows = await rpc("welcome_due", { sec: env.WORKER_SECRET, preview: false }), jobs = [];
-  for (const r of rows || []) { jobs.push([r, r.step]); if (r.step === 1 && r.free) jobs.push([r, 2]); } // deals go out with the thank-you for people on Free
+  let rows = await rpc("welcome_due", { sec: env.WORKER_SECRET, preview: false }); const jobs = [];
+  const got103 = new Set((rows || []).filter(r => r.step === 103).map(r => r.user_id));   // one email per person per run: the deal note wins
+  rows = (rows || []).filter(r => r.step === 103 || !got103.has(r.user_id));
+  for (const r of rows) { jobs.push([r, r.step]); if (r.step === 1 && r.free) jobs.push([r, 2]); } // deals go out with the thank-you for people on Free
   const out = { due: (rows || []).length, sent: 0, failed: 0 };
   for (let i = 0; i < jobs.length; i += 100) {
     const part = jobs.slice(i, i + 100), msgs = [];
@@ -225,7 +232,7 @@ export default {
     if (path === "/unsub") return unsub(req, env);
     if (path === "/welcome-test") { // sends every welcome email to the admin only, to check how they look
       if (!env.RESEND_API_KEY) return json({ error: "not configured" }, 503);
-      let n = 0; for (const st of [1, 2, 101, 102, 4, 5, 6, 7, 8, 9]) if (await sendWelcome(env, ADMIN_TO, st, { name: "Xavier", bikes: 0, free: true }, "00000000-0000-0000-0000-000000000000")) n++;
+      let n = 0; for (const st of [1, 2, 101, 102, 103, 4, 5, 6, 7, 8, 9]) if (await sendWelcome(env, ADMIN_TO, st, { name: "Xavier", bikes: 0, free: true }, "00000000-0000-0000-0000-000000000000")) n++;
       return json({ sent: n, to: ADMIN_TO });
     }
     if (path === "/welcome-preview") { const rows = await rpc("welcome_due", { sec: env.WORKER_SECRET, preview: true }); const c = {}; (rows || []).forEach(r => c["step" + r.step] = (c["step" + r.step] || 0) + 1); return json({ wouldSend: c }); }

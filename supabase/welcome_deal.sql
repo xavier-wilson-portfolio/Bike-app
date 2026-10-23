@@ -1,7 +1,7 @@
 -- Revora: the 48-hour welcome deal in the welcome emails. Run once in the Supabase SQL editor after welcome_emails.sql. Safe to run again.
 -- New members (on Free) get: thanks + the deal right after they join, "about 24 hours left" at hour 24 and "about 3 hours left" at hour 45.
 -- The old day-3 "launch prices" email is gone. The clock starts when they confirm their email, the same moment the app's countdown uses.
--- People who joined before the deal started don't get the deal emails (they still see the countdown in the app).
+-- People on Free who joined before the deal started get one email (step 103) saying their deal runs until deal_from + 48 hours.
 -- Steps: 1 thanks · 2 the deal · 101 24 hours left · 102 3 hours left · 4 features (day 7) · 5 check-in (day 14) · 6+ every 2 weeks.
 alter table public.welcome_settings add column if not exists deal_from timestamptz not null default '2026-10-23 16:00:00+00';
 
@@ -44,10 +44,20 @@ begin
     where b.on_free and b.last_step is not null and b.joined >= s.deal_from
       and ((now() >= b.joined + interval '24 hours' and now() < b.joined + interval '45 hours' and not b.sent24)
         or (now() >= b.joined + interval '45 hours' and now() < b.joined + interval '48 hours' and not b.sent3))
+  ), older as (
+    -- one email (step 103) to people on Free who joined before the deal started: their 48 hours run from deal_from
+    select u.id, u.email::text, coalesce(nullif(p.display_name, ''), split_part(u.email, '@', 1)), 103,
+      (select count(*)::int from projects pr where pr.owner = u.id), true, coalesce(u.email_confirmed_at, u.created_at)
+    from auth.users u left join profiles p on p.id = u.id
+    where u.email_confirmed_at is not null and coalesce(u.email_confirmed_at, u.created_at) < s.deal_from
+      and now() >= s.deal_from and now() < s.deal_from + interval '44 hours'
+      and lower(u.email) <> 'xavier.j.wilson101@gmail.com' and not coalesce(p.email_opt_out, false)
+      and (coalesce(p.plan, 'free') = 'free' or (p.plan_until is not null and p.plan_until < now())) and not coalesce(p.paid, false) and not coalesce(p.comp, false)
+      and not exists (select 1 from welcome_log w where w.user_id = u.id and w.step = 103)
   )
-  select r.id, r.em, r.nm, r.n, r.nb, r.on_free from (select * from regular union all select * from deal) r
+  select r.id, r.em, r.nm, r.n, r.nb, r.on_free from (select * from regular union all select * from deal union all select * from older) r
   order by r.joined
-  limit 300;
+  limit 500;
 end $$;
 revoke all on function public.welcome_due(text, boolean) from public;
 grant execute on function public.welcome_due(text, boolean) to anon, authenticated;
