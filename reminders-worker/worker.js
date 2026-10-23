@@ -78,7 +78,7 @@ const PRICES = [
   "Rider: $6.99 a month, or $49 a year. Service reminders by email before things are due, recall alerts for your bike, fuel and cost tracking, and room for 3 bikes.",
   "Restorer: $9.99 a month, or $99 a year. Everything in Rider, plus the parts scan from a photo, AI that reads your receipts, a shopping list with a budget, step-by-step restoration courses and up to 10 bikes.",
   "Shop: $29 a month, or $290 a year. For shops and builders: work orders, customer bikes with history reports and a team of up to 10."];
-// step 1 thanks · 2 the welcome deal · 101 deal: 24 hours left · 102 deal: 3 hours left · 103 deal for members who joined before it started · 4 features + socials · 5 check-in · 6+ every two weeks, rotating
+// step 1 thanks · 2 the welcome deal · 101 deal: 24 hours left · 102 deal: 3 hours left · 103 deal for members who joined before it started · 111 deal: 12 hours left · 112 deal: 3 hours left (24-hour members) · 4 features + socials · 5 check-in · 6+ every two weeks, rotating
 function welcomeCopy(step, p) {
   const hi = `Hi ${first(p.name)},`, plans = ["See the plans", APP + "/?plans"], open = ["Open Revora", APP + "/"];
   if (step === 1) return { subject: "Welcome to Revora Garage", paras: [hi,
@@ -93,8 +93,9 @@ function welcomeCopy(step, p) {
       "Print or share a full history report when it's time to sell"] },
     p.bikes ? "Your bike is already in, so you're set. Logging the last service you remember is a good next step." : "The best first step is adding your bike. It takes about a minute.",
     "And if you ride with people who keep their maintenance in a notebook or in their head, send them our way. Revora is free to start."], button: open };
-  if (step === 2) return { subject: "Your welcome deal: 48 hours to lock in a lower price", paras: [hi,
-    "You're on the Free plan, which covers one bike and the basics. For the next 48 hours, any paid plan is cheaper for your first 3 months:",
+  const dh = p.deal_hours || 24;   // 24 hours for members who joined from Oct 23, 3:45 PM ET on, 48 before that
+  if (step === 2) return { subject: `Your welcome deal: ${dh} hours to lock in a lower price`, paras: [hi,
+    `You're on the Free plan, which covers one bike and the basics. For the next ${dh} hours, any paid plan is cheaper for your first 3 months:`,
     { list: DEAL },
     "After 3 months it goes to the regular price, and you can cancel any time. If you'd rather pay once a year, yearly plans save 17 to 42% over the regular monthly price.",
     "Your bikes and records stay right where they are when you upgrade. The countdown is on your garage page so you know how long is left."], button: ["See the deal", APP + "/?plans"] };
@@ -107,7 +108,11 @@ function welcomeCopy(step, p) {
     { list: DEAL },
     "After 3 months it goes to the regular price, and you can cancel any time. Sign in and you'll see the deal prices on the plans page, with the countdown on your garage page.",
     "If Free is all you need, that's fine. One bike stays free for good."], button: ["See the deal", APP + "/?plans"] };
-  if (step === 102) return { subject: "Your welcome deal ends in 3 hours", paras: [hi,
+  if (step === 111) return { subject: "About 12 hours left on your welcome deal", paras: [hi,
+    "A quick heads-up: your welcome deal ends in about 12 hours.",
+    { list: ["Rider: $4.99 a month for your first 3 months (then $6.99)", "Restorer: $6.99 a month for your first 3 months (then $9.99)", "Shop: $19.99 a month for your first 3 months (then $29)"] },
+    "If you're working on a project bike, Restorer is the one to look at. You can take the $6.99 deal, or start a 30-day free trial instead and pay $9.99 a month after that."], button: ["See the deal", APP + "/?plans"] };
+  if (step === 102 || step === 112) return { subject: "Your welcome deal ends in 3 hours", paras: [hi,
     "Last reminder: your welcome deal ends in about 3 hours. After that, plans are the regular price of $6.99 for Rider, $9.99 for Restorer and $29 for Shop.",
     "If you want the lower price, sign in and pick a plan before then. And if Free is all you need, that's fine too. One bike stays free for good."], button: ["See the deal", APP + "/?plans"] };
   if (step === 4) return { subject: "A few things in Revora you might not have tried", paras: [hi,
@@ -230,9 +235,9 @@ export default {
     const path = new URL(req.url).pathname;
     if (path === "/notify") return notify(req, env);
     if (path === "/unsub") return unsub(req, env);
-    if (path === "/welcome-test") { // sends every welcome email to the admin only, to check how they look
+    if (path === "/welcome-test") { // sends the welcome emails a new member gets now (24-hour deal) to the admin only, to check how they look
       if (!env.RESEND_API_KEY) return json({ error: "not configured" }, 503);
-      let n = 0; for (const st of [1, 2, 101, 102, 103, 4, 5, 6, 7, 8, 9]) if (await sendWelcome(env, ADMIN_TO, st, { name: "Xavier", bikes: 0, free: true }, "00000000-0000-0000-0000-000000000000")) n++;
+      let n = 0; for (const st of [1, 2, 111, 112, 4, 5]) if (await sendWelcome(env, ADMIN_TO, st, { name: "Xavier", bikes: 0, free: true, deal_hours: 24 }, "00000000-0000-0000-0000-000000000000")) n++;
       return json({ sent: n, to: ADMIN_TO });
     }
     if (path === "/welcome-preview") { const rows = await rpc("welcome_due", { sec: env.WORKER_SECRET, preview: true }); const c = {}; (rows || []).forEach(r => c["step" + r.step] = (c["step" + r.step] || 0) + 1); return json({ wouldSend: c }); }

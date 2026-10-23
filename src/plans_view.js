@@ -48,22 +48,34 @@
     });
   };
   // ---- the 48-hour welcome deal ----
-  // New members get 48 hours from the moment they join (or from when the deal started, for older accounts) to lock in
+  // New members get 24 hours from the moment they join (48 for accounts from before Oct 23, 3:45 PM ET) to lock in
   // a lower price for their first 3 months: Rider $4.99, Restorer $6.99, Shop $19.99. After 3 months it's the regular price.
   // Checkout uses the plan's regular Stripe link with a promotion code filled in (config: dealCodes, dealFrom, dealHours).
   const DEAL_MONTHS = 3, $ = n => "$" + (Number.isInteger(n) ? n : n.toFixed(2));
   window.RV_DEAL_MONTHS = DEAL_MONTHS; window.rvMoney = $;
+  // Members who joined before dealShortFrom get 48 hours (dealHours); anyone who joins after it gets 24 (dealShortHours).
   window.rvDeal = function () {
     const c = window.RV_CONFIG || {}; if (!c.dealCodes) return null;
-    const hours = c.dealHours || 48, from = Date.parse(c.dealFrom || "") || 0;
-    if (!window.RV_JOINED) return { visitor: true, hours };            // not signed in: the clock starts when they join
-    const start = Math.max(Date.parse(window.RV_JOINED) || 0, from), end = start + hours * 36e5, left = end - Date.now();
+    const from = Date.parse(c.dealFrom || "") || 0, shortFrom = Date.parse(c.dealShortFrom || "") || Infinity;
+    const long = c.dealHours || 48, short = c.dealShortHours || 24;
+    if (!window.RV_JOINED) return { visitor: true, hours: Date.now() >= shortFrom ? short : long };   // not signed in: the clock starts when they join
+    const joined = Date.parse(window.RV_JOINED) || 0, hours = joined >= shortFrom ? short : long;
+    const start = Math.max(joined, from), end = start + hours * 36e5, left = end - Date.now();
     return left > 0 ? { end, left, hours } : null;
   };
   // "1 day 3 hours", "5 hours 12 min", "14 min"
   window.rvLeftTxt = function (ms) {
     const m = Math.max(0, Math.floor(ms / 6e4)), d = Math.floor(m / 1440), h = Math.floor(m % 1440 / 60), mm = m % 60, pl = (n, w) => n + " " + w + (n === 1 ? "" : "s");
     return d ? pl(d, "day") + (h ? " " + pl(h, "hour") : "") : h ? pl(h, "hour") + (mm ? " " + mm + " min" : "") : Math.max(1, mm) + " min";
+  };
+  // the ticking clock: "23:59:59" (hours can go past 24 for the 48-hour members)
+  window.rvClock = function (ms) {
+    const t = Math.max(0, Math.floor(ms / 1000)), p = n => String(n).padStart(2, "0");
+    return p(Math.floor(t / 3600)) + ":" + p(Math.floor(t % 3600 / 60)) + ":" + p(t % 60);
+  };
+  // big red countdown block used on the plans page and the garage page
+  window.rvDealClock = function (d, label) {
+    return `<div class="deal-clock" data-deal-end="${d.end}" role="timer" aria-label="Welcome deal time left"><span class="dc-k">${label || "Welcome deal ends in"}</span><b class="dc-t" data-deal-left>${rvClock(d.left)}</b></div>`;
   };
   // the price line for upgrade boxes: "Included in Rider · $4.99 a month for 3 months (welcome deal)" or "· $6.99 a month"
   window.rvPriceLine = function (P) {
@@ -94,9 +106,9 @@
   // keep any "ends in" countdown on the page ticking; when it runs out, reload so regular prices show
   setInterval(() => document.querySelectorAll("[data-deal-end]").forEach(el => {
     const left = +el.dataset.dealEnd - Date.now(), b = el.querySelector("[data-deal-left]");
-    if (left <= 0) { el.removeAttribute("data-deal-end"); el.textContent = "The welcome deal has ended"; return; }
-    if (b) b.textContent = rvLeftTxt(left);
-  }), 30000);
+    if (left <= 0) { el.removeAttribute("data-deal-end"); el.classList.add("over"); el.textContent = "The welcome deal has ended"; return; }
+    if (b) b.textContent = rvClock(left);
+  }), 1000);
   window.rvPlansHtml = function (opts = {}) {
     const yearly = !!opts.yearly, cur = opts.current || "", live = rvPlansLive(), mode = opts.mode || "view";   // view | choose
     const deal = rvDeal();
@@ -117,7 +129,7 @@
     };
     return `<div class="pl">
       ${opts.paid || opts.comp ? "" : deal && deal.visitor ? `<div class="pl-deal">Welcome deal: join and you have ${deal.hours} hours to lock in a lower price for your first ${DEAL_MONTHS} months</div>`
-        : deal ? `<div class="pl-deal" data-deal-end="${deal.end}">Welcome deal ends in <b data-deal-left>${rvLeftTxt(deal.left)}</b></div>` : ""}
+        : deal ? rvDealClock(deal) : ""}
       <div class="pl-tog seg" role="group" aria-label="Billing"><button class="${yearly ? "" : "on"}" data-pl-bill="m">Monthly</button><button class="${yearly ? "on" : ""}" data-pl-bill="y">Yearly <small>save more</small></button></div>
       <div class="pl-grid">${PLANS.map(p => `<article class="pl-card ${p.color}${p.best ? " best" : ""}${cur === p.id ? " cur" : ""}">
         ${p.best ? `<span class="pl-best">Most popular${p.trial ? " · " + p.trial + " days free" : ""}</span>` : ""}<div class="pl-top"><h3>${e(p.name)}</h3><span class="pl-tag">${e(p.tag)}</span></div>
@@ -130,7 +142,7 @@
       <div class="pl-faq">
         <div><b>What happens to my records if I change plans?</b><span>Nothing is ever deleted. On a smaller plan, features you don't have stay visible and your records stay safe until you upgrade again.</span></div>
         <div><b>Can I cancel any time?</b><span>Yes. You keep the paid features until the end of the month or year you paid for. Payments are handled by Stripe, and Revora never sees your card.</span></div>
-        <div><b>How does the welcome deal work?</b><span>For ${(window.RV_CONFIG || {}).dealHours || 48} hours after you join, Rider is $4.99, Restorer $6.99 and Shop $19.99 a month for your first ${DEAL_MONTHS} months. After that it's the regular price: $6.99, $9.99 or $29 a month. Yearly plans aren't part of the deal, but they save 17 to 42% over paying monthly at the regular price.</span></div>
+        <div><b>How does the welcome deal work?</b><span>For ${deal ? deal.hours : (window.RV_CONFIG || {}).dealShortHours || 24} hours after you join, Rider is $4.99, Restorer $6.99 and Shop $19.99 a month for your first ${DEAL_MONTHS} months. After that it's the regular price: $6.99, $9.99 or $29 a month. Yearly plans aren't part of the deal, but they save 17 to 42% over paying monthly at the regular price.</span></div>
         <div><b>How does the Restorer trial work?</b><span>You get every Restorer feature free for 30 days. You add a card when you start, and it's charged $9.99 on day 31 unless you cancel before then. Cancel in one click from Manage billing.</span></div>
       </div></div>`;
   };
