@@ -2,7 +2,7 @@
   "supabaseUrl": "https://fhuksccqsyaomnouxxtb.supabase.co",
   "supabaseKey": "sb_publishable_0wYtVeKcFJUzy3AfIaFhiw_NrT1wNkz",
   "payLinks": {
-    "rider_m": "https://buy.stripe.com/fZu28r9MY0qRcVCgABabK00",
+    "rider_m": "https://buy.stripe.com/7sYaEXaR25Lb6xeacdabK08",
     "rider_y": "https://buy.stripe.com/00wcN51gs1uV3l25VXabK01",
     "restorer_m": "https://buy.stripe.com/28EbJ1f7i2yZ2gYbghabK02",
     "restorer_y": "https://buy.stripe.com/5kQeVd2kwgpP5ta845abK03",
@@ -13,5 +13,12 @@
   "plansLive": true,
   "trialLink": "https://buy.stripe.com/9B6cN59MYc9z3l2estabK07",
   "primaryHost": "revoragarage.com",
-  "shopApi": "https://revora-shop.xavier-j-wilson101.workers.dev"
+  "shopApi": "https://revora-shop.xavier-j-wilson101.workers.dev",
+  "dealCodes": {
+    "rider": "RIDER48K7",
+    "restorer": "RESTORE48K7",
+    "shop": "SHOP48K7"
+  },
+  "dealFrom": "2026-10-23T16:00:00Z",
+  "dealHours": 48
 }

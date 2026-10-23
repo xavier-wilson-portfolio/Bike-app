@@ -29,7 +29,7 @@ const LOCK_TXT = {
   value: "See what the bike is worth next to what you've put into it, and get a listing written from your records when you sell." };
 function upsellBody(need, what) {
   const P = (window.RV_PLANS || []).find(p => p.id === need) || {};
-  return `<div class="up"><span class="up-ico">${ic("lock")}</span><span class="up-k">Included in ${esc(P.name || need)}${P.m ? ` · <s>$${P.was.toFixed(2)}</s> $${P.m.toFixed(2)} a month` : ""}</span>
+  return `<div class="up"><span class="up-ico">${ic("lock")}</span><span class="up-k">Included in ${esc(P.name || need)}${window.rvPriceLine ? rvPriceLine(P) : ""}</span>
     <h2>${esc(what.title)}</h2><p>${esc(what.text || "")}</p>
     <ul>${(P.feats || []).slice(0, 6).map(f => `<li>${esc(f)}</li>`).join("")}</ul>${trialOpen() && need !== "restorer" ? `<p class="faint" style="font-size:13px">Restorer includes everything in Rider, and you can try it free for 30 days.</p>` : ""}
     <div class="row" style="gap:8px;flex-wrap:wrap;justify-content:center">${trialOpen() ? `<button class="btn tan" data-up-trial>${need === "restorer" ? "Start 30-day free trial" : "Try Restorer free for 30 days"}</button>` : ""}<button class="btn pri" data-up-plans>See plans</button>${!window.RV_CLOUD && window.rvHasAccounts && rvHasAccounts() ? `<button class="btn" data-up-signup>Create a free account</button>` : ""}</div></div>`;

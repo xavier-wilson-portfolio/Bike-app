@@ -1,11 +1,11 @@
-/* Revora service reminders (Cloudflare Worker). Runs once a day on a cron trigger.
+/* Revora service reminders (Cloudflare Worker). Runs every hour on a cron trigger (0 * * * *): welcome emails each hour, service reminders at 13:00 UTC.
    Gets the reminders due today from Supabase, sends each person one email with everything that's due, marks them sent.
    Only people on a paid plan, a trial or a gift code get them (Supabase checks that), and only at their own account email.
    Secrets to add in Cloudflare (Settings > Variables and Secrets, type "Secret"):
      RESEND_API_KEY   the API key from resend.com (starts with re_)
      WORKER_SECRET    the same value as BILLING_SECRET on the revora-billing worker
    Visiting /run sends anything due right now (it's the same job the schedule runs, so nothing is sent twice).
-   It also sends the new sign-up emails (thanks, then a trial offer and a plans note to people still on Free) once
+   It also sends the new sign-up emails (thanks, then the 48-hour welcome deal and two reminders to people still on Free) once
    welcome_settings.enabled is on in Supabase. /welcome-test sends one of each to the admin, /welcome-preview counts who'd get one.
    POST /notify { rows: [feedback] } emails feedback sent from the app to info@revoragarage.com, with Reply-To set to the sender. */
 const SUPABASE_URL = "https://fhuksccqsyaomnouxxtb.supabase.co", SUPABASE_KEY = "sb_publishable_0wYtVeKcFJUzy3AfIaFhiw_NrT1wNkz";
@@ -69,11 +69,16 @@ async function sig(uid, env) {
 }
 const first = n => String(n || "").trim().split(/\s+/)[0].replace(/^./, c => c.toUpperCase()) || "there";
 const SOCIAL = [["TikTok", "https://www.tiktok.com/@revora.garage"], ["Instagram", "https://www.instagram.com/revoragarageofficial/"], ["Facebook", "https://www.facebook.com/profile.php?id=61595784891437"]];
+// the 48-hour welcome deal: a lower price for the first 3 months if they pick a plan within 48 hours of joining
+const DEAL = [
+  "Rider: $4.99 a month for your first 3 months, then $6.99. Service reminders by email before things are due, recall alerts for your bike, fuel and cost tracking, and room for 3 bikes.",
+  "Restorer: $6.99 a month for your first 3 months, then $9.99. Everything in Rider, plus the parts scan from a photo, AI that reads your receipts, a shopping list with a budget, step-by-step restoration courses and up to 10 bikes. Or try it free for 30 days first.",
+  "Shop: $19.99 a month for your first 3 months, then $29. For shops and builders: work orders, customer bikes with history reports and a team of up to 10."];
 const PRICES = [
-  "Rider: $4.99 a month (was $6.99), or $49 a year. Service reminders by email before things are due, recall alerts for your bike, fuel and cost tracking, and room for 3 bikes.",
-  "Restorer: $9.99 a month (was $19.99), or $99 a year. Everything in Rider, plus the parts scan from a photo, AI that reads your receipts, a shopping list with a budget, step-by-step restoration courses and up to 10 bikes. You can try it free for 30 days and cancel any time before you're charged.",
-  "Shop: $29 a month (was $49.99). For shops and builders: work orders, customer bikes with history reports and a team of up to 10."];
-// step 1 thanks · 2 deals · 3 deals reminder · 4 features + socials · 5 check-in · 6+ every two weeks, rotating
+  "Rider: $6.99 a month, or $49 a year. Service reminders by email before things are due, recall alerts for your bike, fuel and cost tracking, and room for 3 bikes.",
+  "Restorer: $9.99 a month, or $99 a year. Everything in Rider, plus the parts scan from a photo, AI that reads your receipts, a shopping list with a budget, step-by-step restoration courses and up to 10 bikes.",
+  "Shop: $29 a month, or $290 a year. For shops and builders: work orders, customer bikes with history reports and a team of up to 10."];
+// step 1 thanks · 2 the welcome deal · 101 deal: 24 hours left · 102 deal: 3 hours left · 4 features + socials · 5 check-in · 6+ every two weeks, rotating
 function welcomeCopy(step, p) {
   const hi = `Hi ${first(p.name)},`, plans = ["See the plans", APP + "/?plans"], open = ["Open Revora", APP + "/"];
   if (step === 1) return { subject: "Welcome to Revora Garage", paras: [hi,
@@ -88,13 +93,18 @@ function welcomeCopy(step, p) {
       "Print or share a full history report when it's time to sell"] },
     p.bikes ? "Your bike is already in, so you're set. Logging the last service you remember is a good next step." : "The best first step is adding your bike. It takes about a minute.",
     "And if you ride with people who keep their maintenance in a notebook or in their head, send them our way. Revora is free to start."], button: open };
-  if (step === 2) return { subject: "Launch prices on Revora plans", paras: [hi,
-    "You're on the Free plan, which covers one bike and the basics. Here's what you get if you want more. These are launch prices and they won't stay this low.",
-    { list: PRICES },
-    "Once you upgrade, reminders start showing up in your inbox before a service is due, recalls for your bike come to you, and if you're restoring, the scan, shopping list and course open up right away. Your bikes and records stay exactly where they are."], button: plans };
-  if (step === 3) return { subject: "The launch prices are still on", paras: [hi,
-    "A quick reminder that Revora plans are still at launch prices: Rider at $4.99 a month and Restorer at $9.99 a month, down from $6.99 and $19.99.",
-    "If you're working on a project bike, Restorer's 30-day free trial is the easiest way to see if it's worth it. Cancel any time in the first 30 days and you won't pay a thing."], button: plans };
+  if (step === 2) return { subject: "Your welcome deal: 48 hours to lock in a lower price", paras: [hi,
+    "You're on the Free plan, which covers one bike and the basics. For the next 48 hours, any paid plan is cheaper for your first 3 months:",
+    { list: DEAL },
+    "After 3 months it goes to the regular price, and you can cancel any time. If you'd rather pay once a year, yearly plans save 17 to 42% over the regular monthly price.",
+    "Your bikes and records stay right where they are when you upgrade. The countdown is on your garage page so you know how long is left."], button: ["See the deal", APP + "/?plans"] };
+  if (step === 101) return { subject: "About 24 hours left on your welcome deal", paras: [hi,
+    "A quick heads-up: your welcome deal ends in about 24 hours.",
+    { list: ["Rider: $4.99 a month for your first 3 months (then $6.99)", "Restorer: $6.99 a month for your first 3 months (then $9.99)", "Shop: $19.99 a month for your first 3 months (then $29)"] },
+    "If you're working on a project bike, Restorer is the one to look at. You can take the $6.99 deal, or start a 30-day free trial instead and pay $9.99 a month after that."], button: ["See the deal", APP + "/?plans"] };
+  if (step === 102) return { subject: "Your welcome deal ends in 3 hours", paras: [hi,
+    "Last reminder: your welcome deal ends in about 3 hours. After that, plans are the regular price of $6.99 for Rider, $9.99 for Restorer and $29 for Shop.",
+    "If you want the lower price, sign in and pick a plan before then. And if Free is all you need, that's fine too. One bike stays free for good."], button: ["See the deal", APP + "/?plans"] };
   if (step === 4) return { subject: "A few things in Revora you might not have tried", paras: [hi,
     "You've had Revora for a week. Here are a few things people tend to miss:",
     { list: ["Ask the mechanic: type a question about your bike and get an answer that knows your model",
@@ -114,9 +124,10 @@ function welcomeCopy(step, p) {
       "eBay listings in your shopping list, with prices and shipping, so you can compare without leaving the app",
       "The history report: every service and receipt in one document, ready to print or send to a buyer",
       "Ask the mechanic when you're stuck on a job"] }], button: open, social: true };
-  if (k === 1 && p.free) return { subject: "Revora launch prices, a quick reminder", paras: [hi,
-    "Just a reminder that the launch prices are still on.",
-    { list: PRICES }], button: plans };
+  if (k === 1 && p.free) return { subject: "What a Revora plan adds", paras: [hi,
+    "You're on the Free plan, which covers one bike for good. If you want more, here's what each plan adds:",
+    { list: PRICES },
+    "Paying yearly saves 17 to 42% over monthly. Your bikes and records stay where they are whichever plan you pick."], button: plans };
   if (k === 1) return { subject: "Getting more out of Revora", paras: [hi,
     "A couple of quick tips to get more out of your plan:",
     { list: ["Update your odometer now and then so the reminders stay on time",
@@ -203,19 +214,23 @@ async function notify(req, env) {
 }
 
 export default {
-  async scheduled(evt, env, ctx) { ctx.waitUntil(run(env).catch(e => console.log(e)).then(() => runWelcome(env)).catch(e => console.log("welcome", e))); },
+  // cron "0 * * * *": welcome and deal emails every hour (the deal reminders are timed to the hour); service reminders once a day at 13:00 UTC
+  async scheduled(evt, env, ctx) {
+    const daily = new Date(evt.scheduledTime || Date.now()).getUTCHours() === 13;
+    ctx.waitUntil((daily ? run(env).catch(e => console.log(e)) : Promise.resolve()).then(() => runWelcome(env)).catch(e => console.log("welcome", e)));
+  },
   async fetch(req, env) {
     const path = new URL(req.url).pathname;
     if (path === "/notify") return notify(req, env);
     if (path === "/unsub") return unsub(req, env);
-    if (path === "/welcome-test") { // sends all three emails to the admin only, to check how they look
+    if (path === "/welcome-test") { // sends every welcome email to the admin only, to check how they look
       if (!env.RESEND_API_KEY) return json({ error: "not configured" }, 503);
-      let n = 0; for (const st of [1, 2, 3, 4, 5, 6, 7, 8, 9]) if (await sendWelcome(env, ADMIN_TO, st, { name: "Xavier", bikes: 0, free: true }, "00000000-0000-0000-0000-000000000000")) n++;
+      let n = 0; for (const st of [1, 2, 101, 102, 4, 5, 6, 7, 8, 9]) if (await sendWelcome(env, ADMIN_TO, st, { name: "Xavier", bikes: 0, free: true }, "00000000-0000-0000-0000-000000000000")) n++;
       return json({ sent: n, to: ADMIN_TO });
     }
     if (path === "/welcome-preview") { const rows = await rpc("welcome_due", { sec: env.WORKER_SECRET, preview: true }); const c = {}; (rows || []).forEach(r => c["step" + r.step] = (c["step" + r.step] || 0) + 1); return json({ wouldSend: c }); }
     if (path === "/welcome-run") { try { return json(await runWelcome(env)); } catch (e) { return json({ error: String(e.message || e) }, 500); } }
     if (new URL(req.url).pathname === "/run") { try { return json(await run(env)); } catch (e) { return json({ error: String(e.message || e) }, 500); } }
-    return new Response("Revora reminders is running. It sends once a day.", { status: 200 });
+    return new Response("Revora reminders is running. Welcome emails go out every hour, service reminders once a day.", { status: 200 });
   },
 };

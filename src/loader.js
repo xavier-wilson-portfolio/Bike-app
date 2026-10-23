@@ -441,6 +441,7 @@
         : `<div class="bench empty"><div class="bench-txt"><h2>Add your bike</h2><p>Restoring it? Get its parts diagrams, part numbers and a step-by-step course. Just keeping it running? Get a maintenance log with parts, jobs and receipts.</p>
             <div class="bench-go"><button class="btn tan big" data-nav="new">Add your bike</button></div></div>${benchArt()}</div>`}
       </section>
+      ${dealBand()}
       ${window.rvAdmin && window.rvPlanOf && myPlan().admin ? `<div id="admHQ"></div>` : ""}
       <div id="woBoard"></div>
       ${data.length ? `<section class="garage"><div class="garage-h"><h2>Your garage</h2><button class="btn sm" data-nav="new">+ New project</button></div>
@@ -570,7 +571,7 @@
   function upsellBox(need, title, text) {
     const P = planInfo(need), trial = session && !myPlan().trialUsed && myPlan().id === "free";
     const box = document.createElement("div"); box.className = "pk-modal";
-    box.innerHTML = `<div class="pk-card up"><span class="up-ico">🔒</span><span class="up-k">Included in ${esc(P.name || need)}${P.m ? ` · <s>$${P.was.toFixed(2)}</s> $${P.m.toFixed(2)} a month` : ""}</span><h2>${esc(title)}</h2><p>${esc(text)}</p>
+    box.innerHTML = `<div class="pk-card up"><span class="up-ico">🔒</span><span class="up-k">Included in ${esc(P.name || need)}${window.rvPriceLine ? rvPriceLine(P) : ""}</span><h2>${esc(title)}</h2><p>${esc(text)}</p>
       <div class="pk-links" style="justify-content:center">${trial ? `<button class="btn tan" data-up="trial">${need === "restorer" ? "Start 30-day free trial" : "Try Restorer free for 30 days"}</button>` : ""}${!session && sb ? `<button class="btn tan" data-up="signup">Create a free account</button>` : ""}<button class="btn pri" data-up="plans">See plans</button><button class="btn" data-up="close">Not now</button></div></div>`;
     box.querySelector(".up-ico").innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>';
     box.onclick = async e => { const b = e.target.closest("[data-up]"); if (!b && e.target !== box) return; const k = b ? b.dataset.up : "close"; box.remove();
@@ -598,6 +599,16 @@
     if (hasPlanL("restorer")) return true;
     upsellBox("restorer", "Restoration courses are in Restorer", "A step-by-step course tailored to your bike, with a parts list, safety checks and a budget. Try it free for 30 days.");
     return false;
+  }
+  // the welcome deal on the garage page: only for people on Free while their 48 hours are running
+  function dealBand() {
+    const d = window.rvDeal && rvDeal(), P = myPlan();
+    if (!d || d.visitor || P.id !== "free" || P.admin || !window.rvPlansLive || !rvPlansLive()) return "";
+    const pr = id => rvMoney((planInfo(id) || {}).deal || 0);
+    return `<section class="deal-band" data-deal-end="${d.end}"><div><span class="deal-k">Welcome deal · ends in <b data-deal-left>${esc(rvLeftTxt(d.left))}</b></span>
+      <b class="deal-t">Rider ${pr("rider")}, Restorer ${pr("restorer")}, Shop ${pr("shop")} a month for your first ${window.RV_DEAL_MONTHS || 3} months</b>
+      <span class="deal-s">After that it's the regular price. You can still try Restorer free for 30 days instead.</span></div>
+      <button class="btn tan" data-plans>See the deal</button></section>`;
   }
   // send a signed-in person to Stripe checkout for a plan
   function checkout(plan, yearly) {
@@ -664,7 +675,7 @@
         <div><span>1</span><b>Add your bike</b><p>Search for it or type the year, make and model. Pick whether you're restoring it or keeping it running.</p></div>
         <div><span>2</span><b>Log as you go</b><p>Snap receipts, log services and fill-ups, and tick off checklists. It takes seconds.</p></div>
         <div><span>3</span><b>Know what's next</b><p>Reminders, recall alerts and renewal dates come to you, and the history report builds itself.</p></div></div></section>
-      <section class="ld-sec" id="ld-plans"><h2>Plans</h2><p class="ld-sub">Limited-time prices on every paid plan.</p>${window.rvPlansHtml({ yearly, mode: "choose" })}</section>
+      <section class="ld-sec" id="ld-plans"><h2>Plans</h2><p class="ld-sub">Start free. New members get 48 hours to lock in a lower price for their first 3 months.</p>${window.rvPlansHtml({ yearly, mode: "choose" })}</section>
       <section class="ld-end"><h2>Your bike's whole story, kept right.</h2><button class="btn tan big" data-nav="signup">Get started free</button><button class="linkbtn" data-nav-pick>Look around first</button></section>
       <footer class="ld-foot"><span>Revora</span><span>Made for people who work on their own bikes.</span><a href="mailto:info@revoragarage.com">info@revoragarage.com</a></footer></div>`;
     app.querySelectorAll("[data-pl-bill]").forEach(b => b.onclick = () => { showLanding(b.dataset.plBill === "y"); document.getElementById("ld-plans").scrollIntoView(); });
@@ -886,7 +897,7 @@
       if (sb) {
         const recovering = /type=recovery/.test(location.hash);
         sb.auth.onAuthStateChange(ev => { if (ev === "PASSWORD_RECOVERY") showAuth("newpass"); });
-        session = (await sb.auth.getSession()).data.session; window.RV_EMAIL = session && session.user.email;
+        session = (await sb.auth.getSession()).data.session; window.RV_EMAIL = session && session.user.email; window.RV_JOINED = session && (session.user.email_confirmed_at || session.user.created_at);
         if (session) await loadProfile();
         if (session) await flushPendingReq();
         await loadPrefs();
