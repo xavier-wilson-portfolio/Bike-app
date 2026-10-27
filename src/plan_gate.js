@@ -2,7 +2,7 @@
    Everything stays visible. A page or button your plan doesn't include shows what it does and how to get it,
    with a link to the plans page (and the Restorer trial when it's still available). */
 const PLAN_NAME = { free: "Free", rider: "Rider", restorer: "Restorer", shop: "Shop" };
-const planNow = () => window.rvPlanOf ? rvPlanOf(window.RV_CLOUD && RV_CLOUD.profile, window.RV_CLOUD && RV_CLOUD.user && RV_CLOUD.user.email) : { id: "shop", admin: true };
+const planNow = () => window.RV_DEMO ? { id: "shop", demo: true } : window.rvPlanOf ? rvPlanOf(window.RV_CLOUD && RV_CLOUD.profile, window.RV_CLOUD && RV_CLOUD.user && RV_CLOUD.user.email) : { id: "shop", admin: true };
 const hasPlan = need => !need || ((window.RV_PLAN_RANK || {})[planNow().id] || 0) >= ((window.RV_PLAN_RANK || {})[need] || 0);
 const SEC_PLAN = { reminders: "rider", recalls: "rider", mods: "rider", costs: "rider", value: "rider", workorders: "shop", budget: "restorer", purchasing: "restorer", receipts: "restorer", team: "restorer", viewer: "restorer" };
 // on a restoration project, the course and its workshop pages are Restorer; the everyday pages follow their own plan

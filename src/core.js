@@ -278,6 +278,11 @@ const store = {
   async init() {
     let db = null, user = null;
     const cloud = window.RV_CLOUD;
+    if (window.RV_DEMO) { // the example bike: loaded from demo.json, kept in memory only
+      ME.mode = "demo"; ME.name = "Demo rider";
+      try { const d = await demoLoad(); COLLS.forEach(c => S[c] = d[c] || {}); } catch (e) { toast("Couldn't load the demo bike. Reload the page.", "err"); }
+      COLLS.forEach(c => this.loaded.add(c)); this.ready = true; onData(true); return;
+    }
     if (cloud) { // signed in to an account project
       this.db = cloud.db; ME.mode = "shared"; ME.id = cloud.user.id; ME.name = cloud.profile.display_name || cloud.user.email || "";
       ME.canWrite = cloud.role !== "viewer"; this.subscribe(); return;
@@ -310,11 +315,13 @@ const store = {
     });
   },
   saveLocal: debounce(function () {
+    if (window.RV_DEMO) return;
     const ok = lsSet(DATA_KEY, S);
     setSave(ok ? "ok" : "err", ok ? "Saved in this browser" : "Browser storage is full or blocked. Export a backup now.");
   }, 250),
   pending: 0,
   async put(c, rec, opts = {}) {
+    if (window.RV_DEMO) { try { return await demoWrite("put", c, clone(rec)); } finally { scheduleRender(); } }
     if (!ME.canWrite) { toast("You have view-only access. Ask the owner for Contributor access to edit.", "err"); throw new Error("readonly"); }
     rec = clone(rec);
     rec.updatedAt = nowISO(); rec.updatedBy = whoName(); rec.updatedById = ME.id || "";
@@ -332,6 +339,7 @@ const store = {
     return prev;
   },
   async del(c, id, opts = {}) {
+    if (window.RV_DEMO) { try { return await demoWrite("del", c, id); } finally { scheduleRender(); } }
     if (!ME.canWrite) { toast("You have view-only access.", "err"); throw new Error("readonly"); }
     const prev = S[c][id] ? clone(S[c][id]) : null;
     delete S[c][id]; scheduleRender();

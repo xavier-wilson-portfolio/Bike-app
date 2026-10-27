@@ -665,7 +665,7 @@
       <section class="ld-hero"><div class="ld-hero-t"><span class="ld-k">For riders, restorers and shops</span>
           <h1>Restore it. Ride it. Keep every record.</h1>
           <p>Revora keeps your bike's whole life in one place: services and reminders, receipts read by AI, recalls, mods, papers, and a step-by-step restoration course for any bike.</p>
-          <div class="ld-cta"><button class="btn tan big" data-nav="signup">Get started free</button><button class="btn ghost-l big" data-nav="signin">Sign in</button></div>
+          <div class="ld-cta"><button class="btn tan big" data-nav="signup">Get started free</button><button class="btn ghost-l big" data-demo>Try the demo</button><button class="btn ghost-l big" data-nav="signin">Sign in</button></div>
           <span class="ld-small">Free for one bike. Restorer free for 30 days, cancel any time.</span></div>
         <div class="ld-art">${["bike-cafe", "bike-adventure", "bike-cruiser"].map((n, i) => sil(n) ? `<img class="ld-s s${i}" src="${sil(n)}" alt="">` : "").join("")}</div></section>
       <section class="ld-strip"><div><b>Any bike</b><span>Search the library or add yours by year, make and model</span></div><div><b>8 kinds of bike</b><span>Courses tailored to cruisers, sport bikes, scooters and more</span></div><div><b>Your records stay yours</b><span>Export or print them any time</span></div></section>
@@ -676,11 +676,11 @@
         <div><span>2</span><b>Log as you go</b><p>Snap receipts, log services and fill-ups, and tick off checklists. It takes seconds.</p></div>
         <div><span>3</span><b>Know what's next</b><p>Reminders, recall alerts and renewal dates come to you, and the history report builds itself.</p></div></div></section>
       <section class="ld-sec" id="ld-plans"><h2>Plans</h2><p class="ld-sub">Start free. New members get 24 hours to lock in a lower price for their first 3 months.</p>${window.rvPlansHtml({ yearly, mode: "choose" })}</section>
-      <section class="ld-end"><h2>Your bike's whole story, kept right.</h2><button class="btn tan big" data-nav="signup">Get started free</button><button class="linkbtn" data-nav-pick>Look around first</button></section>
+      <section class="ld-end"><h2>Your bike's whole story, kept right.</h2><button class="btn tan big" data-nav="signup">Get started free</button><button class="linkbtn" data-demo>Try the demo first</button></section>
       <footer class="ld-foot"><span>Revora</span><span>Made for people who work on their own bikes.</span><a href="mailto:info@revoragarage.com">info@revoragarage.com</a></footer></div>`;
     app.querySelectorAll("[data-pl-bill]").forEach(b => b.onclick = () => { showLanding(b.dataset.plBill === "y"); document.getElementById("ld-plans").scrollIntoView(); });
     app.querySelectorAll("[data-pl-pick]").forEach(b => b.onclick = () => showAuth("signup"));
-    app.querySelector("[data-nav-pick]").onclick = () => goUrl({ pick: 1 });
+    app.querySelectorAll("[data-demo]").forEach(b => b.onclick = () => goUrl({ demo: 1 }));
   }
 
   /* ---------- plans (public) ---------- */
@@ -904,6 +904,7 @@
         if (recovering) return;
       }
     }
+    if (qs.has("demo")) { window.RV_DEMO = true; return openApp("suzuki-dl650a-2012", null); }
     if (qs.get("report")) return showReport(qs.get("report"));
     if (qs.get("build")) return showBuild(qs.get("build"));
     if (qs.has("builds")) return showGallery();

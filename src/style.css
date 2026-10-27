@@ -2634,3 +2634,24 @@ button.adm-tile{cursor:pointer}.adm-tile.hot{border-color:var(--red);background:
 .deal-band>.deal-clock{flex:0 0 auto;background:#1E0C0E;border-color:#FF3B3B}
 .deal-band .dc-k,.deal-band .dc-t{color:#FF3B3B}
 @media (max-width:520px){.dc-t{font-size:42px}.deal-band>.deal-clock{width:100%}}
+
+/* ---- demo bike (?demo) ---- */
+.demo-bar{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:60;display:flex;align-items:center;gap:14px;background:#17232C;color:#fff;border-radius:999px;padding:8px 8px 8px 18px;box-shadow:0 10px 30px rgba(10,20,30,.28);font-size:14px;max-width:calc(100vw - 24px)}
+.demo-bar b{color:#D9BF8E}
+.demo-bar .btn{white-space:nowrap}
+html.is-demo body{padding-bottom:76px}
+.demo-box{display:flex;flex-direction:column;gap:12px;max-width:440px}
+.demo-box h2{margin:0;font-family:var(--f-display);font-size:26px;line-height:1.1}
+.demo-box p{margin:0}
+.demo-k{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue-ink)}
+.demo-acts{display:flex;gap:8px;flex-wrap:wrap}
+.demo-small{font-size:13px}
+.demo-wall{position:fixed;inset:0;z-index:200;background:rgba(14,22,28,.82);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:16px}
+.demo-wall-card{background:var(--surface);border-radius:18px;padding:32px 28px;max-width:420px;width:100%;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center;box-shadow:var(--shadow-lg)}
+.demo-wall-card .brand-icon{width:54px;height:54px}
+.demo-wall-card h2{margin:0;font-family:var(--f-display);font-size:30px}
+.demo-wall-card p{margin:0;color:var(--muted)}
+.demo-wall-card .btn{width:100%}
+html.demo-ended body{overflow:hidden}
+.demo-less{display:none}
+@media (max-width:560px){.demo-bar{left:12px;right:76px;transform:none;justify-content:space-between;font-size:13px;gap:8px;padding:7px 7px 7px 14px;white-space:nowrap}.demo-more{display:none}.demo-less{display:inline}}
