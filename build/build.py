@@ -17,7 +17,7 @@ out.mkdir(exist_ok=True)
 
 ORDER = ['core.js', 'model.js', 'content.js', 'howto.js', 'art_data.js', 'ui.js', 'plan_gate.js', 'vehicle.js', 'views.js', 'views2.js', 'views3.js', 'views4.js', 'maint.js', 'remind.js', 'mods.js', 'report.js', 'build.js', 'value.js', 'finder.js', 'shop.js', 'cart.js', 'workorders.js', 'receipts.js',
          'twin_data.js', 'twin_internals.js', 'twin.js', 'viewer.js', 'diag_draw.js', 'diag_data.js', 'diag_data2.js', 'diag_cms.js', 'diag_gen.js',
-         *sorted(p.name for p in src.glob('d3_*.js')), 'd3.js', 'diag.js', 'scan.js', 'parts_photo.js', 'parts_gen.js', 'parts_inv.js', 'chat.js', 'universal.js', 'feedback.js', 'generic.js', 'costs.js', 'papers.js', 'checklists.js', 'wear.js', 'recalls.js', 'plans.js', 'free_limits.js', 'importer.js', 'numbers.js', 'planjob.js', 'sticker.js', 'delete_bike.js', 'demo.js']
+         *sorted(p.name for p in src.glob('d3_*.js')), 'd3.js', 'diag.js', 'scan.js', 'parts_photo.js', 'parts_gen.js', 'parts_inv.js', 'chat.js', 'universal.js', 'feedback.js', 'generic.js', 'costs.js', 'papers.js', 'checklists.js', 'wear.js', 'recalls.js', 'plans.js', 'free_limits.js', 'importer.js', 'numbers.js', 'planjob.js', 'sticker.js', 'delete_bike.js', 'theme.js', 'demo.js']
 app = '\n'.join((src / f).read_text() for f in ORDER) + '\nboot();\n'
 (out / 'app.js').write_text(app)
 shutil.copy(ROOT / 'data' / 'demo.json', out / 'demo.json')
@@ -46,6 +46,9 @@ for pdir in sorted((ROOT / 'data' / 'packs').iterdir()):
 shutil.copytree(ROOT / 'img', out / 'img', dirs_exist_ok=True)
 
 css = (src / 'style.css').read_text()
+import sys; sys.path.insert(0, str(ROOT / 'build')); from darkify import darkify
+css, n_dark = darkify(css)
+print('dark colors', n_dark)
 loader = (src / 'cloud.js').read_text() + '\n' + (src / 'report_view.js').read_text() + '\n' + (src / 'build_view.js').read_text() + '\n' + (src / 'wo_view.js').read_text() + '\n' + (src / 'plans_view.js').read_text() + '\n' + (src / 'shop_view.js').read_text() + '\n' + (src / 'admin_view.js').read_text() + '\n' + (src / 'loader.js').read_text()
 cfg_file = ROOT / 'data' / 'config.json'   # public settings only: Supabase URL and publishable key
 cfg = json.loads(cfg_file.read_text()) if cfg_file.exists() else {}
@@ -65,6 +68,7 @@ html = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name
 <script type="application/ld+json">{{"@context":"https://schema.org","@graph":[{{"@type":"Organization","@id":"https://revoragarage.com/#org","name":"Revora Garage","alternateName":"Revora","url":"https://revoragarage.com/","logo":"https://revoragarage.com/img/app-512.png","email":"info@revoragarage.com","founder":{{"@type":"Person","name":"Xavier Wilson"}}}},{{"@type":"WebSite","name":"Revora Garage","alternateName":"Revora","url":"https://revoragarage.com/","publisher":{{"@id":"https://revoragarage.com/#org"}}}},{{"@type":"WebApplication","name":"Revora Garage","url":"https://revoragarage.com/","applicationCategory":"LifestyleApplication","operatingSystem":"Any (web browser)","description":"Service log, maintenance reminders, parts diagrams and project tracking for any motorcycle.","publisher":{{"@id":"https://revoragarage.com/#org"}}}}]}}</script>
 <link rel="icon" type="image/svg+xml" href="img/revora-icon.svg"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#17232C"><link rel="apple-touch-icon" href="img/apple-touch-icon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Revora"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;1,6..12,400&display=swap">
+<script>try{{var t=localStorage.getItem("rv.theme")||"light";if(t==="system")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)}}catch(e){{}}</script>
 <style>:root{{color-scheme:light}}[hidden]{{display:none!important}}body{{margin:0}}img{{max-width:100%}}
 {css}
 </style></head><body>

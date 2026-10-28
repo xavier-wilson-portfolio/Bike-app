@@ -11,18 +11,14 @@
   --f-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
   --r:10px; --stage-bg:linear-gradient(180deg,#F8FAFC 0%,#EEF3F6 72%,#E8EEF2 100%); --art-bg:#FFFFFF;
 }
-@media not all{:root:not([data-theme="light"]){
+/* dark mode: Settings > Appearance sets data-theme on <html> */
+:root[data-theme="dark"]{
   --bg:#12191F; --surface:#1A232B; --panel:#1C2C37; --panel-2:#18242D; --blue:#3E6378; --blue-ink:#A9D1E8;
   --tan:#A38A66; --tan-2:#8E7552; --tan-soft:#2A251E; --tan-ink:#EBDCC4;
-  --navy:#0F1820; --navy-2:#2C4456; --fg:#E6EBEE; --muted:#A5B2BA; --faint:#7A8890; --line:#2A3740; --line-2:#3A4954;
+  --navy:#2A3D4B; --navy-2:#3A5263; --fg:#E6EBEE; --muted:#A5B2BA; --faint:#7A8890; --line:#2A3740; --line-2:#3A4954;
   --red:#F08A85; --red-bg:#3A2224; --green:#6BC79C; --green-bg:#1C3329; --amber:#EDB55E; --amber-bg:#3A2E1A; --gray:#A8B3B9; --gray-bg:#273239;
-  --shadow:0 1px 2px rgba(0,0,0,.3); --shadow-lg:0 8px 30px rgba(0,0,0,.35); --stage-bg:linear-gradient(180deg,#1E2A33 0%,#16212A 100%); --art-bg:#F4F6F8; color-scheme:dark}}
-:root[data-theme="never-dark"]{
-  --bg:#12191F; --surface:#1A232B; --panel:#1C2C37; --panel-2:#18242D; --blue:#3E6378; --blue-ink:#A9D1E8;
-  --tan:#A38A66; --tan-2:#8E7552; --tan-soft:#2A251E; --tan-ink:#EBDCC4;
-  --navy:#0F1820; --navy-2:#2C4456; --fg:#E6EBEE; --muted:#A5B2BA; --faint:#7A8890; --line:#2A3740; --line-2:#3A4954;
-  --red:#F08A85; --red-bg:#3A2224; --green:#6BC79C; --green-bg:#1C3329; --amber:#EDB55E; --amber-bg:#3A2E1A; --gray:#A8B3B9; --gray-bg:#273239;
-  --shadow:0 1px 2px rgba(0,0,0,.3); --shadow-lg:0 8px 30px rgba(0,0,0,.35); --stage-bg:linear-gradient(180deg,#1E2A33 0%,#16212A 100%); --art-bg:#F4F6F8; color-scheme:dark}
+  --shadow:0 1px 2px rgba(0,0,0,.3); --shadow-lg:0 8px 30px rgba(0,0,0,.35); --stage-bg:linear-gradient(180deg,#E3EBF0 0%,#CFDCE4 100%); --art-bg:#F4F6F8; 
+  --box:#1C2A34; --box-line:#2E4150; --box-hover:#23343F; --dtan:#D9BF8E; color-scheme:dark}
 html,body{height:100%}
 body{background:var(--bg);color:var(--fg);font-family:var(--f-ui);font-size:15px;line-height:1.55}
 *{box-sizing:border-box}
@@ -2655,3 +2651,8 @@ html.is-demo body{padding-bottom:76px}
 html.demo-ended body{overflow:hidden}
 .demo-less{display:none}
 @media (max-width:560px){.demo-bar{left:12px;right:76px;transform:none;justify-content:space-between;font-size:13px;gap:8px;padding:7px 7px 7px 14px;white-space:nowrap}.demo-more{display:none}.demo-less{display:inline}}
+
+/* dark mode extras */
+:root[data-theme="dark"] img.wordmark{content:url(img/revora-word-dark.svg)}
+/* black silhouettes turn light on dark cards */
+:root[data-theme="dark"] img.silcover,:root[data-theme="dark"] .pv-silart img{background:transparent;filter:invert(1);mix-blend-mode:screen;opacity:.85}
