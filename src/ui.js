@@ -232,10 +232,15 @@ function toast(msg, kind, action) {
   const tl = $("#toasts"); tl.appendChild(t); while (tl.children.length > 3) tl.firstChild.remove(); setTimeout(() => t.remove(), action ? 8000 : 4000);
 }
 function modal(html, bind) {
-  $("#modalHost").innerHTML = `<div class="modal-bg"><div class="modal" role="dialog" aria-modal="true">${html}</div></div>`;
+  // every box gets a close X in the top corner (it stays in view while the box scrolls), unless it already has its own
+  const hasX = /aria-label="Close/.test(html);
+  $("#modalHost").innerHTML = `<div class="modal-bg"><div class="modal${hasX ? "" : " has-x"}" role="dialog" aria-modal="true">${hasX ? "" : `<button type="button" class="modal-x" aria-label="Close">${ic("x")}</button>`}${html}</div></div>`;
   const m = $("#modalHost .modal"); bind && bind(m);
+  m.querySelector(".modal-x")?.addEventListener("click", () => closeModal());
   $("#modalHost .modal-bg").addEventListener("mousedown", e => { if (e.target.classList.contains("modal-bg")) closeModal(); });
-  (m.querySelector("[autofocus]") || m.querySelector("input,select,textarea,button"))?.focus();
+  // on phones, focusing a box pops the keyboard and can zoom the page, so only jump to the first field with a mouse
+  const touch = window.matchMedia && matchMedia("(pointer:coarse)").matches;
+  if (!touch) (m.querySelector("[autofocus]") || m.querySelector("input,select,textarea,button:not(.modal-x)"))?.focus();
   return m;
 }
 function closeModal() { $("#modalHost").innerHTML = ""; }

@@ -2656,3 +2656,14 @@ html.demo-ended body{overflow:hidden}
 :root[data-theme="dark"] img.wordmark{content:url(img/revora-word-dark.svg)}
 /* black silhouettes turn light on dark cards */
 :root[data-theme="dark"] img.silcover,:root[data-theme="dark"] .pv-silart img{background:transparent;filter:invert(1);mix-blend-mode:screen;opacity:.85}
+
+/* Phones: iOS zooms the page in when a field under 16px gets focus and doesn't zoom back out, so fields are 16px on touch screens.
+   Boxes fit the visible screen (dvh leaves out the browser bars) and keep a close X in reach. */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (pointer:coarse){input:not([type=checkbox]):not([type=radio]):not([type=range]):not([type=color]),select,textarea{font-size:16px!important}}
+.modal-bg{padding:max(12px,env(safe-area-inset-top,0px)) 12px max(12px,env(safe-area-inset-bottom,0px))}
+.modal{max-height:calc(100vh - 32px);max-height:calc(100dvh - 32px);overscroll-behavior:contain;min-width:0}
+.modal-x{position:sticky;top:-10px;align-self:flex-end;flex:none;margin:-10px -10px -46px 0;z-index:3;width:36px;height:36px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--fg);display:grid;place-items:center;cursor:pointer;box-shadow:var(--shadow)}
+.modal-x svg{width:18px;height:18px}
+.modal.has-x>.modal-x+*{padding-right:34px}
+@media (max-width:600px){.modal{padding:18px 16px;border-radius:16px}.modal-x{margin:-6px -6px -42px 0}}
