@@ -447,7 +447,7 @@
       ${data.length ? `<section class="garage"><div class="garage-h"><h2>Your garage</h2><button class="btn sm" data-nav="new">+ New project</button></div>
         <div class="gts">${data.map(tag).join("")}<button class="gt gt-new" data-nav="new"><b>Add a bike</b><span>Start a new project for another bike</span></button></div></section>` : ""}
       ${window.rvShop ? rvShop.html({ kind: "parts", title: "Shop for parts", sub: "Search the big parts stores for any of your bikes. You buy on the store's own site.", bikes: [...new Set(data.map(p => { const b = bikeOf(p.bike_id); return genLabel[p.id] || (b && !b.generic && !b.universal ? bikeName(b) : p.name); }).filter(Boolean))] }) : ""}
-      ${!(matchMedia("(display-mode: standalone)").matches || navigator.standalone) ? `<section class="ins-band"><img src="img/app-192.png" alt="" width="44" height="44"><div><b>Put Revora on your home screen</b><span>It opens like an app, full screen, one tap from your phone's home screen.</span></div><button class="btn tan" data-act="install">Install the app</button></section>` : ""}
+      ${!(matchMedia("(display-mode: standalone)").matches || navigator.standalone) ? `<section class="ins-band"><img src="img/app-192.png" alt="" width="44" height="44"><div><b>Put Revora on your home screen</b><span>It opens like an app, full screen, one tap from your phone's home screen.</span></div><div class="ins-acts"><button class="btn tan" data-act="install">Install the app</button><button class="linkbtn" data-act="ins-later">Not now</button></div></section>` : ""}
       <section class="gfoot"><div><b>Working with a team?</b><span>Share a project and everyone sees the same parts, steps and photos, live. Owners can give edit or view access.</span></div>
         <div><b>Builds gallery</b><span>See what other riders are restoring and building, and put yours in it from your bike's Build page.</span><a class="linkbtn" href="?builds">Browse builds</a></div>
         <div><b>Text alerts</b><span>Get service reminders and news about new features by text as well as email.</span><button class="linkbtn" data-texts>Set up texts</button></div>
@@ -668,6 +668,7 @@
           <div class="ld-cta"><button class="btn tan big" data-nav="signup">Get started free</button><button class="btn ghost-l big" data-demo>Try the demo</button><button class="btn ghost-l big" data-nav="signin">Sign in</button></div>
           <span class="ld-small">Free for one bike. Restorer free for 30 days, cancel any time.</span></div>
         <div class="ld-art">${["bike-cafe", "bike-adventure", "bike-cruiser"].map((n, i) => sil(n) ? `<img class="ld-s s${i}" src="${sil(n)}" alt="">` : "").join("")}</div></section>
+      ${!(matchMedia("(display-mode: standalone)").matches || navigator.standalone) ? `<section class="ins-band ld-ins"><img src="img/app-192.png" alt="" width="44" height="44"><div><b>Get the Revora app</b><span>Free. Put it on your home screen and it opens like any other app.</span></div><div class="ins-acts"><button class="btn tan" data-act="install">Install the app</button><button class="linkbtn" data-act="ins-later">Not now</button></div></section>` : ""}
       <section class="ld-strip"><div><b>Any bike</b><span>Search the library or add yours by year, make and model</span></div><div><b>8 kinds of bike</b><span>Courses tailored to cruisers, sport bikes, scooters and more</span></div><div><b>Your records stay yours</b><span>Export or print them any time</span></div></section>
       <section class="ld-sec" id="ld-features"><h2>Everything your bike needs, in one place</h2><p class="ld-sub">Start with the free maintenance log. Add more when you want it.</p>
         <div class="ld-grid">${F.map(([i, t, d, p]) => `<article class="ld-f"><span class="ld-fi">${I(ICO[i])}</span><b>${t}</b><span>${d}</span><em class="ld-p ${p.toLowerCase()}">${p}</em></article>`).join("")}</div></section>
@@ -877,7 +878,7 @@
   app.addEventListener("click", async e => {
     const n = e.target.closest("[data-nav]"), a = e.target.closest("[data-act]"), pr = e.target.closest("[data-project]");
     if (pr) { goUrl({ project: pr.dataset.project }); return; }
-    if (a) { if (a.dataset.act === "signout") window.rvSignOut(); if (a.dataset.act === "reload") location.reload(); if (a.dataset.act === "install") window.rvInstall().then(o => { if (o === "accepted") showProjects(); }); return; }
+    if (a) { if (a.dataset.act === "signout") window.rvSignOut(); if (a.dataset.act === "reload") location.reload(); if (a.dataset.act === "install") window.rvInstall().then(o => { if (o === "accepted") showProjects(); }); if (a.dataset.act === "ins-later") window.rvInstallLater(); return; }
     if (e.target.closest("[data-plans]")) { showPlans(); return; }
     const og = e.target.closest("[data-open-guest]"); if (og) { goUrl({ bike: og.dataset.openGuest }); return; }
     if (!n) return; const v = n.dataset.nav;
@@ -930,12 +931,29 @@
   const standalone = () => matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
   const isIOS = () => /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
   if (isIOS() && !standalone()) document.documentElement.classList.add("ios-install");
-  window.rvCanInstall = () => !standalone() && (!!installEv || isIOS());
+  const isAndroid = () => /android/i.test(navigator.userAgent);
+  if (isAndroid() && !standalone()) document.documentElement.classList.add("and-install");
+  try { if (Date.now() < +localStorage.getItem("rv.insHide")) document.documentElement.classList.add("ins-hidden"); } catch (e) {}
+  window.rvInstallLater = () => { try { localStorage.setItem("rv.insHide", String(Date.now() + 30 * 864e5)); } catch (e) {} document.documentElement.classList.add("ins-hidden"); };
+  window.rvCanInstall = () => !standalone() && (!!installEv || isIOS() || isAndroid());
+  // steps for the browser they're in, when the browser can't show its own install box
+  const insSteps = () => {
+    const ua = navigator.userAgent, sh = `<b>Share</b>`;
+    if (isIOS()) {
+      if (/CriOS/i.test(ua)) return [`Tap the ${sh} button at the top right, next to the address bar.`, `Tap <b>Add to Home Screen</b>. You may need to tap <b>More</b> to see it.`, `Tap <b>Add</b>.`];
+      if (/FxiOS/i.test(ua)) return [`Tap the menu button (three lines) at the bottom right.`, `Tap ${sh}, then <b>Add to Home Screen</b>.`, `Tap <b>Add</b>.`];
+      if (/EdgiOS/i.test(ua)) return [`Tap the menu button (three dots) at the bottom.`, `Tap ${sh}, then <b>Add to Home Screen</b>.`, `Tap <b>Add</b>.`];
+      return [`Tap the ${sh} button (the square with an arrow) at the bottom of Safari.`, `Scroll down and tap <b>Add to Home Screen</b>.`, `Tap <b>Add</b>.`];
+    }
+    if (/Firefox/i.test(ua)) return [`Tap the menu button (three dots).`, `Tap <b>Add app to Home screen</b> or <b>Install</b>.`, `Tap <b>Add</b>.`];
+    if (/SamsungBrowser/i.test(ua)) return [`Tap the menu button (three lines) at the bottom.`, `Tap <b>Add page to</b>, then <b>Home screen</b>.`, `Tap <b>Add</b>.`];
+    return [`Tap the menu button (three dots) at the top right.`, `Tap <b>Install app</b> or <b>Add to Home screen</b>.`, `Tap <b>Install</b>.`];
+  };
   window.rvInstall = async () => {
     if (installEv) { installEv.prompt(); const r = await installEv.userChoice.catch(() => null); installEv = null; document.documentElement.classList.remove("can-install"); return r && r.outcome; }
     const box = document.createElement("div"); box.className = "pk-modal";
-    box.innerHTML = `<div class="pk-card"><h2 class="disp-s">Add Revora to your home screen</h2><ol class="ins-steps"><li>Tap the <b>Share</b> button at the bottom of Safari (the square with an arrow).</li><li>Scroll down and tap <b>Add to Home Screen</b>.</li><li>Tap <b>Add</b>. Revora opens like an app from then on.</li></ol><div class="pk-links"><button class="btn pri" data-close>Got it</button></div></div>`;
-    box.querySelector("[data-close]").onclick = () => box.remove(); document.body.appendChild(box); return "shown";
+    box.innerHTML = `<div class="pk-card" role="dialog" aria-modal="true"><h2 class="disp-s">Add Revora to your home screen</h2><ol class="ins-steps">${insSteps().map(t => `<li>${t}</li>`).join("")}</ol><p class="faint" style="margin:0;font-size:13.5px">Revora then opens from its own icon, full screen, and stays signed in.</p><div class="pk-links"><button class="btn pri" data-close>Got it</button></div></div>`;
+    box.addEventListener("click", e => { if (e.target === box || e.target.closest("[data-close]")) box.remove(); }); document.body.appendChild(box); return "shown";
   };
   if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
 

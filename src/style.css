@@ -2002,7 +2002,7 @@ article.gt::before{box-shadow:inset 0 0 0 2px color-mix(in srgb,var(--edge) 35%,
 .wr-foot{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:14px;font-size:13px}.wr-foot select{padding:6px 8px;border-radius:8px;border:1px solid var(--line-2);font:inherit}
 /* install as an app */
 .ins-band,.mob-ins{display:none!important}
-.can-install .ins-band,.ios-install .ins-band{display:flex!important}.can-install .mob-ins,.ios-install .mob-ins{display:flex!important}
+.can-install .ins-band,.ios-install .ins-band,.and-install .ins-band{display:flex!important}.can-install .mob-ins,.ios-install .mob-ins,.and-install .mob-ins{display:flex!important}
 .ins-band{align-items:center;gap:14px;flex-wrap:wrap;margin:18px 0 0;padding:14px 18px;border-radius:16px;background:linear-gradient(120deg,#17232C,#2C5F7C);color:#fff}
 .ins-band img{border-radius:12px}.ins-band>div{display:flex;flex-direction:column;flex:1;min-width:200px}.ins-band span{color:#B9D9EB;font-size:13.5px}
 .mob-ins{background:#2C5F7C}
@@ -2689,3 +2689,10 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
   .adm-fb{padding:10px 12px}.adm-fba{flex-wrap:wrap}
   .ppl-list,.adm-fbs{max-height:70vh}
 }
+
+/* Install the app: phones only, hidden for 30 days after "Not now" (the menu item stays) */
+.ins-acts{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.ins-band .linkbtn{color:#B9D9EB}
+html.ins-hidden .ins-band{display:none!important}
+@media (min-width:900px) and (pointer:fine){html .ins-band{display:none!important}}
+.ld-ins{max-width:1100px;margin:0 auto 8px;width:calc(100% - 32px);box-sizing:border-box}
+@media (max-width:600px){.ins-band{padding:14px}.ins-band>div:not(.ins-acts){min-width:0;flex:1 1 calc(100% - 60px)}.ins-acts{width:100%}.ins-acts .btn{flex:1}}
