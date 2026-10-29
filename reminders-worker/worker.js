@@ -69,15 +69,15 @@ async function sig(uid, env) {
 }
 const first = n => String(n || "").trim().split(/\s+/)[0].replace(/^./, c => c.toUpperCase()) || "there";
 const SOCIAL = [["TikTok", "https://www.tiktok.com/@revora.garage"], ["Instagram", "https://www.instagram.com/revoragarageofficial/"], ["Facebook", "https://www.facebook.com/profile.php?id=61595784891437"]];
-// the 48-hour welcome deal: a lower price for the first 3 months if they pick a plan within 48 hours of joining
+// the welcome price: 25% off if they pick a plan within 24 hours of joining (first 3 months monthly, or the first year on yearly)
 const DEAL = [
-  "Rider: $4.99 a month for your first 3 months, then $6.99. Service reminders by email before things are due, recall alerts for your bike, fuel and cost tracking, and room for 3 bikes.",
-  "Restorer: $6.99 a month for your first 3 months, then $9.99. Everything in Rider, plus the parts scan from a photo, AI that reads your receipts, a shopping list with a budget, step-by-step restoration courses and up to 10 bikes. Or try it free for 30 days first.",
-  "Shop: $19.99 a month for your first 3 months, then $29. For shops and builders: work orders, customer bikes with history reports and a team of up to 10."];
+  "Rider: $5.99 a month for your first 3 months, then $7.99, or $44 for your first year on yearly. Service reminders by email before things are due, recall alerts for your bike, fuel and cost tracking, and room for 3 bikes.",
+  "Restorer: $10.99 a month for your first 3 months, then $14.99, or $89 for your first year on yearly. Everything in Rider, plus the parts scan from a photo, AI that reads your receipts, a shopping list with a budget, step-by-step restoration courses and up to 10 bikes. Or try it free for 30 days first.",
+  "Shop: $44 a month for your first 3 months, then $59, or $374 for your first year on yearly. For shops and builders: work orders, customer bikes with history reports and a team of up to 10."];
 const PRICES = [
-  "Rider: $6.99 a month, or $49 a year. Service reminders by email before things are due, recall alerts for your bike, fuel and cost tracking, and room for 3 bikes.",
-  "Restorer: $9.99 a month, or $99 a year. Everything in Rider, plus the parts scan from a photo, AI that reads your receipts, a shopping list with a budget, step-by-step restoration courses and up to 10 bikes.",
-  "Shop: $29 a month, or $290 a year. For shops and builders: work orders, customer bikes with history reports and a team of up to 10."];
+  "Rider: $7.99 a month, or $59 a year. Service reminders by email before things are due, recall alerts for your bike, fuel and cost tracking, and room for 3 bikes.",
+  "Restorer: $14.99 a month, or $119 a year. Everything in Rider, plus the parts scan from a photo, AI that reads your receipts, a shopping list with a budget, step-by-step restoration courses and up to 10 bikes.",
+  "Shop: $59 a month, or $499 a year. For shops and builders: work orders, customer bikes with history reports and a team of up to 10."];
 // step 1 thanks · 2 the welcome deal · 101 deal: 24 hours left · 102 deal: 3 hours left · 103 deal for members who joined before it started · 111 deal: 12 hours left · 112 deal: 3 hours left (24-hour members) · 4 features + socials · 5 check-in · 6+ every two weeks, rotating
 function welcomeCopy(step, p) {
   const hi = `Hi ${first(p.name)},`, plans = ["See the plans", APP + "/?plans"], open = ["Open Revora", APP + "/"];
@@ -94,27 +94,27 @@ function welcomeCopy(step, p) {
     p.bikes ? "Your bike is already in, so you're set. Logging the last service you remember is a good next step." : "The best first step is adding your bike. It takes about a minute.",
     "And if you ride with people who keep their maintenance in a notebook or in their head, send them our way. Revora is free to start."], button: open };
   const dh = p.deal_hours || 24;   // 24 hours for members who joined from Oct 23, 3:45 PM ET on, 48 before that
-  if (step === 2) return { subject: `Your welcome deal: ${dh} hours to lock in a lower price`, paras: [hi,
-    `You're on the Free plan, which covers one bike and the basics. For the next ${dh} hours, any paid plan is cheaper for your first 3 months:`,
+  if (step === 2) return { subject: `Your welcome price: 25% off for the next ${dh} hours`, paras: [hi,
+    `You're on the Free plan, which covers one bike and the basics. For the next ${dh} hours, any paid plan is 25% off:`,
     { list: DEAL },
-    "After 3 months it goes to the regular price, and you can cancel any time. If you'd rather pay once a year, yearly plans save 17 to 42% over the regular monthly price.",
-    "Your bikes and records stay right where they are when you upgrade. The countdown is on your garage page so you know how long is left."], button: ["See the deal", APP + "/?plans"] };
-  if (step === 101) return { subject: "About 24 hours left on your welcome deal", paras: [hi,
-    "A quick heads-up: your welcome deal ends in about 24 hours.",
-    { list: ["Rider: $4.99 a month for your first 3 months (then $6.99)", "Restorer: $6.99 a month for your first 3 months (then $9.99)", "Shop: $19.99 a month for your first 3 months (then $29)"] },
-    "If you're working on a project bike, Restorer is the one to look at. You can take the $6.99 deal, or start a 30-day free trial instead and pay $9.99 a month after that."], button: ["See the deal", APP + "/?plans"] };
+    "After that it goes to the regular price, and you can cancel any time.",
+    "Your bikes and records stay right where they are when you upgrade. The countdown is on your garage page so you know how long is left."], button: ["See your price", APP + "/?plans"] };
+  if (step === 101) return { subject: "About 24 hours left on your 25% off", paras: [hi,
+    "A quick heads-up: your welcome price ends in about 24 hours.",
+    { list: ["Rider: $5.99 a month for your first 3 months (then $7.99), or $44 for your first year", "Restorer: $10.99 a month for your first 3 months (then $14.99), or $89 for your first year", "Shop: $44 a month for your first 3 months (then $59), or $374 for your first year"] },
+    "If you're working on a project bike, Restorer is the one to look at. You can take the $10.99 welcome price, or start a 30-day free trial instead and pay $14.99 a month after that."], button: ["See your price", APP + "/?plans"] };
   if (step === 103) return { subject: "Your Revora deal: lower prices until Sunday at noon", paras: [hi,
     "We just started a welcome deal for new members, and since you're already here, you get it too. Until Sunday, Oct 25 at noon Eastern, any paid plan is cheaper for your first 3 months:",
     { list: DEAL },
     "After 3 months it goes to the regular price, and you can cancel any time. Sign in and you'll see the deal prices on the plans page, with the countdown on your garage page.",
-    "If Free is all you need, that's fine. One bike stays free for good."], button: ["See the deal", APP + "/?plans"] };
-  if (step === 111) return { subject: "About 12 hours left on your welcome deal", paras: [hi,
-    "A quick heads-up: your welcome deal ends in about 12 hours.",
-    { list: ["Rider: $4.99 a month for your first 3 months (then $6.99)", "Restorer: $6.99 a month for your first 3 months (then $9.99)", "Shop: $19.99 a month for your first 3 months (then $29)"] },
-    "If you're working on a project bike, Restorer is the one to look at. You can take the $6.99 deal, or start a 30-day free trial instead and pay $9.99 a month after that."], button: ["See the deal", APP + "/?plans"] };
-  if (step === 102 || step === 112) return { subject: "Your welcome deal ends in 3 hours", paras: [hi,
-    "Last reminder: your welcome deal ends in about 3 hours. After that, plans are the regular price of $6.99 for Rider, $9.99 for Restorer and $29 for Shop.",
-    "If you want the lower price, sign in and pick a plan before then. And if Free is all you need, that's fine too. One bike stays free for good."], button: ["See the deal", APP + "/?plans"] };
+    "If Free is all you need, that's fine. One bike stays free for good."], button: ["See your price", APP + "/?plans"] };
+  if (step === 111) return { subject: "About 12 hours left on your 25% off", paras: [hi,
+    "A quick heads-up: your welcome price ends in about 12 hours.",
+    { list: ["Rider: $5.99 a month for your first 3 months (then $7.99), or $44 for your first year", "Restorer: $10.99 a month for your first 3 months (then $14.99), or $89 for your first year", "Shop: $44 a month for your first 3 months (then $59), or $374 for your first year"] },
+    "If you're working on a project bike, Restorer is the one to look at. You can take the $10.99 welcome price, or start a 30-day free trial instead and pay $14.99 a month after that."], button: ["See your price", APP + "/?plans"] };
+  if (step === 102 || step === 112) return { subject: "Your 25% off ends in 3 hours", paras: [hi,
+    "Last reminder: your 25% off ends in about 3 hours. After that, plans are the regular price of $7.99 for Rider, $14.99 for Restorer and $59 for Shop.",
+    "If you want the welcome price, sign in and pick a plan before then. And if Free is all you need, that's fine too. One bike stays free for good."], button: ["See your price", APP + "/?plans"] };
   if (step === 4) return { subject: "A few things in Revora you might not have tried", paras: [hi,
     "You've had Revora for a week. Here are a few things people tend to miss:",
     { list: ["Ask the mechanic: type a question about your bike and get an answer that knows your model",

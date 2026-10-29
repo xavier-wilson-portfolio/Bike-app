@@ -5,9 +5,9 @@
   const e = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const PLANS = [
     { id: "free", name: "Free", m: 0, y: 0, tag: "For one bike", color: "free", bikes: 1, feats: ["1 bike", "Maintenance log and service schedule", "Papers and renewals", "Checklists for every season", "Tire and chain wear tracking", "Parts 1 and 2 of the restoration course", "Ask the mechanic: 3 questions to try it", "5 photos", "The bike history report to view", "A public build page to share", "Parts finder across every big store"] },
-    { id: "rider", name: "Rider", m: 6.99, deal: 4.99, y: 49, tag: "For people who ride", color: "rider", bikes: 3, feats: ["Up to 3 bikes", "Everything in Free", "Service reminders by email and calendar", "Recall alerts", "Mods and upgrades log", "Fuel, MPG and cost of ownership", "What your bike is worth, and a selling kit", "Print the history report or save it as a PDF", "Share the history report as a link", "Unlimited photos", "Ask the mechanic, 10 questions a day"] },
-    { id: "restorer", name: "Restorer", m: 9.99, deal: 6.99, y: 99, tag: "For restoration projects", color: "restorer", best: true, trial: 30, bikes: 10, feats: ["Up to 10 bikes", "Everything in Rider", "The full restoration course for any bike", "Snap a receipt: AI reads it for you", "Parts scan from a photo", "Ask the mechanic as much as you like", "Money, budget and shopping list", "Share projects with a team"] },
-    { id: "shop", name: "Shop", m: 29, deal: 19.99, y: 290, tag: "For shops and builders", color: "shop", bikes: Infinity, feats: ["Unlimited bikes", "Everything in Restorer", "Work orders: check-in photos, estimates, approval by text, invoices", "Customer bikes with history reports to hand over", "Up to 10 team members", "Priority help"] },
+    { id: "rider", name: "Rider", m: 7.99, deal: 5.99, y: 59, dealY: 44, tag: "For people who ride", color: "rider", bikes: 3, feats: ["Up to 3 bikes", "Everything in Free", "Service reminders by email and calendar", "Recall alerts", "Mods and upgrades log", "Fuel, MPG and cost of ownership", "What your bike is worth, and a selling kit", "Print the history report or save it as a PDF", "Share the history report as a link", "Unlimited photos", "Ask the mechanic, 10 questions a day"] },
+    { id: "restorer", name: "Restorer", m: 14.99, deal: 10.99, y: 119, dealY: 89, tag: "For restoration projects", color: "restorer", best: true, trial: 30, bikes: 10, feats: ["Up to 10 bikes", "Everything in Rider", "The full restoration course for any bike", "Snap a receipt: AI reads it for you", "Parts scan from a photo", "Ask the mechanic as much as you like", "Money, budget and shopping list", "Share projects with a team"] },
+    { id: "shop", name: "Shop", m: 59, deal: 44, y: 499, dealY: 374, tag: "For shops and builders", color: "shop", bikes: Infinity, feats: ["Unlimited bikes", "Everything in Restorer", "Work orders: check-in photos, estimates, approval by text, invoices", "Customer bikes with history reports to hand over", "Up to 10 team members", "Priority help"] },
   ];
   const RANK = { free: 0, rider: 1, restorer: 2, shop: 3 };
   window.RV_PLANS = PLANS; window.RV_PLAN_RANK = RANK;
@@ -47,10 +47,11 @@
       else say({ invalid: "That code doesn't exist or has been switched off.", full: "That code has already been used up.", used: "You've already used this code.", signin: "Sign in first, then enter the code." }[r] || "That code didn't work.", true);
     });
   };
-  // ---- the 48-hour welcome deal ----
-  // New members get 24 hours from the moment they join (48 for accounts from before Oct 23, 3:45 PM ET) to lock in
-  // a lower price for their first 3 months: Rider $4.99, Restorer $6.99, Shop $19.99. After 3 months it's the regular price.
-  // Checkout uses the plan's regular Stripe link with a promotion code filled in (config: dealCodes, dealFrom, dealHours).
+  // ---- the welcome deal (about 25% off) ----
+  // New members get 24 hours from the moment they join to take the welcome price: monthly is Rider $5.99, Restorer $10.99,
+  // Shop $44 for the first 3 months; yearly is $44, $89 or $374 for the first year. After that it's the regular price.
+  // Checkout uses the plan's regular Stripe link with a promotion code filled in. Codes live in config dealCodes,
+  // one per plan and billing period (rider_m, rider_y, ...).
   const DEAL_MONTHS = 3, $ = n => "$" + (Number.isInteger(n) ? n : n.toFixed(2));
   window.RV_DEAL_MONTHS = DEAL_MONTHS; window.rvMoney = $;
   // Members who joined before dealShortFrom get 48 hours (dealHours); anyone who joins after it gets 24 (dealShortHours).
@@ -73,11 +74,11 @@
     const t = Math.max(0, Math.floor(ms / 1000)), p = n => String(n).padStart(2, "0");
     return p(Math.floor(t / 3600)) + ":" + p(Math.floor(t % 3600 / 60)) + ":" + p(t % 60);
   };
-  // big red countdown block used on the plans page and the garage page
+  // the countdown block used on the plans page and the garage page
   window.rvDealClock = function (d, label) {
-    return `<div class="deal-clock" data-deal-end="${d.end}" role="timer" aria-label="Welcome deal time left"><span class="dc-k">${label || "Welcome deal ends in"}</span><b class="dc-t" data-deal-left>${rvClock(d.left)}</b></div>`;
+    return `<div class="deal-clock" data-deal-end="${d.end}" role="timer" aria-label="Welcome deal time left"><span class="dc-k">${label || "Welcome price ends in"}</span><b class="dc-t" data-deal-left>${rvClock(d.left)}</b></div>`;
   };
-  // the price line for upgrade boxes: "Included in Rider · $4.99 a month for 3 months (welcome deal)" or "· $6.99 a month"
+  // the price line for upgrade boxes: "Included in Rider · $7.99 $5.99 a month for 3 months" or "· $7.99 a month"
   window.rvPriceLine = function (P) {
     if (!P || !P.m) return "";
     const d = rvDeal();
@@ -92,11 +93,11 @@
     const L = (window.RV_CONFIG && RV_CONFIG.payLinks) || {}, base = L[plan + (yearly ? "_y" : "_m")];
     if (!base || !/^https:\/\/(buy|checkout)\.stripe\.com\//.test(base)) return "";
     const u = new URL(base); if (user && user.id) u.searchParams.set("client_reference_id", user.id); if (user && user.email) u.searchParams.set("prefilled_email", user.email);
-    const d = rvDeal(), code = !yearly && d && !d.visitor && (RV_CONFIG.dealCodes || {})[plan];
+    const d = rvDeal(), DC = RV_CONFIG.dealCodes || {}, code = d && !d.visitor && (DC[plan + (yearly ? "_y" : "_m")] || (!yearly && DC[plan]));
     if (code) u.searchParams.set("prefilled_promo_code", code);
     return u.toString();
   };
-  // the Restorer free trial: a Stripe link with a 30-day trial on the $9.99 plan. A card goes in at the start and is charged on day 31 unless they cancel
+  // the Restorer free trial: a Stripe link with a 30-day trial on the $14.99 plan. A card goes in at the start and is charged on day 31 unless they cancel
   window.rvTrialUrl = function (user) {
     const base = (window.RV_CONFIG && RV_CONFIG.trialLink) || "";
     if (!/^https:\/\/(buy|checkout)\.stripe\.com\//.test(base)) return "";
@@ -106,14 +107,16 @@
   // keep any "ends in" countdown on the page ticking; when it runs out, reload so regular prices show
   setInterval(() => document.querySelectorAll("[data-deal-end]").forEach(el => {
     const left = +el.dataset.dealEnd - Date.now(), b = el.querySelector("[data-deal-left]");
-    if (left <= 0) { el.removeAttribute("data-deal-end"); el.classList.add("over"); el.textContent = "The welcome deal has ended"; return; }
+    if (left <= 0) { el.removeAttribute("data-deal-end"); el.classList.add("over"); el.textContent = "The welcome price has ended"; return; }
     if (b) b.textContent = rvClock(left);
   }), 1000);
   window.rvPlansHtml = function (opts = {}) {
     const yearly = !!opts.yearly, cur = opts.current || "", live = rvPlansLive(), mode = opts.mode || "view";   // view | choose
     const deal = rvDeal();
     const price = p => p.m === 0 ? `<b>$0</b><span>forever</span>` : yearly
-      ? `<b>${$(p.y)}</b><span>a year · ${$(+(p.y / 12).toFixed(2))} a month</span><em class="pl-off yr">Save ${yrSave(p)}% vs monthly</em>`
+      ? deal && p.dealY
+        ? `<s>${$(p.y)}</s><b>${$(p.dealY)}</b><span>your first year, then ${$(p.y)} a year</span><em class="pl-off yr">Save ${Math.round((1 - p.dealY / p.y) * 100)}% the first year</em>`
+        : `<b>${$(p.y)}</b><span>a year · ${$(+(p.y / 12).toFixed(2))} a month</span><em class="pl-off yr">Save ${yrSave(p)}% vs monthly</em>`
       : deal && p.deal
         ? `<s>${$(p.m)}</s><b>${$(p.deal)}</b><span>a month for your first ${DEAL_MONTHS} months, then ${$(p.m)}</span>`
         : `<b>${$(p.m)}</b><span>a month</span>`;
@@ -128,7 +131,7 @@
       return live ? `<button class="btn ${p.best ? "tan" : "pri"}" data-pl-pick="${p.id}">Choose ${e(p.name)}</button>` : `<button class="btn" disabled title="Checkout opens soon">Checkout opens soon</button>`;
     };
     return `<div class="pl">
-      ${opts.paid || opts.comp ? "" : deal && deal.visitor ? `<div class="pl-deal">Welcome deal: join and you have ${deal.hours} hours to lock in a lower price for your first ${DEAL_MONTHS} months</div>`
+      ${opts.paid || opts.comp ? "" : deal && deal.visitor ? `<div class="pl-deal">Welcome price: join and get 25% off for ${deal.hours} hours. It covers your first ${DEAL_MONTHS} months, or your first year on yearly.</div>`
         : deal ? rvDealClock(deal) : ""}
       <div class="pl-tog seg" role="group" aria-label="Billing"><button class="${yearly ? "" : "on"}" data-pl-bill="m">Monthly</button><button class="${yearly ? "on" : ""}" data-pl-bill="y">Yearly <small>save more</small></button></div>
       <div class="pl-grid">${PLANS.map(p => `<article class="pl-card ${p.color}${p.best ? " best" : ""}${cur === p.id ? " cur" : ""}">
@@ -142,8 +145,8 @@
       <div class="pl-faq">
         <div><b>What happens to my records if I change plans?</b><span>Nothing is ever deleted. On a smaller plan, features you don't have stay visible and your records stay safe until you upgrade again.</span></div>
         <div><b>Can I cancel any time?</b><span>Yes. You keep the paid features until the end of the month or year you paid for. Payments are handled by Stripe, and Revora never sees your card.</span></div>
-        <div><b>How does the welcome deal work?</b><span>For ${deal ? deal.hours : (window.RV_CONFIG || {}).dealShortHours || 24} hours after you join, Rider is $4.99, Restorer $6.99 and Shop $19.99 a month for your first ${DEAL_MONTHS} months. After that it's the regular price: $6.99, $9.99 or $29 a month. Yearly plans aren't part of the deal, but they save 17 to 42% over paying monthly at the regular price.</span></div>
-        <div><b>How does the Restorer trial work?</b><span>You get every Restorer feature free for 30 days. You add a card when you start, and it's charged $9.99 on day 31 unless you cancel before then. Cancel in one click from Manage billing.</span></div>
+        <div><b>How does the welcome price work?</b><span>For ${deal ? deal.hours : (window.RV_CONFIG || {}).dealShortHours || 24} hours after you join, you get 25% off. Monthly is $5.99 for Rider, $10.99 for Restorer and $44 for Shop for your first ${DEAL_MONTHS} months, then $7.99, $14.99 or $59. Yearly is $44, $89 or $374 for your first year, then $59, $119 or $499.</span></div>
+        <div><b>How does the Restorer trial work?</b><span>You get every Restorer feature free for 30 days. You add a card when you start, and it's charged $14.99 on day 31 unless you cancel before then. Cancel in one click from Manage billing.</span></div>
       </div></div>`;
   };
 })();

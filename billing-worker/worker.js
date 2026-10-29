@@ -4,13 +4,16 @@
      STRIPE_WEBHOOK_SECRET  the signing secret of the Stripe webhook (starts with whsec_)
      STRIPE_SECRET_KEY      a Stripe restricted key that can read subscriptions (starts with rk_)
      BILLING_SECRET         the value Supabase showed when you ran billing.sql
-   Plans are worked out from the price: $4.99, $6.99 or $49 is Rider, $9.99 or $99 is Restorer, $29 or $290 is Shop.
+   Plans are worked out from the price. Prices from Oct 29, 2026 carry metadata plan = rider / restorer / shop (needed, since
+   Rider yearly and Shop monthly are both $59). Older prices: $4.99, $6.99 or $49 is Rider, $9.99 or $99 is Restorer, $29 or $290 is Shop.
    The 48-hour welcome deal is a coupon on the regular price, so the price amount still says which plan it is.
    A price can also carry metadata plan = rider / restorer / shop, which wins.
    MANAGE BILLING: POST /portal with the person's Revora sign-in (Authorization: Bearer ...) returns { url } for Stripe's
    billing page, already signed in, so nobody waits for an email. The Stripe key needs "Customer portal" write access. */
 const SUPABASE_URL = "https://fhuksccqsyaomnouxxtb.supabase.co", SUPABASE_KEY = "sb_publishable_0wYtVeKcFJUzy3AfIaFhiw_NrT1wNkz";
-const BY_AMOUNT = { 499: "rider", 699: "rider", 4900: "rider", 999: "restorer", 9900: "restorer", 2900: "shop", 29000: "shop" };
+const BY_AMOUNT = { 499: "rider", 699: "rider", 4900: "rider", 999: "restorer", 9900: "restorer", 2900: "shop", 29000: "shop", 799: "rider", 1499: "restorer", 11900: "restorer", 49900: "shop" };
+// same dollar amount, different plan: $59 a year is Rider, $59 a month is Shop
+const BY_AMOUNT_INTERVAL = { "5900/year": "rider", "5900/month": "shop" };
 const GRACE = 3 * 864e5;   // keep the plan a few days past the renewal date while Stripe retries a card
 const json = (o, status = 200) => new Response(JSON.stringify(o), { status, headers: { "content-type": "application/json" } });
 
@@ -26,7 +29,7 @@ async function verify(body, header, secret) {
 }
 const planOfSub = sub => {
   const it = sub && sub.items && sub.items.data && sub.items.data[0], pr = it && it.price;
-  return (pr && pr.metadata && pr.metadata.plan) || (pr && BY_AMOUNT[pr.unit_amount]) || null;
+  return (pr && pr.metadata && pr.metadata.plan) || (pr && (BY_AMOUNT[pr.unit_amount] || BY_AMOUNT_INTERVAL[pr.unit_amount + "/" + (pr.recurring && pr.recurring.interval)])) || null;
 };
 const endOfSub = sub => {
   const it = sub && sub.items && sub.items.data && sub.items.data[0], t = (sub && sub.current_period_end) || (it && it.current_period_end);

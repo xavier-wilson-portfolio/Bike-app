@@ -2621,15 +2621,15 @@ button.adm-tile{cursor:pointer}.adm-tile.hot{border-color:var(--red);background:
 .deal-k{font-size:12.5px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:#D9BF8E}.deal-k b{color:#fff;font-variant-numeric:tabular-nums}
 .deal-t{font-size:16px;line-height:1.35}.deal-s{font-size:13px;color:#B9D9EB}
 /* big red ticking welcome-deal clock */
-.deal-clock{display:flex;flex-direction:column;align-items:center;gap:2px;align-self:center;background:#fff;border:2px solid #E0242B;border-radius:16px;padding:10px 22px 12px;box-shadow:0 6px 22px rgba(224,36,43,.22)}
-.dc-k{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#E0242B}
-.dc-t{font-family:var(--f-display,inherit);font-size:52px;line-height:1;font-weight:800;color:#E0242B;font-variant-numeric:tabular-nums;letter-spacing:.02em;animation:dcPulse 1s ease-in-out infinite}
-.deal-clock.over{border-color:#8A97A1;color:#5B6770;font-weight:700;box-shadow:none;animation:none}
+.deal-clock{display:flex;flex-direction:column;align-items:center;gap:2px;align-self:center;background:#17232C;border:1px solid #2C3E4A;border-radius:16px;padding:10px 22px 12px;box-shadow:var(--shadow)}
+.dc-k{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#B9D9EB}
+.dc-t{font-family:var(--f-display,inherit);font-size:46px;line-height:1;font-weight:800;color:#D9BF8E;font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.deal-clock.over{background:var(--surface);border-color:#8A97A1;color:#5B6770;font-weight:700;box-shadow:none;animation:none}
 @keyframes dcPulse{0%,100%{opacity:1}50%{opacity:.78}}
 @media (prefers-reduced-motion:reduce){.dc-t{animation:none}}
-.deal-band>.deal-clock{flex:0 0 auto;background:#1E0C0E;border-color:#FF3B3B}
-.deal-band .dc-k,.deal-band .dc-t{color:#FF3B3B}
-@media (max-width:520px){.dc-t{font-size:42px}.deal-band>.deal-clock{width:100%}}
+.deal-band>.deal-clock{flex:0 0 auto;background:#0F181E;border-color:#2C3E4A}
+.deal-band .dc-k{color:#B9D9EB}.deal-band .dc-t{color:#D9BF8E}
+@media (max-width:520px){.dc-t{font-size:38px}.deal-band>.deal-clock{width:100%}}
 
 /* ---- demo bike (?demo) ---- */
 .demo-bar{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:60;display:flex;align-items:center;gap:14px;background:#17232C;color:#fff;border-radius:999px;padding:8px 8px 8px 18px;box-shadow:0 10px 30px rgba(10,20,30,.28);font-size:14px;max-width:calc(100vw - 24px)}

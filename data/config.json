@@ -2,22 +2,25 @@
   "supabaseUrl": "https://fhuksccqsyaomnouxxtb.supabase.co",
   "supabaseKey": "sb_publishable_0wYtVeKcFJUzy3AfIaFhiw_NrT1wNkz",
   "payLinks": {
-    "rider_m": "https://buy.stripe.com/7sYaEXaR25Lb6xeacdabK08",
-    "rider_y": "https://buy.stripe.com/00wcN51gs1uV3l25VXabK01",
-    "restorer_m": "https://buy.stripe.com/28EbJ1f7i2yZ2gYbghabK02",
-    "restorer_y": "https://buy.stripe.com/5kQeVd2kwgpP5ta845abK03",
-    "shop_m": "https://buy.stripe.com/fZubJ1f7i1uVaNu4RTabK04",
-    "shop_y": "https://buy.stripe.com/fZu6oH9MY2yZ8FmestabK05"
+    "rider_m": "https://buy.stripe.com/00w4gzcZa0qR7Bi5VXabK0b",
+    "rider_y": "https://buy.stripe.com/28E3cv7EQ0qR7BifwxabK0c",
+    "restorer_m": "https://buy.stripe.com/8x214ne3ec9z9JqdopabK0d",
+    "restorer_y": "https://buy.stripe.com/bJe14n4sE2yZ6xe845abK0e",
+    "shop_m": "https://buy.stripe.com/aFa7sL1gsc9z5ta701abK09",
+    "shop_y": "https://buy.stripe.com/cNieVdaR25LbbRy989abK0a"
   },
   "billingPortal": "https://billing.stripe.com/p/login/fZu28r9MY0qRcVCgABabK00",
   "plansLive": true,
-  "trialLink": "https://buy.stripe.com/9B6cN59MYc9z3l2estabK07",
+  "trialLink": "https://buy.stripe.com/14A8wP9MYb5v6xedopabK0f",
   "primaryHost": "revoragarage.com",
   "shopApi": "https://revora-shop.xavier-j-wilson101.workers.dev",
   "dealCodes": {
-    "rider": "RIDER48K7",
-    "restorer": "RESTORE48K7",
-    "shop": "SHOP48K7"
+    "rider_m": "RIDER25M",
+    "rider_y": "RIDER25Y",
+    "restorer_m": "RESTORER25M",
+    "restorer_y": "RESTORER25Y",
+    "shop_m": "SHOP25M",
+    "shop_y": "SHOP25Y"
   },
   "dealFrom": "2026-10-23T16:00:00Z",
   "dealHours": 48,

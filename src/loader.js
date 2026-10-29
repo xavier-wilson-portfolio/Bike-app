@@ -606,9 +606,9 @@
     if (!d || d.visitor || P.id !== "free" || P.admin || !window.rvPlansLive || !rvPlansLive()) return "";
     const pr = id => rvMoney((planInfo(id) || {}).deal || 0);
     return `<section class="deal-band">${rvDealClock(d)}<div>
-      <b class="deal-t">Rider ${pr("rider")}, Restorer ${pr("restorer")}, Shop ${pr("shop")} a month for your first ${window.RV_DEAL_MONTHS || 3} months</b>
-      <span class="deal-s">After that it's the regular price. You can still try Restorer free for 30 days instead.</span></div>
-      <button class="btn tan" data-plans>See the deal</button></section>`;
+      <b class="deal-t">25% off: Rider ${pr("rider")}, Restorer ${pr("restorer")}, Shop ${pr("shop")} a month for your first ${window.RV_DEAL_MONTHS || 3} months</b>
+      <span class="deal-s">Or 25% off your first year on a yearly plan. After that it's the regular price, and you can still try Restorer free for 30 days instead.</span></div>
+      <button class="btn tan" data-plans>See your price</button></section>`;
   }
   // send a signed-in person to Stripe checkout for a plan
   function checkout(plan, yearly) {
@@ -676,7 +676,7 @@
         <div><span>1</span><b>Add your bike</b><p>Search for it or type the year, make and model. Pick whether you're restoring it or keeping it running.</p></div>
         <div><span>2</span><b>Log as you go</b><p>Snap receipts, log services and fill-ups, and tick off checklists. It takes seconds.</p></div>
         <div><span>3</span><b>Know what's next</b><p>Reminders, recall alerts and renewal dates come to you, and the history report builds itself.</p></div></div></section>
-      <section class="ld-sec" id="ld-plans"><h2>Plans</h2><p class="ld-sub">Start free. New members get 24 hours to lock in a lower price for their first 3 months.</p>${window.rvPlansHtml({ yearly, mode: "choose" })}</section>
+      <section class="ld-sec" id="ld-plans"><h2>Plans</h2><p class="ld-sub">Start free. New members get 25% off for their first 24 hours.</p>${window.rvPlansHtml({ yearly, mode: "choose" })}</section>
       <section class="ld-end"><h2>Your bike's whole story, kept right.</h2><button class="btn tan big" data-nav="signup">Get started free</button><button class="linkbtn" data-demo>Try the demo first</button></section>
       <footer class="ld-foot"><span>Revora</span><span>Made for people who work on their own bikes.</span><a href="mailto:info@revoragarage.com">info@revoragarage.com</a></footer></div>`;
     app.querySelectorAll("[data-pl-bill]").forEach(b => b.onclick = () => { showLanding(b.dataset.plBill === "y"); document.getElementById("ld-plans").scrollIntoView(); });
