@@ -59,6 +59,7 @@ sil = sorted(p.name for p in (ROOT / 'img' / 'sil').glob('*') if p.suffix in ('.
 loader = 'window.RV_CONFIG = ' + json.dumps({**{k: cfg.get(k) for k in ['supabaseUrl', 'supabaseKey', 'aff', 'plansLive', 'payLinks', 'billingPortal', 'primaryHost', 'shopApi', 'trialLink', 'dealCodes', 'dealFrom', 'dealHours', 'dealShortFrom', 'dealShortHours'] if cfg.get(k)}, 'sil': sil, 'silCredit': json.loads((ROOT / 'img' / 'sil' / 'credits.json').read_text()) if (ROOT / 'img' / 'sil' / 'credits.json').exists() else {}}) + ';\n' + loader
 html = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Revora Garage: motorcycle service log, maintenance reminders and parts tracker</title>
+<meta name="msvalidate.01" content="CE5F76699E739070886246A3F0EA3BFF">
 <meta name="description" content="Revora Garage keeps every motorcycle's service history, maintenance schedule and parts in one place. Log oil changes, get email reminders, find parts on factory diagrams and plan mods and restorations.">
 <link rel="canonical" href="https://revoragarage.com/">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Revora Garage"><meta property="og:url" content="https://revoragarage.com/">
