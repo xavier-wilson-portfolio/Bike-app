@@ -19,6 +19,7 @@
     const all = !what;
     const jobs = [];
     if (all || what === "people") jobs.push(sb.rpc("admin_people").then(r => D.people = r.error ? { err: isSetup(r.error) ? "setup" : "load" } : r.data || []));
+    if (all || what === "funnel") jobs.push(sb.rpc("admin_funnel", { days: 7 }).then(r => D.funnel = r.error ? { err: isSetup(r.error) ? "setup" : "load" } : r.data || []));
     if (all || what === "welcome") jobs.push(sb.rpc("welcome_state").then(r => D.welcome = r.error ? { err: 1 } : (r.data || [])[0] || { err: 1 }));
     if (all || what === "comps") jobs.push(sb.from("comp_grants").select("*").order("created_at", { ascending: false }).then(r => D.comps = r.error ? { err: isSetup(r.error) ? "setup" : "load" } : r.data || []));
     if (all || what === "gifts") jobs.push(Promise.all([sb.from("gift_codes").select("*").order("created_at", { ascending: false }), sb.from("gift_redemptions").select("code,email,at").order("at", { ascending: false })]).then(([a, b]) => { D.gifts = a.error ? { err: isSetup(a.error) ? "setup" : "load" } : a.data || []; D.uses = b.data || []; }));
@@ -35,6 +36,16 @@
     const mx = Math.max(1, ...b);
     return `<div class="adm-bars" role="img" aria-label="Sign-ups per day, last 30 days">${b.map(v => `<i class="${v ? "on" : ""}" style="height:${v ? Math.max(6, v / mx * 100).toFixed(0) : 2}%" title="${v} sign-up${v === 1 ? "" : "s"}"></i>`).join("")}</div><div class="adm-axis"><span>30 days ago</span><span>Today</span></div>`;
   }
+  // sign-up funnel, last 7 days: how many visits reached each step
+  function funnel() {
+    const F = D.funnel; if (!F) return ""; if (F.err) return `<div class="adm-card"><div class="adm-ch"><b>Sign-up funnel</b></div>${F.err === "setup" ? setupMsg("site_events.sql") : `<p class="muted">Couldn't load it.</p>`}</div>`;
+    const v = k => { const r = arr(F).find(x => x.ev === k); return r ? +r.visits : 0; }, inapp = k => { const r = arr(F).find(x => x.ev === k); return r ? +r.in_app : 0; };
+    const steps = [["landing_view", "Saw the main page"], ["demo_open", "Opened the demo"], ["ride_start", "Typed their bike"], ["guest_start", "Started a bike without an account"], ["signup_view", "Opened sign-up"], ["google_click", "Tapped Continue with Google"], ["signup_submit", "Sent the sign-up form"], ["account_new", "New accounts"]];
+    const top = Math.max(1, v("landing_view"));
+    return `<div class="adm-card"><div class="adm-ch"><b>Sign-up funnel, last 7 days</b><small class="faint">Visits that reached each step</small></div>
+      ${steps.map(([k, t]) => `<div class="adm-fn"><span class="grow">${esc(t)}</span><i style="width:${Math.max(2, v(k) / top * 100).toFixed(0)}%"></i><b>${v(k)}</b><small class="faint">${v(k) && inapp(k) ? inapp(k) + " in-app" : ""}</small></div>`).join("")}
+      <small class="faint">Demo ended at the limit: ${v("demo_end")} · Moved a browser bike into a new account: ${v("guest_moved")}</small></div>`;
+  }
   function overview() {
     const P = arr(D.people), wk = Date.now() - 7 * 864e5, td = new Date(); td.setHours(0, 0, 0, 0);
     const n = k => P.filter(g => planOf(g).k === k).length;
@@ -42,6 +53,7 @@
     const W = D.welcome;
     return `<div class="adm-tiles">${tiles.map(([v, t, go]) => `<${go ? `button type="button" data-adm-tab="${go}"` : "div"} class="adm-tile${go && v ? " hot" : ""}"><b>${D.people === null ? "…" : esc(v)}</b><span>${esc(t)}</span></${go ? "button" : "div"}>`).join("")}</div>
       ${D.people && D.people.err ? `<p class="muted">${D.people.err === "setup" ? "People need a one-time setup in the database (supabase/admin_people.sql)." : "Couldn't load people. Refresh to try again."}</p>` : `<div class="adm-card"><div class="adm-ch"><b>Sign-ups, last 30 days</b></div>${chart(P)}</div>`}
+      ${funnel()}
       <div class="adm-two">
         <div class="adm-card"><div class="adm-ch"><b>Newest sign-ups</b><button class="linkbtn" data-adm-tab="people">See everyone</button></div>
           ${P.slice().sort((a, b) => new Date(b.joined) - new Date(a.joined)).slice(0, 6).map(g => { const pl = planOf(g); return `<div class="adm-mini"><div class="grow"><b>${esc(g.name || (g.email || "").split("@")[0])}</b> <span class="pill ${pl.c}">${esc(pl.t)}</span><small class="faint">${esc(g.email)} · ${esc(ago(g.joined))}</small></div><a class="btn sm" href="mailto:${esc(g.email)}?subject=${encodeURIComponent("Revora Garage")}">Email</a></div>`; }).join("") || `<p class="muted">Nobody yet.</p>`}</div>

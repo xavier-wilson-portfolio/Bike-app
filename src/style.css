@@ -2733,3 +2733,19 @@ body:has(#modalHost .modal-bg) .chat-fab,body:has(#modalHost .modal-bg) .demo-ba
 .pk-google:hover{background:#F7FAFC;border-color:#8DBBD8}
 .pk-or{display:flex;align-items:center;gap:12px;margin:16px 0 4px;color:var(--muted);font-size:13px}
 .pk-or::before,.pk-or::after{content:"";flex:1;height:1px;background:var(--line)}
+/* landing: start with your bike */
+.ld-ride{display:flex;flex-direction:column;gap:8px;margin:0 0 16px;max-width:560px}
+.ld-ride label{font-weight:800;color:#fff;font-size:15px}
+.ld-ride-r{display:flex;gap:8px}
+.ld-ride input{flex:1;min-width:0;font:inherit;font-size:16px;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.25);background:#fff;color:#0E1114}
+.ld-ride input:focus{outline:2px solid #D9BF8E;outline-offset:1px}
+.ld-ride>span{color:#B9D9EB;font-size:13px}
+@media (max-width:560px){.ld-ride-r{flex-direction:column}.ld-ride .btn{width:100%}}
+/* sign-in inside Instagram / TikTok / Facebook */
+.pk-inapp{display:flex;flex-direction:column;gap:6px;padding:12px 14px;border-radius:12px;background:var(--amber-bg);border:1px solid var(--line-2);margin:4px 0 6px;font-size:14px}
+.pk-inapp b{color:var(--fg)}.pk-inapp>span{color:var(--muted)}
+.pk-inapp-b{display:flex;gap:8px;flex-wrap:wrap;margin-top:2px}
+.adm-fn{display:grid;grid-template-columns:minmax(150px,1.3fr) 2fr 44px 70px;align-items:center;gap:10px;padding:5px 0;font-size:14px}
+.adm-fn i{display:block;height:10px;border-radius:5px;background:var(--blue-ink);opacity:.75}
+.adm-fn b{text-align:right}
+@media (max-width:560px){.adm-fn{grid-template-columns:1fr 50px;}.adm-fn i,.adm-fn small{display:none}}

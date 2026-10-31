@@ -27,6 +27,20 @@
 
   const url = params => { const u = new URL(location.href); u.search = ""; u.hash = ""; Object.entries(params || {}).forEach(([k, v]) => u.searchParams.set(k, v)); return u.toString(); };
   const goUrl = params => { location.href = url(params); };
+  // apps that open links in their own browser (Instagram, Facebook, TikTok, Snapchat...). Google blocks its sign-in inside them.
+  const UA = navigator.userAgent || "", IN_APP = /Instagram|FBAN|FBAV|FB_IAB|FBIOS|TikTok|musical_ly|Bytedance|trill_|Snapchat|LinkedInApp|Twitter|Line\/|Pinterest/i.test(UA);
+  const IN_APP_NAME = /Instagram/i.test(UA) ? "Instagram" : /FBAN|FBAV|FB_IAB|FBIOS/i.test(UA) ? "Facebook" : /TikTok|musical_ly|Bytedance|trill_/i.test(UA) ? "TikTok" : /Snapchat/i.test(UA) ? "Snapchat" : "this app";
+  /* ---------- sign-up funnel: counts visits, demo opens, sign-up page opens and new accounts (site_events, insert only) ---------- */
+  const SID = (() => { try { let v = sessionStorage.getItem("rv.sid"); if (!v) { v = Math.random().toString(36).slice(2, 12) + Date.now().toString(36); sessionStorage.setItem("rv.sid", v); } return v; } catch (e) { return "x" + Math.random().toString(36).slice(2, 12); } })();
+  const trackQ = [], trackOnce = new Set();
+  const track = (ev, detail, once) => {
+    if (once) { const k = "rv.ev." + ev; try { if (sessionStorage.getItem(k)) return; sessionStorage.setItem(k, "1"); } catch (e) { if (trackOnce.has(k)) return; trackOnce.add(k); } }
+    let ref = ""; try { ref = document.referrer ? new URL(document.referrer).hostname : ""; } catch (e) {}
+    const row = { sid: SID, ev, detail: detail ? String(detail).slice(0, 190) : null, mobile: !!(matchMedia && matchMedia("(pointer:coarse)").matches), inapp: IN_APP, ref: ref.slice(0, 190) || null };
+    if (!sb) { trackQ.push(row); return; }
+    try { sb.from("site_events").insert(row).then(() => {}, () => {}); } catch (e) {}
+  };
+  window.rvTrack = track;
   async function getJson(u) { const r = await fetch(u, { cache: "no-cache" }); if (!r.ok) throw new Error(u + " " + r.status); return r.json(); }
   function loadScript(src) { return new Promise((ok, bad) => { const s = document.createElement("script"); s.src = src; s.onload = ok; s.onerror = bad; document.head.appendChild(s); }); }
   const bikeOf = id => INDEX.find(b => b.id === id);
@@ -141,6 +155,7 @@
     const curName = cur && cur.meta && cur.meta.project && cur.meta.project.bike;
     if (curName && curName !== label && !confirm(`This browser already has a ${cur.meta.project.goal === "maintain" ? "maintenance log" : "project"} for the ${curName}. Replace it with the ${label}? Create a free account to keep more than one.`)) return;
     if (sb && !keep) ls.set("rv.pendingReq", JSON.stringify(r));
+    track("guest_start", label);
     ls.set("rv.data.custom-bike", JSON.stringify(curName === label ? cur : { meta: { project: m } }));
     ls.set("rv.bike", "custom-bike"); goUrl({ bike: "custom-bike" });
   }
@@ -222,6 +237,7 @@
     const head = !goal ? `<div class="eyebrow">${mode === "new" ? "New project" : "Add your bike"}</div><h1 class="disp">What are you doing with your bike?</h1><p class="muted">This sets up your bike's page. You can start restoring later from the menu.</p>`
       : goal === "maintain" ? `<div class="eyebrow">Maintenance and records</div><h1 class="disp">Which bike is it?</h1><p class="muted">Search for it, or add it with the year, make and model. Any bike works.</p>`
       : `${sb && !hasPlanL("restorer") ? `<div class="pk-uprest"><b>Restoration courses are in Restorer.</b><span>${session && !myPlan().trialUsed ? "Try it free for 30 days. Cancel any time before day 31." : !session ? "Create a free account to start the 30-day free trial." : "Upgrade to start a restoration."}</span><button class="btn tan sm" data-plans>See plans</button></div>` : ""}<div class="eyebrow">${mode === "new" ? "New project" : "Motorcycle restoration"}</div><h1 class="disp">Which bike are you restoring?</h1><p class="muted">Any bike works. Search for it, or add it with the year, make and model, and you get a step-by-step restoration course built for its kind of bike.</p>`;
+    if (mode === "try") track("pick_view", goal, true);
     frame(`${head}
       <div class="pk-goal" role="radiogroup" aria-label="What are you doing with your bike?">${Object.entries(GOALS).map(([k, [t, d]]) => `<button type="button" class="pk-goal-o${goal === k ? " on" : ""}" role="radio" aria-checked="${goal === k}" data-goal="${k}"><span class="pk-goal-dot" aria-hidden="true"></span><b>${t}</b><span class="muted">${d}</span></button>`).join("")}</div>
       ${goal ? `<div class="pick-search"><input type="search" id="pickQ" placeholder="Year, make, model, e.g. ${goal === "maintain" ? "2012 Suzuki V-Strom 650" : "1977 Suzuki GS750"}" autocomplete="off" aria-label="Search for your bike"></div>
@@ -251,6 +267,7 @@
       else fillReq();
     };
     reqBox.addEventListener("click", e => { if (e.target.closest(".pk-reqlink")) { openReq(); document.querySelector("#reqF input[name=year]")?.focus(); } });
+    if (!q.value && qs.get("q")) q.value = qs.get("q").slice(0, 80);
     q.oninput = draw; draw(); drawMine();
     list.onclick = async e => {
       const el = e.target.closest("[data-bike]"); if (!el) return;
@@ -268,8 +285,9 @@
   function showAuth(kind) {
     const T = { signin: ["Sign in", "Sign in"], signup: ["Create your account", "Create account"], forgot: ["Reset your password", "Email me a reset link"], newpass: ["Choose a new password", "Save password"] }[kind];
     document.title = T[0] + " · Revora";
-    frame(`<h1 class="disp">${T[0]}</h1>${kind === "signup" ? `<p class="muted">Free. Your bike's restoration course, parts, jobs and maintenance log in one place, saved to your account and shareable with your team.</p>` : ""}
-      ${kind === "signin" || kind === "signup" ? `<button class="btn big pk-google" type="button" data-google><svg viewBox="0 0 48 48" width="20" height="20" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.3-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.3-.4-3.5z"/></svg>Continue with Google</button><div class="pk-or"><span>or use your email</span></div>` : ""}
+    frame(`<h1 class="disp">${T[0]}</h1>${kind === "signup" ? `<p class="muted">Free for one bike, no card needed. Your bike's service log, reminders, parts and receipts in one place, saved to your account so you never lose them.</p>` : ""}
+      ${(kind === "signin" || kind === "signup") && IN_APP ? `<div class="pk-inapp"><b>You're in ${esc(IN_APP_NAME)}'s browser</b><span>Google sign-in doesn't work inside ${esc(IN_APP_NAME)}. Use your email below, it takes a few seconds. Or open this page in ${/android/i.test(UA) ? "Chrome" : "Safari"} to use Google.</span><div class="pk-inapp-b">${/android/i.test(UA) ? `<a class="btn sm" href="intent://${esc(location.host + location.pathname + "?auth=" + kind)}#Intent;scheme=https;package=com.android.chrome;end">Open in Chrome</a>` : ""}<button class="btn sm" type="button" data-copylink>Copy link</button></div><span class="muted pk-small">${/android/i.test(UA) ? "Or tap the menu (⋮) and pick Open in browser." : "Or tap ••• (or the share icon) and pick Open in browser / Open in Safari."}</span></div>` : ""}
+      ${(kind === "signin" || kind === "signup") && !IN_APP ? `<button class="btn big pk-google" type="button" data-google><svg viewBox="0 0 48 48" width="20" height="20" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.3-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.3-.4-3.5z"/></svg>Continue with Google</button><div class="pk-or"><span>or use your email</span></div>` : ""}
       <form class="pk-form" id="authF" novalidate>
         ${kind === "signup" ? `<label>Your name<input name="name" autocomplete="name" required></label>` : ""}
         ${kind !== "newpass" ? `<label>Email<input name="email" type="email" autocomplete="email" required></label>` : ""}
@@ -283,8 +301,10 @@
       </form>
       <div class="pk-links">${kind === "signin" ? `<button class="linkbtn" data-nav="forgot">Forgot your password?</button><span>No account? <button class="linkbtn" data-nav="signup">Create one</button></span>` : kind === "signup" ? `<span>Already have an account? <button class="linkbtn" data-nav="signin">Sign in</button></span>${guestLinks()}` : `<button class="linkbtn" data-nav="signin">Back to sign in</button>`}</div>`);
     const f = document.getElementById("authF"), err = document.getElementById("authErr");
-    const gb = app.querySelector("[data-google]");
-    if (gb) gb.onclick = async () => { gb.disabled = true; err.hidden = true;
+    const gb = app.querySelector("[data-google]"), cl = app.querySelector("[data-copylink]");
+    if (kind === "signup" || kind === "signin") track(kind + "_view", IN_APP ? IN_APP_NAME : "", true);
+    if (cl) cl.onclick = async () => { const u = location.origin + location.pathname + "?auth=" + kind; try { await navigator.clipboard.writeText(u); cl.textContent = "Copied. Paste it in your browser"; } catch (e) { prompt("Copy this link and open it in your browser:", u); } };
+    if (gb) gb.onclick = async () => { gb.disabled = true; err.hidden = true; track("google_click", kind);
       const { error } = await sb.auth.signInWithOAuth({ provider: "google", options: { redirectTo: url({}) } });
       if (error) { err.textContent = "Google sign-in isn't working right now. Use your email below, or try again in a minute."; err.hidden = false; gb.disabled = false; } };
     if (!(matchMedia && matchMedia("(pointer:coarse)").matches)) f.querySelector("input").focus();
@@ -298,6 +318,7 @@
       const ph = kind === "signup" && String(d.phone || "").trim() ? normPhone(d.phone) : "";
       if (ph === null) return show("That mobile number doesn't look right. Include the area code.");
       if (kind === "signup" && d.sms && !ph) return show("Add your mobile number to get texts, or untick the box.");
+      if (kind === "signup") track("signup_submit");
       const back = url({});
       let r;
       if (kind === "signin") r = await sb.auth.signInWithPassword({ email: d.email, password: d.password });
@@ -719,8 +740,9 @@
       <section class="ld-hero"><div class="ld-hero-t"><span class="ld-k">For riders, restorers and shops</span>
           <h1>Restore it. Ride it. Keep every record.</h1>
           <p>Revora keeps your bike's whole life in one place: services and reminders, receipts read by AI, recalls, mods, papers, and a step-by-step restoration course for any bike.</p>
-          <div class="ld-cta"><button class="btn tan big" data-nav="signup">Get started free</button><button class="btn ghost-l big" data-demo>Try the demo</button><button class="btn ghost-l big" data-nav="signin">Sign in</button></div>
-          <span class="ld-small">Free for one bike. Restorer free for 30 days, cancel any time.</span><div class="ld-follow"><span>Follow Revora</span>${socialsHtml("dark")}</div></div>
+          <form class="ld-ride" id="ldRide"><label for="ldRideQ">What do you ride?</label><div class="ld-ride-r"><input id="ldRideQ" name="q" type="search" placeholder="e.g. 2015 Harley Sportster" autocomplete="off"><button class="btn tan big" type="submit">Start my garage</button></div><span>Free, no card. See what's due on your bike in under a minute.</span></form>
+          <div class="ld-cta"><button class="btn ghost-l big" data-nav="signup">Create free account</button><button class="btn ghost-l big" data-demo>Try the demo</button><button class="btn ghost-l big" data-nav="signin">Sign in</button></div>
+          <span class="ld-small">Free for one bike, no card needed. Restorer free for 30 days, cancel any time.</span><div class="ld-follow"><span>Follow Revora</span>${socialsHtml("dark")}</div></div>
         <div class="ld-art">${["bike-cafe", "bike-adventure", "bike-cruiser"].map((n, i) => sil(n) ? `<img class="ld-s s${i}" src="${sil(n)}" alt="">` : "").join("")}</div></section>
       ${!(matchMedia("(display-mode: standalone)").matches || navigator.standalone) ? `<section class="ins-band ld-ins"><img src="img/app-192.png" alt="" width="44" height="44"><div><b>Get the Revora app</b><span>Free. Put it on your home screen and it opens like any other app.</span></div><div class="ins-acts"><button class="btn tan" data-act="install">Install the app</button><button class="linkbtn" data-act="ins-later">Not now</button></div></section>` : ""}
       <section class="ld-strip"><div><b>Any bike</b><span>Search the library or add yours by year, make and model</span></div><div><b>8 kinds of bike</b><span>Courses tailored to cruisers, sport bikes, scooters and more</span></div><div><b>Your records stay yours</b><span>Export or print them any time</span></div></section>
@@ -731,11 +753,14 @@
         <div><span>2</span><b>Log as you go</b><p>Snap receipts, log services and fill-ups, and tick off checklists. It takes seconds.</p></div>
         <div><span>3</span><b>Know what's next</b><p>Reminders, recall alerts and renewal dates come to you, and the history report builds itself.</p></div></div></section>
       <section class="ld-sec" id="ld-plans"><h2>Plans</h2><p class="ld-sub">Start free. New members get 25% off for their first 24 hours.</p>${window.rvPlansHtml({ yearly, mode: "choose" })}</section>
-      <section class="ld-end"><h2>Your bike's whole story, kept right.</h2><button class="btn tan big" data-nav="signup">Get started free</button><button class="linkbtn" data-demo>Try the demo first</button></section>
+      <section class="ld-end"><h2>Your bike's whole story, kept right.</h2><button class="btn tan big" data-nav="signup">Get started free</button><span class="ld-small">Free for one bike. No card needed.</span><button class="linkbtn" data-demo>Try the demo first</button></section>
       <footer class="ld-foot"><span>Revora</span><span>Made for people who work on their own bikes.</span>${socialsHtml("light")}<span class="ld-legal"><a href="?privacy">Privacy</a> · <a href="?terms">Terms</a> · <a href="mailto:info@revoragarage.com">info@revoragarage.com</a></span></footer></div>`;
     app.querySelectorAll("[data-pl-bill]").forEach(b => b.onclick = () => { showLanding(b.dataset.plBill === "y"); document.getElementById("ld-plans").scrollIntoView(); });
     app.querySelectorAll("[data-pl-pick]").forEach(b => b.onclick = () => showAuth("signup"));
     app.querySelectorAll("[data-demo]").forEach(b => b.onclick = () => goUrl({ demo: 1 }));
+    const rf = document.getElementById("ldRide");
+    if (rf) rf.onsubmit = e => { e.preventDefault(); const v = rf.q.value.trim(); track("ride_start", v); goUrl(v ? { pick: 1, goal: "maintain", q: v } : { pick: 1, goal: "maintain" }); };
+    track("landing_view", "", true);
   }
 
   /* ---------- privacy policy and terms ---------- */
@@ -868,7 +893,13 @@
       else m = localMeta(bikeId);
       window.RV_BIKE_LABEL = m ? { year: m.year, make: m.make, model: m.model, style: m.style || guessStyle(m.make || "", m.model || ""), silhouette: m.silhouette || "", goal: m.goal || (m.requestKey ? "restore" : "maintain"), drive: m.drive || (bikeOf(bikeId)?.universal ? guessDrive(m.make || "", m.model || "", bikeOf(bikeId).style) : "") } : null;
     }
-    try { await loadScript("app.js?v=" + (window.RV_BUILD || Date.now())); } catch (e) { fail("Couldn't load the app. Check your internet and try again."); }
+    try { await loadScript("app.js?v=" + (window.RV_BUILD || Date.now())); } catch (e) { return fail("Couldn't load the app. Check your internet and try again."); }
+    // trying it without an account: a strip that says it's only on this browser, and that a free account keeps it
+    if (!cloud && !window.RV_DEMO && sb && !session && !document.querySelector(".demo-bar")) {
+      const d = document.createElement("div"); d.className = "demo-bar guest-bar";
+      d.innerHTML = `<span><b>Only saved on this browser.</b><span class="demo-more"> A free account keeps it safe and sends your reminders.</span></span><button class="btn sm tan" type="button"><span class="demo-more">Save it free</span><span class="demo-less">Save it free</span></button>`;
+      d.querySelector("button").onclick = () => { track("guest_save_click"); goUrl({ auth: "signup" }); }; document.body.appendChild(d);
+    }
   }
   async function openProject(pid) {
     spin();
@@ -878,6 +909,27 @@
     if (!bikeOf(p.bike_id)) return fail("This project's bike isn't in the library any more.");
     ls.set("rv.project", pid);
     await openApp(p.bike_id, { sb, db: rvCloudDb(sb, pid), user: session.user, profile: profile || {}, role: p.role, projectId: pid, projectName: p.name, plan: profile?.plan || "free" });
+  }
+
+  /* ---------- after signing up: move bikes started on this browser into the account ---------- */
+  async function moveGuestBikes() {
+    let keys = []; try { keys = Object.keys(localStorage).filter(k => k.startsWith("rv.data.") && !ls.get("rv.moved." + k.slice(8))); } catch (e) { return; }
+    const todo = keys.map(k => { let d = null; try { d = JSON.parse(ls.get(k) || "null"); } catch (e) {} return { id: k.slice(8), d }; })
+      .filter(x => x.d && x.d.meta && x.d.meta.project && bikeOf(x.id));
+    if (!todo.length) return;
+    const { data: mine } = await sb.from("my_projects").select("id,role");
+    let room = (planInfo(myPlan().id).bikes || 1) - (mine || []).filter(p => p.role === "owner").length; if (myPlan().admin) room = 99;
+    for (const { id, d } of todo) {
+      if (room <= 0) break;
+      const m = d.meta.project, name = m.projectName || m.bike || bikeName(bikeOf(id));
+      const { data: p, error } = await sb.from("projects").insert({ bike_id: id, name }).select("id").single();
+      if (error) return;
+      const rows = []; Object.entries(d).forEach(([c, recs]) => { if (recs && typeof recs === "object" && !Array.isArray(recs)) Object.entries(recs).forEach(([rid, rec]) => { if (rec && typeof rec === "object") { const b = Object.assign({}, rec); delete b.id; rows.push({ project_id: p.id, coll: c, rec_id: rid, data: b }); } }); });
+      for (let i = 0; i < rows.length; i += 400) await sb.from("records").upsert(rows.slice(i, i + 400));
+      ls.set("rv.moved." + id, p.id); ls.set("rv.bike", ""); room--;
+      track("guest_moved", name);
+      setTimeout(() => note("Your " + name + " is saved to your account now."), 600);
+    }
   }
 
   /* ---------- per-person settings (pinned projects, page tips), saved to the account when there is one ---------- */
@@ -960,13 +1012,16 @@
         const recovering = /type=recovery/.test(location.hash);
         sb.auth.onAuthStateChange(ev => { if (ev === "PASSWORD_RECOVERY") showAuth("newpass"); });
         session = (await sb.auth.getSession()).data.session; window.RV_EMAIL = session && session.user.email; window.RV_JOINED = session && (session.user.email_confirmed_at || session.user.created_at);
+        trackQ.splice(0).forEach(r => { try { sb.from("site_events").insert(r).then(() => {}, () => {}); } catch (e) {} });
         if (session) await loadProfile();
         if (session) await flushPendingReq();
+        if (session && Date.now() - new Date(session.user.created_at) < 36e5 && !ls.get("rv.joinedEv")) { ls.set("rv.joinedEv", "1"); track("account_new", (session.user.app_metadata || {}).provider || ""); }
+        if (session) { try { await moveGuestBikes(); } catch (e) {} }
         await loadPrefs();
         if (recovering) return;
       }
     }
-    if (qs.has("demo")) { window.RV_DEMO = true; return openApp("suzuki-dl650a-2012", null); }
+    if (qs.has("demo")) { window.RV_DEMO = true; track("demo_open", "", true); return openApp("suzuki-dl650a-2012", null); }
     if (qs.has("privacy") || qs.has("terms")) return showLegal(qs.has("terms") ? "terms" : "privacy");
     if (qs.get("report")) return showReport(qs.get("report"));
     if (qs.get("build")) return showBuild(qs.get("build"));

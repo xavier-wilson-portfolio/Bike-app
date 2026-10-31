@@ -4,7 +4,7 @@
    a box that sends them to create a free account. After a good look around (DEMO_SOFT pages) a box suggests signing up;
    after DEMO_HARD pages or DEMO_MS of browsing the demo stops and only sign up or sign in are left. */
 const DEMO = !!window.RV_DEMO;
-const DEMO_SOFT = 10, DEMO_HARD = 25, DEMO_MS = 8 * 60 * 1000;
+const DEMO_SOFT = 4, DEMO_HARD = 12, DEMO_MS = 5 * 60 * 1000;
 // pages seen and start time are kept for a day, so reloading doesn't restart the tour
 const demoMem = (() => { try { const m = JSON.parse(localStorage.getItem("rv.demo") || "null"); if (m && Date.now() - m.t0 < 864e5) return m; } catch (e) {} return { t0: Date.now(), views: 0 }; })();
 const demoKeep = () => { try { localStorage.setItem("rv.demo", JSON.stringify({ t0: DEMO_T0, views: demoViews })); } catch (e) {} };
@@ -29,7 +29,7 @@ function demoWall(what) {
 
 // the end of the demo: covers the page, only sign up or sign in are left
 function demoHardWall() {
-  if (!DEMO || demoHardShown) return; demoHardShown = true;
+  if (!DEMO || demoHardShown) return; demoHardShown = true; if (window.rvTrack) rvTrack("demo_end", String(demoViews), true);
   try { closeModal(); } catch (e) {}
   const d = document.createElement("div"); d.className = "demo-wall"; d.setAttribute("role", "dialog"); d.setAttribute("aria-modal", "true");
   d.innerHTML = `<div class="demo-wall-card"><img class="brand-icon" src="img/revora-icon.svg" alt=""><h2>That's the tour</h2>
