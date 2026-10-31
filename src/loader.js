@@ -269,6 +269,7 @@
     const T = { signin: ["Sign in", "Sign in"], signup: ["Create your account", "Create account"], forgot: ["Reset your password", "Email me a reset link"], newpass: ["Choose a new password", "Save password"] }[kind];
     document.title = T[0] + " · Revora";
     frame(`<h1 class="disp">${T[0]}</h1>${kind === "signup" ? `<p class="muted">Free. Your bike's restoration course, parts, jobs and maintenance log in one place, saved to your account and shareable with your team.</p>` : ""}
+      ${kind === "signin" || kind === "signup" ? `<button class="btn big pk-google" type="button" data-google><svg viewBox="0 0 48 48" width="20" height="20" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.3-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.3-.4-3.5z"/></svg>Continue with Google</button><div class="pk-or"><span>or use your email</span></div>` : ""}
       <form class="pk-form" id="authF" novalidate>
         ${kind === "signup" ? `<label>Your name<input name="name" autocomplete="name" required></label>` : ""}
         ${kind !== "newpass" ? `<label>Email<input name="email" type="email" autocomplete="email" required></label>` : ""}
@@ -282,7 +283,11 @@
       </form>
       <div class="pk-links">${kind === "signin" ? `<button class="linkbtn" data-nav="forgot">Forgot your password?</button><span>No account? <button class="linkbtn" data-nav="signup">Create one</button></span>` : kind === "signup" ? `<span>Already have an account? <button class="linkbtn" data-nav="signin">Sign in</button></span>${guestLinks()}` : `<button class="linkbtn" data-nav="signin">Back to sign in</button>`}</div>`);
     const f = document.getElementById("authF"), err = document.getElementById("authErr");
-    f.querySelector("input").focus();
+    const gb = app.querySelector("[data-google]");
+    if (gb) gb.onclick = async () => { gb.disabled = true; err.hidden = true;
+      const { error } = await sb.auth.signInWithOAuth({ provider: "google", options: { redirectTo: url({}) } });
+      if (error) { err.textContent = "Google sign-in isn't working right now. Use your email below, or try again in a minute."; err.hidden = false; gb.disabled = false; } };
+    if (!(matchMedia && matchMedia("(pointer:coarse)").matches)) f.querySelector("input").focus();
     f.onsubmit = async e => {
       e.preventDefault(); const d = Object.fromEntries(new FormData(f)); err.hidden = true;
       const btn = f.querySelector("button[type=submit]"); btn.disabled = true;

@@ -2728,3 +2728,8 @@ body:has(#modalHost .modal-bg) .chat-fab,body:has(#modalHost .modal-bg) .demo-ba
 .pk-agree{display:block;text-align:center;margin-top:10px}.pk-agree a{color:inherit;text-decoration:underline}
 .g-del{font-size:13px;color:var(--red)!important;padding:0}
 .pk-card label{display:flex;flex-direction:column;gap:6px;margin:12px 0;font-weight:600}
+/* Continue with Google */
+.pk-google{width:100%;display:flex;align-items:center;justify-content:center;gap:10px;background:#fff;color:#1f1f1f;border:1px solid #D6DDE1;font-weight:700}
+.pk-google:hover{background:#F7FAFC;border-color:#8DBBD8}
+.pk-or{display:flex;align-items:center;gap:12px;margin:16px 0 4px;color:var(--muted);font-size:13px}
+.pk-or::before,.pk-or::after{content:"";flex:1;height:1px;background:var(--line)}
