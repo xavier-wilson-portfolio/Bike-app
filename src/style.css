@@ -2712,3 +2712,7 @@ html.ins-hidden .ins-band{display:none!important}
 .gsocial>div:first-child{display:flex;flex-direction:column;gap:4px;max-width:420px}
 .gsocial span{color:var(--muted,#5B6B76)}
 @media (max-width:560px){.rv-soc a span{display:none}.rv-soc a{padding:9px}.gsocial{flex-direction:column;align-items:flex-start}}
+
+/* Phones: floating buttons never sit on top of a box or the last bit of a page */
+body:has(#modalHost .modal-bg) .chat-fab,body:has(#modalHost .modal-bg) .demo-bar,body:has(.pk-modal) .chat-fab,body:has(.pk-modal) .demo-bar,body:has(#drawerHost > *) .chat-fab,body:has(#drawerHost > *) .demo-bar{display:none!important}
+@media (max-width:760px){body:has(.chat-fab),body:has(.demo-bar){padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}}
