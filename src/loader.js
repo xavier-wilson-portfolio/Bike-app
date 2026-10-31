@@ -278,6 +278,7 @@
         ${kind === "signup" || kind === "newpass" ? `<span class="muted pk-small">At least 8 characters.</span>` : ""}
         <div class="pk-err" id="authErr" hidden></div>
         <button class="btn pri big" type="submit">${T[1]}</button>
+        ${kind === "signup" || kind === "signin" ? `<span class="muted pk-small pk-agree">By continuing, you agree to Revora's <a href="?terms" target="_blank" rel="noopener">Terms</a> and <a href="?privacy" target="_blank" rel="noopener">Privacy Policy</a>.</span>` : ""}
       </form>
       <div class="pk-links">${kind === "signin" ? `<button class="linkbtn" data-nav="forgot">Forgot your password?</button><span>No account? <button class="linkbtn" data-nav="signup">Create one</button></span>` : kind === "signup" ? `<span>Already have an account? <button class="linkbtn" data-nav="signin">Sign in</button></span>${guestLinks()}` : `<button class="linkbtn" data-nav="signin">Back to sign in</button>`}</div>`);
     const f = document.getElementById("authF"), err = document.getElementById("authErr");
@@ -453,9 +454,11 @@
         <div><b>Text alerts</b><span>Get service reminders and news about new features by text as well as email.</span><button class="linkbtn" data-texts>Set up texts</button></div>
         <div><b>Plans</b><span>One bike is free for good. Paid plans add AI receipts, email reminders, share links and teams.</span><button class="linkbtn" data-plans>See plans</button></div>
         <div><b>Any bike works</b><span>Restoring or maintaining a bike we don't list? Add it with its year, make and model. Restorations get a course built for its kind of bike.</span><button class="linkbtn" data-nav="browse">Add a bike</button></div></section>
-      <section class="gsocial"><div><b>Follow Revora</b><span>Builds, tips and what's new in the app. Tag us in your project.</span></div>${socialsHtml("light")}</section>`, { wide: true, garage: true });
+      <section class="gsocial"><div><b>Follow Revora</b><span>Builds, tips and what's new in the app. Tag us in your project.</span></div>${socialsHtml("light")}</section>
+      <p class="g-legal"><a href="?privacy">Privacy Policy</a> · <a href="?terms">Terms of Service</a> · <button class="linkbtn g-del" data-delacct>Delete my account</button></p>`, { wide: true, garage: true });
     const adm = document.getElementById("admHQ"); if (adm) window.rvAdmin.mount(adm, sb, note);
     maybeAskPhone();
+    app.querySelectorAll("[data-delacct]").forEach(b => b.onclick = () => deleteAccountBox(data));
     app.querySelectorAll("[data-texts]").forEach(b => b.onclick = async () => { if (CONTACT === undefined) await loadContact(); phoneBox(false); });
     if (hasPlanL("shop") && data.length) woBoard(data);
     if (window.rvShop) rvShop.bind(app, {});
@@ -492,6 +495,40 @@
     goUrl({ project: data.id });
   }
   // delete a bike for good (owner), or take a shared bike out of your garage (everyone else)
+  /* ---------- delete my account (any time, from the garage) ---------- */
+  function deleteAccountBox(projects) {
+    const pl = myPlan(), payingNow = pl.paid && !pl.comp, owned = (projects || []).filter(p => p.role === "owner");
+    const box = document.createElement("div"); box.className = "pk-modal";
+    box.innerHTML = `<div class="pk-card" role="dialog" aria-modal="true" aria-labelledby="daH"><h2 class="disp-s" id="daH">Delete your Revora account?</h2>
+      <p class="muted">This deletes your account and everything in it right away: ${owned.length ? `your ${owned.length === 1 ? "bike" : owned.length + " bikes"} with all their services, parts, mods, receipts, photos and reminders` : "your profile and settings"}.${owned.some(p => p.members > 1) ? " People you shared a bike with lose it too." : ""} It can't be undone. If you might want your records later, open a bike and download a backup from its Settings first.</p>
+      ${payingNow ? `<div class="pk-uprest"><b>You're on a paid plan.</b><span>Deleting your account doesn't cancel billing on its own. Cancel your plan in billing first so you aren't charged again.</span><a class="btn sm" data-manage href="${esc(RV_CONFIG.billingPortal || "#")}" target="_blank" rel="noopener">Open billing</a></div>
+      <label class="pk-check"><input type="checkbox" data-cancelled><span>I've canceled my plan in billing.</span></label>` : ""}
+      <label>Type DELETE to confirm<input data-confirm autocomplete="off" autocapitalize="characters" spellcheck="false"></label>
+      <div class="pk-err" id="daE" hidden></div>
+      <div class="pk-links"><button class="btn" data-x>Keep my account</button><button class="btn danger" data-ok disabled>Delete my account</button></div></div>`;
+    document.body.appendChild(box);
+    const ok = box.querySelector("[data-ok]"), err = box.querySelector("#daE"), conf = box.querySelector("[data-confirm]"), cx = box.querySelector("[data-cancelled]");
+    const check = () => { ok.disabled = !(conf.value.trim().toUpperCase() === "DELETE" && (!cx || cx.checked)); };
+    conf.oninput = check; if (cx) cx.onchange = check;
+    box.querySelector("[data-x]").onclick = () => box.remove(); box.onclick = e => { if (e.target === box) box.remove(); };
+    if (window.rvBindManage) window.rvBindManage(box, async () => (await sb.auth.getSession()).data.session?.access_token);
+    ok.onclick = async () => {
+      ok.disabled = true; ok.textContent = "Deleting..."; err.hidden = true;
+      // photos and files first (best effort), then the account; the database removes the rest with it
+      for (const p of owned) {
+        try { const { data: files } = await sb.storage.from("project-files").list(p.id, { limit: 1000 });
+          if (files && files.length) await sb.storage.from("project-files").remove(files.map(f => p.id + "/" + f.name)); } catch (e) {}
+      }
+      const { error } = await sb.rpc("delete_my_account");
+      if (error) { err.textContent = "Couldn't delete your account just now. Try again, or email info@revoragarage.com and we'll do it for you."; err.hidden = false; ok.textContent = "Delete my account"; check(); return; }
+      try { await sb.auth.signOut(); } catch (e) {}
+      try { Object.keys(localStorage).filter(k => k.startsWith("rv.")).forEach(k => localStorage.removeItem(k)); } catch (e) {}
+      session = null; profile = null; box.remove();
+      frame(`<h1 class="disp">Your account is deleted</h1><p class="muted">Everything is gone from Revora. Thanks for giving it a try. You're always welcome back.</p><div class="pk-links"><a class="btn pri" href="./">Back to Revora</a></div>`);
+    };
+    setTimeout(() => conf.focus(), 30);
+  }
+
   function deleteProjectBox(p, done) {
     const own = p.role === "owner", box = document.createElement("div"); box.className = "pk-modal";
     box.innerHTML = `<div class="pk-card" role="dialog" aria-modal="true" aria-labelledby="dlH"><h2 class="disp-s" id="dlH">Are you sure you want to ${own ? "delete" : "remove"} "${esc(p.label)}"?</h2>
@@ -690,10 +727,17 @@
         <div><span>3</span><b>Know what's next</b><p>Reminders, recall alerts and renewal dates come to you, and the history report builds itself.</p></div></div></section>
       <section class="ld-sec" id="ld-plans"><h2>Plans</h2><p class="ld-sub">Start free. New members get 25% off for their first 24 hours.</p>${window.rvPlansHtml({ yearly, mode: "choose" })}</section>
       <section class="ld-end"><h2>Your bike's whole story, kept right.</h2><button class="btn tan big" data-nav="signup">Get started free</button><button class="linkbtn" data-demo>Try the demo first</button></section>
-      <footer class="ld-foot"><span>Revora</span><span>Made for people who work on their own bikes.</span>${socialsHtml("light")}<a href="mailto:info@revoragarage.com">info@revoragarage.com</a></footer></div>`;
+      <footer class="ld-foot"><span>Revora</span><span>Made for people who work on their own bikes.</span>${socialsHtml("light")}<span class="ld-legal"><a href="?privacy">Privacy</a> · <a href="?terms">Terms</a> · <a href="mailto:info@revoragarage.com">info@revoragarage.com</a></span></footer></div>`;
     app.querySelectorAll("[data-pl-bill]").forEach(b => b.onclick = () => { showLanding(b.dataset.plBill === "y"); document.getElementById("ld-plans").scrollIntoView(); });
     app.querySelectorAll("[data-pl-pick]").forEach(b => b.onclick = () => showAuth("signup"));
     app.querySelectorAll("[data-demo]").forEach(b => b.onclick = () => goUrl({ demo: 1 }));
+  }
+
+  /* ---------- privacy policy and terms ---------- */
+  function showLegal(kind) {
+    document.title = (kind === "terms" ? "Terms of Service" : "Privacy Policy") + " · Revora";
+    frame(`<article class="legal">${window.RV_LEGAL[kind]}<p class="legal-nav"><a href="?privacy">Privacy Policy</a> · <a href="?terms">Terms of Service</a> · <a href="./">Back to Revora</a></p></article>`, { wide: true });
+    window.scrollTo(0, 0);
   }
 
   /* ---------- plans (public) ---------- */
@@ -918,6 +962,7 @@
       }
     }
     if (qs.has("demo")) { window.RV_DEMO = true; return openApp("suzuki-dl650a-2012", null); }
+    if (qs.has("privacy") || qs.has("terms")) return showLegal(qs.has("terms") ? "terms" : "privacy");
     if (qs.get("report")) return showReport(qs.get("report"));
     if (qs.get("build")) return showBuild(qs.get("build"));
     if (qs.has("builds")) return showGallery();

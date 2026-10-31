@@ -2716,3 +2716,15 @@ html.ins-hidden .ins-band{display:none!important}
 /* Phones: floating buttons never sit on top of a box or the last bit of a page */
 body:has(#modalHost .modal-bg) .chat-fab,body:has(#modalHost .modal-bg) .demo-bar,body:has(.pk-modal) .chat-fab,body:has(.pk-modal) .demo-bar,body:has(#drawerHost > *) .chat-fab,body:has(#drawerHost > *) .demo-bar{display:none!important}
 @media (max-width:760px){body:has(.chat-fab),body:has(.demo-bar){padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}}
+
+/* Privacy and terms pages */
+.legal{max-width:720px;margin:0 auto;text-align:left;line-height:1.6;font-size:15px}
+.legal h1{margin-bottom:4px}.legal h2{font-size:19px;margin:28px 0 8px}
+.legal ul{padding-left:20px;margin:8px 0}.legal li{margin:6px 0}
+.legal a{color:var(--blue-ink)}
+.legal-nav{margin-top:36px;padding-top:16px;border-top:1px solid var(--line);font-size:14px}
+.ld-legal a,.g-legal a{color:inherit}
+.g-legal{width:100%;text-align:left;font-size:13px;color:var(--muted);margin:14px 0 0}
+.pk-agree{display:block;text-align:center;margin-top:10px}.pk-agree a{color:inherit;text-decoration:underline}
+.g-del{font-size:13px;color:var(--red)!important;padding:0}
+.pk-card label{display:flex;flex-direction:column;gap:6px;margin:12px 0;font-weight:600}
