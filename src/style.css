@@ -2696,3 +2696,19 @@ html.ins-hidden .ins-band{display:none!important}
 @media (min-width:900px) and (pointer:fine){html .ins-band{display:none!important}}
 .ld-ins{max-width:1100px;margin:0 auto 8px;width:calc(100% - 32px);box-sizing:border-box}
 @media (max-width:600px){.ins-band{padding:14px}.ins-band>div:not(.ins-acts){min-width:0;flex:1 1 calc(100% - 60px)}.ins-acts{width:100%}.ins-acts .btn{flex:1}}
+
+/* Revora social links */
+.rv-soc{display:flex;flex-wrap:wrap;gap:8px}
+.rv-soc a{display:inline-flex;align-items:center;gap:6px;padding:7px 11px;border-radius:999px;font-size:13px;font-weight:600;text-decoration:none;border:1px solid transparent;line-height:1}
+.rv-soc a svg{flex-shrink:0}
+.rv-soc.dark a{color:#E6F1F8;background:rgba(255,255,255,.07);border-color:rgba(185,217,235,.28)}
+.rv-soc.dark a:hover{background:rgba(255,255,255,.14);border-color:#B9D9EB}
+.rv-soc.light a{color:var(--fg);background:transparent;border-color:var(--line,#E6EDF2)}
+.rv-soc.light a:hover{border-color:#8DBBD8;background:rgba(141,187,216,.12)}
+.ld-follow{margin-top:18px;display:flex;flex-direction:column;gap:8px}
+.ld-follow>span{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#B9D9EB;font-weight:600}
+.ld-foot .rv-soc a span{display:none}.ld-foot .rv-soc a{padding:7px}
+.gsocial{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:28px;padding:20px 0 8px;border-top:1px solid var(--line);text-align:left;font-size:14px}
+.gsocial>div:first-child{display:flex;flex-direction:column;gap:4px;max-width:420px}
+.gsocial span{color:var(--muted,#5B6B76)}
+@media (max-width:560px){.rv-soc a span{display:none}.rv-soc a{padding:9px}.gsocial{flex-direction:column;align-items:flex-start}}

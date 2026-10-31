@@ -452,7 +452,8 @@
         <div><b>Builds gallery</b><span>See what other riders are restoring and building, and put yours in it from your bike's Build page.</span><a class="linkbtn" href="?builds">Browse builds</a></div>
         <div><b>Text alerts</b><span>Get service reminders and news about new features by text as well as email.</span><button class="linkbtn" data-texts>Set up texts</button></div>
         <div><b>Plans</b><span>One bike is free for good. Paid plans add AI receipts, email reminders, share links and teams.</span><button class="linkbtn" data-plans>See plans</button></div>
-        <div><b>Any bike works</b><span>Restoring or maintaining a bike we don't list? Add it with its year, make and model. Restorations get a course built for its kind of bike.</span><button class="linkbtn" data-nav="browse">Add a bike</button></div></section>`, { wide: true, garage: true });
+        <div><b>Any bike works</b><span>Restoring or maintaining a bike we don't list? Add it with its year, make and model. Restorations get a course built for its kind of bike.</span><button class="linkbtn" data-nav="browse">Add a bike</button></div></section>
+      <section class="gsocial"><div><b>Follow Revora</b><span>Builds, tips and what's new in the app. Tag us in your project.</span></div>${socialsHtml("light")}</section>`, { wide: true, garage: true });
     const adm = document.getElementById("admHQ"); if (adm) window.rvAdmin.mount(adm, sb, note);
     maybeAskPhone();
     app.querySelectorAll("[data-texts]").forEach(b => b.onclick = async () => { if (CONTACT === undefined) await loadContact(); phoneBox(false); });
@@ -639,6 +640,17 @@
   }
 
   /* ---------- landing page for people who aren't signed in ---------- */
+  /* ---------- Revora socials ---------- */
+  const SOCIALS = [
+    ["Instagram", "https://www.instagram.com/revoragarageofficial/", '<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>'],
+    ["TikTok", "https://www.tiktok.com/@revora.garage", '<path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.4 2.6 2.2 4.4 5 4.6"/>'],
+    ["YouTube", "https://www.youtube.com/channel/UC8RcF93Tx1QkIvjtClIjRJQ", '<rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor" stroke="none"/>'],
+    ["Facebook", "https://www.facebook.com/profile.php?id=61595784891437", '<path d="M14.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H9v3h2.6V21"/>'],
+    ["X", "https://x.com/Revoragarage", '<path d="M4 4l16 16M20 4L4 20" stroke-width="2.2"/>']];
+  function socialsHtml(cls) {
+    return `<div class="rv-soc ${cls || ""}">${SOCIALS.map(([n, u, d]) => `<a href="${u}" target="_blank" rel="noopener" aria-label="Revora on ${n}" title="Revora on ${n}"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg><span>${n}</span></a>`).join("")}</div>`;
+  }
+
   function showLanding(yearly) {
     document.title = "Revora · Restore it, ride it, keep the records";
     const I = d => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
@@ -666,7 +678,7 @@
           <h1>Restore it. Ride it. Keep every record.</h1>
           <p>Revora keeps your bike's whole life in one place: services and reminders, receipts read by AI, recalls, mods, papers, and a step-by-step restoration course for any bike.</p>
           <div class="ld-cta"><button class="btn tan big" data-nav="signup">Get started free</button><button class="btn ghost-l big" data-demo>Try the demo</button><button class="btn ghost-l big" data-nav="signin">Sign in</button></div>
-          <span class="ld-small">Free for one bike. Restorer free for 30 days, cancel any time.</span></div>
+          <span class="ld-small">Free for one bike. Restorer free for 30 days, cancel any time.</span><div class="ld-follow"><span>Follow Revora</span>${socialsHtml("dark")}</div></div>
         <div class="ld-art">${["bike-cafe", "bike-adventure", "bike-cruiser"].map((n, i) => sil(n) ? `<img class="ld-s s${i}" src="${sil(n)}" alt="">` : "").join("")}</div></section>
       ${!(matchMedia("(display-mode: standalone)").matches || navigator.standalone) ? `<section class="ins-band ld-ins"><img src="img/app-192.png" alt="" width="44" height="44"><div><b>Get the Revora app</b><span>Free. Put it on your home screen and it opens like any other app.</span></div><div class="ins-acts"><button class="btn tan" data-act="install">Install the app</button><button class="linkbtn" data-act="ins-later">Not now</button></div></section>` : ""}
       <section class="ld-strip"><div><b>Any bike</b><span>Search the library or add yours by year, make and model</span></div><div><b>8 kinds of bike</b><span>Courses tailored to cruisers, sport bikes, scooters and more</span></div><div><b>Your records stay yours</b><span>Export or print them any time</span></div></section>
@@ -678,7 +690,7 @@
         <div><span>3</span><b>Know what's next</b><p>Reminders, recall alerts and renewal dates come to you, and the history report builds itself.</p></div></div></section>
       <section class="ld-sec" id="ld-plans"><h2>Plans</h2><p class="ld-sub">Start free. New members get 25% off for their first 24 hours.</p>${window.rvPlansHtml({ yearly, mode: "choose" })}</section>
       <section class="ld-end"><h2>Your bike's whole story, kept right.</h2><button class="btn tan big" data-nav="signup">Get started free</button><button class="linkbtn" data-demo>Try the demo first</button></section>
-      <footer class="ld-foot"><span>Revora</span><span>Made for people who work on their own bikes.</span><a href="mailto:info@revoragarage.com">info@revoragarage.com</a></footer></div>`;
+      <footer class="ld-foot"><span>Revora</span><span>Made for people who work on their own bikes.</span>${socialsHtml("light")}<a href="mailto:info@revoragarage.com">info@revoragarage.com</a></footer></div>`;
     app.querySelectorAll("[data-pl-bill]").forEach(b => b.onclick = () => { showLanding(b.dataset.plBill === "y"); document.getElementById("ld-plans").scrollIntoView(); });
     app.querySelectorAll("[data-pl-pick]").forEach(b => b.onclick = () => showAuth("signup"));
     app.querySelectorAll("[data-demo]").forEach(b => b.onclick = () => goUrl({ demo: 1 }));
