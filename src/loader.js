@@ -1062,6 +1062,11 @@
     if (qs.get("build")) return showBuild(qs.get("build"));
     if (qs.has("builds")) return showGallery();
     if (qs.get("wo")) return showWo(qs.get("wo"));
+    // opened from the installed app: go back to the page they were on when they installed it
+    if (matchMedia("(display-mode: standalone)").matches || navigator.standalone === true) {
+      try { localStorage.setItem("rv.appSeen", "1"); const pr = JSON.parse(localStorage.getItem("rv.pendingRoute") || "null");
+        if (pr && Date.now() - pr.t < 3 * 864e5 && ![...qs.keys()].some(k => k !== "app")) { localStorage.removeItem("rv.pendingRoute"); if (pr.url !== location.pathname + location.search) { location.replace(pr.url); return; } } } catch (e) {}
+    }
     if (qs.get("shopdoc") && window.rvClient) { if (!sb) return fail("Documents can't be opened on this copy of Revora."); return rvClient.docPage(ctx(), qs.get("shopdoc")); }
     if (qs.get("unsub") && window.rvClient) return rvClient.unsubPage(ctx(), qs.get("unsub"));
     if (qs.get("join") && window.rvClient && sb) return rvClient.joinLink(ctx(), qs.get("join"));
@@ -1133,6 +1138,33 @@
     const box = document.createElement("div"); box.className = "pk-modal";
     box.innerHTML = `<div class="pk-card" role="dialog" aria-modal="true"><h2 class="disp-s">Add Revora to your home screen</h2><ol class="ins-steps">${insSteps().map(t => `<li>${t}</li>`).join("")}</ol><p class="faint" style="margin:0;font-size:13.5px">Revora then opens from its own icon, full screen, and stays signed in.</p><div class="pk-links"><button class="btn pri" data-close>Got it</button></div></div>`;
     box.addEventListener("click", e => { if (e.target === box || e.target.closest("[data-close]")) box.remove(); }); document.body.appendChild(box); return "shown";
+  };
+  // desktop browsers: how to install, or bookmark when the browser can't install sites
+  const deskSteps = () => {
+    const ua = navigator.userAgent, mac = /Macintosh/i.test(ua);
+    if (/Edg\//.test(ua)) return [`Click the menu (three dots) at the top right of Edge.`, `Click <b>Apps</b>, then <b>Install this site as an app</b>.`, `Click <b>Install</b>.`];
+    if (/Firefox/i.test(ua)) return [`Firefox can't install sites as apps, so bookmark it instead.`, `Press <b>${mac ? "⌘" : "Ctrl"} + D</b> and click <b>Save</b>.`, `Next time, open Revora from your bookmarks bar.`];
+    if (mac && /Safari/i.test(ua) && !/Chrome|Chromium/i.test(ua)) return [`Click <b>File</b> in the menu bar at the top of the screen.`, `Click <b>Add to Dock</b>.`, `Click <b>Add</b>. Revora now opens from your Dock.`];
+    return [`Click the install icon at the right end of the address bar (a screen with a small arrow).`, `If it isn't there, open the menu (three dots), then <b>Cast, save and share</b>, then <b>Install page as app</b>.`, `Click <b>Install</b>.`];
+  };
+  const mobile = () => isIOS() || isAndroid() || /Mobi/i.test(navigator.userAgent);
+  let onInst = [];
+  window.addEventListener("appinstalled", () => { onInst.forEach(f => { try { f(); } catch (e) {} }); onInst = []; });
+  // used by the shop and employee sign-up steps: put Revora on the device, then come back to the same page
+  window.rvApp = {
+    standalone, mobile, isIOS, canPrompt: () => !!installEv, bookmarkOnly: () => !mobile() && /Firefox/i.test(navigator.userAgent),
+    seen: () => { try { return !!localStorage.getItem("rv.appSeen"); } catch (e) { return false; } },
+    steps: () => mobile() ? insSteps() : deskSteps(),
+    async prompt() { if (!installEv) return null; installEv.prompt(); const r = await installEv.userChoice.catch(() => null); installEv = null; document.documentElement.classList.remove("can-install"); return r && r.outcome; },
+    onInstalled(f) { onInst.push(f); },
+    // remember where to land when the app opens; iPhones keep the app's storage apart, so the link itself goes in the app's start page
+    keep(url) {
+      try { localStorage.setItem("rv.pendingRoute", JSON.stringify({ url, t: Date.now() })); } catch (e) {}
+      if (isIOS()) { const o = location.origin, m = { name: "Revora", short_name: "Revora", id: o + "/", start_url: new URL(url, location.href).href, scope: o + "/", display: "standalone", background_color: "#17232C", theme_color: "#17232C",
+        icons: [{ src: o + "/img/app-192.png", sizes: "192x192", type: "image/png" }, { src: o + "/img/app-512.png", sizes: "512x512", type: "image/png" }] };
+        const l = document.querySelector('link[rel="manifest"]'); if (l) l.href = "data:application/manifest+json," + encodeURIComponent(JSON.stringify(m)); }
+    },
+    drop() { try { localStorage.removeItem("rv.pendingRoute"); } catch (e) {} }
   };
   if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
 

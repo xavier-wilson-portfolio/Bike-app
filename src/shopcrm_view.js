@@ -835,7 +835,9 @@
     f.onsubmit = async ev => { ev.preventDefault(); const v = readDetails(f); if (!v.name) { er.textContent = "Add the shop's name."; er.hidden = false; return; }
       f.querySelector("[type=submit]").disabled = true;
       try { await saveDetails(v); } catch (error) { f.querySelector("[type=submit]").disabled = false; er.textContent = /does not exist|schema cache/i.test(error.message || "") ? "The shop database isn't set up yet. Run the shop SQL in Supabase first." : err(error); er.hidden = false; return; }
-      if (window.rvShopLock) rvShopLock.markOwnerOpen(); location.href = location.pathname + "?crm"; };
+      if (window.rvShopLock) rvShopLock.markOwnerOpen();
+      const go = () => { location.href = location.pathname + "?crm"; };
+      if (window.rvShopLock && rvShopLock.installFirst) rvShopLock.installFirst(X, { name: v.name, address: v.address, details: v.details }, location.pathname + "?crm", go); else go(); };
   }
   function gatePage(title, text, plans) {
     X.app.innerHTML = `<div class="sx sx-setup"><header class="sx-top"><div class="sx-top-in"><a class="sx-brand" href="${esc(X.url({}))}"><img src="img/revora-icon.svg" alt=""><img class="sx-word" src="img/revora-word-white.svg" alt="Revora"><span class="sx-shopname">Shop</span></a><div class="sx-me"><a class="sx-garage" href="${esc(X.url({}))}">Your garage</a></div></div></header>

@@ -62,37 +62,89 @@
     X.app.innerHTML = `<div class="lg">${shopSide(sh)}<main class="lg-main"><div class="lg-card">${card}</div></main></div>`;
     tickClock(); return X.app.querySelector(".lg-card");
   }
-  // the 6-digit PIN boxes, typed or tapped
-  function pinField(host, onDone) {
-    host.innerHTML = `<div class="lg-pin" role="group" aria-label="PIN">${Array.from({ length: PIN_LEN }, () => "<i></i>").join("")}</div><input class="lg-pinin" inputmode="numeric" autocomplete="one-time-code" maxlength="${PIN_LEN}" aria-label="${PIN_LEN}-digit PIN">
-      <div class="lg-keys">${[1, 2, 3, 4, 5, 6, 7, 8, 9].map(k => `<button type="button" data-k="${k}">${k}</button>`).join("")}<span></span><button type="button" data-k="0">0</button><button type="button" data-k="del" aria-label="Delete">⌫</button></div>`;
-    const inp = host.querySelector(".lg-pinin"), boxes = host.querySelectorAll(".lg-pin i");
-    const paint = () => { boxes.forEach((b, i) => b.classList.toggle("on", i < inp.value.length)); host.querySelector(".lg-pin").classList.toggle("focus", document.activeElement === inp); };
-    inp.oninput = () => { inp.value = digits(inp.value).slice(0, PIN_LEN); paint(); if (inp.value.length === PIN_LEN) onDone(inp.value); };
+  // the 6-digit PIN boxes, typed or tapped. On touch screens the keypad below is used, so the phone keyboard stays down.
+  function pinField(host, onDone, onChange) {
+    const touch = !!(window.matchMedia && matchMedia("(pointer:coarse)").matches);
+    const back = '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5h11a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H9l-6-7z"/><path d="M12.5 9.5l5 5M17.5 9.5l-5 5"/></svg>';
+    host.innerHTML = `<div class="lg-pin" role="group" aria-label="PIN">${Array.from({ length: PIN_LEN }, () => "<i></i>").join("")}</div><input class="lg-pinin" type="password" inputmode="${touch ? "none" : "numeric"}" autocomplete="one-time-code" maxlength="${PIN_LEN}" aria-label="${PIN_LEN}-digit PIN">
+      <div class="lg-keys" role="group" aria-label="Number pad">${[1, 2, 3, 4, 5, 6, 7, 8, 9].map(k => `<button type="button" data-k="${k}">${k}</button>`).join("")}<button type="button" class="lg-kx" data-k="clr">Clear</button><button type="button" data-k="0">0</button><button type="button" class="lg-kx" data-k="del" aria-label="Delete">${back}</button></div>`;
+    const inp = host.querySelector(".lg-pinin"), boxes = host.querySelectorAll(".lg-pin i"), row = host.querySelector(".lg-pin");
+    let last = "";
+    const paint = () => { boxes.forEach((b, i) => b.classList.toggle("on", i < inp.value.length)); row.classList.toggle("focus", document.activeElement === inp); };
+    inp.oninput = () => { inp.value = digits(inp.value).slice(0, PIN_LEN); paint(); if (inp.value === last) return; last = inp.value; if (onChange) onChange(inp.value); if (inp.value.length === PIN_LEN) onDone(inp.value); };
     inp.onfocus = inp.onblur = paint;
-    host.querySelector(".lg-pin").onclick = () => inp.focus();
-    host.querySelectorAll("[data-k]").forEach(b => b.onclick = () => { const k = b.dataset.k; inp.value = k === "del" ? inp.value.slice(0, -1) : (inp.value + k).slice(0, PIN_LEN); inp.dispatchEvent(new Event("input")); });
-    return { clear() { inp.value = ""; paint(); const p = host.querySelector(".lg-pin"); p.classList.add("shake"); setTimeout(() => p.classList.remove("shake"), 400); }, focus() { inp.focus(); } };
+    row.onclick = () => { if (!touch) inp.focus(); };
+    host.querySelectorAll("[data-k]").forEach(b => b.onclick = ev => { ev.preventDefault(); const k = b.dataset.k;
+      inp.value = k === "del" ? inp.value.slice(0, -1) : k === "clr" ? "" : (inp.value + k).slice(0, PIN_LEN); inp.dispatchEvent(new Event("input")); });
+    return { clear(shake) { inp.value = ""; last = ""; paint(); if (onChange) onChange(""); if (shake !== false) { row.classList.add("shake"); setTimeout(() => row.classList.remove("shake"), 400); } },
+      focus() { if (!touch) inp.focus(); }, value: () => inp.value };
   }
-  // employee: name, then PIN. ask(name, pin) -> error text or null
+  // employee: name and PIN, in either order. ask(name, pin) -> error text or null
   function employeeForm(card, opts) {
     card.innerHTML = `${opts.tabs || ""}<div class="lg-pane"><h2>${esc(opts.title || "Clock in")}</h2><p class="lg-sub">${opts.sub || "Type your name and your 6-digit PIN."}</p>
-      <label class="lg-f"><span>${ic(IC.user)} Your name</span><input id="lgName" autocomplete="off" autocapitalize="words" spellcheck="false" placeholder="First name"></label>
-      <div class="lg-f"><span>${ic(IC.lock)} ${esc(opts.pinLabel || "PIN")}</span><div id="lgPin"></div></div><p class="lg-err" role="alert"></p>${opts.foot || ""}</div>`;
-    const nm = card.querySelector("#lgName"), er = card.querySelector(".lg-err");
-    let busy = false;
-    const pin = pinField(card.querySelector("#lgPin"), async p => {
-      if (busy) return; er.textContent = "";
-      if (!nm.value.trim()) { er.textContent = "Type your name first."; pin.clear(); nm.focus(); return; }
-      busy = true; card.classList.add("busy");
+      <label class="lg-f"><span>${ic(IC.user)} Your name</span><input id="lgName" autocomplete="off" autocapitalize="words" spellcheck="false" enterkeyhint="go" placeholder="First name"></label>
+      <div class="lg-f"><span>${ic(IC.lock)} ${esc(opts.pinLabel || "PIN")}</span><div id="lgPin"></div></div><p class="lg-err" role="alert"></p>
+      <button class="lg-go" type="button" data-go disabled>${esc(opts.go || "Clock in")}</button>${opts.foot || ""}</div>`;
+    const nm = card.querySelector("#lgName"), er = card.querySelector(".lg-err"), go = card.querySelector("[data-go]");
+    let busy = false, p = "";
+    const ready = () => !!nm.value.trim() && p.length === PIN_LEN;
+    const say = (t, hint) => { er.textContent = t; er.classList.toggle("hint", !!hint); };
+    const upd = () => { go.disabled = !ready(); if (ready() && er.classList.contains("hint")) say(""); };
+    const submit = async () => {
+      if (busy) return;
+      if (!nm.value.trim()) { say("Now type your name.", 1); nm.focus(); return; }
+      if (p.length !== PIN_LEN) { say(`Enter your ${PIN_LEN}-digit PIN.`, 1); pin.focus(); return; }
+      busy = true; card.classList.add("busy"); say("");
       const msg = await opts.ask(nm.value.trim(), p).catch(() => "That didn't go through. Check your internet.");
       busy = false; card.classList.remove("busy");
-      if (msg) { er.textContent = msg; pin.clear(); if (/name/i.test(msg)) nm.focus(); else pin.focus(); }
-    });
-    nm.onkeydown = ev => { if (ev.key === "Enter") { ev.preventDefault(); pin.focus(); } };
+      if (msg) { say(msg); if (/name/i.test(msg)) { nm.focus(); nm.select(); } else { pin.clear(); pin.focus(); } go.disabled = !ready(); }
+    };
+    const pin = pinField(card.querySelector("#lgPin"), v => { p = v; upd(); if (nm.value.trim()) submit(); else { say("Now type your name.", 1); nm.focus(); } }, v => { p = v; upd(); });
+    nm.oninput = upd;
+    nm.onkeydown = ev => { if (ev.key === "Enter") { ev.preventDefault(); if (ready()) submit(); else pin.focus(); } };
+    go.onclick = submit;
     if (!(matchMedia && matchMedia("(pointer:coarse)").matches)) setTimeout(() => nm.focus(), 50);
     return card;
   }
+
+  /* ---------- get the app first: shop owners and employees put Revora on their device when they sign up ---------- */
+  // calls next() when they're done (or can't install). route = the page the installed app should open to.
+  function installStep(sh, route, next) {
+    const A = window.rvApp;
+    if (!A || A.standalone()) return next();
+    A.keep(route);
+    const dev = A.mobile() ? "phone" : "computer", where = A.mobile() ? "home screen" : (/Mac/i.test(navigator.userAgent) ? "Dock or Applications" : "desktop or Start menu");
+    const card = loginFrame(sh, "");
+    const done = () => { A.drop(); next(); };
+    const skip = `<button class="lg-link" data-skip>${A.bookmarkOnly() ? "Skip for now" : "Can't install it? Keep going in the browser"}</button>`;
+    const bindSkip = () => { const b = card.querySelector("[data-skip]"); if (b) b.onclick = done; };
+    const opened = (title, text) => { card.innerHTML = `<div class="lg-pane lg-inst"><div class="lg-instic ok">${ic('<path d="M5 12.5l4.5 4.5L19 7.5"/>')}</div><h2>${title}</h2><p class="lg-sub">${text}</p>
+      <div class="lg-links"><button class="lg-link" data-skip>Keep going in the browser instead</button></div></div>`; bindSkip(); };
+    const finish = () => A.isIOS() ? opened("Now open it from your home screen", `Close this tab and tap the Revora icon. It opens right to this step, so you never have to look Revora up again.`)
+      : opened("Revora is installed", `Open Revora from your ${where}. It picks up right here, and from now on that's where you sign in.`);
+    A.onInstalled(finish);
+    if (A.seen()) {
+      card.innerHTML = `<div class="lg-pane lg-inst"><div class="lg-instic">${ic('<rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M11 18.5h2"/>')}</div><h2>Open the Revora app</h2>
+        <p class="lg-sub">Revora is already on this ${dev}. Open it from your ${where} and it'll bring you right to this step.</p><div class="lg-links">${skip}</div></div>`;
+      return bindSkip();
+    }
+    const head = `<div class="lg-instic">${ic(A.mobile() ? '<rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M11 18.5h2"/>' : '<rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>')}</div>
+      <div class="eyebrow lg-step">Step 1 of 2</div><h2>${A.bookmarkOnly() ? "Save Revora first" : "Get the Revora app first"}</h2>
+      <p class="lg-sub">${A.bookmarkOnly() ? "Bookmark Revora so you can open it in one click instead of searching for it." : `Put Revora on this ${dev} so you open it from an icon instead of searching for it. It brings you straight back here to finish.`}</p>`;
+    if (A.canPrompt()) {
+      card.innerHTML = `<div class="lg-pane lg-inst">${head}<button class="lg-go" data-inst>Install Revora</button><div class="lg-links">${skip}</div></div>`;
+      card.querySelector("[data-inst]").onclick = async () => { const r = await A.prompt(); if (r === "accepted") finish(); else if (!A.canPrompt()) manual(); };
+      return bindSkip();
+    }
+    manual();
+    function manual() {
+      card.innerHTML = `<div class="lg-pane lg-inst">${head}<ol class="lg-steps">${A.steps().map(t => `<li><span>${t}</span></li>`).join("")}</ol>
+        <button class="lg-go" data-did>${A.bookmarkOnly() ? "Done, it's bookmarked" : A.isIOS() ? "I added it" : "Done, it's installed"}</button><div class="lg-links">${skip}</div></div>`;
+      card.querySelector("[data-did]").onclick = () => A.bookmarkOnly() ? done() : finish();
+      bindSkip();
+    }
+  }
+  function installFirst(ctx, sh, route, next) { X = ctx; installStep(sh, route, next); }
 
   /* ---------- the owner's computer ---------- */
   async function gate(ctx, shop, next) {
@@ -155,11 +207,13 @@
   }
   // the link from the owner: the starting PIN signs this phone in
   async function inviteLink(ctx, inv) {
-    X = ctx; try { history.replaceState(null, "", location.pathname); } catch (e) {}
+    X = ctx;
     const { data: info } = await ctx.sb.rpc("emp_invite_info", { inv });
+    if (info && !ctx.session && window.rvApp && !rvApp.standalone() && !sessionStorage.getItem("rv.instDone")) return installStep({ name: info.shop }, location.pathname + "?emp=" + encodeURIComponent(inv), () => { try { sessionStorage.setItem("rv.instDone", "1"); } catch (e) {} inviteLink(ctx, inv); });
+    try { history.replaceState(null, "", location.pathname); } catch (e) {}
     if (!info) { loginFrame(null, `<div class="lg-pane"><h2>This link doesn't work</h2><p class="lg-sub">It may have been replaced with a new one. Ask the shop admin to send it again.</p></div>`); return; }
     const card = loginFrame({ name: info.shop }, "");
-    employeeForm(card, { title: info.setup ? "Welcome" : "Sign this phone in", sub: info.setup ? "Type your name and the 6-digit starting PIN from the admin. Then you'll pick your own." : "Type your name and your PIN.", pinLabel: info.setup ? "Starting PIN" : "PIN",
+    employeeForm(card, { go: info.setup ? "Continue" : "Sign in", title: info.setup ? (window.rvApp && rvApp.standalone() ? "Step 2 of 2: sign in" : "Welcome") : "Sign this phone in", sub: info.setup ? "Type your name and the 6-digit starting PIN from the admin. Then you'll pick your own." : "Type your name and your PIN.", pinLabel: info.setup ? "Starting PIN" : "PIN",
       ask: async (nm, p) => {
         const { data: r, error } = await ctx.sb.rpc("emp_claim", { inv, p }); if (error) throw error; if (r.error) return PINMSG[r.error] || "That didn't work.";
         if (!ctx.session) ls.set("rv.empdev", r.device);
@@ -211,7 +265,7 @@
     shell(`<section class="sx-hero"><div class="sx-hero-t"><h1>Hi, ${esc(String(E.emp.name).split(" ")[0])}.</h1><p>Find a client to log work, or check a new one in.</p></div>
         <div class="sx-find"><div class="sx-qwrap">${ic(IC.search)}<input id="eQ" type="search" placeholder="Find a client by name, phone or bike" autocomplete="off" aria-label="Find a client"><div class="sx-hits" id="eHits" hidden></div></div>
           <button class="btn tan big" data-new>${ic(IC.plus)} New client</button></div></section>
-      <div class="sx-grid2"><section class="sx-panel"><div class="sx-ph"><h2>Assigned to you</h2><span>${assigned.length}</span></div>${assigned.length ? `<div class="sx-rows">${assigned.map(card).join("")}</div>` : `<div class="sx-empty sm"><span>Nothing assigned right now. The owner can assign clients to you.</span></div>`}</section>
+      <div class="sx-grid2"><section class="sx-panel"><div class="sx-ph"><h2>Assigned to you</h2><span>${assigned.length}</span></div>${assigned.length ? `<div class="sx-rows">${assigned.map(card).join("")}</div>` : `<div class="sx-empty sm"><span>Nothing assigned right now. The admin can assign clients to you.</span></div>`}</section>
         <section class="sx-panel"><div class="sx-ph"><h2>Bikes you've worked on</h2><span>${worked.length}</span></div>${worked.length ? `<div class="sx-rows">${worked.map(card).join("")}</div>` : `<div class="sx-empty sm"><span>Bikes you log work on show up here.</span></div>`}</section></div>
       <section class="sx-panel"><div class="sx-ph"><h2>Your recent work</h2></div>${E.home.recent.length ? `<div class="sx-rows">${E.home.recent.map(r => `<button class="sx-row" data-client="${esc(r.client_id)}"><span class="sx-date">${esc(D().fmtDate(r.date))}</span><span class="grow"><b>${esc(r.service || "Service")}</b><small>${esc(r.client)} · ${esc(r.bike)}</small></span></button>`).join("")}</div>` : `<div class="sx-empty sm"><span>Nothing logged yet.</span></div>`}</section>`);
     X.app.querySelectorAll("[data-client]").forEach(b => b.onclick = () => client(b.dataset.client));
@@ -343,7 +397,7 @@
     box.querySelector("[data-setpw]").onclick = () => googleForPassword(ctx);
   }
 
-  window.rvShopLock = { gate, phoneStart, inviteLink, empApp, ownerOpen, ownerTouch, lockAll, watchIdle, needPassword, setPasswordPage, isAdmin, adminBypass, customerMode,
+  window.rvShopLock = { gate, phoneStart, installFirst, inviteLink, empApp, ownerOpen, ownerTouch, lockAll, watchIdle, needPassword, setPasswordPage, isAdmin, adminBypass, customerMode,
     setCustomerMode(on) { ls.set("rv.customerMode", on ? "1" : null); ls.set("rv.ownerOk", null); ls.set("rv.empSess", null); },
     markOwnerOpen() { ls.set("rv.ownerOk", "1"); watchIdle(); },
     hasDevice: () => !!ls.get("rv.empdev") && !sessionStorage.getItem("rv.ownRevora"), empActive };
