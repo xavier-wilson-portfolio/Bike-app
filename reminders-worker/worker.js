@@ -131,10 +131,10 @@ async function shopInvite(req, env) {
       `<p style="font:15px/1.5 Arial,sans-serif;margin:16px 0">Hi ${esc(first)}, ${esc(r.shop)} added you to their shop on Revora.</p>
        <p style="font:15px/1.5 Arial,sans-serif;margin:0 0 6px">Your starting PIN:</p><div style="font:700 30px 'Courier New',monospace;letter-spacing:8px;color:#17232C;margin:0 0 16px">${esc(r.pin)}</div>
        <p style="margin:6px 0"><a href="${link}" style="background:#D9BF8E;color:#17232C;padding:12px 20px;border-radius:999px;text-decoration:none;font:700 15px Arial,sans-serif">Open my login</a></p>
-       <p style="font:13px/1.5 Arial,sans-serif;color:#5B6770;margin:14px 0 0">Enter the PIN, confirm your name and email, then pick your own PIN. On the shop's computer you can just tap your name instead.</p>`,
+       <p style="font:13px/1.5 Arial,sans-serif;color:#5B6770;margin:14px 0 0">Type your name and this PIN, then pick your own 6-digit PIN. On the shop's computer, use the same name and PIN on the shop login.</p>`,
       `Sent for ${esc(r.shop)} by Revora. If you weren't expecting this, you can ignore it.`);
     const res = await fetch("https://api.resend.com/emails", { method: "POST", headers: { Authorization: "Bearer " + env.RESEND_API_KEY, "content-type": "application/json" },
-      body: JSON.stringify({ from: fromShop(r.shop), to: [r.email], reply_to: REPLY_TO, subject: `Your ${String(r.shop || "shop").slice(0, 60)} login on Revora`, html, text: `Hi ${first}, ${r.shop} added you on Revora.\n\nStarting PIN: ${r.pin}\nOpen: ${link}\n\nEnter the PIN, then pick your own.` }) });
+      body: JSON.stringify({ from: fromShop(r.shop), to: [r.email], reply_to: REPLY_TO, subject: `Your ${String(r.shop || "shop").slice(0, 60)} login on Revora`, html, text: `Hi ${first}, ${r.shop} added you on Revora.\n\nStarting PIN: ${r.pin}\nOpen: ${link}\n\nType your name and this PIN, then pick your own 6-digit PIN.` }) });
     if (res.ok) sent++; else console.log("invite failed", res.status, (await res.text()).slice(0, 200));
   }
   return new Response(JSON.stringify({ sent }), { status: 200, headers: Object.assign({ "content-type": "application/json" }, h) });
