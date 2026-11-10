@@ -40,7 +40,7 @@
     idleT = setInterval(() => { if (!idleOk()) { clearInterval(idleT); lockAll(); } }, 60e3);
   }
   const PINMSG = { wrong: "That PIN isn't right.", locked: "Too many wrong tries. Wait 10 minutes and try again.", denied: "Employee logins aren't available on this computer.", device: "This phone was signed out. Open the link from your shop again.",
-    link: "This link doesn't work any more. Ask the owner for a new one.", name: "No one by that name works here. Check the spelling.", twins: "Two people have that first name. Type your full name." };
+    link: "This link doesn't work any more. Ask the admin for a new one.", name: "No one by that name works here. Check the spelling.", twins: "Two people have that first name. Type your full name." };
 
   /* ---------- the login screen ---------- */
   function shopSide(sh) {
@@ -99,14 +99,14 @@
     X = ctx; document.title = (shop.name || "Shop") + " · Revora";
     if (empActive()) return empApp(ctx);
     const email = ctx.session.user.email, me = (ctx.profile && ctx.profile.display_name) || email;
-    const tabs = which => `<div class="lg-tabs" role="tablist"><button role="tab" data-tab="emp" aria-selected="${which === "emp"}">${ic(IC.user)} Employee</button><button role="tab" data-tab="own" aria-selected="${which === "own"}">${ic(IC.key)} Owner</button></div>`;
+    const tabs = which => `<div class="lg-tabs" role="tablist"><button role="tab" data-tab="emp" aria-selected="${which === "emp"}">${ic(IC.user)} Employee</button><button role="tab" data-tab="own" aria-selected="${which === "own"}">${ic(IC.key)} Admin</button></div>`;
     const card = loginFrame(shop, "");
     const bindTabs = () => card.querySelectorAll("[data-tab]").forEach(b => b.onclick = () => b.dataset.tab === "own" ? owner() : emp());
     const emp = () => { employeeForm(card, { tabs: tabs("emp"), title: "Clock in", ask: async (nm, p) => {
       const { data: r, error } = await ctx.sb.rpc("shop_emp_login", { nm, p }); if (error) throw error; if (r.error) return PINMSG[r.error] || "That didn't work.";
       ls.set("rv.empSess", r.session); watchIdle(); empApp(ctx); return null; } }); bindTabs(); };
     const owner = () => {
-      card.innerHTML = `${tabs("own")}<div class="lg-pane"><h2>Owner</h2><p class="lg-sub">Opens the whole shop: clients, money, team and settings.</p>
+      card.innerHTML = `${tabs("own")}<div class="lg-pane"><h2>Admin</h2><p class="lg-sub">Opens the whole shop: clients, money, team and settings.</p>
         <div class="lg-who"><span class="lg-av">${esc(initials(me))}</span><div><b>${esc(me)}</b><small>${esc(email)}</small></div></div>
         <form id="lgOwn" class="lg-form"><label class="lg-f"><span>${ic(IC.lock)} Password</span><input name="pw" type="password" autocomplete="current-password"></label><p class="lg-err" role="alert"></p>
           <button class="lg-go" type="submit">Unlock the shop</button></form>
@@ -145,21 +145,21 @@
     X = ctx; const dev = ls.get("rv.empdev");
     if (empActive()) return empApp(ctx);
     const { data: d } = await ctx.sb.rpc("emp_device", { dev });
-    if (!d) { ls.set("rv.empdev", null); loginFrame(null, `<div class="lg-pane"><h2>Signed out</h2><p class="lg-sub">This phone isn't signed in to a shop any more. Ask the owner for a new link.</p><a class="lg-go" href="${esc(location.pathname)}">Open Revora</a></div>`); return; }
+    if (!d) { ls.set("rv.empdev", null); loginFrame(null, `<div class="lg-pane"><h2>Signed out</h2><p class="lg-sub">This phone isn't signed in to a shop any more. Ask the admin for a new link.</p><a class="lg-go" href="${esc(location.pathname)}">Open Revora</a></div>`); return; }
     const card = loginFrame({ name: d.shop, address: d.address, details: d.details }, "");
     employeeForm(card, { title: "Clock in", foot: `<div class="lg-links"><button class="lg-link" data-own>Use my own Revora</button><button class="lg-link" data-forget>Sign this phone out of ${esc(d.shop)}</button></div>`, ask: async (nm, p) => {
       const { data: r, error } = await ctx.sb.rpc("emp_unlock_named", { dev, nm, p }); if (error) throw error; if (r.error) return PINMSG[r.error] || "That didn't work.";
       ls.set("rv.empSess", r.session); watchIdle(); empApp(ctx); return null; } });
-    card.querySelector("[data-forget]").onclick = async () => { if (!confirm("Sign this phone out of " + d.shop + "? You'll need a new link from the owner.")) return; await ctx.sb.rpc("emp_forget_device", { dev }); ls.set("rv.empdev", null); location.href = location.pathname; };
+    card.querySelector("[data-forget]").onclick = async () => { if (!confirm("Sign this phone out of " + d.shop + "? You'll need a new link from the admin.")) return; await ctx.sb.rpc("emp_forget_device", { dev }); ls.set("rv.empdev", null); location.href = location.pathname; };
     card.querySelector("[data-own]").onclick = () => { sessionStorage.setItem("rv.ownRevora", "1"); location.href = location.pathname + "?garage=1"; };
   }
   // the link from the owner: the starting PIN signs this phone in
   async function inviteLink(ctx, inv) {
     X = ctx; try { history.replaceState(null, "", location.pathname); } catch (e) {}
     const { data: info } = await ctx.sb.rpc("emp_invite_info", { inv });
-    if (!info) { loginFrame(null, `<div class="lg-pane"><h2>This link doesn't work</h2><p class="lg-sub">It may have been replaced with a new one. Ask the shop owner to send it again.</p></div>`); return; }
+    if (!info) { loginFrame(null, `<div class="lg-pane"><h2>This link doesn't work</h2><p class="lg-sub">It may have been replaced with a new one. Ask the shop admin to send it again.</p></div>`); return; }
     const card = loginFrame({ name: info.shop }, "");
-    employeeForm(card, { title: info.setup ? "Welcome" : "Sign this phone in", sub: info.setup ? "Type your name and the 6-digit starting PIN from the owner. Then you'll pick your own." : "Type your name and your PIN.", pinLabel: info.setup ? "Starting PIN" : "PIN",
+    employeeForm(card, { title: info.setup ? "Welcome" : "Sign this phone in", sub: info.setup ? "Type your name and the 6-digit starting PIN from the admin. Then you'll pick your own." : "Type your name and your PIN.", pinLabel: info.setup ? "Starting PIN" : "PIN",
       ask: async (nm, p) => {
         const { data: r, error } = await ctx.sb.rpc("emp_claim", { inv, p }); if (error) throw error; if (r.error) return PINMSG[r.error] || "That didn't work.";
         if (!ctx.session) ls.set("rv.empdev", r.device);
@@ -178,7 +178,7 @@
     if (!c) return lockAll();
     E.emp = c.employee; E.shop = c.shop;
     if (c.setup) return setupPage();
-    if (!c.plan_ok) { frame(`<section class="lk-who"><h1>The shop's plan isn't active</h1><p>Ask the owner to renew Revora Shop. Nothing is lost.</p><button class="btn" data-lock>Lock</button></section>`, E.shop.name).querySelector("[data-lock]").onclick = () => lockAll(); return; }
+    if (!c.plan_ok) { frame(`<section class="lk-who"><h1>The shop's plan isn't active</h1><p>Ask the admin to renew Revora Shop. Nothing is lost.</p><button class="btn" data-lock>Lock</button></section>`, E.shop.name).querySelector("[data-lock]").onclick = () => lockAll(); return; }
     home();
   }
   function setupPage() {
@@ -330,7 +330,7 @@
     if (adminBypass(ctx)) return fn();
     const email = ctx.session.user.email;
     const box = document.createElement("div"); box.className = "pk-modal sx-modal";
-    box.innerHTML = `<div class="pk-card sx-card" role="dialog" aria-modal="true"><div class="sx-mh"><h2>Owner password</h2><button class="sx-x" data-close aria-label="Close">×</button></div>
+    box.innerHTML = `<div class="pk-card sx-card" role="dialog" aria-modal="true"><div class="sx-mh"><h2>Admin password</h2><button class="sx-x" data-close aria-label="Close">×</button></div>
       <p class="sx-p">${esc(what)} needs the password for ${esc(email)}.</p><form class="sx-form" id="pwF"><label class="sx-f"><b>Password</b><input name="pw" type="password" autocomplete="current-password"></label><p class="sx-err" hidden></p>
       <div class="sx-acts"><button type="button" class="linkbtn" data-setpw>Signed up with Google? Set a password</button><span class="grow"></span><button type="button" class="btn" data-close>Cancel</button><button class="btn pri" type="submit">Continue</button></div></form></div>`;
     box.addEventListener("click", ev => { if (ev.target.closest("[data-close]")) box.remove(); });
