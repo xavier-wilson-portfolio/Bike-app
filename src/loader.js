@@ -229,18 +229,19 @@
     };
   }
 
-  const GOALS = { restore: ["I'm restoring it", "A step-by-step restoration course, parts list and safety checks, tailored to your kind of bike. Works for any bike."], maintain: ["I'm keeping it running", "Log services, see what's due, and keep parts, jobs and receipts in one place. Works for any bike."] };
+  const GOALS = { restore: ["I'm restoring it", "A step-by-step restoration course, parts list and safety checks, tailored to your kind of bike. Works for any bike."], maintain: ["I'm keeping it running", "Log services, see what's due, and keep parts, jobs and receipts in one place. Works for any bike."], shop: ["My bike is with a shop", "Type the code your shop gave you to see your bike's service history and what's due. Free."] };
   function showPicker(mode, goalIn) { // mode "try" (no account) or "new" (start a project)
     let goal = goalIn || (qs.get("goal") in GOALS ? qs.get("goal") : "");
     document.title = mode === "new" ? "New project · Revora" : "Find your bike · Revora";
     const makes = [...new Set(INDEX.filter(b => !b.generic && !b.universal).map(b => b.make))].sort();
-    const head = !goal ? `<div class="eyebrow">${mode === "new" ? "New project" : "Add your bike"}</div><h1 class="disp">What are you doing with your bike?</h1><p class="muted">This sets up your bike's page. You can start restoring later from the menu.</p>`
+    const head = goal === "shop" ? `<div class="eyebrow">My bike is with a shop</div><h1 class="disp">See your bike's service history</h1><p class="muted">Your shop logs every service in Revora. Type the code they gave you to follow your bike, free.</p>`
+      : !goal ? `<div class="eyebrow">${mode === "new" ? "New project" : "Add your bike"}</div><h1 class="disp">What are you doing with your bike?</h1><p class="muted">This sets up your bike's page. You can start restoring later from the menu.</p>`
       : goal === "maintain" ? `<div class="eyebrow">Maintenance and records</div><h1 class="disp">Which bike is it?</h1><p class="muted">Search for it, or add it with the year, make and model. Any bike works.</p>`
       : `${sb && !hasPlanL("restorer") ? `<div class="pk-uprest"><b>Restoration courses are in Restorer.</b><span>${session && !myPlan().trialUsed ? "Try it free for 30 days. Cancel any time before day 31." : !session ? "Create a free account to start the 30-day free trial." : "Upgrade to start a restoration."}</span><button class="btn tan sm" data-plans>See plans</button></div>` : ""}<div class="eyebrow">${mode === "new" ? "New project" : "Motorcycle restoration"}</div><h1 class="disp">Which bike are you restoring?</h1><p class="muted">Any bike works. Search for it, or add it with the year, make and model, and you get a step-by-step restoration course built for its kind of bike.</p>`;
     if (mode === "try") track("pick_view", goal, true);
     frame(`${head}
       <div class="pk-goal" role="radiogroup" aria-label="What are you doing with your bike?">${Object.entries(GOALS).map(([k, [t, d]]) => `<button type="button" class="pk-goal-o${goal === k ? " on" : ""}" role="radio" aria-checked="${goal === k}" data-goal="${k}"><span class="pk-goal-dot" aria-hidden="true"></span><b>${t}</b><span class="muted">${d}</span></button>`).join("")}</div>
-      ${goal ? `<div class="pick-search"><input type="search" id="pickQ" placeholder="Year, make, model, e.g. ${goal === "maintain" ? "2012 Suzuki V-Strom 650" : "1977 Suzuki GS750"}" autocomplete="off" aria-label="Search for your bike"></div>
+      ${goal === "shop" && window.rvClient ? rvClient.pickerHtml() : goal ? `<div class="pick-search"><input type="search" id="pickQ" placeholder="Year, make, model, e.g. ${goal === "maintain" ? "2012 Suzuki V-Strom 650" : "1977 Suzuki GS750"}" autocomplete="off" aria-label="Search for your bike"></div>
       <div class="pick-makes">${makes.map(m => `<button class="chip" data-make="${esc(m)}">${esc(m)}</button>`).join("")}</div>
       <div class="pick-list" id="pickList"></div>
       <div class="pk-reqwrap" id="pickReq"></div>` : ""}
@@ -250,6 +251,7 @@
     if (lg) app.querySelector(".pick-in").insertAdjacentHTML("afterbegin", lgPack ? `<div class="pk-ready"><b>The ${esc(bikeName(lgPack))} page is ready.</b><span>Move your ${esc(lg.bike)} records onto it to get its course, parts list and service schedule.</span><button class="btn tan" data-connect-local>Connect my project</button></div>` : `<div class="pk-ready plain"><b>Your ${esc(lg.bike)} ${lg.goal === "maintain" ? "maintenance log" : "project"}</b><span>${lg.goal === "maintain" ? "Saved in this browser." : "Saved in this browser while we build the bike's page."}</span><button class="btn" data-open-local>Open it</button></div>`);
     app.querySelector("[data-connect-local]")?.addEventListener("click", () => connectLocal(lgPack));
     app.querySelector("[data-open-local]")?.addEventListener("click", () => { ls.set("rv.bike", "custom-bike"); goUrl({ bike: "custom-bike" }); });
+    if (goal === "shop" && window.rvClient) { rvClient.bindPicker(ctx()); return; }
     if (!goal) return;
     const keep = goal === "maintain";
     const q = document.getElementById("pickQ"), list = document.getElementById("pickList");
@@ -301,6 +303,7 @@
       </form>
       <div class="pk-links">${kind === "signin" ? `<button class="linkbtn" data-nav="forgot">Forgot your password?</button><span>No account? <button class="linkbtn" data-nav="signup">Create one</button></span>` : kind === "signup" ? `<span>Already have an account? <button class="linkbtn" data-nav="signin">Sign in</button></span>${guestLinks()}` : `<button class="linkbtn" data-nav="signin">Back to sign in</button>`}</div>`);
     const f = document.getElementById("authF"), err = document.getElementById("authErr");
+    if ((kind === "signup" || kind === "signin") && window.rvClient) rvClient.authBanner(ctx());
     const gb = app.querySelector("[data-google]"), cl = app.querySelector("[data-copylink]");
     if (kind === "signup" || kind === "signin") track(kind + "_view", IN_APP ? IN_APP_NAME : "", true);
     if (cl) cl.onclick = async () => { const u = location.origin + location.pathname + "?auth=" + kind; try { await navigator.clipboard.writeText(u); cl.textContent = "Copied. Paste it in your browser"; } catch (e) { prompt("Copy this link and open it in your browser:", u); } };
@@ -428,10 +431,34 @@
   const benchArt = (b, style, sil) => { const f = silFile(sil) || b && !b.generic && silFile(b.silhouette) || silFile("bike-" + (style || (b && b.style) || "standard")) || silFile("bike-standard"); return f ? `<img class="bench-art" src="img/sil/${f}" alt="">` : ""; };
   function greeting() { const h = new Date().getHours(); return h < 5 ? "Late night in the garage" : h < 12 ? "Good morning" : h < 18 ? "Good afternoon" : "Good evening"; }
 
+  // Revora Shop: a band on the garage for shop owners and their staff
+  function shopBand(shop, bikes) {
+    if (shop) return `<section class="shop-band"><div class="shop-band-i" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l2-6h14l2 6"/><path d="M4 10v10h16V10"/><path d="M3 10h18M9 20v-6h6v6"/></svg></div>
+      <div><span class="shop-band-k">${shop.role === "owner" ? "Your shop" : "You work at"}</span><b>${esc(shop.name || "Your shop")}</b><span>${bikes ? `${bikes} client bike${bikes === 1 ? "" : "s"}. ` : ""}Clients, services, what's due, reminders and requests.</span></div>
+      <button class="btn tan" data-crm>Open the shop</button></section>`;
+    if (hasPlanL("shop") && window.rvCRM) return `<section class="shop-band plain"><div><span class="shop-band-k">Revora Shop</span><b>Set up your client book</b><span>Every client and their bikes, services logged at the counter, reminder emails with your shop's name, and reports your clients can ask for.</span></div><button class="btn tan" data-crm>Set up my shop</button></section>`;
+    return "";
+  }
+  function clientBand(H) {
+    if (!H || !H.length || !window.rvDue) return "";
+    const bikes = []; H.forEach(h => h.bikes.forEach(b => bikes.push({ h, b, c: rvDue.compute(b) })));
+    if (!bikes.length) return "";
+    const { h, b, c } = bikes[0], nx = c.ranked.find(i => i.status === "over" || i.status === "soon" || i.status === "ok");
+    return `<section class="shop-band client"><div><span class="shop-band-k">At ${esc(h.shop.name || "your shop")}</span><b>${esc((b.meta && b.meta.bike) || b.name)}${bikes.length > 1 ? ` and ${bikes.length - 1} more` : ""}</b><span>${nx ? `Next up: ${esc(nx.name)}, ${esc(rvDue.whenTxt(nx))}.` : "See its service history and what's due."}</span></div><button class="btn" data-mine>See my bike</button></section>`;
+  }
+  // what the shop and client pages need from here
+  function ctx() {
+    return { sb, session, profile, app, frame, note, url, goUrl, silFile, spin, showAuth, showPlans,
+      plansOk: () => hasPlanL("shop"), guessStyle: (mk, md) => guessStyle(mk, md), guessDrive: (mk, md, st) => guessDrive(mk, md, st) };
+  }
   async function showProjects() {
     document.title = "Your garage · Revora"; spin();
-    const { data, error } = await sb.from("my_projects").select("*").order("created_at", { ascending: false });
+    const { data: allP, error } = await sb.from("my_projects").select("*").order("created_at", { ascending: false });
     if (error) return fail(friendly(error));
+    // shop bikes live in Revora Shop, not the personal garage
+    const data = allP.filter(p => !p.shop_id);
+    const [myShop, cHomes] = await Promise.all([window.rvCRM ? rvCRM.mine(sb) : null, window.rvClient ? rvClient.homes(sb) : []]);
+    if (!data.length && cHomes.length && !myShop && ls.get("rv.clientHome") !== "own") return rvClient.home(ctx(), cHomes);
     const prog = await projectProgress(data.map(p => p.id));
     // projects on the general bike: which request they're waiting on, and whether that bike's page is ready
     const gen = data.filter(p => bikeOf(p.bike_id)?.generic || bikeOf(p.bike_id)?.universal), genKey = {}, genStyle = {}, genSil = {}, genLabel = {};
@@ -469,6 +496,7 @@
             <div class="bench-go"><button class="btn tan big" data-nav="new">Add your bike</button></div></div>${benchArt()}</div>`}
       </section>
       ${dealBand()}
+      ${shopBand(myShop, allP.length - data.length)}${clientBand(cHomes)}
       ${window.rvAdmin && window.rvPlanOf && myPlan().admin ? `<div id="admHQ"></div>` : ""}
       <div id="woBoard"></div>
       ${data.length ? `<section class="garage"><div class="garage-h"><h2>Your garage</h2><button class="btn sm" data-nav="new">+ New project</button></div>
@@ -483,6 +511,8 @@
       <section class="gsocial"><div><b>Follow Revora</b><span>Builds, tips and what's new in the app. Tag us in your project.</span></div>${socialsHtml("light")}</section>
       <p class="g-legal"><a href="?privacy">Privacy Policy</a> · <a href="?terms">Terms of Service</a> · <button class="linkbtn g-del" data-delacct>Delete my account</button></p>`, { wide: true, garage: true });
     const adm = document.getElementById("admHQ"); if (adm) window.rvAdmin.mount(adm, sb, note);
+    app.querySelectorAll("[data-crm]").forEach(b => b.onclick = () => goUrl({ crm: 1 }));
+    app.querySelectorAll("[data-mine]").forEach(b => b.onclick = () => { ls.set("rv.clientHome", ""); goUrl({ mine: 1 }); });
     maybeAskPhone();
     app.querySelectorAll("[data-delacct]").forEach(b => b.onclick = () => deleteAccountBox(data));
     app.querySelectorAll("[data-texts]").forEach(b => b.onclick = async () => { if (CONTACT === undefined) await loadContact(); phoneBox(false); });
@@ -908,7 +938,7 @@
     if (!p) return frame(`<h1 class="disp">Project not found</h1><p class="muted">It may have been deleted, or it hasn't been shared with this account.</p><button class="btn pri" data-nav="projects">My projects</button>`);
     if (!bikeOf(p.bike_id)) return fail("This project's bike isn't in the library any more.");
     ls.set("rv.project", pid);
-    await openApp(p.bike_id, { sb, db: rvCloudDb(sb, pid), user: session.user, profile: profile || {}, role: p.role, projectId: pid, projectName: p.name, plan: profile?.plan || "free" });
+    await openApp(p.bike_id, { sb, db: rvCloudDb(sb, pid), user: session.user, profile: profile || {}, role: p.role, projectId: pid, projectName: p.name, plan: profile?.plan || "free", shopId: p.shop_id || null, shopClient: p.shop_client || null });
   }
 
   /* ---------- after signing up: move bikes started on this browser into the account ---------- */
@@ -1027,13 +1057,24 @@
     if (qs.get("build")) return showBuild(qs.get("build"));
     if (qs.has("builds")) return showGallery();
     if (qs.get("wo")) return showWo(qs.get("wo"));
+    if (qs.get("shopdoc") && window.rvClient) { if (!sb) return fail("Documents can't be opened on this copy of Revora."); return rvClient.docPage(ctx(), qs.get("shopdoc")); }
+    if (qs.get("unsub") && window.rvClient) return rvClient.unsubPage(ctx(), qs.get("unsub"));
+    if (qs.get("join") && window.rvClient && sb) return rvClient.joinLink(ctx(), qs.get("join"));
+    if (session && window.rvClient && await rvClient.afterSignIn(ctx())) return;
+    if (qs.has("crm") && window.rvCRM) { if (!sb) return fail("Accounts aren't set up on this site yet."); if (!session) return showAuth("signin"); return rvCRM.show(ctx()); }
+    if (qs.has("mine") && window.rvClient && session) return rvClient.home(ctx());
     if (qs.has("paid") && session) return afterPaid();
     if (qs.has("plans")) return showPlans();
     const auth = qs.get("auth"); if (sb && !session && ["signin", "signup"].includes(auth)) return showAuth(auth);
     const pid = qs.get("project"), bid = qs.get("bike");
     if (pid) { if (!sb) return fail("Accounts aren't set up on this site yet."); if (!session) return showAuth("signin"); return openProject(pid); }
     if (bid && bikeOf(bid)) { ls.set("rv.bike", bid); return openApp(bid, null); }
-    if (session && profile && profile.plan_chosen === false && !myPlan().admin) return showChoosePlan();
+    if (session && profile && profile.plan_chosen === false && !myPlan().admin) {
+      // someone who joined from their shop's link doesn't need to pick a plan to see their bike
+      const H = window.rvClient ? await rvClient.homes(sb) : [];
+      if (H.length) return rvClient.home(ctx(), H);
+      return showChoosePlan();
+    }
     if (session) return showProjects();
     // signed out: the plain link lands on the page that explains Revora, with sign-up one click away
     if (sb && !qs.has("pick")) return showLanding();
