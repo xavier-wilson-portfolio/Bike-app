@@ -7,6 +7,8 @@
    Visiting /run sends anything due right now (it's the same job the schedule runs, so nothing is sent twice).
    It also sends the new sign-up emails (thanks, then the 48-hour welcome deal and two reminders to people still on Free) once
    welcome_settings.enabled is on in Supabase. /welcome-test sends one of each to the admin, /welcome-preview counts who'd get one.
+   Revora Shop: at 13:00 UTC it also sends shop clients the reminders they agreed to (from "<Shop> via Revora", replies go to the shop),
+   and every hour any report, value or budget a shop approved for a client. POST /shop-doc { id } sends one right away; /shop-run runs both now.
    POST /notify { rows: [feedback] } emails feedback sent from the app to info@revoragarage.com, with Reply-To set to the sender. */
 const SUPABASE_URL = "https://fhuksccqsyaomnouxxtb.supabase.co", SUPABASE_KEY = "sb_publishable_0wYtVeKcFJUzy3AfIaFhiw_NrT1wNkz";
 const FROM = "Revora <info@revoragarage.com>", REPLY_TO = "info@revoragarage.com", INBOX = "info@revoragarage.com", APP = "https://revoragarage.com";
@@ -59,6 +61,71 @@ async function run(env) {
   return out;
 }
 
+
+/* ---- Revora Shop: reminders a shop's clients agreed to, and reports the shop sends them ---- */
+const okMail = e => /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(String(e || ""));
+const fromShop = name => { const nm = String(name || "").replace(/["<>\r\n,;]/g, "").trim().slice(0, 60); return (nm ? nm + " via Revora" : "Revora") + " <info@revoragarage.com>"; };
+const shopFrame = (title, inner, foot) => `<!doctype html><html><body style="margin:0;background:#EEF2F5"><div style="max-width:560px;margin:0 auto;padding:24px 16px;font-family:Arial,sans-serif;color:#17232C">
+  <div style="background:#17232C;color:#fff;padding:18px 20px;border-radius:12px 12px 0 0"><div style="font:700 12px Arial,sans-serif;letter-spacing:2px;color:#D9BF8E">${title.k}</div><div style="font:700 22px Arial,sans-serif;margin-top:6px">${title.t}</div></div>
+  <div style="background:#fff;padding:6px 20px 20px;border-radius:0 0 12px 12px">${inner}</div>
+  <p style="font:12px/1.5 Arial,sans-serif;color:#5B6770;margin:16px 4px">${foot}</p></div></body></html>`;
+function shopRemHtml(first, rs) {
+  const r0 = rs[0], byBike = {}; rs.forEach(r => (byBike[r.bike || "Your bike"] = byBike[r.bike || "Your bike"] || []).push(r));
+  const blocks = Object.entries(byBike).map(([bike, L]) => `<h2 style="font:700 17px Arial,sans-serif;color:#17232C;margin:22px 0 8px">${esc(bike)}</h2>` +
+    L.map(r => `<div style="border-left:4px solid #D9BF8E;background:#E6F1F8;padding:10px 14px;margin:0 0 8px;border-radius:6px"><div style="font:700 15px Arial,sans-serif;color:#17232C">${esc(String(r.title).replace(/^[^:]+:\s*/, ""))}</div><div style="font:14px/1.45 Arial,sans-serif;color:#3D4850;margin-top:3px">${esc(r.body)}</div></div>`).join("")).join("");
+  const call = [r0.shop_phone ? `call <b>${esc(r0.shop_phone)}</b>` : "", okMail(r0.shop_email) ? "reply to this email" : ""].filter(Boolean).join(" or ");
+  return shopFrame({ k: esc(String(r0.shop || "YOUR SHOP").toUpperCase()), t: rs.length === 1 ? "Your bike is coming due" : "Coming up on your bike" + (Object.keys(byBike).length > 1 ? "s" : "") },
+    `<p style="font:15px/1.5 Arial,sans-serif;margin:16px 0 0">Hi ${esc(first)}, here's what's coming up.</p>${blocks}<p style="font:15px/1.5 Arial,sans-serif;margin:18px 0 0">To book it in${call ? ", " + call : ", get in touch with " + esc(r0.shop)}.</p>`,
+    `${esc(r0.shop)} sends these reminders with Revora. <a href="${APP}/?unsub=${encodeURIComponent(r0.unsub)}" style="color:#2C5F7C">Stop these emails</a>.`);
+}
+async function runShop(env) {
+  if (!env.RESEND_API_KEY || !env.WORKER_SECRET) return { error: "not configured" };
+  let rows; try { rows = await rpc("shop_reminders_due", { sec: env.WORKER_SECRET }); } catch (e) { return { error: "shop tables missing" }; }
+  const groups = {}; (rows || []).forEach(r => { const k = r.email.toLowerCase() + "|" + r.shop; (groups[k] = groups[k] || []).push(r); });
+  const out = { due: (rows || []).length, sent: 0, failed: 0 };
+  for (const rs of Object.values(groups)) {
+    const r0 = rs[0], first = String(r0.client || "").split(/\s+/)[0] || "there";
+    const subject = rs.length === 1 ? `${r0.bike ? r0.bike + ": " : ""}${String(r0.title).replace(/^[^:]+:\s*/, "")}` : `${rs.length} services coming up on your bike`;
+    const text = `Hi ${first},\n\n` + rs.map(r => `${r.bike ? r.bike + ": " : ""}${String(r.title).replace(/^[^:]+:\s*/, "")}\n${r.body || ""}`).join("\n\n") + `\n\nTo book it in, ${r0.shop_phone ? "call " + r0.shop_phone + " or " : ""}reply to this email.\n\nStop these emails: ${APP}/?unsub=${encodeURIComponent(r0.unsub)}`;
+    const res = await fetch("https://api.resend.com/emails", { method: "POST", headers: { Authorization: "Bearer " + env.RESEND_API_KEY, "content-type": "application/json" },
+      body: JSON.stringify({ from: fromShop(r0.shop), to: [r0.email], reply_to: okMail(r0.shop_email) ? r0.shop_email : REPLY_TO, subject: subject.slice(0, 150), html: shopRemHtml(first, rs), text,
+        headers: { "List-Unsubscribe": `<${APP}/?unsub=${encodeURIComponent(r0.unsub)}>` } }) });
+    if (!res.ok) { out.failed++; console.log("shop send failed", res.status, (await res.text()).slice(0, 300)); continue; }
+    await rpc("shop_reminders_mark", { sec: env.WORKER_SECRET, ids: rs.map(r => r.id) });
+    out.sent += rs.length;
+  }
+  console.log("shop reminders", JSON.stringify(out));
+  return out;
+}
+const DOCK = { report: "service history report", value: "bike value", budget: "budget" };
+async function runShopDocs(env, rid) {
+  if (!env.RESEND_API_KEY || !env.WORKER_SECRET) return { error: "not configured" };
+  let rows; try { rows = await rpc("shop_docs_outbox", { sec: env.WORKER_SECRET, rid: rid || null }); } catch (e) { return { error: "shop tables missing" }; }
+  let sent = 0;
+  for (const r of rows || []) {
+    const first = String(r.client || "").split(/\s+/)[0] || "there", link = `${APP}/?shopdoc=${encodeURIComponent(r.token)}`, what = DOCK[r.kind] || "document";
+    const html = shopFrame({ k: esc(String(r.shop || "YOUR SHOP").toUpperCase()), t: `Your ${what} is ready` },
+      `<p style="font:15px/1.5 Arial,sans-serif;margin:16px 0">Hi ${esc(first)}, ${esc(r.shop)} sent you the ${esc(what)} for your ${esc(r.bike || "bike")}.</p>
+       <p style="margin:18px 0 6px"><a href="${link}" style="background:#D9BF8E;color:#17232C;padding:12px 20px;border-radius:999px;text-decoration:none;font:700 15px Arial,sans-serif">Open it</a></p>
+       <p style="font:13px/1.5 Arial,sans-serif;color:#5B6770;margin:14px 0 0">You can print it or save it as a PDF from there.</p>`,
+      `Sent by ${esc(r.shop)} with Revora. Anyone with the link can open it, so only share it with people you trust.`);
+    const res = await fetch("https://api.resend.com/emails", { method: "POST", headers: { Authorization: "Bearer " + env.RESEND_API_KEY, "content-type": "application/json" },
+      body: JSON.stringify({ from: fromShop(r.shop), to: [r.email], reply_to: okMail(r.shop_email) ? r.shop_email : REPLY_TO, subject: `Your ${what} from ${String(r.shop || "your shop").slice(0, 60)}`, html,
+        text: `Hi ${first}, ${r.shop} sent you the ${what} for your ${r.bike || "bike"}.\n\nOpen it: ${link}` }) });
+    if (!res.ok) { console.log("doc send failed", res.status, (await res.text()).slice(0, 200)); continue; }
+    await rpc("shop_docs_mark", { sec: env.WORKER_SECRET, ids: [r.id] }); sent++;
+  }
+  return { sent };
+}
+async function shopDoc(req, env) {
+  const o = req.headers.get("Origin") || "", h = SITES.includes(o) ? { "Access-Control-Allow-Origin": o, "Access-Control-Allow-Methods": "POST, OPTIONS", "Access-Control-Allow-Headers": "content-type", "Vary": "Origin" } : {};
+  if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: h });
+  if (req.method !== "POST" || !SITES.includes(o)) return new Response("no", { status: 403, headers: h });
+  const body = await req.json().catch(() => ({})), id = String(body.id || "");
+  if (!/^[0-9a-f-]{36}$/.test(id)) return new Response("bad", { status: 400, headers: h });
+  const r = await runShopDocs(env, id).catch(e => ({ error: String(e.message || e) }));   // only ever sends an approved, unsent document to that client
+  return new Response(JSON.stringify(r), { status: 200, headers: Object.assign({ "content-type": "application/json" }, h) });
+}
 
 /* ---- emails to new sign-ups: thanks + deals right away, deals reminder day 3, features day 7, check-in day 14, then every 2 weeks ---- */
 const WFROM = "Revora Garage <info@revoragarage.com>", ADMIN_TO = "xavier.j.wilson101@gmail.com";
@@ -229,12 +296,15 @@ export default {
   // cron "0 * * * *": welcome and deal emails every hour (the deal reminders are timed to the hour); service reminders once a day at 13:00 UTC
   async scheduled(evt, env, ctx) {
     const daily = new Date(evt.scheduledTime || Date.now()).getUTCHours() === 13;
-    ctx.waitUntil((daily ? run(env).catch(e => console.log(e)) : Promise.resolve()).then(() => runWelcome(env)).catch(e => console.log("welcome", e)));
+    ctx.waitUntil((daily ? run(env).catch(e => console.log(e)).then(() => runShop(env)).catch(e => console.log("shop", e)) : Promise.resolve()).then(() => runWelcome(env)).catch(e => console.log("welcome", e))
+      .then(() => runShopDocs(env, null)).catch(e => console.log("shop docs", e)));
   },
   async fetch(req, env) {
     const path = new URL(req.url).pathname;
     if (path === "/notify") return notify(req, env);
     if (path === "/unsub") return unsub(req, env);
+    if (path === "/shop-doc") return shopDoc(req, env);
+    if (path === "/shop-run") { try { return json({ reminders: await runShop(env), docs: await runShopDocs(env, null) }); } catch (e) { return json({ error: String(e.message || e) }, 500); } }
     if (path === "/welcome-test") { // sends the welcome emails a new member gets now (24-hour deal) to the admin only, to check how they look
       if (!env.RESEND_API_KEY) return json({ error: "not configured" }, 503);
       let n = 0; for (const st of [1, 2, 111, 112, 4, 5]) if (await sendWelcome(env, ADMIN_TO, st, { name: "Xavier", bikes: 0, free: true, deal_hours: 24 }, "00000000-0000-0000-0000-000000000000")) n++;
