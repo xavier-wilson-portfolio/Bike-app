@@ -1,130 +1,170 @@
-/* ============ Revora Shop: who's working, PINs, owner mode and the employee app ============
-   On a computer signed in as the shop owner, Revora opens to "Who's working?". The owner's master PIN opens the full shop
-   (owner mode, locks after 30 idle minutes). An employee's PIN opens the employee app: find clients, log work, check bikes in,
-   and see only the bikes they're assigned or have worked on. Employees can also use their own phone: the link from the owner
-   signs that phone in as them (no Revora account). Every PIN is checked by the database, never here. */
+/* ============ Revora Shop: shop login, owner mode and the employee app ============
+   On a computer signed in as the shop owner, Revora opens to the shop login. The owner unlocks the full shop with their
+   account password. Employees type their name and their 6-digit PIN and get the employee app: find clients, log work,
+   check bikes in, and see only the bikes they're assigned or have worked on. Employees can also use their own phone:
+   the owner's link signs that phone in as them (no Revora account). Logins stay open until 6 hours with nothing touched.
+   The Revora admin account skips all of this unless customer mode is on. PINs are checked by the database. */
 (function () {
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const n = v => +v || 0, D = () => window.rvDue, digits = s => String(s || "").replace(/\D/g, "");
-  const ss = { get(k) { try { return sessionStorage.getItem(k); } catch (e) { return null; } }, set(k, v) { try { v == null ? sessionStorage.removeItem(k) : sessionStorage.setItem(k, v); } catch (e) {} } };
   const ls = { get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }, set(k, v) { try { v == null ? localStorage.removeItem(k) : localStorage.setItem(k, v); } catch (e) {} } };
-  const OWNER_IDLE = 30 * 60e3, EMP_IDLE = 10 * 60e3;
+  const ss = ls;   // logins survive closing the browser; the 6-hour idle rule ends them
+  const IDLE = 6 * 3600e3, PIN_LEN = 6, ADMIN = "xavier.j.wilson101@gmail.com";
   const ic = p => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
   const IC = { lock: '<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>', search: '<circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/>', plus: '<path d="M12 5v14M5 12h14"/>',
     wrench: '<path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L4 17l3 3 5.3-5.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/>', gauge: '<path d="M4 16a8 8 0 1 1 16 0"/><path d="M12 16l4-5"/>', back: '<path d="M15 5l-7 7 7 7"/>',
-    phone: '<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/>', key: '<circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3"/>', check: '<path d="M5 12l4 4 10-10"/>' };
+    phone: '<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/>', key: '<circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3"/>', check: '<path d="M5 12l4 4 10-10"/>',
+    user: '<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>', pin: '<path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/>', clock: '<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>' };
   const initials = nm => String(nm || "?").trim().split(/\s+/).slice(0, 2).map(w => w[0] || "").join("").toUpperCase() || "?";
   let X = null;
 
-  /* ---------- owner mode ---------- */
-  const ownerOpen = () => n(ss.get("rv.ownerUntil")) > Date.now();
-  const ownerTouch = () => { if (ownerOpen()) ss.set("rv.ownerUntil", String(Date.now() + OWNER_IDLE)); };
+  /* ---------- staying logged in: 6 hours with nothing touched ends it ---------- */
+  const idleOk = () => Date.now() - n(ls.get("rv.lastActive")) < IDLE;
+  const touch = () => ls.set("rv.lastActive", String(Date.now()));
+  const customerMode = () => ls.get("rv.customerMode") === "1";
+  const isAdmin = ctx => !!(ctx && ctx.session && String(ctx.session.user.email || "").toLowerCase() === ADMIN);
+  const adminBypass = ctx => isAdmin(ctx) && !customerMode();
+  const ownerOpen = () => { if (ls.get("rv.ownerOk") && idleOk()) return true; ls.set("rv.ownerOk", null); return false; };
+  const empActive = () => { if (ls.get("rv.empSess") && idleOk()) return true; if (ls.get("rv.empSess")) ls.set("rv.empSess", null); return false; };
+  const ownerTouch = touch;
   function lockAll(go) {
-    const t = ss.get("rv.empSess"); if (t && X && X.sb) X.sb.rpc("emp_lock", { tok: t }).then(() => {}, () => {});
-    ss.set("rv.ownerUntil", null); ss.set("rv.empSess", null);
+    const t = ls.get("rv.empSess"); if (t && X && X.sb) X.sb.rpc("emp_lock", { tok: t }).then(() => {}, () => {});
+    ls.set("rv.ownerOk", null); ls.set("rv.empSess", null);
     if (go !== false) location.href = location.pathname + (ls.get("rv.empdev") && !(X && X.session) ? "" : "?crm");
   }
-  let idleT = null;
-  function watchIdle(kind) {
-    clearInterval(idleT); let last = Date.now();
-    const bump = () => { last = Date.now(); if (kind === "owner") ownerTouch(); };
+  let idleT = null, watching = false;
+  function watchIdle() {
+    touch(); if (watching) return; watching = true; let lastWrite = Date.now();
+    const bump = () => { if (Date.now() - lastWrite > 30e3) { lastWrite = Date.now(); touch(); } };
     ["pointerdown", "keydown", "touchstart", "wheel"].forEach(ev => window.addEventListener(ev, bump, { passive: true }));
-    idleT = setInterval(() => { if (Date.now() - last > (kind === "owner" ? OWNER_IDLE : EMP_IDLE)) { clearInterval(idleT); lockAll(); } }, 30e3);
+    idleT = setInterval(() => { if (!idleOk()) { clearInterval(idleT); lockAll(); } }, 60e3);
   }
+  const PINMSG = { wrong: "That PIN isn't right.", locked: "Too many wrong tries. Wait 10 minutes and try again.", denied: "Employee logins aren't available on this computer.", device: "This phone was signed out. Open the link from your shop again.",
+    link: "This link doesn't work any more. Ask the owner for a new one.", name: "No one by that name works here. Check the spelling.", twins: "Two people have that first name. Type your full name." };
 
-  /* ---------- the PIN pad ---------- */
-  function pinPad(host, opts) {   // opts: { title, sub, avatar, onPin(pin) -> Promise<string|null error>, back }
-    host.innerHTML = `<div class="lk-pad">${opts.back ? `<button class="lk-back" data-back>${ic(IC.back)} ${esc(opts.back)}</button>` : ""}
-      <span class="lk-av big">${esc(opts.avatar || "")}</span><h2>${esc(opts.title)}</h2>${opts.sub ? `<p>${opts.sub}</p>` : ""}
-      <div class="lk-dots" aria-live="polite"><i></i><i></i><i></i><i></i></div><p class="lk-err" role="alert"></p>
-      <div class="lk-keys">${[1, 2, 3, 4, 5, 6, 7, 8, 9].map(k => `<button data-k="${k}">${k}</button>`).join("")}<span></span><button data-k="0">0</button><button data-k="del" aria-label="Delete">⌫</button></div>
-      <input class="lk-hidden" inputmode="numeric" autocomplete="one-time-code" maxlength="4" aria-label="PIN"></div>`;
-    let pin = "", busy = false;
-    const dots = host.querySelectorAll(".lk-dots i"), er = host.querySelector(".lk-err"), inp = host.querySelector(".lk-hidden");
-    const paint = () => dots.forEach((d, i) => d.classList.toggle("on", i < pin.length));
-    const push = async k => {
-      if (busy) return; er.textContent = "";
-      if (k === "del") pin = pin.slice(0, -1); else if (pin.length < 4) pin += k;
-      paint(); if (pin.length < 4) return;
-      busy = true; host.querySelector(".lk-pad").classList.add("busy");
-      const msg = await opts.onPin(pin).catch(() => "That didn't go through. Check your internet.");
-      busy = false; host.querySelector(".lk-pad")?.classList.remove("busy");
-      if (msg) { er.textContent = msg; pin = ""; paint(); host.querySelector(".lk-dots")?.classList.add("shake"); setTimeout(() => host.querySelector(".lk-dots")?.classList.remove("shake"), 400); }
-    };
-    host.querySelectorAll("[data-k]").forEach(b => b.onclick = () => push(b.dataset.k));
-    const kd = ev => { if (!host.isConnected) return document.removeEventListener("keydown", kd); if (/^[0-9]$/.test(ev.key)) push(ev.key); else if (ev.key === "Backspace") push("del"); else if (ev.key === "Escape" && opts.back) host.querySelector("[data-back]")?.click(); };
-    document.addEventListener("keydown", kd);
-    const bk = host.querySelector("[data-back]"); if (bk) bk.onclick = () => { document.removeEventListener("keydown", kd); opts.onBack(); };
-    if (matchMedia && matchMedia("(pointer:coarse)").matches) { /* phones use the on-screen keys */ }
+  /* ---------- the login screen ---------- */
+  function shopSide(sh) {
+    const d = (sh && sh.details) || {}, sil = "img/sil/bike-" + ((d.services || []).includes("Scooters") && (d.services || []).length === 1 ? "scooter" : "standard") + ".svg";
+    return `<aside class="lg-side"><div class="lg-brand"><img src="img/revora-icon.svg" alt=""><img class="lg-word" src="img/revora-word-white.svg" alt="Revora"></div>
+      <svg class="lg-ring" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="86" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="2 7"/><path d="M28 140 A86 86 0 1 1 172 140" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity=".7"/></svg>
+      <img class="lg-sil" src="${esc(sil)}" alt="">
+      <div class="lg-shop"><span class="lg-k">Shop login</span><h1>${esc((sh && sh.name) || "Your shop")}</h1>
+        ${sh && sh.address ? `<span class="lg-li">${ic(IC.pin)}${esc(sh.address)}</span>` : ""}${d.hours ? `<span class="lg-li">${ic(IC.clock)}${esc(d.hours)}</span>` : ""}</div>
+      <div class="lg-time"><b id="lgClock"></b><span id="lgDate"></span></div><span class="lg-foot">Revora Shop</span></aside>`;
   }
-  const PINMSG = { wrong: "Wrong PIN. Try again.", locked: "Too many wrong tries. Wait 10 minutes and try again.", denied: "That login isn't available on this computer.", device: "This phone was signed out. Open the link from your shop again.", link: "This link doesn't work any more. Ask the owner for a new one." };
-
+  // a plain dark page for one-off screens (first-time setup, plan not active)
   function frame(inner, shopName) {
     X.app.innerHTML = `<div class="lk"><header class="lk-top"><span class="sx-brand"><img src="img/revora-icon.svg" alt=""><img class="sx-word" src="img/revora-word-white.svg" alt="Revora"></span>${shopName ? `<span class="sx-shopname">${esc(shopName)}</span>` : ""}</header><main class="lk-main">${inner}</main></div>`;
     return X.app.querySelector(".lk-main");
   }
+  function tickClock() { const c = document.getElementById("lgClock"); if (!c) return; const d = new Date(); c.textContent = d.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" }); const t = document.getElementById("lgDate"); if (t) t.textContent = d.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" }); setTimeout(tickClock, 15e3); }
+  function loginFrame(sh, card) {
+    X.app.innerHTML = `<div class="lg">${shopSide(sh)}<main class="lg-main"><div class="lg-card">${card}</div></main></div>`;
+    tickClock(); return X.app.querySelector(".lg-card");
+  }
+  // the 6-digit PIN boxes, typed or tapped
+  function pinField(host, onDone) {
+    host.innerHTML = `<div class="lg-pin" role="group" aria-label="PIN">${Array.from({ length: PIN_LEN }, () => "<i></i>").join("")}</div><input class="lg-pinin" inputmode="numeric" autocomplete="one-time-code" maxlength="${PIN_LEN}" aria-label="${PIN_LEN}-digit PIN">
+      <div class="lg-keys">${[1, 2, 3, 4, 5, 6, 7, 8, 9].map(k => `<button type="button" data-k="${k}">${k}</button>`).join("")}<span></span><button type="button" data-k="0">0</button><button type="button" data-k="del" aria-label="Delete">⌫</button></div>`;
+    const inp = host.querySelector(".lg-pinin"), boxes = host.querySelectorAll(".lg-pin i");
+    const paint = () => { boxes.forEach((b, i) => b.classList.toggle("on", i < inp.value.length)); host.querySelector(".lg-pin").classList.toggle("focus", document.activeElement === inp); };
+    inp.oninput = () => { inp.value = digits(inp.value).slice(0, PIN_LEN); paint(); if (inp.value.length === PIN_LEN) onDone(inp.value); };
+    inp.onfocus = inp.onblur = paint;
+    host.querySelector(".lg-pin").onclick = () => inp.focus();
+    host.querySelectorAll("[data-k]").forEach(b => b.onclick = () => { const k = b.dataset.k; inp.value = k === "del" ? inp.value.slice(0, -1) : (inp.value + k).slice(0, PIN_LEN); inp.dispatchEvent(new Event("input")); });
+    return { clear() { inp.value = ""; paint(); const p = host.querySelector(".lg-pin"); p.classList.add("shake"); setTimeout(() => p.classList.remove("shake"), 400); }, focus() { inp.focus(); } };
+  }
+  // employee: name, then PIN. ask(name, pin) -> error text or null
+  function employeeForm(card, opts) {
+    card.innerHTML = `${opts.tabs || ""}<div class="lg-pane"><h2>${esc(opts.title || "Clock in")}</h2><p class="lg-sub">${opts.sub || "Type your name and your 6-digit PIN."}</p>
+      <label class="lg-f"><span>${ic(IC.user)} Your name</span><input id="lgName" autocomplete="off" autocapitalize="words" spellcheck="false" placeholder="First name"></label>
+      <div class="lg-f"><span>${ic(IC.lock)} ${esc(opts.pinLabel || "PIN")}</span><div id="lgPin"></div></div><p class="lg-err" role="alert"></p>${opts.foot || ""}</div>`;
+    const nm = card.querySelector("#lgName"), er = card.querySelector(".lg-err");
+    let busy = false;
+    const pin = pinField(card.querySelector("#lgPin"), async p => {
+      if (busy) return; er.textContent = "";
+      if (!nm.value.trim()) { er.textContent = "Type your name first."; pin.clear(); nm.focus(); return; }
+      busy = true; card.classList.add("busy");
+      const msg = await opts.ask(nm.value.trim(), p).catch(() => "That didn't go through. Check your internet.");
+      busy = false; card.classList.remove("busy");
+      if (msg) { er.textContent = msg; pin.clear(); if (/name/i.test(msg)) nm.focus(); else pin.focus(); }
+    });
+    nm.onkeydown = ev => { if (ev.key === "Enter") { ev.preventDefault(); pin.focus(); } };
+    if (!(matchMedia && matchMedia("(pointer:coarse)").matches)) setTimeout(() => nm.focus(), 50);
+    return card;
+  }
 
-  /* ---------- the owner's computer: who's working? ---------- */
+  /* ---------- the owner's computer ---------- */
   async function gate(ctx, shop, next) {
     X = ctx; document.title = (shop.name || "Shop") + " · Revora";
-    // an employee who's already clocked in on this computer
-    if (ss.get("rv.empSess")) return empApp(ctx);
-    const hasPin = await ctx.sb.rpc("shop_has_master_pin").then(r => r.data, () => true);
-    if (!hasPin) return setMasterPin(ctx, shop, next, true);
-    const { data: emps } = await ctx.sb.from("shop_employees").select("id,name,email,status").eq("shop_id", shop.id).neq("status", "removed").order("name");
-    const list = emps || [], me = (ctx.profile && ctx.profile.display_name) || "Owner";
-    const who = () => {
-      const m = frame(`<section class="lk-who"><h1>Who's working?</h1><p>Tap your name and enter your PIN.</p>
-        <div class="lk-tiles"><button class="lk-tile own" data-own><span class="lk-av">${esc(initials(me))}</span><b>${esc(me)}</b><small>Owner</small></button>
-          ${list.map(e => `<button class="lk-tile" data-emp="${esc(e.id)}"><span class="lk-av">${esc(initials(e.name || e.email))}</span><b>${esc(e.name || e.email || "New employee")}</b><small>${e.status === "invited" ? "First time? Use the starting PIN" : "Employee"}</small></button>`).join("")}</div>
-        ${list.length ? "" : `<p class="lk-hint">Add your employees in the shop's Team page, then they log in here with their own PIN.</p>`}</section>`, shop.name);
-      m.querySelector("[data-own]").onclick = () => pinPad(m, { title: me, sub: "Owner PIN", avatar: initials(me), back: "Back", onBack: who,
-        onPin: async p => { const { data: r, error } = await ctx.sb.rpc("shop_master_unlock", { p }); if (error) throw error; if (r !== "ok") return PINMSG[r] || "Wrong PIN.";
-          ss.set("rv.ownerUntil", String(Date.now() + OWNER_IDLE)); next(); return null; } });
-      m.querySelectorAll("[data-emp]").forEach(b => b.onclick = () => { const e = list.find(x => x.id === b.dataset.emp);
-        pinPad(m, { title: e.name || e.email || "Employee", sub: e.status === "invited" ? "Enter the starting PIN from the owner" : "Your PIN", avatar: initials(e.name || e.email), back: "Back", onBack: who,
-          onPin: async p => { const { data: r, error } = await ctx.sb.rpc("shop_owner_emp_unlock", { eid: e.id, p }); if (error) throw error; if (r.error) return PINMSG[r.error] || "Wrong PIN.";
-            ss.set("rv.empSess", r.session); empApp(ctx); return null; } }); });
+    if (empActive()) return empApp(ctx);
+    const email = ctx.session.user.email, me = (ctx.profile && ctx.profile.display_name) || email;
+    const tabs = which => `<div class="lg-tabs" role="tablist"><button role="tab" data-tab="emp" aria-selected="${which === "emp"}">${ic(IC.user)} Employee</button><button role="tab" data-tab="own" aria-selected="${which === "own"}">${ic(IC.key)} Owner</button></div>`;
+    const card = loginFrame(shop, "");
+    const bindTabs = () => card.querySelectorAll("[data-tab]").forEach(b => b.onclick = () => b.dataset.tab === "own" ? owner() : emp());
+    const emp = () => { employeeForm(card, { tabs: tabs("emp"), title: "Clock in", ask: async (nm, p) => {
+      const { data: r, error } = await ctx.sb.rpc("shop_emp_login", { nm, p }); if (error) throw error; if (r.error) return PINMSG[r.error] || "That didn't work.";
+      ls.set("rv.empSess", r.session); watchIdle(); empApp(ctx); return null; } }); bindTabs(); };
+    const owner = () => {
+      card.innerHTML = `${tabs("own")}<div class="lg-pane"><h2>Owner</h2><p class="lg-sub">Opens the whole shop: clients, money, team and settings.</p>
+        <div class="lg-who"><span class="lg-av">${esc(initials(me))}</span><div><b>${esc(me)}</b><small>${esc(email)}</small></div></div>
+        <form id="lgOwn" class="lg-form"><label class="lg-f"><span>${ic(IC.lock)} Password</span><input name="pw" type="password" autocomplete="current-password"></label><p class="lg-err" role="alert"></p>
+          <button class="lg-go" type="submit">Unlock the shop</button></form>
+        <button class="lg-link" data-google>Signed up with Google? Set a password</button></div>`;
+      bindTabs(); const f = card.querySelector("#lgOwn"), er = card.querySelector(".lg-err");
+      setTimeout(() => f.pw.focus(), 50);
+      f.onsubmit = async ev => { ev.preventDefault(); if (!f.pw.value) return; card.classList.add("busy");
+        const { error } = await ctx.sb.auth.signInWithPassword({ email, password: f.pw.value }); card.classList.remove("busy");
+        if (error) { er.textContent = "That password isn't right. If you sign in with Google, set a password first."; f.pw.select(); return; }
+        ls.set("rv.ownerOk", "1"); watchIdle(); next(); };
+      card.querySelector("[data-google]").onclick = () => googleForPassword(ctx);
     };
-    who();
+    emp();
   }
-  // the owner picks the master PIN (first time) or changes it
-  function setMasterPin(ctx, shop, next, first) {
-    X = ctx; let p1 = "";
-    const m = frame(`<div id="lkHost"></div>`, shop.name), host = m.querySelector("#lkHost");
-    const ask = () => pinPad(host, { title: first ? "Pick your owner PIN" : "New owner PIN", sub: "4 numbers. It opens the full shop on this computer. Employees get their own PINs.", avatar: "", onPin: async p => { p1 = p; confirmIt(); return null; } });
-    const confirmIt = () => pinPad(host, { title: "Type it again", sub: "", avatar: "", back: "Start over", onBack: ask,
-      onPin: async p => { if (p !== p1) return "Those didn't match. Try again.";
-        let old = null; if (!first) old = prompt("Your current owner PIN:"); const { data: r, error } = await ctx.sb.rpc("shop_set_master_pin", { old, p });
-        if (error) throw error; if (r === "wrong") return "Your current PIN was wrong."; if (r !== "ok") return "That PIN didn't save.";
-        ss.set("rv.ownerUntil", String(Date.now() + OWNER_IDLE)); next(); return null; } });
-    ask();
+  /* Google accounts have no password. Signing in with Google again proves it's the owner, then they pick one. */
+  function googleForPassword(ctx) {
+    ls.set("rv.setPw", String(Date.now()));
+    ctx.sb.auth.signInWithOAuth({ provider: "google", options: { redirectTo: location.origin + location.pathname + "?crm&setpw=1", queryParams: { prompt: "login" } } });
+  }
+  function setPasswordPage(ctx, shop, next) {
+    X = ctx; const fresh = Date.now() - n(ls.get("rv.setPw")) < 10 * 60e3; ls.set("rv.setPw", null);
+    try { history.replaceState(null, "", location.pathname + "?crm"); } catch (e) {}
+    if (!fresh) return gate(ctx, shop, next);
+    const card = loginFrame(shop, `<div class="lg-pane"><h2>Pick a password</h2><p class="lg-sub">For ${esc(ctx.session.user.email)}. You'll use it to unlock the shop and confirm big changes. You can keep signing in to Revora with Google.</p>
+      <form class="lg-form" id="lgSp"><label class="lg-f"><span>New password</span><input name="p1" type="password" autocomplete="new-password" minlength="8"></label><label class="lg-f"><span>Type it again</span><input name="p2" type="password" autocomplete="new-password"></label><p class="lg-err" role="alert"></p>
+        <button class="lg-go" type="submit">Save and unlock</button></form></div>`);
+    const f = card.querySelector("#lgSp"), er = card.querySelector(".lg-err");
+    f.onsubmit = async ev => { ev.preventDefault();
+      if (f.p1.value.length < 8) { er.textContent = "At least 8 characters."; return; } if (f.p1.value !== f.p2.value) { er.textContent = "The two passwords don't match."; return; }
+      const { error } = await ctx.sb.auth.updateUser({ password: f.p1.value }); if (error) { er.textContent = error.message || "That didn't save."; return; }
+      ls.set("rv.ownerOk", "1"); watchIdle(); next(); };
   }
 
   /* ---------- an employee's own phone ---------- */
   async function phoneStart(ctx) {
     X = ctx; const dev = ls.get("rv.empdev");
-    if (ss.get("rv.empSess")) return empApp(ctx);
+    if (empActive()) return empApp(ctx);
     const { data: d } = await ctx.sb.rpc("emp_device", { dev });
-    if (!d) { ls.set("rv.empdev", null); const m = frame(`<section class="lk-who"><h1>Signed out</h1><p>This phone isn't signed in to a shop any more. Ask the owner for a new link.</p><a class="btn" href="${esc(location.pathname)}">Open Revora</a></section>`); return; }
-    const m = frame(`<div id="lkHost"></div><p class="lk-foot"><button class="linkbtn" data-forget>Not ${esc(String(d.name).split(" ")[0] || "you")}? Sign this phone out of ${esc(d.shop)}</button> · <button class="linkbtn" data-own>Use my own Revora</button></p>`, d.shop);
-    pinPad(m.querySelector("#lkHost"), { title: d.name || "Employee", sub: "Your PIN", avatar: initials(d.name), onPin: async p => {
-      const { data: r, error } = await ctx.sb.rpc("emp_unlock", { dev, p }); if (error) throw error; if (r.error) return PINMSG[r.error] || "Wrong PIN.";
-      ss.set("rv.empSess", r.session); empApp(ctx); return null; } });
-    m.querySelector("[data-forget]").onclick = async () => { if (!confirm("Sign this phone out of " + d.shop + "? You'll need a new link from the owner.")) return; await ctx.sb.rpc("emp_forget_device", { dev }); ls.set("rv.empdev", null); location.href = location.pathname; };
-    m.querySelector("[data-own]").onclick = () => { ss.set("rv.ownRevora", "1"); location.href = location.pathname; };
+    if (!d) { ls.set("rv.empdev", null); loginFrame(null, `<div class="lg-pane"><h2>Signed out</h2><p class="lg-sub">This phone isn't signed in to a shop any more. Ask the owner for a new link.</p><a class="lg-go" href="${esc(location.pathname)}">Open Revora</a></div>`); return; }
+    const card = loginFrame({ name: d.shop, address: d.address, details: d.details }, "");
+    employeeForm(card, { title: "Clock in", foot: `<div class="lg-links"><button class="lg-link" data-own>Use my own Revora</button><button class="lg-link" data-forget>Sign this phone out of ${esc(d.shop)}</button></div>`, ask: async (nm, p) => {
+      const { data: r, error } = await ctx.sb.rpc("emp_unlock_named", { dev, nm, p }); if (error) throw error; if (r.error) return PINMSG[r.error] || "That didn't work.";
+      ls.set("rv.empSess", r.session); watchIdle(); empApp(ctx); return null; } });
+    card.querySelector("[data-forget]").onclick = async () => { if (!confirm("Sign this phone out of " + d.shop + "? You'll need a new link from the owner.")) return; await ctx.sb.rpc("emp_forget_device", { dev }); ls.set("rv.empdev", null); location.href = location.pathname; };
+    card.querySelector("[data-own]").onclick = () => { sessionStorage.setItem("rv.ownRevora", "1"); location.href = location.pathname + "?garage=1"; };
   }
-  // the link from the owner
+  // the link from the owner: the starting PIN signs this phone in
   async function inviteLink(ctx, inv) {
     X = ctx; try { history.replaceState(null, "", location.pathname); } catch (e) {}
     const { data: info } = await ctx.sb.rpc("emp_invite_info", { inv });
-    if (!info) { frame(`<section class="lk-who"><h1>This link doesn't work</h1><p>It may have been replaced with a new one. Ask the shop owner to send it again.</p></section>`); return; }
-    const m = frame(`<section class="lk-who"><div class="eyebrow">Revora Shop</div><h1>${esc(info.shop)}</h1><p>${info.setup ? "Enter the 4-number starting PIN the owner sent you. Then you'll pick your own." : "Enter your PIN to sign this phone in."}</p></section><div id="lkHost"></div>`, info.shop);
-    pinPad(m.querySelector("#lkHost"), { title: info.name || "Welcome", sub: info.setup ? "Starting PIN" : "Your PIN", avatar: initials(info.name), onPin: async p => {
-      const { data: r, error } = await ctx.sb.rpc("emp_claim", { inv, p }); if (error) throw error; if (r.error) return PINMSG[r.error] || "Wrong PIN.";
-      // a computer signed in as the shop owner keeps using "Who's working?" instead of remembering one employee
-      if (!ctx.session) ls.set("rv.empdev", r.device);
-      ss.set("rv.empSess", r.session); empApp(ctx); return null; } });
+    if (!info) { loginFrame(null, `<div class="lg-pane"><h2>This link doesn't work</h2><p class="lg-sub">It may have been replaced with a new one. Ask the shop owner to send it again.</p></div>`); return; }
+    const card = loginFrame({ name: info.shop }, "");
+    employeeForm(card, { title: info.setup ? "Welcome" : "Sign this phone in", sub: info.setup ? "Type your name and the 6-digit starting PIN from the owner. Then you'll pick your own." : "Type your name and your PIN.", pinLabel: info.setup ? "Starting PIN" : "PIN",
+      ask: async (nm, p) => {
+        const { data: r, error } = await ctx.sb.rpc("emp_claim", { inv, p }); if (error) throw error; if (r.error) return PINMSG[r.error] || "That didn't work.";
+        if (!ctx.session) ls.set("rv.empdev", r.device);
+        ls.set("rv.empSess", r.session); watchIdle(); empApp(ctx); return null; } });
+    const nm = card.querySelector("#lgName"); if (info.name) nm.placeholder = info.name.split(" ")[0];
   }
 
   /* ---------- the employee app ---------- */
@@ -133,25 +173,25 @@
   const note = (m, bad) => X.note(m, bad);
   const err = e => (e && e.message) || "That didn't go through. Check your internet and try again.";
   async function empApp(ctx) {
-    X = ctx; E = { tok: ss.get("rv.empSess") };
+    X = ctx; E = { tok: ls.get("rv.empSess") }; watchIdle();
     let c; try { c = await rpc("emp_ctx"); } catch (e) { return; }
     if (!c) return lockAll();
     E.emp = c.employee; E.shop = c.shop;
     if (c.setup) return setupPage();
     if (!c.plan_ok) { frame(`<section class="lk-who"><h1>The shop's plan isn't active</h1><p>Ask the owner to renew Revora Shop. Nothing is lost.</p><button class="btn" data-lock>Lock</button></section>`, E.shop.name).querySelector("[data-lock]").onclick = () => lockAll(); return; }
-    watchIdle("emp"); home();
+    home();
   }
   function setupPage() {
     const m = frame(`<section class="lk-setup"><div class="eyebrow">First time</div><h1>Set up your login</h1><p>Your name goes on the work you log. Your email gets things the shop sends you.</p>
       <form class="sx-form" id="suF" novalidate><label class="sx-f"><b>Your name</b><input name="name" required maxlength="80" value="${esc(E.emp.name || "")}" autocomplete="name"></label>
         <label class="sx-f"><b>Email</b><input name="email" type="email" maxlength="200" value="${esc(E.emp.email || "")}" autocomplete="email"></label>
-        <div class="sx-f2"><label class="sx-f"><b>Your own PIN</b><input name="p1" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" type="password" autocomplete="new-password" placeholder="4 numbers"></label><label class="sx-f"><b>Type it again</b><input name="p2" inputmode="numeric" maxlength="4" type="password" autocomplete="new-password"></label></div>
-        <p class="sx-small">Only you should know it. You'll use it every time you log in, on the shop's computer or your phone.</p><p class="sx-err" hidden></p>
+        <div class="sx-f2"><label class="sx-f"><b>Your own PIN</b><input name="p1" inputmode="numeric" maxlength="6" type="password" autocomplete="new-password" placeholder="6 numbers"></label><label class="sx-f"><b>Type it again</b><input name="p2" inputmode="numeric" maxlength="6" type="password" autocomplete="new-password"></label></div>
+        <p class="sx-small">Only you should know it. You'll type your name and this PIN to clock in, on the shop's computer or your phone.</p><p class="sx-err" hidden></p>
         <div class="sx-acts left"><button class="btn tan big" type="submit">Save and start</button></div></form></section>`, E.shop && E.shop.name);
     const f = m.querySelector("#suF"), er = m.querySelector(".sx-err");
     f.onsubmit = async ev => { ev.preventDefault(); const d = Object.fromEntries(new FormData(f)); const bad = t => { er.textContent = t; er.hidden = false; };
       if (!d.name.trim()) return bad("Add your name."); if (d.email && !/^\S+@\S+\.\S+$/.test(d.email.trim())) return bad("That email doesn't look right.");
-      if (!/^[0-9]{4}$/.test(d.p1)) return bad("Your PIN needs to be 4 numbers."); if (d.p1 !== d.p2) return bad("The two PINs don't match.");
+      if (!/^[0-9]{6}$/.test(d.p1)) return bad("Your PIN needs to be 6 numbers."); if (d.p1 !== d.p2) return bad("The two PINs don't match.");
       try { const r = await rpc("emp_setup", { nm: d.name, em: d.email, p: d.p1 }); if (r !== "ok") return bad("That didn't save. Try again."); } catch (e) { return bad(err(e)); }
       empApp(X); setTimeout(() => note("You're set. Use your own PIN from now on."), 300); };
   }
@@ -287,6 +327,7 @@
 
   /* ---------- big changes need the account password ---------- */
   function needPassword(ctx, what, fn) {
+    if (adminBypass(ctx)) return fn();
     const email = ctx.session.user.email;
     const box = document.createElement("div"); box.className = "pk-modal sx-modal";
     box.innerHTML = `<div class="pk-card sx-card" role="dialog" aria-modal="true"><div class="sx-mh"><h2>Owner password</h2><button class="sx-x" data-close aria-label="Close">×</button></div>
@@ -299,18 +340,11 @@
       const { error } = await ctx.sb.auth.signInWithPassword({ email, password: f.pw.value });
       if (error) { er.textContent = "That password isn't right. If you sign in with Google, set a password first."; er.hidden = false; f.querySelector("[type=submit]").disabled = false; return; }
       box.remove(); fn(); };
-    box.querySelector("[data-setpw]").onclick = () => {
-      f.innerHTML = `<p class="sx-p">Set a password for ${esc(email)}. You'll keep signing in with Google; this is just for big changes in the shop.</p>
-        <label class="sx-f"><b>Owner PIN</b><input name="pin" type="password" inputmode="numeric" maxlength="4"></label><label class="sx-f"><b>New password</b><input name="pw1" type="password" autocomplete="new-password" minlength="8"></label><label class="sx-f"><b>Type it again</b><input name="pw2" type="password" autocomplete="new-password"></label><p class="sx-err" hidden></p>
-        <div class="sx-acts"><button type="button" class="btn" data-close>Cancel</button><button class="btn pri" type="submit">Save password</button></div>`;
-      const er2 = f.querySelector(".sx-err");
-      f.onsubmit = async ev => { ev.preventDefault(); const bad = t => { er2.textContent = t; er2.hidden = false; };
-        if (f.pw1.value.length < 8) return bad("At least 8 characters."); if (f.pw1.value !== f.pw2.value) return bad("The two passwords don't match.");
-        const { data: r } = await ctx.sb.rpc("shop_master_unlock", { p: f.pin.value }); if (r !== "ok") return bad(PINMSG[r] || "Wrong owner PIN.");
-        const { error } = await ctx.sb.auth.updateUser({ password: f.pw1.value }); if (error) return bad(error.message || "That didn't save.");
-        box.remove(); ctx.note("Password saved."); fn(); };
-    };
+    box.querySelector("[data-setpw]").onclick = () => googleForPassword(ctx);
   }
 
-  window.rvShopLock = { gate, phoneStart, inviteLink, empApp, ownerOpen, ownerTouch, lockAll, watchIdle, setMasterPin, needPassword, hasDevice: () => !!ls.get("rv.empdev") && !ss.get("rv.ownRevora"), empActive: () => !!ss.get("rv.empSess") };
+  window.rvShopLock = { gate, phoneStart, inviteLink, empApp, ownerOpen, ownerTouch, lockAll, watchIdle, needPassword, setPasswordPage, isAdmin, adminBypass, customerMode,
+    setCustomerMode(on) { ls.set("rv.customerMode", on ? "1" : null); ls.set("rv.ownerOk", null); ls.set("rv.empSess", null); },
+    markOwnerOpen() { ls.set("rv.ownerOk", "1"); watchIdle(); },
+    hasDevice: () => !!ls.get("rv.empdev") && !sessionStorage.getItem("rv.ownRevora"), empActive };
 })();

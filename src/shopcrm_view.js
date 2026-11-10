@@ -139,10 +139,11 @@
     X.app.innerHTML = `<div class="sx"><header class="sx-top"><div class="sx-top-in">
         <a class="sx-brand" href="?crm" data-t="today" aria-label="Revora Shop home"><img src="img/revora-icon.svg" alt=""><img class="sx-word" src="img/revora-word-white.svg" alt="Revora"><span class="sx-shopname">${esc(S.shop.name || "Your shop")}</span></a>
         <nav class="sx-tabs" aria-label="Shop">${TABS.filter(t => !["money", "team"].includes(t[0]) || isOwner()).map(([k, l, i]) => `<a href="?crm${k === "today" ? "" : "&t=" + k}" data-t="${k}" class="${active === k ? "on" : ""}">${ic(i)}<span>${l}</span>${k === "requests" && pend ? `<em>${pend}</em>` : ""}</a>`).join("")}</nav>
-        <div class="sx-me"><a class="sx-garage" href="${esc(X.url({ garage: 1 }))}">Your garage</a>${isOwner() && window.rvShopLock ? `<button class="btn sm lk-lock" data-lockall title="Back to Who's working?">${ic("lock")} Lock</button>` : ""}</div></div></header>
+        <div class="sx-me"><a class="sx-garage" href="${esc(X.url({ garage: 1 }))}">Your garage</a>${isOwner() && window.rvShopLock && rvShopLock.isAdmin(X) && rvShopLock.customerMode() ? `<button class="btn sm lk-lock" data-cmexit title="Back to the admin view">Customer mode · Exit</button>` : ""}${isOwner() && window.rvShopLock && !rvShopLock.adminBypass(X) ? `<button class="btn sm lk-lock" data-lockall title="Back to the shop login">${ic("lock")} Lock</button>` : ""}</div></div></header>
       <main class="sx-main">${inner}</main></div>`;
     X.app.querySelectorAll("[data-t]").forEach(a => a.onclick = ev => { ev.preventDefault(); nav(a.dataset.t); });
     const lk = X.app.querySelector("[data-lockall]"); if (lk) lk.onclick = () => rvShopLock.lockAll();
+    const cx = X.app.querySelector("[data-cmexit]"); if (cx) cx.onclick = () => { rvShopLock.setCustomerMode(false); location.href = X.url({ garage: 1 }); };
   }
   function draw() {
     const r = route();
@@ -739,10 +740,7 @@
     shell(`<div class="sx-pageh"><div><h1>Shop</h1><p>${isOwner() ? "Your details go on reminder emails, reports, estimates and invoices." : `You work at ${esc(sh.name)}.`}</p></div></div>
       <div class="sx-grid2 wide-left"><section class="sx-panel"><form class="sx-form" id="shF" novalidate>${detailsForm(sh, { readonly: !isOwner() })}<p class="sx-err" hidden></p>
           ${isOwner() ? `<div class="sx-acts left"><button class="btn pri" type="submit">Save details</button></div>` : ""}</form></section>
-        <div class="sx-col">${isOwner() ? `<section class="sx-panel"><div class="sx-ph"><h2>Owner PIN</h2></div><p class="sx-small" style="margin:0 0 10px">Opens the full shop on your computers. Employees use their own PINs.</p>
-            <form class="sx-form" id="pnF"><div class="sx-f3"><label class="sx-f"><b>Current</b><input name="old" type="password" inputmode="numeric" maxlength="4"></label><label class="sx-f"><b>New</b><input name="p1" type="password" inputmode="numeric" maxlength="4"></label><label class="sx-f"><b>Again</b><input name="p2" type="password" inputmode="numeric" maxlength="4"></label></div>
-            <div class="sx-acts left"><button class="btn" type="submit">${ic("key")} Change PIN</button></div></form></section>
-          <section class="sx-panel"><div class="sx-ph"><h2>Employees</h2></div><p class="sx-small" style="margin:0 0 10px">${S.emps.length ? `${S.emps.length} employee${S.emps.length === 1 ? "" : "s"}.` : "No employees yet."} Add them, assign clients and see their work on the Team page.</p><button class="btn" data-go="team">${ic("users")} Open Team</button></section>` : ""}
+        <div class="sx-col">${isOwner() ? `<section class="sx-panel"><div class="sx-ph"><h2>Employees</h2></div><p class="sx-small" style="margin:0 0 10px">${S.emps.length ? `${S.emps.length} employee${S.emps.length === 1 ? "" : "s"}.` : "No employees yet."} Add them, assign clients and see their work on the Team page.</p><button class="btn" data-go="team">${ic("users")} Open Team</button></section>` : ""}
           <section class="sx-panel"><div class="sx-ph"><h2>How clients join</h2></div><div class="sx-how one">
             <div><b>1. Add them</b><span>Each client gets a code, like <span class="mono">${esc(([...S.clients.values()][0] || { code: "K7M2Q9XA" }).code)}</span>.</span></div>
             <div><b>2. Share the link</b><span>They make a free account and follow their bike: history and what's due. No prices, no shop notes.</span></div>
@@ -753,10 +751,6 @@
     if (isOwner()) f.onsubmit = async ev => { ev.preventDefault(); const v = readDetails(f); if (!v.name) { er.textContent = "Add the shop's name."; er.hidden = false; return; }
       try { await saveDetails(v); } catch (e) { er.textContent = err(e); er.hidden = false; return; }
       Object.assign(S.shop, { name: v.name, phone: v.phone, email: v.email, address: v.address, details: v.details }); note("Saved."); draw(); };
-    const pf = X.app.querySelector("#pnF"); if (pf) pf.onsubmit = async ev => { ev.preventDefault();
-      if (!/^[0-9]{4}$/.test(pf.p1.value)) return note("The new PIN needs 4 numbers.", true); if (pf.p1.value !== pf.p2.value) return note("The new PINs don't match.", true);
-      const { data: r, error } = await X.sb.rpc("shop_set_master_pin", { old: pf.old.value, p: pf.p1.value }); if (error) return note(err(error), true);
-      if (r === "wrong") return note("Your current PIN isn't right.", true); if (r !== "ok") return note("That didn't save.", true); pf.reset(); note("Owner PIN changed."); };
   }
 
   /* ---------- Team: employees, PINs, who has who ---------- */
@@ -786,7 +780,7 @@
     return { logs, week: since(7), month: since(30) };
   }
   function viewTeam() {
-    shell(`<div class="sx-pageh"><div><h1>Team</h1><p>Employees log work under their own PIN on your computers or their phone. They see only the bikes they're assigned or have worked on. You see everything.</p></div><button class="btn tan" data-addemp>${ic("plus")} Add employee</button></div>
+    shell(`<div class="sx-pageh"><div><h1>Team</h1><p>Employees clock in with their name and their own 6-digit PIN, on your computers or their phone. They see only the bikes they're assigned or have worked on. You see everything.</p></div><button class="btn tan" data-addemp>${ic("plus")} Add employee</button></div>
       ${S.emps.length ? S.emps.map(e => { const st = empStats(e), asg = S.assign.filter(a => a.employee_id === e.id);
         return `<section class="sx-panel sx-emp"><div class="sx-emph"><span class="sx-av big">${esc(initials(e.name || e.email))}</span><div class="grow"><h2>${esc(e.name || e.email || "New employee")}</h2>
             <small>${e.status === "invited" ? `<span class="pill amber plain">Hasn't set up yet</span>` : `<span class="pill green plain">Active</span>`} ${esc(e.email || "")}${e.last_seen ? " · last in " + esc(fmt(e.last_seen)) : ""}</small></div>
@@ -810,7 +804,7 @@
   }
   function addEmpBox() {
     const m = modal(`<form class="sx-form" id="aeF" novalidate><div class="sx-f2"><label class="sx-f"><b>Name</b><input name="name" maxlength="80"></label><label class="sx-f"><b>Email <span class="faint">(to send the link)</span></b><input name="email" type="email" maxlength="200"></label></div>
-      <p class="sx-small">They get a link and a 4-number starting PIN. The first time in, they confirm their name and email and pick their own PIN. They don't need a Revora account.</p><p class="sx-err" hidden></p>
+      <p class="sx-small">They get a link and a 6-digit starting PIN. The first time in, they type their name and that PIN, then pick their own 6-digit PIN. They don't need a Revora account.</p><p class="sx-err" hidden></p>
       <div class="sx-acts"><button type="button" class="btn" data-close>Cancel</button><button class="btn pri" type="submit">${ic("plus")} Add employee</button></div></form>`, { title: "Add employee" });
     const f = m.querySelector("#aeF"), er = m.querySelector(".sx-err");
     f.onsubmit = async ev => { ev.preventDefault(); const nm = f.name.value.trim(), em = f.email.value.trim();
@@ -821,11 +815,11 @@
   }
   function inviteBox(e, r) {
     const link = location.origin + location.pathname + "?emp=" + encodeURIComponent(r.invite), first = String(e.name || "").split(" ")[0] || "there";
-    const msg = `Hi ${first}, here's your login for ${S.shop.name} on Revora: ${link}\nYour starting PIN is ${r.pin}. Open the link, enter the PIN, then pick your own PIN.`;
+    const msg = `Hi ${first}, here's your login for ${S.shop.name} on Revora: ${link}\nYour starting PIN is ${r.pin}. Open the link, type your name and this PIN, then pick your own 6-digit PIN.`;
     const m = modal(`<p class="sx-p">${e.email ? `Revora emails this to <b>${esc(e.email)}</b> now. ` : ""}You can also give it to them yourself. The starting PIN only works until they pick their own.</p>
       <div class="sx-pinshow"><span>Starting PIN</span><b class="mono">${esc(r.pin)}</b></div>
       <div class="sx-linkbox"><input readonly value="${esc(link)}" aria-label="Employee link"><button class="btn sm" data-cl>${ic("copy")} Copy link</button></div>
-      <p class="sx-small">On your shop's computers they don't need the link: they tap their name on the Who's working? screen and enter the starting PIN.</p>
+      <p class="sx-small">On your shop's computers they don't need the link: on the shop login they type their name and the starting PIN.</p>
       <div class="sx-acts">${e.email ? `<a class="btn" href="mailto:${esc(e.email)}?subject=${encodeURIComponent("Your " + S.shop.name + " login")}&body=${encodeURIComponent(msg)}">${ic("mail")} Email it myself</a>` : ""}<button class="btn" data-cm>${ic("copy")} Copy message</button><button class="btn pri" data-close>Done</button></div>`, { title: "Login for " + (e.name || e.email) });
     m.querySelector("[data-cl]").onclick = () => copy(link, "Link copied"); m.querySelector("[data-cm]").onclick = () => copy(msg, "Message copied");
     if (e.email) try { fetch((window.RV_CONFIG && RV_CONFIG.remindersApi || "https://revora-reminders.xavier-j-wilson101.workers.dev") + "/shop-invite", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ id: e.id }), keepalive: true }).catch(() => {}); } catch (x) {}
@@ -836,12 +830,12 @@
     X.app.innerHTML = `<div class="sx sx-setup"><header class="sx-top"><div class="sx-top-in"><a class="sx-brand" href="${esc(X.url({ garage: 1 }))}"><img src="img/revora-icon.svg" alt=""><img class="sx-word" src="img/revora-word-white.svg" alt="Revora"><span class="sx-shopname">Shop</span></a><div class="sx-me"><a class="sx-garage" href="${esc(X.url({ garage: 1 }))}">Your garage</a></div></div></header>
       <main class="sx-main narrow"><div class="sx-pageh"><div><div class="eyebrow">Revora Shop</div><h1>Set up your shop</h1><p>These go on reminder emails, reports, estimates and invoices. Only the shop name is required, and you can change any of it later.</p></div></div>
       <section class="sx-panel"><form class="sx-form" id="suF" novalidate>${detailsForm({}, { email: X.session.user.email })}<p class="sx-err" hidden></p>
-        <div class="sx-acts left"><button class="btn tan big" type="submit">Next: pick your owner PIN</button></div></form></section></main></div>`;
+        <div class="sx-acts left"><button class="btn tan big" type="submit">Open my shop</button></div></form></section></main></div>`;
     const f = X.app.querySelector("#suF"), er = X.app.querySelector(".sx-err");
     f.onsubmit = async ev => { ev.preventDefault(); const v = readDetails(f); if (!v.name) { er.textContent = "Add the shop's name."; er.hidden = false; return; }
       f.querySelector("[type=submit]").disabled = true;
       try { await saveDetails(v); } catch (error) { f.querySelector("[type=submit]").disabled = false; er.textContent = /does not exist|schema cache/i.test(error.message || "") ? "The shop database isn't set up yet. Run the shop SQL in Supabase first." : err(error); er.hidden = false; return; }
-      if (window.rvShopLock) rvShopLock.setMasterPin(X, { name: v.name }, () => { location.href = location.pathname + "?crm"; }, true); else show(X); };
+      if (window.rvShopLock) rvShopLock.markOwnerOpen(); location.href = location.pathname + "?crm"; };
   }
   function gatePage(title, text, plans) {
     X.app.innerHTML = `<div class="sx sx-setup"><header class="sx-top"><div class="sx-top-in"><a class="sx-brand" href="${esc(X.url({}))}"><img src="img/revora-icon.svg" alt=""><img class="sx-word" src="img/revora-word-white.svg" alt="Revora"><span class="sx-shopname">Shop</span></a><div class="sx-me"><a class="sx-garage" href="${esc(X.url({}))}">Your garage</a></div></div></header>
@@ -857,7 +851,7 @@
     const { data: shop, error } = await X.sb.rpc("my_shop");
     if (error) return gatePage("Shop isn't set up yet", /does not exist|schema cache|could not find/i.test(error.message || "") ? "The shop database hasn't been added. Run <b>supabase/shop_crm.sql</b> once in the Supabase SQL editor." : esc(err(error)), false);
     if (!shop) return X.plansOk() ? setupPage() : gatePage("Run your shop on Revora", "Revora Shop is part of the Shop plan.", true);
-    if (shop.role === "owner" && window.rvShopLock && !rvShopLock.ownerOpen()) return rvShopLock.gate(X, shop, () => location.reload());
+    if (shop.role === "owner" && window.rvShopLock && !rvShopLock.adminBypass(X) && !rvShopLock.ownerOpen()) return rvShopLock.gate(X, shop, () => location.reload());
     S = { shop, role: shop.role };
     if (!shop.plan_ok) return gatePage(shop.role === "owner" ? "Your Shop plan isn't active" : "This shop's plan isn't active", shop.role === "owner" ? "Renew the Shop plan to get back to your clients. Nothing you've logged is lost." : `Ask ${esc(shop.owner_name || "the shop owner")} to renew the Shop plan. Nothing is lost.`, shop.role === "owner");
     try { await loadAll(); } catch (e) { return gatePage("Couldn't load your shop", esc(err(e)) + " Reload the page to try again.", false); }

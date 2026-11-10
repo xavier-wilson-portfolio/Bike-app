@@ -433,6 +433,10 @@
 
   // Revora Shop: a band on the garage for shop owners and their staff
   function shopBand(shop, bikes) {
+    const cm = window.rvShopLock && rvShopLock.isAdmin(ctx()) ? `<div class="shop-cm"><span><b>Customer mode ${rvShopLock.customerMode() ? "is on" : "is off"}.</b> ${rvShopLock.customerMode() ? "The shop asks for your password and employees' PINs, exactly like a customer's." : "Turn it on to try the shop the way a customer does: password, employee PINs and all."}</span><button class="btn sm" data-cmode>${rvShopLock.customerMode() ? "Turn off" : "Turn on"}</button></div>` : "";
+    return shopBand0(shop, bikes) + cm;
+  }
+  function shopBand0(shop, bikes) {
     if (shop) return `<section class="shop-band"><div class="shop-band-i" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l2-6h14l2 6"/><path d="M4 10v10h16V10"/><path d="M3 10h18M9 20v-6h6v6"/></svg></div>
       <div><span class="shop-band-k">${shop.role === "owner" ? "Your shop" : "You work at"}</span><b>${esc(shop.name || "Your shop")}</b><span>${bikes ? `${bikes} client bike${bikes === 1 ? "" : "s"}. ` : ""}Clients, services, what's due, reminders and requests.</span></div>
       <button class="btn tan" data-crm>Open the shop</button></section>`;
@@ -512,6 +516,7 @@
       <p class="g-legal"><a href="?privacy">Privacy Policy</a> · <a href="?terms">Terms of Service</a> · <button class="linkbtn g-del" data-delacct>Delete my account</button></p>`, { wide: true, garage: true });
     const adm = document.getElementById("admHQ"); if (adm) window.rvAdmin.mount(adm, sb, note);
     app.querySelectorAll("[data-crm]").forEach(b => b.onclick = () => goUrl({ crm: 1 }));
+    app.querySelectorAll("[data-cmode]").forEach(b => b.onclick = () => { const on = !rvShopLock.customerMode(); rvShopLock.setCustomerMode(on); note(on ? "Customer mode is on. Opening the shop login." : "Customer mode is off."); if (on) goUrl({ crm: 1 }); else showProjects(); });
     app.querySelectorAll("[data-mine]").forEach(b => b.onclick = () => { ls.set("rv.clientHome", ""); goUrl({ mine: 1 }); });
     maybeAskPhone();
     app.querySelectorAll("[data-delacct]").forEach(b => b.onclick = () => deleteAccountBox(data));
@@ -1066,10 +1071,14 @@
     if (window.rvShopLock && window.rvCRM && sb) {
       const myShop = session ? await rvCRM.mine(sb) : null;
       if (myShop && myShop.role === "owner") {
-        if (rvShopLock.empActive()) return rvShopLock.empApp(ctx());
-        if (!rvShopLock.ownerOpen()) return rvShopLock.gate(ctx(), myShop, () => location.reload());
-        rvShopLock.watchIdle("owner");
-        if (![...qs.keys()].length || qs.has("crm")) return rvCRM.show(ctx());
+        if (rvShopLock.adminBypass(ctx())) { if (qs.has("crm")) return rvCRM.show(ctx()); }   // the Revora admin goes straight to the garage
+        else {
+          if (qs.get("setpw")) return rvShopLock.setPasswordPage(ctx(), myShop, () => { location.href = location.pathname + "?crm"; });
+          if (rvShopLock.empActive()) return rvShopLock.empApp(ctx());
+          if (!rvShopLock.ownerOpen()) return rvShopLock.gate(ctx(), myShop, () => location.reload());
+          rvShopLock.watchIdle();
+          if (![...qs.keys()].length || qs.has("crm")) return rvCRM.show(ctx());
+        }
       } else if (rvShopLock.empActive() && !qs.has("garage")) return rvShopLock.empApp(ctx());
       else if (rvShopLock.hasDevice() && !["auth", "garage", "project", "bike", "plans", "pick"].some(k => qs.has(k))) return rvShopLock.phoneStart(ctx());
     }
