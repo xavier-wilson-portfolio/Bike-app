@@ -10,7 +10,7 @@ try { const s = sessionStorage.getItem("rv.secOpen"); if (s && SEC[s]) { session
     document.body.appendChild(d);
   };
   // work orders print the shop's details: fill them in from Revora Shop the first time
-  if (typeof SHOP === "function" && !SHOP().name) C.sb.rpc("my_shop").then(({ data }) => { if (data && !SHOP().name) setShop({ name: data.name || "", address: data.address || "", phone: data.phone || "", email: data.email || "" }); if (R.sec === "workorders") render(false); }, () => {});
+  if (typeof SHOP === "function" && !SHOP().name) C.sb.rpc("my_shop").then(({ data }) => { if (data && !SHOP().name) { const d = data.details || {}; setShop(Object.assign({ name: data.name || "", address: data.address || "", phone: data.phone || "", email: data.email || "" }, d.rate ? { rate: d.rate } : {}, d.taxPct ? { taxPct: d.taxPct } : {}, d.suppliesPct ? { suppliesPct: d.suppliesPct } : {}, d.terms ? { terms: d.terms } : {})); } if (R.sec === "workorders") render(false); }, () => {});
   let t = null, last = "";
   async function sync() {
     if (!store.ready || !window.rvDue || !C.shopClient) return;

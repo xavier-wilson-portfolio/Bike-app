@@ -18,7 +18,8 @@
     users: '<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6 6 0 0 1 3.5 6"/>', home: '<path d="M4 11l8-7 8 7v9H4z"/><path d="M10 20v-6h4v6"/>',
     inbox: '<path d="M3 13l3-8h12l3 8v6H3z"/><path d="M3 13h5l1 3h6l1-3h5"/>', gear: '<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/>',
     back: '<path d="M15 5l-7 7 7 7"/>', bolt: '<path d="M13 3L5 13h6l-1 8 8-10h-6z"/>', check: '<path d="M5 12l4 4 10-10"/>', arrow: '<path d="M5 12h14M13 6l6 6-6 6"/>', send: '<path d="M4 12l16-8-6 16-3-7z"/>',
-    print: '<path d="M7 9V3h10v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/>', move: '<path d="M4 12h12M12 6l6 6-6 6"/><path d="M20 4v16"/>', tag: '<path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/>' };
+    print: '<path d="M7 9V3h10v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/>', move: '<path d="M4 12h12M12 6l6 6-6 6"/><path d="M20 4v16"/>', tag: '<path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/>',
+    lock: '<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>', key: '<circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3"/>' };
   const ic = k => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${I[k] || ""}</svg>`;
   const STYLES = [["standard", "Standard / naked"], ["cruiser", "Cruiser"], ["sport", "Sport"], ["adventure", "Adventure"], ["dualsport", "Dual-sport / dirt"], ["touring", "Touring"], ["cafe", "Cafe racer / classic"], ["scooter", "Scooter"]];
   const DRIVES = [["chain", "Chain"], ["shaft", "Shaft"], ["belt", "Belt"], ["cvt", "Scooter (CVT)"]];
@@ -38,7 +39,7 @@
     const esc2 = ev => { if (ev.key === "Escape") close(); }; document.addEventListener("keydown", esc2);
     function close() { box.remove(); document.removeEventListener("keydown", esc2); if (opts.onClose) opts.onClose(); }
     document.body.appendChild(box); box.close = close;
-    const f = box.querySelector("input:not([type=checkbox]):not([type=hidden]),textarea"); if (f && !(matchMedia && matchMedia("(pointer:coarse)").matches)) setTimeout(() => f.focus(), 30);
+    const f = box.querySelector("input:not([type=checkbox]):not([type=hidden]),textarea"); if (f && !(matchMedia && matchMedia("(pointer:coarse)").matches)) setTimeout(() => { if (!box.contains(document.activeElement)) f.focus(); }, 30);
     return box;
   }
   function confirmBox(title, text, yes, fn, danger) {
@@ -53,6 +54,8 @@
   const silFor = m => { const f = X.silFile((m && m.silhouette) || "") || X.silFile("bike-" + ((m && m.style) || "standard")) || X.silFile("bike-standard"); return f ? `img/sil/${f}` : ""; };
   const joinUrl = c => location.origin + location.pathname + "?join=" + encodeURIComponent(c.code);
   const isOwner = () => S && S.role === "owner";
+  // big changes ask for the account password (on the owner's computers anyone can be standing at the keyboard)
+  const withPw = (what, fn) => window.rvShopLock && X.session ? rvShopLock.needPassword(X, what, fn) : fn();
   const today = () => D().today();
   const err = e => (e && e.message) || "Something went wrong. Check your internet and try again.";
 
@@ -68,7 +71,11 @@
     S.requests = rq.error ? [] : rq.data || [];
     S.bikes = new Map((pr.data || []).map(p => [p.id, { p, meta: {}, recs: { schedule: [], maintenance: [], mileage: [], mods: [], workorders: [], fuel: [] }, c: null }]));
     S.money = new Map();
-    if (isOwner()) { const { data } = await sb.from("shop_client_money").select("*").eq("shop_id", sid); (data || []).forEach(m => S.money.set(m.client_id, m)); }
+    S.emps = []; S.assign = [];
+    if (isOwner()) {
+      const [mo, em, as] = await Promise.all([sb.from("shop_client_money").select("*").eq("shop_id", sid), sb.from("shop_employees").select("id,name,email,status,created_at,setup_at,last_seen").eq("shop_id", sid).order("name"), sb.from("shop_assignments").select("*").eq("shop_id", sid)]);
+      (mo.data || []).forEach(m => S.money.set(m.client_id, m)); S.emps = (em.data || []).filter(e => e.status !== "removed"); S.assign = as.data || [];
+    }
     const ids = [...S.bikes.keys()], colls = ["meta", "schedule", "maintenance", "mileage", "mods", "workorders", "fuel"];
     for (let i = 0; i < ids.length; i += 80) {
       const chunk = ids.slice(i, i + 80);
@@ -86,6 +93,7 @@
   const bikeName = b => (b.meta && b.meta.bike) || b.p.name || "Bike";
   const clientOf = b => S.clients.get(b.p.shop_client) || null;
   const pendingReq = () => S.requests.filter(q => q.status === "pending");
+  const byTxt = r => r.byEmp ? r.byEmp.name : r.byOwner ? r.byOwner : "";
 
   /* ---------- writing records ---------- */
   function nextId(b, coll) {
@@ -120,7 +128,7 @@
   }
 
   /* ---------- page frame and routing ---------- */
-  const TABS = [["today", "Today", "home"], ["clients", "Clients", "users"], ["requests", "Requests", "inbox"], ["money", "Money", "money"], ["settings", "Shop", "gear"]];
+  const TABS = [["today", "Today", "home"], ["clients", "Clients", "users"], ["requests", "Requests", "inbox"], ["team", "Team", "users"], ["money", "Money", "money"], ["settings", "Shop", "gear"]];
   const route = () => { const q = new URLSearchParams(location.search); return { t: q.get("t") || "today", id: q.get("id") || "" }; };
   function nav(t, id, replace) {
     const u = new URL(location.href); u.search = "?crm"; if (t && t !== "today") u.searchParams.set("t", t); if (id) u.searchParams.set("id", id);
@@ -130,10 +138,11 @@
     const pend = pendingReq().length;
     X.app.innerHTML = `<div class="sx"><header class="sx-top"><div class="sx-top-in">
         <a class="sx-brand" href="?crm" data-t="today" aria-label="Revora Shop home"><img src="img/revora-icon.svg" alt=""><img class="sx-word" src="img/revora-word-white.svg" alt="Revora"><span class="sx-shopname">${esc(S.shop.name || "Your shop")}</span></a>
-        <nav class="sx-tabs" aria-label="Shop">${TABS.filter(t => t[0] !== "money" || isOwner()).map(([k, l, i]) => `<a href="?crm${k === "today" ? "" : "&t=" + k}" data-t="${k}" class="${active === k ? "on" : ""}">${ic(i)}<span>${l}</span>${k === "requests" && pend ? `<em>${pend}</em>` : ""}</a>`).join("")}</nav>
-        <div class="sx-me"><a class="sx-garage" href="${esc(X.url({}))}">Your garage</a></div></div></header>
+        <nav class="sx-tabs" aria-label="Shop">${TABS.filter(t => !["money", "team"].includes(t[0]) || isOwner()).map(([k, l, i]) => `<a href="?crm${k === "today" ? "" : "&t=" + k}" data-t="${k}" class="${active === k ? "on" : ""}">${ic(i)}<span>${l}</span>${k === "requests" && pend ? `<em>${pend}</em>` : ""}</a>`).join("")}</nav>
+        <div class="sx-me"><a class="sx-garage" href="${esc(X.url({ garage: 1 }))}">Your garage</a>${isOwner() && window.rvShopLock ? `<button class="btn sm lk-lock" data-lockall title="Back to Who's working?">${ic("lock")} Lock</button>` : ""}</div></div></header>
       <main class="sx-main">${inner}</main></div>`;
     X.app.querySelectorAll("[data-t]").forEach(a => a.onclick = ev => { ev.preventDefault(); nav(a.dataset.t); });
+    const lk = X.app.querySelector("[data-lockall]"); if (lk) lk.onclick = () => rvShopLock.lockAll();
   }
   function draw() {
     const r = route();
@@ -142,6 +151,7 @@
     if (r.t === "clients") return viewClients();
     if (r.t === "requests") return viewRequests();
     if (r.t === "money" && isOwner()) return viewMoney();
+    if (r.t === "team" && isOwner()) return viewTeam();
     if (r.t === "settings") return viewSettings();
     return viewToday();
   }
@@ -207,7 +217,7 @@
         <section class="sx-panel"><div class="sx-ph"><h2>Requests</h2><span>Clients asking for a report, value or budget</span></div>
           ${pend.length ? `<div class="sx-rows">${pend.slice(0, 6).map(reqRow).join("")}</div>` : `<div class="sx-empty">${ic("inbox")}<b>No requests waiting.</b><span>When a client asks for their history report, bike value or budget, it shows up here for you to approve.</span></div>`}</section>
         <section class="sx-panel"><div class="sx-ph"><h2>Recent visits</h2><span>Last services logged</span></div>
-          ${visits.length ? `<div class="sx-rows">${visits.slice(0, 8).map(({ b, r }) => { const c = clientOf(b); return `<button class="sx-row" data-open="${esc(c ? c.id : "")}"><span class="sx-date">${esc(fmt(r.date))}</span><span class="grow"><b>${esc(r.service || "Service")}</b><small>${esc(c ? c.name : "")} · ${esc(bikeName(b))}</small></span></button>`; }).join("")}</div>` : `<div class="sx-empty">${ic("doc")}<b>No services logged yet.</b><span>Open a client and tap Log service when their bike comes in.</span></div>`}</section>
+          ${visits.length ? `<div class="sx-rows">${visits.slice(0, 8).map(({ b, r }) => { const c = clientOf(b); return `<button class="sx-row" data-open="${esc(c ? c.id : "")}"><span class="sx-date">${esc(fmt(r.date))}</span><span class="grow"><b>${esc(r.service || "Service")}</b><small>${esc(c ? c.name : "")} · ${esc(bikeName(b))}${byTxt(r) ? " · by " + esc(byTxt(r)) : ""}</small></span></button>`; }).join("")}</div>` : `<div class="sx-empty">${ic("doc")}<b>No services logged yet.</b><span>Open a client and tap Log service when their bike comes in.</span></div>`}</section>
       </div>`, "today");
     bindCommon();
   }
@@ -271,7 +281,8 @@
       <section class="sx-chead">
         <div class="sx-cmain"><span class="sx-av big">${esc(initials(c.name))}</span><div><h1>${esc(c.name)}</h1>
           <div class="sx-cts">${telLink(c.phone)}${mailLink(c.email)}${!c.phone && !c.email ? `<span class="faint">No phone or email yet</span>` : ""}</div>
-          ${c.notes ? `<p class="sx-cnote">${esc(c.notes)}</p>` : ""}</div>
+          ${c.notes ? `<p class="sx-cnote">${esc(c.notes)}</p>` : ""}
+          ${isOwner() ? `<div class="sx-asg"><span>Assigned to</span>${assignChips(c)}<button class="linkbtn" data-assign>${S.emps.length ? "Change" : "Add employees"}</button></div>` : ""}</div>
           <button class="btn sm sx-edit" data-editc>Edit</button></div>
         <div class="sx-cside">
           <div class="sx-code"><span>Client code</span><b class="mono">${esc(c.code)}</b><div class="sx-code-b"><button class="btn sm" data-copycode>${ic("copy")} Copy</button><button class="btn sm pri" data-share>${ic("link")} Share link</button></div>
@@ -288,13 +299,14 @@
       ${bikes.length ? bikes.map(bikeCard).join("") : `<div class="sx-panel sx-empty">${ic("gauge")}<b>No bike on file.</b><span>Add their bike to start logging services.</span><button class="btn tan" data-addbike>${ic("plus")} Add a bike</button></div>`}
       <div class="sx-grid2">
         <section class="sx-panel"><div class="sx-ph"><h2>Visit history</h2><span>${visits.length} service${visits.length === 1 ? "" : "s"}</span></div>
-          ${visits.length ? `<div class="sx-tl">${visits.slice(0, 30).map(({ b, r }) => `<div class="sx-tli"><span class="sx-date">${esc(fmt(r.date))}</span><div><b>${esc(r.service || "Service")}</b><small>${esc([bikes.length > 1 ? bikeName(b) : "", n(r.odometer) ? D().milesFmt(r.odometer) + " mi" : "", D().svcCost(r) ? usd(D().svcCost(r)) : "", r.doneBy === "A shop" ? "" : r.doneBy === "Myself" ? "by the owner" : ""].filter(Boolean).join(" · "))}</small>${r.partsUsed ? `<small class="faint">${esc(String(r.partsUsed).split(/\n+/).slice(0, 3).join(" · "))}</small>` : ""}</div><button class="linkbtn" data-editsvc="${esc(b.p.id)}|${esc(r.id)}">Edit</button></div>`).join("")}</div>` : `<div class="sx-empty sm"><span>Nothing logged yet.</span></div>`}</section>
+          ${visits.length ? `<div class="sx-tl">${visits.slice(0, 30).map(({ b, r }) => `<div class="sx-tli"><span class="sx-date">${esc(fmt(r.date))}</span><div><b>${esc(r.service || "Service")}</b><small>${esc([bikes.length > 1 ? bikeName(b) : "", n(r.odometer) ? D().milesFmt(r.odometer) + " mi" : "", D().svcCost(r) ? usd(D().svcCost(r)) : "", byTxt(r) ? "by " + byTxt(r) : r.doneBy === "Myself" ? "by the bike's owner" : ""].filter(Boolean).join(" · "))}</small>${r.partsUsed ? `<small class="faint">${esc(String(r.partsUsed).split(/\n+/).slice(0, 3).join(" · "))}</small>` : ""}</div><button class="linkbtn" data-editsvc="${esc(b.p.id)}|${esc(r.id)}">Edit</button></div>`).join("")}</div>` : `<div class="sx-empty sm"><span>Nothing logged yet.</span></div>`}</section>
         <section class="sx-panel"><div class="sx-ph"><h2>Sent to ${esc(c.name.split(" ")[0])}</h2><span>Reports, values and budgets</span></div>
           ${sent.length ? `<div class="sx-rows">${sent.map(q => { const b = S.bikes.get(q.project_id); return `<a class="sx-row" href="?shopdoc=${esc(q.token)}" target="_blank" rel="noopener"><span class="grow"><b>${esc(DOC().KIND[q.kind])}</b><small>${esc(b ? bikeName(b) : "")} · ${esc(fmt(q.decided_at))}${q.asked_by_client ? " · they asked" : ""}</small></span><span class="sx-when">${q.emailed_at ? "Emailed" : c.client_user ? "In their account" : ""}</span></a>`; }).join("")}</div>` : `<div class="sx-empty sm"><span>Nothing sent yet. Use History report, Value or Budget report to send one.</span></div>`}</section>
       </div>`, "clients");
     bindCommon();
     const root = X.app;
     root.querySelector("[data-editc]").onclick = () => editClientBox(c);
+    const asb = root.querySelector("[data-assign]"); if (asb) asb.onclick = () => S.emps.length ? assignBox(c) : nav("team");
     root.querySelector("[data-copycode]").onclick = () => copy(c.code, "Client code copied");
     root.querySelector("[data-share]").onclick = () => shareBox(c);
     const rm = root.querySelector("[data-remind]"); if (rm) rm.onchange = async () => {
@@ -348,10 +360,10 @@
       on("[data-editbike]", () => bikeBox(c, b));
       on("[data-full]", () => openBikePage(b.p.id));
       on("[data-mods]", () => modsBox(b));
-      on("[data-transfer]", () => transferBox(c, b));
-      on("[data-delbike]", () => confirmBox("Delete this bike?", `${esc(bikeName(b))} and its whole service history will be deleted for good. If ${esc(c.name.split(" ")[0])} wants to keep the history, use Hand bike to client instead.`, "Delete bike", async () => {
+      on("[data-transfer]", () => withPw("Handing a bike over", () => transferBox(c, b)));
+      on("[data-delbike]", () => withPw("Deleting a bike", () => confirmBox("Delete this bike?", `${esc(bikeName(b))} and its whole service history will be deleted for good. If ${esc(c.name.split(" ")[0])} wants to keep the history, use Hand bike to client instead.`, "Delete bike", async () => {
         const { error } = await X.sb.from("projects").delete().eq("id", b.p.id); if (error) return note(err(error), true);
-        S.bikes.delete(b.p.id); note("Bike deleted."); draw(); }, true));
+        S.bikes.delete(b.p.id); note("Bike deleted."); draw(); }, true)));
     });
   }
 
@@ -361,10 +373,10 @@
   const bikeLabel = d => [String(d.year || "").trim(), String(d.make || "").trim(), String(d.model || "").trim()].filter(Boolean).join(" ");
   function newClientBox(name) {
     const m = modal(`<form class="sx-form" id="ncF" novalidate>
-        <div class="sx-f2"><label class="sx-f"><b>Name</b><input name="name" required maxlength="120" value="${esc(name)}" autocomplete="off"></label><label class="sx-f"><b>Phone</b><input name="phone" type="tel" maxlength="40" autocomplete="off"></label></div>
-        <label class="sx-f"><b>Email</b><input name="email" type="email" maxlength="200" autocomplete="off"><small>For service reminders and anything you send them.</small></label>
+        <div class="sx-f2"><label class="sx-f"><b>Name</b><input name="name" required maxlength="120" value="${esc(name)}" autocomplete="off"></label><label class="sx-f"><b>Phone <span class="faint">(optional)</span></b><input name="phone" type="tel" maxlength="40" autocomplete="off"></label></div>
+        <label class="sx-f"><b>Email <span class="faint">(optional)</span></b><input name="email" type="email" maxlength="200" autocomplete="off"><small>Needed only for reminder emails and reports. You can add it later.</small></label>
         <label class="sx-chk"><input type="checkbox" name="remind"><span>They agreed to get service reminder emails</span></label>
-        <h3 class="sx-h3">Their bike</h3>${bikeFields({}, true)}
+        <h3 class="sx-h3">Their bike <span class="faint" style="font-weight:400">(optional)</span></h3>${bikeFields({}, true)}
         <label class="sx-chk"><input type="checkbox" name="preset" checked><span>Start with typical service intervals (oil, chain, brakes, tires and more). Check them against the manual later.</span></label>
         <label class="sx-f"><b>Notes for the shop</b><textarea name="notes" rows="2" maxlength="2000" placeholder="Only your shop sees these."></textarea></label>
         <p class="sx-err" hidden></p>
@@ -379,7 +391,7 @@
       if (!String(d.name || "").trim()) return bad("Add their name.");
       if (d.email && !/^\S+@\S+\.\S+$/.test(d.email.trim())) return bad("That email doesn't look right.");
       if (d.remind && !d.email.trim()) return bad("Add their email to send reminders.");
-      const label = bikeLabel(d); if ((d.year || d.make || d.model) && !(d.make && d.model)) return bad("Add the bike's make and model, or leave the bike empty for now.");
+      const label = bikeLabel(d);
       f.querySelectorAll("button").forEach(x => x.disabled = true);
       const row = { shop_id: S.shop.id, name: d.name.trim(), phone: String(d.phone || "").trim(), email: String(d.email || "").trim(), notes: String(d.notes || "").trim(), remind_ok: !!d.remind, remind_ok_at: d.remind ? new Date().toISOString() : null };
       const { data: c, error } = await X.sb.from("shop_clients").insert(row).select("*").single();
@@ -437,11 +449,11 @@
       const { data, error } = await X.sb.rpc("shop_reset_code", { cid: c.id }); if (error || !data) return note(err(error), true); c.code = data; m.close(); note("New code: " + data); draw(); });
     const ul = m.querySelector("[data-unlink]"); if (ul) ul.onclick = () => confirmBox("Unlink their account?", `${esc(c.name)} won't see this bike in their Revora account any more. You can send the link again later.`, "Unlink", async () => {
       const { error } = await X.sb.rpc("shop_unlink_client", { cid: c.id }); if (error) return note(err(error), true); c.client_user = null; c.joined_at = null; m.close(); draw(); });
-    const dl = m.querySelector("[data-delc]"); if (dl) dl.onclick = () => { const bs = bikesOf(c.id);
+    const dl = m.querySelector("[data-delc]"); if (dl) dl.onclick = () => withPw("Deleting a client", () => { const bs = bikesOf(c.id);
       confirmBox("Delete this client?", `${esc(c.name)}${bs.length ? ` and ${bs.length === 1 ? "their bike" : "their " + bs.length + " bikes"}, with every service logged,` : ""} will be deleted for good.${bs.length ? " To let them keep the history, hand the bikes over first." : ""}`, "Delete client", async () => {
         for (const b of bs) { const { error } = await X.sb.from("projects").delete().eq("id", b.p.id); if (error) return note(err(error), true); S.bikes.delete(b.p.id); }
         const { error } = await X.sb.from("shop_clients").delete().eq("id", c.id); if (error) return note(err(error), true);
-        S.clients.delete(c.id); m.close(); note("Client deleted."); nav("clients"); }, true); };
+        S.clients.delete(c.id); m.close(); note("Client deleted."); nav("clients"); }, true); });
   }
   function shareBox(c) {
     const link = joinUrl(c), first = c.name.split(" ")[0], shop = S.shop.name || "our shop";
@@ -464,7 +476,7 @@
     const f = m.querySelector("#bkF"), er = m.querySelector(".sx-err");
     f.onsubmit = async ev => {
       ev.preventDefault(); const d = Object.fromEntries(new FormData(f)), label = bikeLabel(d);
-      if (!d.make || !d.model) { er.textContent = "Add the make and model."; er.hidden = false; return; }
+      if (!bikeLabel(d)) { er.textContent = "Add the bike's make or model."; er.hidden = false; return; }
       f.querySelectorAll("button").forEach(x => x.disabled = true);
       try {
         if (b) { await putMeta(b, { bike: label, projectName: label, year: d.year.trim(), make: d.make.trim(), model: d.model.trim(), style: d.style, drive: d.drive, frameNo: String(d.vin || "").trim(), color: d.color.trim() }); await X.sb.from("projects").update({ name: label }).eq("id", b.p.id); b.p.name = label; }
@@ -533,7 +545,7 @@
       const odo = num("odometer");
       if (odo && bk.c.odo && odo < bk.c.odo.miles && !edit && !confirm(`${D().milesFmt(odo)} mi is lower than the last reading (${D().milesFmt(bk.c.odo.miles)} mi). Save it anyway?`)) return;
       f.querySelectorAll("button").forEach(x => x.disabled = true);
-      const out = Object.assign({}, r, { id: r.id || nextId(bk, "maintenance"), service, date: d.get("date") || today(), odometer: odo, kind: r.kind || (items.length ? "Scheduled service" : "Repair"), items, doneBy: "A shop", shop: S.shop.name || "Shop",
+      const out = Object.assign({}, r, { id: r.id || nextId(bk, "maintenance"), service, date: d.get("date") || today(), odometer: odo, kind: r.kind || (items.length ? "Scheduled service" : "Repair"), items, doneBy: "A shop", shop: S.shop.name || "Shop", byOwner: r.byEmp ? r.byOwner : who(),
         laborHours: num("laborHours"), partsUsed: String(d.get("partsUsed") || "").trim(), partsCost: num("partsCost"), laborCost: num("laborCost"), cost: num("cost"), notes: String(d.get("notes") || "").trim(), planned: false });
       try {
         await putRecs(bk, [{ coll: "maintenance", rec: out }]);
@@ -692,56 +704,144 @@
     bindCommon();
   }
 
-  /* ---------- Shop settings and staff ---------- */
+  /* ---------- shop details (setup and settings share the form) ---------- */
+  const SERVICES = ["Motorcycles", "Scooters", "Dirt bikes", "ATVs and UTVs", "Snowmobiles", "Watercraft", "Small engines"];
+  function detailsForm(sh, opts) {
+    const d = Object.assign({}, sh.details || {}), dis = opts.readonly ? "disabled" : "";
+    const f = (k, label, extra, val) => `<label class="sx-f"><b>${label}</b><input name="${k}" ${extra || ""} value="${esc(val != null ? val : d[k] || "")}" ${dis}></label>`;
+    return `<h3 class="sx-h3">Shop</h3>
+      <div class="sx-f2">${f("name", "Shop name", 'maxlength="80" required placeholder="Pete\'s Moto Service"', sh.name || "")}${f("legal", "Legal or business name <span class=\"faint\">(optional)</span>", 'maxlength="120"')}</div>
+      <div class="sx-f2">${f("phone", "Phone", 'type="tel" maxlength="40"', sh.phone || "")}${f("email", "Email <small class=\"faint\">(replies to reminders go here)</small>", 'type="email" maxlength="200"', sh.email || (opts.email || ""))}</div>
+      <h3 class="sx-h3">Address</h3>${f("street", "Street", 'maxlength="120"')}
+      <div class="sx-f3">${f("city", "City", 'maxlength="60"')}${f("state", "State", 'maxlength="30"')}${f("zip", "ZIP", 'maxlength="12" inputmode="numeric"')}</div>
+      <h3 class="sx-h3">Online and hours</h3><div class="sx-f2">${f("website", "Website", 'maxlength="120" placeholder="petesmoto.com"')}${f("hours", "Hours", 'maxlength="120" placeholder="Tue to Sat, 9 to 6"')}</div>
+      <h3 class="sx-h3">Pricing <span class="faint" style="font-weight:400">(used on work orders and estimates)</span></h3>
+      <div class="sx-f4">${f("rate", "Labor rate ($/hr)", 'inputmode="decimal"')}${f("taxPct", "Sales tax %", 'inputmode="decimal"')}${f("suppliesPct", "Shop supplies %", 'inputmode="decimal"')}${f("deposit", "Deposit ($)", 'inputmode="decimal"')}</div>
+      <div class="sx-f"><b>What you work on</b><div class="sx-ticks">${SERVICES.map(x => `<label class="sx-tick"><input type="checkbox" name="services" value="${esc(x)}" ${(d.services || ["Motorcycles"]).includes(x) ? "checked" : ""} ${dis}><span>${esc(x)}</span></label>`).join("")}</div></div>
+      <div class="sx-f2">${f("brands", "Brands or specialties <span class=\"faint\">(optional)</span>", 'maxlength="200" placeholder="Harley, metric cruisers, vintage Japanese"')}${f("license", "Dealer or repair license # <span class=\"faint\">(optional)</span>", 'maxlength="60"')}</div>
+      <label class="sx-f"><b>Fine print on estimates and invoices <span class="faint">(optional)</span></b><textarea name="terms" rows="2" maxlength="600" ${dis} placeholder="e.g. Storage is $10 a day after 3 days of being ready.">${esc(d.terms || "")}</textarea></label>`;
+  }
+  function readDetails(f) {
+    const fd = new FormData(f), g = k => String(fd.get(k) || "").trim(), num = k => n(g(k).replace(/[$,%]/g, ""));
+    const details = { legal: g("legal"), street: g("street"), city: g("city"), state: g("state"), zip: g("zip"), website: g("website"), hours: g("hours"), rate: num("rate"), taxPct: num("taxPct"), suppliesPct: num("suppliesPct"), deposit: num("deposit"),
+      services: fd.getAll("services"), brands: g("brands"), license: g("license"), terms: g("terms") };
+    const address = [details.street, [details.city, [details.state, details.zip].filter(Boolean).join(" ")].filter(Boolean).join(", ")].filter(Boolean).join(", ");
+    return { name: g("name"), phone: g("phone"), email: g("email"), address, details };
+  }
+  async function saveDetails(v) {
+    const { error } = await X.sb.rpc("shop_setup", { nm: v.name, ph: v.phone, em: v.email, ad: v.address }); if (error) throw error;
+    const { error: e2 } = await X.sb.from("shops").update({ details: v.details }).eq("owner", X.session.user.id); if (e2 && !/details/.test(e2.message || "")) throw e2;
+  }
+
+  /* ---------- Shop settings ---------- */
   async function viewSettings() {
     const sh = S.shop;
-    shell(`<div class="sx-pageh"><div><h1>Shop</h1><p>${isOwner() ? "Your shop's details go on reminder emails, reports and work orders." : `You work at ${esc(sh.name)}. ${esc(sh.owner_name || "The owner")} manages these settings.`}</p></div></div>
-      <div class="sx-grid2"><section class="sx-panel"><div class="sx-ph"><h2>Shop details</h2></div>
-        <form class="sx-form" id="shF"><label class="sx-f"><b>Shop name</b><input name="name" maxlength="80" value="${esc(sh.name)}" ${isOwner() ? "" : "disabled"}></label>
-          <div class="sx-f2"><label class="sx-f"><b>Phone</b><input name="phone" maxlength="40" value="${esc(sh.phone)}" ${isOwner() ? "" : "disabled"}></label><label class="sx-f"><b>Email</b><input name="email" type="email" maxlength="200" value="${esc(sh.email)}" ${isOwner() ? "" : "disabled"}><small>Clients' replies to reminder emails go here.</small></label></div>
-          <label class="sx-f"><b>Address</b><input name="address" maxlength="200" value="${esc(sh.address)}" ${isOwner() ? "" : "disabled"}></label>
-          ${isOwner() ? `<div class="sx-acts left"><button class="btn pri" type="submit">Save</button></div>` : ""}</form></section>
-        <section class="sx-panel"><div class="sx-ph"><h2>Staff logins</h2><span>Up to 10</span></div><div id="stL"><div class="spinner"></div></div>
-          ${isOwner() ? `<form class="sx-form" id="stF"><label class="sx-f"><b>Add a mechanic by email</b><div class="sx-inl"><input name="email" type="email" placeholder="mike@yourshop.com" maxlength="320"><button class="btn pri" type="submit">${ic("plus")} Add</button></div><small>They can find clients, log services, update odometers, manage upgrades and send reports. They can't see budgets or the Money page, hand bikes over or delete anything. If they don't have a Revora account yet, they join your shop when they sign up with this email.</small></label></form>` : `<div class="sx-acts left"><button class="btn danger" data-leave>Leave this shop</button></div>`}</section></div>
-      <section class="sx-panel"><div class="sx-ph"><h2>How clients join</h2></div><div class="sx-how">
-        <div><b>1. Add them</b><span>New client, with their bike. Each client gets a code, like <span class="mono">${esc(([...S.clients.values()][0] || { code: "K7M2Q9XA" }).code)}</span>.</span></div>
-        <div><b>2. Share the link</b><span>From their page, text or email the link. They make a free account and see their bike's history and what's due. No prices, no shop notes.</span></div>
-        <div><b>3. They ask, you approve</b><span>They can ask for a history report, the bike's value or their budget. You approve on the Requests page and it's emailed to them.</span></div>
-        <div><b>4. Hand it over</b><span>If they want the bike's records in their own garage, Hand bike to client moves it with its whole history. It leaves your shop.</span></div></div></section>`, "settings");
-    const f = X.app.querySelector("#shF");
-    if (isOwner()) f.onsubmit = async ev => { ev.preventDefault(); const d = Object.fromEntries(new FormData(f)); const { error } = await X.sb.rpc("shop_setup", { nm: d.name, ph: d.phone, em: d.email, ad: d.address }); if (error) return note(err(error), true); Object.assign(S.shop, { name: d.name.trim(), phone: d.phone.trim(), email: d.email.trim(), address: d.address.trim() }); note("Saved."); draw(); };
-    const lv = X.app.querySelector("[data-leave]"); if (lv) lv.onclick = () => confirmBox("Leave this shop?", `You'll lose access to ${esc(sh.name)}'s clients and bikes. The owner can add you again.`, "Leave", async () => { const { error } = await X.sb.from("shop_staff").delete().eq("shop_id", sh.id).eq("user_id", X.session.user.id); if (error) return note(err(error), true); location.href = X.url({}); }, true);
-    const L = X.app.querySelector("#stL");
-    const paint = async () => {
-      if (!isOwner()) { const { data } = await X.sb.from("shop_staff").select("user_id,added_at").eq("shop_id", sh.id); L.innerHTML = `<p class="sx-small">${(data || []).length} staff login${(data || []).length === 1 ? "" : "s"}, plus the owner.</p>`; return; }
-      const { data, error } = await X.sb.rpc("shop_staff_list"); if (error) { L.innerHTML = `<p class="sx-err">${esc(err(error))}</p>`; return; }
-      const st = (data && data.staff) || [], inv = (data && data.invites) || [];
-      L.innerHTML = `<div class="sx-rows"><div class="sx-row"><span class="sx-av">${esc(initials(X.profile && X.profile.display_name || "You"))}</span><span class="grow"><b>${esc((X.profile && X.profile.display_name) || "You")}</b><small>${esc(X.session.user.email)} · owner</small></span></div>
-        ${st.map(s => `<div class="sx-row"><span class="sx-av">${esc(initials(s.name || s.email))}</span><span class="grow"><b>${esc(s.name || s.email)}</b><small>${esc(s.email)} · added ${esc(fmt(s.added_at))}</small></span><button class="btn sm" data-rmst="${esc(s.user_id)}">Remove</button></div>`).join("")}
-        ${inv.map(i => `<div class="sx-row"><span class="sx-av faded">?</span><span class="grow"><b>${esc(i.email)}</b><small>Invited ${esc(fmt(i.created_at))}. Joins when they sign up.</small></span><button class="btn sm" data-rminv="${esc(i.email)}">Cancel</button></div>`).join("")}</div>`;
-      L.querySelectorAll("[data-rmst]").forEach(b => b.onclick = () => confirmBox("Remove this login?", "They lose access to your shop's clients and bikes right away.", "Remove", async () => { const { error: e2 } = await X.sb.from("shop_staff").delete().eq("shop_id", sh.id).eq("user_id", b.dataset.rmst); if (e2) note(err(e2), true); paint(); }, true));
-      L.querySelectorAll("[data-rminv]").forEach(b => b.onclick = async () => { const { error: e2 } = await X.sb.from("shop_staff_invites").delete().eq("shop_id", sh.id).eq("email", b.dataset.rminv); if (e2) note(err(e2), true); paint(); });
-    };
-    paint();
-    const sf = X.app.querySelector("#stF"); if (sf) sf.onsubmit = async ev => { ev.preventDefault(); const em = sf.email.value.trim(); if (!em) return;
-      const { data: r, error } = await X.sb.rpc("shop_add_staff", { em }); if (error) return note(err(error), true);
-      const M = { added: "Added. They'll see your shop next time they open Revora.", invited: "Invite saved. They join your shop when they sign up with that email.", self: "That's your own email.", full: "You have 10 logins already. Remove one first.", bad: "That email doesn't look right.", denied: "Only the shop owner can add staff." };
-      note(M[r] || "Done.", !["added", "invited"].includes(r)); if (["added", "invited"].includes(r)) sf.email.value = ""; paint(); };
+    shell(`<div class="sx-pageh"><div><h1>Shop</h1><p>${isOwner() ? "Your details go on reminder emails, reports, estimates and invoices." : `You work at ${esc(sh.name)}.`}</p></div></div>
+      <div class="sx-grid2 wide-left"><section class="sx-panel"><form class="sx-form" id="shF" novalidate>${detailsForm(sh, { readonly: !isOwner() })}<p class="sx-err" hidden></p>
+          ${isOwner() ? `<div class="sx-acts left"><button class="btn pri" type="submit">Save details</button></div>` : ""}</form></section>
+        <div class="sx-col">${isOwner() ? `<section class="sx-panel"><div class="sx-ph"><h2>Owner PIN</h2></div><p class="sx-small" style="margin:0 0 10px">Opens the full shop on your computers. Employees use their own PINs.</p>
+            <form class="sx-form" id="pnF"><div class="sx-f3"><label class="sx-f"><b>Current</b><input name="old" type="password" inputmode="numeric" maxlength="4"></label><label class="sx-f"><b>New</b><input name="p1" type="password" inputmode="numeric" maxlength="4"></label><label class="sx-f"><b>Again</b><input name="p2" type="password" inputmode="numeric" maxlength="4"></label></div>
+            <div class="sx-acts left"><button class="btn" type="submit">${ic("key")} Change PIN</button></div></form></section>
+          <section class="sx-panel"><div class="sx-ph"><h2>Employees</h2></div><p class="sx-small" style="margin:0 0 10px">${S.emps.length ? `${S.emps.length} employee${S.emps.length === 1 ? "" : "s"}.` : "No employees yet."} Add them, assign clients and see their work on the Team page.</p><button class="btn" data-go="team">${ic("users")} Open Team</button></section>` : ""}
+          <section class="sx-panel"><div class="sx-ph"><h2>How clients join</h2></div><div class="sx-how one">
+            <div><b>1. Add them</b><span>Each client gets a code, like <span class="mono">${esc(([...S.clients.values()][0] || { code: "K7M2Q9XA" }).code)}</span>.</span></div>
+            <div><b>2. Share the link</b><span>They make a free account and follow their bike: history and what's due. No prices, no shop notes.</span></div>
+            <div><b>3. They ask, you approve</b><span>History report, bike value or budget, emailed when you approve.</span></div>
+            <div><b>4. Hand it over</b><span>Moves the bike and its history into their own garage.</span></div></div></section></div></div>`, "settings");
+    bindCommon();
+    const f = X.app.querySelector("#shF"), er = f.querySelector(".sx-err");
+    if (isOwner()) f.onsubmit = async ev => { ev.preventDefault(); const v = readDetails(f); if (!v.name) { er.textContent = "Add the shop's name."; er.hidden = false; return; }
+      try { await saveDetails(v); } catch (e) { er.textContent = err(e); er.hidden = false; return; }
+      Object.assign(S.shop, { name: v.name, phone: v.phone, email: v.email, address: v.address, details: v.details }); note("Saved."); draw(); };
+    const pf = X.app.querySelector("#pnF"); if (pf) pf.onsubmit = async ev => { ev.preventDefault();
+      if (!/^[0-9]{4}$/.test(pf.p1.value)) return note("The new PIN needs 4 numbers.", true); if (pf.p1.value !== pf.p2.value) return note("The new PINs don't match.", true);
+      const { data: r, error } = await X.sb.rpc("shop_set_master_pin", { old: pf.old.value, p: pf.p1.value }); if (error) return note(err(error), true);
+      if (r === "wrong") return note("Your current PIN isn't right.", true); if (r !== "ok") return note("That didn't save.", true); pf.reset(); note("Owner PIN changed."); };
+  }
+
+  /* ---------- Team: employees, PINs, who has who ---------- */
+  const empName = id => (S.emps.find(e => e.id === id) || {}).name || "Employee";
+  function assignChips(c) {
+    const L = S.assign.filter(a => a.client_id === c.id); if (!L.length) return `<span class="faint">Nobody</span>`;
+    return L.map(a => `<span class="sx-chip">${esc(empName(a.employee_id))}${a.project_id && S.bikes.get(a.project_id) ? ` · ${esc(bikeName(S.bikes.get(a.project_id)))}` : ""}</span>`).join("");
+  }
+  function assignBox(c) {
+    const bikes = bikesOf(c.id), cur = S.assign.filter(a => a.client_id === c.id);
+    const val = e => { const a = cur.find(x => x.employee_id === e.id); return !a ? "" : a.project_id || "all"; };
+    const m = modal(`<p class="sx-p">Assigned clients show up on the employee's home screen. Anyone can still find and log any client.</p>
+      <div class="sx-rows">${S.emps.map(e => `<div class="sx-row"><span class="sx-av">${esc(initials(e.name || e.email))}</span><span class="grow"><b>${esc(e.name || e.email)}</b></span>
+        <select data-e="${esc(e.id)}" aria-label="Assignment for ${esc(e.name)}"><option value="">Not assigned</option><option value="all"${val(e) === "all" ? " selected" : ""}>All ${esc(c.name.split(" ")[0])}'s bikes</option>${bikes.map(b => `<option value="${esc(b.p.id)}"${val(e) === b.p.id ? " selected" : ""}>${esc(bikeName(b))} only</option>`).join("")}</select></div>`).join("")}</div>
+      <div class="sx-acts"><button class="btn" data-close>Cancel</button><button class="btn pri" data-save>Save</button></div>`, { title: "Who has " + c.name });
+    m.querySelector("[data-save]").onclick = async ev => { ev.target.disabled = true;
+      const { error: e1 } = await X.sb.from("shop_assignments").delete().eq("client_id", c.id); if (e1) { ev.target.disabled = false; return note(err(e1), true); }
+      const rows = [...m.querySelectorAll("[data-e]")].filter(s2 => s2.value).map(s2 => ({ shop_id: S.shop.id, employee_id: s2.dataset.e, client_id: c.id, project_id: s2.value === "all" ? null : s2.value }));
+      if (rows.length) { const { error: e2 } = await X.sb.from("shop_assignments").insert(rows); if (e2) { ev.target.disabled = false; return note(err(e2), true); } }
+      const { data } = await X.sb.from("shop_assignments").select("*").eq("shop_id", S.shop.id); S.assign = data || [];
+      m.close(); draw(); note("Saved."); };
+  }
+  function empStats(e) {
+    const logs = []; S.bikes.forEach(b => b.recs.maintenance.forEach(r => { if (r.byEmp && r.byEmp.id === e.id && !r.archived) logs.push({ b, r }); }));
+    logs.sort((a, z) => String(z.r.date).localeCompare(String(a.r.date)));
+    const since = d => logs.filter(x => x.r.date >= D().addDays(today(), -d)).length;
+    return { logs, week: since(7), month: since(30) };
+  }
+  function viewTeam() {
+    shell(`<div class="sx-pageh"><div><h1>Team</h1><p>Employees log work under their own PIN on your computers or their phone. They see only the bikes they're assigned or have worked on. You see everything.</p></div><button class="btn tan" data-addemp>${ic("plus")} Add employee</button></div>
+      ${S.emps.length ? S.emps.map(e => { const st = empStats(e), asg = S.assign.filter(a => a.employee_id === e.id);
+        return `<section class="sx-panel sx-emp"><div class="sx-emph"><span class="sx-av big">${esc(initials(e.name || e.email))}</span><div class="grow"><h2>${esc(e.name || e.email || "New employee")}</h2>
+            <small>${e.status === "invited" ? `<span class="pill amber plain">Hasn't set up yet</span>` : `<span class="pill green plain">Active</span>`} ${esc(e.email || "")}${e.last_seen ? " · last in " + esc(fmt(e.last_seen)) : ""}</small></div>
+            <div class="sx-emps"><div><b>${st.week}</b><span>this week</span></div><div><b>${st.month}</b><span>30 days</span></div><div><b>${st.logs.length}</b><span>all time</span></div></div>
+            <div class="sx-dd"><button class="btn sm" data-menu>More</button><div class="sx-menu" hidden><button data-rename="${esc(e.id)}">Rename</button><button data-reset="${esc(e.id)}">${ic("key")} New link and starting PIN</button><button class="red" data-rmemp="${esc(e.id)}">Remove</button></div></div></div>
+          <div class="sx-grid2 tight"><div><h4>Assigned</h4>${asg.length ? asg.map(a => { const c = S.clients.get(a.client_id); return c ? `<button class="sx-chip link" data-open="${esc(c.id)}">${esc(c.name)}${a.project_id && S.bikes.get(a.project_id) ? " · " + esc(bikeName(S.bikes.get(a.project_id))) : ""}</button>` : ""; }).join("") : `<span class="faint">Nobody yet. Assign from a client's page.</span>`}</div>
+            <div><h4>Recent work</h4>${st.logs.length ? st.logs.slice(0, 5).map(({ b, r }) => { const c = clientOf(b); return `<button class="sx-row" data-open="${esc(c ? c.id : "")}"><span class="sx-date">${esc(fmt(r.date))}</span><span class="grow"><b>${esc(r.service || "Service")}</b><small>${esc(c ? c.name : "")} · ${esc(bikeName(b))}</small></span></button>`; }).join("") : `<span class="faint">Nothing logged yet.</span>`}</div></div></section>`; }).join("")
+        : `<section class="sx-panel sx-empty">${ic("users")}<b>No employees yet.</b><span>Add someone with their name and email. They get a link and a starting PIN, then pick their own PIN.</span><button class="btn tan" data-addemp>${ic("plus")} Add employee</button></section>`}`, "team");
+    bindCommon();
+    X.app.querySelectorAll("[data-addemp]").forEach(b => b.onclick = addEmpBox);
+    X.app.querySelectorAll(".sx-emp").forEach(card => { const mb = card.querySelector("[data-menu]"), mm = card.querySelector(".sx-menu"); mb.onclick = ev => { ev.stopPropagation(); mm.hidden = !mm.hidden; if (!mm.hidden) setTimeout(() => document.addEventListener("click", () => { mm.hidden = true; }, { once: true }), 0); }; });
+    X.app.querySelectorAll("[data-rename]").forEach(b => b.onclick = async () => { const e = S.emps.find(x => x.id === b.dataset.rename), nm = prompt("Name", e.name || ""); if (!nm) return;
+      const { data: r } = await X.sb.rpc("shop_rename_employee", { eid: e.id, nm }); if (r === "ok") { e.name = nm.trim(); draw(); } });
+    X.app.querySelectorAll("[data-reset]").forEach(b => b.onclick = () => { const e = S.emps.find(x => x.id === b.dataset.reset);
+      confirmBox("New link and starting PIN?", `${esc(e.name || e.email)}'s current PIN and any phone they're signed in on stop working. They set up again with the new link.`, "Make new ones", async () => {
+        const { data: r, error } = await X.sb.rpc("shop_reset_employee", { eid: e.id }); if (error || !r) return note(err(error), true); e.status = "invited"; inviteBox(e, r); }); });
+    X.app.querySelectorAll("[data-rmemp]").forEach(b => b.onclick = () => { const e = S.emps.find(x => x.id === b.dataset.rmemp);
+      withPw("Removing an employee", () => confirmBox("Remove " + (e.name || e.email) + "?", "They can't log in any more, on any computer or phone. The work they logged stays on the bikes.", "Remove", async () => {
+        const { data: r, error } = await X.sb.rpc("shop_remove_employee", { eid: e.id }); if (error || r !== "ok") return note(err(error), true);
+        S.emps = S.emps.filter(x => x.id !== e.id); S.assign = S.assign.filter(a => a.employee_id !== e.id); draw(); note("Removed."); }, true)); });
+  }
+  function addEmpBox() {
+    const m = modal(`<form class="sx-form" id="aeF" novalidate><div class="sx-f2"><label class="sx-f"><b>Name</b><input name="name" maxlength="80"></label><label class="sx-f"><b>Email <span class="faint">(to send the link)</span></b><input name="email" type="email" maxlength="200"></label></div>
+      <p class="sx-small">They get a link and a 4-number starting PIN. The first time in, they confirm their name and email and pick their own PIN. They don't need a Revora account.</p><p class="sx-err" hidden></p>
+      <div class="sx-acts"><button type="button" class="btn" data-close>Cancel</button><button class="btn pri" type="submit">${ic("plus")} Add employee</button></div></form>`, { title: "Add employee" });
+    const f = m.querySelector("#aeF"), er = m.querySelector(".sx-err");
+    f.onsubmit = async ev => { ev.preventDefault(); const nm = f.name.value.trim(), em = f.email.value.trim();
+      if (!nm && !em) { er.textContent = "Add their name or email."; er.hidden = false; return; } if (em && !/^\S+@\S+\.\S+$/.test(em)) { er.textContent = "That email doesn't look right."; er.hidden = false; return; }
+      const { data: r, error } = await X.sb.rpc("shop_add_employee", { nm, em }); if (error || !r || r.error) { er.textContent = r && r.error === "full" ? "You have 25 employees already." : err(error); er.hidden = false; return; }
+      const e = { id: r.id, name: nm, email: em.toLowerCase(), status: "invited", created_at: new Date().toISOString() }; S.emps.push(e); S.emps.sort((a, z) => String(a.name).localeCompare(String(z.name)));
+      m.close(); draw(); inviteBox(e, r); };
+  }
+  function inviteBox(e, r) {
+    const link = location.origin + location.pathname + "?emp=" + encodeURIComponent(r.invite), first = String(e.name || "").split(" ")[0] || "there";
+    const msg = `Hi ${first}, here's your login for ${S.shop.name} on Revora: ${link}\nYour starting PIN is ${r.pin}. Open the link, enter the PIN, then pick your own PIN.`;
+    const m = modal(`<p class="sx-p">${e.email ? `Revora emails this to <b>${esc(e.email)}</b> now. ` : ""}You can also give it to them yourself. The starting PIN only works until they pick their own.</p>
+      <div class="sx-pinshow"><span>Starting PIN</span><b class="mono">${esc(r.pin)}</b></div>
+      <div class="sx-linkbox"><input readonly value="${esc(link)}" aria-label="Employee link"><button class="btn sm" data-cl>${ic("copy")} Copy link</button></div>
+      <p class="sx-small">On your shop's computers they don't need the link: they tap their name on the Who's working? screen and enter the starting PIN.</p>
+      <div class="sx-acts">${e.email ? `<a class="btn" href="mailto:${esc(e.email)}?subject=${encodeURIComponent("Your " + S.shop.name + " login")}&body=${encodeURIComponent(msg)}">${ic("mail")} Email it myself</a>` : ""}<button class="btn" data-cm>${ic("copy")} Copy message</button><button class="btn pri" data-close>Done</button></div>`, { title: "Login for " + (e.name || e.email) });
+    m.querySelector("[data-cl]").onclick = () => copy(link, "Link copied"); m.querySelector("[data-cm]").onclick = () => copy(msg, "Message copied");
+    if (e.email) try { fetch((window.RV_CONFIG && RV_CONFIG.remindersApi || "https://revora-reminders.xavier-j-wilson101.workers.dev") + "/shop-invite", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ id: e.id }), keepalive: true }).catch(() => {}); } catch (x) {}
   }
 
   /* ---------- first time: set up the shop ---------- */
   function setupPage() {
-    X.app.innerHTML = `<div class="sx sx-setup"><header class="sx-top"><div class="sx-top-in"><a class="sx-brand" href="${esc(X.url({}))}"><img src="img/revora-icon.svg" alt=""><img class="sx-word" src="img/revora-word-white.svg" alt="Revora"><span class="sx-shopname">Shop</span></a><div class="sx-me"><a class="sx-garage" href="${esc(X.url({}))}">Your garage</a></div></div></header>
-      <main class="sx-main narrow"><div class="sx-pageh"><div><div class="eyebrow">Revora Shop</div><h1>Set up your shop</h1><p>Your client book: every client, their bikes, every service, what's due and reminder emails, in one place. Takes a minute.</p></div></div>
-      <section class="sx-panel"><form class="sx-form" id="suF"><label class="sx-f"><b>Shop name</b><input name="name" required maxlength="80" placeholder="Pete's Moto Service"></label>
-        <div class="sx-f2"><label class="sx-f"><b>Phone</b><input name="phone" maxlength="40"></label><label class="sx-f"><b>Email</b><input name="email" type="email" maxlength="200" value="${esc(X.session.user.email)}"><small>Clients' replies to reminders go here.</small></label></div>
-        <label class="sx-f"><b>Address</b><input name="address" maxlength="200"></label><p class="sx-err" hidden></p>
-        <div class="sx-acts left"><button class="btn tan big" type="submit">Open my shop</button></div></form></section></main></div>`;
+    X.app.innerHTML = `<div class="sx sx-setup"><header class="sx-top"><div class="sx-top-in"><a class="sx-brand" href="${esc(X.url({ garage: 1 }))}"><img src="img/revora-icon.svg" alt=""><img class="sx-word" src="img/revora-word-white.svg" alt="Revora"><span class="sx-shopname">Shop</span></a><div class="sx-me"><a class="sx-garage" href="${esc(X.url({ garage: 1 }))}">Your garage</a></div></div></header>
+      <main class="sx-main narrow"><div class="sx-pageh"><div><div class="eyebrow">Revora Shop</div><h1>Set up your shop</h1><p>These go on reminder emails, reports, estimates and invoices. Only the shop name is required, and you can change any of it later.</p></div></div>
+      <section class="sx-panel"><form class="sx-form" id="suF" novalidate>${detailsForm({}, { email: X.session.user.email })}<p class="sx-err" hidden></p>
+        <div class="sx-acts left"><button class="btn tan big" type="submit">Next: pick your owner PIN</button></div></form></section></main></div>`;
     const f = X.app.querySelector("#suF"), er = X.app.querySelector(".sx-err");
-    f.onsubmit = async ev => { ev.preventDefault(); const d = Object.fromEntries(new FormData(f)); if (!d.name.trim()) { er.textContent = "Add the shop's name."; er.hidden = false; return; }
-      f.querySelector("button").disabled = true; const { error } = await X.sb.rpc("shop_setup", { nm: d.name, ph: d.phone, em: d.email, ad: d.address });
-      if (error) { f.querySelector("button").disabled = false; er.textContent = /does not exist|schema cache/i.test(error.message || "") ? "The shop database isn't set up yet. Run supabase/shop_crm.sql in Supabase first." : err(error); er.hidden = false; return; }
-      show(X); };
+    f.onsubmit = async ev => { ev.preventDefault(); const v = readDetails(f); if (!v.name) { er.textContent = "Add the shop's name."; er.hidden = false; return; }
+      f.querySelector("[type=submit]").disabled = true;
+      try { await saveDetails(v); } catch (error) { f.querySelector("[type=submit]").disabled = false; er.textContent = /does not exist|schema cache/i.test(error.message || "") ? "The shop database isn't set up yet. Run the shop SQL in Supabase first." : err(error); er.hidden = false; return; }
+      if (window.rvShopLock) rvShopLock.setMasterPin(X, { name: v.name }, () => { location.href = location.pathname + "?crm"; }, true); else show(X); };
   }
   function gatePage(title, text, plans) {
     X.app.innerHTML = `<div class="sx sx-setup"><header class="sx-top"><div class="sx-top-in"><a class="sx-brand" href="${esc(X.url({}))}"><img src="img/revora-icon.svg" alt=""><img class="sx-word" src="img/revora-word-white.svg" alt="Revora"><span class="sx-shopname">Shop</span></a><div class="sx-me"><a class="sx-garage" href="${esc(X.url({}))}">Your garage</a></div></div></header>
@@ -757,6 +857,7 @@
     const { data: shop, error } = await X.sb.rpc("my_shop");
     if (error) return gatePage("Shop isn't set up yet", /does not exist|schema cache|could not find/i.test(error.message || "") ? "The shop database hasn't been added. Run <b>supabase/shop_crm.sql</b> once in the Supabase SQL editor." : esc(err(error)), false);
     if (!shop) return X.plansOk() ? setupPage() : gatePage("Run your shop on Revora", "Revora Shop is part of the Shop plan.", true);
+    if (shop.role === "owner" && window.rvShopLock && !rvShopLock.ownerOpen()) return rvShopLock.gate(X, shop, () => location.reload());
     S = { shop, role: shop.role };
     if (!shop.plan_ok) return gatePage(shop.role === "owner" ? "Your Shop plan isn't active" : "This shop's plan isn't active", shop.role === "owner" ? "Renew the Shop plan to get back to your clients. Nothing you've logged is lost." : `Ask ${esc(shop.owner_name || "the shop owner")} to renew the Shop plan. Nothing is lost.`, shop.role === "owner");
     try { await loadAll(); } catch (e) { return gatePage("Couldn't load your shop", esc(err(e)) + " Reload the page to try again.", false); }

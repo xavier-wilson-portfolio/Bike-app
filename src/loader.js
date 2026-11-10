@@ -1061,6 +1061,18 @@
     if (qs.get("unsub") && window.rvClient) return rvClient.unsubPage(ctx(), qs.get("unsub"));
     if (qs.get("join") && window.rvClient && sb) return rvClient.joinLink(ctx(), qs.get("join"));
     if (session && window.rvClient && await rvClient.afterSignIn(ctx())) return;
+    /* ---------- Revora Shop: the owner's computers open into the shop behind "Who's working?"; employees' phones open to their PIN ---------- */
+    if (qs.get("emp") && window.rvShopLock && sb) return rvShopLock.inviteLink(ctx(), qs.get("emp"));
+    if (window.rvShopLock && window.rvCRM && sb) {
+      const myShop = session ? await rvCRM.mine(sb) : null;
+      if (myShop && myShop.role === "owner") {
+        if (rvShopLock.empActive()) return rvShopLock.empApp(ctx());
+        if (!rvShopLock.ownerOpen()) return rvShopLock.gate(ctx(), myShop, () => location.reload());
+        rvShopLock.watchIdle("owner");
+        if (![...qs.keys()].length || qs.has("crm")) return rvCRM.show(ctx());
+      } else if (rvShopLock.empActive() && !qs.has("garage")) return rvShopLock.empApp(ctx());
+      else if (rvShopLock.hasDevice() && !["auth", "garage", "project", "bike", "plans", "pick"].some(k => qs.has(k))) return rvShopLock.phoneStart(ctx());
+    }
     if (qs.has("crm") && window.rvCRM) { if (!sb) return fail("Accounts aren't set up on this site yet."); if (!session) return showAuth("signin"); return rvCRM.show(ctx()); }
     if (qs.has("mine") && window.rvClient && session) return rvClient.home(ctx());
     if (qs.has("paid") && session) return afterPaid();
