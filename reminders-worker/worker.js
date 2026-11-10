@@ -117,6 +117,28 @@ async function runShopDocs(env, rid) {
   }
   return { sent };
 }
+// a new employee's login link and starting PIN
+async function shopInvite(req, env) {
+  const o = req.headers.get("Origin") || "", h = SITES.includes(o) ? { "Access-Control-Allow-Origin": o, "Access-Control-Allow-Methods": "POST, OPTIONS", "Access-Control-Allow-Headers": "content-type", "Vary": "Origin" } : {};
+  if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: h });
+  if (req.method !== "POST" || !SITES.includes(o) || !env.RESEND_API_KEY) return new Response("no", { status: 403, headers: h });
+  const id = String((await req.json().catch(() => ({}))).id || ""); if (!/^[0-9a-f-]{36}$/.test(id)) return new Response("bad", { status: 400, headers: h });
+  let rows; try { rows = await rpc("shop_invite_outbox", { sec: env.WORKER_SECRET, eid: id }); } catch (e) { return new Response(JSON.stringify({ error: "setup" }), { status: 200, headers: h }); }
+  let sent = 0;
+  for (const r of rows || []) {   // only an employee whose starting PIN is still unused, at most once every 2 minutes
+    const first = String(r.name || "").split(/\s+/)[0] || "there", link = `${APP}/?emp=${encodeURIComponent(r.invite)}`;
+    const html = shopFrame({ k: esc(String(r.shop || "YOUR SHOP").toUpperCase()), t: "Your shop login" },
+      `<p style="font:15px/1.5 Arial,sans-serif;margin:16px 0">Hi ${esc(first)}, ${esc(r.shop)} added you to their shop on Revora.</p>
+       <p style="font:15px/1.5 Arial,sans-serif;margin:0 0 6px">Your starting PIN:</p><div style="font:700 30px 'Courier New',monospace;letter-spacing:8px;color:#17232C;margin:0 0 16px">${esc(r.pin)}</div>
+       <p style="margin:6px 0"><a href="${link}" style="background:#D9BF8E;color:#17232C;padding:12px 20px;border-radius:999px;text-decoration:none;font:700 15px Arial,sans-serif">Open my login</a></p>
+       <p style="font:13px/1.5 Arial,sans-serif;color:#5B6770;margin:14px 0 0">Enter the PIN, confirm your name and email, then pick your own PIN. On the shop's computer you can just tap your name instead.</p>`,
+      `Sent for ${esc(r.shop)} by Revora. If you weren't expecting this, you can ignore it.`);
+    const res = await fetch("https://api.resend.com/emails", { method: "POST", headers: { Authorization: "Bearer " + env.RESEND_API_KEY, "content-type": "application/json" },
+      body: JSON.stringify({ from: fromShop(r.shop), to: [r.email], reply_to: REPLY_TO, subject: `Your ${String(r.shop || "shop").slice(0, 60)} login on Revora`, html, text: `Hi ${first}, ${r.shop} added you on Revora.\n\nStarting PIN: ${r.pin}\nOpen: ${link}\n\nEnter the PIN, then pick your own.` }) });
+    if (res.ok) sent++; else console.log("invite failed", res.status, (await res.text()).slice(0, 200));
+  }
+  return new Response(JSON.stringify({ sent }), { status: 200, headers: Object.assign({ "content-type": "application/json" }, h) });
+}
 async function shopDoc(req, env) {
   const o = req.headers.get("Origin") || "", h = SITES.includes(o) ? { "Access-Control-Allow-Origin": o, "Access-Control-Allow-Methods": "POST, OPTIONS", "Access-Control-Allow-Headers": "content-type", "Vary": "Origin" } : {};
   if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: h });
@@ -304,6 +326,7 @@ export default {
     if (path === "/notify") return notify(req, env);
     if (path === "/unsub") return unsub(req, env);
     if (path === "/shop-doc") return shopDoc(req, env);
+    if (path === "/shop-invite") return shopInvite(req, env);
     if (path === "/shop-run") { try { return json({ reminders: await runShop(env), docs: await runShopDocs(env, null) }); } catch (e) { return json({ error: String(e.message || e) }, 500); } }
     if (path === "/welcome-test") { // sends the welcome emails a new member gets now (24-hour deal) to the admin only, to check how they look
       if (!env.RESEND_API_KEY) return json({ error: "not configured" }, 503);
