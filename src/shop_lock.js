@@ -131,16 +131,21 @@
     const head = `<div class="lg-instic">${ic(A.mobile() ? '<rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M11 18.5h2"/>' : '<rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>')}</div>
       <div class="eyebrow lg-step">Step 1 of 2</div><h2>${A.bookmarkOnly() ? "Save Revora first" : "Get the Revora app first"}</h2>
       <p class="lg-sub">${A.bookmarkOnly() ? "Bookmark Revora so you can open it in one click instead of searching for it." : `Put Revora on this ${dev} so you open it from an icon instead of searching for it. It brings you straight back here to finish.`}</p>`;
-    if (A.canPrompt()) {
+    if (A.canPrompt() && !A.inApp()) {
       card.innerHTML = `<div class="lg-pane lg-inst">${head}<button class="lg-go" data-inst>Install Revora</button><div class="lg-links">${skip}</div></div>`;
       card.querySelector("[data-inst]").onclick = async () => { const r = await A.prompt(); if (r === "accepted") finish(); else if (!A.canPrompt()) manual(); };
       return bindSkip();
     }
     manual();
     function manual() {
-      card.innerHTML = `<div class="lg-pane lg-inst">${head}<ol class="lg-steps">${A.steps().map(t => `<li><span>${t}</span></li>`).join("")}</ol>
-        <button class="lg-go" data-did>${A.bookmarkOnly() ? "Done, it's bookmarked" : A.isIOS() ? "I added it" : "Done, it's installed"}</button><div class="lg-links">${skip}</div></div>`;
-      card.querySelector("[data-did]").onclick = () => A.bookmarkOnly() ? done() : finish();
+      const g = A.guide(), inApp = g.kind === "inapp";
+      card.innerHTML = `<div class="lg-pane lg-inst">${inApp ? `<div class="lg-instic">${ic('<path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/>')}</div><div class="eyebrow lg-step">Step 1 of 2</div><h2>Open this in your browser</h2>
+          <p class="lg-sub">You're in ${esc(g.name)}, which can't add apps. Open this page in ${A.isIOS() ? "Safari" : "Chrome"} first, then add Revora from there.</p>` : head}
+        <div class="lg-for">${inApp ? "From " + esc(g.name) : "In " + esc(g.name)}</div><ol class="lg-steps">${g.steps.map(t => `<li><span>${t}</span></li>`).join("")}</ol>
+        ${inApp ? `<button class="lg-go" data-copy>Copy link</button>` : `<button class="lg-go" data-did>${g.kind === "bookmark" ? "Done, it's bookmarked" : A.isIOS() ? "I added it" : "Done, it's installed"}</button>`}<div class="lg-links">${skip}</div></div>`;
+      const did = card.querySelector("[data-did]"); if (did) did.onclick = () => g.kind === "bookmark" ? done() : finish();
+      const cp = card.querySelector("[data-copy]"); if (cp) cp.onclick = async () => { const u = new URL(route, location.href).href;
+        try { await navigator.clipboard.writeText(u); cp.textContent = "Copied. Paste it into " + (A.isIOS() ? "Safari" : "Chrome"); } catch (e) { cp.outerHTML = `<input class="lg-copy" readonly value="${esc(u)}" onclick="this.select()">`; } };
       bindSkip();
     }
   }

@@ -1120,41 +1120,65 @@
   try { if (Date.now() < +localStorage.getItem("rv.insHide")) document.documentElement.classList.add("ins-hidden"); } catch (e) {}
   window.rvInstallLater = () => { try { localStorage.setItem("rv.insHide", String(Date.now() + 30 * 864e5)); } catch (e) {} document.documentElement.classList.add("ins-hidden"); };
   window.rvCanInstall = () => !standalone() && (!!installEv || isIOS() || isAndroid());
-  // steps for the browser they're in, when the browser can't show its own install box
-  const insSteps = () => {
-    const ua = navigator.userAgent, sh = `<b>Share</b>`;
-    if (isIOS()) {
-      if (/CriOS/i.test(ua)) return [`Tap the ${sh} button at the top right, next to the address bar.`, `Tap <b>Add to Home Screen</b>. You may need to tap <b>More</b> to see it.`, `Tap <b>Add</b>.`];
-      if (/FxiOS/i.test(ua)) return [`Tap the menu button (three lines) at the bottom right.`, `Tap ${sh}, then <b>Add to Home Screen</b>.`, `Tap <b>Add</b>.`];
-      if (/EdgiOS/i.test(ua)) return [`Tap the menu button (three dots) at the bottom.`, `Tap ${sh}, then <b>Add to Home Screen</b>.`, `Tap <b>Add</b>.`];
-      return [`Tap the ${sh} button (the square with an arrow) at the bottom of Safari.`, `Scroll down and tap <b>Add to Home Screen</b>.`, `Tap <b>Add</b>.`];
+  // which browser they're in, and how to put Revora on the device from that browser
+  const browserGuide = () => {
+    const ua = navigator.userAgent, ios = isIOS(), and = isAndroid(), mob = ios || and || /Mobi/i.test(ua), mac = /Macintosh/i.test(ua) && !ios;
+    const B = t => `<b>${t}</b>`, key = mac ? "⌘" : "Ctrl", G = (name, steps, kind) => ({ name, steps, kind: kind || "install" });
+    // apps that open links inside themselves can't install anything: get them into a real browser first
+    const apps = [[/Instagram/i, "Instagram"], [/FBAN|FBAV|FB_IAB|FBIOS/i, "Facebook"], [/Messenger/i, "Messenger"], [/musical_ly|BytedanceWebview|TikTok/i, "TikTok"], [/Snapchat/i, "Snapchat"],
+      [/LinkedInApp/i, "LinkedIn"], [/Twitter/i, "X"], [/Pinterest/i, "Pinterest"], [/\bLine\//i, "LINE"], [/GSA\//i, "the Google app"]];
+    const app = apps.find(([re]) => re.test(ua));
+    const real = ios ? "Safari" : "Chrome";
+    if (app) {
+      const nm = app[1];
+      if (nm === "the Google app") return G(nm, [`Tap the menu (three dots) at the bottom right.`, `Tap ${B("Open in Safari")}.`, `Safari opens this page. Follow the steps there to add Revora.`], "inapp");
+      return G(nm, [`Tap the menu (three dots) at the top right and tap ${B("Open in browser")} (it may say ${B("Open in " + real)} or ${B("Open in external browser")}).`, `This page opens in ${real}. Follow the steps there.`], "inapp");
     }
-    if (/Firefox/i.test(ua)) return [`Tap the menu button (three dots).`, `Tap <b>Add app to Home screen</b> or <b>Install</b>.`, `Tap <b>Add</b>.`];
-    if (/SamsungBrowser/i.test(ua)) return [`Tap the menu button (three lines) at the bottom.`, `Tap <b>Add page to</b>, then <b>Home screen</b>.`, `Tap <b>Add</b>.`];
-    return [`Tap the menu button (three dots) at the top right.`, `Tap <b>Install app</b> or <b>Add to Home screen</b>.`, `Tap <b>Install</b>.`];
+    if (and && /; wv\)/.test(ua)) return G("an app's built-in browser", [`Tap the menu and choose ${B("Open in browser")} or ${B("Open in Chrome")}. Or tap ${B("Copy link")} below and paste it into Chrome.`, `Follow the steps there.`], "inapp");
+    if (ios) {
+      const sh = B("Share");
+      if (/CriOS/i.test(ua)) return G("Chrome", [`Tap the ${sh} button at the top right, next to the address bar.`, `Tap ${B("Add to Home Screen")}. You may need to tap ${B("More")} to see it.`, `Tap ${B("Add")}.`]);
+      if (/FxiOS/i.test(ua)) return G("Firefox", [`Tap the menu button (three lines) at the bottom right.`, `Tap ${sh}, then ${B("Add to Home Screen")}.`, `Tap ${B("Add")}.`]);
+      if (/EdgiOS/i.test(ua)) return G("Edge", [`Tap the menu button (three lines) at the bottom right.`, `Tap ${sh}, then ${B("Add to Home Screen")}.`, `Tap ${B("Add")}.`]);
+      if (/OPT\//i.test(ua)) return G("Opera", [`Tap the menu button (three lines) at the bottom right.`, `Tap ${sh}, then ${B("Add to Home Screen")}.`, `Tap ${B("Add")}.`]);
+      if (/Ddg\//i.test(ua)) return G("DuckDuckGo", [`Tap the menu button (three dots) at the bottom right.`, `Tap ${sh}, then ${B("Add to Home Screen")}.`, `Tap ${B("Add")}.`]);
+      if (window.navigator.brave) return G("Brave", [`Tap the menu button (three dots) at the bottom right.`, `Tap ${sh}, then ${B("Add to Home Screen")}.`, `Tap ${B("Add")}.`]);
+      return G("Safari", [`Tap the ${sh} button (the square with an arrow) at the bottom of Safari.`, `Scroll down and tap ${B("Add to Home Screen")}.`, `Tap ${B("Add")}.`]);
+    }
+    if (mob) {
+      if (/SamsungBrowser/i.test(ua)) return G("Samsung Internet", [`Tap the menu button (three lines) at the bottom right.`, `Tap ${B("Add page to")}, then ${B("Home screen")}.`, `Tap ${B("Add")}.`]);
+      if (/Firefox/i.test(ua)) return G("Firefox", [`Tap the menu button (three dots).`, `Tap ${B("Add app to Home screen")} or ${B("Install")}.`, `Tap ${B("Add")}.`]);
+      if (/EdgA\//i.test(ua)) return G("Edge", [`Tap the menu button (three lines) at the bottom right.`, `Tap ${B("Add to phone")}.`, `Tap ${B("Install")}.`]);
+      if (/OPR\//i.test(ua)) return G("Opera", [`Tap the menu button (three dots) at the top right.`, `Tap ${B("Add to")}, then ${B("Home screen")}.`, `Tap ${B("Add")}.`]);
+      if (/DuckDuckGo/i.test(ua)) return G("DuckDuckGo", [`Tap the menu button (three dots) at the top right.`, `Tap ${B("Add to Home Screen")}.`, `Tap ${B("Add")}.`]);
+      if (/Vivaldi/i.test(ua)) return G("Vivaldi", [`Tap the Vivaldi menu (the V) at the top right.`, `Tap ${B("Add to Home screen")}.`, `Tap ${B("Install")}.`]);
+      if (window.navigator.brave) return G("Brave", [`Tap the menu button (three dots) at the bottom right.`, `Tap ${B("Add to Home screen")}.`, `Tap ${B("Install")}.`]);
+      return G("Chrome", [`Tap the menu button (three dots) at the top right.`, `Tap ${B("Add to Home screen")}, then ${B("Install")}.`, `Tap ${B("Install")} again if it asks.`]);
+    }
+    if (/DuckDuckGo|Ddg\//i.test(ua)) return G("DuckDuckGo", [`DuckDuckGo can't install sites as apps, so bookmark Revora instead.`, `Press ${B(key + " + D")} and click ${B("Save")}.`, `Next time, open Revora from your bookmarks.`], "bookmark");
+    if (/Edg\//.test(ua)) return G("Edge", [`Click the menu (three dots) at the top right of Edge.`, `Click ${B("Apps")}, then ${B("Install this site as an app")}.`, `Click ${B("Install")}.`]);
+    if (/OPR\//.test(ua)) return G("Opera", [`Click the install icon at the right end of the address bar.`, `No icon? Press ${B(key + " + D")} to bookmark Revora instead.`, `Open Revora from there from now on.`]);
+    if (/Vivaldi/i.test(ua)) return G("Vivaldi", [`Right-click the Revora tab at the top of the window.`, `Click ${B("Install Revora")}.`, `Click ${B("Install")}.`]);
+    if (/Firefox/i.test(ua)) return G("Firefox", [`Firefox can't install sites as apps, so bookmark Revora instead.`, `Press ${B(key + " + D")} and click ${B("Save")}.`, `Next time, open Revora from your bookmarks bar.`], "bookmark");
+    if (mac && /Safari/i.test(ua) && !/Chrome|Chromium/i.test(ua)) return G("Safari", [`Click ${B("File")} in the menu bar at the top of the screen.`, `Click ${B("Add to Dock")}.`, `Click ${B("Add")}. Revora now opens from your Dock.`]);
+    if (window.navigator.brave) return G("Brave", [`Click the install icon at the right end of the address bar (a screen with a small arrow).`, `No icon? Open the menu (three lines) at the top right, then ${B("Save and share")}, then ${B("Install page as app")}.`, `Click ${B("Install")}.`]);
+    return G("Chrome", [`Click the install icon at the right end of the address bar (a screen with a small arrow).`, `No icon? Open the menu (three dots) at the top right, then ${B("Cast, save and share")}, then ${B("Install page as app")}.`, `Click ${B("Install")}.`]);
   };
+  const insSteps = () => browserGuide().steps;
   window.rvInstall = async () => {
     if (installEv) { installEv.prompt(); const r = await installEv.userChoice.catch(() => null); installEv = null; document.documentElement.classList.remove("can-install"); return r && r.outcome; }
     const box = document.createElement("div"); box.className = "pk-modal";
     box.innerHTML = `<div class="pk-card" role="dialog" aria-modal="true"><h2 class="disp-s">Add Revora to your home screen</h2><ol class="ins-steps">${insSteps().map(t => `<li>${t}</li>`).join("")}</ol><p class="faint" style="margin:0;font-size:13.5px">Revora then opens from its own icon, full screen, and stays signed in.</p><div class="pk-links"><button class="btn pri" data-close>Got it</button></div></div>`;
     box.addEventListener("click", e => { if (e.target === box || e.target.closest("[data-close]")) box.remove(); }); document.body.appendChild(box); return "shown";
   };
-  // desktop browsers: how to install, or bookmark when the browser can't install sites
-  const deskSteps = () => {
-    const ua = navigator.userAgent, mac = /Macintosh/i.test(ua);
-    if (/Edg\//.test(ua)) return [`Click the menu (three dots) at the top right of Edge.`, `Click <b>Apps</b>, then <b>Install this site as an app</b>.`, `Click <b>Install</b>.`];
-    if (/Firefox/i.test(ua)) return [`Firefox can't install sites as apps, so bookmark it instead.`, `Press <b>${mac ? "⌘" : "Ctrl"} + D</b> and click <b>Save</b>.`, `Next time, open Revora from your bookmarks bar.`];
-    if (mac && /Safari/i.test(ua) && !/Chrome|Chromium/i.test(ua)) return [`Click <b>File</b> in the menu bar at the top of the screen.`, `Click <b>Add to Dock</b>.`, `Click <b>Add</b>. Revora now opens from your Dock.`];
-    return [`Click the install icon at the right end of the address bar (a screen with a small arrow).`, `If it isn't there, open the menu (three dots), then <b>Cast, save and share</b>, then <b>Install page as app</b>.`, `Click <b>Install</b>.`];
-  };
   const mobile = () => isIOS() || isAndroid() || /Mobi/i.test(navigator.userAgent);
   let onInst = [];
   window.addEventListener("appinstalled", () => { onInst.forEach(f => { try { f(); } catch (e) {} }); onInst = []; });
   // used by the shop and employee sign-up steps: put Revora on the device, then come back to the same page
   window.rvApp = {
-    standalone, mobile, isIOS, canPrompt: () => !!installEv, bookmarkOnly: () => !mobile() && /Firefox/i.test(navigator.userAgent),
+    standalone, mobile, isIOS, canPrompt: () => !!installEv, guide: browserGuide, bookmarkOnly: () => browserGuide().kind === "bookmark", inApp: () => browserGuide().kind === "inapp",
     seen: () => { try { return !!localStorage.getItem("rv.appSeen"); } catch (e) { return false; } },
-    steps: () => mobile() ? insSteps() : deskSteps(),
+    steps: () => browserGuide().steps,
     async prompt() { if (!installEv) return null; installEv.prompt(); const r = await installEv.userChoice.catch(() => null); installEv = null; document.documentElement.classList.remove("can-install"); return r && r.outcome; },
     onInstalled(f) { onInst.push(f); },
     // remember where to land when the app opens; iPhones keep the app's storage apart, so the link itself goes in the app's start page
