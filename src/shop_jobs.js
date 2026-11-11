@@ -26,8 +26,9 @@
   const pillTone = s => s === "Done" ? "green" : s === "Waiting for parts" ? "amber" : s === "Checked in" ? "gray" : "blue";
   const etaTxt = w => w.status === "Done" ? "Ready now" : !w.promised ? "No date yet" : w.promised === today() ? "Ready today" : w.promised === plusDays(1) ? "Ready tomorrow" : late(w) ? "Was due " + day(w.promised) : "Ready by " + day(w.promised);
 
+  const API = () => (window.RV_CONFIG && RV_CONFIG.remindersApi) || "https://revora-reminders.xavier-j-wilson101.workers.dev";
   function ping(pid, wid) {
-    try { fetch((window.RV_CONFIG && RV_CONFIG.remindersApi || "https://revora-reminders.xavier-j-wilson101.workers.dev") + "/shop-job", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ pid, wid }), keepalive: true }).catch(() => {}); } catch (e) {}
+    try { fetch(API() + "/shop-job", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ pid, wid }), keepalive: true }).catch(() => {}); } catch (e) {}
   }
 
   /* ---------- phone notifications for the customer ---------- */
@@ -38,7 +39,7 @@
     // "on", "off" (can turn on), "blocked" (they said no in the browser), "install" (iPhone: only works from the home-screen app), "none" (browser can't)
     async state() {
       if (isIOS() && !standalone()) return "install";
-      if (!("serviceWorker" in navigator) || !("PushManager" in window) || !("Notification" in window) || !(window.RV_CONFIG && RV_CONFIG.vapidPublic)) return "none";
+      if (!("serviceWorker" in navigator) || !("PushManager" in window) || !("Notification" in window)) return "none";
       if (Notification.permission === "denied") return "blocked";
       try { const r = await navigator.serviceWorker.getRegistration(); const s = r && await r.pushManager.getSubscription(); return s && Notification.permission === "granted" ? "on" : "off"; } catch (e) { return "off"; }
     },
@@ -46,7 +47,11 @@
       if (Notification.permission !== "granted" && (await Notification.requestPermission()) !== "granted") return "blocked";
       const reg = await navigator.serviceWorker.ready;
       let s = await reg.pushManager.getSubscription();
-      if (!s) s = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: u8(RV_CONFIG.vapidPublic) });
+      if (!s) {
+        const k = await fetch(API() + "/push-key").then(r => r.json()).catch(() => ({}));
+        if (!k.key) return "error";
+        s = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: u8(k.key) });
+      }
       const j = s.toJSON();
       const { data, error } = await sb.rpc("push_save", { ep: j.endpoint, k: j.keys.p256dh, a: j.keys.auth, agent: navigator.userAgent.slice(0, 300) });
       return error || data !== "ok" ? "error" : "on";
