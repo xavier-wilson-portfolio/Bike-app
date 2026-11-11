@@ -922,6 +922,7 @@
     try { window.PACK = await getJson("packs/" + encodeURIComponent(bikeId) + "/pack.json?v=" + (window.RV_BUILD || "")); }
     catch (e) { return fail("Couldn't load the data for this bike. Check your internet and try again."); }
     window.RV_CLOUD = cloud || null;
+    window.RV_SB = sb || null;   // for the bike library lookup, signed in or not
     if (bikeOf(bikeId)?.generic || bikeOf(bikeId)?.universal) {
       let m = null;
       if (cloud) { const { data } = await sb.from("records").select("data").eq("project_id", cloud.projectId).eq("coll", "meta").eq("rec_id", "project").maybeSingle(); m = data && data.data; }

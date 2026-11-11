@@ -22,7 +22,7 @@ VIEWS.numbers = {
             : `<p class="muted" style="margin:0">Add the ones you use most: drain bolt, axle nuts, caliper bolts, spark plugs, chain adjusters.</p>`}</section>
         <section class="mh-panel num-card num-wide"><div class="mh-ph"><h2><span class="mh-hi">${ic("book")}</span>Other notes</h2></div>
           <textarea id="numNotes" rows="4" maxlength="3000" placeholder="Anything else you look up: where the fuse box is, which socket fits the axle, the trick for getting the tank off." ${dis}>${esc(r.notes || "")}</textarea></section></div>
-      ${libGuideHtml("chain")}
+      ${libGuidesHtml()}
       <p class="faint" style="text-align:center;margin-top:14px;font-size:13px">${filled} saved. Everyone on this bike's team sees the same numbers.</p>`;
   },
   bind(root) {
@@ -30,6 +30,7 @@ VIEWS.numbers = {
     $$("[data-tq]", root).forEach(i => i.onchange = () => { const t = clone(numRec().torque || []), k = +i.closest(".num-tqr").dataset.i; t[k] = Object.assign({}, t[k], { [i.dataset.tq]: i.value.trim() }); numSave({ torque: t }).then(() => toast("Saved.")); });
     $$("[data-tqdel]", root).forEach(b => b.onclick = async () => { const t = clone(numRec().torque || []); t.splice(+b.dataset.tqdel, 1); await numSave({ torque: t }); render(false); });
     const a = $("#numAddT", root); if (a) a.onclick = async () => { await numSave({ torque: (numRec().torque || []).concat([{ what: "", value: "", note: "" }]) }); render(false); const l = $$(".num-tqr input", document); if (l.length) l[l.length - 3].focus(); };
+    $$("[data-libup]", root).forEach(b => b.onclick = ev => { ev.preventDefault(); libUpgrade(); });
     $$("[data-libuse]", root).forEach(b => b.onclick = ev => { ev.preventDefault(); const k = b.dataset.libuse, fct = libFact(k); if (!fct) return; numSave({ f: Object.assign({}, numRec().f, { [k]: fct.v }) }).then(() => { toast("Saved."); render(false); }); });
     $$("[data-libtq]", root).forEach(b => b.onclick = async () => { const t = LIB.entry.torque[+b.dataset.libtq], s = libSrc(LIB.entry, t.src); await numSave({ torque: (numRec().torque || []).concat([{ what: t.what, value: t.v, note: "Owner's manual p. " + t.p }]) }); toast("Added."); render(false); });
     const n2 = $("#numNotes", root); if (n2) n2.onchange = () => numSave({ notes: n2.value }).then(() => toast("Saved."));
