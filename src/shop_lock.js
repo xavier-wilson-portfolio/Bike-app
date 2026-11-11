@@ -331,7 +331,12 @@
   }
   function openJob(j) {
     if (!j) return;
+    const call = async (fn, args) => { try { return await rpc(fn, args); } catch (e) { throw new Error(/full/.test(e.message || "") ? "full" : /denied/.test(e.message || "") ? "You can only change your own photos." : "That didn't save. Try again."); } };
+    const fresh = async () => { const L = await rpc("emp_jobs").catch(() => null), f = L && L.find(x => x.pid === j.pid && x.id === j.id); if (f) { Object.assign(j, f); E.jobs = L; } return j; };
     rvJobs.manageBox({ w: j, pid: j.pid, client: { name: j.client, email: j.email ? "yes" : "", app: j.app, phone: j.phone }, bikeName: j.bike, note,
+      fetch: fresh,
+      photos: { list: () => call("emp_job_photos", { pid: j.pid, wid: j.id }), add: (th, im) => call("emp_job_photo_add", { pid: j.pid, wid: j.id, th, im, nt: "" }), del: id => call("emp_job_photo_del", { id }), full: id => call("emp_job_photo", { pid: j.pid, id }) },
+      ask: async (t, price, ph) => { await call("emp_job_ask", { pid: j.pid, wid: j.id, t, price, ph }); return fresh(); },
       save: async patch => { await jobSave(j.pid, j.id, patch); Object.assign(j, patch, { updatedAt: new Date().toISOString() }); return j; },
       pickedUp: async ww => {
         const cl = await rpc("emp_client", { cid: j.client_id }), b = cl && cl.bikes.find(x => x.id === j.pid); if (!b) throw new Error("That bike isn't here any more.");

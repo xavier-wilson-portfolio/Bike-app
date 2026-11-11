@@ -199,7 +199,7 @@
     const visits = []; all.forEach(b => b.c.done.slice(0, 6).forEach(r => visits.push({ b, r }))); visits.sort((a, z) => String(z.r.date).localeCompare(String(a.r.date)));
     const pend = pendingReq(), overC = due.filter(x => x.i.status === "over").length;
     const h = new Date().getHours(), hi = h < 12 ? "Good morning" : h < 18 ? "Good afternoon" : "Good evening";
-    shell(`<section class="sx-hero"><div class="sx-hero-t"><h1>${hi}${S.shop.name ? ", " + esc(S.shop.name) : ""}.</h1><p>${S.clients.size ? `${S.clients.size} client${S.clients.size === 1 ? "" : "s"}, ${S.bikes.size} bike${S.bikes.size === 1 ? "" : "s"}.` : "Add your first client to get started."}</p></div>
+    shell(`<div class="jb-notify" id="sxNotify" hidden></div><section class="sx-hero"><div class="sx-hero-t"><h1>${hi}${S.shop.name ? ", " + esc(S.shop.name) : ""}.</h1><p>${S.clients.size ? `${S.clients.size} client${S.clients.size === 1 ? "" : "s"}, ${S.bikes.size} bike${S.bikes.size === 1 ? "" : "s"}.` : "Add your first client to get started."}</p></div>
         <div class="sx-find"><div class="sx-qwrap">${ic("search")}<input id="sxQ" type="search" placeholder="Find a client by name, phone, email or bike" autocomplete="off" aria-label="Find a client"><div class="sx-hits" id="sxHits" hidden></div></div>
           <button class="btn tan big" data-newc>${ic("plus")} New client</button></div></section>
       <div class="sx-kpis">
@@ -221,6 +221,7 @@
           ${visits.length ? `<div class="sx-rows">${visits.slice(0, 8).map(({ b, r }) => { const c = clientOf(b); return `<button class="sx-row" data-open="${esc(c ? c.id : "")}"><span class="sx-date">${esc(fmt(r.date))}</span><span class="grow"><b>${esc(r.service || "Service")}</b><small>${esc(c ? c.name : "")} · ${esc(bikeName(b))}${byTxt(r) ? " · by " + esc(byTxt(r)) : ""}</small></span></button>`; }).join("")}</div>` : `<div class="sx-empty">${ic("doc")}<b>No services logged yet.</b><span>Open a client and tap Log service when their bike comes in.</span></div>`}</section>
       </div>`, "today");
     bindCommon();
+    rvJobs.notifyStrip(X.app.querySelector("#sxNotify"), X.sb, note, false, true);
   }
   function reqRow(q) {
     const c = S.clients.get(q.client_id), b = S.bikes.get(q.project_id);
@@ -373,8 +374,15 @@
 
   /* ---------- jobs: start one in a few taps, update it as you go, the customer follows along ---------- */
   const jobClient = c => c ? { name: c.name, email: c.email, phone: c.phone, app: !!c.client_user } : {};
+  // the latest copy from the database, so a customer's answer or a teammate's change isn't lost
+  async function freshJob(b, wid) {
+    const { data, error } = await X.sb.from("records").select("data").match({ project_id: b.p.id, coll: "workorders", rec_id: wid }).maybeSingle();
+    if (error || !data) return b.recs.workorders.find(w => w.id === wid) || null;
+    const d = Object.assign({}, data.data, { id: wid }), L = b.recs.workorders, i = L.findIndex(w => w.id === wid); if (i >= 0) L[i] = d; else L.push(d);
+    return d;
+  }
   async function saveJob(b, rec, ntf) {
-    const old = rec.id ? b.recs.workorders.find(w => w.id === rec.id) : null;
+    const old = rec.id ? (await freshJob(b, rec.id)) : null;
     const out = Object.assign({ lines: [], byOwner: who() }, old || {}, rec, { id: (old && old.id) || rec.id || nextId(b, "workorders") });
     delete out.pid;
     await putRecs(b, [{ coll: "workorders", rec: out }]);
@@ -391,8 +399,12 @@
   function openJob(pid, wid) {
     const b = S.bikes.get(pid), w = b && b.recs.workorders.find(x => x.id === wid); if (!w) return;
     const c = clientOf(b);
+    const rpcOk = async (fn, args) => { const { data, error } = await X.sb.rpc(fn, args); if (error) throw new Error(/full/.test(error.message || "") ? "full" : "That didn't save. Try again."); return data; };
     rvJobs.manageBox({ w, pid, client: jobClient(c), bikeName: bikeName(b), note,
       save: patch => saveJob(b, Object.assign({ id: w.id }, patch)),
+      fetch: () => freshJob(b, wid),
+      photos: { list: () => rpcOk("job_photos", { pid, wid }), add: (th, im) => rpcOk("job_photo_add", { pid, wid, th, im, nt: "" }), del: id => rpcOk("job_photo_del", { id }), full: id => rpcOk("job_photo", { pid, id }) },
+      ask: async (t, price, ph) => { await rpcOk("job_ask", { pid, wid, t, price, ph }); return freshJob(b, wid); },
       pickedUp: async ww => {
         const h = Object.assign(rvJobs.historyRec(ww), { id: nextId(b, "maintenance"), odometer: b.c.odo ? b.c.odo.miles : 0, doneBy: "A shop", shop: S.shop.name || "Shop", byOwner: who(), planned: false });
         await putRecs(b, [{ coll: "maintenance", rec: h }, { coll: "workorders", rec: Object.assign({}, ww, { status: "Picked up", pickedAt: new Date().toISOString() }) }]);

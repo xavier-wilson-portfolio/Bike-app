@@ -35,7 +35,7 @@
     const askBtn = ([k, t, d]) => { const done = reqs.find(q => q.kind === k && q.status === "approved"), wait = reqs.find(q => q.kind === k && q.status === "pending"), no = !done && !wait && reqs.find(q => q.kind === k && q.status === "declined");
       return `<div class="cv-ask"><div><b>${esc(t)}</b><span>${esc(d)}</span></div>${done ? `<a class="btn sm pri" href="?shopdoc=${esc(done.token)}" target="_blank" rel="noopener">Open</a>${wait ? "" : `<button class="linkbtn" data-ask="${esc(b.id)}|${k}">Ask for a new one</button>`}` : wait ? `<span class="cv-wait">${ic(IC.clock)} Asked ${esc(D().fmtDate(wait.created_at))}</span>` : `<button class="btn sm" data-ask="${esc(b.id)}|${k}">Ask ${esc(shopName)}</button>${no ? `<small class="faint">Last request was declined</small>` : ""}`}</div>`; };
     return `<section class="cv-bike">
-      ${wos.length ? (window.rvJobs ? wos.map(w => rvJobs.trackCard(w, shopName)).join("") : `<div class="cv-inshop">${ic(IC.wrench)}<div>${wos.map(w => `<b>In the shop: ${esc(w.title || "Work in progress")}</b><span>${esc(w.status)}${w.promised ? " · ready by " + esc(D().fmtDate(w.promised)) : ""}</span>`).join("")}</div></div>`) : ""}
+      ${wos.length ? (window.rvJobs ? wos.map(w => rvJobs.trackCard(w, shopName, b.id)).join("") : `<div class="cv-inshop">${ic(IC.wrench)}<div>${wos.map(w => `<b>In the shop: ${esc(w.title || "Work in progress")}</b><span>${esc(w.status)}${w.promised ? " · ready by " + esc(D().fmtDate(w.promised)) : ""}</span>`).join("")}</div></div>`) : ""}
       <div class="cv-hero t-${tone}">${sil ? `<img src="img/sil/${esc(sil)}" alt="" class="cv-sil">` : ""}<div class="cv-ht">
         <span class="cv-k">At ${esc(shopName)}</span><h2>${esc(m.bike || b.name || "Your bike")}</h2>
         <div class="cv-hm">${c.odo ? `<span>${D().milesFmt(c.odo.miles)} mi</span>` : ""}${c.last ? `<span>Last service ${esc(D().fmtDate(c.last.date))}</span>` : ""}</div>
@@ -66,7 +66,7 @@
       <p class="cv-foot">Revora keeps every bike's history, schedule and parts in one place. <button class="linkbtn" data-nav="new">Add a bike of your own</button></p></div>`, { wide: true, garage: true });
     const app = X.app;
     const open = data.some(h => h.bikes.some(b => (b.workorders || []).some(w => !["Picked up", "Declined"].includes(w.status))));
-    if (window.rvJobs) rvJobs.notifyStrip(app.querySelector("#cvNotify"), sb, X.note, open);
+    if (window.rvJobs) { rvJobs.notifyStrip(app.querySelector("#cvNotify"), sb, X.note, open); rvJobs.bindTrack(app, sb, X.note, () => { const y = window.scrollY; home(X).then(() => window.scrollTo(0, y)); }); }
     // a bike in the shop: keep the page current while it's open
     clearInterval(window.__cvLive);
     if (open) window.__cvLive = setInterval(async () => {
