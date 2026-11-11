@@ -152,8 +152,7 @@ async function shopDoc(req, env) {
 
 /* ---- Revora Shop jobs: tell the customer when their bike is checked in and when it's ready ----
    A phone notification to every phone or computer where they turned notifications on in Revora; an email when there's none.
-   Needs the secret VAPID_PRIVATE_JWK (the private half of the key pair whose public half is VAPID_PUBLIC below). */
-const VAPID_PUBLIC = "BH0GjDxNXl4j886ENLQffBKyRwRbnQS3KMRPtFOC4Q7jJcz_6OWis12MJ54TRHLiqV5Pv2RQ8JPwzDxGkhMyqUw";
+   Signed with a key pair the worker makes itself the first time (kept in Supabase, readable only with WORKER_SECRET). GET /push-key gives the app the public half. */
 const enc = s => new TextEncoder().encode(s);
 const b64u = b => { let s = ""; new Uint8Array(b).forEach(x => s += String.fromCharCode(x)); return btoa(s).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, ""); };
 const ub64 = s => Uint8Array.from(atob(String(s).replace(/-/g, "+").replace(/_/g, "/") + "===".slice((String(s).length + 3) % 4)), c => c.charCodeAt(0));
@@ -177,11 +176,24 @@ async function pushBody(sub, text) {
   const head = new Uint8Array(86); head.set(salt, 0); new DataView(head.buffer).setUint32(16, 4096); head[20] = 65; head.set(asPub, 21);
   return cat(head, ct);
 }
+let KEYS = null;
+async function pushKeys(env) {
+  if (KEYS) return KEYS;
+  let k = await rpc("push_key_get", { sec: env.WORKER_SECRET });
+  if (!k || !k.jwk) {
+    const pair = await crypto.subtle.generateKey({ name: "ECDSA", namedCurve: "P-256" }, true, ["sign", "verify"]);
+    const pub = b64u(await crypto.subtle.exportKey("raw", pair.publicKey)), jwk = JSON.stringify(await crypto.subtle.exportKey("jwk", pair.privateKey));
+    k = await rpc("push_key_set", { sec: env.WORKER_SECRET, pub, jwk });   // if two runs race, both get the one that was stored first
+  }
+  KEYS = { public: k.public, jwk: JSON.parse(k.jwk) };
+  return KEYS;
+}
 async function vapid(endpoint, env) {
-  const key = await crypto.subtle.importKey("jwk", JSON.parse(env.VAPID_PRIVATE_JWK), { name: "ECDSA", namedCurve: "P-256" }, false, ["sign"]);
+  const K = await pushKeys(env);
+  const key = await crypto.subtle.importKey("jwk", K.jwk, { name: "ECDSA", namedCurve: "P-256" }, false, ["sign"]);
   const h = b64u(enc(JSON.stringify({ typ: "JWT", alg: "ES256" }))), p = b64u(enc(JSON.stringify({ aud: new URL(endpoint).origin, exp: Math.floor(Date.now() / 1000) + 12 * 3600, sub: "mailto:info@revoragarage.com" })));
   const sig = await crypto.subtle.sign({ name: "ECDSA", hash: "SHA-256" }, key, enc(h + "." + p));
-  return `vapid t=${h}.${p}.${b64u(sig)}, k=${VAPID_PUBLIC}`;
+  return `vapid t=${h}.${p}.${b64u(sig)}, k=${K.public}`;
 }
 // true when the phone's push service took it
 async function sendPush(env, sub, msg) {
@@ -205,7 +217,7 @@ async function runShopJobs(env, pid, wid) {
       : { title: `${r.shop} has your ${bike}`, body: `${r.title ? r.title.slice(0, 80) + ". " : ""}${r.promised ? "Ready by " + fmtDay(r.promised) + "." : "We'll let you know when it's ready."} Tap to follow along.` };
     Object.assign(msg, { url: "/?mine", tag: "job-" + r.project_id + "-" + r.wo_id });
     let pushed = false;
-    if (env.VAPID_PRIVATE_JWK) for (const s of r.subs || []) if (await sendPush(env, s, msg)) pushed = true;
+    for (const s of r.subs || []) if (await sendPush(env, s, msg)) pushed = true;
     if (pushed) out.pushed++;
     else if (env.RESEND_API_KEY && okMail(r.email)) {
       const follow = r.joined ? `${APP}/?mine` : `${APP}/?join=${encodeURIComponent(r.code)}`;
@@ -224,6 +236,12 @@ async function runShopJobs(env, pid, wid) {
     await rpc("shop_jobs_mark", { sec: env.WORKER_SECRET, pid: r.project_id, wid: r.wo_id, k: r.kind });
   }
   return out;
+}
+// the public half of the key, for the app to sign phones up with
+async function pushKey(req, env) {
+  const o = req.headers.get("Origin") || "", h = Object.assign({ "content-type": "application/json", "Cache-Control": "public, max-age=3600" }, SITES.includes(o) ? { "Access-Control-Allow-Origin": o, "Vary": "Origin" } : {});
+  try { const k = await pushKeys(env); return new Response(JSON.stringify({ key: k.public }), { status: 200, headers: h }); }
+  catch (e) { return new Response(JSON.stringify({ error: "setup" }), { status: 200, headers: h }); }
 }
 async function shopJob(req, env) {
   const o = req.headers.get("Origin") || "", h = SITES.includes(o) ? { "Access-Control-Allow-Origin": o, "Access-Control-Allow-Methods": "POST, OPTIONS", "Access-Control-Allow-Headers": "content-type", "Vary": "Origin" } : {};
@@ -414,6 +432,7 @@ export default {
     if (path === "/shop-doc") return shopDoc(req, env);
     if (path === "/shop-invite") return shopInvite(req, env);
     if (path === "/shop-job") return shopJob(req, env);
+    if (path === "/push-key") return pushKey(req, env);
     if (path === "/shop-run") { try { return json({ reminders: await runShop(env), docs: await runShopDocs(env, null) }); } catch (e) { return json({ error: String(e.message || e) }, 500); } }
     if (path === "/welcome-test") { // sends the welcome emails a new member gets now (24-hour deal) to the admin only, to check how they look
       if (!env.RESEND_API_KEY) return json({ error: "not configured" }, 503);
