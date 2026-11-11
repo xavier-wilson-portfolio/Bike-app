@@ -207,6 +207,38 @@ async function sendPush(env, sub, msg) {
   } catch (e) { console.log("push error", String(e.message || e)); return false; }
 }
 const fmtDay = d => d ? new Date(d + "T12:00:00Z").toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric", timeZone: "UTC" }) : "";
+// questions for the customer (approve extra work?) and their answers back to the shop
+async function runJobEvents(env, pid, wid) {
+  let rows; try { rows = await rpc("shop_job_events_outbox", { sec: env.WORKER_SECRET, pid: pid || null, wid: wid || null }); } catch (e) { return { error: "events missing" }; }
+  const out = { asks: 0, answers: 0 };
+  for (const r of rows || []) {
+    const b = r.body || {}, bike = r.bike || "bike", price = b.price ? " ($" + Number(b.price).toLocaleString("en-US", { maximumFractionDigits: 2 }) + ")" : "";
+    if (r.kind === "ask") {
+      const msg = { title: `${r.shop} has a question about your ${bike}`, body: `${b.t}${price}. Tap to approve or say no thanks.`, url: "/?mine", tag: "ask-" + r.id };
+      let pushed = false; for (const s of r.subs || []) if (await sendPush(env, s, msg)) pushed = true;
+      if (!pushed && env.RESEND_API_KEY && okMail(r.email)) {
+        const first = String(r.client || "").split(/\s+/)[0] || "there", link = r.joined ? `${APP}/?mine` : `${APP}/?join=${encodeURIComponent(r.code)}`;
+        const html = shopFrame({ k: esc(String(r.shop || "YOUR SHOP").toUpperCase()), t: `A question about your ${esc(bike)}` },
+          `<p style="font:15px/1.5 Arial,sans-serif;margin:16px 0">Hi ${esc(first)}, while working on your ${esc(bike)}, ${esc(r.shop)} found something:</p>
+           <div style="border-left:4px solid #D9BF8E;background:#E6F1F8;padding:12px 14px;border-radius:6px;font:700 16px Arial,sans-serif;color:#17232C">${esc(b.t)}${esc(price)}</div>
+           <p style="margin:18px 0 6px"><a href="${link}" style="background:#D9BF8E;color:#17232C;padding:12px 20px;border-radius:999px;text-decoration:none;font:700 15px Arial,sans-serif">${r.joined ? "Approve or decline in Revora" : "Open Revora to answer"}</a></p>
+           <p style="font:13px/1.5 Arial,sans-serif;color:#5B6770;margin:14px 0 0">${r.shop_phone ? `Rather talk it over? Call ${esc(r.shop_phone)}.` : "Questions? Reply to this email."}</p>`,
+          `Sent for ${esc(r.shop)} by Revora. Replies go to the shop.`);
+        const res = await fetch("https://api.resend.com/emails", { method: "POST", headers: { Authorization: "Bearer " + env.RESEND_API_KEY, "content-type": "application/json" },
+          body: JSON.stringify({ from: fromShop(r.shop), to: [r.email], reply_to: okMail(r.shop_email) ? r.shop_email : REPLY_TO, subject: msg.title.slice(0, 150), html, text: `Hi ${first}, ${r.shop} found something on your ${bike}: ${b.t}${price}.\n\nAnswer in Revora: ${link}` }) });
+        if (!res.ok) { console.log("ask email failed", res.status); continue; }
+      } else if (!pushed && (r.subs || []).length) continue;   // a phone to reach but it failed: try again next hour
+      out.asks++;
+    } else {
+      const who = String(b.client || r.client || "The customer").split(/\s+/)[0], yes = b.status === "yes";
+      const msg = { title: `${who} ${yes ? "approved" : "said no to"}: ${String(b.t || "").slice(0, 60)}`, body: `${bike}${price}.${yes ? " It's on the work list." : ""}`, url: "/?crm", tag: "answer-" + r.id };
+      for (const s of r.subs || []) await sendPush(env, s, msg);
+      out.answers++;
+    }
+    await rpc("shop_job_events_mark", { sec: env.WORKER_SECRET, id: r.id });
+  }
+  return out;
+}
 async function runShopJobs(env, pid, wid) {
   if (!env.WORKER_SECRET) return { error: "not configured" };
   let rows; try { rows = await rpc("shop_jobs_outbox", { sec: env.WORKER_SECRET, pid: pid || null, wid: wid || null }); } catch (e) { return { error: "jobs tables missing" }; }
@@ -235,6 +267,7 @@ async function runShopJobs(env, pid, wid) {
     else continue;
     await rpc("shop_jobs_mark", { sec: env.WORKER_SECRET, pid: r.project_id, wid: r.wo_id, k: r.kind });
   }
+  out.events = await runJobEvents(env, pid, wid).catch(e => ({ error: String(e.message || e) }));
   return out;
 }
 // the public half of the key, for the app to sign phones up with
