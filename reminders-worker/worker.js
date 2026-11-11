@@ -207,6 +207,18 @@ async function sendPush(env, sub, msg) {
   } catch (e) { console.log("push error", String(e.message || e)); return false; }
 }
 const fmtDay = d => d ? new Date(d + "T12:00:00Z").toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric", timeZone: "UTC" }) : "";
+// "3:30 PM today", "tomorrow at 9:00 AM" or "Fri, Nov 14": in the shop's own time zone
+function readyWhen(r) {
+  if (!r.promised_at) return r.promised ? fmtDay(r.promised) : "";
+  const zone = r.tz || "America/New_York", t = new Date(r.promised_at);
+  try {
+    const dayOf = d => d.toLocaleDateString("en-CA", { timeZone: zone }), clock = t.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", timeZone: zone });
+    const now = new Date(), tomorrow = new Date(now.getTime() + 864e5);
+    if (dayOf(t) === dayOf(now)) return clock + " today";
+    if (dayOf(t) === dayOf(tomorrow)) return "tomorrow at " + clock;
+    return t.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric", timeZone: zone }) + " at " + clock;
+  } catch (e) { return fmtDay(r.promised); }
+}
 // questions for the customer (approve extra work?) and their answers back to the shop
 async function runJobEvents(env, pid, wid) {
   let rows; try { rows = await rpc("shop_job_events_outbox", { sec: env.WORKER_SECRET, pid: pid || null, wid: wid || null }); } catch (e) { return { error: "events missing" }; }
@@ -246,7 +258,7 @@ async function runShopJobs(env, pid, wid) {
   for (const r of rows || []) {
     const bike = r.bike || "bike", first = String(r.client || "").split(/\s+/)[0] || "there", ready = r.kind === "ready";
     const msg = ready ? { title: `Your ${bike} is ready`, body: `${r.shop} finished ${r.title ? r.title.toLowerCase().slice(0, 80) : "the work"}. Come pick it up${r.shop_phone ? " or call " + r.shop_phone : ""}.` }
-      : { title: `${r.shop} has your ${bike}`, body: `${r.title ? r.title.slice(0, 80) + ". " : ""}${r.promised ? "Ready by " + fmtDay(r.promised) + "." : "We'll let you know when it's ready."} Tap to follow along.` };
+      : { title: `${r.shop} has your ${bike}`, body: `${r.title ? r.title.slice(0, 80) + ". " : ""}${readyWhen(r) ? "Ready by " + readyWhen(r) + "." : "We'll let you know when it's ready."} Tap to follow along.` };
     Object.assign(msg, { url: "/?mine", tag: "job-" + r.project_id + "-" + r.wo_id });
     let pushed = false;
     for (const s of r.subs || []) if (await sendPush(env, s, msg)) pushed = true;
@@ -254,7 +266,7 @@ async function runShopJobs(env, pid, wid) {
     else if (env.RESEND_API_KEY && okMail(r.email)) {
       const follow = r.joined ? `${APP}/?mine` : `${APP}/?join=${encodeURIComponent(r.code)}`;
       const html = shopFrame({ k: esc(String(r.shop || "YOUR SHOP").toUpperCase()), t: ready ? `Your ${esc(bike)} is ready` : `We have your ${esc(bike)}` },
-        `<p style="font:15px/1.5 Arial,sans-serif;margin:16px 0">Hi ${esc(first)}, ${ready ? `${esc(r.shop)} finished the work on your ${esc(bike)}${r.title ? ": " + esc(r.title) : ""}. It's ready to pick up.` : `${esc(r.shop)} checked your ${esc(bike)} in${r.title ? " for " + esc(r.title.toLowerCase()) : ""}.${r.promised ? " It should be ready by <b>" + esc(fmtDay(r.promised)) + "</b>." : ""}`}</p>
+        `<p style="font:15px/1.5 Arial,sans-serif;margin:16px 0">Hi ${esc(first)}, ${ready ? `${esc(r.shop)} finished the work on your ${esc(bike)}${r.title ? ": " + esc(r.title) : ""}. It's ready to pick up.` : `${esc(r.shop)} checked your ${esc(bike)} in${r.title ? " for " + esc(r.title.toLowerCase()) : ""}.${readyWhen(r) ? " It should be ready by <b>" + esc(readyWhen(r)) + "</b>." : ""}`}</p>
          <p style="margin:18px 0 6px"><a href="${follow}" style="background:#D9BF8E;color:#17232C;padding:12px 20px;border-radius:999px;text-decoration:none;font:700 15px Arial,sans-serif">${r.joined ? "See it in Revora" : "Follow your bike in Revora"}</a></p>
          <p style="font:13px/1.5 Arial,sans-serif;color:#5B6770;margin:14px 0 0">${r.joined ? "Turn on notifications in the Revora app and you'll get these on your phone instead." : "See what's being worked on and when it'll be ready, any time. It's free."}${r.shop_phone ? ` Questions? Call ${esc(r.shop_phone)}.` : ""}</p>`,
         `Sent for ${esc(r.shop)} by Revora. Replies go to the shop.`);
