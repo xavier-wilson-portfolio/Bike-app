@@ -9,6 +9,7 @@
    welcome_settings.enabled is on in Supabase. /welcome-test sends one of each to the admin, /welcome-preview counts who'd get one.
    Revora Shop: at 13:00 UTC it also sends shop clients the reminders they agreed to (from "<Shop> via Revora", replies go to the shop),
    and every hour any report, value or budget a shop approved for a client. POST /shop-doc { id } sends one right away; /shop-run runs both now.
+   Shop jobs: POST /shop-job { pid, wid } tells the customer their bike is checked in or ready (phone notification, or email), and the hourly run catches any missed.
    POST /notify { rows: [feedback] } emails feedback sent from the app to info@revoragarage.com, with Reply-To set to the sender. */
 const SUPABASE_URL = "https://fhuksccqsyaomnouxxtb.supabase.co", SUPABASE_KEY = "sb_publishable_0wYtVeKcFJUzy3AfIaFhiw_NrT1wNkz";
 const FROM = "Revora <info@revoragarage.com>", REPLY_TO = "info@revoragarage.com", INBOX = "info@revoragarage.com", APP = "https://revoragarage.com";
@@ -146,6 +147,91 @@ async function shopDoc(req, env) {
   const body = await req.json().catch(() => ({})), id = String(body.id || "");
   if (!/^[0-9a-f-]{36}$/.test(id)) return new Response("bad", { status: 400, headers: h });
   const r = await runShopDocs(env, id).catch(e => ({ error: String(e.message || e) }));   // only ever sends an approved, unsent document to that client
+  return new Response(JSON.stringify(r), { status: 200, headers: Object.assign({ "content-type": "application/json" }, h) });
+}
+
+/* ---- Revora Shop jobs: tell the customer when their bike is checked in and when it's ready ----
+   A phone notification to every phone or computer where they turned notifications on in Revora; an email when there's none.
+   Needs the secret VAPID_PRIVATE_JWK (the private half of the key pair whose public half is VAPID_PUBLIC below). */
+const VAPID_PUBLIC = "BH0GjDxNXl4j886ENLQffBKyRwRbnQS3KMRPtFOC4Q7jJcz_6OWis12MJ54TRHLiqV5Pv2RQ8JPwzDxGkhMyqUw";
+const enc = s => new TextEncoder().encode(s);
+const b64u = b => { let s = ""; new Uint8Array(b).forEach(x => s += String.fromCharCode(x)); return btoa(s).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, ""); };
+const ub64 = s => Uint8Array.from(atob(String(s).replace(/-/g, "+").replace(/_/g, "/") + "===".slice((String(s).length + 3) % 4)), c => c.charCodeAt(0));
+const cat = (...a) => { const o = new Uint8Array(a.reduce((n, x) => n + x.length, 0)); let i = 0; a.forEach(x => { o.set(x, i); i += x.length; }); return o; };
+async function hkdf(salt, ikm, info, len) {
+  const k = await crypto.subtle.importKey("raw", ikm, "HKDF", false, ["deriveBits"]);
+  return new Uint8Array(await crypto.subtle.deriveBits({ name: "HKDF", hash: "SHA-256", salt, info }, k, len * 8));
+}
+// the message body, encrypted for that one browser (RFC 8291, aes128gcm)
+async function pushBody(sub, text) {
+  const uaPub = ub64(sub.p256dh), auth = ub64(sub.auth);
+  const mine = await crypto.subtle.generateKey({ name: "ECDH", namedCurve: "P-256" }, true, ["deriveBits"]);
+  const asPub = new Uint8Array(await crypto.subtle.exportKey("raw", mine.publicKey));
+  const theirs = await crypto.subtle.importKey("raw", uaPub, { name: "ECDH", namedCurve: "P-256" }, false, []);
+  const shared = new Uint8Array(await crypto.subtle.deriveBits({ name: "ECDH", public: theirs }, mine.privateKey, 256));
+  const ikm = await hkdf(auth, shared, cat(enc("WebPush: info\0"), uaPub, asPub), 32);
+  const salt = crypto.getRandomValues(new Uint8Array(16));
+  const cek = await hkdf(salt, ikm, enc("Content-Encoding: aes128gcm\0"), 16), nonce = await hkdf(salt, ikm, enc("Content-Encoding: nonce\0"), 12);
+  const key = await crypto.subtle.importKey("raw", cek, "AES-GCM", false, ["encrypt"]);
+  const ct = new Uint8Array(await crypto.subtle.encrypt({ name: "AES-GCM", iv: nonce }, key, cat(enc(text), new Uint8Array([2]))));
+  const head = new Uint8Array(86); head.set(salt, 0); new DataView(head.buffer).setUint32(16, 4096); head[20] = 65; head.set(asPub, 21);
+  return cat(head, ct);
+}
+async function vapid(endpoint, env) {
+  const key = await crypto.subtle.importKey("jwk", JSON.parse(env.VAPID_PRIVATE_JWK), { name: "ECDSA", namedCurve: "P-256" }, false, ["sign"]);
+  const h = b64u(enc(JSON.stringify({ typ: "JWT", alg: "ES256" }))), p = b64u(enc(JSON.stringify({ aud: new URL(endpoint).origin, exp: Math.floor(Date.now() / 1000) + 12 * 3600, sub: "mailto:info@revoragarage.com" })));
+  const sig = await crypto.subtle.sign({ name: "ECDSA", hash: "SHA-256" }, key, enc(h + "." + p));
+  return `vapid t=${h}.${p}.${b64u(sig)}, k=${VAPID_PUBLIC}`;
+}
+// true when the phone's push service took it
+async function sendPush(env, sub, msg) {
+  try {
+    const r = await fetch(sub.endpoint, { method: "POST", headers: { Authorization: await vapid(sub.endpoint, env), TTL: "172800", Urgency: "high", "Content-Encoding": "aes128gcm", "Content-Type": "application/octet-stream" },
+      body: await pushBody(sub, JSON.stringify(msg)) });
+    if (r.status === 404 || r.status === 410) { await rpc("push_gone", { sec: env.WORKER_SECRET, ep: sub.endpoint, ok: false }).catch(() => {}); return false; }
+    if (!r.ok) { console.log("push failed", r.status, (await r.text()).slice(0, 200)); return false; }
+    await rpc("push_gone", { sec: env.WORKER_SECRET, ep: sub.endpoint, ok: true }).catch(() => {});
+    return true;
+  } catch (e) { console.log("push error", String(e.message || e)); return false; }
+}
+const fmtDay = d => d ? new Date(d + "T12:00:00Z").toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric", timeZone: "UTC" }) : "";
+async function runShopJobs(env, pid, wid) {
+  if (!env.WORKER_SECRET) return { error: "not configured" };
+  let rows; try { rows = await rpc("shop_jobs_outbox", { sec: env.WORKER_SECRET, pid: pid || null, wid: wid || null }); } catch (e) { return { error: "jobs tables missing" }; }
+  const out = { due: (rows || []).length, pushed: 0, emailed: 0 };
+  for (const r of rows || []) {
+    const bike = r.bike || "bike", first = String(r.client || "").split(/\s+/)[0] || "there", ready = r.kind === "ready";
+    const msg = ready ? { title: `Your ${bike} is ready`, body: `${r.shop} finished ${r.title ? r.title.toLowerCase().slice(0, 80) : "the work"}. Come pick it up${r.shop_phone ? " or call " + r.shop_phone : ""}.` }
+      : { title: `${r.shop} has your ${bike}`, body: `${r.title ? r.title.slice(0, 80) + ". " : ""}${r.promised ? "Ready by " + fmtDay(r.promised) + "." : "We'll let you know when it's ready."} Tap to follow along.` };
+    Object.assign(msg, { url: "/?mine", tag: "job-" + r.project_id + "-" + r.wo_id });
+    let pushed = false;
+    if (env.VAPID_PRIVATE_JWK) for (const s of r.subs || []) if (await sendPush(env, s, msg)) pushed = true;
+    if (pushed) out.pushed++;
+    else if (env.RESEND_API_KEY && okMail(r.email)) {
+      const follow = r.joined ? `${APP}/?mine` : `${APP}/?join=${encodeURIComponent(r.code)}`;
+      const html = shopFrame({ k: esc(String(r.shop || "YOUR SHOP").toUpperCase()), t: ready ? `Your ${esc(bike)} is ready` : `We have your ${esc(bike)}` },
+        `<p style="font:15px/1.5 Arial,sans-serif;margin:16px 0">Hi ${esc(first)}, ${ready ? `${esc(r.shop)} finished the work on your ${esc(bike)}${r.title ? ": " + esc(r.title) : ""}. It's ready to pick up.` : `${esc(r.shop)} checked your ${esc(bike)} in${r.title ? " for " + esc(r.title.toLowerCase()) : ""}.${r.promised ? " It should be ready by <b>" + esc(fmtDay(r.promised)) + "</b>." : ""}`}</p>
+         <p style="margin:18px 0 6px"><a href="${follow}" style="background:#D9BF8E;color:#17232C;padding:12px 20px;border-radius:999px;text-decoration:none;font:700 15px Arial,sans-serif">${r.joined ? "See it in Revora" : "Follow your bike in Revora"}</a></p>
+         <p style="font:13px/1.5 Arial,sans-serif;color:#5B6770;margin:14px 0 0">${r.joined ? "Turn on notifications in the Revora app and you'll get these on your phone instead." : "See what's being worked on and when it'll be ready, any time. It's free."}${r.shop_phone ? ` Questions? Call ${esc(r.shop_phone)}.` : ""}</p>`,
+        `Sent for ${esc(r.shop)} by Revora. Replies go to the shop.`);
+      const res = await fetch("https://api.resend.com/emails", { method: "POST", headers: { Authorization: "Bearer " + env.RESEND_API_KEY, "content-type": "application/json" },
+        body: JSON.stringify({ from: fromShop(r.shop), to: [r.email], reply_to: okMail(r.shop_email) ? r.shop_email : REPLY_TO, subject: msg.title.slice(0, 150), html,
+          text: `Hi ${first}, ${msg.body}\n\n${r.joined ? "See it in Revora" : "Follow your bike in Revora"}: ${follow}` }) });
+      if (!res.ok) { console.log("job email failed", res.status, (await res.text()).slice(0, 200)); continue; }
+      out.emailed++;
+    } else if (!(r.subs || []).length && !okMail(r.email)) { /* no way to reach them: still mark it so it isn't retried forever */ }
+    else continue;
+    await rpc("shop_jobs_mark", { sec: env.WORKER_SECRET, pid: r.project_id, wid: r.wo_id, k: r.kind });
+  }
+  return out;
+}
+async function shopJob(req, env) {
+  const o = req.headers.get("Origin") || "", h = SITES.includes(o) ? { "Access-Control-Allow-Origin": o, "Access-Control-Allow-Methods": "POST, OPTIONS", "Access-Control-Allow-Headers": "content-type", "Vary": "Origin" } : {};
+  if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: h });
+  if (req.method !== "POST" || !SITES.includes(o)) return new Response("no", { status: 403, headers: h });
+  const b = await req.json().catch(() => ({})), pid = String(b.pid || ""), wid = String(b.wid || "");
+  if (!/^[0-9a-f-]{36}$/.test(pid) || !/^WO-U?[0-9]{1,6}$/.test(wid)) return new Response("bad", { status: 400, headers: h });
+  const r = await runShopJobs(env, pid, wid).catch(e => ({ error: String(e.message || e) }));   // only ever sends what that job hasn't sent yet
   return new Response(JSON.stringify(r), { status: 200, headers: Object.assign({ "content-type": "application/json" }, h) });
 }
 
@@ -319,7 +405,7 @@ export default {
   async scheduled(evt, env, ctx) {
     const daily = new Date(evt.scheduledTime || Date.now()).getUTCHours() === 13;
     ctx.waitUntil((daily ? run(env).catch(e => console.log(e)).then(() => runShop(env)).catch(e => console.log("shop", e)) : Promise.resolve()).then(() => runWelcome(env)).catch(e => console.log("welcome", e))
-      .then(() => runShopDocs(env, null)).catch(e => console.log("shop docs", e)));
+      .then(() => runShopDocs(env, null)).catch(e => console.log("shop docs", e)).then(() => runShopJobs(env, null, null)).catch(e => console.log("shop jobs", e)));
   },
   async fetch(req, env) {
     const path = new URL(req.url).pathname;
@@ -327,6 +413,7 @@ export default {
     if (path === "/unsub") return unsub(req, env);
     if (path === "/shop-doc") return shopDoc(req, env);
     if (path === "/shop-invite") return shopInvite(req, env);
+    if (path === "/shop-job") return shopJob(req, env);
     if (path === "/shop-run") { try { return json({ reminders: await runShop(env), docs: await runShopDocs(env, null) }); } catch (e) { return json({ error: String(e.message || e) }, 500); } }
     if (path === "/welcome-test") { // sends the welcome emails a new member gets now (24-hour deal) to the admin only, to check how they look
       if (!env.RESEND_API_KEY) return json({ error: "not configured" }, 503);
