@@ -1,0 +1,145 @@
+{
+ "id": "suzuki-sv650-2017",
+ "make": "Suzuki",
+ "model": "SV650",
+ "code": "SV650 / SV650X",
+ "years": [
+  2022,
+  2022
+ ],
+ "near": [
+  2017,
+  2025
+ ],
+ "match": [
+  "sv650",
+  "sv 650",
+  "sv650x",
+  "sv650a"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "sources": {
+  "om": {
+   "name": "Suzuki SV650/SV650X Owner's Manual (Suzuki Australia, 2022)",
+   "url": "https://suzukimotorcycles.com.au/wp-content/uploads/2021/11/99011-18K55-01A_SV650M2.pdf"
+  }
+ },
+ "specs": [
+  {
+   "k": "oil",
+   "v": "SAE 10W-40, API SJ/SL/SM/SN, JASO MA",
+   "src": "om",
+   "p": "3-3"
+  },
+  {
+   "k": "oilCap",
+   "v": "2.9 US qt (2,750 ml)",
+   "src": "om",
+   "p": "6-23"
+  },
+  {
+   "k": "oilCapNo",
+   "v": "2.5 US qt (2,400 ml)",
+   "src": "om",
+   "p": "6-23"
+  },
+  {
+   "k": "plug",
+   "v": "NGK MR8E-9 (all markets except EU/UK)",
+   "src": "om",
+   "p": "Specifications"
+  },
+  {
+   "k": "plugGap",
+   "v": "0.031–0.035 in (0.8–0.9 mm)",
+   "src": "om",
+   "p": "6-17"
+  },
+  {
+   "k": "coolant",
+   "v": "2.0 US qt (1,850 ml), 50:50 mix",
+   "src": "om",
+   "p": "3-6"
+  },
+  {
+   "k": "chain",
+   "v": "DID520V0, 112 links",
+   "src": "om",
+   "p": "Specifications"
+  },
+  {
+   "k": "slack",
+   "v": "0.8–1.2 in (20–30 mm)",
+   "src": "om",
+   "p": "6-31"
+  },
+  {
+   "k": "sprockets",
+   "v": "15 front / 46 rear",
+   "src": "om",
+   "p": "Specifications"
+  },
+  {
+   "k": "brakeFluid",
+   "v": "DOT 4",
+   "src": "om",
+   "p": "6-33"
+  },
+  {
+   "k": "tireF",
+   "v": "120/70ZR17M/C (58W)",
+   "src": "om",
+   "p": "6-38"
+  },
+  {
+   "k": "tireR",
+   "v": "160/60ZR17M/C (69W)",
+   "src": "om",
+   "p": "6-38"
+  },
+  {
+   "k": "psiF",
+   "v": "33 psi (225 kPa)",
+   "src": "om",
+   "p": "6-37"
+  },
+  {
+   "k": "psiR",
+   "v": "36 psi (250 kPa)",
+   "src": "om",
+   "p": "6-37"
+  },
+  {
+   "k": "battery",
+   "v": "12 V 10 Ah",
+   "src": "om",
+   "p": "Specifications"
+  }
+ ],
+ "torque": [
+  {
+   "what": "Rear axle nut",
+   "v": "72.5 ft·lb (100 N·m)",
+   "src": "om",
+   "p": "6-31"
+  },
+  {
+   "what": "Oil drain plug",
+   "v": "15.0 ft·lb (21 N·m)",
+   "src": "om",
+   "p": "6-23"
+  },
+  {
+   "what": "Oil filter",
+   "v": "14.5 ft·lb (20 N·m)",
+   "src": "om",
+   "p": "6-23"
+  }
+ ],
+ "note": "These numbers are from Suzuki Australia's manual. US bikes are mechanically the same, but check the tire label on yours.",
+ "diagrams": {},
+ "guides": [
+  "chain"
+ ]
+}

@@ -1,0 +1,126 @@
+{
+ "id": "honda-grom-2026",
+ "make": "Honda",
+ "model": "Grom",
+ "code": "Grom 125",
+ "years": [
+  2026,
+  2026
+ ],
+ "near": [
+  2022,
+  2026
+ ],
+ "match": [
+  "grom",
+  "grom125",
+  "grom 125",
+  "msx125",
+  "msx 125"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "sources": {
+  "om": {
+   "name": "Honda 2026 Grom Owner's Manual",
+   "url": "https://cdn.powersports.honda.com/documentum/MWOM/ml.remawmom.ak262626omen.pdf"
+  }
+ },
+ "specs": [
+  {
+   "k": "oil",
+   "v": "SAE 10W-30, JASO T 903 MA, API SJ or higher",
+   "src": "om",
+   "p": "117"
+  },
+  {
+   "k": "oilCap",
+   "v": "0.95 US qt (0.90 L)",
+   "src": "om",
+   "p": "117"
+  },
+  {
+   "k": "oilCapNo",
+   "v": "0.95 US qt (0.90 L)",
+   "src": "om",
+   "p": "117"
+  },
+  {
+   "k": "plug",
+   "v": "NGK CPR7EA-9S",
+   "src": "om",
+   "p": "117"
+  },
+  {
+   "k": "plugGap",
+   "v": "0.03–0.04 in (0.8–0.9 mm)",
+   "src": "om",
+   "p": "117"
+  },
+  {
+   "k": "chain",
+   "v": "DID 420D3, 108 links",
+   "src": "om",
+   "p": "117"
+  },
+  {
+   "k": "slack",
+   "v": "1 3/16–1 9/16 in (30–40 mm)",
+   "src": "om",
+   "p": "79"
+  },
+  {
+   "k": "sprockets",
+   "v": "15 front / 38 rear",
+   "src": "om",
+   "p": "117"
+  },
+  {
+   "k": "brakeFluid",
+   "v": "DOT 3 or DOT 4",
+   "src": "om",
+   "p": "117"
+  },
+  {
+   "k": "tireF",
+   "v": "120/70-12 51L",
+   "src": "om",
+   "p": "117"
+  },
+  {
+   "k": "tireR",
+   "v": "130/70-12 56L",
+   "src": "om",
+   "p": "117"
+  },
+  {
+   "k": "psiF",
+   "v": "29 psi (200 kPa)",
+   "src": "om",
+   "p": "117"
+  },
+  {
+   "k": "psiR",
+   "v": "29 psi (200 kPa)",
+   "src": "om",
+   "p": "117"
+  },
+  {
+   "k": "battery",
+   "v": "YTZ5S, 12 V 3.5 Ah",
+   "src": "om",
+   "p": "116"
+  },
+  {
+   "k": "fuses",
+   "v": "Main 15 A; others 10 A (ABS model 15 A and 10 A)",
+   "src": "om",
+   "p": "118"
+  }
+ ],
+ "torque": [],
+ "diagrams": {},
+ "guides": [
+  "chain"
+ ]
+}

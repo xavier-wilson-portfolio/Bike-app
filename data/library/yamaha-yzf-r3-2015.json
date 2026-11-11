@@ -1,0 +1,122 @@
+{
+ "id": "yamaha-yzf-r3-2015",
+ "make": "Yamaha",
+ "model": "YZF-R3",
+ "code": "YZF-R3 / R3A",
+ "years": [
+  2017,
+  2017
+ ],
+ "near": [
+  2015,
+  2018
+ ],
+ "match": [
+  "r3",
+  "yzf-r3",
+  "yzfr3",
+  "yzf r3",
+  "r3a"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "sources": {
+  "om": {
+   "name": "Yamaha YZF-R3A Owner's Manual (2017, Thai edition)",
+   "url": "https://www.yamaha-motor.co.th/docs/owner-manual/commuter/en/r3-en.pdf"
+  }
+ },
+ "specs": [
+  {
+   "k": "oilCap",
+   "v": "2.22 US qt (2.10 L)",
+   "src": "om",
+   "p": "7-11"
+  },
+  {
+   "k": "oilCapNo",
+   "v": "1.90 US qt (1.80 L)",
+   "src": "om",
+   "p": "7-11"
+  },
+  {
+   "k": "plug",
+   "v": "NGK CR8E",
+   "src": "om",
+   "p": "7-9"
+  },
+  {
+   "k": "plugGap",
+   "v": "0.028–0.031 in (0.7–0.8 mm)",
+   "src": "om",
+   "p": "7-9"
+  },
+  {
+   "k": "slack",
+   "v": "1.38–1.77 in (35–45 mm)",
+   "src": "om",
+   "p": "7-23"
+  },
+  {
+   "k": "brakeFluid",
+   "v": "DOT 4",
+   "src": "om",
+   "p": "7-22"
+  },
+  {
+   "k": "tireF",
+   "v": "110/70-17M/C (54H)",
+   "src": "om",
+   "p": "7-18"
+  },
+  {
+   "k": "tireR",
+   "v": "140/70-17M/C (66H)",
+   "src": "om",
+   "p": "7-18"
+  },
+  {
+   "k": "psiF",
+   "v": "29 psi (200 kPa)",
+   "src": "om",
+   "p": "7-17"
+  },
+  {
+   "k": "psiR",
+   "v": "36 psi (250 kPa)",
+   "src": "om",
+   "p": "7-17"
+  }
+ ],
+ "torque": [
+  {
+   "what": "Rear axle nut",
+   "v": "41 ft·lb (57 N·m)",
+   "src": "om",
+   "p": "7-25"
+  },
+  {
+   "what": "Oil drain bolt",
+   "v": "14 ft·lb (20 N·m)",
+   "src": "om",
+   "p": "7-11"
+  },
+  {
+   "what": "Oil filter cartridge",
+   "v": "12 ft·lb (17 N·m)",
+   "src": "om",
+   "p": "7-11"
+  },
+  {
+   "what": "Spark plug",
+   "v": "9.4 ft·lb (13 N·m)",
+   "src": "om",
+   "p": "7-9"
+  }
+ ],
+ "note": "These numbers are from Yamaha Thailand's manual for the first-generation R3. Check them against your US manual or the labels on your bike.",
+ "diagrams": {},
+ "guides": [
+  "chain"
+ ]
+}
