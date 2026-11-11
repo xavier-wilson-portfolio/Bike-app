@@ -13,6 +13,7 @@
   "plansLive": true,
   "trialLink": "https://buy.stripe.com/14A8wP9MYb5v6xedopabK0f",
   "primaryHost": "revoragarage.com",
+  "vapidPublic": "BH0GjDxNXl4j886ENLQffBKyRwRbnQS3KMRPtFOC4Q7jJcz_6OWis12MJ54TRHLiqV5Pv2RQ8JPwzDxGkhMyqUw",
   "shopApi": "https://revora-shop.xavier-j-wilson101.workers.dev",
   "dealCodes": {
     "rider_m": "RIDER25M",
