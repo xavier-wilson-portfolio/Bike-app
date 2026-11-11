@@ -3353,3 +3353,6 @@ div.sx-row{cursor:default}
 .sx-dtab.on{border-color:#1E3A4C;box-shadow:inset 0 0 0 1.5px #1E3A4C;background:#F7F9FA}.sx-dtab.on span{color:var(--fg)}
 @media(max-width:560px){.sx-dtab{flex-direction:column;align-items:flex-start;gap:0;padding:10px 12px}.sx-dtab b{font-size:20px}}
 .sx-filter input{min-width:0;flex:1}.sx-filter select{flex:none;max-width:46%}
+.adm-tile{transition:border-color .15s,transform .15s,box-shadow .15s}
+.adm-tile:hover{border-color:#2C5F7C;transform:translateY(-1px);box-shadow:0 6px 16px rgba(30,58,76,.1)}
+.adm-tile:focus-visible{outline:2px solid #D9BF8E;outline-offset:2px}

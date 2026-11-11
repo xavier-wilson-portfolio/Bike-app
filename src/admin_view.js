@@ -49,9 +49,9 @@
   function overview() {
     const P = arr(D.people), wk = Date.now() - 7 * 864e5, td = new Date(); td.setHours(0, 0, 0, 0);
     const n = k => P.filter(g => planOf(g).k === k).length;
-    const tiles = [[P.length, "Signed up"], [P.filter(g => new Date(g.joined) >= td).length, "Today"], [P.filter(g => new Date(g.joined) > wk).length, "This week"], [n("paid"), "Paying"], [n("gift") + n("trial"), "Gifted or trial"], [P.filter(g => g.last_seen && new Date(g.last_seen) > wk).length, "Active this week"], [P.filter(g => g.sms_ok).length, "Said yes to texts"], [newFb().length, "New feedback", "fb"]];
+    const tiles = [[P.length, "Signed up", "people", ""], [P.filter(g => new Date(g.joined) >= td).length, "Today", "people", "today"], [P.filter(g => new Date(g.joined) > wk).length, "This week", "people", "new"], [n("paid"), "Paying", "people", "paid"], [n("gift") + n("trial"), "Gifted or trial", "people", "gift"], [P.filter(g => g.last_seen && new Date(g.last_seen) > wk).length, "Active this week", "people", "active"], [P.filter(g => g.sms_ok).length, "Said yes to texts", "people", "texts"], [newFb().length, "New feedback", "fb", ""]];
     const W = D.welcome;
-    return `<div class="adm-tiles">${tiles.map(([v, t, go]) => `<${go ? `button type="button" data-adm-tab="${go}"` : "div"} class="adm-tile${go && v ? " hot" : ""}"><b>${D.people === null ? "…" : esc(v)}</b><span>${esc(t)}</span></${go ? "button" : "div"}>`).join("")}</div>
+    return `<div class="adm-tiles">${tiles.map(([v, t, go, show]) => `<button type="button" data-adm-tile="${go}|${show}" class="adm-tile${go === "fb" && v ? " hot" : ""}" title="See ${esc(t.toLowerCase())}"><b>${D.people === null ? "…" : esc(v)}</b><span>${esc(t)}</span></button>`).join("")}</div>
       ${D.people && D.people.err ? `<p class="muted">${D.people.err === "setup" ? "People need a one-time setup in the database (supabase/admin_people.sql)." : "Couldn't load people. Refresh to try again."}</p>` : `<div class="adm-card"><div class="adm-ch"><b>Sign-ups, last 30 days</b></div>${chart(P)}</div>`}
       ${funnel()}
       <div class="adm-two">
@@ -68,13 +68,14 @@
     return arr(D.people).slice().sort((a, b) => new Date(b.joined) - new Date(a.joined)).filter(g => {
       if (q && !((g.email || "") + " " + (g.name || "")).toLowerCase().includes(q)) return false; const k = planOf(g).k;
       if (S.show === "free") return k === "free"; if (S.show === "paid") return k === "paid"; if (S.show === "gift") return k === "gift" || k === "trial";
-      if (S.show === "nobike") return !g.bikes; if (S.show === "new") return new Date(g.joined) > wk; if (S.show === "texts") return g.sms_ok; if (S.show === "phone") return !!g.phone; if (S.show === "idle") return !g.last_seen || new Date(g.last_seen) < Date.now() - 14 * 864e5; return true; });
+      if (S.show === "nobike") return !g.bikes; if (S.show === "new") return new Date(g.joined) > wk;
+      if (S.show === "today") { const td = new Date(); td.setHours(0, 0, 0, 0); return new Date(g.joined) >= td; } if (S.show === "active") return g.last_seen && new Date(g.last_seen) > wk; if (S.show === "texts") return g.sms_ok; if (S.show === "phone") return !!g.phone; if (S.show === "idle") return !g.last_seen || new Date(g.last_seen) < Date.now() - 14 * 864e5; return true; });
   }
   function people() {
     if (D.people === null) return `<p class="muted">Loading…</p>`; if (D.people.err) return D.people.err === "setup" ? setupMsg("admin_people.sql") : `<p class="muted">Couldn't load the list.</p>`;
     const rows = pplRows();
     return `<div class="ppl-tools"><input data-adm-q type="search" placeholder="Search name or email" value="${esc(S.q)}" aria-label="Search people">
-        <select data-adm-show aria-label="Show">${[["", "Everyone"], ["new", "Joined this week"], ["free", "Free"], ["paid", "Paying"], ["gift", "Gifted or trial"], ["nobike", "No bike added yet"], ["texts", "Said yes to texts"], ["phone", "Gave a number"], ["idle", "Not back in 2 weeks"]].map(([v, t]) => `<option value="${v}"${S.show === v ? " selected" : ""}>${t}</option>`).join("")}</select>
+        <select data-adm-show aria-label="Show">${[["", "Everyone"], ["today", "Joined today"], ["new", "Joined this week"], ["active", "Active this week"], ["free", "Free"], ["paid", "Paying"], ["gift", "Gifted or trial"], ["nobike", "No bike added yet"], ["texts", "Said yes to texts"], ["phone", "Gave a number"], ["idle", "Not back in 2 weeks"]].map(([v, t]) => `<option value="${v}"${S.show === v ? " selected" : ""}>${t}</option>`).join("")}</select>
         <button class="btn sm" data-adm-copy>Copy ${rows.length} emails</button><button class="btn sm" data-adm-phones>Copy texting numbers</button><button class="btn sm" data-adm-csv>Download list</button></div>
       <div class="ppl-list">${rows.map(g => { const pl = planOf(g); return `<div class="ppl-row"><div class="grow"><b>${esc(g.name || (g.email || "").split("@")[0])}</b> <span class="pill ${pl.c}">${esc(pl.t)}</span>
         <small class="faint">${esc(g.email)}${g.phone ? " · " + esc(g.phone) + (g.sms_ok ? " (texts ok)" : " (no texts)") : ""} · joined ${esc(day(g.joined))} · last in ${esc(day(g.last_seen))} · ${esc(g.bikes)} bike${g.bikes === 1 ? "" : "s"}</small></div>
@@ -139,6 +140,8 @@
     const $ = s => root.querySelector(s), $$ = s => root.querySelectorAll(s);
     $("[data-adm-tog]").onclick = () => { S.open = !S.open; lsSet("rv.adm.open", S.open ? "1" : "0"); draw(); };
     const rf = $("[data-adm-refresh]"); if (rf) rf.onclick = () => { rf.disabled = true; load(); };
+    $$("[data-adm-tile]").forEach(b => b.onclick = () => { const [tab, show] = b.dataset.admTile.split("|"); S.tab = tab; lsSet("rv.adm.tab", tab);
+      if (tab === "people") { S.show = show; S.q = ""; } if (tab === "fb") { S.fbShow = "new"; S.fbKind = ""; } draw(); root.scrollIntoView({ behavior: "smooth", block: "start" }); });
     $$("[data-adm-tab]").forEach(b => b.onclick = () => { S.tab = b.dataset.admTab; lsSet("rv.adm.tab", S.tab); S.open = true; draw(); });
     const w = $("[data-adm-welcome]"); if (w) w.onclick = async () => { const on = !D.welcome.enabled; if (on && !confirm("Start emailing new sign-ups?")) return;
       const { error } = await sb.rpc("welcome_switch", { turn_on: on }); if (error) return toast("Couldn't change that.", true); D.welcome.enabled = on; toast(on ? "On. The next batch goes out with the daily run." : "Off. No more sign-up emails."); draw(); };
