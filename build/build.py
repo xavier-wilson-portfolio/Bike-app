@@ -49,7 +49,7 @@ css = (src / 'style.css').read_text()
 import sys; sys.path.insert(0, str(ROOT / 'build')); from darkify import darkify
 css, n_dark = darkify(css)
 print('dark colors', n_dark)
-loader = (src / 'cloud.js').read_text() + '\n' + (src / 'report_view.js').read_text() + '\n' + (src / 'build_view.js').read_text() + '\n' + (src / 'wo_view.js').read_text() + '\n' + (src / 'plans_view.js').read_text() + '\n' + (src / 'shop_view.js').read_text() + '\n' + (src / 'admin_view.js').read_text() + '\n' + (src / 'shop_due.js').read_text() + '\n' + (src / 'shop_jobs.js').read_text() + '\n' + (src / 'shopcrm_view.js').read_text() + '\n' + (src / 'client_view.js').read_text() + '\n' + (src / 'shop_lock.js').read_text() + '\n' + (src / 'legal.js').read_text() + '\n' + (src / 'loader.js').read_text()
+loader = (src / 'cloud.js').read_text() + '\n' + (src / 'report_view.js').read_text() + '\n' + (src / 'build_view.js').read_text() + '\n' + (src / 'wo_view.js').read_text() + '\n' + (src / 'plans_view.js').read_text() + '\n' + (src / 'shop_view.js').read_text() + '\n' + (src / 'admin_view.js').read_text() + '\n' + (src / 'shop_due.js').read_text() + '\n' + (src / 'shop_jobs.js').read_text() + '\n' + (src / 'shop_import.js').read_text() + '\n' + (src / 'shopcrm_view.js').read_text() + '\n' + (src / 'client_view.js').read_text() + '\n' + (src / 'shop_lock.js').read_text() + '\n' + (src / 'legal.js').read_text() + '\n' + (src / 'loader.js').read_text()
 cfg_file = ROOT / 'data' / 'config.json'   # public settings only: Supabase URL and publishable key
 cfg = json.loads(cfg_file.read_text()) if cfg_file.exists() else {}
 import hashlib
