@@ -53,7 +53,7 @@
   const clock = d => d.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" });
   const tz = () => { try { return Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (e) { return ""; } };
   // a ready-by time: "in 45 minutes" -> rounded up to the next 5 minutes
-  const inMinutes = k => { const d = new Date(Date.now() + k * 60000); d.setSeconds(0, 0); d.setMinutes(Math.ceil(d.getMinutes() / 5) * 5); return d; };
+  const inMinutes = k => { const d = new Date(Date.now() + k * 60000); d.setSeconds(0, 0); return d; };
   const late = w => !["Done", "Picked up"].includes(w.status) && (w.promisedAt ? Date.now() > new Date(w.promisedAt).getTime() + 5 * 60000 : !!(w.promised && w.promised < today()));
   const pillTone = s => s === "Done" ? "green" : s === "Waiting for parts" ? "amber" : s === "Checked in" ? "gray" : "blue";
   const etaTxt = w => {
@@ -61,7 +61,7 @@
     if (w.promisedAt) {
       const t = new Date(w.promisedAt), d = dateOf(t), mins = Math.round((t - Date.now()) / 60000);
       if (late(w)) return "Running late · was due " + (d === today() ? clock(t) : day(d) + ", " + clock(t));
-      if (d === today()) return mins > 0 && mins <= 50 ? `Ready in about ${Math.max(5, Math.ceil(mins / 5) * 5)} min` : "Ready by " + clock(t) + " today";
+      if (d === today()) return mins > 0 && mins <= 50 ? `Ready in about ${Math.max(5, Math.round(mins / 5) * 5)} min` : "Ready by " + clock(t) + " today";
       if (d === plusDays(1)) return "Ready tomorrow by " + clock(t);
       return "Ready by " + day(d) + ", " + clock(t);
     }
@@ -190,6 +190,75 @@
       ${(w.asks || []).some(a => a.status === "asked") ? `<span class="jb-flag">Asked customer</span>` : ""}<span class="pill ${pillTone(w.status)}">${esc((STATUS.find(x => x[0] === w.status) || [0, w.status])[1])}</span><span class="sx-when${late(w) ? " late" : ""}">${esc(etaTxt(w))}</span></button>`;
   }
 
+  /* ---------- scroll wheels for picking a ready time ---------- */
+  const ROW = 38;
+  // one wheel: items [{label}], start index; onPick(i) when the person scrolls, taps or uses the arrow keys on it
+  function wheel(items, start, onPick, label) {
+    const el = document.createElement("div"); el.className = "jw"; el.tabIndex = 0; el.setAttribute("role", "listbox"); el.setAttribute("aria-label", label || "");
+    el.innerHTML = `<div class="jw-pad"></div>${items.map((x, i) => `<div class="jw-i" role="option" data-i="${i}">${esc(x.label)}</div>`).join("")}<div class="jw-pad"></div>`;
+    let cur = start, quiet = true, t = null;
+    const mark = () => el.querySelectorAll(".jw-i").forEach((x, i) => { x.classList.toggle("on", i === cur); x.setAttribute("aria-selected", i === cur ? "true" : "false"); });
+    const go = (i, smooth) => { i = Math.max(0, Math.min(items.length - 1, i)); el.scrollTo({ top: i * ROW, behavior: smooth ? "smooth" : "auto" }); if (i !== cur) { cur = i; mark(); } };
+    el.addEventListener("scroll", () => { clearTimeout(t); t = setTimeout(() => { const i = Math.max(0, Math.min(items.length - 1, Math.round(el.scrollTop / ROW))); if (i !== cur) { cur = i; mark(); } if (!quiet) onPick(cur); }, 90); }, { passive: true });
+    const touch = () => { quiet = false; onPick(cur); };
+    el.addEventListener("pointerdown", touch); el.addEventListener("wheel", () => { quiet = false; }, { passive: true }); el.addEventListener("touchstart", () => { quiet = false; }, { passive: true });
+    el.addEventListener("click", ev => { const it = ev.target.closest(".jw-i"); if (it) { quiet = false; go(+it.dataset.i, true); onPick(+it.dataset.i); } });
+    el.addEventListener("keydown", ev => { if (ev.key === "ArrowDown" || ev.key === "ArrowUp") { ev.preventDefault(); quiet = false; go(cur + (ev.key === "ArrowDown" ? 1 : -1), true); onPick(cur); } });
+    requestAnimationFrame(() => { go(start, false); mark(); setTimeout(() => { quiet = true; }, 0); });
+    return { el, get: () => cur, set: i => { quiet = true; go(i, false); } };
+  }
+  // time (in X / at a clock time) and date (in X days / on a date). Inside each, using one side turns the other off. Both are optional.
+  function readyPicker(host, onChange) {
+    const RT = [[15, "15 min"], [30, "30 min"], [45, "45 min"], [60, "1 hour"], [90, "1½ hours"], [120, "2 hours"], [150, "2½ hours"], [180, "3 hours"], [240, "4 hours"], [300, "5 hours"], [360, "6 hours"], [480, "8 hours"]];
+    const RD = [[0, "Today"], [1, "Tomorrow"], [2, "2 days"], [3, "3 days"], [4, "4 days"], [5, "5 days"], [7, "1 week"], [10, "10 days"], [14, "2 weeks"], [21, "3 weeks"], [30, "1 month"]];
+    const HRS = Array.from({ length: 12 }, (_, i) => i + 1), MINS = Array.from({ length: 12 }, (_, i) => i * 5), AP = ["AM", "PM"];
+    const DAYS = Array.from({ length: 120 }, (_, i) => { const d = new Date(); d.setHours(12, 0, 0, 0); d.setDate(d.getDate() + i); return d; });
+    const soon = new Date(Date.now() + 60 * 60000); soon.setMinutes(Math.ceil(soon.getMinutes() / 15) * 15, 0, 0);
+    const S = { time: null, date: null };   // which side is in use: "rel" or "abs"
+    host.innerHTML = `<div class="jp-grp" data-g="time"><div class="jp-h"><b>Time</b><span class="jp-st"></span><button type="button" class="linkbtn jp-clr" hidden>Clear</button></div>
+        <div class="jp-row"><div class="jp-col" data-k="rel"><span class="jp-l">In</span><div class="jp-w" data-w="rt"></div></div><span class="jp-or">or</span>
+          <div class="jp-col" data-k="abs"><span class="jp-l">At</span><div class="jp-w jp-multi" data-w="at"></div></div></div></div>
+      <div class="jp-grp" data-g="date"><div class="jp-h"><b>Date</b><span class="jp-st"></span><button type="button" class="linkbtn jp-clr" hidden>Clear</button></div>
+        <div class="jp-row"><div class="jp-col" data-k="rel"><span class="jp-l">In</span><div class="jp-w" data-w="rd"></div></div><span class="jp-or">or</span>
+          <div class="jp-col" data-k="abs"><span class="jp-l">On</span><div class="jp-w" data-w="on"></div></div></div></div>`;
+    const W = {};
+    const use = (g, k) => () => {
+      if (S[g] === k) return emit();
+      S[g] = k;
+      if (g === "time" && k === "rel") S.date = null;            // "in 2 hours" counts from now, so no date with it
+      if (g === "date" && S.time === "rel") S.time = null;
+      emit();
+    };
+    W.rt = wheel(RT.map(x => ({ label: x[1] })), 3, use("time", "rel"), "Ready in");
+    const h0 = soon.getHours() % 12 || 12;
+    W.h = wheel(HRS.map(x => ({ label: String(x) })), HRS.indexOf(h0), use("time", "abs"), "Hour");
+    W.mi = wheel(MINS.map(x => ({ label: String(x).padStart(2, "0") })), soon.getMinutes() / 5, use("time", "abs"), "Minute");
+    W.ap = wheel(AP.map(x => ({ label: x })), soon.getHours() >= 12 ? 1 : 0, use("time", "abs"), "AM or PM");
+    W.rd = wheel(RD.map(x => ({ label: x[1] })), 1, use("date", "rel"), "Ready in days");
+    W.on = wheel(DAYS.map((d, i) => ({ label: i === 0 ? "Today" : i === 1 ? "Tomorrow" : d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }) })), 1, use("date", "abs"), "Ready on");
+    host.querySelector('[data-w="rt"]').appendChild(W.rt.el); host.querySelector('[data-w="rd"]').appendChild(W.rd.el); host.querySelector('[data-w="on"]').appendChild(W.on.el);
+    const at = host.querySelector('[data-w="at"]'); at.appendChild(W.h.el); at.insertAdjacentHTML("beforeend", `<span class="jp-colon">:</span>`); at.appendChild(W.mi.el); at.appendChild(W.ap.el);
+    host.querySelectorAll(".jp-clr").forEach(b => b.onclick = () => { S[b.closest(".jp-grp").dataset.g] = null; emit(); });
+    function emit() {
+      ["time", "date"].forEach(g => { const grp = host.querySelector(`[data-g="${g}"]`);
+        grp.querySelectorAll(".jp-col").forEach(c => { c.classList.toggle("on", S[g] === c.dataset.k); c.classList.toggle("off", !!S[g] && S[g] !== c.dataset.k); });
+        grp.classList.toggle("set", !!S[g]); grp.querySelector(".jp-clr").hidden = !S[g];
+        grp.classList.toggle("na", g === "date" && S.time === "rel");
+        grp.querySelector(".jp-st").textContent = g === "date" && S.time === "rel" ? "Counts from now" : S[g] ? "" : "Optional"; });
+      let promised = "", promisedAt = "";
+      if (S.time === "rel") { const t = inMinutes(RT[W.rt.get()][0]); promised = dateOf(t); promisedAt = t.toISOString(); }
+      else {
+        const day = S.date === "rel" ? plusDays(RD[W.rd.get()][0]) : S.date === "abs" ? dateOf(DAYS[W.on.get()]) : S.time ? today() : "";
+        promised = day;
+        if (S.time === "abs" && day) { const hr = HRS[W.h.get()] % 12 + (W.ap.get() ? 12 : 0), x = new Date(day + "T00:00:00"); x.setHours(hr, MINS[W.mi.get()], 0, 0);
+          if (!S.date && x < new Date()) { x.setDate(x.getDate() + 1); promised = dateOf(x); }   // a time that's already passed today means tomorrow
+          promisedAt = x.toISOString(); }
+      }
+      onChange({ promised, promisedAt });
+    }
+    emit();
+  }
+
   // start a job: what's being done, when it'll be ready, tell the customer. opts: { client: {name, email, app}, bikes: [{id, name}], bikeId, save(pid, rec, notify) -> id, done(pid, id) }
   function startBox(opts) {
     const c = opts.client || {}, bikes = opts.bikes || [], reach = reachTxt(c), fn = first(c.name) || "the customer";
@@ -202,11 +271,7 @@
         <div class="jb-add"><input id="jbOther" maxlength="80" placeholder="Something else? Type it and press Enter"><button type="button" class="btn sm" data-addt>${ic(IC.plus)} Add</button></div>
         <ul class="jb-picked" id="jbPicked"></ul></section>
       <section class="jb-sec"><div class="jb-sh"><span class="jb-n">2</span><h3>When will it be ready?</h3><small>Pick one</small></div>
-        <div class="jb-when"><span class="jb-wl">Same day</span><div class="jb-chips" id="jbSoon">${[[30, "30 min"], [60, "1 hour"], [120, "2 hours"], [240, "4 hours"]].map(([k, l]) => chip(`data-min="${k}"`, l)).join("")}${chip(`data-day="0"`, "Later today")}</div></div>
-        <div class="jb-when"><span class="jb-wl">Later</span><div class="jb-chips" id="jbLater">${[[1, "Tomorrow"], [3, "In 3 days"], [7, "In a week"]].map(([k, l]) => chip(`data-day="${k}"`, l)).join("")}</div></div>
-        <div class="jb-when"><span class="jb-wl">Exact</span><div class="jb-exact">
-          <span class="jb-in"><input id="jbN" type="number" inputmode="numeric" min="1" max="999" placeholder="45" aria-label="How long"><select id="jbU" aria-label="Minutes or hours"><option value="1">minutes</option><option value="60">hours</option></select></span>
-          <span class="jb-or">or</span><span class="jb-in"><input type="date" id="jbD" min="${today()}" aria-label="Date"><input type="time" id="jbT" step="300" aria-label="Time (optional)"></span></div></div>
+        <div class="jp" id="jbPick"></div>
         <div class="jb-etaout" id="jbEta">${ic(IC.clock)}<span>No ready time yet</span></div></section>
       <section class="jb-sec"><div class="jb-sh"><span class="jb-n">3</span><h3>Let ${esc(fn)} know</h3></div>
         <label class="sx-f"><b>Note for ${esc(fn)} <span class="faint">(optional)</span></b><input name="noteClient" maxlength="300" placeholder="Parts on order, call us first, and so on"></label>
@@ -231,16 +296,8 @@
     const addOther = () => { const v = other.value.trim(); if (v && !picked.includes(v)) picked.push(v); other.value = ""; drawPicked(); er.hidden = true; };
     m.querySelector("[data-addt]").onclick = addOther;
     other.onkeydown = ev => { if (ev.key === "Enter") { ev.preventDefault(); addOther(); } };
-    // ready time: one choice at a time
-    const whenChips = m.querySelectorAll("#jbSoon .jb-chip, #jbLater .jb-chip"), nIn = m.querySelector("#jbN"), uIn = m.querySelector("#jbU"), dIn = m.querySelector("#jbD"), tIn = m.querySelector("#jbT");
-    const set = (promised, at, src) => { W.promised = promised; W.promisedAt = at ? at.toISOString() : ""; whenChips.forEach(x => x.classList.toggle("on", x === src)); er.hidden = true; sum(); };
-    whenChips.forEach(b => b.onclick = () => { nIn.value = ""; dIn.value = ""; tIn.value = "";
-      if (b.dataset.min) { const at = inMinutes(+b.dataset.min); set(dateOf(at), at, b); } else set(plusDays(+b.dataset.day), null, b); });
-    const fromN = () => { const k = +nIn.value * +uIn.value; if (!(k > 0)) return; dIn.value = ""; tIn.value = ""; const at = inMinutes(Math.min(k, 60 * 24 * 30)); set(dateOf(at), at, null); };
-    nIn.oninput = uIn.onchange = fromN;
-    const fromDT = () => { nIn.value = ""; const d = dIn.value || (tIn.value ? today() : ""); if (!d) return;
-      if (tIn.value) { const [h, mi] = tIn.value.split(":").map(Number), at = new Date(d + "T00:00:00"); at.setHours(h, mi, 0, 0); set(d, at, null); } else set(d, null, null); };
-    dIn.onchange = tIn.onchange = fromDT;
+    // ready time: scroll wheels for time and date, both optional
+    readyPicker(m.querySelector("#jbPick"), v => { W.promised = v.promised; W.promisedAt = v.promisedAt; er.hidden = true; sum(); });
     f.onsubmit = async ev => {
       ev.preventDefault(); if (other.value.trim()) addOther();
       if (!picked.length) { er.textContent = "Pick at least one thing you're doing."; er.hidden = false; return; }
