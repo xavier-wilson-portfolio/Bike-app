@@ -1,0 +1,102 @@
+{
+ "id": "suzuki-gsx1300r-hayabusa-1999",
+ "make": "Suzuki",
+ "model": "Hayabusa GSX1300R",
+ "code": "GSX1300R",
+ "years": [
+  1999,
+  2007
+ ],
+ "near": [
+  1999,
+  2007
+ ],
+ "match": [
+  "hayabusa",
+  "gsx1300r",
+  "gsx 1300r",
+  "gsx1300",
+  "gsxr 1300",
+  "gsx-r1300",
+  "gsxr1300",
+  "gsx r 1300",
+  "gsxr 1300 hayabusa",
+  "gsx1300r hayabusa"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "sources": {
+  "om": {
+   "name": "Suzuki GSX1300R Owner's Manual 99011-24F53-01A, August 2001 (copy hosted by ManualsLib)",
+   "url": "https://www.manualslib.com/manual/868326/Suzuki-Gsx1300r.html?page=45"
+  }
+ },
+ "specs": [
+  {
+   "k": "oil",
+   "v": "SAE 10W-40",
+   "src": "om",
+   "p": "Engine oil section"
+  },
+  {
+   "k": "oilCap",
+   "v": "3.5 US qt (3300 ml) with filter change",
+   "src": "om",
+   "p": "Specifications"
+  },
+  {
+   "k": "oilCapNo",
+   "v": "3.3 US qt (3100 ml)",
+   "src": "om",
+   "p": "Specifications"
+  },
+  {
+   "k": "plug",
+   "v": "NGK CR9E or Denso U27ESR-N",
+   "src": "om",
+   "p": "Specifications"
+  },
+  {
+   "k": "coolant",
+   "v": "3.1 US qt (2950 ml)",
+   "src": "om",
+   "p": "Specifications"
+  },
+  {
+   "k": "chain",
+   "v": "RK GB50GSV Z3, 112 links",
+   "src": "om",
+   "p": "Specifications"
+  },
+  {
+   "k": "tireR",
+   "v": "190/50 ZR17 M/C (73W)",
+   "src": "om",
+   "p": "Specifications"
+  },
+  {
+   "k": "psiR",
+   "v": "42 psi (290 kPa), solo",
+   "src": "om",
+   "p": "67"
+  },
+  {
+   "k": "battery",
+   "v": "12 V 10 Ah",
+   "src": "om",
+   "p": "Specifications"
+  }
+ ],
+ "torque": [],
+ "diagrams": {},
+ "guides": [
+  "chain",
+  "oil",
+  "brakes",
+  "coolant",
+  "tires",
+  "battery",
+  "plugs"
+ ],
+ "note": "From the 2002 owner's manual. The 1999 to 2007 Hayabusa shares these numbers."
+}
