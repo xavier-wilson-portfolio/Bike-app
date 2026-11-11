@@ -33,6 +33,23 @@ $$;
 revoke all on function public.push_save(text, text, text, text) from public, anon; grant execute on function public.push_save(text, text, text, text) to authenticated;
 revoke all on function public.push_drop(text) from public, anon; grant execute on function public.push_drop(text) to authenticated;
 
+-- the key pair notifications are signed with. The worker makes it the first time it needs it; only the worker can read the private half.
+create table if not exists public.push_keys (id int primary key default 1 check (id = 1), public_key text not null, private_jwk text not null, created_at timestamptz not null default now());
+alter table public.push_keys enable row level security;
+create or replace function public.push_key_get(sec text) returns jsonb language plpgsql security definer set search_path = public as $$
+begin
+  if sec is null or btrim(sec) <> btrim((select secret from billing_secret where billing_secret.id = 1)) then raise exception 'denied'; end if;
+  return (select jsonb_build_object('public', public_key, 'jwk', private_jwk) from push_keys where id = 1);
+end $$;
+create or replace function public.push_key_set(sec text, pub text, jwk text) returns jsonb language plpgsql security definer set search_path = public as $$
+begin
+  if sec is null or btrim(sec) <> btrim((select secret from billing_secret where billing_secret.id = 1)) then raise exception 'denied'; end if;
+  insert into push_keys (id, public_key, private_jwk) values (1, pub, jwk) on conflict (id) do nothing;
+  return (select jsonb_build_object('public', public_key, 'jwk', private_jwk) from push_keys where id = 1);
+end $$;
+revoke all on function public.push_key_get(text) from public; grant execute on function public.push_key_get(text) to anon, authenticated;
+revoke all on function public.push_key_set(text, text, text) from public; grant execute on function public.push_key_set(text, text, text) to anon, authenticated;
+
 -- one row per job: who to tell, and what they've already been told
 create table if not exists public.shop_jobs (
   project_id uuid not null references public.projects(id) on delete cascade,
