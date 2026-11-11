@@ -1,0 +1,83 @@
+{
+ "id": "kawasaki-vulcan-1700-vaquero-2014",
+ "make": "Kawasaki",
+ "model": "Vulcan 1700 Vaquero",
+ "code": "VN1700",
+ "years": [
+  2014,
+  2016
+ ],
+ "near": [
+  2011,
+  2024
+ ],
+ "match": [
+  "vulcan vaquero",
+  "vaquero",
+  "vulcan 1700 vaquero",
+  "vn1700 vaquero"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "sources": {
+  "om": {
+   "name": "Kawasaki Vulcan 1700 Vaquero ABS Owner's Manual, 2014 (copy hosted by manualowl.com)",
+   "url": "https://www.manualowl.com/am/Kawasaki/2014-Vulcan%201700%20Vaquero%20ABS/Manual/10188?page=12"
+  }
+ },
+ "specs": [
+  {
+   "k": "oil",
+   "v": "SAE 10W-40, API SG–SM with JASO MA/MA1/MA2",
+   "src": "om",
+   "p": "11"
+  },
+  {
+   "k": "oilCap",
+   "v": "4.5 US qt (4.3 L) when the filter is removed",
+   "src": "om",
+   "p": "151"
+  },
+  {
+   "k": "oilCapNo",
+   "v": "4.3 US qt (4.1 L)",
+   "src": "om",
+   "p": "151"
+  },
+  {
+   "k": "plug",
+   "v": "NGK ILZKAR7B11",
+   "src": "om",
+   "p": "11"
+  },
+  {
+   "k": "coolant",
+   "v": "2.5 US qt (2.4 L)",
+   "src": "om",
+   "p": "11"
+  },
+  {
+   "k": "tireF",
+   "v": "130/90B16M/C 67H",
+   "src": "om",
+   "p": "12"
+  },
+  {
+   "k": "tireR",
+   "v": "170/70B16M/C 75H",
+   "src": "om",
+   "p": "12"
+  }
+ ],
+ "torque": [],
+ "diagrams": {},
+ "guides": [
+  "oil",
+  "brakes",
+  "coolant",
+  "tires",
+  "battery",
+  "plugs"
+ ],
+ "note": "From the 2014 manual; the 2016 Vaquero is the same generation. Belt drive."
+}

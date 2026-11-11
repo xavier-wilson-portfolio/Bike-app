@@ -1,0 +1,139 @@
+{
+ "id": "honda-gl1800-goldwing-2007",
+ "make": "Honda",
+ "model": "Gold Wing GL1800",
+ "code": "GL1800",
+ "years": [
+  2007,
+  2007
+ ],
+ "near": [
+  2006,
+  2010
+ ],
+ "match": [
+  "gold wing",
+  "goldwing",
+  "gl1800",
+  "gl 1800",
+  "gold wing gl1800",
+  "goldwing gl1800"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "sources": {
+  "om": {
+   "name": "Honda 2007 GL1800 Gold Wing Owner's Manual (Honda)",
+   "url": "https://owners.honda.com/assets/ownerlink/model/own_man/powersports/2007/2007_gl1800.pdf"
+  }
+ },
+ "specs": [
+  {
+   "k": "oil",
+   "v": "Pro Honda GN4 SAE 10W-30, API SG or higher, JASO MA",
+   "src": "om",
+   "p": "154"
+  },
+  {
+   "k": "oilCap",
+   "v": "3.9 US qt (3.7 L) after draining and filter change",
+   "src": "om",
+   "p": "230"
+  },
+  {
+   "k": "oilCapNo",
+   "v": "3.8 US qt (3.6 L) after draining",
+   "src": "om",
+   "p": "230"
+  },
+  {
+   "k": "plug",
+   "v": "NGK BKR6E-11 or Denso K20PR-U11",
+   "src": "om",
+   "p": "232"
+  },
+  {
+   "k": "plugGap",
+   "v": "0.039–0.043 in (1.00–1.10 mm)",
+   "src": "om",
+   "p": "232"
+  },
+  {
+   "k": "coolant",
+   "v": "4.07 US qt (3.85 L), Pro Honda HP coolant 50/50",
+   "src": "om",
+   "p": "231"
+  },
+  {
+   "k": "finalOil",
+   "v": "SAE 80 hypoid gear oil, 4.1 US oz (120 cc) after draining",
+   "src": "om",
+   "p": "231"
+  },
+  {
+   "k": "brakeFluid",
+   "v": "Honda DOT 4",
+   "src": "om",
+   "p": "175"
+  },
+  {
+   "k": "tireF",
+   "v": "130/70R18M/C 63H",
+   "src": "om",
+   "p": "233"
+  },
+  {
+   "k": "tireR",
+   "v": "180/60R16M/C 74H",
+   "src": "om",
+   "p": "233"
+  },
+  {
+   "k": "psiF",
+   "v": "36 psi (250 kPa)",
+   "src": "om",
+   "p": "233"
+  },
+  {
+   "k": "psiR",
+   "v": "41 psi (280 kPa)",
+   "src": "om",
+   "p": "233"
+  },
+  {
+   "k": "battery",
+   "v": "12 V 18 Ah, maintenance free",
+   "src": "om",
+   "p": "233"
+  }
+ ],
+ "torque": [
+  {
+   "what": "Oil drain bolt",
+   "v": "25 lbf·ft (34 N·m)",
+   "src": "om",
+   "p": "235"
+  },
+  {
+   "what": "Oil filter",
+   "v": "19 lbf·ft (26 N·m)",
+   "src": "om",
+   "p": "235"
+  },
+  {
+   "what": "Rear wheel nuts",
+   "v": "80 lbf·ft (108 N·m)",
+   "src": "om",
+   "p": "235"
+  }
+ ],
+ "diagrams": {},
+ "guides": [
+  "oil",
+  "brakes",
+  "coolant",
+  "tires",
+  "battery",
+  "plugs"
+ ]
+}

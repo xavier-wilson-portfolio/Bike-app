@@ -1,0 +1,108 @@
+{
+ "id": "harley-dyna-fat-bob-2012",
+ "make": "Harley-Davidson",
+ "model": "Dyna Fat Bob",
+ "code": "FXDF",
+ "years": [
+  2012,
+  2012
+ ],
+ "near": [
+  2012,
+  2017
+ ],
+ "match": [
+  "fat bob",
+  "fatbob",
+  "fat bob dyna",
+  "dyna fat bob",
+  "fxdf",
+  "fxdf fat bob"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "sources": {
+  "om": {
+   "name": "Harley-Davidson 2012 Owner's Manual, Dyna Models (99467-12IA), Harley-Davidson Service Information",
+   "url": "https://serviceinfo.harley-davidson.com/sip/service/document/2190526888754393808"
+  }
+ },
+ "specs": [
+  {
+   "k": "oil",
+   "v": "Genuine H-D 360 SAE 20W50",
+   "src": "om",
+   "p": "Engine Lubrication"
+  },
+  {
+   "k": "oilCap",
+   "v": "3.0 qt (2.8 L) with filter",
+   "src": "om",
+   "p": "Specs, Table 9"
+  },
+  {
+   "k": "finalOil",
+   "v": "H-D Formula+ transmission and primary lubricant: transmission about 1.0 qt (0.95 L), primary about 1.0 qt (0.95 L)",
+   "src": "om",
+   "p": "Specs, Table 9"
+  },
+  {
+   "k": "plug",
+   "v": "HD-6R12",
+   "src": "om",
+   "p": "Specs, Table 3"
+  },
+  {
+   "k": "plugGap",
+   "v": "0.038–0.043 in (0.97–1.09 mm)",
+   "src": "om",
+   "p": "Specs, Table 3"
+  },
+  {
+   "k": "sprockets",
+   "v": "Transmission 32T, rear wheel 66T",
+   "src": "om",
+   "p": "Specs, Table 5"
+  },
+  {
+   "k": "tireF",
+   "v": "Dunlop D427F 130/90B16",
+   "src": "om",
+   "p": "Specs, Table 11"
+  },
+  {
+   "k": "tireR",
+   "v": "Dunlop D427 180/70B16",
+   "src": "om",
+   "p": "Specs, Table 11"
+  },
+  {
+   "k": "psiF",
+   "v": "36 psi (248 kPa) cold",
+   "src": "om",
+   "p": "Specs, Table 11"
+  },
+  {
+   "k": "psiR",
+   "v": "40 psi (276 kPa) cold",
+   "src": "om",
+   "p": "Specs, Table 11"
+  },
+  {
+   "k": "battery",
+   "v": "12 V 19 Ah, 315 CCA, sealed",
+   "src": "om",
+   "p": "Specs, Table 3"
+  }
+ ],
+ "torque": [],
+ "diagrams": {},
+ "guides": [
+  "oil",
+  "brakes",
+  "tires",
+  "battery",
+  "plugs"
+ ],
+ "note": "Belt drive. Belt deflection on the jiffy stand with no rider: 1/4–5/16 in (6.4–7.9 mm) at 10 lb, from the manual's drive belt section."
+}

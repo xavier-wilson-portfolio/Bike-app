@@ -1,0 +1,159 @@
+{
+ "id": "honda-cbr600rr-2007",
+ "make": "Honda",
+ "model": "CBR600RR",
+ "code": "PC40",
+ "years": [
+  2007,
+  2008
+ ],
+ "near": [
+  2007,
+  2012
+ ],
+ "match": [
+  "cbr600rr",
+  "cbr 600 rr",
+  "cbr600 rr",
+  "cbr600",
+  "cbr 600rr",
+  "pc40"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "sources": {
+  "om": {
+   "name": "Honda 2007 CBR600RR Owner's Manual (Honda)",
+   "url": "https://owners.honda.com/assets/ownerlink/model/own_man/powersports/2007/2007_cbr600_rr.pdf"
+  }
+ },
+ "specs": [
+  {
+   "k": "oil",
+   "v": "Pro Honda GN4 SAE 10W-30, API SG or higher, JASO MA",
+   "src": "om",
+   "p": "95"
+  },
+  {
+   "k": "oilCap",
+   "v": "3.0 US qt (2.8 L) after draining and filter change",
+   "src": "om",
+   "p": "102"
+  },
+  {
+   "k": "plug",
+   "v": "NGK IMR9C-9HES or Denso VUH27D",
+   "src": "om",
+   "p": "114"
+  },
+  {
+   "k": "plugGap",
+   "v": "0.031–0.035 in (0.80–0.90 mm)",
+   "src": "om",
+   "p": "205"
+  },
+  {
+   "k": "chain",
+   "v": "DID525HV or RK525ROZ6",
+   "src": "om",
+   "p": "206"
+  },
+  {
+   "k": "sprockets",
+   "v": "16T front, 42T rear",
+   "src": "om",
+   "p": "206"
+  },
+  {
+   "k": "slack",
+   "v": "1 3/16–1 9/16 in (30–40 mm)",
+   "src": "om",
+   "p": "144"
+  },
+  {
+   "k": "brakeFluid",
+   "v": "Honda DOT 4",
+   "src": "om",
+   "p": "130"
+  },
+  {
+   "k": "tireF",
+   "v": "120/70ZR17M/C (58W)",
+   "src": "om",
+   "p": "207"
+  },
+  {
+   "k": "tireR",
+   "v": "180/55ZR17M/C (73W)",
+   "src": "om",
+   "p": "207"
+  },
+  {
+   "k": "psiF",
+   "v": "36 psi (250 kPa)",
+   "src": "om",
+   "p": "207"
+  },
+  {
+   "k": "psiR",
+   "v": "42 psi (290 kPa)",
+   "src": "om",
+   "p": "207"
+  },
+  {
+   "k": "battery",
+   "v": "12 V 8.6 Ah, maintenance free",
+   "src": "om",
+   "p": "208"
+  }
+ ],
+ "torque": [
+  {
+   "what": "Rear axle nut",
+   "v": "83 lbf·ft (113 N·m)",
+   "src": "om",
+   "p": "148"
+  },
+  {
+   "what": "Oil drain bolt",
+   "v": "22 lbf·ft (30 N·m)",
+   "src": "om",
+   "p": "102"
+  },
+  {
+   "what": "Oil filter",
+   "v": "19 lbf·ft (26 N·m)",
+   "src": "om",
+   "p": "102"
+  },
+  {
+   "what": "Front axle bolt",
+   "v": "44 lbf·ft (59 N·m)",
+   "src": "om",
+   "p": "209"
+  },
+  {
+   "what": "Front axle pinch bolts",
+   "v": "33 lbf·ft (45 N·m)",
+   "src": "om",
+   "p": "209"
+  }
+ ],
+ "diagrams": {
+  "chain": {
+   "site": "RevZilla",
+   "url": "https://www.revzilla.com/oem/honda/2007-honda-cbr600rr/swingarm",
+   "what": "Swingarm and drive chain"
+  }
+ },
+ "guides": [
+  "chain",
+  "oil",
+  "brakes",
+  "coolant",
+  "tires",
+  "battery",
+  "plugs"
+ ],
+ "note": "Page numbers are PDF pages of Honda's file. Coolant amount left out until checked."
+}

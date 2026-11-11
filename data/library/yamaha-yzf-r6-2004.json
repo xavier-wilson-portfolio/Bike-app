@@ -1,0 +1,121 @@
+{
+ "id": "yamaha-yzf-r6-2004",
+ "make": "Yamaha",
+ "model": "YZF-R6",
+ "code": "5SL",
+ "years": [
+  2003,
+  2005
+ ],
+ "near": [
+  2003,
+  2005
+ ],
+ "match": [
+  "r6",
+  "yzf-r6",
+  "yzf r6",
+  "yzfr6",
+  "5sl"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "sources": {
+  "om": {
+   "name": "Yamaha YZF-R6 Owner's Manual, 1st edition July 2004 (copy hosted by ManualsLib)",
+   "url": "https://www.manualslib.com/manual/1162926/Yamaha-Yzf-R6.html?page=96"
+  }
+ },
+ "specs": [
+  {
+   "k": "oil",
+   "v": "SAE 10W-30 to 20W-50 by temperature, API SE/SF/SG or higher",
+   "src": "om",
+   "p": "8-1"
+  },
+  {
+   "k": "oilCap",
+   "v": "2.75 US qt (2.60 L) with filter cartridge",
+   "src": "om",
+   "p": "8-1"
+  },
+  {
+   "k": "oilCapNo",
+   "v": "2.54 US qt (2.40 L) oil change only",
+   "src": "om",
+   "p": "8-1"
+  },
+  {
+   "k": "plug",
+   "v": "NGK CR9EK or CR10EK",
+   "src": "om",
+   "p": "8-1"
+  },
+  {
+   "k": "plugGap",
+   "v": "0.024–0.028 in (0.6–0.7 mm)",
+   "src": "om",
+   "p": "8-1"
+  },
+  {
+   "k": "coolant",
+   "v": "Radiator 2.27 US qt (2.15 L), reservoir 0.26 US qt (0.25 L)",
+   "src": "om",
+   "p": "8-1"
+  },
+  {
+   "k": "sprockets",
+   "v": "16T front, 48T rear",
+   "src": "om",
+   "p": "8-1"
+  },
+  {
+   "k": "brakeFluid",
+   "v": "DOT 4",
+   "src": "om",
+   "p": "8-2"
+  },
+  {
+   "k": "tireF",
+   "v": "120/70 ZR17 M/C (58W)",
+   "src": "om",
+   "p": "8-2"
+  },
+  {
+   "k": "tireR",
+   "v": "180/55 ZR17 M/C (73W)",
+   "src": "om",
+   "p": "8-2"
+  },
+  {
+   "k": "psiF",
+   "v": "36 psi (250 kPa)",
+   "src": "om",
+   "p": "8-2"
+  },
+  {
+   "k": "psiR",
+   "v": "42 psi (290 kPa)",
+   "src": "om",
+   "p": "8-2"
+  }
+ ],
+ "torque": [],
+ "diagrams": {
+  "chain": {
+   "site": "RevZilla",
+   "url": "https://www.revzilla.com/oem/yamaha/2004-yamaha-r6/rear-arm",
+   "what": "Rear arm and drive chain"
+  }
+ },
+ "guides": [
+  "chain",
+  "oil",
+  "brakes",
+  "coolant",
+  "tires",
+  "battery",
+  "plugs"
+ ],
+ "note": "From Yamaha's July 2004 owner's manual for the R6. Engine, oil, plugs and tire sizes match the 2003 and 2004 bikes."
+}

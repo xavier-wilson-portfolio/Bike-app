@@ -1,0 +1,146 @@
+{
+ "id": "yamaha-xsr900-2022",
+ "make": "Yamaha",
+ "model": "XSR900",
+ "code": "MTM890N",
+ "years": [
+  2022,
+  2024
+ ],
+ "near": [
+  2022,
+  2025
+ ],
+ "match": [
+  "xsr900",
+  "xsr 900",
+  "xsr-900",
+  "mtm890",
+  "mtm890n"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "sources": {
+  "om": {
+   "name": "Yamaha XSR900 (MTM890N) Owner's Manual BEA-28199-20, 2022 (copy hosted by Yamaha City, Australia)",
+   "url": "https://www.yamahacity.com.au/pub/4a02c700/editor-uploaded-file/BEA-28199-20.pdf"
+  }
+ },
+ "specs": [
+  {
+   "k": "oil",
+   "v": "SAE 10W-40, API SG or higher, JASO MA",
+   "src": "om",
+   "p": "10-1"
+  },
+  {
+   "k": "oilCap",
+   "v": "3.38 US qt (3.20 L) with filter change",
+   "src": "om",
+   "p": "10-1"
+  },
+  {
+   "k": "oilCapNo",
+   "v": "2.96 US qt (2.80 L) oil change only",
+   "src": "om",
+   "p": "10-1"
+  },
+  {
+   "k": "plug",
+   "v": "NGK LMAR9A-9",
+   "src": "om",
+   "p": "8-11"
+  },
+  {
+   "k": "plugGap",
+   "v": "0.031–0.035 in (0.8–0.9 mm)",
+   "src": "om",
+   "p": "8-11"
+  },
+  {
+   "k": "coolant",
+   "v": "Radiator 1.82 US qt (1.72 L), reservoir 0.30 US qt (0.28 L)",
+   "src": "om",
+   "p": "10-1"
+  },
+  {
+   "k": "slack",
+   "v": "1.77–1.97 in (45.0–50.0 mm)",
+   "src": "om",
+   "p": "8-25"
+  },
+  {
+   "k": "brakeFluid",
+   "v": "DOT 4",
+   "src": "om",
+   "p": "8-23"
+  },
+  {
+   "k": "tireF",
+   "v": "120/70ZR17M/C (58W)",
+   "src": "om",
+   "p": "8-19"
+  },
+  {
+   "k": "tireR",
+   "v": "180/55ZR17M/C (73W)",
+   "src": "om",
+   "p": "8-19"
+  },
+  {
+   "k": "psiF",
+   "v": "36 psi (250 kPa), 1 person",
+   "src": "om",
+   "p": "8-18"
+  },
+  {
+   "k": "psiR",
+   "v": "42 psi (290 kPa), 1 person",
+   "src": "om",
+   "p": "8-18"
+  },
+  {
+   "k": "battery",
+   "v": "YTZ10S, 12 V 8.6 Ah",
+   "src": "om",
+   "p": "10-2"
+  }
+ ],
+ "torque": [
+  {
+   "what": "Oil drain bolt",
+   "v": "32 lb·ft (43 N·m)",
+   "src": "om",
+   "p": "8-14"
+  },
+  {
+   "what": "Oil filter cartridge",
+   "v": "13 lb·ft (17 N·m)",
+   "src": "om",
+   "p": "8-14"
+  },
+  {
+   "what": "Rear axle nut",
+   "v": "77 lb·ft (105 N·m)",
+   "src": "om",
+   "p": "8-25"
+  }
+ ],
+ "diagrams": {
+  "chain": {
+   "site": "RevZilla",
+   "url": "https://www.revzilla.com/oem/yamaha/2023-yamaha-xsr900/rear-arm",
+   "what": "Rear arm and drive chain"
+  }
+ },
+ "guides": [
+  "chain",
+  "oil",
+  "brakes",
+  "coolant",
+  "tires",
+  "battery",
+  "plugs"
+ ],
+ "note": "Numbers come from the Australian edition of the manual. US bikes share the engine and chassis, but check the label on your bike."
+}

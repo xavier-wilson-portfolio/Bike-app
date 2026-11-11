@@ -1,0 +1,146 @@
+{
+ "id": "kawasaki-ninja-zx-10rr-2017",
+ "make": "Kawasaki",
+ "model": "Ninja ZX-10RR",
+ "code": "ZX1000Z",
+ "years": [
+  2017,
+  2018
+ ],
+ "near": [
+  2016,
+  2020
+ ],
+ "match": [
+  "zx10rr",
+  "zx-10rr",
+  "zx 10rr",
+  "ninja zx-10rr",
+  "zx1000z"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "sources": {
+  "om": {
+   "name": "Kawasaki Ninja ZX-10RR Owner's Manual, 2018 (copy hosted by dailymotos.com)",
+   "url": "https://www.dailymotos.com/wp-content/uploads/2020/07/Manual-2018-kawasaki-ninja-zx-10rr-73408.pdf"
+  }
+ },
+ "specs": [
+  {
+   "k": "oil",
+   "v": "SAE 10W-40, API SG–SM with JASO MA/MA1/MA2",
+   "src": "om",
+   "p": "25"
+  },
+  {
+   "k": "oilCap",
+   "v": "3.5 US qt (3.3 L) when the filter is removed",
+   "src": "om",
+   "p": "133"
+  },
+  {
+   "k": "oilCapNo",
+   "v": "3.1 US qt (2.9 L)",
+   "src": "om",
+   "p": "133"
+  },
+  {
+   "k": "plug",
+   "v": "NGK SILMAR9B9",
+   "src": "om",
+   "p": "25"
+  },
+  {
+   "k": "plugGap",
+   "v": "0.031–0.035 in (0.8–0.9 mm)",
+   "src": "om",
+   "p": "25"
+  },
+  {
+   "k": "coolant",
+   "v": "2.7 US qt (2.6 L)",
+   "src": "om",
+   "p": "25"
+  },
+  {
+   "k": "slack",
+   "v": "1.0–1.4 in (25–35 mm)",
+   "src": "om",
+   "p": "150"
+  },
+  {
+   "k": "brakeFluid",
+   "v": "DOT4 front and rear",
+   "src": "om",
+   "p": "27"
+  },
+  {
+   "k": "tireF",
+   "v": "120/70ZR17 M/C (58W)",
+   "src": "om",
+   "p": "171"
+  },
+  {
+   "k": "tireR",
+   "v": "190/55ZR17 M/C (75W)",
+   "src": "om",
+   "p": "171"
+  },
+  {
+   "k": "psiF",
+   "v": "36 psi (250 kPa)",
+   "src": "om",
+   "p": "168"
+  },
+  {
+   "k": "psiR",
+   "v": "42 psi (290 kPa)",
+   "src": "om",
+   "p": "168"
+  },
+  {
+   "k": "battery",
+   "v": "YTZ10S",
+   "src": "om",
+   "p": "172"
+  }
+ ],
+ "torque": [
+  {
+   "what": "Rear axle nut",
+   "v": "95.9 ft·lb (130 N·m)",
+   "src": "om",
+   "p": "152"
+  },
+  {
+   "what": "Oil drain bolt",
+   "v": "21 ft·lb (29 N·m)",
+   "src": "om",
+   "p": "132"
+  },
+  {
+   "what": "Oil filter",
+   "v": "13 ft·lb (17 N·m)",
+   "src": "om",
+   "p": "132"
+  }
+ ],
+ "diagrams": {
+  "chain": {
+   "site": "RevZilla",
+   "url": "https://www.revzilla.com/oem/kawasaki/2017-kawasaki-ninja-zx-10rr-abs/swingarm",
+   "what": "Swingarm and drive chain"
+  }
+ },
+ "guides": [
+  "chain",
+  "oil",
+  "brakes",
+  "coolant",
+  "tires",
+  "battery",
+  "plugs"
+ ],
+ "note": "From the 2018 ZX-10RR manual. The 2017 model is the same generation."
+}
