@@ -3259,3 +3259,10 @@ div.sx-row{cursor:default}
 .jp-colon{position:relative;z-index:1;display:flex;align-items:center;font-weight:800;color:#5B6770;padding:0 1px}.jp-col.on .jp-colon{color:#fff}
 @media (max-width:640px){.jp{grid-template-columns:1fr}.jp-multi .jw{width:42px}.jp-multi .jw:last-child{width:48px}}
 :root[data-theme="dark"] .jp-grp{background:var(--box,#22303A)}
+/* ready time: one box, two wheels across */
+.jp-one{display:grid;grid-template-columns:1fr 1fr;gap:10px;border:1px solid #E1E7EB;border-radius:16px;padding:10px;background:#FAFBFC;transition:border-color .15s,background .15s}
+.jp-one.set{border-color:#D9BF8E;background:#fff}
+.jp-one .jp-col{padding:8px 6px 6px}.jp-one .jp-l{font-size:12.5px}
+.jp-one .jw{height:114px}.jp-one .jw-i{font-size:17px}.jp-one .jw-i.on{font-size:18px}
+.jp-foot{display:flex;align-items:center;gap:8px;margin-top:8px;padding:0 4px}.jp-foot .jp-st{font-size:13px;color:#7A858D}
+.jp{display:block}

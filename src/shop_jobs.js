@@ -207,53 +207,26 @@
     requestAnimationFrame(() => { go(start, false); mark(); setTimeout(() => { quiet = true; }, 0); });
     return { el, get: () => cur, set: i => { quiet = true; go(i, false); } };
   }
-  // time (in X / at a clock time) and date (in X days / on a date). Inside each, using one side turns the other off. Both are optional.
+  // two wheels across the box: "Time in" (from now) or "Date on" (a day). Using one turns the other off; both are optional.
   function readyPicker(host, onChange) {
     const RT = [[15, "15 min"], [30, "30 min"], [45, "45 min"], [60, "1 hour"], [90, "1½ hours"], [120, "2 hours"], [150, "2½ hours"], [180, "3 hours"], [240, "4 hours"], [300, "5 hours"], [360, "6 hours"], [480, "8 hours"]];
-    const RD = [[0, "Today"], [1, "Tomorrow"], [2, "2 days"], [3, "3 days"], [4, "4 days"], [5, "5 days"], [7, "1 week"], [10, "10 days"], [14, "2 weeks"], [21, "3 weeks"], [30, "1 month"]];
-    const HRS = Array.from({ length: 12 }, (_, i) => i + 1), MINS = Array.from({ length: 12 }, (_, i) => i * 5), AP = ["AM", "PM"];
     const DAYS = Array.from({ length: 120 }, (_, i) => { const d = new Date(); d.setHours(12, 0, 0, 0); d.setDate(d.getDate() + i); return d; });
-    const soon = new Date(Date.now() + 60 * 60000); soon.setMinutes(Math.ceil(soon.getMinutes() / 15) * 15, 0, 0);
-    const S = { time: null, date: null };   // which side is in use: "rel" or "abs"
-    host.innerHTML = `<div class="jp-grp" data-g="time"><div class="jp-h"><b>Time</b><span class="jp-st"></span><button type="button" class="linkbtn jp-clr" hidden>Clear</button></div>
-        <div class="jp-row"><div class="jp-col" data-k="rel"><span class="jp-l">In</span><div class="jp-w" data-w="rt"></div></div><span class="jp-or">or</span>
-          <div class="jp-col" data-k="abs"><span class="jp-l">At</span><div class="jp-w jp-multi" data-w="at"></div></div></div></div>
-      <div class="jp-grp" data-g="date"><div class="jp-h"><b>Date</b><span class="jp-st"></span><button type="button" class="linkbtn jp-clr" hidden>Clear</button></div>
-        <div class="jp-row"><div class="jp-col" data-k="rel"><span class="jp-l">In</span><div class="jp-w" data-w="rd"></div></div><span class="jp-or">or</span>
-          <div class="jp-col" data-k="abs"><span class="jp-l">On</span><div class="jp-w" data-w="on"></div></div></div></div>`;
-    const W = {};
-    const use = (g, k) => () => {
-      if (S[g] === k) return emit();
-      S[g] = k;
-      if (g === "time" && k === "rel") S.date = null;            // "in 2 hours" counts from now, so no date with it
-      if (g === "date" && S.time === "rel") S.time = null;
-      emit();
-    };
-    W.rt = wheel(RT.map(x => ({ label: x[1] })), 3, use("time", "rel"), "Ready in");
-    const h0 = soon.getHours() % 12 || 12;
-    W.h = wheel(HRS.map(x => ({ label: String(x) })), HRS.indexOf(h0), use("time", "abs"), "Hour");
-    W.mi = wheel(MINS.map(x => ({ label: String(x).padStart(2, "0") })), soon.getMinutes() / 5, use("time", "abs"), "Minute");
-    W.ap = wheel(AP.map(x => ({ label: x })), soon.getHours() >= 12 ? 1 : 0, use("time", "abs"), "AM or PM");
-    W.rd = wheel(RD.map(x => ({ label: x[1] })), 1, use("date", "rel"), "Ready in days");
-    W.on = wheel(DAYS.map((d, i) => ({ label: i === 0 ? "Today" : i === 1 ? "Tomorrow" : d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }) })), 1, use("date", "abs"), "Ready on");
-    host.querySelector('[data-w="rt"]').appendChild(W.rt.el); host.querySelector('[data-w="rd"]').appendChild(W.rd.el); host.querySelector('[data-w="on"]').appendChild(W.on.el);
-    const at = host.querySelector('[data-w="at"]'); at.appendChild(W.h.el); at.insertAdjacentHTML("beforeend", `<span class="jp-colon">:</span>`); at.appendChild(W.mi.el); at.appendChild(W.ap.el);
-    host.querySelectorAll(".jp-clr").forEach(b => b.onclick = () => { S[b.closest(".jp-grp").dataset.g] = null; emit(); });
+    let mode = null;
+    host.innerHTML = `<div class="jp-one"><div class="jp-col" data-k="time"><span class="jp-l">Time in</span><div class="jp-w" data-w="rt"></div></div>
+      <div class="jp-col" data-k="date"><span class="jp-l">Date on</span><div class="jp-w" data-w="on"></div></div></div>
+      <div class="jp-foot"><span class="jp-st">Scroll either one. Both are optional.</span><button type="button" class="linkbtn jp-clr" hidden>Clear</button></div>`;
+    const use = k => () => { mode = k; emit(); };
+    const rt = wheel(RT.map(x => ({ label: x[1] })), 3, use("time"), "Ready in");
+    const on = wheel(DAYS.map((d, i) => ({ label: i === 0 ? "Today" : i === 1 ? "Tomorrow" : d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }) })), 1, use("date"), "Ready on");
+    host.querySelector('[data-w="rt"]').appendChild(rt.el); host.querySelector('[data-w="on"]').appendChild(on.el);
+    host.querySelector(".jp-clr").onclick = () => { mode = null; emit(); };
     function emit() {
-      ["time", "date"].forEach(g => { const grp = host.querySelector(`[data-g="${g}"]`);
-        grp.querySelectorAll(".jp-col").forEach(c => { c.classList.toggle("on", S[g] === c.dataset.k); c.classList.toggle("off", !!S[g] && S[g] !== c.dataset.k); });
-        grp.classList.toggle("set", !!S[g]); grp.querySelector(".jp-clr").hidden = !S[g];
-        grp.classList.toggle("na", g === "date" && S.time === "rel");
-        grp.querySelector(".jp-st").textContent = g === "date" && S.time === "rel" ? "Counts from now" : S[g] ? "" : "Optional"; });
+      host.querySelectorAll(".jp-col").forEach(c => { c.classList.toggle("on", mode === c.dataset.k); c.classList.toggle("off", !!mode && mode !== c.dataset.k); });
+      host.querySelector(".jp-one").classList.toggle("set", !!mode); host.querySelector(".jp-clr").hidden = !mode;
+      host.querySelector(".jp-st").textContent = mode === "time" ? "Counts from now." : mode === "date" ? "Ready sometime that day." : "Scroll either one. Both are optional.";
       let promised = "", promisedAt = "";
-      if (S.time === "rel") { const t = inMinutes(RT[W.rt.get()][0]); promised = dateOf(t); promisedAt = t.toISOString(); }
-      else {
-        const day = S.date === "rel" ? plusDays(RD[W.rd.get()][0]) : S.date === "abs" ? dateOf(DAYS[W.on.get()]) : S.time ? today() : "";
-        promised = day;
-        if (S.time === "abs" && day) { const hr = HRS[W.h.get()] % 12 + (W.ap.get() ? 12 : 0), x = new Date(day + "T00:00:00"); x.setHours(hr, MINS[W.mi.get()], 0, 0);
-          if (!S.date && x < new Date()) { x.setDate(x.getDate() + 1); promised = dateOf(x); }   // a time that's already passed today means tomorrow
-          promisedAt = x.toISOString(); }
-      }
+      if (mode === "time") { const t = inMinutes(RT[rt.get()][0]); promised = dateOf(t); promisedAt = t.toISOString(); }
+      else if (mode === "date") promised = dateOf(DAYS[on.get()]);
       onChange({ promised, promisedAt });
     }
     emit();
