@@ -3184,3 +3184,50 @@ div.sx-row{cursor:default}
 .jb-lb figcaption{color:#E6ECF0;font-size:14px}.jb-lbx{all:unset;cursor:pointer;position:absolute;top:14px;right:14px;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.14);color:#fff;display:grid;place-items:center}.jb-lbx svg{width:22px;height:22px}
 .jb-notify .linkbtn{white-space:nowrap}
 @media (max-width:640px){.jb-thumb,.jb-addpic{width:72px;height:72px}.jb-row .jb-flag{display:none}}
+/* jobs: Revora look for the job screens */
+.sx-card.jb-brand{padding:0;gap:0;overflow:visible;width:min(780px,100%);border-radius:20px;background:#fff}
+.jb-hd{display:flex;align-items:flex-start;gap:14px;padding:20px 24px 18px;background:linear-gradient(135deg,#17232C 0%,#1E3242 100%);color:#fff;border-radius:20px 20px 0 0;position:relative;overflow:hidden}
+.jb-hd::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:linear-gradient(90deg,#D9BF8E,#B9945A 60%,transparent)}
+.jb-eb{display:block;font-family:var(--f-display);font-size:12.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#D9BF8E}
+.jb-hd h2{margin:4px 0 0;font-family:var(--f-display);font-weight:700;font-size:27px;line-height:1.1;letter-spacing:.01em;color:#fff}
+.jb-hs{display:block;margin-top:4px;font-size:14px;color:#B9C6CF}
+.jb-x{all:unset;cursor:pointer;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;color:#C9D4DB;background:rgba(255,255,255,.07);flex:none}.jb-x:hover{background:rgba(255,255,255,.14);color:#fff}.jb-x svg{width:18px;height:18px}
+.jb-start,.jb-brand .jb-man{padding:6px 24px 0}
+.jb-brand .jb-man{padding:20px 24px 22px}
+.jb-bikesel{margin:16px 0 0}
+.jb-sec{padding:20px 0;display:flex;flex-direction:column;gap:12px}.jb-sec+.jb-sec{border-top:1px solid #E8EDF0}
+.jb-sh{display:flex;align-items:center;gap:11px}.jb-sh h3{margin:0;font-family:var(--f-display);font-weight:700;font-size:19px;letter-spacing:.01em;color:#17232C}.jb-sh small{margin-left:auto;font-size:12.5px;color:#7A858D}
+.jb-n{width:26px;height:26px;border-radius:50%;border:1.5px solid #D9BF8E;color:#8A6A2E;font-family:var(--f-display);font-weight:700;font-size:14px;display:grid;place-items:center;flex:none;background:#FFFBF2}
+.jb-brand .jb-chip{border-radius:10px;padding:9px 14px;border-color:#D7DFE4;font-weight:700;color:#26313A}
+.jb-brand .jb-chip.on{background:#17232C;border-color:#17232C;color:#fff;box-shadow:inset 0 -3px 0 #D9BF8E}
+.jb-chip.sm{padding:6px 11px!important;font-size:13px}
+.jb-when{display:grid;grid-template-columns:86px 1fr;gap:12px;align-items:center}
+.jb-wl{font-family:var(--f-display);font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7A858D}
+.jb-exact{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.jb-or{font-size:13px;color:#7A858D}
+.jb-in{display:inline-flex;border:1px solid #D7DFE4;border-radius:10px;overflow:hidden;background:#fff}
+.jb-in input,.jb-in select{border:0!important;border-radius:0!important;padding:9px 10px!important;font:inherit;font-size:14.5px;background:transparent;min-width:0;box-shadow:none!important;margin:0!important;height:auto!important}
+.jb-in input+input,.jb-in input+select{border-left:1px solid #E1E7EB!important}.jb-in input[type=number]{width:70px}.jb-in input[type=time]{width:112px}.jb-in input[type=date]{width:150px}
+.jb-in:focus-within{border-color:#2C5F7C;box-shadow:0 0 0 3px rgba(44,95,124,.13)}
+.jb-etaout{display:flex;align-items:center;gap:9px;padding:11px 14px;border-radius:12px;background:#F4F7F9;color:#7A858D;font-weight:700;font-size:15px}.jb-etaout svg{width:19px;height:19px}
+.jb-etaout.on{background:#FFF8EA;color:#17232C;box-shadow:inset 3px 0 0 #D9BF8E}.jb-etaout.on svg{color:#B9945A}
+.jb-bar2{position:sticky;bottom:0;display:flex;align-items:center;gap:10px;margin:0 -24px;padding:14px 24px;background:#FBF8F1;border-top:1px solid #EDE3CF;border-radius:0 0 20px 20px;z-index:2}
+.jb-sum{font-size:14px;color:#5B6770;min-width:0}.jb-sum b{color:#17232C}
+.jb-start .sx-err{margin:0 0 12px}
+.jb-brand .jb-mh{align-items:center}.jb-brand .jb-mh b{font-family:var(--f-display);font-size:20px;font-weight:700}
+.jb-etab{display:flex;align-items:center;gap:7px;background:#FFF8EA;border:1px solid #EAD7AE;border-radius:999px;padding:7px 13px;white-space:nowrap;font-size:14px}.jb-etab svg{width:17px;height:17px;color:#B9945A}
+.jb-etab.late{background:#FBEAEA;border-color:#F0C4C4;color:#9A2B2B}.jb-etab.late svg{color:#9A2B2B}.jb-etab.ready{background:#E7F3EC;border-color:#BFE0CB;color:#1F5C38}.jb-etab.ready svg{color:#2F7A4C}
+.jb-rb{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.jb-brand .jb-seg button.on{box-shadow:inset 0 -3px 0 #D9BF8E}
+.jb-brand .jb-wh b{font-family:var(--f-display);font-size:17px;font-weight:700;letter-spacing:.01em}
+/* customer card: Revora header band */
+.jb-th{margin:-18px -20px 0;padding:16px 20px;background:linear-gradient(135deg,#17232C,#1E3242);color:#fff;border-radius:17px 17px 0 0;position:relative}
+.jb-th::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:linear-gradient(90deg,#D9BF8E,#B9945A 60%,transparent)}
+.jb-th .jb-k{color:#D9BF8E;font-family:var(--f-display);letter-spacing:.16em}.jb-th h3{color:#fff;font-family:var(--f-display);font-weight:700;font-size:22px}
+.jb-th .jb-eta{background:rgba(255,255,255,.1);color:#fff}.jb-th .jb-eta svg{color:#D9BF8E}
+.jb-track.ready .jb-th{background:linear-gradient(135deg,#1F4A33,#2F7A4C)}.jb-track.ready .jb-th .jb-eta{background:#fff;color:#1F5C38}.jb-track.ready .jb-th .jb-eta svg{color:#2F7A4C}
+.jb-th .jb-eta.late{background:#FBEAEA;color:#9A2B2B}
+@media (max-width:640px){.jb-hd{padding:16px 18px}.jb-hd h2{font-size:23px}.jb-start{padding:2px 18px 0}.jb-brand .jb-man{padding:16px 18px 18px}.jb-bar2{margin:0 -18px;padding:12px 18px;flex-wrap:wrap}.jb-sum{flex-basis:100%}
+  .jb-when{grid-template-columns:1fr;gap:6px}.jb-sh small{display:none}.jb-in input[type=date]{width:136px}.jb-etab{white-space:normal}}
+.jb-hd>.grow{flex:1;min-width:0}
+.btn.jb-go{background:#D9BF8E;border-color:#C9AA72;color:#17232C;font-weight:800;padding-left:18px;padding-right:18px}.btn.jb-go:hover{background:#E3CC9E}.btn.jb-go svg{color:#17232C}
+.jb-start .jb-tell{margin-bottom:4px}

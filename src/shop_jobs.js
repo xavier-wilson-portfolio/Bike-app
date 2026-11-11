@@ -49,9 +49,24 @@
   const tasksOf = w => Array.isArray(w.tasks) ? w.tasks.filter(t => t && t.t) : [];
   const prog = w => { const t = tasksOf(w); return { n: t.length, done: t.filter(x => x.done).length }; };
   const titleOf = tasks => { const t = tasks.map(x => x.t); return t.length <= 3 ? t.join(", ") : t.slice(0, 2).join(", ") + " and " + (t.length - 2) + " more"; };
-  const late = w => w.promised && w.promised < today() && !["Done", "Picked up"].includes(w.status);
+  const dateOf = d => d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+  const clock = d => d.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" });
+  const tz = () => { try { return Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (e) { return ""; } };
+  // a ready-by time: "in 45 minutes" -> rounded up to the next 5 minutes
+  const inMinutes = k => { const d = new Date(Date.now() + k * 60000); d.setSeconds(0, 0); d.setMinutes(Math.ceil(d.getMinutes() / 5) * 5); return d; };
+  const late = w => !["Done", "Picked up"].includes(w.status) && (w.promisedAt ? Date.now() > new Date(w.promisedAt).getTime() + 5 * 60000 : !!(w.promised && w.promised < today()));
   const pillTone = s => s === "Done" ? "green" : s === "Waiting for parts" ? "amber" : s === "Checked in" ? "gray" : "blue";
-  const etaTxt = w => w.status === "Done" ? "Ready now" : !w.promised ? "No date yet" : w.promised === today() ? "Ready today" : w.promised === plusDays(1) ? "Ready tomorrow" : late(w) ? "Was due " + day(w.promised) : "Ready by " + day(w.promised);
+  const etaTxt = w => {
+    if (w.status === "Done") return "Ready now";
+    if (w.promisedAt) {
+      const t = new Date(w.promisedAt), d = dateOf(t), mins = Math.round((t - Date.now()) / 60000);
+      if (late(w)) return "Running late · was due " + (d === today() ? clock(t) : day(d) + ", " + clock(t));
+      if (d === today()) return mins > 0 && mins <= 50 ? `Ready in about ${Math.max(5, Math.ceil(mins / 5) * 5)} min` : "Ready by " + clock(t) + " today";
+      if (d === plusDays(1)) return "Ready tomorrow by " + clock(t);
+      return "Ready by " + day(d) + ", " + clock(t);
+    }
+    return !w.promised ? "No date yet" : w.promised === today() ? "Ready today" : w.promised === plusDays(1) ? "Ready tomorrow" : late(w) ? "Was due " + day(w.promised) : "Ready by " + day(w.promised);
+  };
 
   const API = () => (window.RV_CONFIG && RV_CONFIG.remindersApi) || "https://revora-reminders.xavier-j-wilson101.workers.dev";
   function ping(pid, wid) {
@@ -155,9 +170,12 @@
   }
 
   /* ---------- the mechanic's side ---------- */
-  function modal(inner, title, cls) {
+  // head: { eb, title, sub, pill } draws the dark Revora header band
+  function modal(inner, title, cls, head) {
     const box = document.createElement("div"); box.className = "pk-modal sx-modal";
-    box.innerHTML = `<div class="pk-card sx-card wide jb-modal ${cls || ""}" role="dialog" aria-modal="true"><div class="sx-mh"><h2>${esc(title)}</h2><button class="sx-x" data-close aria-label="Close">×</button></div>${inner}</div>`;
+    const hd = head ? `<div class="jb-hd"><div class="grow"><span class="jb-eb">${esc(head.eb || "")}</span><h2>${esc(head.title || title)}</h2>${head.sub ? `<span class="jb-hs">${head.sub}</span>` : ""}</div>${head.pill || ""}<button class="jb-x" data-close aria-label="Close">${ic(IC.x)}</button></div>`
+      : `<div class="sx-mh"><h2>${esc(title)}</h2><button class="sx-x" data-close aria-label="Close">×</button></div>`;
+    box.innerHTML = `<div class="pk-card sx-card wide jb-modal ${head ? "jb-brand " : ""}${cls || ""}" role="dialog" aria-modal="true">${hd}${inner}</div>`;
     const esc2 = ev => { if (ev.key === "Escape") close(); };
     function close() { box.remove(); document.removeEventListener("keydown", esc2); }
     box.addEventListener("click", ev => { if (ev.target.closest("[data-close]")) close(); });
@@ -174,37 +192,60 @@
 
   // start a job: what's being done, when it'll be ready, tell the customer. opts: { client: {name, email, app}, bikes: [{id, name}], bikeId, save(pid, rec, notify) -> id, done(pid, id) }
   function startBox(opts) {
-    const c = opts.client || {}, bikes = opts.bikes || [], reach = reachTxt(c);
-    const m = modal(`<form class="sx-form jb-form" id="jbF" novalidate>
-      ${bikes.length > 1 ? `<label class="sx-f"><b>Bike</b><select name="bike">${bikes.map(b => `<option value="${esc(b.id)}"${b.id === opts.bikeId ? " selected" : ""}>${esc(b.name)}</option>`).join("")}</select></label>` : ""}
-      <div class="sx-f"><b>What are you doing?</b><div class="jb-chips" id="jbChips">${TASKS.map(t => `<button type="button" class="jb-chip" data-t="${esc(t)}">${esc(t)}</button>`).join("")}</div>
+    const c = opts.client || {}, bikes = opts.bikes || [], reach = reachTxt(c), fn = first(c.name) || "the customer";
+    const bikeNm = (bikes.find(b => b.id === opts.bikeId) || bikes[0] || {}).name || "";
+    const chip = (attr, l) => `<button type="button" class="jb-chip" ${attr}>${l}</button>`;
+    const m = modal(`<form class="jb-form jb-start" id="jbF" novalidate>
+      ${bikes.length > 1 ? `<label class="sx-f jb-bikesel"><b>Bike</b><select name="bike">${bikes.map(b => `<option value="${esc(b.id)}"${b.id === opts.bikeId ? " selected" : ""}>${esc(b.name)}</option>`).join("")}</select></label>` : ""}
+      <section class="jb-sec"><div class="jb-sh"><span class="jb-n">1</span><h3>What's the work?</h3><small>Tap everything you're doing</small></div>
+        <div class="jb-chips" id="jbChips">${TASKS.map(t => chip(`data-t="${esc(t)}"`, esc(t))).join("")}</div>
         <div class="jb-add"><input id="jbOther" maxlength="80" placeholder="Something else? Type it and press Enter"><button type="button" class="btn sm" data-addt>${ic(IC.plus)} Add</button></div>
-        <ul class="jb-picked" id="jbPicked"></ul></div>
-      <div class="sx-f"><b>Ready by</b><div class="jb-chips" id="jbWhen">${[["Today", 0], ["Tomorrow", 1], ["In 3 days", 3], ["In a week", 7]].map(([l, k]) => `<button type="button" class="jb-chip" data-d="${plusDays(k)}">${l}</button>`).join("")}
-        <input type="date" name="promised" class="jb-date" min="${today()}" aria-label="Pick a date"></div></div>
-      <label class="sx-f"><b>Note for ${esc(first(c.name) || "the customer")} <span class="faint">(optional)</span></b><input name="noteClient" maxlength="300" placeholder="Anything they should know: parts on order, call us first, and so on"></label>
-      ${reach ? `<label class="jb-tell"><input type="checkbox" name="notify" checked><span><b>Tell ${esc(first(c.name))} it's checked in, and when it's ready</b><small>Sent as ${reach}. They can follow the work in Revora any time.</small></span></label>`
-        : `<p class="sx-small jb-tellno">${esc(first(c.name) || "This customer")} has no email or Revora app yet. Send them their client code from their page and they can follow along and get a notification when it's ready.</p>`}
+        <ul class="jb-picked" id="jbPicked"></ul></section>
+      <section class="jb-sec"><div class="jb-sh"><span class="jb-n">2</span><h3>When will it be ready?</h3><small>Pick one</small></div>
+        <div class="jb-when"><span class="jb-wl">Same day</span><div class="jb-chips" id="jbSoon">${[[30, "30 min"], [60, "1 hour"], [120, "2 hours"], [240, "4 hours"]].map(([k, l]) => chip(`data-min="${k}"`, l)).join("")}${chip(`data-day="0"`, "Later today")}</div></div>
+        <div class="jb-when"><span class="jb-wl">Later</span><div class="jb-chips" id="jbLater">${[[1, "Tomorrow"], [3, "In 3 days"], [7, "In a week"]].map(([k, l]) => chip(`data-day="${k}"`, l)).join("")}</div></div>
+        <div class="jb-when"><span class="jb-wl">Exact</span><div class="jb-exact">
+          <span class="jb-in"><input id="jbN" type="number" inputmode="numeric" min="1" max="999" placeholder="45" aria-label="How long"><select id="jbU" aria-label="Minutes or hours"><option value="1">minutes</option><option value="60">hours</option></select></span>
+          <span class="jb-or">or</span><span class="jb-in"><input type="date" id="jbD" min="${today()}" aria-label="Date"><input type="time" id="jbT" step="300" aria-label="Time (optional)"></span></div></div>
+        <div class="jb-etaout" id="jbEta">${ic(IC.clock)}<span>No ready time yet</span></div></section>
+      <section class="jb-sec"><div class="jb-sh"><span class="jb-n">3</span><h3>Let ${esc(fn)} know</h3></div>
+        <label class="sx-f"><b>Note for ${esc(fn)} <span class="faint">(optional)</span></b><input name="noteClient" maxlength="300" placeholder="Parts on order, call us first, and so on"></label>
+        ${reach ? `<label class="jb-tell"><input type="checkbox" name="notify" checked><span><b>Tell ${esc(fn)} it's checked in, and when it's ready</b><small>Sent as ${reach}. They can follow the work in Revora any time.</small></span></label>`
+          : `<p class="sx-small jb-tellno">${esc(c.name ? fn : "This customer")} has no email or Revora app yet. Send them their client code from their page and they can follow along and get a notification when it's ready.</p>`}</section>
       <p class="sx-err" hidden></p>
-      <div class="sx-acts"><button type="button" class="btn" data-close>Cancel</button><button type="submit" class="btn pri">${ic(IC.wrench)} Start the job</button></div></form>`, "Start a job" + (opts.bikeName ? " · " + opts.bikeName : ""));
+      <div class="jb-bar2"><div class="grow jb-sum" id="jbSum">Pick the work and a ready time</div><button type="button" class="btn" data-close>Cancel</button><button type="submit" class="btn jb-go">${ic(IC.wrench)} Start the job</button></div></form>`,
+      "Start a job", "jb-startm", { eb: "New job", title: bikes.length > 1 ? "Start a job" : bikeNm || "Start a job", sub: esc(c.name || "") });
     const f = m.querySelector("#jbF"), er = m.querySelector(".sx-err"), picked = [], list = m.querySelector("#jbPicked"), other = m.querySelector("#jbOther");
+    const W = { promised: "", promisedAt: "" };
+    const sum = () => {
+      const eta = W.promised || W.promisedAt ? etaTxt({ status: "Checked in", promised: W.promised, promisedAt: W.promisedAt }) : "";
+      m.querySelector("#jbEta").innerHTML = `${ic(IC.clock)}<span>${eta ? esc(eta) : "No ready time yet"}</span>`; m.querySelector("#jbEta").classList.toggle("on", !!eta);
+      m.querySelector("#jbSum").innerHTML = picked.length || eta ? `<b>${picked.length ? picked.length + " task" + (picked.length === 1 ? "" : "s") : "No work picked"}</b>${eta ? " · " + esc(eta) : ""}` : "Pick the work and a ready time";
+    };
     const drawPicked = () => {
       list.innerHTML = picked.filter(t => !TASKS.includes(t)).map(t => `<li>${esc(t)}<button type="button" data-rm="${esc(t)}" aria-label="Remove">${ic(IC.x)}</button></li>`).join("");
       list.querySelectorAll("[data-rm]").forEach(b => b.onclick = () => { picked.splice(picked.indexOf(b.dataset.rm), 1); drawPicked(); });
-      m.querySelectorAll("#jbChips [data-t]").forEach(b => b.classList.toggle("on", picked.includes(b.dataset.t)));
+      m.querySelectorAll("#jbChips [data-t]").forEach(b => b.classList.toggle("on", picked.includes(b.dataset.t))); sum();
     };
     m.querySelectorAll("#jbChips [data-t]").forEach(b => b.onclick = () => { const t = b.dataset.t, i = picked.indexOf(t); if (i >= 0) picked.splice(i, 1); else picked.push(t); drawPicked(); er.hidden = true; });
     const addOther = () => { const v = other.value.trim(); if (v && !picked.includes(v)) picked.push(v); other.value = ""; drawPicked(); er.hidden = true; };
     m.querySelector("[data-addt]").onclick = addOther;
     other.onkeydown = ev => { if (ev.key === "Enter") { ev.preventDefault(); addOther(); } };
-    const when = m.querySelectorAll("#jbWhen [data-d]");
-    when.forEach(b => b.onclick = () => { f.promised.value = b.dataset.d; when.forEach(x => x.classList.toggle("on", x === b)); });
-    f.promised.onchange = () => when.forEach(x => x.classList.toggle("on", x.dataset.d === f.promised.value));
+    // ready time: one choice at a time
+    const whenChips = m.querySelectorAll("#jbSoon .jb-chip, #jbLater .jb-chip"), nIn = m.querySelector("#jbN"), uIn = m.querySelector("#jbU"), dIn = m.querySelector("#jbD"), tIn = m.querySelector("#jbT");
+    const set = (promised, at, src) => { W.promised = promised; W.promisedAt = at ? at.toISOString() : ""; whenChips.forEach(x => x.classList.toggle("on", x === src)); er.hidden = true; sum(); };
+    whenChips.forEach(b => b.onclick = () => { nIn.value = ""; dIn.value = ""; tIn.value = "";
+      if (b.dataset.min) { const at = inMinutes(+b.dataset.min); set(dateOf(at), at, b); } else set(plusDays(+b.dataset.day), null, b); });
+    const fromN = () => { const k = +nIn.value * +uIn.value; if (!(k > 0)) return; dIn.value = ""; tIn.value = ""; const at = inMinutes(Math.min(k, 60 * 24 * 30)); set(dateOf(at), at, null); };
+    nIn.oninput = uIn.onchange = fromN;
+    const fromDT = () => { nIn.value = ""; const d = dIn.value || (tIn.value ? today() : ""); if (!d) return;
+      if (tIn.value) { const [h, mi] = tIn.value.split(":").map(Number), at = new Date(d + "T00:00:00"); at.setHours(h, mi, 0, 0); set(d, at, null); } else set(d, null, null); };
+    dIn.onchange = tIn.onchange = fromDT;
     f.onsubmit = async ev => {
       ev.preventDefault(); if (other.value.trim()) addOther();
       if (!picked.length) { er.textContent = "Pick at least one thing you're doing."; er.hidden = false; return; }
       const pid = f.bike ? f.bike.value : opts.bikeId || (bikes[0] && bikes[0].id), tasks = picked.map(t => ({ t, done: false }));
-      const rec = { job: true, title: titleOf(tasks), complaint: picked.join("\n"), status: "Checked in", dateIn: today(), promised: f.promised.value || "", tasks, noteClient: f.noteClient.value.trim() };
+      const rec = { job: true, title: titleOf(tasks), complaint: picked.join("\n"), status: "Checked in", dateIn: today(), promised: W.promised || "", promisedAt: W.promisedAt || "", tz: tz(), tasks, noteClient: f.noteClient.value.trim() };
       f.querySelectorAll("button").forEach(x => x.disabled = true);
       try {
         const id = await opts.save(pid, rec, !!(f.notify && f.notify.checked));
@@ -219,7 +260,7 @@
   //         photos: { list(), add(thumb, img), del(id), full(id) }, ask(t, price, photoId) -> rec }
   function manageBox(opts) {
     let w = opts.w, pics = [], asking = false; const c = opts.client || {}, reach = reachTxt(c), fn = first(c.name) || "the customer";
-    const m = modal(`<div class="jb-man"></div>`, (c.name ? c.name + " · " : "") + (opts.bikeName || "Job"));
+    const m = modal(`<div class="jb-man"></div>`, (c.name ? c.name + " · " : "") + (opts.bikeName || "Job"), "jb-manm", { eb: "In the shop", title: opts.bikeName || "Job", sub: esc(c.name || "") });
     const host = m.querySelector(".jb-man");
     let busy = false;
     const fresh = async () => { if (!opts.fetch) return w; try { const f = await opts.fetch(); if (f) w = f; } catch (e) {} return w; };
@@ -271,15 +312,18 @@
     }
     function draw() {
       const t = tasksOf(w), p = prog(w), ready = w.status === "Done";
-      host.innerHTML = `<div class="jb-mh"><div class="grow"><b>${esc(w.title || titleOf(t) || "Job")}</b><span class="${late(w) ? "jb-late" : ""}">${esc(etaTxt(w))}${w.dateIn ? " · in since " + esc(day(w.dateIn)) : ""}</span></div><span class="pill ${pillTone(w.status)}">${esc((STATUS.find(x => x[0] === w.status) || [0, w.status])[1])}</span></div>
+      const at = w.promisedAt ? new Date(w.promisedAt) : null;
+      host.innerHTML = `<div class="jb-mh"><div class="grow"><b>${esc(w.title || titleOf(t) || "Job")}</b><span>${w.dateIn ? "In since " + esc(day(w.dateIn)) : ""}</span></div><div class="jb-etab${late(w) ? " late" : ready ? " ready" : ""}">${ic(ready ? IC.check : IC.clock)}<b>${esc(etaTxt(w))}</b></div></div>
         <div class="jb-seg" role="group" aria-label="Status">${STATUS.map(([k, l]) => `<button type="button" class="${w.status === k ? "on" : ""}" data-st="${esc(k)}">${esc(l)}</button>`).join("")}</div>
         <div class="jb-mt"><div class="jb-wh"><b>The work</b><span>${p.done} of ${p.n} done</span></div>
           <ul class="jb-mtasks">${t.map((x, i) => `<li><label class="${x.done ? "done" : ""}"><input type="checkbox" data-i="${i}" ${x.done ? "checked" : ""}><span>${esc(x.t)}${x.ask ? ` <em class="jb-ok">approved</em>` : ""}</span></label><button type="button" class="jb-rm" data-rmi="${i}" aria-label="Remove">${ic(IC.x)}</button></li>`).join("")}</ul>
           <div class="jb-add"><input id="jbMore" maxlength="80" placeholder="Add a task"><button type="button" class="btn sm" data-more>${ic(IC.plus)} Add</button></div></div>
         ${opts.photos ? `<div class="jb-opt"><div class="jb-wh"><b>Photos</b><span>Optional. ${esc(fn)} sees them in Revora.</span></div><div class="jb-mpics"></div></div>` : ""}
         <div class="jb-opt jb-mask"></div>
-        <div class="sx-f2"><label class="sx-f"><b>Ready by</b><input type="date" id="jbProm" value="${esc(w.promised || "")}"></label>
-          <label class="sx-f"><b>Note for ${esc(fn)}</b><input id="jbNote" maxlength="300" value="${esc(w.noteClient || "")}" placeholder="They see this in Revora"></label></div>
+        <div class="jb-opt"><div class="jb-wh"><b>Ready by</b><span>${ready ? "" : "Running behind? Push it back and they'll see the new time."}</span></div>
+          <div class="jb-rb"><span class="jb-in"><input type="date" id="jbProm" value="${esc(w.promised || "")}" aria-label="Date"><input type="time" id="jbTime" step="300" value="${at ? String(at.getHours()).padStart(2, "0") + ":" + String(at.getMinutes()).padStart(2, "0") : ""}" aria-label="Time (optional)"></span>
+            ${ready ? "" : `<span class="jb-chips">${[[30, "+30 min"], [60, "+1 hour"], [1440, "+1 day"]].map(([k, l]) => `<button type="button" class="jb-chip sm" data-push="${k}">${l}</button>`).join("")}</span>`}</div></div>
+        <label class="sx-f"><b>Note for ${esc(fn)}</b><input id="jbNote" maxlength="300" value="${esc(w.noteClient || "")}" placeholder="They see this in Revora"></label>
         <div class="jb-big">${ready ? `<button type="button" class="btn pri big" data-picked>${ic(IC.check)} Picked up, add it to their history</button>` : `<button type="button" class="btn pri big jb-readybtn" data-ready>${ic(IC.bell)} Ready${reach ? `, tell ${esc(fn)}` : ""}</button>`}</div>
         <p class="sx-small jb-reach">${reach ? (ready ? `${esc(fn)} got ${reach} that it's ready.` : `${esc(fn)} follows this in Revora${c.app ? " and gets a notification" : " and gets an email"} when you tap Ready.`) : `${esc(c.name ? fn : "They")} can't get updates yet: no email or Revora app.`}${c.phone ? ` <a href="sms:${esc(String(c.phone).replace(/[^0-9+]/g, ""))}?&body=${encodeURIComponent(ready ? `Hi ${fn}, your ${opts.bikeName || "bike"} is ready to pick up.` : `Hi ${fn}, quick update on your ${opts.bikeName || "bike"}: `)}">${ic(IC.text)} Text them</a>` : ""}</p>
         ${opts.openFull ? `<div class="sx-acts left"><button type="button" class="linkbtn" data-full>Open the full work order (estimate, parts, invoice)</button></div>` : ""}`;
@@ -289,7 +333,16 @@
       host.querySelectorAll("[data-rmi]").forEach(b => b.onclick = () => { const label = (tasksOf(w)[+b.dataset.rmi] || {}).t; save(f => { const tt = tasksOf(f).filter(x => x.t !== label); return { tasks: tt, title: titleOf(tt) || f.title }; }); });
       const more = host.querySelector("#jbMore"), addMore = () => { const v = more.value.trim(); if (!v) return; save(f => { const tt = tasksOf(f).concat([{ t: v, done: false }]); return { tasks: tt, title: titleOf(tt) }; }); };
       host.querySelector("[data-more]").onclick = addMore; more.onkeydown = ev => { if (ev.key === "Enter") { ev.preventDefault(); addMore(); } };
-      host.querySelector("#jbProm").onchange = ev => save({ promised: ev.target.value }, "Ready-by date changed.");
+      const setWhen = () => { const d = host.querySelector("#jbProm").value, tv = host.querySelector("#jbTime").value;
+        if (!d && !tv) return save({ promised: "", promisedAt: "" });
+        const day0 = d || today(); let iso = ""; if (tv) { const [h, mi] = tv.split(":").map(Number), x = new Date(day0 + "T00:00:00"); x.setHours(h, mi, 0, 0); iso = x.toISOString(); }
+        save({ promised: day0, promisedAt: iso, tz: tz() }, "Ready time changed. They'll see it in Revora."); };
+      host.querySelector("#jbProm").onchange = host.querySelector("#jbTime").onchange = setWhen;
+      host.querySelectorAll("[data-push]").forEach(b => b.onclick = () => { const k = +b.dataset.push;
+        const base = w.promisedAt && new Date(w.promisedAt) > new Date() ? new Date(w.promisedAt) : k >= 1440 && w.promised ? new Date(w.promised + "T17:00:00") : new Date();
+        if (k >= 1440 && !w.promisedAt) { const d = new Date((w.promised && w.promised >= today() ? w.promised : today()) + "T12:00:00"); d.setDate(d.getDate() + 1); return save({ promised: dateOf(d), promisedAt: "" }, "Pushed back a day."); }
+        const nx = new Date(base.getTime() + k * 60000); nx.setSeconds(0, 0); nx.setMinutes(Math.ceil(nx.getMinutes() / 5) * 5);
+        save({ promised: dateOf(nx), promisedAt: nx.toISOString(), tz: tz() }, "Pushed back. They'll see the new time in Revora."); });
       host.querySelector("#jbNote").onchange = ev => save({ noteClient: ev.target.value.trim() }, "Note saved. They'll see it in Revora.");
       const rd = host.querySelector("[data-ready]"); if (rd) rd.onclick = () => save(f => ({ status: "Done", readyAt: new Date().toISOString(), tasks: tasksOf(f).map(x => Object.assign({}, x, { done: true })) }), reach ? `Marked ready. ${fn} is getting ${reach.replace(/^a |^an /, "")}.` : "Marked ready.");
       const pk = host.querySelector("[data-picked]"); if (pk) pk.onclick = async () => { pk.disabled = true; try { await opts.pickedUp(await fresh()); m.close(); opts.note("Done. It's in their service history."); if (opts.refresh) opts.refresh(); } catch (e) { pk.disabled = false; opts.note((e && e.message) || "That didn't save.", true); } };
