@@ -35,12 +35,12 @@
     const askBtn = ([k, t, d]) => { const done = reqs.find(q => q.kind === k && q.status === "approved"), wait = reqs.find(q => q.kind === k && q.status === "pending"), no = !done && !wait && reqs.find(q => q.kind === k && q.status === "declined");
       return `<div class="cv-ask"><div><b>${esc(t)}</b><span>${esc(d)}</span></div>${done ? `<a class="btn sm pri" href="?shopdoc=${esc(done.token)}" target="_blank" rel="noopener">Open</a>${wait ? "" : `<button class="linkbtn" data-ask="${esc(b.id)}|${k}">Ask for a new one</button>`}` : wait ? `<span class="cv-wait">${ic(IC.clock)} Asked ${esc(D().fmtDate(wait.created_at))}</span>` : `<button class="btn sm" data-ask="${esc(b.id)}|${k}">Ask ${esc(shopName)}</button>${no ? `<small class="faint">Last request was declined</small>` : ""}`}</div>`; };
     return `<section class="cv-bike">
+      ${wos.length ? (window.rvJobs ? wos.map(w => rvJobs.trackCard(w, shopName)).join("") : `<div class="cv-inshop">${ic(IC.wrench)}<div>${wos.map(w => `<b>In the shop: ${esc(w.title || "Work in progress")}</b><span>${esc(w.status)}${w.promised ? " · ready by " + esc(D().fmtDate(w.promised)) : ""}</span>`).join("")}</div></div>`) : ""}
       <div class="cv-hero t-${tone}">${sil ? `<img src="img/sil/${esc(sil)}" alt="" class="cv-sil">` : ""}<div class="cv-ht">
         <span class="cv-k">At ${esc(shopName)}</span><h2>${esc(m.bike || b.name || "Your bike")}</h2>
         <div class="cv-hm">${c.odo ? `<span>${D().milesFmt(c.odo.miles)} mi</span>` : ""}${c.last ? `<span>Last service ${esc(D().fmtDate(c.last.date))}</span>` : ""}</div>
         <div class="cv-status"><span class="pill ${tone}">${esc(headline)}</span></div>
         ${next ? `<div class="cv-next"><span>Next up</span><b>${esc(next.name)}</b><small>${esc(D().whenTxt(next))}</small></div>` : ""}</div></div>
-      ${wos.length ? `<div class="cv-inshop">${ic(IC.wrench)}<div>${wos.map(w => `<b>In the shop: ${esc(w.title || "Work in progress")}</b><span>${esc(w.status)}${w.promised ? " · ready by " + esc(D().fmtDate(w.promised)) : ""}</span>`).join("")}</div></div>` : ""}
       <div class="cv-grid">
         <div class="cv-card"><h3>What's due</h3>${items.length ? `<div class="cv-due">${items.slice(0, 10).map(i => `<div class="cv-di"><span class="cv-dot ${i.status}"></span><span class="grow"><b>${esc(i.name)}</b><small>${esc(i.every ? "Every " + i.every : "")}</small></span><span class="cv-when">${esc(D().whenTxt(i))}</span></div>`).join("")}</div>` : `<p class="faint">${esc(shopName)} hasn't set up the service schedule yet. Once they log a service you'll see what's next here.</p>`}</div>
         <div class="cv-card"><h3>Done so far</h3>${c.done.length ? `<div class="cv-tl">${c.done.slice(0, 12).map(r => `<div class="cv-tli"><span class="cv-td">${esc(D().fmtDate(r.date))}</span><div><b>${esc(r.service || "Service")}</b><small>${esc([n(r.odometer) ? D().milesFmt(r.odometer) + " mi" : "", r.doneBy === "A shop" ? r.shop || shopName : r.doneBy === "Myself" ? "You" : r.shop || ""].filter(Boolean).join(" · "))}</small></div></div>`).join("")}</div>${c.done.length > 12 ? `<p class="faint">${c.done.length - 12} more in the history report.</p>` : ""}` : `<p class="faint">No services logged yet.</p>`}</div>
@@ -56,6 +56,7 @@
     if (!data.length) return codePage(X, "");
     const first = String((X.profile && X.profile.display_name) || "").split(" ")[0];
     X.frame(`<div class="cv">
+      <div class="jb-notify" id="cvNotify" hidden></div>
       <div class="cv-top"><div><h1 class="gh-title">${first ? `Hi, ${esc(first)}.` : "Your bike"}</h1><p class="muted">${data.length === 1 ? `Kept up by ${esc(data[0].shop.name || "your shop")}.` : "Kept up by your shops."}</p></div>
         <div class="cv-topb"><button class="btn sm" data-code>Add a shop code</button><button class="btn sm" data-own>Your own bikes</button></div></div>
       ${data.map(h => `${h.bikes.length ? h.bikes.map(b => bikeBlock(h, b, X)).join("") : `<section class="cv-card"><h3>${esc(h.shop.name)}</h3><p class="faint">Your shop hasn't added a bike to your card yet.</p></section>`}
@@ -64,6 +65,14 @@
           <p class="faint cv-rem">${h.remind_ok ? `${esc(h.shop.name)} emails you a reminder 2 weeks before each service is due.` : `Want reminder emails before each service? Ask ${esc(h.shop.name)} to turn them on.`} <button class="linkbtn" data-leave="${esc(h.client_id)}">Stop following this shop</button></p></section>`).join("")}
       <p class="cv-foot">Revora keeps every bike's history, schedule and parts in one place. <button class="linkbtn" data-nav="new">Add a bike of your own</button></p></div>`, { wide: true, garage: true });
     const app = X.app;
+    const open = data.some(h => h.bikes.some(b => (b.workorders || []).some(w => !["Picked up", "Declined"].includes(w.status))));
+    if (window.rvJobs) rvJobs.notifyStrip(app.querySelector("#cvNotify"), sb, X.note, open);
+    // a bike in the shop: keep the page current while it's open
+    clearInterval(window.__cvLive);
+    if (open) window.__cvLive = setInterval(async () => {
+      if (document.hidden || !document.getElementById("cvNotify")) { if (!document.getElementById("cvNotify")) clearInterval(window.__cvLive); return; }
+      const fresh = await homes(sb); if (JSON.stringify(fresh) !== JSON.stringify(data)) { const y = window.scrollY; home(X, fresh).then(() => window.scrollTo(0, y)); }
+    }, 45000);
     app.querySelector("[data-code]").onclick = () => codeBox(X);
     app.querySelector("[data-own]").onclick = () => { ls.set("rv.clientHome", "own"); X.goUrl({}); };
     app.querySelectorAll("[data-ask]").forEach(b => b.onclick = async () => {

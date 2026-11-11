@@ -25,7 +25,7 @@
   const DRIVES = [["chain", "Chain"], ["shaft", "Shaft"], ["belt", "Belt"], ["cvt", "Scooter (CVT)"]];
   const MOD_LABEL = { Planned: "Wanted", Ordered: "Ordered", Installed: "Installed", Removed: "Removed" };
   const WO_DONE = ["Picked up", "Declined"];
-  const PREFIX = { maintenance: ["MAINT-U", 3], mileage: ["ODO-U", 4], mods: ["MOD-U", 3], schedule: ["SVC-U", 3] };
+  const PREFIX = { workorders: ["WO-U", 4], maintenance: ["MAINT-U", 3], mileage: ["ODO-U", 4], mods: ["MOD-U", 3], schedule: ["SVC-U", 3] };
 
   let X = null;          // { sb, session, profile, app, note, url, goUrl, silFile, plansOk, showPlans, guessStyle, guessDrive }
   let S = null;          // shop data in memory
@@ -212,9 +212,9 @@
         <section class="sx-panel" id="sxDue"><div class="sx-ph"><h2>Coming due</h2><span>Overdue or due in the next 30 days</span></div>
           ${due.length ? `<div class="sx-rows">${due.slice(0, 14).map(({ b, i }) => { const c = clientOf(b); return `<button class="sx-row" data-open="${esc(c ? c.id : "")}"><span class="grow"><b>${esc(c ? c.name : "No client")}</b><small>${esc(bikeName(b))} · ${esc(i.name)}</small></span><span class="sx-when">${esc(D().whenTxt(i))}</span>${pill(i.status)}</button>`; }).join("")}</div>${due.length > 14 ? `<p class="sx-more">${due.length - 14} more. They're on each client's page.</p>` : ""}`
             : `<div class="sx-empty">${ic("check")}<b>Nothing coming due.</b><span>Services due in the next 30 days show up here, so you know who to call.</span></div>`}</section>
-        <section class="sx-panel" id="sxWo"><div class="sx-ph"><h2>In the shop</h2><span>Open work orders</span></div>
-          ${wos.length ? `<div class="sx-rows">${wos.slice(0, 12).map(({ b, w }) => { const c = clientOf(b), late = w.promised && w.promised < today() && w.status !== "Done"; return `<button class="sx-row" data-wo="${esc(b.p.id)}|${esc(w.id)}"><span class="grow"><b>${esc(w.title || "Work order")}</b><small>${esc(c ? c.name : "")} · ${esc(bikeName(b))}</small></span><span class="sx-when${late ? " late" : ""}">${w.promised ? (late ? "Was due " : "Ready by ") + esc(fmt(w.promised)) : ""}</span><span class="pill ${w.status === "Done" ? "green" : /Waiting/.test(w.status) ? "amber" : "blue"}">${esc(w.status)}</span></button>`; }).join("")}</div>`
-            : `<div class="sx-empty">${ic("wrench")}<b>No open work orders.</b><span>Start one from a client's bike when it comes in.</span></div>`}</section>
+        <section class="sx-panel" id="sxWo"><div class="sx-ph"><h2>In the shop</h2><span>Tap one to update it. Customers follow along in Revora.</span></div>
+          ${wos.length ? `<div class="sx-rows">${wos.slice(0, 12).map(({ b, w }) => { const c = clientOf(b); return rvJobs.boardRow(Object.assign({ pid: b.p.id }, w), { client: c ? c.name : "", bike: bikeName(b) }); }).join("")}</div>`
+            : `<div class="sx-empty">${ic("wrench")}<b>Nothing in the shop.</b><span>When a bike comes in, open the client and tap Start a job. They'll see the work and when it'll be ready.</span></div>`}</section>
         <section class="sx-panel"><div class="sx-ph"><h2>Requests</h2><span>Clients asking for a report, value or budget</span></div>
           ${pend.length ? `<div class="sx-rows">${pend.slice(0, 6).map(reqRow).join("")}</div>` : `<div class="sx-empty">${ic("inbox")}<b>No requests waiting.</b><span>When a client asks for their history report, bike value or budget, it shows up here for you to approve.</span></div>`}</section>
         <section class="sx-panel"><div class="sx-ph"><h2>Recent visits</h2><span>Last services logged</span></div>
@@ -235,6 +235,7 @@
     root.querySelectorAll("[data-scroll]").forEach(b => b.onclick = () => document.getElementById(b.dataset.scroll)?.scrollIntoView({ behavior: "smooth", block: "start" }));
     root.querySelectorAll("[data-open]").forEach(b => b.onclick = () => b.dataset.open && nav("client", b.dataset.open));
     root.querySelectorAll("[data-wo]").forEach(b => b.onclick = () => { const [pid, wid] = b.dataset.wo.split("|"); openBikePage(pid, "workorders", wid); });
+    root.querySelectorAll("[data-job]").forEach(b => b.onclick = () => { const [pid, wid] = b.dataset.job.split("|"); openJob(pid, wid); });
     root.querySelectorAll("[data-approve]").forEach(b => b.onclick = () => approveReq(S.requests.find(q => q.id === b.dataset.approve)));
     root.querySelectorAll("[data-decline]").forEach(b => b.onclick = () => declineReq(S.requests.find(q => q.id === b.dataset.decline)));
   }
@@ -332,12 +333,12 @@
     return `<section class="sx-bike" data-bike="${esc(b.p.id)}">
       <div class="sx-bh">${sil ? `<img class="sx-sil" src="${esc(sil)}" alt="">` : ""}<div class="grow"><h3>${esc(bikeName(b))}</h3>
           <div class="sx-bmeta">${c.odo ? `<span>${ic("gauge")}${D().milesFmt(c.odo.miles)} mi <small>on ${esc(fmt(c.odo.date))}</small></span>` : `<span class="faint">No odometer reading yet</span>`}${c.last ? `<span>Last in ${esc(fmt(c.last.date))}</span>` : ""}${m.frameNo ? `<span class="mono">VIN …${esc(String(m.frameNo).slice(-6))}</span>` : ""}</div></div>
-        <div class="sx-bacts"><button class="btn tan" data-log>${ic("wrench")} Log service</button><button class="btn" data-odo>${ic("gauge")} Odometer</button><button class="btn" data-wo>${ic("doc")} Work order</button>
+        <div class="sx-bacts"><button class="btn tan" data-jobstart>${ic("bolt")} Start a job</button><button class="btn" data-log>${ic("wrench")} Log service</button><button class="btn" data-odo>${ic("gauge")} Odometer</button>
           <div class="sx-dd"><button class="btn" data-menu aria-haspopup="true" aria-label="More for this bike">More</button><div class="sx-menu" hidden>
             <button data-doc="report|${esc(b.p.id)}">${ic("doc")} History report</button><button data-value>${ic("tag")} Bike value</button>${isOwner() ? `<button data-doc="budget|${esc(b.p.id)}">${ic("money")} Budget report</button>` : ""}
-            <button data-sched>${ic("gear")} Service schedule</button><button data-editbike>${ic("gear")} Bike details</button><button data-full>${ic("arrow")} Full bike page</button>
+            <button data-wo>${ic("doc")} Work order with estimate</button><button data-sched>${ic("gear")} Service schedule</button><button data-editbike>${ic("gear")} Bike details</button><button data-full>${ic("arrow")} Full bike page</button>
             ${isOwner() ? `<button data-transfer>${ic("move")} Hand bike to client</button><button data-delbike class="red">Delete bike</button>` : ""}</div></div></div></div>
-      ${wos.length ? `<div class="sx-wos">${wos.map(w => `<button class="sx-wo" data-wo="${esc(b.p.id)}|${esc(w.id)}"><b>${esc(w.title || "Work order")}</b><span class="pill ${w.status === "Done" ? "green" : /Waiting/.test(w.status) ? "amber" : "blue"}">${esc(w.status)}</span>${w.promised ? `<small>Ready by ${esc(fmt(w.promised))}</small>` : ""}</button>`).join("")}</div>` : ""}
+      ${wos.length ? `<div class="sx-rows jb-bikejobs">${wos.map(w => rvJobs.boardRow(Object.assign({ pid: b.p.id }, w), { client: "In the shop", bike: "" })).join("")}</div>` : ""}
       <div class="sx-bbody">
         <div class="sx-due"><h4>What's due</h4>${items.length ? `<div class="sx-dl">${items.slice(0, 8).map(i => `<div class="sx-di ${i.status}"><span class="grow"><b>${esc(i.name)}</b><small>${esc(i.every ? "Every " + i.every : "")}</small></span><span class="sx-when">${esc(D().whenTxt(i))}</span>${pill(i.status)}</div>`).join("")}</div>${items.length > 8 ? `<button class="linkbtn" data-sched>All ${items.length} items</button>` : ""}`
           : `<div class="sx-empty sm"><span>No service schedule yet.</span><button class="btn sm" data-preset>Add typical intervals</button></div>`}</div>
@@ -350,6 +351,8 @@
       const b = S.bikes.get(card.dataset.bike); if (!b) return;
       const on = (sel, fn) => card.querySelectorAll(sel).forEach(x => x.onclick = ev => { ev.stopPropagation(); card.querySelector(".sx-menu").hidden = true; fn(x); });
       on("[data-log]", () => logBox(c, b, null));
+      on("[data-jobstart]", () => startJob(c, b));
+      on("[data-job]", x => { const [pid, wid] = x.dataset.job.split("|"); openJob(pid, wid); });
       on("[data-odo]", () => odoBox(b));
       on("[data-wo]:not(.sx-wo)", () => openBikePage(b.p.id, "workorders"));
       on(".sx-wo", x => { const [, wid] = x.dataset.wo.split("|"); openBikePage(b.p.id, "workorders", wid); });
@@ -366,6 +369,35 @@
         const { error } = await X.sb.from("projects").delete().eq("id", b.p.id); if (error) return note(err(error), true);
         S.bikes.delete(b.p.id); note("Bike deleted."); draw(); }, true)));
     });
+  }
+
+  /* ---------- jobs: start one in a few taps, update it as you go, the customer follows along ---------- */
+  const jobClient = c => c ? { name: c.name, email: c.email, phone: c.phone, app: !!c.client_user } : {};
+  async function saveJob(b, rec, ntf) {
+    const old = rec.id ? b.recs.workorders.find(w => w.id === rec.id) : null;
+    const out = Object.assign({ lines: [], byOwner: who() }, old || {}, rec, { id: (old && old.id) || rec.id || nextId(b, "workorders") });
+    delete out.pid;
+    await putRecs(b, [{ coll: "workorders", rec: out }]);
+    const { data, error } = await X.sb.rpc("job_touch", { pid: b.p.id, wid: out.id, ntf: ntf === undefined ? null : ntf });
+    if (error || data !== "ok") console.warn("job_touch", error || data);
+    return b.recs.workorders.find(w => w.id === out.id) || out;
+  }
+  function startJob(c, b) {
+    const bikes = bikesOf(c.id); if (!bikes.length) return bikeBox(c, null);
+    rvJobs.startBox({ client: jobClient(c), bikes: bikes.map(x => ({ id: x.p.id, name: bikeName(x) })), bikeId: (b || bikes[0]).p.id, bikeName: bikes.length === 1 ? bikeName(bikes[0]) : "",
+      save: async (pid, rec, ntf) => (await saveJob(S.bikes.get(pid), rec, ntf)).id,
+      done: (pid, id) => { draw(); const cl = jobClient(c); note(cl.app ? `Job started. ${c.name.split(" ")[0]} gets a notification and can follow it in Revora.` : cl.email ? `Job started. ${c.name.split(" ")[0]} gets an email with a link to follow it.` : "Job started."); openJob(pid, id); } });
+  }
+  function openJob(pid, wid) {
+    const b = S.bikes.get(pid), w = b && b.recs.workorders.find(x => x.id === wid); if (!w) return;
+    const c = clientOf(b);
+    rvJobs.manageBox({ w, pid, client: jobClient(c), bikeName: bikeName(b), note,
+      save: patch => saveJob(b, Object.assign({ id: w.id }, patch)),
+      pickedUp: async ww => {
+        const h = Object.assign(rvJobs.historyRec(ww), { id: nextId(b, "maintenance"), odometer: b.c.odo ? b.c.odo.miles : 0, doneBy: "A shop", shop: S.shop.name || "Shop", byOwner: who(), planned: false });
+        await putRecs(b, [{ coll: "maintenance", rec: h }, { coll: "workorders", rec: Object.assign({}, ww, { status: "Picked up", pickedAt: new Date().toISOString() }) }]);
+      },
+      openFull: () => openBikePage(pid, "workorders", wid), refresh: draw });
   }
 
   /* ---------- new client, edit client, share ---------- */

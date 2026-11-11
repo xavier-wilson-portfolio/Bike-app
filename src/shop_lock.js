@@ -11,7 +11,7 @@
   const ss = ls;   // logins survive closing the browser; the 6-hour idle rule ends them
   const IDLE = 6 * 3600e3, PIN_LEN = 6, ADMIN = "xavier.j.wilson101@gmail.com";
   const ic = p => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
-  const IC = { lock: '<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>', search: '<circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/>', plus: '<path d="M12 5v14M5 12h14"/>',
+  const IC = { bolt: '<path d="M13 3L5 13h6l-1 8 8-10h-6z"/>', lock: '<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>', search: '<circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/>', plus: '<path d="M12 5v14M5 12h14"/>',
     wrench: '<path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L4 17l3 3 5.3-5.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/>', gauge: '<path d="M4 16a8 8 0 1 1 16 0"/><path d="M12 16l4-5"/>', back: '<path d="M15 5l-7 7 7 7"/>',
     phone: '<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/>', key: '<circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3"/>', check: '<path d="M5 12l4 4 10-10"/>',
     user: '<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>', pin: '<path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/>', clock: '<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>' };
@@ -263,17 +263,19 @@
   }
   async function home() {
     shell(`<div class="spinner" style="margin:60px auto"></div>`);
-    let h; try { h = await rpc("emp_home"); } catch (e) { return; }
-    E.home = h || { bikes: [], recent: [] };
+    let h, jobs = []; try { [h, jobs] = await Promise.all([rpc("emp_home"), rpc("emp_jobs").catch(() => [])]); } catch (e) { return; }
+    E.home = h || { bikes: [], recent: [] }; E.jobs = jobs || []; E.view = () => home();
     const assigned = E.home.bikes.filter(b => b.assigned), worked = E.home.bikes.filter(b => !b.assigned);
     const card = b => `<button class="sx-row" data-client="${esc(b.client_id)}"><span class="grow"><b>${esc(b.client)}</b><small>${esc(b.name)}${b.last ? " · you last logged " + esc(D().fmtDate(b.last)) : ""}</small></span>${b.assigned ? `<span class="pill blue plain">Assigned</span>` : ""}</button>`;
     shell(`<section class="sx-hero"><div class="sx-hero-t"><h1>Hi, ${esc(String(E.emp.name).split(" ")[0])}.</h1><p>Find a client to log work, or check a new one in.</p></div>
         <div class="sx-find"><div class="sx-qwrap">${ic(IC.search)}<input id="eQ" type="search" placeholder="Find a client by name, phone or bike" autocomplete="off" aria-label="Find a client"><div class="sx-hits" id="eHits" hidden></div></div>
           <button class="btn tan big" data-new>${ic(IC.plus)} New client</button></div></section>
+      ${E.jobs.length ? `<section class="sx-panel jb-board"><div class="sx-ph"><h2>In the shop</h2><span>Tap a job to tick off work or mark it ready</span></div><div class="sx-rows">${E.jobs.map(j => rvJobs.boardRow(j, { client: j.client, bike: j.bike })).join("")}</div></section>` : ""}
       <div class="sx-grid2"><section class="sx-panel"><div class="sx-ph"><h2>Assigned to you</h2><span>${assigned.length}</span></div>${assigned.length ? `<div class="sx-rows">${assigned.map(card).join("")}</div>` : `<div class="sx-empty sm"><span>Nothing assigned right now. The admin can assign clients to you.</span></div>`}</section>
         <section class="sx-panel"><div class="sx-ph"><h2>Bikes you've worked on</h2><span>${worked.length}</span></div>${worked.length ? `<div class="sx-rows">${worked.map(card).join("")}</div>` : `<div class="sx-empty sm"><span>Bikes you log work on show up here.</span></div>`}</section></div>
       <section class="sx-panel"><div class="sx-ph"><h2>Your recent work</h2></div>${E.home.recent.length ? `<div class="sx-rows">${E.home.recent.map(r => `<button class="sx-row" data-client="${esc(r.client_id)}"><span class="sx-date">${esc(D().fmtDate(r.date))}</span><span class="grow"><b>${esc(r.service || "Service")}</b><small>${esc(r.client)} · ${esc(r.bike)}</small></span></button>`).join("")}</div>` : `<div class="sx-empty sm"><span>Nothing logged yet.</span></div>`}</section>`);
     X.app.querySelectorAll("[data-client]").forEach(b => b.onclick = () => client(b.dataset.client));
+    X.app.querySelectorAll("[data-job]").forEach(b => b.onclick = () => openJob(E.jobs.find(j => j.pid + "|" + j.id === b.dataset.job)));
     X.app.querySelector("[data-new]").onclick = () => newClient("");
     const q = X.app.querySelector("#eQ"), out = X.app.querySelector("#eHits"); let t = null, seq = 0;
     q.oninput = () => { clearTimeout(t); const v = q.value.trim(); if (v.length < 2) { out.hidden = true; return; }
@@ -288,8 +290,9 @@
   }
   async function client(cid) {
     shell(`<div class="spinner" style="margin:60px auto"></div>`);
-    let c; try { c = await rpc("emp_client", { cid }); } catch (e) { return; }
+    let c, jobs = []; try { [c, jobs] = await Promise.all([rpc("emp_client", { cid }), rpc("emp_jobs").catch(() => [])]); } catch (e) { return; }
     if (!c) return home();
+    E.jobs = jobs || []; E.view = () => client(cid);
     c.bikes.forEach(b => { b.c = D().compute(b); });
     const by = r => r.byEmp ? (r.byEmp.id === E.emp.id ? "you" : r.byEmp.name) : r.byOwner || r.shop || "";
     shell(`<button class="sx-back" data-home2>${ic(IC.back)} Back</button>
@@ -297,8 +300,10 @@
         <div class="sx-cts">${c.phone ? `<a href="tel:${esc(digits(c.phone))}" class="sx-ct">${ic(IC.phone)}${esc(c.phone)}</a>` : ""}${c.email ? `<span class="sx-ct">${esc(c.email)}</span>` : ""}</div>${c.notes ? `<p class="sx-cnote">${esc(c.notes)}</p>` : ""}</div></section>
       ${c.bikes.map(b => { const items = b.c.ranked.filter(i => i.status !== "nointerval"), wos = (b.workorders || []).filter(w => !["Picked up", "Declined"].includes(w.status));
         return `<section class="sx-bike" data-bike="${esc(b.id)}"><div class="sx-bh"><div class="grow"><h3>${esc((b.meta && b.meta.bike) || b.name)}</h3><div class="sx-bmeta">${b.c.odo ? `<span>${D().milesFmt(b.c.odo.miles)} mi</span>` : `<span class="faint">No odometer reading yet</span>`}${b.assigned ? `<span class="pill blue plain">Assigned to you</span>` : ""}</div></div>
-          <div class="sx-bacts"><button class="btn tan" data-log>${ic(IC.wrench)} Log work</button><button class="btn" data-odo>${ic(IC.gauge)} Odometer</button></div></div>
-          ${wos.length ? `<div class="sx-wos">${wos.map(w => `<span class="sx-wo"><b>${esc(w.title || "Work order")}</b><span class="pill ${w.status === "Done" ? "green" : /Waiting/.test(w.status) ? "amber" : "blue"}">${esc(w.status)}</span></span>`).join("")}</div>` : ""}
+          <div class="sx-bacts"><button class="btn tan" data-jobstart>${ic(IC.bolt || IC.wrench)} Start a job</button><button class="btn" data-log>${ic(IC.wrench)} Log work</button><button class="btn" data-odo>${ic(IC.gauge)} Odometer</button></div></div>
+          ${(() => { const mine = E.jobs.filter(j => j.pid === b.id), other = wos.filter(w => !mine.some(j => j.id === w.id));
+            return (mine.length ? `<div class="sx-rows jb-bikejobs">${mine.map(j => rvJobs.boardRow(j, { client: "In the shop", bike: "" })).join("")}</div>` : "")
+              + (other.length ? `<div class="sx-wos">${other.map(w => `<span class="sx-wo"><b>${esc(w.title || "Work order")}</b><span class="pill ${w.status === "Done" ? "green" : /Waiting/.test(w.status) ? "amber" : "blue"}">${esc(w.status)}</span></span>`).join("")}</div>` : ""); })()}
           <div class="sx-bbody"><div class="sx-due"><h4>What's due</h4>${items.length ? `<div class="sx-dl">${items.slice(0, 10).map(i => `<div class="sx-di ${i.status}"><span class="grow"><b>${esc(i.name)}</b><small>${esc(i.every ? "Every " + i.every : "")}</small></span><span class="sx-when">${esc(D().whenTxt(i))}</span><span class="pill ${D().PILL[i.status][0]}">${D().PILL[i.status][1]}</span></div>`).join("")}</div>` : `<p class="sx-small">No service schedule yet.</p>`}</div>
             <div class="sx-mods"><h4>History</h4>${b.c.done.length ? b.c.done.slice(0, 10).map(r => `<div class="sx-mi"><span class="grow"><b>${esc(r.service || "Service")}</b><small>${esc([D().fmtDate(r.date), n(r.odometer) ? D().milesFmt(r.odometer) + " mi" : "", by(r) ? "by " + by(r) : ""].filter(Boolean).join(" · "))}</small></span>${r.byEmp && r.byEmp.id === E.emp.id ? `<button class="linkbtn" data-edit="${esc(r.id)}">Edit</button>` : ""}</div>`).join("") : `<p class="sx-small">Nothing logged yet.</p>`}</div></div></section>`; }).join("")}
       ${c.bikes.length ? "" : `<div class="sx-panel sx-empty"><b>No bike on file.</b><span>Add their bike to log work on it.</span></div>`}
@@ -307,8 +312,36 @@
     X.app.querySelector("[data-addbike]").onclick = () => bikeBox(c);
     X.app.querySelectorAll(".sx-bike").forEach(card => { const b = c.bikes.find(x => x.id === card.dataset.bike);
       card.querySelector("[data-log]").onclick = () => logBox(c, b, null);
+      card.querySelector("[data-jobstart]").onclick = () => startJob(c, b);
+      card.querySelectorAll("[data-job]").forEach(x => x.onclick = () => openJob(E.jobs.find(j => j.pid + "|" + j.id === x.dataset.job)));
       card.querySelector("[data-odo]").onclick = () => odoBox(c, b);
       card.querySelectorAll("[data-edit]").forEach(x => x.onclick = () => logBox(c, b, b.maintenance.find(r => r.id === x.dataset.edit))); });
+  }
+  // jobs: start one, update it as you go; the customer follows along in Revora
+  const JOBERR = { notyours: "Only the admin or whoever started this job can change it.", plan: "The shop's plan isn't active.", denied: "That bike isn't in this shop.", gone: "That job was deleted." };
+  async function jobSave(pid, wid, d, ntf) {
+    const r = await rpc("emp_job_save", { pid, wid: wid || null, d, ntf: ntf === undefined ? null : ntf });
+    if (!r || r.error) throw new Error(JOBERR[r && r.error] || "That didn't save. Try again.");
+    return r.id;
+  }
+  function startJob(c, b) {
+    rvJobs.startBox({ client: { name: c.name, email: c.email, phone: c.phone, app: !!c.app }, bikes: c.bikes.map(x => ({ id: x.id, name: (x.meta && x.meta.bike) || x.name })), bikeId: b.id, bikeName: c.bikes.length === 1 ? ((b.meta && b.meta.bike) || b.name) : "",
+      save: (pid, rec, ntf) => jobSave(pid, null, rec, ntf),
+      done: async (pid, id) => { note("Job started. They can follow it in Revora."); await client(c.id); const j = E.jobs.find(x => x.pid === pid && x.id === id); if (j) openJob(j); } });
+  }
+  function openJob(j) {
+    if (!j) return;
+    rvJobs.manageBox({ w: j, pid: j.pid, client: { name: j.client, email: j.email ? "yes" : "", app: j.app, phone: j.phone }, bikeName: j.bike, note,
+      save: async patch => { await jobSave(j.pid, j.id, patch); Object.assign(j, patch, { updatedAt: new Date().toISOString() }); return j; },
+      pickedUp: async ww => {
+        const cl = await rpc("emp_client", { cid: j.client_id }), b = cl && cl.bikes.find(x => x.id === j.pid); if (!b) throw new Error("That bike isn't here any more.");
+        const id = nextId(b.maintenance, "MAINT-U", 3), odo = D().compute(b).odo;
+        const res = await rpc("emp_put", { pid: j.pid, k: "maintenance", rid: id, d: Object.assign(rvJobs.historyRec(ww), { odometer: odo ? odo.miles : 0, doneBy: "A shop", shop: E.shop.name || "Shop", planned: false }) });
+        if (res !== "ok") throw new Error(JOBERR[res] || "That didn't save. Try again.");
+        await jobSave(j.pid, j.id, { status: "Picked up", pickedAt: new Date().toISOString() });
+        b.maintenance = (b.maintenance || []).concat([{ id, date: D().today(), service: rvJobs.historyRec(ww).service }]); syncRem(b, (b.meta && b.meta.bike) || b.name);
+      },
+      refresh: () => E.view && E.view() });
   }
   function modal(inner, title) {
     const box = document.createElement("div"); box.className = "pk-modal sx-modal";
