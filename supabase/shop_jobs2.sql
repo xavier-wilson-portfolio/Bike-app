@@ -1,4 +1,4 @@
--- Revora Shop, part 5: photos on a job, and asking the customer to approve extra work.
+-- Revora Shop, part 5: photos on a job, asking the customer to approve extra work, and ready-by times in hours and minutes.
 -- Both are optional for the mechanic. The customer sees photos on their job card and approves or declines extra work in the app;
 -- the shop gets a notification with the answer. Run once in the Supabase SQL editor after shop_jobs.sql. Safe to run again.
 
@@ -188,6 +188,62 @@ revoke all on function public.job_photo_del(uuid) from public, anon; grant execu
 revoke all on function public.job_ask(uuid, text, text, numeric, uuid) from public, anon; grant execute on function public.job_ask(uuid, text, text, numeric, uuid) to authenticated;
 revoke all on function public.emp_job_ok(public.shop_employees, uuid, text) from public, anon, authenticated;
 
+-- ready-by can be a clock time ("in 45 minutes", "by 3:30"), kept with the shop's time zone so notifications say the right time
+create or replace function public.emp_job_save(tok text, pid uuid, wid text, d jsonb, ntf boolean) returns jsonb language plpgsql security definer set search_path = public, extensions as $$
+declare e shop_employees := public.emp_of(tok); old jsonb; cid uuid; nid text := wid; mx int; clean jsonb;
+begin
+  if e.status <> 'active' then return jsonb_build_object('error', 'setup'); end if;
+  select shop_client into cid from projects where id = pid and shop_id = e.shop_id;
+  if not found then return jsonb_build_object('error', 'denied'); end if;
+  if not public.shop_plan_ok(e.shop_id) then return jsonb_build_object('error', 'plan'); end if;
+  if d is null or pg_column_size(d) > 20000 then return jsonb_build_object('error', 'bad'); end if;
+  if nid is null or nid = '' then
+    perform pg_advisory_xact_lock(hashtext(pid::text || 'wo'));
+    select coalesce(max((substring(rec_id from '([0-9]+)$'))::int), 0) into mx from records where project_id = pid and coll = 'workorders';
+    nid := 'WO-U' || lpad((mx + 1)::text, 4, '0');
+  elsif nid !~ '^WO-U?[0-9]{1,6}$' then return jsonb_build_object('error', 'bad');
+  else
+    select data into old from records where project_id = pid and coll = 'workorders' and rec_id = nid;
+    if old is null then return jsonb_build_object('error', 'gone'); end if;
+    if coalesce(old->'byEmp'->>'id', '') <> e.id::text and not exists (select 1 from shop_assignments a where a.employee_id = e.id and a.client_id = cid and (a.project_id is null or a.project_id = pid)) then
+      return jsonb_build_object('error', 'notyours'); end if;
+  end if;
+  -- only the job fields; prices and the estimate stay with the owner
+  select coalesce(jsonb_object_agg(k, v), '{}'::jsonb) into clean from jsonb_each(d) x(k, v)
+    where k in ('title', 'status', 'promised', 'promisedAt', 'tz', 'dateIn', 'tasks', 'noteClient', 'complaint', 'odometer', 'readyAt', 'pickedAt', 'job');
+  if clean ? 'status' and clean->>'status' not in ('Checked in', 'In progress', 'Waiting for parts', 'Done', 'Picked up') then clean := clean - 'status'; end if;
+  insert into records (project_id, coll, rec_id, data, updated_at, updated_by)
+    values (pid, 'workorders', nid, coalesce(old, jsonb_build_object('archived', false, 'createdAt', now(), 'lines', '[]'::jsonb, 'byEmp', jsonb_build_object('id', e.id, 'name', e.name)))
+      || clean || jsonb_build_object('id', nid, 'updatedBy', e.name, 'updatedAt', now()), now(), null)
+    on conflict (project_id, coll, rec_id) do update set data = excluded.data, updated_at = now();
+  insert into shop_jobs (project_id, wo_id, shop_id, notify) values (pid, nid, e.shop_id, coalesce(ntf, true))
+    on conflict (project_id, wo_id) do update set notify = coalesce(ntf, shop_jobs.notify);
+  return jsonb_build_object('id', nid);
+end $$;
+drop function if exists public.shop_jobs_outbox(text, uuid, text);
+create or replace function public.shop_jobs_outbox(sec text, pid uuid, wid text) returns table (project_id uuid, wo_id text, kind text, email text, client text, code text, joined boolean,
+  shop text, shop_phone text, shop_email text, bike text, title text, promised text, promised_at text, tz text, subs jsonb)
+language plpgsql security definer set search_path = public as $$
+begin
+  if sec is null or btrim(sec) <> btrim((select secret from billing_secret where billing_secret.id = 1)) then raise exception 'denied'; end if;
+  return query
+    select j.project_id, j.wo_id,
+      case when r.data->>'status' = 'Done' then 'ready' else 'start' end,
+      coalesce(nullif(u.email, ''), nullif(c.email, ''))::text, c.name, c.code, c.client_user is not null,
+      s.name, s.phone, s.email, coalesce(nullif(m.data->>'bike', ''), p.name), r.data->>'title', r.data->>'promised', nullif(r.data->>'promisedAt', ''), nullif(r.data->>'tz', ''),
+      coalesce((select jsonb_agg(jsonb_build_object('endpoint', ps.endpoint, 'p256dh', ps.p256dh, 'auth', ps.auth)) from push_subs ps where ps.user_id = c.client_user), '[]'::jsonb)
+    from shop_jobs j join projects p on p.id = j.project_id join shop_clients c on c.id = p.shop_client join shops s on s.id = j.shop_id
+      join records r on r.project_id = j.project_id and r.coll = 'workorders' and r.rec_id = j.wo_id
+      left join records m on m.project_id = p.id and m.coll = 'meta' and m.rec_id = 'project'
+      left join auth.users u on u.id = c.client_user
+    where j.notify and p.shop_id = j.shop_id and (pid is null or (j.project_id = pid and j.wo_id = wid))
+      and ((r.data->>'status' = 'Done' and j.ready_sent_at is null and coalesce((r.data->>'updatedAt')::timestamptz, now()) > now() - interval '3 days')
+        or (j.start_sent_at is null and j.ready_sent_at is null and coalesce(r.data->>'status', '') in ('Checked in', 'In progress', 'Waiting for parts') and j.created_at > now() - interval '2 days'))
+      and public.shop_plan_ok(j.shop_id)
+    limit 200;
+end $$;
+revoke all on function public.shop_jobs_outbox(text, uuid, text) from public; grant execute on function public.shop_jobs_outbox(text, uuid, text) to anon, authenticated;
+
 -- the customer's app: jobs also carry the questions from the shop and how many photos there are
 create or replace function public.client_home() returns jsonb language sql stable security definer set search_path = public as $$
   select coalesce(jsonb_agg(jsonb_build_object(
@@ -203,7 +259,7 @@ create or replace function public.client_home() returns jsonb language sql stabl
         'mileage', coalesce((select jsonb_agg(jsonb_build_object('date', r.data->>'date', 'miles', r.data->'miles'))
                  from records r where r.project_id = p.id and r.coll = 'mileage' and not coalesce((r.data->>'archived')::boolean, false)), '[]'::jsonb),
         'workorders', coalesce((select jsonb_agg(jsonb_build_object('id', r.rec_id, 'title', r.data->>'title', 'status', r.data->>'status', 'dateIn', r.data->>'dateIn', 'promised', r.data->>'promised',
-                   'tasks', coalesce(r.data->'tasks', '[]'::jsonb), 'noteClient', r.data->>'noteClient', 'updatedAt', r.data->>'updatedAt', 'readyAt', r.data->>'readyAt', 'job', coalesce((r.data->>'job')::boolean, false),
+                   'tasks', coalesce(r.data->'tasks', '[]'::jsonb), 'noteClient', r.data->>'noteClient', 'promisedAt', r.data->>'promisedAt', 'updatedAt', r.data->>'updatedAt', 'readyAt', r.data->>'readyAt', 'job', coalesce((r.data->>'job')::boolean, false),
                    'mech', split_part(coalesce(r.data->'byEmp'->>'name', ''), ' ', 1), 'asks', coalesce(r.data->'asks', '[]'::jsonb),
                    'photos', (select count(*) from shop_job_photos ph where ph.project_id = p.id and ph.wo_id = r.rec_id)))
                  from records r where r.project_id = p.id and r.coll = 'workorders' and not coalesce((r.data->>'archived')::boolean, false)), '[]'::jsonb),
