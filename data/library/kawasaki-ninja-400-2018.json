@@ -1,0 +1,133 @@
+{
+ "id": "kawasaki-ninja-400-2018",
+ "make": "Kawasaki",
+ "model": "Ninja 400",
+ "code": "EX400G/H",
+ "years": [
+  2018,
+  2023
+ ],
+ "near": [
+  2018,
+  2023
+ ],
+ "match": [
+  "ninja 400",
+  "ninja400",
+  "ex400",
+  "ex400g",
+  "ex400h"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "sources": {
+  "om": {
+   "name": "Kawasaki Ninja 400 (EX400G/H) Owner's Manual, 2018 (copy hosted by maintenanceschedule.com)",
+   "url": "https://maintenanceschedule.com/wp-content/uploads/2023/01/Kawasaki-Ninja-400-manual.pdf"
+  }
+ },
+ "specs": [
+  {
+   "k": "oil",
+   "v": "SAE 10W-40, API SG–SM with JASO MA/MA1/MA2",
+   "src": "om",
+   "p": "108"
+  },
+  {
+   "k": "oilCap",
+   "v": "2.1 US qt (2.0 L) when the filter is removed",
+   "src": "om",
+   "p": "108"
+  },
+  {
+   "k": "oilCapNo",
+   "v": "1.7 US qt (1.6 L)",
+   "src": "om",
+   "p": "108"
+  },
+  {
+   "k": "plug",
+   "v": "NGK LMAR9G",
+   "src": "om",
+   "p": "28"
+  },
+  {
+   "k": "plugGap",
+   "v": "0.028–0.031 in (0.7–0.8 mm)",
+   "src": "om",
+   "p": "28"
+  },
+  {
+   "k": "coolant",
+   "v": "1.4 US qt (1.3 L)",
+   "src": "om",
+   "p": "29"
+  },
+  {
+   "k": "slack",
+   "v": "0.8–1.2 in (20–30 mm)",
+   "src": "om",
+   "p": "120"
+  },
+  {
+   "k": "brakeFluid",
+   "v": "Front DOT3 or DOT4, rear DOT4",
+   "src": "om",
+   "p": "30"
+  },
+  {
+   "k": "tireF",
+   "v": "110/70R17 M/C 54H",
+   "src": "om",
+   "p": "30"
+  },
+  {
+   "k": "tireR",
+   "v": "150/60R17 M/C 66H",
+   "src": "om",
+   "p": "30"
+  },
+  {
+   "k": "psiF",
+   "v": "28 psi (200 kPa)",
+   "src": "om",
+   "p": "132"
+  },
+  {
+   "k": "psiR",
+   "v": "32 psi (225 kPa)",
+   "src": "om",
+   "p": "132"
+  },
+  {
+   "k": "battery",
+   "v": "FTX9-BS, 12 V 8 Ah",
+   "src": "om",
+   "p": "30"
+  }
+ ],
+ "torque": [
+  {
+   "what": "Rear axle nut",
+   "v": "72 ft·lb (98 N·m)",
+   "src": "om",
+   "p": "122"
+  },
+  {
+   "what": "Oil drain bolt",
+   "v": "22 ft·lb (30 N·m)",
+   "src": "om",
+   "p": "108"
+  },
+  {
+   "what": "Oil filter",
+   "v": "12.9 ft·lb (17.5 N·m)",
+   "src": "om",
+   "p": "108"
+  }
+ ],
+ "diagrams": {},
+ "guides": [
+  "chain"
+ ]
+}

@@ -1,0 +1,153 @@
+{
+ "id": "yamaha-mt07-2014",
+ "make": "Yamaha",
+ "model": "MT-07",
+ "code": "MT07 / FZ-07",
+ "years": [
+  2014,
+  2017
+ ],
+ "near": [
+  2014,
+  2020
+ ],
+ "match": [
+  "mt-07",
+  "mt07",
+  "mt 07",
+  "fz-07",
+  "fz07",
+  "fz 07"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "sources": {
+  "om": {
+   "name": "Yamaha MT07/MT07A Owner's Manual (2014, European edition)",
+   "url": "https://cdn.yamaha-motor.eu/owner-manuals/Motorcycles/P1WS28199E2E.PDF"
+  }
+ },
+ "specs": [
+  {
+   "k": "oil",
+   "v": "Yamalube 10W-30 or 10W-40 (other grades by temperature), API SG+, JASO MA",
+   "src": "om",
+   "p": "8-1"
+  },
+  {
+   "k": "oilCap",
+   "v": "2.75 US qt (2.60 L)",
+   "src": "om",
+   "p": "6-11"
+  },
+  {
+   "k": "oilCapNo",
+   "v": "2.43 US qt (2.30 L)",
+   "src": "om",
+   "p": "6-11"
+  },
+  {
+   "k": "plug",
+   "v": "NGK LMAR8A-9",
+   "src": "om",
+   "p": "6-8"
+  },
+  {
+   "k": "plugGap",
+   "v": "0.031–0.035 in (0.8–0.9 mm)",
+   "src": "om",
+   "p": "6-8"
+  },
+  {
+   "k": "coolant",
+   "v": "1.69 US qt (1.60 L) incl. radiator",
+   "src": "om",
+   "p": "6-14"
+  },
+  {
+   "k": "slack",
+   "v": "2.01–2.20 in (51–56 mm)",
+   "src": "om",
+   "p": "6-23"
+  },
+  {
+   "k": "sprockets",
+   "v": "16 front / 43 rear",
+   "src": "om",
+   "p": "8-1"
+  },
+  {
+   "k": "brakeFluid",
+   "v": "DOT 4",
+   "src": "om",
+   "p": "6-21"
+  },
+  {
+   "k": "tireF",
+   "v": "120/70 ZR17M/C (58W)",
+   "src": "om",
+   "p": "6-17"
+  },
+  {
+   "k": "tireR",
+   "v": "180/55 ZR17M/C (73W)",
+   "src": "om",
+   "p": "6-17"
+  },
+  {
+   "k": "psiF",
+   "v": "33 psi (225 kPa)",
+   "src": "om",
+   "p": "6-16"
+  },
+  {
+   "k": "psiR",
+   "v": "36 psi (250 kPa)",
+   "src": "om",
+   "p": "6-16"
+  },
+  {
+   "k": "battery",
+   "v": "YTZ10S, 12 V 8.6 Ah",
+   "src": "om",
+   "p": "8-3"
+  }
+ ],
+ "torque": [
+  {
+   "what": "Rear axle nut",
+   "v": "76 ft·lb (105 N·m)",
+   "src": "om",
+   "p": "6-24"
+  },
+  {
+   "what": "Oil drain bolt",
+   "v": "31 ft·lb (43 N·m)",
+   "src": "om",
+   "p": "6-10"
+  },
+  {
+   "what": "Oil filter cartridge",
+   "v": "12 ft·lb (17 N·m)",
+   "src": "om",
+   "p": "6-10"
+  },
+  {
+   "what": "Spark plug",
+   "v": "9.4 ft·lb (13 N·m)",
+   "src": "om",
+   "p": "6-8"
+  },
+  {
+   "what": "Coolant drain bolt",
+   "v": "5.1 ft·lb (7 N·m)",
+   "src": "om",
+   "p": "6-13"
+  }
+ ],
+ "note": "These numbers are from the European owner's manual. US bikes (sold as the FZ-07 until 2017) can differ on tire pressures, so check the label on your swingarm or your US manual.",
+ "diagrams": {},
+ "guides": [
+  "chain"
+ ]
+}

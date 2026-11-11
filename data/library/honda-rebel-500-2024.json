@@ -1,0 +1,137 @@
+{
+ "id": "honda-rebel-500-2024",
+ "make": "Honda",
+ "model": "Rebel 500",
+ "code": "CMX500",
+ "years": [
+  2024,
+  2024
+ ],
+ "near": [
+  2017,
+  2025
+ ],
+ "match": [
+  "rebel 500",
+  "rebel500",
+  "cmx500",
+  "cmx 500"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "sources": {
+  "om": {
+   "name": "Honda 2024 Rebel 300/500 Owner's Manual",
+   "url": "https://cdn.powersports.honda.com/documentum/MWOM/ml.remawmom.amlh2424omen.pdf"
+  }
+ },
+ "specs": [
+  {
+   "k": "oil",
+   "v": "SAE 10W-30, JASO MA, API SJ or higher",
+   "src": "om",
+   "p": "62"
+  },
+  {
+   "k": "oilCap",
+   "v": "2.9 US qt (2.7 L)",
+   "src": "om",
+   "p": "128"
+  },
+  {
+   "k": "oilCapNo",
+   "v": "2.6 US qt (2.5 L)",
+   "src": "om",
+   "p": "128"
+  },
+  {
+   "k": "plug",
+   "v": "NGK CPR8EA-9",
+   "src": "om",
+   "p": "127"
+  },
+  {
+   "k": "plugGap",
+   "v": "0.031–0.035 in (0.80–0.90 mm)",
+   "src": "om",
+   "p": "127"
+  },
+  {
+   "k": "coolant",
+   "v": "1.71 US qt (1.62 L)",
+   "src": "om",
+   "p": "128"
+  },
+  {
+   "k": "chain",
+   "v": "DID520VF2 or RK520KLO2, 112 links",
+   "src": "om",
+   "p": "128"
+  },
+  {
+   "k": "slack",
+   "v": "1–1 3/8 in (25–35 mm)",
+   "src": "om",
+   "p": "83"
+  },
+  {
+   "k": "sprockets",
+   "v": "15 front / 40 rear",
+   "src": "om",
+   "p": "128"
+  },
+  {
+   "k": "brakeFluid",
+   "v": "DOT 4",
+   "src": "om",
+   "p": "63"
+  },
+  {
+   "k": "tireF",
+   "v": "130/90-16M/C 67H",
+   "src": "om",
+   "p": "127"
+  },
+  {
+   "k": "tireR",
+   "v": "150/80-16M/C 71H",
+   "src": "om",
+   "p": "127"
+  },
+  {
+   "k": "psiF",
+   "v": "29 psi (200 kPa)",
+   "src": "om",
+   "p": "127"
+  },
+  {
+   "k": "psiR",
+   "v": "29 psi (200 kPa)",
+   "src": "om",
+   "p": "127"
+  },
+  {
+   "k": "battery",
+   "v": "YTZ8V or FTZ8V, 12V-7Ah",
+   "src": "om",
+   "p": "126"
+  },
+  {
+   "k": "fuses",
+   "v": "Main 30 A; others 15 A and 7.5 A",
+   "src": "om",
+   "p": "129"
+  }
+ ],
+ "torque": [],
+ "diagrams": {
+  "chain": {
+   "site": "RevZilla",
+   "url": "https://www.revzilla.com/oem/honda/2024-honda-rebel-500/swingarm",
+   "what": "Swingarm and drive chain"
+  }
+ },
+ "guides": [
+  "chain"
+ ]
+}
