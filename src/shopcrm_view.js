@@ -11,7 +11,7 @@
   const norm = s => String(s || "").toLowerCase().replace(/[^a-z0-9@.]/g, "");
   const digits = s => String(s || "").replace(/\D/g, "");
   const I = {
-    search: '<circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/>', plus: '<path d="M12 5v14M5 12h14"/>', wrench: '<path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L4 17l3 3 5.3-5.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/>',
+    search: '<circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/>', camera: '<path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/>', plus: '<path d="M12 5v14M5 12h14"/>', wrench: '<path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L4 17l3 3 5.3-5.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/>',
     phone: '<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/>', mail: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',
     copy: '<rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h8"/>', link: '<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/>',
     gauge: '<path d="M4 16a8 8 0 1 1 16 0"/><path d="M12 16l4-5"/>', doc: '<path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/>', money: '<rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/>',
@@ -415,25 +415,35 @@
 
   /* ---------- import clients from another system ---------- */
   let IMP = null;   // { step, sheets, result, skip: Set of client keys, presets, done }
-  const IMP_STEPS = ["Add your files", "Check the columns", "Review", "Import"];
+  const IMP_STEPS = ["Add files or photos", "Check it", "Review", "Import"];
   function viewImport() {
     if (!IMP) IMP = { step: 1, sheets: [], result: null, skip: new Set(), presets: true, q: "", more: 0 };
     const I = window.rvImport, st = IMP.step;
     const steps = `<ol class="im-steps">${IMP_STEPS.map((t, i) => `<li class="${i + 1 < st ? "done" : i + 1 === st ? "on" : ""}"><span>${i + 1 < st ? ic("check") : i + 1}</span>${esc(t)}</li>`).join("")}</ol>`;
     const head = `<button class="sx-back" data-imback>${ic("back")} ${st === 1 || st >= 4 ? "All clients" : "Back"}</button>
-      <section class="im-hero"><span class="jb-eb">Bring your clients over</span><h1>Import clients</h1><p>Export your customers from your old system as a spreadsheet: CSV or Excel, one file with everything or separate files for customers, bikes and past work. Revora sorts it out. Nothing is saved until you check it and tap Import.</p></section>${steps}`;
+      <section class="im-hero"><span class="jb-eb">Bring your clients over</span><h1>Import clients</h1><p>Export your customers from your old system as a CSV or Excel file, or take photos of your paper cards and notebooks. Revora sorts it into clients, bikes and past work. Nothing is saved until you check it and tap Import.</p></section>${steps}`;
     let body = "";
     if (st === 1) {
-      body = `<label class="im-drop" id="imDrop">${ic("doc")}<b>Drop your files here, or tap to choose</b><small>CSV, Excel (.xlsx) or a tab-separated text file. You can add more than one.</small><input type="file" id="imFile" multiple accept=".csv,.tsv,.txt,.xlsx,.xlsm,.xls,.ods" hidden></label>
-        ${IMP.sheets.length ? `<div class="im-files">${IMP.sheets.map((sh, i) => `<div class="im-file">${ic("doc")}<div class="grow"><b>${esc(sh.name)}</b><small>${sh.rows.length} row${sh.rows.length === 1 ? "" : "s"} · looks like ${esc(sh.kind)}</small></div><button class="sx-x" data-rmfile="${i}" aria-label="Remove">×</button></div>`).join("")}</div>` : ""}
+      const busy = IMP.busy || [];
+      body = `<div class="im-ways"><label class="im-way im-cam">${ic("camera")}<span><b>Take a photo</b><small>Index cards, a notebook page, old work orders. One page per photo.</small></span><input type="file" id="imCam" accept="image/*" capture="environment" hidden></label>
+          <label class="im-way" id="imDrop">${ic("doc")}<span><b>Upload a file or photos</b><small>CSV or Excel export from your old system, or photos you already took. Drop them here too.</small></span><input type="file" id="imFile" multiple accept=".csv,.tsv,.txt,.xlsx,.xlsm,.xls,.ods,image/*" hidden></label></div>
+        ${IMP.sheets.length || busy.length ? `<div class="im-files">${IMP.sheets.map((sh, i) => `<div class="im-file">${sh.photo ? `<img src="${sh.photo}" alt="">` : ic("doc")}<div class="grow"><b>${esc(sh.name)}</b><small>${sh.photo ? `${sh.rows.length} line${sh.rows.length === 1 ? "" : "s"} read. You'll check them next.` : `${sh.rows.length} row${sh.rows.length === 1 ? "" : "s"} · looks like ${esc(sh.kind)}`}</small></div><button class="sx-x" data-rmfile="${i}" aria-label="Remove">×</button></div>`).join("")}
+          ${busy.map(b => `<div class="im-file busy"><span class="im-spin"></span><div class="grow"><b>${esc(b)}</b><small>Reading the handwriting… about 10 seconds</small></div></div>`).join("")}</div>` : ""}
+        ${IMP.sheets.length || busy.length ? `<label class="linkbtn im-more">${ic("camera")} Take another photo<input type="file" id="imCam2" accept="image/*" capture="environment" hidden></label>` : ""}
         <p class="sx-err" id="imErr" hidden></p>
-        <div class="sx-acts left"><button class="btn jb-go" data-imnext ${IMP.sheets.length ? "" : "disabled"}>Next: check the columns ${ic("arrow")}</button></div>`;
+        <div class="sx-acts left"><button class="btn jb-go" data-imnext ${IMP.sheets.length && !busy.length ? "" : "disabled"}>Next: check ${IMP.sheets.length && IMP.sheets.every(x => x.photo) ? "what was read" : "the columns"} ${ic("arrow")}</button></div>`;
     } else if (st === 2) {
-      body = IMP.sheets.map((sh, si) => `<section class="sx-panel im-map"><div class="sx-ph"><h2>${esc(sh.name)}</h2><span class="pill blue">${esc(sh.kind)}</span><span>${sh.rows.length} rows</span></div>
+      const cell = (sh, si, ri, ci, ph, wide) => `<input class="c-${wide}" data-cell="${si}|${ri}|${ci}" value="${esc(sh.rows[ri][ci] || "")}" placeholder="${esc(ph)}" aria-label="${esc(sh.head[ci])}" autocomplete="off">`;
+      const photoSheet = (sh, si) => `<section class="sx-panel im-map im-ph"><div class="sx-ph"><h2>${esc(sh.name)}</h2><span class="pill blue">photo</span><span>${sh.rows.length} line${sh.rows.length === 1 ? "" : "s"}</span></div>
+          <p class="sx-small">Check what was read against the photo and fix anything that's wrong. Tap the photo to see it bigger.</p>
+          <div class="im-phwrap"><button class="im-phimg" data-zoom="${si}"><img src="${sh.photo}" alt="The photo"></button>
+          <div class="im-rows">${sh.rows.map((r, ri) => `<div class="im-row"><div class="im-rg">${cell(sh, si, ri, 0, "Name", "a")}${cell(sh, si, ri, 1, "Phone", "b")}${cell(sh, si, ri, 2, "Email", "c")}${cell(sh, si, ri, 3, "Year", "d")}${cell(sh, si, ri, 4, "Make", "e")}${cell(sh, si, ri, 5, "Model", "f")}${cell(sh, si, ri, 7, "Date", "g")}${cell(sh, si, ri, 8, "Miles", "h")}${cell(sh, si, ri, 10, "Cost $", "i")}${cell(sh, si, ri, 9, "Work done", "j")}${cell(sh, si, ri, 11, "Notes", "k")}</div><button class="sx-x" data-rmrow="${si}|${ri}" aria-label="Remove this line">×</button></div>`).join("")}
+            <button class="linkbtn" data-addrow="${si}">${ic("plus")} Add a line</button></div></div></section>`;
+      body = IMP.sheets.map((sh, si) => sh.photo ? photoSheet(sh, si) : `<section class="sx-panel im-map"><div class="sx-ph"><h2>${esc(sh.name)}</h2><span class="pill blue">${esc(sh.kind)}</span><span>${sh.rows.length} rows</span></div>
           <div class="im-cols">${sh.head.map((h, ci) => { const ex = sh.rows.map(r => String(r[ci] == null ? "" : r[ci]).trim()).filter(Boolean).slice(0, 2);
             return `<div class="im-col${sh.map[ci] === "skip" ? " skip" : ""}"><div class="grow"><b>${esc(h || "Column " + (ci + 1))}</b><small>${ex.length ? esc(ex.join(" · ")).slice(0, 80) : "empty"}</small></div>
               <select data-map="${si}|${ci}" aria-label="What is ${esc(h)}">${I.FIELDS.map(([k, l]) => `<option value="${k}"${sh.map[ci] === k ? " selected" : ""}>${esc(l)}</option>`).join("")}</select></div>`; }).join("")}</div></section>`).join("")
-        + `<p class="sx-small">Revora guessed these from your headings. Fix any that are wrong, and set columns you don't need to Skip.</p>
+        + (IMP.sheets.some(x => !x.photo) ? `<p class="sx-small">Revora guessed these from your headings. Fix any that are wrong, and set columns you don't need to Skip.</p>` : "") + `
         <div class="sx-acts left"><button class="btn jb-go" data-imnext>Next: review ${ic("arrow")}</button></div>`;
     } else if (st === 3) {
       const R = IMP.result, s0 = R.stats, sel = R.clients.filter(c => !IMP.skip.has(c.key)), q = norm(IMP.q);
@@ -466,16 +476,32 @@
     $1("[data-imback]").onclick = () => { if (st === 1 || st >= 4) { if (st >= 4) IMP = null; nav("clients"); } else { IMP.step--; draw(); } };
     if (st === 1) {
       const inp = $1("#imFile"), drop = $1("#imDrop"), er = $1("#imErr");
-      const add = async files => { er.hidden = true;
-        for (const f of files) { try { (await I.readFile(f)).forEach(sh => IMP.sheets.push(I.prepare(sh))); } catch (e) { er.textContent = (e && e.message) || `Couldn't read ${f.name}.`; er.hidden = false; } }
-        if (!er.hidden) return; draw(); };
+      if (IMP.err) { er.textContent = IMP.err; er.hidden = false; }
+      const add = async files => { IMP.err = "";
+        const pics = files.filter(I.isImage), docs = files.filter(f => !I.isImage(f));
+        for (const f of docs) { try { (await I.readFile(f)).forEach(sh => IMP.sheets.push(I.prepare(sh))); } catch (e) { IMP.err = (e && e.message) || `Couldn't read ${f.name}.`; } }
+        if (pics.length) {
+          const token = await X.sb.auth.getSession().then(r => r.data.session && r.data.session.access_token).catch(() => "");
+          let n = IMP.sheets.filter(x => x.photo).length;
+          IMP.busy = (IMP.busy || []).concat(pics.map(() => "Photo " + (++n))); draw();
+          await Promise.all(pics.map(async (f, k) => { const label = IMP.busy[IMP.busy.length - pics.length + k];
+            try { const sh = await I.readPhoto(f, token); sh.name = label; IMP.sheets.push(sh); } catch (e) { IMP.err = `${label}: ${(e && e.message) || "couldn't be read."}`; }
+            IMP.busy = IMP.busy.filter(x => x !== label); if (IMP.step === 1) draw(); }));
+        }
+        if (IMP.step === 1) draw(); };
       inp.onchange = () => add([...inp.files]);
+      ["#imCam", "#imCam2"].forEach(sel => { const c = $1(sel); if (c) c.onchange = () => add([...c.files]); });
       drop.ondragover = ev => { ev.preventDefault(); drop.classList.add("over"); }; drop.ondragleave = () => drop.classList.remove("over");
       drop.ondrop = ev => { ev.preventDefault(); drop.classList.remove("over"); add([...ev.dataTransfer.files]); };
       app.querySelectorAll("[data-rmfile]").forEach(b => b.onclick = ev => { ev.preventDefault(); IMP.sheets.splice(+b.dataset.rmfile, 1); draw(); });
       const nx = $1("[data-imnext]"); if (nx) nx.onclick = () => { IMP.step = 2; draw(); };
     }
     if (st === 2) {
+      app.querySelectorAll("[data-cell]").forEach(inp2 => inp2.oninput = () => { const [si, ri, ci] = inp2.dataset.cell.split("|").map(Number); IMP.sheets[si].rows[ri][ci] = inp2.value; });
+      app.querySelectorAll("[data-rmrow]").forEach(b => b.onclick = () => { const [si, ri] = b.dataset.rmrow.split("|").map(Number); IMP.sheets[si].rows.splice(ri, 1); draw(); });
+      app.querySelectorAll("[data-addrow]").forEach(b => b.onclick = () => { const sh = IMP.sheets[+b.dataset.addrow], last = sh.rows[sh.rows.length - 1] || [];
+        sh.rows.push(sh.head.map((h, ci) => ci <= 6 ? (last[ci] || "") : "")); draw(); const ins = X.app.querySelectorAll(`[data-cell^="${b.dataset.addrow}|${sh.rows.length - 1}|"]`); if (ins[7]) ins[7].focus(); });
+      app.querySelectorAll("[data-zoom]").forEach(b => b.onclick = () => { const ov = document.createElement("div"); ov.className = "im-zoom"; ov.innerHTML = `<img src="${IMP.sheets[+b.dataset.zoom].photo}" alt=""><button class="sx-x" aria-label="Close">×</button>`; ov.onclick = () => ov.remove(); document.body.appendChild(ov); });
       app.querySelectorAll("[data-map]").forEach(sl => sl.onchange = () => { const [si, ci] = sl.dataset.map.split("|").map(Number), sh = IMP.sheets[si]; sh.map[ci] = sl.value; sh.kind = I.kindOf(sh.map); draw(); });
       $1("[data-imnext]").onclick = () => {
         const ex = [...S.clients.values()].map(c => ({ id: c.id, name: c.name, phone: c.phone, email: c.email })), eb = {};
@@ -508,8 +534,9 @@
     }
     const sched = items.filter(x => x.coll === "schedule").map(x => x.rec).concat(D().live(b.recs.schedule));
     let mi = +(nextId(b, "maintenance").match(/(\d+)$/) || [0, 1])[1], oi = +(nextId(b, "mileage").match(/(\d+)$/) || [0, 1])[1];
-    const odo = {};
-    ib.visits.slice().reverse().forEach(v => {
+    const odo = {}, had = new Set(D().live(b.recs.maintenance).map(r => r.date).filter(Boolean));   // the same visit brought in twice: keep one
+    const fresh = ib.visits.slice().reverse().filter(v => !(v.date && had.has(v.date))); ib.added = fresh.length;
+    fresh.forEach(v => {
       const covers = window.rvJobs ? rvJobs.coveredItems([{ t: rvImport.expand(v.work) }], sched) : [];
       items.push({ coll: "maintenance", rec: { id: "MAINT-U" + String(mi++).padStart(3, "0"), date: v.date || today(), service: v.work || "Service", odometer: v.miles || 0, cost: v.cost || 0, kind: covers.length ? "Scheduled service" : "Repair", items: covers,
         doneBy: "A shop", shop: S.shop.name || "Shop", byOwner: who(), notes: "Brought over from your old system", imported: true, planned: false } });
@@ -534,7 +561,7 @@
           const { data, error } = await X.sb.from("shop_clients").insert(row).select("*").single(); if (error) throw error;
           c = data; S.clients.set(c.id, c);
         }
-        for (const ib of ic2.bikes) { const b = await importBike(c, ib, IMP.presets); made.add(b.p.id); bikes++; visits += ib.visits.length; }
+        for (const ib of ic2.bikes) { const b = await importBike(c, ib, IMP.presets); made.add(b.p.id); bikes++; visits += ib.added || 0; }
       } catch (e) { errors.push(`${ic2.name}: ${/plan/i.test((e && e.message) || "") || (e && e.code) === "42501" ? "your Shop plan isn't active" : err(e)}`); }
       done++; tick();
     };

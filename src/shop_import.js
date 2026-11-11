@@ -42,6 +42,39 @@
     return [{ name: nm, rows: parseDelimited(await file.text()) }];
   }
 
+  /* ---------- photos: index cards, a notebook page, a printed list ---------- */
+  const AI_API = () => (window.RV_CONFIG && RV_CONFIG.aiApi) || "https://revora-mechanic.xavier-j-wilson101.workers.dev";
+  const PHOTO_HEAD = ["Name", "Phone", "Email", "Year", "Make", "Model", "VIN", "Date", "Mileage", "Work done", "Cost", "Notes"];
+  const PHOTO_MAP = ["name", "phone", "email", "year", "make", "model", "vin", "date", "miles", "work", "cost", "notes"];
+  const PHOTO_PROMPT = `This is a photo of a motorcycle shop's customer records: index cards, a notebook page, a printed customer list or old work orders. Read every customer on it.
+Return JSON only: {"rows":[{"name":"","phone":"","email":"","year":"","make":"","model":"","vin":"","date":"","miles":0,"work":"","cost":0,"notes":""}]}
+One row per service visit. Repeat the customer's name, phone, email and bike on every one of their rows. A customer or bike with no service written gets one row with work empty.
+date: as written (for example 10/19/24). miles and cost: numbers only. notes: anything else written about the customer.
+Copy exactly what is written. Leave a field empty if you can't read it. Never guess.`;
+  function shrinkPhoto(file, max, q) {
+    return new Promise((ok, no) => { const u = URL.createObjectURL(file), im = new Image();
+      im.onload = () => { const k = Math.min(1, max / Math.max(im.width, im.height)), c = document.createElement("canvas"); c.width = Math.round(im.width * k); c.height = Math.round(im.height * k);
+        c.getContext("2d").drawImage(im, 0, 0, c.width, c.height); URL.revokeObjectURL(u); ok(c.toDataURL("image/jpeg", q)); };
+      im.onerror = () => { URL.revokeObjectURL(u); no(new Error("That photo couldn't be opened. Try a JPG or PNG.")); }; im.src = u; });
+  }
+  // a photo -> a sheet with fixed columns, ready for the owner to check against the picture
+  async function readPhoto(file, token) {
+    let img = await shrinkPhoto(file, 1800, 0.82); if (img.length > 1500000) img = await shrinkPhoto(file, 1500, 0.7); if (img.length > 1500000) img = await shrinkPhoto(file, 1200, 0.6);
+    const thumb = await shrinkPhoto(file, 1100, 0.7);
+    let res; try { res = await fetch(AI_API(), { method: "POST", headers: Object.assign({ "content-type": "application/json" }, token ? { Authorization: "Bearer " + token } : {}), body: JSON.stringify({ scan: { image: img, prompt: PHOTO_PROMPT, kind: "logbook" } }) }); }
+    catch (e) { throw new Error("Couldn't reach the photo reader. Check your internet."); }
+    const j = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(res.status === 401 ? "Sign in again to read photos." : res.status === 402 ? "Reading photos needs an active Shop plan." : res.status === 429 && /daily/.test(j.error || "") ? "You've read today's limit of photos. Try again tomorrow, or upload a spreadsheet." : res.status === 429 ? "The photo reader is busy. Try again in a minute." : res.status === 413 ? "That photo is too big. Try again a little further back." : "The photo couldn't be read. Try a clearer, flatter photo.");
+    const t = String(j.text || ""), a = t.indexOf("{"), b = t.lastIndexOf("}");
+    let o = null; try { o = JSON.parse(t.slice(a, b + 1)); } catch (e) { try { o = JSON.parse(t.slice(a, b + 1).replace(/,\s*([}\]])/g, "$1")); } catch (e2) {} }
+    const list = o && (Array.isArray(o.rows) ? o.rows : Array.isArray(o.records) ? o.records : Array.isArray(o) ? o : null);
+    const rows = (list || []).filter(r => r && typeof r === "object").map(r => PHOTO_MAP.map(k => { const x = r[k == "miles" ? "miles" : k] ?? (k === "miles" ? r.odometer : k === "work" ? r.service : ""); return x == null || x === 0 ? "" : String(x).trim(); }))
+      .filter(r => r.some(Boolean));
+    if (!rows.length) throw new Error("No customers could be read in that photo. Try a closer, flatter photo with good light.");
+    return { name: file.name && !/^image\.(jpe?g|png|heic)$/i.test(file.name) ? file.name : "Photo", head: PHOTO_HEAD.slice(), rows, map: PHOTO_MAP.slice(), kind: kindOf(PHOTO_MAP), photo: thumb };
+  }
+  const isImage = f => /^image\//.test(f.type || "") || /\.(jpe?g|png|heic|heif|webp)$/i.test(f.name || "");
+
   /* ---------- which column is which ---------- */
   const FIELDS = [["skip", "Skip this column"], ["cid", "Customer ID / number"], ["name", "Customer name"], ["first", "First name"], ["last", "Last name"], ["phone", "Phone"], ["email", "Email"], ["notes", "Customer notes"],
     ["vid", "Vehicle ID / number"], ["year", "Year"], ["make", "Make"], ["model", "Model"], ["bike", "Bike (year make model in one)"], ["vin", "VIN / frame number"], ["miles", "Mileage"],
@@ -51,7 +84,10 @@
   const BY_HEAD = [
     ["cid", /^(customer|cust|client|account|acct)\s*(id|#|no|num|number|code)$|^(cust|customer|client)\s*#$/],
     ["vid", /^(vehicle|unit|bike|veh)\s*(id|#|no|num|number)$|^(veh|unit)\s*#$/],
-    ["email", /e\s*-?\s*mail/], ["phone", /phone|cell|mobile|^tel|telephone|^ph\b|ph #|contact number/],
+    ["email", /e\s*-?\s*mail/],
+    // columns no shop needs here: address, plate, balances, the old system's order numbers
+    ["skip", /zip|postal|address|street|\bcity\b|\bstate\b|province|country|plate|\btag\b|company|balance|\btax|^(ro|order|invoice|ticket|wo|work order|repair order|estimate|job)\s*(#|no|num|number|id)?$/],
+["phone", /phone|cell|mobile|^tel|telephone|^ph\b|ph #|contact number/],
     ["first", /^first|first\s*name|given/], ["last", /^last|last\s*name|surname|family name/],
     ["name", /^(customer|cust|client|owner)?\s*(full\s*)?name$|^customer$|^client$|^owner$|^bill to$/],
     ["vin", /\bvin\b|serial|frame|chassis/], ["year", /^year$|^yr$|model year|^yr\.?$/], ["make", /^make$|manufacturer|^brand$|^mfr$/], ["model", /^model$|model name/],
@@ -64,7 +100,7 @@
   const looks = {
     email: v => /^\S+@\S+\.\S+$/.test(v), phone: v => { const d = digits(v); return d.length >= 7 && d.length <= 11 && !/[a-z]{3}/i.test(v); },
     vin: v => /^[A-HJ-NPR-Z0-9]{17}$/i.test(String(v).trim()), year: v => /^(19[5-9]\d|20[0-4]\d)$/.test(String(v).trim()),
-    date: v => !!toDate(v), money: v => /^\$?\s*-?[\d,]+(\.\d{1,2})?$/.test(String(v).trim()) && /[.$]/.test(String(v))
+    date: v => !/^\d+(\.\d+)?$/.test(String(v).trim()) && !!toDate(v), money: v => /^\$?\s*-?[\d,]+(\.\d{1,2})?$/.test(String(v).trim()) && /[.$]/.test(String(v))
   };
   function guessField(head, samples) {
     const h = String(head == null ? "" : head).toLowerCase().replace(/[_]+/g, " ").replace(/\s+/g, " ").trim();
@@ -85,10 +121,12 @@
   // a sheet -> { name, head, rows, map: [field per column], kind }
   function prepare(sheet) {
     const hi = headerIndex(sheet.rows), head = (sheet.rows[hi] || []).map(x => clean(x)), body = sheet.rows.slice(hi + 1);
-    const used = new Set(), map = head.map((h, ci) => {
-      let f = guessField(h, body.slice(0, 40).map(r => r[ci]));
-      if (f !== "skip" && f !== "work" && f !== "notes" && used.has(f)) f = "skip";   // one column per field, except work and notes
-      used.add(f); return f;
+    const map = head.map((h, ci) => guessField(h, body.slice(0, 40).map(r => r[ci])));
+    // one column per field (work and notes can have several): keep the one with the most filled cells, e.g. Cell Phone over an empty Home Phone
+    const filled = ci => body.filter(r => String(r[ci] == null ? "" : r[ci]).trim()).length;
+    [...new Set(map)].filter(f => f !== "skip" && f !== "work" && f !== "notes").forEach(f => {
+      const cols = map.map((x, i) => x === f ? i : -1).filter(i => i >= 0); if (cols.length < 2) return;
+      const keep = cols.reduce((a, b) => filled(b) > filled(a) ? b : a); cols.forEach(i => { if (i !== keep) map[i] = "skip"; });
     });
     return { name: sheet.name, head, rows: body, map, kind: kindOf(map) };
   }
@@ -111,6 +149,9 @@
   const toNum = v => { const s = String(v == null ? "" : v).replace(/[$,\s]/g, ""); const n = parseFloat(s); return isFinite(n) ? n : 0; };
   const fixName = s => { s = clean(s); const m = s.match(/^([^,]+),\s*([^,]+)$/); return m ? `${m[2]} ${m[1]}` : s; };   // "Torres, Mike" -> "Mike Torres"
   const title = s => s && s === s.toUpperCase() && /[A-Z]{2}/.test(s) ? s.toLowerCase().replace(/\b[a-z]/g, c => c.toUpperCase()) : s;
+  const capsModel = s => s && s === s.toUpperCase() && /[A-Z]{4}/.test(s) ? s.split(/(\s+|-)/).map(w => /\d/.test(w) || w.length <= 3 ? w : w[0] + w.slice(1).toLowerCase()).join("") : s;
+  const capsText = s => s && s === s.toUpperCase() && /[A-Z]{4}/.test(s) ? s.toLowerCase().replace(/^\s*[a-z]/, c => c.toUpperCase()).replace(/\b(lof|vin|abs|ecu|atv|utv|a\/f)\b/g, m => m.toUpperCase()) : s;
+  const fmtPhone = s => { const d = digits(s).replace(/^1(?=\d{10}$)/, ""); return d.length === 10 ? `(${d.slice(0, 3)}) ${d.slice(3, 6)}-${d.slice(6)}` : clean(s); };
   const MAKES = ["Harley-Davidson", "Honda", "Yamaha", "Kawasaki", "Suzuki", "BMW", "Ducati", "KTM", "Triumph", "Indian", "Royal Enfield", "Aprilia", "Moto Guzzi", "Husqvarna", "Victory", "Buell", "Can-Am", "Zero", "MV Agusta", "Benelli", "Kymco", "Vespa", "Piaggio", "GasGas", "Beta", "Sherco", "CFMoto", "Polaris", "Norton", "BSA"];
   const makeName = s => { s = clean(s); if (!s) return ""; const k = MAKES.find(x => norm(x) === norm(s)) || (/^h[- ]?d$/i.test(s) ? "Harley-Davidson" : ""); return k || (s.length > 3 ? title(s) : s); };
   // "2015 Honda CB500X" -> { year, make, model }
@@ -134,8 +175,18 @@
       const keys = [];
       if (v.cid) keys.push("c:" + norm(v.cid)); if (email && looks.email(email)) keys.push("e:" + email); if (phone.length >= 7) keys.push("p:" + phone.slice(-10));
       if (name && !keys.length) keys.push("n:" + norm(name));
-      const bk = splitBike(v.bike || ""), bike = { year: v.year || bk.year, make: makeName(v.make || bk.make), model: v.model || bk.model, vin: (v.vin || "").toUpperCase() };
+      // a customer list with the bikes written in the notes ("2019 Ducati Scrambler; prefers texts")
+      let extra = [];
+      if (!v.bike && !v.year && !v.make && !v.model && !v.vin && v.notes) {
+        const parts = v.notes.split(/\s*[;\n|]\s*|\s*,\s*(?=(?:19|20)\d\d\b)/), rest = [];
+        parts.forEach(t => { const b = splitBike(t); if (b.year && b.make) extra.push(b); else if (t) rest.push(t); });
+        if (extra.length) v.notes = rest.join("; ");
+      }
+      const bk = splitBike(v.bike || ""), bike = { year: v.year || bk.year, make: makeName(v.make || bk.make), model: capsModel(v.model || bk.model), vin: (v.vin || "").toUpperCase() };
+      if (v.work) v.work = capsText(v.work);
       recs.push({ file: sh.name, row: ri + 1, v, name, email, phone, keys, bike, vid: v.vid ? "v:" + norm(v.vid) : "" });
+      extra.slice(1).forEach(b => recs.push({ file: sh.name, row: ri + 1, v: {}, name, email, phone, keys, bike: { year: b.year, make: makeName(b.make), model: capsModel(b.model), vin: "" }, vid: "" }));
+      if (extra.length && !bk.make) Object.assign(bike, { year: extra[0].year, make: makeName(extra[0].make), model: capsModel(extra[0].model) });
     }));
     // a vehicle file ties vehicle IDs to customers; a history file may only have the vehicle ID
     const vidOwner = {};
@@ -147,10 +198,10 @@
       if (!x.keys.length) { skipped.push({ file: x.file, row: x.row, why: "No customer name, phone, email or ID" }); return; }
       const k = find(x.keys[0]), c = C[k] = C[k] || { key: k, name: "", phone: "", email: "", notes: "", bikes: {}, rows: 0, names: new Set() };
       c.rows++; if (x.name) { c.names.add(norm(x.name)); if (!c.name || x.name.length > c.name.length) c.name = x.name; }
-      if (x.phone && !c.phone) c.phone = clean(x.v.phone); if (x.email && !c.email) c.email = x.email; if (x.v.notes && !c.notes.includes(x.v.notes)) c.notes = clean((c.notes + " " + x.v.notes).slice(0, 2000));
+      if (x.phone && !c.phone) c.phone = fmtPhone(x.v.phone); if (x.email && !c.email) c.email = x.email; if (x.v.notes && !c.notes.includes(x.v.notes)) c.notes = clean((c.notes + " " + x.v.notes).slice(0, 2000));
       const label = [x.bike.year, x.bike.make, x.bike.model].filter(Boolean).join(" ");
       const bkey = x.vid || (x.bike.vin ? "vin:" + x.bike.vin : label ? "l:" + norm(label) : "");
-      const visit = x.v.date || x.v.work ? { date: toDate(x.v.date), work: clean(x.v.work || ""), miles: toNum(x.v.miles), cost: toNum(x.v.cost) } : null;
+      const visit = x.v.date || x.v.work ? { date: toDate(x.v.date), work: clean(x.v.work || ""), miles: Math.round(toNum(x.v.miles)), cost: Math.round(toNum(x.v.cost) * 100) / 100 } : null;
       if (bkey) {
         const b = c.bikes[bkey] = c.bikes[bkey] || { key: bkey, year: "", make: "", model: "", vin: "", miles: 0, visits: [] };
         ["year", "make", "model", "vin"].forEach(f => { if (x.bike[f] && !b[f]) b[f] = x.bike[f]; });
@@ -195,5 +246,5 @@
     [/\bbatt\b/gi, " battery "], [/\bcoolant\b|\bantifreeze\b/gi, " coolant "], [/\bvalve adj\b|\bvalves\b/gi, " valve "], [/\bcarb\b|\bcarbs\b|\bsync\b/gi, " carb "], [/\ba\/f\b|\bair filter\b/gi, " air filter "], [/\btune\b|\btuneup\b|\btune-up\b/gi, " tune "]];
   const expand = s => SHORT.reduce((t, [re, w]) => t.replace(re, m => m + w), " " + String(s || "") + " ");
 
-  window.rvImport = { readFile, parseDelimited, prepare, kindOf, build, FIELDS, LABEL, toDate, splitBike, expand };
+  window.rvImport = { readPhoto, isImage, PHOTO_HEAD, readFile, parseDelimited, prepare, kindOf, build, FIELDS, LABEL, toDate, splitBike, expand };
 })();
