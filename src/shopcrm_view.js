@@ -156,6 +156,8 @@
     if (r.t === "settings") return viewSettings();
     if (r.t === "import" && isOwner()) return viewImport();
     if (r.t === "due") return viewDue(r.id);
+    if (r.t === "inshop") return viewInShop();
+    if (r.t === "visits") return viewVisits();
     return viewToday();
   }
 
@@ -229,12 +231,45 @@
     q.oninput = paint; so.onchange = () => { try { sessionStorage.setItem("rv.dueSort", so.value); } catch (e) {} paint(); }; paint();
   }
 
+  function allJobs() {
+    const wos = []; S.bikes.forEach(b => b.recs.workorders.filter(w => !w.archived && !WO_DONE.includes(w.status)).forEach(w => wos.push({ b, w })));
+    const when = w => w.promisedAt ? new Date(w.promisedAt).toISOString() : w.promised ? w.promised + "T23:59" : "9999";   // ready-by time first, then the date
+    return wos.sort((a, z) => when(a.w).localeCompare(when(z.w)));
+  }
+  function allVisits(per) {
+    const v = []; S.bikes.forEach(b => (per ? b.c.done.slice(0, per) : b.c.done).forEach(r => v.push({ b, r })));
+    return v.sort((a, z) => String(z.r.date).localeCompare(String(a.r.date)));
+  }
+  const jobRow = ({ b, w }) => { const c = clientOf(b); return rvJobs.boardRow(Object.assign({ pid: b.p.id }, w), { client: c ? c.name : "", bike: bikeName(b) }); };
+  const visitRow = ({ b, r }) => { const c = clientOf(b); return `<button class="sx-row" data-open="${esc(c ? c.id : "")}"><span class="sx-date">${esc(fmt(r.date))}</span><span class="grow"><b>${esc(r.service || "Service")}</b><small>${esc(c ? c.name : "")} · ${esc(bikeName(b))}${byTxt(r) ? " · by " + esc(byTxt(r)) : ""}</small></span></button>`; };
+  const seeAll = (go, nn) => `<button class="sx-seeall" data-go="${go}">See all ${nn} ${ic("arrow")}</button>`;
+  const seeAllTop = (go, nn) => `<button class="btn sm" data-go="${go}">See all ${nn}</button>`;
+  // a full list page: back to Today, a search box, every row
+  function listPage(title, sub, rows, hay, row, empty, after) {
+    shell(`<button class="sx-back" data-go="today">${ic("back")} Today</button>
+      <div class="sx-pageh"><div><h1>${title}</h1><p>${sub}</p></div></div>
+      <div class="sx-filter">${ic("search")}<input id="sxLF" type="search" placeholder="Find a client, bike or job" autocomplete="off" aria-label="Search"></div>
+      <section class="sx-panel"><div class="sx-rows" id="sxLL"></div></section>`, "today");
+    bindCommon();
+    const q = X.app.querySelector("#sxLF"), out = X.app.querySelector("#sxLL");
+    const paint = () => { const t = norm(q.value), L = rows.filter(x => !t || norm(hay(x)).includes(t));
+      out.innerHTML = L.length ? L.map(row).join("") + `<p class="sx-more">${L.length}${L.length !== rows.length ? ` of ${rows.length}` : ""}</p>` : `<div class="sx-empty">${ic("check")}<b>${rows.length ? "Nothing matches." : empty}</b></div>`;
+      bindCommon(); if (after) after(); };
+    q.oninput = () => { const pos = q.selectionStart; paint(); q.focus(); q.setSelectionRange(pos, pos); }; paint();
+  }
+  function viewInShop() {
+    listPage("In the shop", "Every bike being worked on, soonest ready first. Tap one to update it.", allJobs(),
+      ({ b, w }) => { const c = clientOf(b); return [c && c.name, bikeName(b), w.job, w.title, w.status].join(" "); }, jobRow, "Nothing in the shop.");
+  }
+  function viewVisits() {
+    listPage("Recent visits", "Every service logged, newest first.", allVisits(0),
+      ({ b, r }) => { const c = clientOf(b); return [c && c.name, bikeName(b), r.service, byTxt(r)].join(" "); }, visitRow, "No services logged yet.");
+  }
+
   /* ---------- Today ---------- */
   function viewToday() {
     const all = [...S.bikes.values()], due = allDue();
-    const wos = []; all.forEach(b => b.recs.workorders.filter(w => !w.archived && !WO_DONE.includes(w.status)).forEach(w => wos.push({ b, w })));
-    wos.sort((a, z) => String(a.w.promised || "9999").localeCompare(String(z.w.promised || "9999")));
-    const visits = []; all.forEach(b => b.c.done.slice(0, 6).forEach(r => visits.push({ b, r }))); visits.sort((a, z) => String(z.r.date).localeCompare(String(a.r.date)));
+    const wos = allJobs(), visits = allVisits(0);
     const pend = pendingReq(), overC = due.filter(x => x.i.status === "over").length;
     const h = new Date().getHours(), hi = h < 12 ? "Good morning" : h < 18 ? "Good afternoon" : "Good evening";
     shell(`<div class="jb-notify" id="sxNotify" hidden></div><section class="sx-hero"><div class="sx-hero-t"><h1>${hi}${S.shop.name ? ", " + esc(S.shop.name) : ""}.</h1><p>${S.clients.size ? `${S.clients.size} client${S.clients.size === 1 ? "" : "s"}, ${S.bikes.size} bike${S.bikes.size === 1 ? "" : "s"}.` : "Add your first client to get started."}${S.clients.size < 10 && isOwner() ? ` <button class="linkbtn sx-implink" data-go="import">Coming from another system? Bring your clients over.</button>` : ""}</p></div>
@@ -244,19 +279,19 @@
         <button class="sx-kpi" data-go="clients"><span>Clients</span><b>${S.clients.size}</b></button>
         <button class="sx-kpi${overC ? " red" : ""}" data-due="over"><span>Overdue</span><b>${overC}</b></button>
         <button class="sx-kpi${due.length - overC ? " amber" : ""}" data-due="soon"><span>Due soon</span><b>${due.length - overC}</b></button>
-        <button class="sx-kpi" data-scroll="sxWo"><span>In the shop</span><b>${wos.length}</b></button>
+        <button class="sx-kpi" data-go="inshop"><span>In the shop</span><b>${wos.length}</b></button>
         <button class="sx-kpi${pend.length ? " blue" : ""}" data-go="requests"><span>Requests</span><b>${pend.length}</b></button></div>
       <div class="sx-grid2">
-        <section class="sx-panel" id="sxDue"><div class="sx-ph"><h2>Coming due</h2><span>${due.length > 5 ? "The 5 most urgent" : "Overdue or due in the next 30 days"}</span>${due.length ? `<button class="btn sm" data-due="">See all ${due.length}</button>` : ""}</div>
+        <section class="sx-panel" id="sxDue"><div class="sx-ph"><h2>Coming due</h2><span>${due.length > 5 ? "The 5 most urgent" : "Overdue or due in the next 30 days"}</span>${due.length > 5 ? `<button class="btn sm" data-due="">See all ${due.length}</button>` : ""}</div>
           ${due.length ? `<div class="sx-rows">${due.slice(0, 5).map(dueRow).join("")}</div>${due.length > 5 ? `<button class="sx-seeall" data-due="">See all ${due.length} ${ic("arrow")}</button>` : ""}`
             : `<div class="sx-empty">${ic("check")}<b>Nothing coming due.</b><span>Services due in the next 30 days show up here, so you know who to call.</span></div>`}</section>
-        <section class="sx-panel" id="sxWo"><div class="sx-ph"><h2>In the shop</h2><span>Tap one to update it. Customers follow along in Revora.</span></div>
-          ${wos.length ? `<div class="sx-rows">${wos.slice(0, 12).map(({ b, w }) => { const c = clientOf(b); return rvJobs.boardRow(Object.assign({ pid: b.p.id }, w), { client: c ? c.name : "", bike: bikeName(b) }); }).join("")}</div>`
+        <section class="sx-panel" id="sxWo"><div class="sx-ph"><h2>In the shop</h2><span>${wos.length > 5 ? "The 5 due back soonest" : "Tap one to update it. Customers follow along in Revora."}</span>${wos.length > 5 ? seeAllTop("inshop", wos.length) : ""}</div>
+          ${wos.length ? `<div class="sx-rows">${wos.slice(0, 5).map(jobRow).join("")}</div>${wos.length > 5 ? seeAll("inshop", wos.length) : ""}`
             : `<div class="sx-empty">${ic("wrench")}<b>Nothing in the shop.</b><span>When a bike comes in, open the client and tap Start a job. They'll see the work and when it'll be ready.</span></div>`}</section>
-        <section class="sx-panel"><div class="sx-ph"><h2>Requests</h2><span>Clients asking for a report, value or budget</span></div>
-          ${pend.length ? `<div class="sx-rows">${pend.slice(0, 6).map(reqRow).join("")}</div>` : `<div class="sx-empty">${ic("inbox")}<b>No requests waiting.</b><span>When a client asks for their history report, bike value or budget, it shows up here for you to approve.</span></div>`}</section>
-        <section class="sx-panel"><div class="sx-ph"><h2>Recent visits</h2><span>Last services logged</span></div>
-          ${visits.length ? `<div class="sx-rows">${visits.slice(0, 8).map(({ b, r }) => { const c = clientOf(b); return `<button class="sx-row" data-open="${esc(c ? c.id : "")}"><span class="sx-date">${esc(fmt(r.date))}</span><span class="grow"><b>${esc(r.service || "Service")}</b><small>${esc(c ? c.name : "")} · ${esc(bikeName(b))}${byTxt(r) ? " · by " + esc(byTxt(r)) : ""}</small></span></button>`; }).join("")}</div>` : `<div class="sx-empty">${ic("doc")}<b>No services logged yet.</b><span>Open a client and tap Log service when their bike comes in.</span></div>`}</section>
+        <section class="sx-panel"><div class="sx-ph"><h2>Requests</h2><span>Clients asking for a report, value or budget</span>${pend.length > 5 ? seeAllTop("requests", pend.length) : ""}</div>
+          ${pend.length ? `<div class="sx-rows">${pend.slice(0, 5).map(reqRow).join("")}</div>${pend.length > 5 ? seeAll("requests", pend.length) : ""}` : `<div class="sx-empty">${ic("inbox")}<b>No requests waiting.</b><span>When a client asks for their history report, bike value or budget, it shows up here for you to approve.</span></div>`}</section>
+        <section class="sx-panel"><div class="sx-ph"><h2>Recent visits</h2><span>Last services logged</span>${visits.length > 5 ? seeAllTop("visits", visits.length) : ""}</div>
+          ${visits.length ? `<div class="sx-rows">${visits.slice(0, 5).map(visitRow).join("")}</div>${visits.length > 5 ? seeAll("visits", visits.length) : ""}` : `<div class="sx-empty">${ic("doc")}<b>No services logged yet.</b><span>Open a client and tap Log service when their bike comes in.</span></div>`}</section>
       </div>`, "today");
     bindCommon();
     rvJobs.notifyStrip(X.app.querySelector("#sxNotify"), X.sb, note, false, true);
