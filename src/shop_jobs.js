@@ -353,7 +353,19 @@
     return m;
   }
   // what goes into the service history when the bike is picked up
-  const historyRec = w => { const t = tasksOf(w), done = t.filter(x => x.done); return { date: today(), service: (done.length ? done : t).map(x => x.t).join(", ") || w.title || "Service", kind: "Repair", items: [], fromJob: w.id, notes: w.noteClient || "" }; };
+  // which schedule items the finished work covers, so their next due dates reset (an oil change resets "Engine oil and filter", and so on)
+  const COVERS = [[/fluid/, /brake fluid|clutch fluid/], [/brake/, /brake pad|brake shoe|brakes?\b(?!.*fluid)/], [/oil/, /engine oil|oil and filter|oil change|oil & filter/], [/tire|tyre/, /tire|tyre/],
+    [/chain|sprocket/, /chain|sprocket/], [/tune/, /spark plug|air filter/], [/spark/, /spark plug/], [/air filter/, /air filter/], [/carb|throttle/, /carb|throttle body/],
+    [/battery/, /battery/], [/coolant|radiator/, /coolant/], [/valve/, /valve/], [/fork|suspension/, /fork|suspension/], [/clutch/, /clutch/], [/belt/, /belt/], [/fuel filter/, /fuel filter/]];
+  function coveredItems(tasks, schedule) {
+    const out = new Set();
+    tasks.forEach(t => { const txt = String(t.t || "").toLowerCase();
+      COVERS.forEach(([tr, ir]) => { if (!tr.test(txt)) return; if (tr.source === "brake" && /fluid/.test(txt)) return;
+        (schedule || []).forEach(s => { if (s && s.id && ir.test(String(s.name || "").toLowerCase())) out.add(s.id); }); }); });
+    return [...out];
+  }
+  const historyRec = (w, schedule) => { const t = tasksOf(w), done = t.filter(x => x.done), used = done.length ? done : t;
+    return { date: today(), service: used.map(x => x.t).join(", ") || w.title || "Service", kind: schedule && coveredItems(used, schedule).length ? "Scheduled service" : "Repair", items: coveredItems(used, schedule), fromJob: w.id, notes: w.noteClient || "" }; };
 
   window.rvJobs = { STATUS, CUST, TASKS, tasksOf, prog, titleOf, late, etaTxt, trackCard, bindTrack, boardRow, startBox, manageBox, historyRec, ping, push, notifyStrip, today, viewPhoto };
 })();

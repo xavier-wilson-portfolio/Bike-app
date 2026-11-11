@@ -329,12 +329,12 @@
   const plannedOf = bikes => bikes.reduce((s, b) => s + D().live(b.recs.mods).filter(x => x.status === "Planned" || x.status === "Ordered").reduce((t, x) => t + D().modCost(x), 0), 0);
 
   function bikeCard(b) {
-    const c = b.c, items = c.ranked.filter(i => i.status !== "nointerval"), m = b.meta, mods = D().live(b.recs.mods).filter(x => x.status !== "Removed");
+    const c = b.c, items = c.ranked.filter(i => i.status !== "nointerval" && i.status !== "none"), hasSched = c.ranked.length > 0, m = b.meta, mods = D().live(b.recs.mods).filter(x => x.status !== "Removed");
     const wos = b.recs.workorders.filter(w => !w.archived && !WO_DONE.includes(w.status)), sil = silFor(m);
     return `<section class="sx-bike" data-bike="${esc(b.p.id)}">
       <div class="sx-bh">${sil ? `<img class="sx-sil" src="${esc(sil)}" alt="">` : ""}<div class="grow"><h3>${esc(bikeName(b))}</h3>
           <div class="sx-bmeta">${c.odo ? `<span>${ic("gauge")}${D().milesFmt(c.odo.miles)} mi <small>on ${esc(fmt(c.odo.date))}</small></span>` : `<span class="faint">No odometer reading yet</span>`}${c.last ? `<span>Last in ${esc(fmt(c.last.date))}</span>` : ""}${m.frameNo ? `<span class="mono">VIN …${esc(String(m.frameNo).slice(-6))}</span>` : ""}</div></div>
-        <div class="sx-bacts"><button class="btn tan" data-jobstart>${ic("bolt")} Start a job</button><button class="btn" data-log>${ic("wrench")} Log service</button><button class="btn" data-odo>${ic("gauge")} Odometer</button>
+        <div class="sx-bacts"><button class="btn jb-go" data-jobstart>${ic("bolt")} Start a job</button><button class="btn" data-log>${ic("wrench")} Log service</button><button class="btn" data-odo>${ic("gauge")} Odometer</button>
           <div class="sx-dd"><button class="btn" data-menu aria-haspopup="true" aria-label="More for this bike">More</button><div class="sx-menu" hidden>
             <button data-doc="report|${esc(b.p.id)}">${ic("doc")} History report</button><button data-value>${ic("tag")} Bike value</button>${isOwner() ? `<button data-doc="budget|${esc(b.p.id)}">${ic("money")} Budget report</button>` : ""}
             <button data-wo>${ic("doc")} Work order with estimate</button><button data-sched>${ic("gear")} Service schedule</button><button data-editbike>${ic("gear")} Bike details</button><button data-full>${ic("arrow")} Full bike page</button>
@@ -342,7 +342,7 @@
       ${wos.length ? `<div class="sx-rows jb-bikejobs">${wos.map(w => rvJobs.boardRow(Object.assign({ pid: b.p.id }, w), { client: "In the shop", bike: "" })).join("")}</div>` : ""}
       <div class="sx-bbody">
         <div class="sx-due"><h4>What's due</h4>${items.length ? `<div class="sx-dl">${items.slice(0, 8).map(i => `<div class="sx-di ${i.status}"><span class="grow"><b>${esc(i.name)}</b><small>${esc(i.every ? "Every " + i.every : "")}</small></span><span class="sx-when">${esc(D().whenTxt(i))}</span>${pill(i.status)}</div>`).join("")}</div>${items.length > 8 ? `<button class="linkbtn" data-sched>All ${items.length} items</button>` : ""}`
-          : `<div class="sx-empty sm"><span>No service schedule yet.</span><button class="btn sm" data-preset>Add typical intervals</button></div>`}</div>
+          : hasSched ? `<p class="sx-small">Nothing due yet. Once a service is logged, it shows up here when it's due again.</p>` : `<div class="sx-empty sm"><span>No service schedule yet.</span><button class="btn sm" data-preset>Add typical intervals</button></div>`}</div>
         <div class="sx-mods"><h4>Upgrades <button class="linkbtn" data-mods>${mods.length ? "Manage" : "Add"}</button></h4>${mods.length ? mods.slice(0, 6).map(x => `<div class="sx-mi"><span class="grow"><b>${esc(x.name)}</b><small>${esc([x.brand, D().modCost(x) ? usd(D().modCost(x)) : ""].filter(Boolean).join(" · "))}</small></span><span class="pill ${x.status === "Installed" ? "green" : x.status === "Ordered" ? "blue" : "amber"} plain">${esc(MOD_LABEL[x.status] || x.status)}</span></div>`).join("")
           : `<p class="sx-small">Track what ${esc((clientOf(b) || { name: "they" }).name.split(" ")[0])} wants fitted, with prices, and what's on the bike.</p>`}</div>
       </div></section>`;
@@ -406,7 +406,7 @@
       photos: { list: () => rpcOk("job_photos", { pid, wid }), add: (th, im) => rpcOk("job_photo_add", { pid, wid, th, im, nt: "" }), del: id => rpcOk("job_photo_del", { id }), full: id => rpcOk("job_photo", { pid, id }) },
       ask: async (t, price, ph) => { await rpcOk("job_ask", { pid, wid, t, price, ph }); return freshJob(b, wid); },
       pickedUp: async ww => {
-        const h = Object.assign(rvJobs.historyRec(ww), { id: nextId(b, "maintenance"), odometer: b.c.odo ? b.c.odo.miles : 0, doneBy: "A shop", shop: S.shop.name || "Shop", byOwner: who(), planned: false });
+        const h = Object.assign(rvJobs.historyRec(ww, D().live(b.recs.schedule)), { id: nextId(b, "maintenance"), odometer: b.c.odo ? b.c.odo.miles : 0, doneBy: "A shop", shop: S.shop.name || "Shop", byOwner: who(), planned: false });
         await putRecs(b, [{ coll: "maintenance", rec: h }, { coll: "workorders", rec: Object.assign({}, ww, { status: "Picked up", pickedAt: new Date().toISOString() }) }]);
       },
       openFull: () => openBikePage(pid, "workorders", wid), refresh: draw });

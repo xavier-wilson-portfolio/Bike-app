@@ -298,13 +298,13 @@
     shell(`<button class="sx-back" data-home2>${ic(IC.back)} Back</button>
       <section class="sx-cmain"><span class="sx-av big">${esc(initials(c.name))}</span><div><h1>${esc(c.name)}</h1>
         <div class="sx-cts">${c.phone ? `<a href="tel:${esc(digits(c.phone))}" class="sx-ct">${ic(IC.phone)}${esc(c.phone)}</a>` : ""}${c.email ? `<span class="sx-ct">${esc(c.email)}</span>` : ""}</div>${c.notes ? `<p class="sx-cnote">${esc(c.notes)}</p>` : ""}</div></section>
-      ${c.bikes.map(b => { const items = b.c.ranked.filter(i => i.status !== "nointerval"), wos = (b.workorders || []).filter(w => !["Picked up", "Declined"].includes(w.status));
+      ${c.bikes.map(b => { const items = b.c.ranked.filter(i => i.status !== "nointerval" && i.status !== "none"), wos = (b.workorders || []).filter(w => !["Picked up", "Declined"].includes(w.status));
         return `<section class="sx-bike" data-bike="${esc(b.id)}"><div class="sx-bh"><div class="grow"><h3>${esc((b.meta && b.meta.bike) || b.name)}</h3><div class="sx-bmeta">${b.c.odo ? `<span>${D().milesFmt(b.c.odo.miles)} mi</span>` : `<span class="faint">No odometer reading yet</span>`}${b.assigned ? `<span class="pill blue plain">Assigned to you</span>` : ""}</div></div>
-          <div class="sx-bacts"><button class="btn tan" data-jobstart>${ic(IC.bolt || IC.wrench)} Start a job</button><button class="btn" data-log>${ic(IC.wrench)} Log work</button><button class="btn" data-odo>${ic(IC.gauge)} Odometer</button></div></div>
+          <div class="sx-bacts"><button class="btn jb-go" data-jobstart>${ic(IC.bolt || IC.wrench)} Start a job</button><button class="btn" data-log>${ic(IC.wrench)} Log work</button><button class="btn" data-odo>${ic(IC.gauge)} Odometer</button></div></div>
           ${(() => { const mine = E.jobs.filter(j => j.pid === b.id), other = wos.filter(w => !mine.some(j => j.id === w.id));
             return (mine.length ? `<div class="sx-rows jb-bikejobs">${mine.map(j => rvJobs.boardRow(j, { client: "In the shop", bike: "" })).join("")}</div>` : "")
               + (other.length ? `<div class="sx-wos">${other.map(w => `<span class="sx-wo"><b>${esc(w.title || "Work order")}</b><span class="pill ${w.status === "Done" ? "green" : /Waiting/.test(w.status) ? "amber" : "blue"}">${esc(w.status)}</span></span>`).join("")}</div>` : ""); })()}
-          <div class="sx-bbody"><div class="sx-due"><h4>What's due</h4>${items.length ? `<div class="sx-dl">${items.slice(0, 10).map(i => `<div class="sx-di ${i.status}"><span class="grow"><b>${esc(i.name)}</b><small>${esc(i.every ? "Every " + i.every : "")}</small></span><span class="sx-when">${esc(D().whenTxt(i))}</span><span class="pill ${D().PILL[i.status][0]}">${D().PILL[i.status][1]}</span></div>`).join("")}</div>` : `<p class="sx-small">No service schedule yet.</p>`}</div>
+          <div class="sx-bbody"><div class="sx-due"><h4>What's due</h4>${items.length ? `<div class="sx-dl">${items.slice(0, 10).map(i => `<div class="sx-di ${i.status}"><span class="grow"><b>${esc(i.name)}</b><small>${esc(i.every ? "Every " + i.every : "")}</small></span><span class="sx-when">${esc(D().whenTxt(i))}</span><span class="pill ${D().PILL[i.status][0]}">${D().PILL[i.status][1]}</span></div>`).join("")}</div>` : `<p class="sx-small">${b.c.ranked.length ? "Nothing due yet. Once a service is logged, it shows up here when it's due again." : "No service schedule yet."}</p>`}</div>
             <div class="sx-mods"><h4>History</h4>${b.c.done.length ? b.c.done.slice(0, 10).map(r => `<div class="sx-mi"><span class="grow"><b>${esc(r.service || "Service")}</b><small>${esc([D().fmtDate(r.date), n(r.odometer) ? D().milesFmt(r.odometer) + " mi" : "", by(r) ? "by " + by(r) : ""].filter(Boolean).join(" · "))}</small></span>${r.byEmp && r.byEmp.id === E.emp.id ? `<button class="linkbtn" data-edit="${esc(r.id)}">Edit</button>` : ""}</div>`).join("") : `<p class="sx-small">Nothing logged yet.</p>`}</div></div></section>`; }).join("")}
       ${c.bikes.length ? "" : `<div class="sx-panel sx-empty"><b>No bike on file.</b><span>Add their bike to log work on it.</span></div>`}
       <div class="sx-acts left"><button class="btn" data-addbike>${ic(IC.plus)} Add a bike</button></div>`);
@@ -341,10 +341,10 @@
       pickedUp: async ww => {
         const cl = await rpc("emp_client", { cid: j.client_id }), b = cl && cl.bikes.find(x => x.id === j.pid); if (!b) throw new Error("That bike isn't here any more.");
         const id = nextId(b.maintenance, "MAINT-U", 3), odo = D().compute(b).odo;
-        const res = await rpc("emp_put", { pid: j.pid, k: "maintenance", rid: id, d: Object.assign(rvJobs.historyRec(ww), { odometer: odo ? odo.miles : 0, doneBy: "A shop", shop: E.shop.name || "Shop", planned: false }) });
+        const res = await rpc("emp_put", { pid: j.pid, k: "maintenance", rid: id, d: Object.assign(rvJobs.historyRec(ww, (b.schedule || []).filter(x => !x.archived)), { odometer: odo ? odo.miles : 0, doneBy: "A shop", shop: E.shop.name || "Shop", planned: false }) });
         if (res !== "ok") throw new Error(JOBERR[res] || "That didn't save. Try again.");
         await jobSave(j.pid, j.id, { status: "Picked up", pickedAt: new Date().toISOString() });
-        b.maintenance = (b.maintenance || []).concat([{ id, date: D().today(), service: rvJobs.historyRec(ww).service }]); syncRem(b, (b.meta && b.meta.bike) || b.name);
+        b.maintenance = (b.maintenance || []).concat([{ id, date: D().today(), service: rvJobs.historyRec(ww).service, items: rvJobs.historyRec(ww, (b.schedule || []).filter(x => !x.archived)).items }]); syncRem(b, (b.meta && b.meta.bike) || b.name);
       },
       refresh: () => E.view && E.view() });
   }
