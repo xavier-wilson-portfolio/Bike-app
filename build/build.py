@@ -17,7 +17,7 @@ out.mkdir(exist_ok=True)
 
 ORDER = ['core.js', 'model.js', 'content.js', 'howto.js', 'art_data.js', 'ui.js', 'plan_gate.js', 'vehicle.js', 'views.js', 'views2.js', 'views3.js', 'views4.js', 'maint.js', 'remind.js', 'mods.js', 'report.js', 'build.js', 'value.js', 'finder.js', 'shop.js', 'cart.js', 'workorders.js', 'shop_app.js', 'receipts.js',
          'twin_data.js', 'twin_internals.js', 'twin.js', 'viewer.js', 'diag_draw.js', 'diag_data.js', 'diag_data2.js', 'diag_cms.js', 'diag_gen.js',
-         *sorted(p.name for p in src.glob('d3_*.js')), 'd3.js', 'diag.js', 'scan.js', 'parts_photo.js', 'parts_gen.js', 'parts_inv.js', 'chat.js', 'universal.js', 'feedback.js', 'generic.js', 'costs.js', 'papers.js', 'checklists.js', 'wear.js', 'recalls.js', 'plans.js', 'free_limits.js', 'importer.js', 'numbers.js', 'planjob.js', 'sticker.js', 'delete_bike.js', 'theme.js', 'demo.js']
+         *sorted(p.name for p in src.glob('d3_*.js')), 'd3.js', 'diag.js', 'scan.js', 'parts_photo.js', 'parts_gen.js', 'parts_inv.js', 'chat.js', 'universal.js', 'feedback.js', 'generic.js', 'costs.js', 'papers.js', 'checklists.js', 'wear.js', 'recalls.js', 'plans.js', 'free_limits.js', 'importer.js', 'library.js', 'numbers.js', 'planjob.js', 'sticker.js', 'delete_bike.js', 'theme.js', 'demo.js']
 app = '\n'.join((src / f).read_text() for f in ORDER) + '\nboot();\n'
 (out / 'app.js').write_text(app)
 shutil.copy(ROOT / 'data' / 'demo.json', out / 'demo.json')
@@ -42,6 +42,16 @@ for pdir in sorted((ROOT / 'data' / 'packs').iterdir()):
     index.append({k: bike.get(k) for k in ['id', 'year', 'make', 'model', 'variant', 'name', 'short', 'match', 'extras', 'status', 'generic', 'universal', 'styleName', 'reqKeys', 'style', 'silhouette']}
                  | {'diagrams': len(cms)})
 (out / 'packs' / 'index.json').write_text(json.dumps(index, separators=(',', ':'), ensure_ascii=False))
+
+# ---- bike library: sourced specs per bike generation (data/library/<id>.json) ----
+lib_out = out / 'library'; lib_out.mkdir(parents=True, exist_ok=True)
+lib_index = []
+for f in sorted((ROOT / 'data' / 'library').glob('*.json')):
+    e = json.loads(f.read_text())
+    (lib_out / f.name).write_text(json.dumps(e, separators=(',', ':'), ensure_ascii=False))
+    lib_index.append({k: e.get(k) for k in ['id', 'make', 'model', 'code', 'years', 'near', 'match', 'style', 'drive']})
+(lib_out / 'index.json').write_text(json.dumps(lib_index, separators=(',', ':'), ensure_ascii=False))
+print('library', len(lib_index))
 
 shutil.copytree(ROOT / 'img', out / 'img', dirs_exist_ok=True)
 
