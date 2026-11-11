@@ -155,6 +155,7 @@
     if (r.t === "team" && isOwner()) return viewTeam();
     if (r.t === "settings") return viewSettings();
     if (r.t === "import" && isOwner()) return viewImport();
+    if (r.t === "due") return viewDue(r.id);
     return viewToday();
   }
 
@@ -190,11 +191,47 @@
   function nextDueOf(cid) { let best = null; bikesOf(cid).forEach(b => { const it = b.c.ranked.find(i => i.status === "over" || i.status === "soon" || i.status === "ok"); if (it && (!best || ({ over: 0, soon: 1, ok: 2 })[it.status] < ({ over: 0, soon: 1, ok: 2 })[best.status] || (it.status === best.status && String(it.due || it.nextDate || "9") < String(best.due || best.nextDate || "9")))) best = Object.assign({ bike: b }, it); }); return best; }
   const lastVisitOf = cid => bikesOf(cid).map(b => b.c.last && b.c.last.date).filter(Boolean).sort().pop() || "";
 
+  /* ---------- what's due ---------- */
+  const dueKey = i => String(i.nextDate || i.due || "");   // the date the "days overdue" is counted from
+  function allDue() {
+    const due = [];
+    S.bikes.forEach(b => b.c.items.filter(i => i.status === "over" || i.status === "soon").forEach(i => due.push({ b, i, c: clientOf(b) })));
+    // most important first: overdue before due soon, and the longest overdue at the top
+    return due.sort((a, z) => (a.i.status === "over" ? 0 : 1) - (z.i.status === "over" ? 0 : 1) || (dueKey(a.i) || "9").localeCompare(dueKey(z.i) || "9"));
+  }
+  const dueRow = ({ b, i, c }) => `<button class="sx-row" data-open="${esc(c ? c.id : "")}"><span class="grow"><b>${esc(c ? c.name : "No client")}</b><small>${esc(bikeName(b))} · ${esc(i.name)}</small></span><span class="sx-when">${esc(D().whenTxt(i))}</span>${pill(i.status)}</button>`;
+  const DUE_SORTS = [["urgent", "Most urgent"], ["newest", "Newest first"], ["oldest", "Oldest first"], ["name", "Client A to Z"], ["visit", "Last visit"]];
+  function viewDue(which) {
+    const f = which === "over" || which === "soon" ? which : "all", all = allDue(), overC = all.filter(x => x.i.status === "over").length;
+    let sort = "urgent"; try { sort = sessionStorage.getItem("rv.dueSort") || "urgent"; } catch (e) {}
+    const tab = (k, label, nn, cls) => `<button class="sx-dtab${f === k ? " on" : ""}${cls ? " " + cls : ""}" data-dtab="${k}"><span>${label}</span><b>${nn}</b></button>`;
+    shell(`<button class="sx-back" data-go="today">${ic("back")} Today</button>
+      <div class="sx-pageh"><div><h1>What's due</h1><p>Services that are overdue or due in the next 30 days. Tap a client to call them or book them in.</p></div></div>
+      <div class="sx-dtabs">${tab("all", "All", all.length)}${tab("over", "Overdue", overC, "red")}${tab("soon", "Due soon", all.length - overC, "amber")}</div>
+      <div class="sx-filter">${ic("search")}<input id="sxDF" type="search" placeholder="Find a client, bike or service" autocomplete="off" aria-label="Find in what's due">
+        <select id="sxDS" aria-label="Sort">${DUE_SORTS.map(([k, l]) => `<option value="${k}"${k === sort ? " selected" : ""}>${l}</option>`).join("")}</select></div>
+      <section class="sx-panel"><div class="sx-rows" id="sxDL"></div></section>`, "today");
+    bindCommon();
+    const q = X.app.querySelector("#sxDF"), so = X.app.querySelector("#sxDS"), out = X.app.querySelector("#sxDL");
+    X.app.querySelectorAll("[data-dtab]").forEach(b => b.onclick = () => nav("due", b.dataset.dtab === "all" ? "" : b.dataset.dtab, true));
+    const paint = () => {
+      const t = norm(q.value), d = digits(q.value);
+      let L = all.filter(x => f === "all" || x.i.status === f)
+        .filter(x => !t || norm([x.c && x.c.name, bikeName(x.b), x.i.name, x.c && x.c.email].join(" ")).includes(t) || (d.length >= 3 && x.c && digits(x.c.phone).includes(d)));
+      if (so.value === "newest") L.sort((a, z) => dueKey(z.i).localeCompare(dueKey(a.i)));
+      if (so.value === "oldest") L.sort((a, z) => (dueKey(a.i) || "9").localeCompare(dueKey(z.i) || "9"));
+      if (so.value === "name") L.sort((a, z) => String(a.c && a.c.name || "").localeCompare(String(z.c && z.c.name || "")) || (dueKey(a.i) || "9").localeCompare(dueKey(z.i) || "9"));
+      if (so.value === "visit") L.sort((a, z) => lastVisitOf(z.c && z.c.id).localeCompare(lastVisitOf(a.c && a.c.id)));
+      out.innerHTML = L.length ? L.map(dueRow).join("") + `<p class="sx-more">${L.length} service${L.length === 1 ? "" : "s"}${L.length !== all.length ? ` of ${all.length}` : ""}</p>`
+        : `<div class="sx-empty">${ic("check")}<b>${all.length ? (q.value.trim() ? "Nothing matches." : f === "over" ? "Nothing overdue." : "Nothing due soon.") : "Nothing coming due."}</b><span>${all.length && q.value.trim() ? "Try part of their name, bike or phone." : "Services that come due show up here, so you know who to call."}</span></div>`;
+      out.querySelectorAll("[data-open]").forEach(b => b.onclick = () => b.dataset.open && nav("client", b.dataset.open));
+    };
+    q.oninput = paint; so.onchange = () => { try { sessionStorage.setItem("rv.dueSort", so.value); } catch (e) {} paint(); }; paint();
+  }
+
   /* ---------- Today ---------- */
   function viewToday() {
-    const all = [...S.bikes.values()], due = [];
-    all.forEach(b => b.c.items.filter(i => i.status === "over" || i.status === "soon").forEach(i => due.push({ b, i })));
-    due.sort((a, z) => (a.i.status === "over" ? 0 : 1) - (z.i.status === "over" ? 0 : 1) || String(a.i.due || a.i.nextDate || "9").localeCompare(String(z.i.due || z.i.nextDate || "9")));
+    const all = [...S.bikes.values()], due = allDue();
     const wos = []; all.forEach(b => b.recs.workorders.filter(w => !w.archived && !WO_DONE.includes(w.status)).forEach(w => wos.push({ b, w })));
     wos.sort((a, z) => String(a.w.promised || "9999").localeCompare(String(z.w.promised || "9999")));
     const visits = []; all.forEach(b => b.c.done.slice(0, 6).forEach(r => visits.push({ b, r }))); visits.sort((a, z) => String(z.r.date).localeCompare(String(a.r.date)));
@@ -205,13 +242,13 @@
           <button class="btn tan big" data-newc>${ic("plus")} New client</button></div></section>
       <div class="sx-kpis">
         <button class="sx-kpi" data-go="clients"><span>Clients</span><b>${S.clients.size}</b></button>
-        <button class="sx-kpi${overC ? " red" : ""}" data-scroll="sxDue"><span>Overdue</span><b>${overC}</b></button>
-        <button class="sx-kpi${due.length - overC ? " amber" : ""}" data-scroll="sxDue"><span>Due soon</span><b>${due.length - overC}</b></button>
+        <button class="sx-kpi${overC ? " red" : ""}" data-due="over"><span>Overdue</span><b>${overC}</b></button>
+        <button class="sx-kpi${due.length - overC ? " amber" : ""}" data-due="soon"><span>Due soon</span><b>${due.length - overC}</b></button>
         <button class="sx-kpi" data-scroll="sxWo"><span>In the shop</span><b>${wos.length}</b></button>
         <button class="sx-kpi${pend.length ? " blue" : ""}" data-go="requests"><span>Requests</span><b>${pend.length}</b></button></div>
       <div class="sx-grid2">
-        <section class="sx-panel" id="sxDue"><div class="sx-ph"><h2>Coming due</h2><span>Overdue or due in the next 30 days</span></div>
-          ${due.length ? `<div class="sx-rows">${due.slice(0, 14).map(({ b, i }) => { const c = clientOf(b); return `<button class="sx-row" data-open="${esc(c ? c.id : "")}"><span class="grow"><b>${esc(c ? c.name : "No client")}</b><small>${esc(bikeName(b))} · ${esc(i.name)}</small></span><span class="sx-when">${esc(D().whenTxt(i))}</span>${pill(i.status)}</button>`; }).join("")}</div>${due.length > 14 ? `<p class="sx-more">${due.length - 14} more. They're on each client's page.</p>` : ""}`
+        <section class="sx-panel" id="sxDue"><div class="sx-ph"><h2>Coming due</h2><span>${due.length > 5 ? "The 5 most urgent" : "Overdue or due in the next 30 days"}</span>${due.length ? `<button class="btn sm" data-due="">See all ${due.length}</button>` : ""}</div>
+          ${due.length ? `<div class="sx-rows">${due.slice(0, 5).map(dueRow).join("")}</div>${due.length > 5 ? `<button class="sx-seeall" data-due="">See all ${due.length} ${ic("arrow")}</button>` : ""}`
             : `<div class="sx-empty">${ic("check")}<b>Nothing coming due.</b><span>Services due in the next 30 days show up here, so you know who to call.</span></div>`}</section>
         <section class="sx-panel" id="sxWo"><div class="sx-ph"><h2>In the shop</h2><span>Tap one to update it. Customers follow along in Revora.</span></div>
           ${wos.length ? `<div class="sx-rows">${wos.slice(0, 12).map(({ b, w }) => { const c = clientOf(b); return rvJobs.boardRow(Object.assign({ pid: b.p.id }, w), { client: c ? c.name : "", bike: bikeName(b) }); }).join("")}</div>`
@@ -234,6 +271,7 @@
     bindSearch(root);
     root.querySelectorAll("[data-newc]").forEach(b => b.onclick = () => newClientBox(""));
     root.querySelectorAll("[data-go]").forEach(b => b.onclick = () => nav(b.dataset.go));
+    root.querySelectorAll("[data-due]").forEach(b => b.onclick = () => nav("due", b.dataset.due));
     root.querySelectorAll("[data-scroll]").forEach(b => b.onclick = () => document.getElementById(b.dataset.scroll)?.scrollIntoView({ behavior: "smooth", block: "start" }));
     root.querySelectorAll("[data-open]").forEach(b => b.onclick = () => b.dataset.open && nav("client", b.dataset.open));
     root.querySelectorAll("[data-wo]").forEach(b => b.onclick = () => { const [pid, wid] = b.dataset.wo.split("|"); openBikePage(pid, "workorders", wid); });
@@ -517,7 +555,7 @@
       $1("#imPre").onchange = ev => { IMP.presets = ev.target.checked; };
       const go = $1("[data-imgo]"); if (go) go.onclick = () => { IMP.step = 4; draw(); runImport(); };
     }
-    if (st === 5) { $1("[data-imtoday]").onclick = () => { IMP = null; nav("today"); }; $1("[data-imagain]").onclick = () => { IMP = null; draw(); }; }
+    if (st === 5) { const d0 = IMP.done || {}; $1("[data-imtoday]").onclick = () => { IMP = null; nav("due", d0.over ? "over" : ""); }; $1("[data-imagain]").onclick = () => { IMP = null; draw(); }; }
   }
   // one bike with its history: the bike, a typical schedule, past visits (ticking what they covered) and odometer readings, in one save
   async function importBike(c, ib, presets) {
