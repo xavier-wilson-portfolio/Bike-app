@@ -271,6 +271,15 @@
     reqBox.addEventListener("click", e => { if (e.target.closest(".pk-reqlink")) { openReq(); document.querySelector("#reqF input[name=year]")?.focus(); } });
     if (!q.value && qs.get("q")) q.value = qs.get("q").slice(0, 80);
     q.oninput = draw; draw(); drawMine();
+    // Enter in the search box: fill the bike's details from what was typed and jump down to them
+    q.onkeydown = e => {
+      if (e.key !== "Enter" || e.isComposing) return; e.preventDefault();
+      if (!reqOpen) openReq(); else fillReq();
+      const f = document.getElementById("reqF"); if (!f) return;
+      f.scrollIntoView({ behavior: "smooth", block: "start" });
+      const next = ["year", "make", "model"].map(k => f[k]).find(el => !el.value.trim()) || f.style;
+      setTimeout(() => next.focus({ preventScroll: true }), 250);
+    };
     list.onclick = async e => {
       const el = e.target.closest("[data-bike]"); if (!el) return;
       if (keep) { const b = bikeOf(el.dataset.bike); return startGeneric({ year: String(b.year), make: b.make, model: b.model, style: b.style, silhouette: b.silhouette }, "maintain"); }
