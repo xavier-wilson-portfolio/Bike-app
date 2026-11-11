@@ -397,5 +397,5 @@
   const historyRec = (w, schedule) => { const t = tasksOf(w), done = t.filter(x => x.done), used = done.length ? done : t;
     return { date: today(), service: used.map(x => x.t).join(", ") || w.title || "Service", kind: schedule && coveredItems(used, schedule).length ? "Scheduled service" : "Repair", items: coveredItems(used, schedule), fromJob: w.id, notes: w.noteClient || "" }; };
 
-  window.rvJobs = { STATUS, CUST, TASKS, tasksOf, prog, titleOf, late, etaTxt, trackCard, bindTrack, boardRow, startBox, manageBox, historyRec, ping, push, notifyStrip, today, viewPhoto };
+  window.rvJobs = { coveredItems, STATUS, CUST, TASKS, tasksOf, prog, titleOf, late, etaTxt, trackCard, bindTrack, boardRow, startBox, manageBox, historyRec, ping, push, notifyStrip, today, viewPhoto };
 })();

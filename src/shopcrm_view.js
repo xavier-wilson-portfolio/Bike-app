@@ -154,6 +154,7 @@
     if (r.t === "money" && isOwner()) return viewMoney();
     if (r.t === "team" && isOwner()) return viewTeam();
     if (r.t === "settings") return viewSettings();
+    if (r.t === "import" && isOwner()) return viewImport();
     return viewToday();
   }
 
@@ -199,7 +200,7 @@
     const visits = []; all.forEach(b => b.c.done.slice(0, 6).forEach(r => visits.push({ b, r }))); visits.sort((a, z) => String(z.r.date).localeCompare(String(a.r.date)));
     const pend = pendingReq(), overC = due.filter(x => x.i.status === "over").length;
     const h = new Date().getHours(), hi = h < 12 ? "Good morning" : h < 18 ? "Good afternoon" : "Good evening";
-    shell(`<div class="jb-notify" id="sxNotify" hidden></div><section class="sx-hero"><div class="sx-hero-t"><h1>${hi}${S.shop.name ? ", " + esc(S.shop.name) : ""}.</h1><p>${S.clients.size ? `${S.clients.size} client${S.clients.size === 1 ? "" : "s"}, ${S.bikes.size} bike${S.bikes.size === 1 ? "" : "s"}.` : "Add your first client to get started."}</p></div>
+    shell(`<div class="jb-notify" id="sxNotify" hidden></div><section class="sx-hero"><div class="sx-hero-t"><h1>${hi}${S.shop.name ? ", " + esc(S.shop.name) : ""}.</h1><p>${S.clients.size ? `${S.clients.size} client${S.clients.size === 1 ? "" : "s"}, ${S.bikes.size} bike${S.bikes.size === 1 ? "" : "s"}.` : "Add your first client to get started."}${S.clients.size < 10 && isOwner() ? ` <button class="linkbtn sx-implink" data-go="import">Coming from another system? Bring your clients over.</button>` : ""}</p></div>
         <div class="sx-find"><div class="sx-qwrap">${ic("search")}<input id="sxQ" type="search" placeholder="Find a client by name, phone, email or bike" autocomplete="off" aria-label="Find a client"><div class="sx-hits" id="sxHits" hidden></div></div>
           <button class="btn tan big" data-newc>${ic("plus")} New client</button></div></section>
       <div class="sx-kpis">
@@ -249,7 +250,7 @@
   /* ---------- Clients ---------- */
   function viewClients() {
     const list = [...S.clients.values()].sort((a, z) => a.name.localeCompare(z.name));
-    shell(`<div class="sx-pageh"><div><h1>Clients</h1><p>${list.length} client${list.length === 1 ? "" : "s"}. Search by name, phone, email, bike or client code.</p></div><button class="btn tan" data-newc>${ic("plus")} New client</button></div>
+    shell(`<div class="sx-pageh"><div><h1>Clients</h1><p>${list.length} client${list.length === 1 ? "" : "s"}. Search by name, phone, email, bike or client code.</p></div><div class="sx-pha">${isOwner() ? `<button class="btn" data-go="import">${ic("doc")} Import clients</button>` : ""}<button class="btn tan" data-newc>${ic("plus")} New client</button></div></div>
       <div class="sx-filter">${ic("search")}<input id="sxF" type="search" placeholder="Filter clients" autocomplete="off" aria-label="Filter clients"><select id="sxSort" aria-label="Sort"><option value="name">Name</option><option value="due">Next due</option><option value="visit">Last visit</option><option value="new">Newest</option></select></div>
       <div class="sx-table" id="sxList"></div>`, "clients");
     bindCommon();
@@ -410,6 +411,138 @@
         await putRecs(b, [{ coll: "maintenance", rec: h }, { coll: "workorders", rec: Object.assign({}, ww, { status: "Picked up", pickedAt: new Date().toISOString() }) }]);
       },
       openFull: () => openBikePage(pid, "workorders", wid), refresh: draw });
+  }
+
+  /* ---------- import clients from another system ---------- */
+  let IMP = null;   // { step, sheets, result, skip: Set of client keys, presets, done }
+  const IMP_STEPS = ["Add your files", "Check the columns", "Review", "Import"];
+  function viewImport() {
+    if (!IMP) IMP = { step: 1, sheets: [], result: null, skip: new Set(), presets: true, q: "", more: 0 };
+    const I = window.rvImport, st = IMP.step;
+    const steps = `<ol class="im-steps">${IMP_STEPS.map((t, i) => `<li class="${i + 1 < st ? "done" : i + 1 === st ? "on" : ""}"><span>${i + 1 < st ? ic("check") : i + 1}</span>${esc(t)}</li>`).join("")}</ol>`;
+    const head = `<button class="sx-back" data-imback>${ic("back")} ${st === 1 || st >= 4 ? "All clients" : "Back"}</button>
+      <section class="im-hero"><span class="jb-eb">Bring your clients over</span><h1>Import clients</h1><p>Export your customers from your old system as a spreadsheet: CSV or Excel, one file with everything or separate files for customers, bikes and past work. Revora sorts it out. Nothing is saved until you check it and tap Import.</p></section>${steps}`;
+    let body = "";
+    if (st === 1) {
+      body = `<label class="im-drop" id="imDrop">${ic("doc")}<b>Drop your files here, or tap to choose</b><small>CSV, Excel (.xlsx) or a tab-separated text file. You can add more than one.</small><input type="file" id="imFile" multiple accept=".csv,.tsv,.txt,.xlsx,.xlsm,.xls,.ods" hidden></label>
+        ${IMP.sheets.length ? `<div class="im-files">${IMP.sheets.map((sh, i) => `<div class="im-file">${ic("doc")}<div class="grow"><b>${esc(sh.name)}</b><small>${sh.rows.length} row${sh.rows.length === 1 ? "" : "s"} · looks like ${esc(sh.kind)}</small></div><button class="sx-x" data-rmfile="${i}" aria-label="Remove">×</button></div>`).join("")}</div>` : ""}
+        <p class="sx-err" id="imErr" hidden></p>
+        <div class="sx-acts left"><button class="btn jb-go" data-imnext ${IMP.sheets.length ? "" : "disabled"}>Next: check the columns ${ic("arrow")}</button></div>`;
+    } else if (st === 2) {
+      body = IMP.sheets.map((sh, si) => `<section class="sx-panel im-map"><div class="sx-ph"><h2>${esc(sh.name)}</h2><span class="pill blue">${esc(sh.kind)}</span><span>${sh.rows.length} rows</span></div>
+          <div class="im-cols">${sh.head.map((h, ci) => { const ex = sh.rows.map(r => String(r[ci] == null ? "" : r[ci]).trim()).filter(Boolean).slice(0, 2);
+            return `<div class="im-col${sh.map[ci] === "skip" ? " skip" : ""}"><div class="grow"><b>${esc(h || "Column " + (ci + 1))}</b><small>${ex.length ? esc(ex.join(" · ")).slice(0, 80) : "empty"}</small></div>
+              <select data-map="${si}|${ci}" aria-label="What is ${esc(h)}">${I.FIELDS.map(([k, l]) => `<option value="${k}"${sh.map[ci] === k ? " selected" : ""}>${esc(l)}</option>`).join("")}</select></div>`; }).join("")}</div></section>`).join("")
+        + `<p class="sx-small">Revora guessed these from your headings. Fix any that are wrong, and set columns you don't need to Skip.</p>
+        <div class="sx-acts left"><button class="btn jb-go" data-imnext>Next: review ${ic("arrow")}</button></div>`;
+    } else if (st === 3) {
+      const R = IMP.result, s0 = R.stats, sel = R.clients.filter(c => !IMP.skip.has(c.key)), q = norm(IMP.q);
+      const shown = R.clients.filter(c => !q || norm([c.name, c.phone, c.email, ...c.bikes.map(b => b.label)].join(" ")).includes(q));
+      const lim = 150 + IMP.more;
+      body = `<div class="im-tiles"><div><b>${s0.clients - s0.matched}</b><span>new clients</span></div><div><b>${s0.matched}</b><span>already in Revora</span></div><div><b>${s0.bikes}</b><span>bikes</span></div><div><b>${s0.visits}</b><span>past visits</span></div>${s0.skipped ? `<div class="warn"><b>${s0.skipped}</b><span>rows skipped</span></div>` : ""}</div>
+        <section class="sx-panel"><div class="sx-ph"><h2>Clients</h2><span>Untick anyone you don't want to bring over</span></div>
+          <div class="sx-filter">${ic("search")}<input id="imQ" type="search" placeholder="Find a client in the import" value="${esc(IMP.q)}" autocomplete="off"><button class="linkbtn" data-imall>${sel.length === R.clients.length ? "Untick all" : "Tick all"}</button></div>
+          <div class="im-list">${shown.slice(0, lim).map(c => `<label class="im-c${IMP.skip.has(c.key) ? " off" : ""}"><input type="checkbox" data-ck="${esc(c.key)}" ${IMP.skip.has(c.key) ? "" : "checked"}>
+              <div class="grow"><b>${esc(c.name)}</b><small>${esc([c.phone, c.email].filter(Boolean).join(" · ") || "No phone or email")}</small>
+                <div class="im-bk">${c.bikes.map(b => `<span>${esc(b.label)}${b.visits.length ? ` · ${b.visits.length} visit${b.visits.length === 1 ? "" : "s"}` : ""}</span>`).join("") || `<span class="faint">No bike</span>`}</div>
+                ${c.flags.length ? `<div class="im-fl">${c.flags.map(f => `<em>${esc(f)}</em>`).join("")}</div>` : ""}</div></label>`).join("")}
+            ${shown.length > lim ? `<button class="btn sm" data-immore>Show ${Math.min(200, shown.length - lim)} more</button>` : ""}</div></section>
+        ${R.skipped.length ? `<details class="sx-panel im-skip"><summary>${R.skipped.length} row${R.skipped.length === 1 ? "" : "s"} couldn't be used</summary><ul>${R.skipped.slice(0, 100).map(x => `<li>${esc(x.file)}, row ${x.row}: ${esc(x.why)}</li>`).join("")}</ul></details>` : ""}
+        <label class="jb-tell"><input type="checkbox" id="imPre" ${IMP.presets ? "checked" : ""}><span><b>Give each new bike the typical service schedule</b><small>Oil, chain, brakes, tires and more. Past visits tick off what was done, so Revora knows what's due next.</small></span></label>
+        <p class="sx-small">Reminder emails stay off for everyone. Turn them on per client once they've agreed.</p>
+        <div class="sx-acts left"><button class="btn jb-go big" data-imgo ${sel.length ? "" : "disabled"}>${ic("check")} Import ${sel.length} client${sel.length === 1 ? "" : "s"}</button></div>`;
+    } else if (st === 4) {
+      body = `<section class="sx-panel im-run"><h2 id="imRunT">Bringing your clients over…</h2><div class="jb-bar"><i id="imBar" style="width:0%"></i></div><p class="sx-small" id="imRunS">Starting</p></section>`;
+    } else {
+      const d = IMP.done || {};
+      body = `<section class="sx-panel im-done"><div class="lg-instic ok">${ic("check")}</div><h2>${d.clients} client${d.clients === 1 ? "" : "s"} ${d.clients === 1 ? "is" : "are"} in Revora</h2>
+        <p>${d.bikes} bike${d.bikes === 1 ? "" : "s"} and ${d.visits} past visit${d.visits === 1 ? "" : "s"} came over.${d.over || d.soon ? ` <b>${d.over} ${d.over === 1 ? "is" : "are"} overdue</b> and ${d.soon} ${d.soon === 1 ? "is" : "are"} due in the next 30 days. That's your call list.` : ""}</p>
+        ${d.errors && d.errors.length ? `<details class="im-skip"><summary>${d.errors.length} didn't come over</summary><ul>${d.errors.slice(0, 50).map(e => `<li>${esc(e)}</li>`).join("")}</ul></details>` : ""}
+        <div class="sx-acts left"><button class="btn jb-go" data-imtoday>See who's due</button><button class="btn" data-imagain>Import another file</button></div></section>`;
+    }
+    shell(`<div class="im">${head}${body}</div>`, "clients");
+    bindCommon();
+    const app = X.app, $1 = s2 => app.querySelector(s2);
+    $1("[data-imback]").onclick = () => { if (st === 1 || st >= 4) { if (st >= 4) IMP = null; nav("clients"); } else { IMP.step--; draw(); } };
+    if (st === 1) {
+      const inp = $1("#imFile"), drop = $1("#imDrop"), er = $1("#imErr");
+      const add = async files => { er.hidden = true;
+        for (const f of files) { try { (await I.readFile(f)).forEach(sh => IMP.sheets.push(I.prepare(sh))); } catch (e) { er.textContent = (e && e.message) || `Couldn't read ${f.name}.`; er.hidden = false; } }
+        if (!er.hidden) return; draw(); };
+      inp.onchange = () => add([...inp.files]);
+      drop.ondragover = ev => { ev.preventDefault(); drop.classList.add("over"); }; drop.ondragleave = () => drop.classList.remove("over");
+      drop.ondrop = ev => { ev.preventDefault(); drop.classList.remove("over"); add([...ev.dataTransfer.files]); };
+      app.querySelectorAll("[data-rmfile]").forEach(b => b.onclick = ev => { ev.preventDefault(); IMP.sheets.splice(+b.dataset.rmfile, 1); draw(); });
+      const nx = $1("[data-imnext]"); if (nx) nx.onclick = () => { IMP.step = 2; draw(); };
+    }
+    if (st === 2) {
+      app.querySelectorAll("[data-map]").forEach(sl => sl.onchange = () => { const [si, ci] = sl.dataset.map.split("|").map(Number), sh = IMP.sheets[si]; sh.map[ci] = sl.value; sh.kind = I.kindOf(sh.map); draw(); });
+      $1("[data-imnext]").onclick = () => {
+        const ex = [...S.clients.values()].map(c => ({ id: c.id, name: c.name, phone: c.phone, email: c.email })), eb = {};
+        [...S.bikes.values()].forEach(b => { (eb[b.p.shop_client] = eb[b.p.shop_client] || []).push({ id: b.p.id, label: bikeName(b) }); });
+        IMP.result = I.build(IMP.sheets, ex, eb); IMP.skip = new Set(); IMP.step = 3; draw();
+      };
+    }
+    if (st === 3) {
+      const q = $1("#imQ"); q.oninput = () => { IMP.q = q.value; clearTimeout(q._t); q._t = setTimeout(() => { const pos = q.selectionStart; draw(); const n2 = X.app.querySelector("#imQ"); n2.focus(); n2.setSelectionRange(pos, pos); }, 250); };
+      app.querySelectorAll("[data-ck]").forEach(b => b.onchange = () => { if (b.checked) IMP.skip.delete(b.dataset.ck); else IMP.skip.add(b.dataset.ck); draw(); });
+      $1("[data-imall]").onclick = () => { const all = IMP.skip.size === 0; IMP.skip = new Set(all ? IMP.result.clients.map(c => c.key) : []); draw(); };
+      const mo = $1("[data-immore]"); if (mo) mo.onclick = () => { IMP.more += 200; draw(); };
+      $1("#imPre").onchange = ev => { IMP.presets = ev.target.checked; };
+      const go = $1("[data-imgo]"); if (go) go.onclick = () => { IMP.step = 4; draw(); runImport(); };
+    }
+    if (st === 5) { $1("[data-imtoday]").onclick = () => { IMP = null; nav("today"); }; $1("[data-imagain]").onclick = () => { IMP = null; draw(); }; }
+  }
+  // one bike with its history: the bike, a typical schedule, past visits (ticking what they covered) and odometer readings, in one save
+  async function importBike(c, ib, presets) {
+    let b = ib.existing ? S.bikes.get(ib.existing) : null;
+    const items = [];
+    if (!b) {
+      const label = ib.label, style = (X.guessStyle && X.guessStyle(ib.make, ib.model)) || "standard", drive = (X.guessDrive && X.guessDrive(ib.make, ib.model, style)) || "chain";
+      const { data: pid, error } = await X.sb.rpc("shop_new_bike", { cid: c.id, nm: label }); if (error) throw error;
+      const p = { id: pid, name: label, bike_id: "custom-bike", shop_client: c.id, created_at: new Date().toISOString(), role: "owner" };
+      b = { p, meta: {}, recs: { schedule: [], maintenance: [], mileage: [], mods: [], workorders: [], fuel: [] }, c: null }; recalc(b); S.bikes.set(pid, b);
+      items.push({ coll: "meta", rec: { id: "project", projectName: label, bike: label, year: String(ib.year || ""), make: ib.make || "", model: ib.model || "", frameNo: ib.vin || "", style, drive, goal: "maintain",
+        units: "in", currency: "USD", baseBudget: 0, contingencyPct: 10, budgetChanges: [], meshMap: {}, archived: false, customer: { name: c.name, phone: c.phone, email: c.email }, shop: { id: S.shop.id, name: S.shop.name }, imported: true } });
+      if (presets) D().presets(drive).forEach((p2, i) => items.push({ coll: "schedule", rec: { id: "SVC-U" + String(i + 1).padStart(3, "0"), name: p2[0], category: p2[1], everyMiles: p2[2], everyMonths: p2[3], source: D().TYPICAL_SRC, order: i + 1, lastDate: "", lastMiles: 0, notes: "" } }));
+    }
+    const sched = items.filter(x => x.coll === "schedule").map(x => x.rec).concat(D().live(b.recs.schedule));
+    let mi = +(nextId(b, "maintenance").match(/(\d+)$/) || [0, 1])[1], oi = +(nextId(b, "mileage").match(/(\d+)$/) || [0, 1])[1];
+    const odo = {};
+    ib.visits.slice().reverse().forEach(v => {
+      const covers = window.rvJobs ? rvJobs.coveredItems([{ t: rvImport.expand(v.work) }], sched) : [];
+      items.push({ coll: "maintenance", rec: { id: "MAINT-U" + String(mi++).padStart(3, "0"), date: v.date || today(), service: v.work || "Service", odometer: v.miles || 0, cost: v.cost || 0, kind: covers.length ? "Scheduled service" : "Repair", items: covers,
+        doneBy: "A shop", shop: S.shop.name || "Shop", byOwner: who(), notes: "Brought over from your old system", imported: true, planned: false } });
+      if (v.miles && v.date && !(odo[v.date] >= v.miles)) odo[v.date] = v.miles;
+    });
+    const lastDate = (ib.visits[0] && ib.visits[0].date) || today();
+    if (ib.miles && !Object.values(odo).some(m => m >= ib.miles)) odo[lastDate] = Math.max(odo[lastDate] || 0, ib.miles);
+    Object.entries(odo).forEach(([date, miles]) => items.push({ coll: "mileage", rec: { id: "ODO-U" + String(oi++).padStart(4, "0"), date, miles, note: "Brought over from your old system" } }));
+    if (items.length) await putRecs(b, items);
+    return b;
+  }
+  async function runImport() {
+    const R = IMP.result, todo = R.clients.filter(c => !IMP.skip.has(c.key)), errors = [], made = new Set();
+    let done = 0, bikes = 0, visits = 0;
+    const T = X.app.querySelector("#imRunT"), bar = X.app.querySelector("#imBar"), sub = X.app.querySelector("#imRunS");
+    const tick = () => { if (bar) bar.style.width = Math.round(done / todo.length * 100) + "%"; if (sub) sub.textContent = `${done} of ${todo.length} clients`; };
+    const one = async ic2 => {
+      try {
+        let c = ic2.existing ? S.clients.get(ic2.existing) : null;
+        if (!c) {
+          const row = { shop_id: S.shop.id, name: ic2.name.slice(0, 120), phone: String(ic2.phone || "").slice(0, 40), email: /^\S+@\S+\.\S+$/.test(ic2.email || "") ? ic2.email.slice(0, 200) : "", notes: String(ic2.notes || "").slice(0, 2000), remind_ok: false, remind_ok_at: null };
+          const { data, error } = await X.sb.from("shop_clients").insert(row).select("*").single(); if (error) throw error;
+          c = data; S.clients.set(c.id, c);
+        }
+        for (const ib of ic2.bikes) { const b = await importBike(c, ib, IMP.presets); made.add(b.p.id); bikes++; visits += ib.visits.length; }
+      } catch (e) { errors.push(`${ic2.name}: ${/plan/i.test((e && e.message) || "") || (e && e.code) === "42501" ? "your Shop plan isn't active" : err(e)}`); }
+      done++; tick();
+    };
+    tick();
+    const q = todo.slice(); await Promise.all(Array.from({ length: Math.min(4, q.length) }, async () => { while (q.length) await one(q.shift()); }));
+    let over = 0, soon = 0; made.forEach(pid => { const b = S.bikes.get(pid); if (!b) return; recalc(b); if (b.c.items.some(i => i.status === "over")) over++; else if (b.c.items.some(i => i.status === "soon")) soon++; });
+    IMP.done = { clients: todo.length - errors.length, bikes, visits, over, soon, errors }; IMP.step = 5;
+    if (T) draw();
   }
 
   /* ---------- new client, edit client, share ---------- */
