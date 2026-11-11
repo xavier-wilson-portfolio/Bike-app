@@ -49,14 +49,14 @@ css = (src / 'style.css').read_text()
 import sys; sys.path.insert(0, str(ROOT / 'build')); from darkify import darkify
 css, n_dark = darkify(css)
 print('dark colors', n_dark)
-loader = (src / 'cloud.js').read_text() + '\n' + (src / 'report_view.js').read_text() + '\n' + (src / 'build_view.js').read_text() + '\n' + (src / 'wo_view.js').read_text() + '\n' + (src / 'plans_view.js').read_text() + '\n' + (src / 'shop_view.js').read_text() + '\n' + (src / 'admin_view.js').read_text() + '\n' + (src / 'shop_due.js').read_text() + '\n' + (src / 'shopcrm_view.js').read_text() + '\n' + (src / 'client_view.js').read_text() + '\n' + (src / 'shop_lock.js').read_text() + '\n' + (src / 'legal.js').read_text() + '\n' + (src / 'loader.js').read_text()
+loader = (src / 'cloud.js').read_text() + '\n' + (src / 'report_view.js').read_text() + '\n' + (src / 'build_view.js').read_text() + '\n' + (src / 'wo_view.js').read_text() + '\n' + (src / 'plans_view.js').read_text() + '\n' + (src / 'shop_view.js').read_text() + '\n' + (src / 'admin_view.js').read_text() + '\n' + (src / 'shop_due.js').read_text() + '\n' + (src / 'shop_jobs.js').read_text() + '\n' + (src / 'shopcrm_view.js').read_text() + '\n' + (src / 'client_view.js').read_text() + '\n' + (src / 'shop_lock.js').read_text() + '\n' + (src / 'legal.js').read_text() + '\n' + (src / 'loader.js').read_text()
 cfg_file = ROOT / 'data' / 'config.json'   # public settings only: Supabase URL and publishable key
 cfg = json.loads(cfg_file.read_text()) if cfg_file.exists() else {}
 import hashlib
 build_id = hashlib.sha1((app + css).encode()).hexdigest()[:10]
 loader = 'window.RV_BUILD = "' + build_id + '";\n' + loader
 sil = sorted(p.name for p in (ROOT / 'img' / 'sil').glob('*') if p.suffix in ('.webp', '.png', '.jpg', '.svg'))   # black silhouette covers that exist
-loader = 'window.RV_CONFIG = ' + json.dumps({**{k: cfg.get(k) for k in ['supabaseUrl', 'supabaseKey', 'aff', 'plansLive', 'payLinks', 'billingPortal', 'primaryHost', 'shopApi', 'trialLink', 'remindersApi', 'dealCodes', 'dealFrom', 'dealHours', 'dealShortFrom', 'dealShortHours'] if cfg.get(k)}, 'sil': sil, 'silCredit': json.loads((ROOT / 'img' / 'sil' / 'credits.json').read_text()) if (ROOT / 'img' / 'sil' / 'credits.json').exists() else {}}) + ';\n' + loader
+loader = 'window.RV_CONFIG = ' + json.dumps({**{k: cfg.get(k) for k in ['supabaseUrl', 'supabaseKey', 'aff', 'plansLive', 'payLinks', 'billingPortal', 'primaryHost', 'shopApi', 'trialLink', 'remindersApi', 'vapidPublic', 'dealCodes', 'dealFrom', 'dealHours', 'dealShortFrom', 'dealShortHours'] if cfg.get(k)}, 'sil': sil, 'silCredit': json.loads((ROOT / 'img' / 'sil' / 'credits.json').read_text()) if (ROOT / 'img' / 'sil' / 'credits.json').exists() else {}}) + ';\n' + loader
 html = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Revora Garage: motorcycle service log, maintenance reminders and parts tracker</title>
 <meta name="msvalidate.01" content="CE5F76699E739070886246A3F0EA3BFF">
