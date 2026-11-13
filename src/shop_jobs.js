@@ -187,7 +187,7 @@
     const p = prog(w);
     return `<button class="sx-row jb-row" data-job="${esc(w.pid)}|${esc(w.id)}"><span class="grow"><b>${esc(extra.client || "")}</b><small>${esc([extra.bike, w.title || titleOf(tasksOf(w))].filter(Boolean).join(" · "))}</small></span>
       ${p.n ? `<span class="jb-mini" title="${p.done} of ${p.n} done"><i style="width:${Math.round(p.done / p.n * 100)}%"></i></span>` : ""}
-      ${(w.asks || []).some(a => a.status === "asked") ? `<span class="jb-flag">Asked customer</span>` : ""}<span class="pill ${pillTone(w.status)}">${esc((STATUS.find(x => x[0] === w.status) || [0, w.status])[1])}</span><span class="sx-when${late(w) ? " late" : ""}">${esc(etaTxt(w))}</span></button>`;
+      ${w.assignee && w.assignee.id ? (extra.me && extra.me === w.assignee.id ? `<span class="pill blue plain">Yours</span>` : `<span class="jb-whoc">${esc(first(w.assignee.name))}</span>`) : ""}${(w.asks || []).some(a => a.status === "asked") ? `<span class="jb-flag">Asked customer</span>` : ""}<span class="pill ${pillTone(w.status)}">${esc((STATUS.find(x => x[0] === w.status) || [0, w.status])[1])}</span><span class="sx-when${late(w) ? " late" : ""}">${esc(etaTxt(w))}</span></button>`;
   }
 
   /* ---------- scroll wheels for picking a ready time ---------- */
@@ -243,6 +243,8 @@
         <div class="jb-chips" id="jbChips">${TASKS.map(t => chip(`data-t="${esc(t)}"`, esc(t))).join("")}</div>
         <div class="jb-add"><input id="jbOther" maxlength="80" placeholder="Something else? Type it and press Enter"><button type="button" class="btn sm" data-addt>${ic(IC.plus)} Add</button></div>
         <ul class="jb-picked" id="jbPicked"></ul></section>
+      ${opts.emps && opts.emps.length ? `<section class="jb-sec"><div class="jb-sh"><span class="jb-n">${ic(IC.wrench)}</span><h3>Who's doing it?</h3><small>They'll see it on their home screen</small></div>
+        <select name="who" class="jb-whosel" aria-label="Who's doing it"><option value="">Not assigned yet</option>${opts.emps.map(e => `<option value="${esc(e.id)}"${opts.assignee === e.id ? " selected" : ""}>${esc(e.name)}</option>`).join("")}</select></section>` : ""}
       <section class="jb-sec"><div class="jb-sh"><span class="jb-n">2</span><h3>When will it be ready?</h3><small>Pick one</small></div>
         <div class="jp" id="jbPick"></div>
         <div class="jb-etaout" id="jbEta">${ic(IC.clock)}<span>No ready time yet</span></div></section>
@@ -253,7 +255,7 @@
       <p class="sx-err" hidden></p>
       <div class="jb-bar2"><div class="grow jb-sum" id="jbSum">Pick the work and a ready time</div><button type="button" class="btn" data-close>Cancel</button><button type="submit" class="btn jb-go">${ic(IC.wrench)} Start the job</button></div></form>`,
       "Start a job", "jb-startm", { eb: "New job", title: bikes.length > 1 ? "Start a job" : bikeNm || "Start a job", sub: esc(c.name || "") });
-    const f = m.querySelector("#jbF"), er = m.querySelector(".sx-err"), picked = [], list = m.querySelector("#jbPicked"), other = m.querySelector("#jbOther");
+    const f = m.querySelector("#jbF"), er = m.querySelector(".sx-err"), picked = (opts.tasks || []).filter(Boolean), list = m.querySelector("#jbPicked"), other = m.querySelector("#jbOther");
     const W = { promised: "", promisedAt: "" };
     const sum = () => {
       const eta = W.promised || W.promisedAt ? etaTxt({ status: "Checked in", promised: W.promised, promisedAt: W.promisedAt }) : "";
@@ -271,11 +273,13 @@
     other.onkeydown = ev => { if (ev.key === "Enter") { ev.preventDefault(); addOther(); } };
     // ready time: scroll wheels for time and date, both optional
     readyPicker(m.querySelector("#jbPick"), v => { W.promised = v.promised; W.promisedAt = v.promisedAt; er.hidden = true; sum(); });
+    if (picked.length) drawPicked();
     f.onsubmit = async ev => {
       ev.preventDefault(); if (other.value.trim()) addOther();
       if (!picked.length) { er.textContent = "Pick at least one thing you're doing."; er.hidden = false; return; }
       const pid = f.bike ? f.bike.value : opts.bikeId || (bikes[0] && bikes[0].id), tasks = picked.map(t => ({ t, done: false }));
       const rec = { job: true, title: titleOf(tasks), complaint: picked.join("\n"), status: "Checked in", dateIn: today(), promised: W.promised || "", promisedAt: W.promisedAt || "", tz: tz(), tasks, noteClient: f.noteClient.value.trim() };
+      const whoE = f.who && f.who.value ? (opts.emps || []).find(e => e.id === f.who.value) : null; if (whoE) rec.assignee = { id: whoE.id, name: whoE.name };
       f.querySelectorAll("button").forEach(x => x.disabled = true);
       try {
         const id = await opts.save(pid, rec, !!(f.notify && f.notify.checked));
@@ -344,6 +348,7 @@
       const t = tasksOf(w), p = prog(w), ready = w.status === "Done";
       const at = w.promisedAt ? new Date(w.promisedAt) : null;
       host.innerHTML = `<div class="jb-mh"><div class="grow"><b>${esc(w.title || titleOf(t) || "Job")}</b><span>${w.dateIn ? "In since " + esc(day(w.dateIn)) : ""}</span></div><div class="jb-etab${late(w) ? " late" : ready ? " ready" : ""}">${ic(ready ? IC.check : IC.clock)}<b>${esc(etaTxt(w))}</b></div></div>
+        ${opts.emps && opts.emps.length ? `<label class="jb-whorow"><span>Who's doing it</span><select id="jbWho"><option value="">Not assigned</option>${opts.emps.map(e => `<option value="${esc(e.id)}"${w.assignee && w.assignee.id === e.id ? " selected" : ""}>${esc(e.name)}</option>`).join("")}</select></label>` : w.assignee && w.assignee.name ? `<p class="jb-whorow"><span>Assigned to</span><b>${esc(w.assignee.name)}</b></p>` : ""}
         <div class="jb-seg" role="group" aria-label="Status">${STATUS.map(([k, l]) => `<button type="button" class="${w.status === k ? "on" : ""}" data-st="${esc(k)}">${esc(l)}</button>`).join("")}</div>
         <div class="jb-mt"><div class="jb-wh"><b>The work</b><span>${p.done} of ${p.n} done</span></div>
           <ul class="jb-mtasks">${t.map((x, i) => `<li><label class="${x.done ? "done" : ""}"><input type="checkbox" data-i="${i}" ${x.done ? "checked" : ""}><span>${esc(x.t)}${x.ask ? ` <em class="jb-ok">approved</em>` : ""}</span></label><button type="button" class="jb-rm" data-rmi="${i}" aria-label="Remove">${ic(IC.x)}</button></li>`).join("")}</ul>
@@ -357,6 +362,8 @@
         <div class="jb-big">${ready ? `<button type="button" class="btn pri big" data-picked>${ic(IC.check)} Picked up, add it to their history</button>` : `<button type="button" class="btn pri big jb-readybtn" data-ready>${ic(IC.bell)} Ready${reach ? `, tell ${esc(fn)}` : ""}</button>`}</div>
         <p class="sx-small jb-reach">${reach ? (ready ? `${esc(fn)} got ${reach} that it's ready.` : `${esc(fn)} follows this in Revora${c.app ? " and gets a notification" : " and gets an email"} when you tap Ready.`) : `${esc(c.name ? fn : "They")} can't get updates yet: no email or Revora app.`}${c.phone ? ` <a href="sms:${esc(String(c.phone).replace(/[^0-9+]/g, ""))}?&body=${encodeURIComponent(ready ? `Hi ${fn}, your ${opts.bikeName || "bike"} is ready to pick up.` : `Hi ${fn}, quick update on your ${opts.bikeName || "bike"}: `)}">${ic(IC.text)} Text them</a>` : ""}</p>
         ${opts.openFull ? `<div class="sx-acts left"><button type="button" class="linkbtn" data-full>Open the full work order (estimate, parts, invoice)</button></div>` : ""}`;
+      const wsel = host.querySelector("#jbWho"); if (wsel) wsel.onchange = () => { const e = opts.emps.find(x => x.id === wsel.value), a = e ? { id: e.id, name: e.name } : null;
+        save({ assignee: a }, e ? `Assigned to ${e.name}. It's on their home screen.` : "Not assigned to anyone now."); if (e && opts.onAssign) opts.onAssign(e); };
       host.querySelectorAll("[data-st]").forEach(b => b.onclick = () => { const st = b.dataset.st; if (st === w.status) return; save(st === "Done" ? { status: st, readyAt: new Date().toISOString() } : { status: st }, st === "Done" ? (reach ? `Marked ready. ${fn} is getting ${reach.replace(/^a |^an /, "")}.` : "Marked ready.") : ""); });
       host.querySelectorAll("[data-i]").forEach(b => b.onchange = () => { const i = +b.dataset.i, label = tasksOf(w)[i] && tasksOf(w)[i].t, on = b.checked;
         save(f => { const tt = tasksOf(f).map(x => Object.assign({}, x)), k = tt[i] && tt[i].t === label ? i : tt.findIndex(x => x.t === label); if (k >= 0) tt[k].done = on; return Object.assign({ tasks: tt }, f.status === "Checked in" && on ? { status: "In progress" } : {}); }); });

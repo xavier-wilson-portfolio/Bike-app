@@ -153,6 +153,7 @@
     if (r.t === "requests") return viewRequests();
     if (r.t === "money" && isOwner()) return viewMoney();
     if (r.t === "team" && isOwner()) return viewTeam();
+    if (r.t === "emp" && isOwner() && S.emps.find(e => e.id === r.id)) return viewEmp(S.emps.find(e => e.id === r.id));
     if (r.t === "settings") return viewSettings();
     if (r.t === "import" && isOwner()) return viewImport();
     if (r.t === "due") return viewDue(r.id);
@@ -201,7 +202,7 @@
     // most important first: overdue before due soon, and the longest overdue at the top
     return due.sort((a, z) => (a.i.status === "over" ? 0 : 1) - (z.i.status === "over" ? 0 : 1) || (dueKey(a.i) || "9").localeCompare(dueKey(z.i) || "9"));
   }
-  const dueRow = ({ b, i, c }) => `<button class="sx-row" data-open="${esc(c ? c.id : "")}"><span class="grow"><b>${esc(c ? c.name : "No client")}</b><small>${esc(bikeName(b))} · ${esc(i.name)}</small></span><span class="sx-when">${esc(D().whenTxt(i))}</span>${pill(i.status)}</button>`;
+  const dueRow = ({ b, i, c }) => `<button class="sx-row" data-duei="${esc(b.p.id)}|${esc(i.id)}"><span class="grow"><b>${esc(c ? c.name : "No client")}</b><small>${esc(bikeName(b))} · ${esc(i.name)}</small></span><span class="sx-when">${esc(D().whenTxt(i))}</span>${pill(i.status)}</button>`;
   const DUE_SORTS = [["urgent", "Most urgent"], ["newest", "Newest first"], ["oldest", "Oldest first"], ["name", "Client A to Z"], ["visit", "Last visit"]];
   function viewDue(which) {
     const f = which === "over" || which === "soon" ? which : "all", all = allDue(), overC = all.filter(x => x.i.status === "over").length;
@@ -226,7 +227,7 @@
       if (so.value === "visit") L.sort((a, z) => lastVisitOf(z.c && z.c.id).localeCompare(lastVisitOf(a.c && a.c.id)));
       out.innerHTML = L.length ? L.map(dueRow).join("") + `<p class="sx-more">${L.length} service${L.length === 1 ? "" : "s"}${L.length !== all.length ? ` of ${all.length}` : ""}</p>`
         : `<div class="sx-empty">${ic("check")}<b>${all.length ? (q.value.trim() ? "Nothing matches." : f === "over" ? "Nothing overdue." : "Nothing due soon.") : "Nothing coming due."}</b><span>${all.length && q.value.trim() ? "Try part of their name, bike or phone." : "Services that come due show up here, so you know who to call."}</span></div>`;
-      out.querySelectorAll("[data-open]").forEach(b => b.onclick = () => b.dataset.open && nav("client", b.dataset.open));
+      bindDueRows(out);
     };
     q.oninput = paint; so.onchange = () => { try { sessionStorage.setItem("rv.dueSort", so.value); } catch (e) {} paint(); }; paint();
   }
@@ -309,6 +310,8 @@
     root.querySelectorAll("[data-due]").forEach(b => b.onclick = () => nav("due", b.dataset.due));
     root.querySelectorAll("[data-scroll]").forEach(b => b.onclick = () => document.getElementById(b.dataset.scroll)?.scrollIntoView({ behavior: "smooth", block: "start" }));
     root.querySelectorAll("[data-open]").forEach(b => b.onclick = () => b.dataset.open && nav("client", b.dataset.open));
+    root.querySelectorAll("[data-emp]").forEach(b => b.onclick = ev => { ev.stopPropagation(); nav("emp", b.dataset.emp); });
+    bindDueRows(root);
     root.querySelectorAll("[data-wo]").forEach(b => b.onclick = () => { const [pid, wid] = b.dataset.wo.split("|"); openBikePage(pid, "workorders", wid); });
     root.querySelectorAll("[data-job]").forEach(b => b.onclick = () => { const [pid, wid] = b.dataset.job.split("|"); openJob(pid, wid); });
     root.querySelectorAll("[data-approve]").forEach(b => b.onclick = () => approveReq(S.requests.find(q => q.id === b.dataset.approve)));
@@ -408,14 +411,14 @@
     return `<section class="sx-bike" data-bike="${esc(b.p.id)}">
       <div class="sx-bh">${sil ? `<img class="sx-sil" src="${esc(sil)}" alt="">` : ""}<div class="grow"><h3>${esc(bikeName(b))}</h3>
           <div class="sx-bmeta">${c.odo ? `<span>${ic("gauge")}${D().milesFmt(c.odo.miles)} mi <small>on ${esc(fmt(c.odo.date))}</small></span>` : `<span class="faint">No odometer reading yet</span>`}${c.last ? `<span>Last in ${esc(fmt(c.last.date))}</span>` : ""}${m.frameNo ? `<span class="mono">VIN …${esc(String(m.frameNo).slice(-6))}</span>` : ""}</div></div>
-        <div class="sx-bacts"><button class="btn jb-go" data-jobstart>${ic("bolt")} Start a job</button><button class="btn" data-log>${ic("wrench")} Log service</button><button class="btn" data-odo>${ic("gauge")} Odometer</button>
+        <div class="sx-bacts"><button class="btn jb-go" data-jobstart>${ic("bolt")} Start a job</button><button class="btn" data-log>${ic("wrench")} Log service</button>${isOwner() && S.emps.length ? `<button class="btn" data-asgjob>${ic("users")} Assign a job</button>` : ""}<button class="btn" data-odo>${ic("gauge")} Odometer</button>
           <div class="sx-dd"><button class="btn" data-menu aria-haspopup="true" aria-label="More for this bike">More</button><div class="sx-menu" hidden>
             <button data-doc="report|${esc(b.p.id)}">${ic("doc")} History report</button><button data-value>${ic("tag")} Bike value</button>${isOwner() ? `<button data-doc="budget|${esc(b.p.id)}">${ic("money")} Budget report</button>` : ""}
             <button data-wo>${ic("doc")} Work order with estimate</button><button data-sched>${ic("gear")} Service schedule</button><button data-editbike>${ic("gear")} Bike details</button><button data-full>${ic("arrow")} Full bike page</button>
             ${isOwner() ? `<button data-transfer>${ic("move")} Hand bike to client</button><button data-delbike class="red">Delete bike</button>` : ""}</div></div></div></div>
       ${wos.length ? `<div class="sx-rows jb-bikejobs">${wos.map(w => rvJobs.boardRow(Object.assign({ pid: b.p.id }, w), { client: "In the shop", bike: "" })).join("")}</div>` : ""}
       <div class="sx-bbody">
-        <div class="sx-due"><h4>What's due</h4>${items.length ? `<div class="sx-dl">${items.slice(0, 8).map(i => `<div class="sx-di ${i.status}"><span class="grow"><b>${esc(i.name)}</b><small>${esc(i.every ? "Every " + i.every : "")}</small></span><span class="sx-when">${esc(D().whenTxt(i))}</span>${pill(i.status)}</div>`).join("")}</div>${items.length > 8 ? `<button class="linkbtn" data-sched>All ${items.length} items</button>` : ""}`
+        <div class="sx-due"><h4>What's due</h4>${items.length ? `<div class="sx-dl">${items.slice(0, 8).map(i => `<div class="sx-di ${i.status}"${i.status === "over" || i.status === "soon" ? ` role="button" tabindex="0" data-duei="${esc(b.p.id)}|${esc(i.id)}"` : ""}><span class="grow"><b>${esc(i.name)}</b><small>${esc(i.every ? "Every " + i.every : "")}</small></span><span class="sx-when">${esc(D().whenTxt(i))}</span>${pill(i.status)}</div>`).join("")}</div>${items.length > 8 ? `<button class="linkbtn" data-sched>All ${items.length} items</button>` : ""}`
           : hasSched ? `<p class="sx-small">Nothing due yet. Once a service is logged, it shows up here when it's due again.</p>` : `<div class="sx-empty sm"><span>No service schedule yet.</span><button class="btn sm" data-preset>Add typical intervals</button></div>`}</div>
         <div class="sx-mods"><h4>Upgrades <button class="linkbtn" data-mods>${mods.length ? "Manage" : "Add"}</button></h4>${mods.length ? mods.slice(0, 6).map(x => `<div class="sx-mi"><span class="grow"><b>${esc(x.name)}</b><small>${esc([x.brand, D().modCost(x) ? usd(D().modCost(x)) : ""].filter(Boolean).join(" · "))}</small></span><span class="pill ${x.status === "Installed" ? "green" : x.status === "Ordered" ? "blue" : "amber"} plain">${esc(MOD_LABEL[x.status] || x.status)}</span></div>`).join("")
           : `<p class="sx-small">Track what ${esc((clientOf(b) || { name: "they" }).name.split(" ")[0])} wants fitted, with prices, and what's on the bike.</p>`}</div>
@@ -427,6 +430,7 @@
       const on = (sel, fn) => card.querySelectorAll(sel).forEach(x => x.onclick = ev => { ev.stopPropagation(); card.querySelector(".sx-menu").hidden = true; fn(x); });
       on("[data-log]", () => logBox(c, b, null));
       on("[data-jobstart]", () => startJob(c, b));
+      on("[data-asgjob]", () => assignForBike(c, b));
       on("[data-job]", x => { const [pid, wid] = x.dataset.job.split("|"); openJob(pid, wid); });
       on("[data-odo]", () => odoBox(b));
       on("[data-wo]:not(.sx-wo)", () => openBikePage(b.p.id, "workorders"));
@@ -446,6 +450,98 @@
     });
   }
 
+
+  /* ---------- giving work to employees ---------- */
+  // an employee only sees bikes they're assigned or have worked on, so a job handed to them brings the bike along
+  async function ensureAssign(e, b) {
+    if (!e || !b) return; const cid = b.p.shop_client;
+    if (S.assign.some(a => a.employee_id === e.id && a.client_id === cid && (!a.project_id || a.project_id === b.p.id))) return;
+    const row = { shop_id: S.shop.id, employee_id: e.id, client_id: cid, project_id: b.p.id };
+    const { error } = await X.sb.from("shop_assignments").insert(row); if (!error) S.assign.push(row);
+  }
+  async function giveJob(e, b, w) {
+    const out = await saveJob(b, { id: w.id, assignee: { id: e.id, name: e.name || e.email } }); await ensureAssign(e, b); return out;
+  }
+  const jobsOf = e => allJobs().filter(({ w }) => w.assignee && w.assignee.id === e.id);
+  const findDue = (pid, iid) => { const b = S.bikes.get(pid), i = b && b.c.items.find(x => x.id === iid); return i ? { b, i, c: clientOf(b) } : null; };
+  function bindDueRows(root) {
+    root.querySelectorAll("[data-duei]").forEach(x => { const go = ev => { ev.stopPropagation(); const [pid, iid] = x.dataset.duei.split("|"), d = findDue(pid, iid); if (d) dueBox(d); };
+      x.onclick = go; if (x.tagName !== "BUTTON") x.onkeydown = ev => { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); go(ev); } }; });
+  }
+  // a service that's due: start it, log it, or hand it to someone
+  function dueBox({ b, i, c }) {
+    const emps = isOwner() ? S.emps : [], open = b.recs.workorders.filter(w => !w.archived && !WO_DONE.includes(w.status));
+    const m = modal(`<div class="sx-dueact">
+        <p class="sx-duefor">${esc(c ? c.name : "No client")} · ${esc(bikeName(b))}</p>
+        <p class="sx-p">${pill(i.status)} <b>${esc(D().whenTxt(i))}</b>${i.every ? ` · every ${esc(i.every)}` : ""}</p>
+        ${open.length ? `<p class="sx-small">${esc(bikeName(b))} is already in the shop. Starting a job adds a new one; you can also add this to the open job from the bike's page.</p>` : ""}
+        <div class="sx-bigacts">
+          <button class="sx-bigact" data-a="start">${ic("bolt")}<span><b>Start a job</b><small>The bike's in. Check it in and let ${esc(c ? c.name.split(" ")[0] : "them")} follow along.</small></span></button>
+          <button class="sx-bigact" data-a="log">${ic("wrench")}<span><b>Log it</b><small>It's already done. Add it to the history and reset the next due date.</small></span></button>
+          ${emps.length ? `<div class="sx-bigact as"><span class="sx-bi">${ic("users")}</span><span class="grow"><b>Assign to an employee</b><small>It goes on their home screen as a job.</small>
+            <span class="sx-empick">${emps.map(e => `<button class="sx-chip link" data-a="emp" data-e="${esc(e.id)}"><span class="sx-av sm">${esc(initials(e.name || e.email))}</span>${esc(e.name || e.email)}</button>`).join("")}</span></span></div>`
+            : isOwner() ? `<button class="sx-bigact" data-a="team">${ic("users")}<span><b>Assign to an employee</b><small>Add your employees on the Team page first.</small></span></button>` : ""}
+        </div>
+        ${c ? `<div class="sx-acts left"><button class="linkbtn" data-a="client">Open ${esc(c.name)}'s page</button></div>` : ""}</div>`,
+      { title: i.name });
+    m.querySelectorAll("[data-a]").forEach(x => x.onclick = () => { const a = x.dataset.a; m.close();
+      if (a === "start") startJob(c, b, { tasks: [i.name] });
+      if (a === "log") logBox(c, b, null, { service: i.name, items: [i.id] });
+      if (a === "emp") startJob(c, b, { tasks: [i.name], assignee: x.dataset.e });
+      if (a === "team") nav("team");
+      if (a === "client" && c) nav("client", c.id); });
+  }
+  // from a bike card: hand an open job to someone, or start a new one for them
+  function assignForBike(c, b) {
+    const open = b.recs.workorders.filter(w => !w.archived && !WO_DONE.includes(w.status)), due = b.c.items.filter(i => i.status === "over" || i.status === "soon");
+    const m = modal(`<label class="sx-f"><b>Who's doing it?</b><select id="axE">${S.emps.map(e => `<option value="${esc(e.id)}">${esc(e.name || e.email)}</option>`).join("")}</select></label>
+      ${open.length ? `<h4 class="sx-h4">Jobs in the shop</h4><div class="sx-rows">${open.map(w => `<button class="sx-row" data-w="${esc(w.id)}"><span class="grow"><b>${esc(w.title || "Job")}</b><small>${w.assignee ? "Now: " + esc(w.assignee.name) : "Not assigned"}</small></span><span class="btn sm">Assign</span></button>`).join("")}</div>` : ""}
+      ${due.length ? `<h4 class="sx-h4">Due on this bike</h4><div class="sx-rows">${due.map(i => `<button class="sx-row" data-i="${esc(i.id)}"><span class="grow"><b>${esc(i.name)}</b><small>${esc(D().whenTxt(i))}</small></span>${pill(i.status)}<span class="btn sm">Assign</span></button>`).join("")}</div>` : ""}
+      <div class="sx-acts"><button class="btn" data-close>Cancel</button><button class="btn pri" data-new>${ic("plus")} New job for them</button></div>`, { title: "Assign a job · " + bikeName(b) });
+    const emp = () => S.emps.find(e => e.id === m.querySelector("#axE").value);
+    m.querySelectorAll("[data-w]").forEach(x => x.onclick = async () => { const e = emp(), w = open.find(y => y.id === x.dataset.w); x.disabled = true;
+      try { await giveJob(e, b, w); m.close(); draw(); note(`Assigned to ${e.name}. It's on their home screen.`); } catch (er) { x.disabled = false; note(err(er), true); } });
+    m.querySelectorAll("[data-i]").forEach(x => x.onclick = () => { const i = due.find(y => y.id === x.dataset.i); m.close(); startJob(c, b, { tasks: [i.name], assignee: emp().id }); });
+    m.querySelector("[data-new]").onclick = () => { const e = emp(); m.close(); startJob(c, b, { assignee: e.id }); };
+  }
+  // from an employee: pick the work to give them
+  function assignToEmpBox(e) {
+    if (!e) return;
+    const open = allJobs().filter(({ w }) => !w.assignee || w.assignee.id !== e.id), due = allDue().slice(0, 15), cl = [...S.clients.values()].sort((a, z) => String(a.name).localeCompare(String(z.name)));
+    const m = modal(`<div class="sx-dtabs sm"><button class="sx-dtab on" data-tab="shop"><span>In the shop</span><b>${open.length}</b></button><button class="sx-dtab" data-tab="due"><span>Coming due</span><b>${due.length}</b></button><button class="sx-dtab" data-tab="new"><span>New job</span></button></div>
+      <div data-pane="shop"><div class="sx-rows">${open.length ? open.map(({ b, w }) => { const c = clientOf(b); return `<button class="sx-row" data-w="${esc(b.p.id)}|${esc(w.id)}"><span class="grow"><b>${esc(c ? c.name : "")} · ${esc(bikeName(b))}</b><small>${esc(w.title || "Job")}${w.assignee ? " · now " + esc(w.assignee.name) : ""}</small></span><span class="btn sm">Assign</span></button>`; }).join("") : `<div class="sx-empty sm"><span>No other jobs in the shop.</span></div>`}</div></div>
+      <div data-pane="due" hidden><div class="sx-rows">${due.length ? due.map(({ b, i, c }) => `<button class="sx-row" data-d="${esc(b.p.id)}|${esc(i.id)}"><span class="grow"><b>${esc(c ? c.name : "No client")} · ${esc(i.name)}</b><small>${esc(bikeName(b))} · ${esc(D().whenTxt(i))}</small></span>${pill(i.status)}<span class="btn sm">Assign</span></button>`).join("") : `<div class="sx-empty sm"><span>Nothing coming due.</span></div>`}</div></div>
+      <div data-pane="new" hidden><label class="sx-f"><b>Client</b><select id="axC">${cl.map(c => `<option value="${esc(c.id)}">${esc(c.name)}</option>`).join("")}</select></label><div class="sx-acts left"><button class="btn pri" data-new ${cl.length ? "" : "disabled"}>${ic("plus")} Start the job</button></div></div>`,
+      { title: "Assign a job to " + (e.name || e.email), wide: true });
+    m.querySelectorAll("[data-tab]").forEach(t => t.onclick = () => { m.querySelectorAll("[data-tab]").forEach(y => y.classList.toggle("on", y === t)); m.querySelectorAll("[data-pane]").forEach(p => p.hidden = p.dataset.pane !== t.dataset.tab); });
+    m.querySelectorAll("[data-w]").forEach(x => x.onclick = async () => { const [pid, wid] = x.dataset.w.split("|"), b = S.bikes.get(pid), w = b.recs.workorders.find(y => y.id === wid); x.disabled = true;
+      try { await giveJob(e, b, w); m.close(); draw(); note(`Assigned to ${e.name}. It's on their home screen.`); } catch (er) { x.disabled = false; note(err(er), true); } });
+    m.querySelectorAll("[data-d]").forEach(x => x.onclick = () => { const [pid, iid] = x.dataset.d.split("|"), d = findDue(pid, iid); m.close(); if (d) startJob(d.c, d.b, { tasks: [d.i.name], assignee: e.id }); });
+    const nb = m.querySelector("[data-new]"); if (nb) nb.onclick = () => { const c = S.clients.get(m.querySelector("#axC").value); m.close(); if (c) startJob(c, null, { assignee: e.id }); };
+  }
+  // one employee: who they are, what they're on, what they've done
+  function viewEmp(e) {
+    const st = empStats(e), asg = S.assign.filter(a => a.employee_id === e.id), jobs = jobsOf(e);
+    const finished = []; S.bikes.forEach(b => b.recs.workorders.filter(w => w.assignee && w.assignee.id === e.id && WO_DONE.includes(w.status)).forEach(w => finished.push({ b, w })));
+    finished.sort((a, z) => String(z.w.pickedAt || z.w.dateIn || "").localeCompare(String(a.w.pickedAt || a.w.dateIn || "")));
+    shell(`<button class="sx-back" data-go="team">${ic("back")} Team</button>
+      <section class="sx-panel sx-emp"><div class="sx-emph"><span class="sx-av big">${esc(initials(e.name || e.email))}</span><div class="grow"><h1 class="sx-empname">${esc(e.name || e.email || "New employee")}</h1>
+          <small>${e.status === "invited" ? `<span class="pill amber plain">Hasn't set up yet</span>` : `<span class="pill green plain">Active</span>`} ${esc(e.email || "")}${e.last_seen ? " · last in " + esc(fmt(e.last_seen)) : ""}${e.created_at ? " · added " + esc(fmt(e.created_at)) : ""}</small></div>
+        <div class="sx-emps"><div><b>${jobs.length}</b><span>open jobs</span></div><div><b>${st.week}</b><span>logged this week</span></div><div><b>${st.month}</b><span>30 days</span></div><div><b>${st.logs.length}</b><span>all time</span></div></div>
+        <button class="btn tan" data-asgto="${esc(e.id)}">${ic("plus")} Assign a job</button>
+        <div class="sx-dd"><button class="btn" data-menu>More</button><div class="sx-menu" hidden><button data-rename="${esc(e.id)}">Rename</button><button data-reset="${esc(e.id)}">${ic("key")} New link and starting PIN</button><button class="red" data-rmemp="${esc(e.id)}">Remove</button></div></div></div></section>
+      <div class="sx-grid2">
+        <section class="sx-panel"><div class="sx-ph"><h2>Jobs</h2><span>${jobs.length ? "Assigned to " + esc((e.name || "them").split(" ")[0]) + ", soonest ready first" : "Nothing assigned right now"}</span></div>
+          ${jobs.length ? `<div class="sx-rows">${jobs.map(jobRow).join("")}</div>` : `<div class="sx-empty sm"><span>Give ${esc((e.name || "them").split(" ")[0])} a job and it shows up on their home screen.</span><button class="btn sm pri" data-asgto="${esc(e.id)}">${ic("plus")} Assign a job</button></div>`}</section>
+        <section class="sx-panel"><div class="sx-ph"><h2>Clients</h2><span>They see these bikes when they clock in</span></div>
+          ${asg.length ? `<div class="sx-chips">${asg.map(a => { const c = S.clients.get(a.client_id); return c ? `<button class="sx-chip link" data-open="${esc(c.id)}">${esc(c.name)}${a.project_id && S.bikes.get(a.project_id) ? " · " + esc(bikeName(S.bikes.get(a.project_id))) : ""}</button>` : ""; }).join("")}</div>` : `<div class="sx-empty sm"><span>No clients assigned. Assign them from a client's page, or give them a job.</span></div>`}</section>
+        <section class="sx-panel"><div class="sx-ph"><h2>Recent work</h2><span>Services ${esc((e.name || "they").split(" ")[0])} logged</span></div>
+          ${st.logs.length ? `<div class="sx-rows">${st.logs.slice(0, 25).map(({ b, r }) => { const c = clientOf(b); return `<button class="sx-row" data-open="${esc(c ? c.id : "")}"><span class="sx-date">${esc(fmt(r.date))}</span><span class="grow"><b>${esc(r.service || "Service")}</b><small>${esc(c ? c.name : "")} · ${esc(bikeName(b))}${D().svcCost(r) ? " · " + esc(usd(D().svcCost(r))) : ""}</small></span></button>`; }).join("")}</div>` : `<div class="sx-empty sm"><span>Nothing logged yet.</span></div>`}</section>
+        <section class="sx-panel"><div class="sx-ph"><h2>Finished jobs</h2><span>Assigned jobs that went home</span></div>
+          ${finished.length ? `<div class="sx-rows">${finished.slice(0, 15).map(({ b, w }) => { const c = clientOf(b); return `<button class="sx-row" data-open="${esc(c ? c.id : "")}"><span class="sx-date">${esc(fmt(String(w.pickedAt || w.dateIn || "").slice(0, 10)))}</span><span class="grow"><b>${esc(w.title || "Job")}</b><small>${esc(c ? c.name : "")} · ${esc(bikeName(b))}</small></span></button>`; }).join("")}</div>` : `<div class="sx-empty sm"><span>None yet.</span></div>`}</section>
+      </div>`, "team");
+    bindCommon(); bindEmpActions();
+  }
   /* ---------- jobs: start one in a few taps, update it as you go, the customer follows along ---------- */
   const jobClient = c => c ? { name: c.name, email: c.email, phone: c.phone, app: !!c.client_user } : {};
   // the latest copy from the database, so a customer's answer or a teammate's change isn't lost
@@ -464,17 +560,20 @@
     if (error || data !== "ok") console.warn("job_touch", error || data);
     return b.recs.workorders.find(w => w.id === out.id) || out;
   }
-  function startJob(c, b) {
+  function startJob(c, b, o) {
+    o = o || {};
     const bikes = bikesOf(c.id); if (!bikes.length) return bikeBox(c, null);
     rvJobs.startBox({ client: jobClient(c), bikes: bikes.map(x => ({ id: x.p.id, name: bikeName(x) })), bikeId: (b || bikes[0]).p.id, bikeName: bikes.length === 1 ? bikeName(bikes[0]) : "",
+      emps: isOwner() ? S.emps.filter(e => e.status !== "removed").map(e => ({ id: e.id, name: e.name || e.email })) : null, assignee: o.assignee || "", tasks: o.tasks || [],
       save: async (pid, rec, ntf) => (await saveJob(S.bikes.get(pid), rec, ntf)).id,
-      done: (pid, id) => { draw(); const cl = jobClient(c); note(cl.app ? `Job started. ${c.name.split(" ")[0]} gets a notification and can follow it in Revora.` : cl.email ? `Job started. ${c.name.split(" ")[0]} gets an email with a link to follow it.` : "Job started."); openJob(pid, id); } });
+      done: async (pid, id, rec) => { if (rec && rec.assignee) { const e = S.emps.find(x => x.id === rec.assignee.id); if (e) await ensureAssign(e, S.bikes.get(pid)); } draw(); const cl = jobClient(c); note(cl.app ? `Job started. ${c.name.split(" ")[0]} gets a notification and can follow it in Revora.` : cl.email ? `Job started. ${c.name.split(" ")[0]} gets an email with a link to follow it.` : "Job started."); openJob(pid, id); } });
   }
   function openJob(pid, wid) {
     const b = S.bikes.get(pid), w = b && b.recs.workorders.find(x => x.id === wid); if (!w) return;
     const c = clientOf(b);
     const rpcOk = async (fn, args) => { const { data, error } = await X.sb.rpc(fn, args); if (error) throw new Error(/full/.test(error.message || "") ? "full" : "That didn't save. Try again."); return data; };
     rvJobs.manageBox({ w, pid, client: jobClient(c), bikeName: bikeName(b), note,
+      emps: isOwner() ? S.emps.map(e => ({ id: e.id, name: e.name || e.email })) : null, onAssign: e => { const emp = S.emps.find(x => x.id === e.id); if (emp) ensureAssign(emp, b); },
       save: patch => saveJob(b, Object.assign({ id: w.id }, patch)),
       fetch: () => freshJob(b, wid),
       photos: { list: () => rpcOk("job_photos", { pid, wid }), add: (th, im) => rpcOk("job_photo_add", { pid, wid, th, im, nt: "" }), del: id => rpcOk("job_photo_del", { id }), full: id => rpcOk("job_photo", { pid, id }) },
@@ -793,9 +892,9 @@
   }
 
   /* ---------- log a service ---------- */
-  function logBox(c, b, rec) {
+  function logBox(c, b, rec, pre) {
     const bikes = bikesOf(c.id); if (!b) b = bikes[0]; if (!b) return bikeBox(c, null);
-    const edit = !!rec, r = rec || {};
+    const edit = !!rec, r = rec || Object.assign({}, pre || {});
     const sched = bk => D().live(bk.recs.schedule).sort((a, z) => n(a.order) - n(z.order));
     const chips = bk => { const st = new Map(bk.c.items.map(i => [i.id, i.status])); return sched(bk).map(s => `<label class="sx-tick ${st.get(s.id) || ""}"><input type="checkbox" name="items" value="${esc(s.id)}" ${(r.items || []).includes(s.id) ? "checked" : ""}><span>${esc(s.name)}</span></label>`).join("") || `<span class="sx-small">No schedule yet. What you type above is still saved.</span>`; };
     const m = modal(`<form class="sx-form" id="lgF" novalidate>
@@ -1034,7 +1133,7 @@
   const empName = id => (S.emps.find(e => e.id === id) || {}).name || "Employee";
   function assignChips(c) {
     const L = S.assign.filter(a => a.client_id === c.id); if (!L.length) return `<span class="faint">Nobody</span>`;
-    return L.map(a => `<span class="sx-chip">${esc(empName(a.employee_id))}${a.project_id && S.bikes.get(a.project_id) ? ` · ${esc(bikeName(S.bikes.get(a.project_id)))}` : ""}</span>`).join("");
+    return L.map(a => `<span class="sx-chip link" role="button" tabindex="0" data-emp="${esc(a.employee_id)}">${esc(empName(a.employee_id))}${a.project_id && S.bikes.get(a.project_id) ? ` · ${esc(bikeName(S.bikes.get(a.project_id)))}` : ""}</span>`).join("");
   }
   function assignBox(c) {
     const bikes = bikesOf(c.id), cur = S.assign.filter(a => a.client_id === c.id);
@@ -1059,15 +1158,19 @@
   function viewTeam() {
     shell(`<div class="sx-pageh"><div><h1>Team</h1><p>Employees clock in with their name and their own 6-digit PIN, on your computers or their phone. They see only the bikes they're assigned or have worked on. You see everything.</p></div><button class="btn tan" data-addemp>${ic("plus")} Add employee</button></div>
       ${S.emps.length ? S.emps.map(e => { const st = empStats(e), asg = S.assign.filter(a => a.employee_id === e.id);
-        return `<section class="sx-panel sx-emp"><div class="sx-emph"><span class="sx-av big">${esc(initials(e.name || e.email))}</span><div class="grow"><h2>${esc(e.name || e.email || "New employee")}</h2>
+        return `<section class="sx-panel sx-emp"><div class="sx-emph"><span class="sx-av big">${esc(initials(e.name || e.email))}</span><div class="grow"><h2><button class="sx-namebtn" data-emp="${esc(e.id)}">${esc(e.name || e.email || "New employee")}</button></h2>
             <small>${e.status === "invited" ? `<span class="pill amber plain">Hasn't set up yet</span>` : `<span class="pill green plain">Active</span>`} ${esc(e.email || "")}${e.last_seen ? " · last in " + esc(fmt(e.last_seen)) : ""}</small></div>
-            <div class="sx-emps"><div><b>${st.week}</b><span>this week</span></div><div><b>${st.month}</b><span>30 days</span></div><div><b>${st.logs.length}</b><span>all time</span></div></div>
+            <div class="sx-emps"><div><b>${jobsOf(e).length}</b><span>open jobs</span></div><div><b>${st.week}</b><span>this week</span></div><div><b>${st.month}</b><span>30 days</span></div><div><b>${st.logs.length}</b><span>all time</span></div></div>
+            <button class="btn sm pri" data-asgto="${esc(e.id)}">${ic("plus")} Assign a job</button><button class="btn sm" data-emp="${esc(e.id)}">Open</button>
             <div class="sx-dd"><button class="btn sm" data-menu>More</button><div class="sx-menu" hidden><button data-rename="${esc(e.id)}">Rename</button><button data-reset="${esc(e.id)}">${ic("key")} New link and starting PIN</button><button class="red" data-rmemp="${esc(e.id)}">Remove</button></div></div></div>
           <div class="sx-grid2 tight"><div><h4>Assigned</h4>${asg.length ? asg.map(a => { const c = S.clients.get(a.client_id); return c ? `<button class="sx-chip link" data-open="${esc(c.id)}">${esc(c.name)}${a.project_id && S.bikes.get(a.project_id) ? " · " + esc(bikeName(S.bikes.get(a.project_id))) : ""}</button>` : ""; }).join("") : `<span class="faint">Nobody yet. Assign from a client's page.</span>`}</div>
             <div><h4>Recent work</h4>${st.logs.length ? st.logs.slice(0, 5).map(({ b, r }) => { const c = clientOf(b); return `<button class="sx-row" data-open="${esc(c ? c.id : "")}"><span class="sx-date">${esc(fmt(r.date))}</span><span class="grow"><b>${esc(r.service || "Service")}</b><small>${esc(c ? c.name : "")} · ${esc(bikeName(b))}</small></span></button>`; }).join("") : `<span class="faint">Nothing logged yet.</span>`}</div></div></section>`; }).join("")
         : `<section class="sx-panel sx-empty">${ic("users")}<b>No employees yet.</b><span>Add someone with their name and email. They get a link and a starting PIN, then pick their own PIN.</span><button class="btn tan" data-addemp>${ic("plus")} Add employee</button></section>`}`, "team");
     bindCommon();
     X.app.querySelectorAll("[data-addemp]").forEach(b => b.onclick = addEmpBox);
+    bindEmpActions();
+  }
+  function bindEmpActions() {
     X.app.querySelectorAll(".sx-emp").forEach(card => { const mb = card.querySelector("[data-menu]"), mm = card.querySelector(".sx-menu"); mb.onclick = ev => { ev.stopPropagation(); mm.hidden = !mm.hidden; if (!mm.hidden) setTimeout(() => document.addEventListener("click", () => { mm.hidden = true; }, { once: true }), 0); }; });
     X.app.querySelectorAll("[data-rename]").forEach(b => b.onclick = async () => { const e = S.emps.find(x => x.id === b.dataset.rename), nm = prompt("Name", e.name || ""); if (!nm) return;
       const { data: r } = await X.sb.rpc("shop_rename_employee", { eid: e.id, nm }); if (r === "ok") { e.name = nm.trim(); draw(); } });
@@ -1078,6 +1181,7 @@
       withPw("Removing an employee", () => confirmBox("Remove " + (e.name || e.email) + "?", "They can't log in any more, on any computer or phone. The work they logged stays on the bikes.", "Remove", async () => {
         const { data: r, error } = await X.sb.rpc("shop_remove_employee", { eid: e.id }); if (error || r !== "ok") return note(err(error), true);
         S.emps = S.emps.filter(x => x.id !== e.id); S.assign = S.assign.filter(a => a.employee_id !== e.id); draw(); note("Removed."); }, true)); });
+      X.app.querySelectorAll("[data-asgto]").forEach(b => b.onclick = () => assignToEmpBox(S.emps.find(x => x.id === b.dataset.asgto)));
   }
   function addEmpBox() {
     const m = modal(`<form class="sx-form" id="aeF" novalidate><div class="sx-f2"><label class="sx-f"><b>Name</b><input name="name" maxlength="80"></label><label class="sx-f"><b>Email <span class="faint">(to send the link)</span></b><input name="email" type="email" maxlength="200"></label></div>
