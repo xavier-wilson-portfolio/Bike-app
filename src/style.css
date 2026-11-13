@@ -3402,3 +3402,55 @@ div.sx-row{cursor:default}
 .lib-hint>svg{width:14px;height:14px;color:var(--faint)}
 .lib-fact .lib-spin{width:14px;height:14px;border-width:2px;display:inline-block;vertical-align:-2px;margin-right:4px}
 .lib-ban.loading>div b{display:block;color:var(--fg)}
+
+/* phone landing: full-screen hero with a rotating bike line-up and live-looking app chips */
+.ld-stage,.ld-pm{display:none}
+@media (max-width:620px){
+.ld-top{background:#131E26;max-width:none;padding:12px 16px}.ld-top .brand-icon{box-shadow:0 0 0 1px rgba(255,255,255,.18);border-radius:10px}.ld-top .wordmark{filter:brightness(0) invert(1)}.ld-top .rv-gear{color:#fff;border-color:rgba(255,255,255,.25)}
+.ld-top .btn.sm:not(.tan){background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
+.ld-hero{margin:0;border-radius:0;padding:4px 20px 30px;min-height:calc(100svh - 66px);display:flex;flex-direction:column;justify-content:flex-start;background:radial-gradient(120% 60% at 50% 18%,#2C5F7C 0,#1B2E3B 48%,#131E26 100%)}
+.ld-hero .ld-art,.ld-pd{display:none}
+.ld-pm{display:block;font-size:16.5px!important;color:#D5E7F2!important;margin:0 0 18px!important}
+.ld-stage{display:block;position:relative;height:250px;margin:0 -20px 2px;overflow:hidden}
+.ld-glow{position:absolute;left:50%;bottom:22px;width:300px;height:90px;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(217,191,142,.45),transparent);animation:ldPulse 3.2s ease-in-out infinite}
+.ld-sb{position:absolute;left:14%;width:72%;bottom:24px;filter:invert(1) brightness(.85) sepia(.25) hue-rotate(160deg);opacity:0;animation:ldCycle 44s ease-in-out infinite}
+.ld-road{position:absolute;left:0;right:0;bottom:24px;height:3px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.55) 0 26px,transparent 26px 52px);animation:ldRoad .6s linear infinite;opacity:.5}
+.ld-chip{position:absolute;display:flex;align-items:center;gap:8px;padding:7px 11px;border-radius:12px;background:rgba(255,255,255,.95);color:#17232C;font-size:11.5px;line-height:1.2;box-shadow:0 8px 24px rgba(0,0,0,.28)}
+.ld-chip b{display:block;font-size:12px}.ld-chip span{display:flex;flex-direction:column}.ld-chip i{width:9px;height:9px;border-radius:50%;flex:none}
+.ld-chip .amb{background:#D9932B}.ld-chip .grn{background:#3E9B62}.ld-chip .blu{background:#2C7FB0}
+.ld-cg{position:absolute;inset:0;opacity:0;animation:ldCycle 44s ease-in-out infinite}.ld-chip.c1{left:14px;top:14px}.ld-chip.c2{right:14px;bottom:44px}
+.ld-k{display:inline-block;align-self:flex-start;padding:5px 11px;border-radius:999px;background:rgba(217,191,142,.14);border:1px solid rgba(217,191,142,.35);font-size:11px}
+.ld-hero h1{font-size:42px;line-height:1;margin:12px 0 10px}
+.ld-ride label{color:#fff}.ld-ride .btn.tan{background:#D9BF8E;color:#17232C;border-color:#D9BF8E;box-shadow:0 0 0 0 rgba(217,191,142,.55);animation:ldBtn 2.6s ease-out infinite}
+.ld-cta{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}.ld-cta .btn{justify-content:center;text-align:center}.ld-cta [data-nav=signin]{display:none}
+.ld-follow{margin-top:14px}
+}
+@keyframes ldCycle{0%{opacity:0}4.5%{opacity:1}12.5%{opacity:1}17%{opacity:0}100%{opacity:0}}
+@keyframes ldRoad{to{background-position:-52px 0}}
+@keyframes ldFloat{50%{transform:translateY(-6px)}}
+@keyframes ldPulse{50%{opacity:.55;transform:translateX(-50%) scale(.92)}}
+@keyframes ldBtn{0%{box-shadow:0 0 0 0 rgba(217,191,142,.5)}70%,100%{box-shadow:0 0 0 12px rgba(217,191,142,0)}}
+@media (prefers-reduced-motion:reduce){.ld-cg:first-of-type{opacity:1}.ld-cg,.ld-sb,.ld-road,.ld-chip,.ld-glow,.ld-ride .btn.tan{animation:none!important}.ld-sb:first-of-type{opacity:1}}
+
+/* desktop landing: the three bikes take turns in the spotlight, each with its own reminders */
+@media (min-width:621px){
+.ld-art .ld-s{animation:ldSpot 21s ease-in-out infinite;opacity:.32}.ld-art .ld-s.s1{animation-delay:7s}.ld-art .ld-s.s2{animation-delay:14s}
+.ld-art .ld-chip{position:absolute;display:flex;align-items:center;gap:9px;padding:9px 13px;border-radius:13px;background:rgba(255,255,255,.96);color:#17232C;font-size:12.5px;line-height:1.25;box-shadow:0 10px 28px rgba(0,0,0,.3)}
+.ld-art .ld-chip b{display:block;font-size:13.5px}.ld-art .ld-chip span{display:flex;flex-direction:column}.ld-art .ld-chip i{width:10px;height:10px;border-radius:50%;flex:none}
+.ld-art .ld-chip .amb{background:#D9932B}.ld-art .ld-chip .grn{background:#3E9B62}.ld-art .ld-chip .blu{background:#2C7FB0}
+.ld-dg{position:absolute;inset:0;z-index:5;opacity:0;animation:ldDesk 21s ease-in-out infinite;pointer-events:none}
+.ld-dg.g0 .d1{left:4%;top:0}.ld-dg.g0 .d2{right:0;top:44%}
+.ld-dg.g1 .d1{left:0;top:30%}.ld-dg.g1 .d2{left:30%;bottom:-6px}
+.ld-dg.g2 .d1{right:12%;bottom:112px}
+}
+@keyframes ldSpot{0%{opacity:.25;z-index:1}1%{z-index:3}8%{opacity:.95}33%{opacity:.95}40%{opacity:.25;z-index:3}41%{z-index:1}100%{opacity:.25;z-index:1}}
+@keyframes ldDesk{0%{opacity:0}8%{opacity:1}33%{opacity:1}40%{opacity:0}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.ld-art .ld-s,.ld-dg,.ld-art .ld-chip{animation:none!important}.ld-art .ld-s.s0,.ld-dg.g0{opacity:1}}
+
+/* reminders grow slowly while they're on screen */
+.ld-cg .ld-chip{animation:ldGrowM 44s linear infinite;animation-delay:var(--d,0s)}
+.ld-dg .ld-chip{animation:ldGrowD 21s linear infinite;animation-delay:var(--d,0s)}
+.ld-cg .ld-chip.c1,.ld-dg .ld-chip.d1{transform-origin:left center}.ld-cg .ld-chip.c2,.ld-dg.g0 .ld-chip.d2,.ld-dg.g2 .ld-chip{transform-origin:right center}
+@keyframes ldGrowM{0%{transform:scale(.97)}17%{transform:scale(1.03)}100%{transform:scale(1.03)}}
+@keyframes ldGrowD{0%{transform:scale(.97)}40%{transform:scale(1.03)}100%{transform:scale(1.03)}}
+@media (prefers-reduced-motion:reduce){.ld-cg .ld-chip,.ld-dg .ld-chip{animation:none!important}}
