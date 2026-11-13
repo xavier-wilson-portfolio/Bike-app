@@ -344,7 +344,7 @@ function fieldInput(c, f, v) {
     return `<div class="row" data-refs="${f.k}">${vals.map(x => `<span class="tag" style="display:inline-flex;gap:4px;align-items:center"><button type="button" class="btn sm" style="border:0;padding:0 2px;background:none" data-open="${f.ref}|${esc(x)}">${esc(f.ref === "schedule" && S.schedule[x] ? S.schedule[x].name : x)}</button>${ME.canWrite ? `<button type="button" aria-label="Remove ${esc(x)}" data-rm="${esc(x)}" style="all:unset;cursor:pointer">×</button>` : ""}</span>`).join("") || `<span class="faint">none</span>`}
     ${ME.canWrite ? `<select id="${id}" data-addref="${f.k}" style="max-width:260px"><option value="">+ add…</option>${f.ref === "schedule" ? schedRefOpts(rows) : rows.map(r => `<option value="${esc(r.id)}">${esc(r.id + " · " + titleOf(f.ref, r)).slice(0, 70)}</option>`).join("")}</select>` : ""}</div>`; }
   const type = f.type === "num" || f.type === "money" ? "number" : f.type === "date" ? "date" : f.type === "url" ? "url" : "text";
-  return `<input id="${id}" data-k="${f.k}" type="${type}" ${type === "number" ? 'step="any" inputmode="decimal"' : ""} value="${esc(v ?? "")}"${req}${dis} ${f.list ? `list="dl-${f.list}"` : ""}>`;
+  return `<input id="${id}" data-k="${f.k}" type="${type}" ${type === "number" ? 'step="any" inputmode="decimal"' : ""} value="${esc(type === "number" && window.rvIn ? rvIn(f.k, v) ?? "" : v ?? "")}"${req}${dis} ${f.list ? `list="dl-${f.list}"` : ""}>`;
 }
 // the schedule picker on a service: this bike's items first, then common ones that get added to the schedule when picked
 function schedRefOpts(rows) {
@@ -395,7 +395,7 @@ function renderDrawer(keepScroll) {
   if (prevScroll) host.querySelector(".body").scrollTop = prevScroll;
   const form = $("#recForm");
   const mark = () => { drawerState.dirty = true; };
-  $$("[data-k]", form).forEach(el => el.addEventListener(el.type === "checkbox" || el.tagName === "SELECT" ? "change" : "input", () => { const f = sc.fields.find(x => x.k === el.dataset.k); r[f.k] = el.type === "checkbox" ? el.checked : (f.type === "num" || f.type === "money") ? (el.value === "" ? "" : n(el.value)) : el.value; mark(); }));
+  $$("[data-k]", form).forEach(el => el.addEventListener(el.type === "checkbox" || el.tagName === "SELECT" ? "change" : "input", () => { const f = sc.fields.find(x => x.k === el.dataset.k); r[f.k] = el.type === "checkbox" ? el.checked : (f.type === "num" || f.type === "money") ? (el.value === "" ? "" : window.rvOut ? rvOut(f.k, n(el.value)) : n(el.value)) : el.value; mark(); }));
   $$("[data-addref]", form).forEach(el => el.addEventListener("change", async () => { if (!el.value) return; const k = el.dataset.addref; let v = el.value;
     if (/^(preset|custom):/.test(v)) { el.disabled = true; try { v = await schedRefPick(v); } catch (e) { v = null; } el.disabled = false; if (!v) { el.value = ""; return; } }
     if (!(r[k] || []).includes(v)) r[k] = [...(r[k] || []), v];

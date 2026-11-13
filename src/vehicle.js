@@ -27,7 +27,7 @@ function vehQueue() { return (meta().vehicleRequests || []).filter(r => r.status
 function vehEstimate(key) {
   const q = vehQueue(), days = +meta().vehDays || VEH_DAYS_DEFAULT, i = q.findIndex(r => r.key === key), pos = i < 0 ? q.length + 1 : i + 1;
   const d = new Date(); d.setDate(d.getDate() + pos * days);
-  return { pos, ahead: pos - 1, days: pos * days, date: d.toLocaleDateString("en-US", { month: "short", day: "numeric" }) };
+  return { pos, ahead: pos - 1, days: pos * days, date: d.toLocaleDateString(window.rvLocale ? rvLocale() : "en-US", { month: "short", day: "numeric" }) };
 }
 function vehResultHtml(q) {
   const cur = curVehicle();

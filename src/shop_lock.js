@@ -57,7 +57,7 @@
     X.app.innerHTML = `<div class="lk"><header class="lk-top"><span class="sx-brand"><img src="img/revora-icon.svg" alt=""><img class="sx-word" src="img/revora-word-white.svg" alt="Revora"></span>${shopName ? `<span class="sx-shopname">${esc(shopName)}</span>` : ""}</header><main class="lk-main">${inner}</main></div>`;
     return X.app.querySelector(".lk-main");
   }
-  function tickClock() { const c = document.getElementById("lgClock"); if (!c) return; const d = new Date(); c.textContent = d.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" }); const t = document.getElementById("lgDate"); if (t) t.textContent = d.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" }); setTimeout(tickClock, 15e3); }
+  function tickClock() { const c = document.getElementById("lgClock"); if (!c) return; const d = new Date(); c.textContent = d.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" }); const t = document.getElementById("lgDate"); if (t) t.textContent = d.toLocaleDateString(window.rvLocale ? rvLocale() : "en-US", { weekday: "long", month: "long", day: "numeric" }); setTimeout(tickClock, 15e3); }
   function loginFrame(sh, card) {
     X.app.innerHTML = `<div class="lg">${shopSide(sh)}<main class="lg-main"><div class="lg-card">${card}</div></main></div>`;
     tickClock(); return X.app.querySelector(".lg-card");

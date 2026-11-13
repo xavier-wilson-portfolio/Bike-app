@@ -68,7 +68,7 @@ function listingText(kind, v, links) {
   lines.push(short ? "Title in hand. Message me with questions." : "Clean title in hand. Happy to answer questions or send more photos. Serious buyers can come see it and take it for a test ride with cash in hand.");
   return lines.join(short ? " " : "\n\n");
 }
-const fmtMonth = d => { const x = new Date(String(d).slice(0, 10) + "T12:00:00"); return isNaN(x) ? "" : x.toLocaleDateString("en-US", { month: "short", year: "numeric" }); };
+const fmtMonth = d => { const x = new Date(String(d).slice(0, 10) + "T12:00:00"); return isNaN(x) ? "" : x.toLocaleDateString(window.rvLocale ? rvLocale() : "en-US", { month: "short", year: "numeric" }); };
 
 function valueChart(v) {
   const s = SALE(), H = (s.history || []).filter(h => h.date && n(h.value) > 0).sort((a, b) => a.date.localeCompare(b.date));
@@ -219,7 +219,7 @@ function billOfSale() {
     mm.querySelector("[data-x]").onclick = closeModal;
     mm.querySelector("[data-ok]").onclick = () => {
       const g = id => mm.querySelector(id).value.trim(), line = v => v ? esc(v) : "&nbsp;";
-      const price = g("#bsP") ? usd0(+g("#bsP")) : "", d = g("#bsD") ? new Date(g("#bsD") + "T12:00:00").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" }) : "";
+      const price = g("#bsP") ? usd0(+g("#bsP")) : "", d = g("#bsD") ? new Date(g("#bsD") + "T12:00:00").toLocaleDateString(window.rvLocale ? rvLocale() : "en-US", { month: "long", day: "numeric", year: "numeric" }) : "";
       const html = `<div class="bos"><h1>Motorcycle bill of sale</h1>
         <p>On <u>${line(d)}</u>, the seller named below sold the motorcycle described below to the buyer named below for <u>${line(price)}</u>, paid in full.</p>
         <table><tr><th>Year</th><td>${line(String(BIKE.year || ""))}</td><th>Make</th><td>${line(BIKE.make)}</td></tr><tr><th>Model</th><td>${line(BIKE.model)}</td><th>Color</th><td>${line(g("#bsC"))}</td></tr>

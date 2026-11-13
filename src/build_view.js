@@ -5,8 +5,8 @@
   const e = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const num = v => Math.round(+v || 0).toLocaleString("en-US");
   const usd = v => "$" + Math.round(+v || 0).toLocaleString("en-US");
-  const day = s => { if (!s) return ""; const d = new Date(String(s).slice(0, 10) + "T12:00:00"); return isNaN(d) ? "" : d.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }); };
-  const mon = s => { if (!s) return ""; const d = new Date(String(s).slice(0, 10) + "T12:00:00"); return isNaN(d) ? "" : d.toLocaleDateString("en-US", { month: "long", year: "numeric" }); };
+  const day = s => { if (!s) return ""; const d = new Date(String(s).slice(0, 10) + "T12:00:00"); return isNaN(d) ? "" : d.toLocaleDateString(window.rvLocale ? rvLocale() : "en-US", { month: "short", day: "numeric", year: "numeric" }); };
+  const mon = s => { if (!s) return ""; const d = new Date(String(s).slice(0, 10) + "T12:00:00"); return isNaN(d) ? "" : d.toLocaleDateString(window.rvLocale ? rvLocale() : "en-US", { month: "long", year: "numeric" }); };
   const img = s => typeof s === "string" && (/^data:image\/(png|jpe?g|webp);base64,[A-Za-z0-9+/=]+$/.test(s) || /^img\/sil\/[a-z0-9-]+\.(svg|webp|png)$/.test(s)) ? s : "";
   const TL = { service: ["wrench", "Service"], mod: ["bolt", "Mod"], photo: ["cam", "Photo"], mile: ["flag", "Milestone"], start: ["flag", "Started"] };
   const ICO = {

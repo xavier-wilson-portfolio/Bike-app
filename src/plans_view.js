@@ -121,7 +121,7 @@
         ? `<s>${$(p.m)}</s><b>${$(p.deal)}</b><span>a month for your first ${DEAL_MONTHS} months, then ${$(p.m)}</span>`
         : `<b>${$(p.m)}</b><span>a month</span>`;
     const act = p => {
-      if (cur === p.id) return `<span class="pl-cur">Your plan${opts.comp ? " · gifted" : opts.paid ? "" : opts.until && p.id !== "free" ? " until " + e(new Date(opts.until).toLocaleDateString("en-US", { month: "short", day: "numeric" })) : ""}</span>${opts.paid && RV_CONFIG.billingPortal ? `<a class="pl-manage" data-manage href="${e(RV_CONFIG.billingPortal)}" target="_blank" rel="noopener">Manage billing or cancel</a>` : ""}`;
+      if (cur === p.id) return `<span class="pl-cur">Your plan${opts.comp ? " · gifted" : opts.paid ? "" : opts.until && p.id !== "free" ? " until " + e(new Date(opts.until).toLocaleDateString(window.rvLocale ? rvLocale() : "en-US", { month: "short", day: "numeric" })) : ""}</span>${opts.paid && RV_CONFIG.billingPortal ? `<a class="pl-manage" data-manage href="${e(RV_CONFIG.billingPortal)}" target="_blank" rel="noopener">Manage billing or cancel</a>` : ""}`;
       // gifted: everything up to their plan is included, nothing to buy
       if (opts.comp) return RANK[p.id] <= RANK[cur] ? `<button class="btn" disabled>Included</button>` : `<span class="faint" style="font-size:13px">Not in your gift</span>`;
       // already paying: changes go through Stripe's billing page so nobody ends up with two subscriptions

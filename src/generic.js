@@ -50,7 +50,7 @@ if (GENERIC) {
       const mm = maintMoney(), hist = svcDone().sort((a, b) => String(b.date).localeCompare(String(a.date))).slice(0, 5);
       const allJobs = sorted("tasks"), doneJobs = allJobs.filter(tasksDone).sort((a, b) => String(b.updated || b.ts || "").localeCompare(String(a.updated || a.ts || ""))).slice(0, 3);
       const open = allJobs.filter(t => !tasksClosed(t)).slice(0, 5), parts = sorted("parts"), photos = sorted("docs").filter(d => d.file || d.link);
-      const eta = m.requestKey ? (() => { const d = new Date(m.requestedAt || Date.now()); d.setDate(d.getDate() + 3); return d < new Date() ? "any day now" : "by " + d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }); })() : "";
+      const eta = m.requestKey ? (() => { const d = new Date(m.requestedAt || Date.now()); d.setDate(d.getDate() + 3); return d < new Date() ? "any day now" : "by " + d.toLocaleDateString(window.rvLocale ? rvLocale() : "en-US", { weekday: "short", month: "short", day: "numeric" }); })() : "";
       const ring = pct => { const r = 26, c = 2 * Math.PI * r, f = pct == null ? 0 : pct / 100; return `<svg class="mh-ring" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="${r}" class="bg"/><circle cx="32" cy="32" r="${r}" class="fg ${ov ? "red" : sn ? "amber" : "green"}" stroke-dasharray="${c.toFixed(1)}" stroke-dashoffset="${(c * (1 - f)).toFixed(1)}"/></svg>`; };
       const stat = (cls, k, v, s, attrs) => `<button class="mh-stat ${cls}" ${attrs}><span class="mh-k">${k}</span><span class="mh-v">${v}</span><span class="mh-s">${s}</span></button>`;
       const y = String(new Date().getFullYear()), doneY = svcDone().filter(r => String(r.date).startsWith(y));
@@ -68,7 +68,7 @@ if (GENERIC) {
           <div class="mh-stage">${heroPhotoHtml()}</div>
         </div>
         <div class="mh-stats">
-          ${stat("c-blue", ic("gauge") + "Odometer", o ? milesFmt(o.miles) + `<small> mi</small>` : "—", o ? "Read " + fmtDate(o.date) : W ? "Tap to add a reading" : "No reading yet", W ? 'data-mh="odo"' : "")}
+          ${stat("c-blue", ic("gauge") + "Odometer", o ? (window.rvDist ? rvDist(o.miles) : milesFmt(o.miles)) + `<small> ${window.rvUnitOf ? rvUnitOf("dist") : "mi"}</small>` : "—", o ? "Read " + fmtDate(o.date) : W ? "Tap to add a reading" : "No reading yet", W ? 'data-mh="odo"' : "")}
           ${stat("ring " + (ov ? "c-red" : sn ? "c-amber" : "c-green"), ic("shield") + "Service health", `${ring(health)}<span>${health == null ? "—" : health + "%"}</span>`, !st.length ? "Add a schedule to start" : ov ? ov + " overdue" + (sn ? ", " + sn + " due soon" : "") : sn ? sn + " due soon" : tracked.length ? "Everything up to date" : "Set when items were last done", 'data-go="maintenance"')}
           ${stat((next && next.status === "over" ? "c-red" : next && next.status === "soon" ? "c-amber" : "c-tan") + " txt", ic("clock") + "Next up", next ? esc(next.item.name) : "—", next ? esc(dueTxt(next)) : "Nothing scheduled yet", next && W && next.status !== "ok" ? `data-logfor="${esc(next.item.id)}"` : 'data-go="maintenance"')}
           ${stat("c-navy", ic("dollar") + "Spent this year", money(mm.year), mm.perMile ? "$" + mm.perMile.toFixed(2) + " per mile overall" : mm.total ? money(mm.total) + " all time" : "Add costs when you log", 'data-mh="hist"')}

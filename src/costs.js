@@ -37,17 +37,17 @@ function milesIn(from, to) {
 function addFillUp() {
   const od = odoNow(), last = sorted("fuel").sort((a, b) => String(b.date).localeCompare(String(a.date)))[0];
   modal(`<h2 style="margin:0">Add a fill-up</h2><p class="hint-text" style="margin:2px 0 12px">Odometer, gallons and what you paid. Price per gallon works itself out.</p>
-    <div class="form"><label>Odometer (miles)<input id="fuOdo" type="number" inputmode="numeric" min="0" value="${od ? Math.round(od.miles) : ""}" autofocus></label><label>Gallons<input id="fuGal" type="number" inputmode="decimal" min="0" step="0.001" placeholder="4.2"></label>
+    <div class="form"><label>Odometer (miles)<input id="fuOdo" type="number" inputmode="numeric" min="0" value="${od ? (window.rvIn?rvIn("odometer",Math.round(od.miles)):Math.round(od.miles)) : ""}" autofocus></label><label>Gallons<input id="fuGal" type="number" inputmode="decimal" min="0" step="0.001" placeholder="4.2"></label>
       <label>Total paid<input id="fuTot" type="number" inputmode="decimal" min="0" step="0.01" placeholder="16.80"></label><label>Date<input id="fuDate" type="date" value="${today()}"></label>
       <label>Fuel<select id="fuOct">${SCHEMA.fuel.fields.find(f => f.k === "octane").opts.map(o => `<option ${last && last.octane === o ? "selected" : ""}>${esc(o)}</option>`).join("")}</select></label><label>Station (optional)<input id="fuSt" value="${esc(last ? last.station || "" : "")}"></label>
       <label class="chk full"><input type="checkbox" id="fuFull" checked> Filled to full</label></div>
     <div class="fu-calc" id="fuCalc"></div>
     <div class="row" style="justify-content:flex-end;gap:8px;margin-top:12px"><button class="btn" data-x>Cancel</button><button class="btn pri" data-ok>Save fill-up</button></div>`, m => {
-    const v = s => m.querySelector(s).value, calc = () => { const g = n(v("#fuGal")), t = n(v("#fuTot")); m.querySelector("#fuCalc").textContent = g && t ? `$${(t / g).toFixed(3)} a gallon` : ""; };
+    const v = s => m.querySelector(s).value, calc = () => { const g = n(v("#fuGal")), t = n(v("#fuTot")); m.querySelector("#fuCalc").textContent = g && t ? `$${(t / g).toFixed(3)} a ${window.rvUnitOf && rvUnitOf("vol") === "L" ? "liter" : "gallon"}` : ""; };
     ["#fuGal", "#fuTot"].forEach(s => m.querySelector(s).addEventListener("input", calc));
     m.querySelector("[data-x]").onclick = closeModal;
     m.querySelector("[data-ok]").onclick = async () => {
-      const odo = n(v("#fuOdo")), g = n(v("#fuGal")), t = n(v("#fuTot"));
+      const odo = (window.rvOut?rvOut("odometer",n(v("#fuOdo"))):n(v("#fuOdo"))), g = (window.rvOut ? rvOut("gallons", n(v("#fuGal"))) : n(v("#fuGal"))), t = n(v("#fuTot"));
       if (!odo) { toast("Add the odometer reading.", "err"); return; } if (!g) { toast("Add the gallons.", "err"); return; }
       if (od && odo < od.miles - 1 && !confirm(`That's lower than the last reading (${milesFmt(od.miles)} mi). Save anyway?`)) return;
       closeModal();
@@ -69,7 +69,7 @@ VIEWS.costs = {
     // monthly bars for the last 12 months
     const ms = Array.from({ length: 12 }, (_, i) => addMonths(t.slice(0, 7) + "-01", i - 11).slice(0, 7));
     const mv = ms.map(mo => { const end = addMonths(mo + "-01", 1); const x = ownCosts(mo + "-01", addDays(end, -1)); return { mo, x }; }), mmax = Math.max(1, ...mv.map(v => v.x.total));
-    const bars = `<div class="co-bars" role="img" aria-label="Spending per month, last 12 months">${mv.map(({ mo, x }) => `<div class="co-col" title="${esc(mo)}: ${money(x.total)}"><div class="co-stack" style="height:${(x.total / mmax * 100).toFixed(1)}%">${x.cats.filter(k => k[1] > 0).map(k => `<i style="flex:${k[1]};background:${k[2]}"></i>`).join("")}</div><span>${new Date(mo + "-15T12:00:00").toLocaleDateString("en-US", { month: "short" }).slice(0, 3)}</span></div>`).join("")}</div>`;
+    const bars = `<div class="co-bars" role="img" aria-label="Spending per month, last 12 months">${mv.map(({ mo, x }) => `<div class="co-col" title="${esc(mo)}: ${money(x.total)}"><div class="co-stack" style="height:${(x.total / mmax * 100).toFixed(1)}%">${x.cats.filter(k => k[1] > 0).map(k => `<i style="flex:${k[1]};background:${k[2]}"></i>`).join("")}</div><span>${new Date(mo + "-15T12:00:00").toLocaleDateString(window.rvLocale ? rvLocale() : "en-US", { month: "short" }).slice(0, 3)}</span></div>`).join("")}</div>`;
     const spark = runs.length > 1 ? (() => { const r = runs.slice(-12), lo = Math.min(...r.map(x => x.mpg)), hi = Math.max(...r.map(x => x.mpg), lo + 1), W2 = 260, H = 60;
       const pts = r.map((x, i) => `${(i / (r.length - 1) * W2).toFixed(1)},${(H - 6 - (x.mpg - lo) / (hi - lo) * (H - 14)).toFixed(1)}`).join(" ");
       return `<svg class="co-spark" viewBox="0 0 ${W2} ${H}" role="img" aria-label="Miles per gallon on the last ${r.length} tanks, from ${lo.toFixed(1)} to ${hi.toFixed(1)}"><polyline points="${pts}"/></svg>`; })() : "";
@@ -79,9 +79,9 @@ VIEWS.costs = {
       <div class="co-per seg">${[["year", "This year"], ["12m", "Last 12 months"], ["all", "All time"]].map(([k, l]) => `<button class="${per === k ? "on" : ""}" data-per="${k}">${l}</button>`).join("")}</div>
       <div class="mh-stats md-stats">
         ${stat("c-navy", ic("dollar") + "Cost to own", money(c.total), label.toLowerCase())}
-        ${stat("c-tan", ic("gauge") + "Per mile", miles ? "$" + (c.total / miles).toFixed(2) : "—", miles ? milesFmt(miles) + " mi ridden" : "Log the odometer to see this")}
+        ${stat("c-tan", ic("gauge") + "Per mile", miles ? "$" + (c.total / (window.rvUnitOf && rvUnitOf("dist") === "km" ? miles * 1.609344 : miles)).toFixed(2) : "—", miles ? milesFmt(miles) + " mi ridden" : "Log the odometer to see this")}
         ${stat("c-blue", ic("calendar") + "Per month", money(c.total / months), "averaged over " + months + " month" + (months === 1 ? "" : "s"))}
-        ${stat("c-green", ic("fuel") + "Miles per gallon", avg ? avg.toFixed(1) : "—", lastR ? "last tank " + lastR.mpg.toFixed(1) : "needs two full tanks")}
+        ${stat("c-green", ic("fuel") + "Miles per gallon", avg ? avg.toFixed(1) + " mpg" : "—", lastR ? "last tank " + lastR.mpg.toFixed(1) + " mpg" : "needs two full tanks")}
       </div>
       <div class="co-grid">
         <section class="mh-panel"><div class="mh-ph"><h2><span class="mh-hi">${ic("dollar")}</span>Where the money goes</h2><span class="faint">${esc(label)}</span></div>
@@ -94,7 +94,7 @@ VIEWS.costs = {
       </div>
       <section class="mh-panel co-fuel"><div class="mh-ph"><h2><span class="mh-hi">${ic("fuel")}</span>Fuel log</h2>${fs.length ? `<button class="linkbtn" id="coCsv">${ic("download")} CSV</button>` : ""}</div>
         ${fs.length ? `<div class="co-fstats"><div><b>${avg ? avg.toFixed(1) : "—"}</b><span>average mpg</span></div><div><b>${runs.length ? Math.max(...runs.map(r => r.mpg)).toFixed(1) : "—"}</b><span>best tank</span></div><div><b>${ppgAvg ? "$" + ppgAvg.toFixed(2) : "—"}</b><span>average a gallon</span></div><div><b>${money(c.fuel)}</b><span>on fuel, ${esc(label.toLowerCase())}</span></div>${spark ? `<div class="co-sp">${spark}<span>mpg, last ${Math.min(12, runs.length)} tanks</span></div>` : ""}</div>` + table("fuel-log", fs.map(f => ({ ...f, _mpg: (runs.find(r => r.id === f.id) || {}).mpg })), [
-          { k: "date", label: "Date", get: r => fmtDate(r.date), sort: r => r.date }, { k: "odometer", label: "Odometer", get: r => milesFmt(r.odometer), cls: "r", sort: r => n(r.odometer) },
+          { k: "date", label: "Date", get: r => fmtDate(r.date), sort: r => r.date }, { k: "odometer", label: "Odometer", get: r => (window.rvDist ? rvDist(r.odometer) : milesFmt(r.odometer)), cls: "r", sort: r => n(r.odometer) },
           { k: "gallons", label: "Gallons", get: r => n(r.gallons).toFixed(2), cls: "r", sort: r => n(r.gallons) }, { k: "total", label: "Paid", get: r => fuelCost(r) ? money2(fuelCost(r)) : "—", cls: "r", sort: r => fuelCost(r) },
           { k: "ppg", label: "Per gallon", get: r => ppgOf(r) ? "$" + ppgOf(r).toFixed(3) : "—", cls: "r", sort: r => ppgOf(r) },
           { k: "mpg", label: "MPG", get: r => r._mpg ? `<b>${r._mpg.toFixed(1)}</b>` : r.full === false ? `<span class="faint">partial</span>` : `<span class="faint">—</span>`, cls: "r", sort: r => r._mpg || 0 },

@@ -74,7 +74,7 @@
   const REQ_DAYS = 3;
   const reqKey = (y, mk, md) => [y, mk, md].map(norm).join("-");
   const etaDate = created => { const d = new Date(created || Date.now()); d.setDate(d.getDate() + REQ_DAYS); return d; };
-  const etaTxt = (created, status) => status === "Added" ? "Ready now" : etaDate(created) < new Date() ? "Ready any day now" : "Estimated ready by " + etaDate(created).toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
+  const etaTxt = (created, status) => status === "Added" ? "Ready now" : etaDate(created) < new Date() ? "Ready any day now" : "Estimated ready by " + etaDate(created).toLocaleDateString(window.rvLocale ? rvLocale() : "en-US", { weekday: "short", month: "short", day: "numeric" });
   function guessBike(q) {
     const w = String(q || "").trim().split(/\s+/).filter(Boolean); let year = ""; const rest = [];
     w.forEach(x => { if (!year && /^(19|20)\d{2}$/.test(x)) year = x; else if (!year && /^\d{2}$/.test(x)) year = (+x > 30 ? "19" : "20") + x; else rest.push(x); });
@@ -551,7 +551,7 @@
       .sort((a, b) => String(a.promised || "9999").localeCompare(String(b.promised || "9999")) || String(a.dateIn || "").localeCompare(String(b.dateIn || "")));
     if (!open.length) return;
     const pname = id => { const p = projects.find(x => x.id === id); return p ? p.name || bikeName(bikeOf(p.bike_id)) : ""; };
-    const today = new Date().toISOString().slice(0, 10), fmt = d => d ? new Date(d + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" }) : "";
+    const today = new Date().toISOString().slice(0, 10), fmt = d => d ? new Date(d + "T12:00:00").toLocaleDateString(window.rvLocale ? rvLocale() : "en-US", { month: "short", day: "numeric" }) : "";
     const cols = [["Waiting on the customer", ["Checked in", "Waiting for approval"]], ["In the shop", ["Approved", "In progress", "Waiting for parts"]], ["Ready for pickup", ["Done"]]];
     host.innerHTML = `<section class="wob"><div class="garage-h"><h2>Open work orders</h2><span class="muted">${open.length} open</span></div>
       <div class="wob-cols">${cols.map(([t, ss]) => { const L = open.filter(w => ss.includes(w.status)); return `<div class="wob-col"><h3>${esc(t)} <span>${L.length}</span></h3>${L.map(w => `<button class="wob-card${w.promised && w.promised < today && w.status !== "Done" ? " late" : ""}" data-wob="${esc(w.pid)}|${esc(w.id)}"><b>${esc(w.title || "Work order")}</b><span>${esc(pname(w.pid))}</span><small>${esc(w.id)} · ${esc(w.status)}${w.promised ? " · ready by " + esc(fmt(w.promised)) : ""}</small></button>`).join("") || `<p class="faint">Nothing here.</p>`}</div>`; }).join("")}</div></section>`;

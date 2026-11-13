@@ -7,7 +7,7 @@
   const num = v => Math.round(+v || 0).toLocaleString("en-US");
   const usd = v => "$" + (+v || 0).toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 });
   const usd2 = v => "$" + (+v || 0).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-  const day = s => { if (!s) return ""; const d = new Date(String(s).slice(0, 10) + "T12:00:00"); return isNaN(d) ? "" : d.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }); };
+  const day = s => { if (!s) return ""; const d = new Date(String(s).slice(0, 10) + "T12:00:00"); return isNaN(d) ? "" : d.toLocaleDateString(window.rvLocale ? rvLocale() : "en-US", { month: "short", day: "numeric", year: "numeric" }); };
   const safeImg = s => typeof s === "string" && (/^data:image\/(png|jpe?g|webp);base64,[A-Za-z0-9+/=]+$/.test(s) || /^img\/sil\/[a-z0-9-]+\.(svg|webp|png)$/.test(s)) ? s : "";
   const ST = { over: ["red", "Overdue"], soon: ["amber", "Due soon"], ok: ["green", "Up to date"], none: ["gray", "No start point"], nointerval: ["gray", "No interval"] };
 

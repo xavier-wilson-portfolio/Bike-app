@@ -3,7 +3,7 @@
 (function () {
   const e = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const m2 = v => "$" + (+v || 0).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-  const day = s => { if (!s) return ""; const d = /T\d/.test(String(s)) ? new Date(s) : new Date(String(s).slice(0, 10) + "T12:00:00"); return isNaN(d) ? "" : d.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }); };
+  const day = s => { if (!s) return ""; const d = /T\d/.test(String(s)) ? new Date(s) : new Date(String(s).slice(0, 10) + "T12:00:00"); return isNaN(d) ? "" : d.toLocaleDateString(window.rvLocale ? rvLocale() : "en-US", { month: "short", day: "numeric", year: "numeric" }); };
   // totals from the lines: labor = hours x rate, parts = qty x price; supplies on labor, tax on parts (and labor if the shop taxes it)
   window.rvWoTotals = function (lines, set) {
     set = set || {}; let labor = 0, parts = 0;

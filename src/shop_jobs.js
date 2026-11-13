@@ -10,7 +10,7 @@
     text: '<path d="M4 5h16v11H8l-4 4z"/>', cam: '<path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/>', ask: '<circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .8-1 1.5v.5M12 17h.01"/>', link: '<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/>', x: '<path d="M6 6l12 12M18 6L6 18"/>' };
   const today = () => { const d = new Date(); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); };
   const plusDays = k => { const d = new Date(); d.setDate(d.getDate() + k); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); };
-  const day = d => d ? new Date(d + "T12:00:00").toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }) : "";
+  const day = d => d ? new Date(d + "T12:00:00").toLocaleDateString(window.rvLocale ? rvLocale() : "en-US", { weekday: "short", month: "short", day: "numeric" }) : "";
   const first = s => String(s || "").trim().split(/\s+/)[0] || "";
   const ago = t => { if (!t) return ""; const m = Math.round((Date.now() - new Date(t).getTime()) / 60000); return m < 1 ? "just now" : m < 60 ? m + " min ago" : m < 1440 ? Math.round(m / 60) + " hr ago" : day(String(t).slice(0, 10)); };
 
@@ -217,7 +217,7 @@
       <div class="jp-foot"><span class="jp-st">Scroll either one. Both are optional.</span><button type="button" class="linkbtn jp-clr" hidden>Clear</button></div>`;
     const use = k => () => { mode = k; emit(); };
     const rt = wheel(RT.map(x => ({ label: x[1] })), 3, use("time"), "Ready in");
-    const on = wheel(DAYS.map((d, i) => ({ label: i === 0 ? "Today" : i === 1 ? "Tomorrow" : d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }) })), 1, use("date"), "Ready on");
+    const on = wheel(DAYS.map((d, i) => ({ label: i === 0 ? "Today" : i === 1 ? "Tomorrow" : d.toLocaleDateString(window.rvLocale ? rvLocale() : "en-US", { weekday: "short", month: "short", day: "numeric" }) })), 1, use("date"), "Ready on");
     host.querySelector('[data-w="rt"]').appendChild(rt.el); host.querySelector('[data-w="on"]').appendChild(on.el);
     host.querySelector(".jp-clr").onclick = () => { mode = null; emit(); };
     function emit() {

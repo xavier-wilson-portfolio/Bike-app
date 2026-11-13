@@ -42,7 +42,7 @@ function forecastAll() {
     return { it, st, due, basis, byMiles, byTime, remind };
   });
 }
-const fmtShort = iso => { if (!iso) return ""; const d = new Date(iso + "T12:00:00"); return d.toLocaleDateString("en-US", { month: "short", day: "numeric", year: d.getFullYear() !== new Date().getFullYear() ? "numeric" : undefined }); };
+const fmtShort = iso => { if (!iso) return ""; const d = new Date(iso + "T12:00:00"); return d.toLocaleDateString(window.rvLocale ? rvLocale() : "en-US", { month: "short", day: "numeric", year: d.getFullYear() !== new Date().getFullYear() ? "numeric" : undefined }); };
 
 /* a calendar file with every predicted due date, each with an alert before it */
 function remindersIcs() {
@@ -71,10 +71,10 @@ VIEWS.reminders = {
     const soon = dated.filter(f => daysBetween(t, f.due) <= 30).length, lastRead = o ? daysBetween(o.date, t) : null;
     const reads = sorted("mileage").map(r => ({ miles: n(r.miles), date: r.date, src: r.note || "" })).concat(svcDone().filter(r => n(r.odometer)).map(r => ({ miles: n(r.odometer), date: r.date, src: r.service }))).filter(r => r.date).sort((a, b) => b.date.localeCompare(a.date) || b.miles - a.miles).slice(0, 5);
     const months = {}; dated.forEach(f => { const k = f.due.slice(0, 7); (months[k] = months[k] || []).push(f); });
-    const monthName = k => new Date(k + "-15T12:00:00").toLocaleDateString("en-US", { month: "long", year: "numeric" });
+    const monthName = k => new Date(k + "-15T12:00:00").toLocaleDateString(window.rvLocale ? rvLocale() : "en-US", { month: "long", year: "numeric" });
     const emailTo = (window.RV_CLOUD && RV_CLOUD.user && RV_CLOUD.user.email) || "";   // reminders only ever go to the signed-in account's own email
     const row = f => { const [col, lbl] = SVC_PILL[f.st.status]; const days = daysBetween(t, f.due);
-      return `<div class="rm-item ${f.st.status}"><div class="rm-date"><b>${new Date(f.due + "T12:00:00").getDate()}</b><span>${new Date(f.due + "T12:00:00").toLocaleDateString("en-US", { weekday: "short" })}</span></div>
+      return `<div class="rm-item ${f.st.status}"><div class="rm-date"><b>${new Date(f.due + "T12:00:00").getDate()}</b><span>${new Date(f.due + "T12:00:00").toLocaleDateString(window.rvLocale ? rvLocale() : "en-US", { weekday: "short" })}</span></div>
         <div class="rm-body"><button class="linkbtn rm-name" data-open="schedule|${esc(f.it.id)}">${esc(f.it.name)}</button>
           <span class="faint">${days < 0 ? Math.abs(days) + " days overdue" : days === 0 ? "Due today" : "In " + days + " days"} · ${f.basis === "miles" ? `by mileage, at about ${milesFmt(f.st.nextMiles)} mi` : "by the calendar"}${f.remind && f.remind > t ? ` · reminder ${fmtShort(f.remind)}` : ""}</span></div>
         ${pill(col, lbl)}${W ? `<button class="btn sm${f.st.status === "over" || f.st.status === "soon" ? " pri" : ""}" data-logfor="${esc(f.it.id)}">${ic("check")} Log it</button>` : ""}</div>`; };

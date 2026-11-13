@@ -32,7 +32,7 @@ function wReading(item, fitted) {
   modal(`<h2 style="margin:0">${fitted ? "New " + esc(item.toLowerCase()) + " fitted" : esc(item) + " reading"}</h2>
     <p class="hint-text" style="margin:2px 0 12px">${fitted ? (chain ? "A new chain starts at 0% worn." : "Measure the new tire's tread depth, or use the depth the maker lists.") : chain ? "Use a chain wear gauge, or measure over the length the manual gives and work out the percent." : "Measure in the main grooves near the center, where it wears fastest."}</p>
     <div class="form"><label>${chain ? "Wear (%)" : "Tread depth (" + (wSet().unit === "mm" ? "mm" : "32nds of an inch") + ")"}<input id="wV" type="number" inputmode="decimal" min="0" step="${chain ? 0.1 : wSet().unit === "mm" ? 0.1 : 0.5}" value="${fitted ? (chain ? 0 : cfg.newVal) : ""}" autofocus></label>
-      <label>Odometer (miles)<input id="wO" type="number" min="0" value="${od ? Math.round(od.miles) : ""}"></label><label>Date<input id="wD" type="date" value="${today()}"></label>
+      <label>Odometer (miles)<input id="wO" type="number" min="0" value="${od ? (window.rvIn?rvIn("odometer",Math.round(od.miles)):Math.round(od.miles)) : ""}"></label><label>Date<input id="wD" type="date" value="${today()}"></label>
       ${fitted ? `<label>${chain ? "Replace at (%)" : "Replace at"}<input id="wL" type="number" min="0" step="0.1" value="${cfg.limit}"></label>` : ""}
       <label class="full">Notes (optional)<input id="wN" placeholder="${fitted ? "Brand and model, where you bought it" : "Anything you noticed"}"></label></div>
     <div class="row" style="gap:10px;align-items:center;margin-top:10px"><button class="btn sm" id="wP">${ic("camera")} Add a photo</button><span class="faint" id="wPs"></span></div>
@@ -42,7 +42,7 @@ function wReading(item, fitted) {
     m.querySelector("#wP").onclick = () => wPhotoPick((d, nm) => { photo = d; pname = nm; m.querySelector("#wPs").innerHTML = `<img src="${d}" alt="" style="height:38px;border-radius:6px;vertical-align:middle"> Photo added`; });
     m.querySelector("[data-ok]").onclick = async () => {
       const v = m.querySelector("#wV").value; if (v === "") { toast("Add the reading.", "err"); return; }
-      const odo = n(m.querySelector("#wO").value), date = m.querySelector("#wD").value || today(), notes = m.querySelector("#wN").value.trim();
+      const odo = (window.rvOut?rvOut("odometer",n(m.querySelector("#wO").value)):n(m.querySelector("#wO").value)), date = m.querySelector("#wD").value || today(), notes = m.querySelector("#wN").value.trim();
       closeModal();
       let docId = ""; if (photo) { const d = blank("docs", { title: item + (fitted ? " fitted" : " wear") + " " + fmtDate(date), kind: "Inspection evidence", date, file: photo, fileName: pname || "wear.jpg", folder: "Wear", tags: "wear " + item.toLowerCase() }); await store.put("docs", d, { noLog: true }); docId = d.id; }
       await store.put("wear", blank("wear", { item, date, odometer: odo, value: n(v), kind: fitted ? "New one fitted" : "Reading", docId, notes }), { action: (fitted ? "fitted a new " : "added a wear reading for the ") + item.toLowerCase() });
@@ -64,7 +64,7 @@ VIEWS.wear = {
         ${f.cur == null ? `<p class="muted" style="margin:0">No readings yet. Start with ${since ? "a reading" : "New one fitted if it's new, or add today's reading"}.</p>`
           : `<div class="wr-now"><b>${wFmt(item, f.cur)}</b><span>${item === "Chain" ? "worn" : "tread left"} · replace at ${wFmt(item, f.cfg.limit)}</span></div>
             <div class="wr-bar" role="img" aria-label="${Math.round(f.frac * 100)}% of its life used"><i style="width:${(f.frac * 100).toFixed(0)}%"></i></div>
-            <div class="wr-est">${f.milesLeft != null ? `<div><b>${milesFmt(f.milesLeft)}</b><span>miles left, roughly</span></div>${f.date ? `<div><b>${esc(fmtDate(f.date))}</b><span>at your riding pace</span></div>` : ""}` : `<div><span class="muted">Add another reading a few hundred miles from now to see miles left.</span></div>`}</div>
+            <div class="wr-est">${f.milesLeft != null ? `<div><b>${(window.rvDist ? rvDist(f.milesLeft) : milesFmt(f.milesLeft))}</b><span>miles left, roughly</span></div>${f.date ? `<div><b>${esc(fmtDate(f.date))}</b><span>at your riding pace</span></div>` : ""}` : `<div><span class="muted">Add another reading a few hundred miles from now to see miles left.</span></div>`}</div>
             ${spark}`}
         ${since ? `<div class="faint" style="font-size:12.5px">Fitted ${esc(fmtDate(since.date))}${n(since.odometer) ? " at " + milesFmt(since.odometer) + " mi" : ""}${since.notes ? " · " + esc(since.notes) : ""}</div>` : ""}
         ${reads.length ? `<div class="wr-reads">${reads.slice(-5).reverse().map(r => `<div class="wr-r"><span>${esc(fmtDate(r.date))}${n(r.odometer) ? " · " + milesFmt(r.odometer) + " mi" : ""}</span><b>${r.kind === "New one fitted" ? "New, " : ""}${wFmt(item, r.value)}</b>${r.docId && S.docs[r.docId] ? `<button class="wr-ph" data-wr-doc="${esc(r.docId)}" aria-label="See photo"><img src="${S.docs[r.docId].file}" alt=""></button>` : ""}</div>`).join("")}</div>` : ""}
