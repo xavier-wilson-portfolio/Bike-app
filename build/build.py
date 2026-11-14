@@ -66,7 +66,7 @@ css = (src / 'style.css').read_text()
 import sys; sys.path.insert(0, str(ROOT / 'build')); from darkify import darkify
 css, n_dark = darkify(css)
 print('dark colors', n_dark)
-loader = (src / 'cloud.js').read_text() + '\n' + (src / 'report_view.js').read_text() + '\n' + (src / 'build_view.js').read_text() + '\n' + (src / 'wo_view.js').read_text() + '\n' + (src / 'plans_view.js').read_text() + '\n' + (src / 'shop_view.js').read_text() + '\n' + (src / 'admin_view.js').read_text() + '\n' + (src / 'shop_due.js').read_text() + '\n' + (src / 'shop_jobs.js').read_text() + '\n' + (src / 'shop_import.js').read_text() + '\n' + (src / 'shopcrm_view.js').read_text() + '\n' + (src / 'client_view.js').read_text() + '\n' + (src / 'shop_lock.js').read_text() + '\n' + (src / 'legal.js').read_text() + '\n' + (src / 'loader.js').read_text() + '\n' + (src / 'intl.js').read_text()
+loader = (src / 'cloud.js').read_text() + '\n' + (src / 'report_view.js').read_text() + '\n' + (src / 'build_view.js').read_text() + '\n' + (src / 'wo_view.js').read_text() + '\n' + (src / 'plans_view.js').read_text() + '\n' + (src / 'shop_view.js').read_text() + '\n' + (src / 'admin_view.js').read_text() + '\n' + (src / 'shop_due.js').read_text() + '\n' + (src / 'shop_jobs.js').read_text() + '\n' + (src / 'shop_import.js').read_text() + '\n' + (src / 'shopcrm_view.js').read_text() + '\n' + (src / 'client_view.js').read_text() + '\n' + (src / 'shop_lock.js').read_text() + '\n' + (src / 'legal.js').read_text() + '\n' + (src / 'tokens.js').read_text() + '\n' + (src / 'loader.js').read_text() + '\n' + (src / 'intl.js').read_text()
 cfg_file = ROOT / 'data' / 'config.json'   # public settings only: Supabase URL and publishable key
 cfg = json.loads(cfg_file.read_text()) if cfg_file.exists() else {}
 import hashlib
@@ -108,6 +108,9 @@ html = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name
 </body></html>
 '''
 (out / 'index.html').write_text(html)
+# collector cards: the QR on each card is revoragarage.com/T/<code>; send it to the app as ?c=<code>
+(out / '_redirects').write_text('/T/* /?c=:splat 302\n/t/* /?c=:splat 302\n')
+(out / '404.html').write_text('<!doctype html><meta charset="utf-8"><title>Revora</title><script>var m=location.pathname.match(/^\\/t\\/([A-Za-z0-9]{4,12})\\/?$/i);location.replace(m?"/?c="+m[1].toUpperCase():"/");</script><a href="/">Open Revora</a>')
 (out / 'robots.txt').write_text('User-agent: *\nAllow: /\n\nSitemap: https://revoragarage.com/sitemap.xml\n')
 import datetime
 (out / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url><loc>https://revoragarage.com/</loc><lastmod>' + datetime.date.today().isoformat() + '</lastmod></url>\n</urlset>\n')
