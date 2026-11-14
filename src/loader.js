@@ -512,6 +512,7 @@
       ${shopBand(myShop, allP.length - data.length)}${clientBand(cHomes)}
       ${window.rvAdmin && window.rvPlanOf && myPlan().admin ? `<div id="admHQ"></div>` : ""}
       <div id="woBoard"></div>
+      <div id="tokBand"></div>
       ${data.length ? `<section class="garage"><div class="garage-h"><h2>Your garage</h2><button class="btn sm" data-nav="new">+ New project</button></div>
         <div class="gts">${data.map(tag).join("")}<button class="gt gt-new" data-nav="new"><b>Add a bike</b><span>Start a new project for another bike</span></button></div></section>` : ""}
       ${window.rvShop ? rvShop.html({ kind: "parts", title: "Shop for parts", sub: "Search the big parts stores for any of your bikes. You buy on the store's own site.", bikes: [...new Set(data.map(p => { const b = bikeOf(p.bike_id); return genLabel[p.id] || (b && !b.generic && !b.universal ? bikeName(b) : p.name); }).filter(Boolean))] }) : ""}
@@ -524,6 +525,7 @@
       <section class="gsocial"><div><b>Follow Revora</b><span>Builds, tips and what's new in the app. Tag us in your project.</span></div>${socialsHtml("light")}</section>
       <p class="g-legal"><a href="?privacy">Privacy Policy</a> · <a href="?terms">Terms of Service</a> · <button class="linkbtn g-del" data-delacct>Delete my account</button></p>`, { wide: true, garage: true });
     const adm = document.getElementById("admHQ"); if (adm) window.rvAdmin.mount(adm, sb, note);
+    if (window.rvTokens) rvTokens.band(sb, document.getElementById("tokBand"));
     app.querySelectorAll("[data-crm]").forEach(b => b.onclick = () => goUrl({ crm: 1 }));
     app.querySelectorAll("[data-cmode]").forEach(b => b.onclick = () => { const on = !rvShopLock.customerMode(); rvShopLock.setCustomerMode(on); note(on ? "Customer mode is on. Opening the shop login." : "Customer mode is off."); if (on) goUrl({ crm: 1 }); else showProjects(); });
     app.querySelectorAll("[data-mine]").forEach(b => b.onclick = () => { ls.set("rv.clientHome", ""); goUrl({ mine: 1 }); });
@@ -1074,6 +1076,7 @@
     if (qs.get("build")) return showBuild(qs.get("build"));
     if (qs.has("builds")) return showGallery();
     if (qs.get("wo")) return showWo(qs.get("wo"));
+    if (qs.get("c") && window.rvTokens && sb) return rvTokens.scan(ctx(), qs.get("c"));   // a collector card was scanned
     // opened from the installed app: go back to the page they were on when they installed it
     if (matchMedia("(display-mode: standalone)").matches || navigator.standalone === true) {
       try { localStorage.setItem("rv.appSeen", "1"); const pr = JSON.parse(localStorage.getItem("rv.pendingRoute") || "null");
@@ -1083,6 +1086,7 @@
     if (qs.get("unsub") && window.rvClient) return rvClient.unsubPage(ctx(), qs.get("unsub"));
     if (qs.get("join") && window.rvClient && sb) return rvClient.joinLink(ctx(), qs.get("join"));
     if (session && window.rvClient && await rvClient.afterSignIn(ctx())) return;
+    if (session && window.rvTokens && await rvTokens.afterSignIn(ctx())) return;
     /* ---------- Revora Shop: the owner's computers open into the shop behind "Who's working?"; employees' phones open to their PIN ---------- */
     if (qs.get("emp") && window.rvShopLock && sb) return rvShopLock.inviteLink(ctx(), qs.get("emp"));
     if (window.rvShopLock && window.rvCRM && sb) {
