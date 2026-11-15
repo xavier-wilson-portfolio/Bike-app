@@ -3,7 +3,7 @@
    Scanning plays that bike's token animation (rarer card, bigger animation) and adds it to your garage.
    The account remembers what you've scanned: a token you already have shows without the animation.
    Signed out: the animation plays once (or skip straight to sign-up), and the token is added when you sign up or in.
-   Collect all 8 bikes and a gold star shows next to the Revora logo in your garage (the gold card counts as the scooter). */
+   Collect all 8 bikes and the Revora logo in your garage turns gold (the gold card counts as the scooter). */
 (function () {
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const ls = { get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }, set(k, v) { try { v ? localStorage.setItem(k, v) : localStorage.removeItem(k); } catch (e) {} } };
@@ -61,7 +61,7 @@
 .tk-slot.on{border:0;background:var(--tc);box-shadow:0 0 10px color-mix(in srgb,var(--tc) 50%,transparent)}
 .tk-slot.on i{width:70%;height:60%;background:#17232C;-webkit-mask:var(--sil) center/contain no-repeat;mask:var(--sil) center/contain no-repeat}
 .tk-slot.new{animation:tkPop .6s cubic-bezier(.2,1.6,.4,1) both}
-.tk-star{margin-left:2px;flex:none;align-self:center;filter:drop-shadow(0 0 4px rgba(232,181,58,.55));animation:tkStar .6s cubic-bezier(.2,1.6,.4,1) both}@keyframes tkStar{from{transform:scale(0) rotate(-90deg)}to{transform:none}}
+.tk-wm{position:relative;display:inline-flex;flex-direction:column;gap:4px}.tk-cband{display:block;height:1px;border-radius:0;transform:scaleX(0);transform-origin:left;animation:tkBand .7s .1s ease-out both}@keyframes tkBand{to{transform:none}}.pk-logo.tk-gold .brand-icon{filter:drop-shadow(0 0 5px rgba(232,181,58,.7));animation:tkGoldIn .8s ease-out both}.pk-logo.tk-gold .wordmark{animation:tkGoldW .8s ease-out both}@keyframes tkGoldW{from{filter:brightness(1.8) saturate(.4)}to{filter:none}}@keyframes tkGoldIn{from{filter:brightness(1.8) saturate(.4) drop-shadow(0 0 8px rgba(232,181,58,.8))}to{filter:drop-shadow(0 0 5px rgba(232,181,58,.7))}}@media (prefers-reduced-motion:reduce){.tk-gold img,.tk-cband{animation:none!important;transform:none}.tk-gold .brand-icon{filter:drop-shadow(0 0 5px rgba(232,181,58,.7))}}
 .tk-reward{margin-top:14px;padding:12px 14px;border:1px solid #E8B53A;border-radius:10px;color:#F3E2B5;font-size:14px;opacity:0}
 .tk-go .tk-tier,.tk-go .tk-name,.tk-go .tk-msg,.tk-go .tk-acts,.tk-go .tk-slots,.tk-go .tk-reward{animation:tkFade .5s ease-out both}
 .tk-go .tk-name{animation-delay:.12s}.tk-go .tk-msg{animation-delay:.24s}.tk-go .tk-slots{animation-delay:.34s}.tk-go .tk-reward{animation-delay:.5s}.tk-go .tk-acts{animation-delay:.44s}
@@ -160,7 +160,7 @@
       const toSignup = st => { st && st.remove(); X.showAuth("signup"); };
       const st = reveal(d, st => {
         seen.add(d);
-        body(st, `<p class="tk-msg">Create a free account to add this <b>${esc(CARDS[d].bike.toLowerCase())}</b> token to your garage. Collect all 8 bikes to earn a gold star in your garage.</p>
+        body(st, `<p class="tk-msg">Create a free account to add this <b>${esc(CARDS[d].bike.toLowerCase())}</b> token to your garage. Collect all 8 bikes to turn your Revora logo gold.</p>
           <div class="tk-acts"><button class="tk-btn pri" data-tksignup>Create account</button><button class="tk-btn" data-tksignin>I have an account</button></div>`);
         st.querySelector("[data-tksignup]").onclick = () => toSignup(st);
         st.querySelector("[data-tksignin]").onclick = () => { st.remove(); X.showAuth("signin"); };
@@ -182,7 +182,7 @@
       const left = 8 - (r.count ?? new Set(have.map(x => x === 9 ? 8 : x)).size);
       const msg = r.status === "added" ? `<b>Added to your garage.</b> ${left > 0 ? `${left} more bike${left === 1 ? "" : "s"} to collect.` : "That's the full set."}`
         : `<b>This ${esc(c.bike.toLowerCase())}${c.gold ? " gold" : ""} token is already in your garage.</b> ${left > 0 ? `${left} more bike${left === 1 ? "" : "s"} to collect.` : "You have the full set."}`;
-      body(st, `<p class="tk-msg">${msg}</p>${slots(have, r.status === "added" ? design : 0)}${r.full ? `<div class="tk-reward"><b>Full set!</b> Your garage has a gold star next to the Revora logo now.</div>` : ""}<div class="tk-acts"><button class="tk-btn pri" data-tkgarage>Go to my garage</button></div>`);
+      body(st, `<p class="tk-msg">${msg}</p>${slots(have, r.status === "added" ? design : 0)}${r.full ? `<div class="tk-reward"><b>Full set!</b> Your Revora logo is gold now.</div>` : ""}<div class="tk-acts"><button class="tk-btn pri" data-tkgarage>Go to my garage</button></div>`);
       st.querySelector("[data-tkgarage]").onclick = () => { st.remove(); location.href = location.pathname; };
     }, { instant: r.status !== "added" });
     return true;
@@ -199,7 +199,7 @@
         const c = CARDS[r.design];
         ls.set("rv.tokNew", String(r.design));
         const txt = r.status === "added" ? `The ${c.bike.toLowerCase()}${c.gold ? " gold" : ""} token is in your garage.` : `The ${c.bike.toLowerCase()} token was already in your garage.`;
-        setTimeout(() => X.note(txt + (r.full ? " Full set: you earned the gold star." : "")), 600);
+        setTimeout(() => X.note(txt + (r.full ? " Full set: your Revora logo is gold now." : "")), 600);
       }
     } catch (e) {}
     return false;   // carry on to the garage as normal
@@ -219,15 +219,24 @@
     css();
     const n = new Set(have.map(d => d === 9 ? 8 : d)).size;
     const fresh = +ls.get("rv.tokNew") || 0; ls.set("rv.tokNew", "");
-    host.innerHTML = `<section class="tk-band"><div><b>Collector cards · ${n} of 8</b><span>${n >= 8 ? "Full set. Your gold star is up by the logo." : `Scan the QR code on Revora cards to collect bikes. Get all 8 for a gold star next to the logo.`}${have.includes(9) ? " You have the gold Legendary." : ""}</span></div>${slots(have, fresh)}</section>`;
-    if (n >= 8) star();
+    host.innerHTML = `<section class="tk-band"><div><b>Collector cards · ${n} of 8</b><span>${n >= 8 ? "Full set. Your Revora logo is gold now." : `Scan the QR code on Revora cards to collect bikes. Get all 8 to turn your Revora logo gold.`}${have.includes(9) ? " You have the gold Legendary." : ""}</span></div>${slots(have, fresh)}</section>`;
+    if (n >= 8) goldLogo();
   }
 
-  // full set: a gold star next to the Revora logo at the top of the garage
-  function star() {
+  // full set: the Revora logo turns gold, with a band of the 8 tier colors under the wordmark (Apprentice grey to Master gold)
+  function goldLogo() {
     const logo = document.querySelector(".is-garage .pk-logo");
-    if (!logo || logo.querySelector(".tk-star")) return;
-    logo.insertAdjacentHTML("beforeend", `<svg class="tk-star" viewBox="0 0 24 24" width="18" height="18" aria-label="Full collector set" role="img"><title>Full collector set</title><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z" fill="#E8B53A" stroke="#A8842F" stroke-width="1" stroke-linejoin="round"/></svg>`);
+    if (!logo || logo.classList.contains("tk-gold")) return;
+    const wm = logo.querySelector(".wordmark");
+    if (wm) {
+      const wrap = document.createElement("span"); wrap.className = "tk-wm";
+      wm.replaceWith(wrap); wrap.appendChild(wm);
+      wrap.insertAdjacentHTML("beforeend", `<span class="tk-cband" aria-hidden="true" style="background:linear-gradient(90deg,${[1, 2, 3, 4, 5, 6, 7, 8].map((L, i) => { const c = `color-mix(in srgb,${TIERS[L].color} 85%,#000)`; return `${c} ${i * 12.5}% ${(i + 1) * 12.5}%`; }).join(",")})"></span>`);
+    }
+    // the whole logo turns gold, like the gold card
+    const ic = logo.querySelector(".brand-icon"); if (ic) ic.src = "img/revora-icon-gold.svg";
+    if (wm) wm.src = "img/revora-word-gold.svg";
+    logo.classList.add("tk-gold");
   }
 
   window.rvTokens = { scan, afterSignIn, band, reveal, CARDS, TIERS };
