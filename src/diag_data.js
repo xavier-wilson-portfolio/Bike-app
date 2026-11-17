@@ -160,7 +160,7 @@ function seqSteps(d) {
       { t: "Pads out", hl: ["padI", "padO"], view: "assembled", d: "With the caliper off the disc, take out both pads. Note which way round they go." },
       { t: "Piston out", hl: ["piston"], view: "assembled", d: "Push the piston out with low-pressure air through the hose port, with a rag in the jaws to catch it. Keep fingers clear." },
       { t: "Boot and seal out", hl: ["boot", "seal"], view: "exploded", d: "Remove the boot, then pick the seal out of its groove with a plastic or brass pick. Don't scratch the bore." },
-      { t: "Clean and inspect", hl: ["body", "piston", "axle"], view: "exploded", d: "Clean everything with brake cleaner or fresh brake fluid. Check the bore and piston for pitting, and the axles for wear. Record it in Measurements." },
+      { t: "Clean and inspect", hl: ["body", "piston", "axle"], view: "exploded", d: "Clean everything with brake cleaner or fresh brake fluid. Check the bore and piston for pitting, and the axles for wear. Write the readings in the step's notes." },
       { t: "New seal, boot and piston", hl: ["seal", "boot", "piston"], view: "assembled", d: "Fit a new seal and boot. Lubricate with fresh brake fluid or the grease the manual specifies and press the piston in square." },
       { t: "Pads, bleeder and axles", hl: ["padI", "padO", "bleeder", "axle"], view: "assembled", d: `Refit the pads, bleeder and cap, and the axles with their dust covers. Bolt torques: ${VFSM}. Bleed the brake once it's on the bike.` },
     ],
@@ -265,7 +265,7 @@ function seqSteps(d) {
       { t: "Clean and look", hl: ["disc", "scoring", "cracks", "lip"], d: "Clean both faces with brake cleaner. Look for cracks, deep grooves, a lip at the outer edge, rust pitting and any blue heat marks." },
       { t: "Measure thickness", hl: ["points", "mic", "edge"], d: `Measure at each point around the pad track with a micrometer. Write down the smallest reading. Minimum thickness: ${VFSM}.` },
       { t: "Measure runout", hl: ["dial", "edge"], d: `With the wheel on the bike and the axle tight, set the dial indicator on the face near the outer edge and turn the wheel slowly. Maximum runout: ${VFSM}.` },
-      { t: "Record it", hl: ["disc"], d: "Enter the readings in Measurements against the disc. A reading inside the limit still needs someone to approve it." },
+      { t: "Record it", hl: ["disc"], d: "Write the thickness and runout readings in the step's notes and compare them with My bike's numbers." },
     ],
   });
 })();

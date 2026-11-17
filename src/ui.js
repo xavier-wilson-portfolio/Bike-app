@@ -17,11 +17,8 @@ const SECTIONS = [
   { id: "chassis", t: "Frame, wheels & brakes", i: "wheel", mod: "chassis", grp: "areas", d: "Suspension, wheels, brakes" },
   { id: "finish", t: "Cleaning & finishing", i: "spray", mod: "finish", grp: "areas", d: "Finish records and photos" },
   { id: "guides", t: "Guides", i: "book", grp: "learn", d: "Carbs, brakes, wiring and more" },
-  { id: "finder", t: "Parts finder", i: "search", grp: "learn", d: "Search every parts store at once" },
-  { id: "shops", t: "Where to buy parts", i: "store", grp: "learn", d: "Shops, diagrams, forums" },
   { id: "help", t: "Help", i: "help", grp: "learn", d: "How this app works" },
   { id: "purchasing", t: "Shopping list", i: "cart", grp: "records", d: "Find parts, add to cart, see the total" },
-  { id: "inspections", t: "Measurements", i: "gauge", grp: "records", d: "Checks and limits" },
   { id: "docs", t: "Photos & files", i: "image", grp: "records", d: "Before, during, after" },
   { id: "problems", t: "Problems & decisions", i: "alert", grp: "records", d: "Issues and big choices" },
   { id: "team", t: "Team & work log", i: "users", grp: "records", d: "People and hours" },
@@ -43,7 +40,7 @@ const SECTIONS = [
   { id: "settings", t: "Settings & backups", i: "gear", grp: "records", d: "Budget, backups, data" },
   { id: "lesson", t: "Lesson", i: "book", hidden: true },
 ].filter(s => !s.x || X[s.x]);
-if (GENERIC) { const keep = new Set(["home", "numbers", "maintenance", "reminders", "mods", "report", "build", "value", "finder", "workorders", "receipts", "recalls", "costs", "papers", "checklists", "wear", "plans", "inventory", "tasks", "budget", "purchasing", "shops", "diagrams", "docs", "problems", "team", "settings", "help"]); for (let i = SECTIONS.length - 1; i >= 0; i--) if (!keep.has(SECTIONS[i].id)) SECTIONS.splice(i, 1); SECTIONS.forEach(s => { if (["inventory", "tasks", "budget", "maintenance", "reminders", "mods", "receipts", "costs", "docs", "diagrams", "finder"].includes(s.id)) s.main = 1; else delete s.main; }); const t = SECTIONS.find(s => s.id === "tasks"); if (t) t.d = "Jobs to do on the bike"; SECTIONS.splice(SECTIONS.findIndex(s => s.id === "maintenance") + 1, 0, { id: "restore", t: "Restore this bike", i: "book", main: 1, d: "Get a step-by-step restoration course" }); }
+if (GENERIC) { const keep = new Set(["home", "numbers", "maintenance", "reminders", "mods", "report", "build", "value", "workorders", "receipts", "recalls", "costs", "papers", "checklists", "wear", "plans", "inventory", "tasks", "budget", "purchasing", "diagrams", "docs", "problems", "team", "settings", "help"]); for (let i = SECTIONS.length - 1; i >= 0; i--) if (!keep.has(SECTIONS[i].id)) SECTIONS.splice(i, 1); SECTIONS.forEach(s => { if (["inventory", "tasks", "budget", "maintenance", "reminders", "mods", "receipts", "costs", "docs", "diagrams"].includes(s.id)) s.main = 1; else delete s.main; }); const t = SECTIONS.find(s => s.id === "tasks"); if (t) t.d = "Jobs to do on the bike"; SECTIONS.splice(SECTIONS.findIndex(s => s.id === "maintenance") + 1, 0, { id: "restore", t: "Restore this bike", i: "book", main: 1, d: "Get a step-by-step restoration course" }); }
 if (CT.sections) SECTIONS.forEach(s => CT.sections[s.id] && Object.assign(s, CT.sections[s.id]));
 const NAV_GROUPS = [["areas", "Workshop areas"], ["learn", "Learn"], ["records", "Records & admin"]];
 const SEC = Object.fromEntries(SECTIONS.filter(s => s.id).map(s => [s.id, s]));
@@ -99,7 +96,7 @@ function shell() {
     </header>
     <div class="subbar"><div class="subbar-in"><div class="crumbs" id="crumbs"></div><div class="row" style="gap:10px"><span class="progchip" id="progChip"></span><span class="modebadge" id="modeBadge"></span></div></div></div>
     <div class="main"><main class="content" id="content" tabindex="-1"></main>
-      <footer class="foot"><div><b>Revora</b><span>${GENERIC ? "Maintenance log for your " + esc(BIKE.name) + "." : "Restoration course and workshop log. Now working on a " + BIKE.name + "."}</span></div><div class="row">${GENERIC ? `<button class="linkbtn" data-goto="maintenance">Maintenance</button>` : `<button class="linkbtn" data-goto="guides">Guides</button>`}<button class="linkbtn" data-goto="shops">Where to buy</button><button class="linkbtn" data-goto="help">Help</button><button class="linkbtn" data-goto="settings">Backups</button><a class="linkbtn" href="mailto:info@revoragarage.com">Contact</a></div></footer></div>
+      <footer class="foot"><div><b>Revora</b><span>${GENERIC ? "Maintenance log for your " + esc(BIKE.name) + "." : "Restoration course and workshop log. Now working on a " + BIKE.name + "."}</span></div><div class="row">${GENERIC ? `<button class="linkbtn" data-goto="maintenance">Maintenance</button>` : `<button class="linkbtn" data-goto="guides">Guides</button>`}<button class="linkbtn" data-goto="help">Help</button><button class="linkbtn" data-goto="settings">Backups</button><a class="linkbtn" href="mailto:info@revoragarage.com">Contact</a></div></footer></div>
   </div>
   <div class="mobback" id="mobback" hidden></div><div class="mobmenu" id="mobmenu" hidden role="dialog" aria-label="Menu"></div>
   <div id="drawerHost"></div><div id="modalHost"></div><div class="toasts" id="toasts" aria-live="polite"></div>`;
@@ -190,7 +187,7 @@ function guideHtml(sec) {
   if (!seen.has(sec)) { seen.add(sec); tipsShownNow.add(sec); setTipPrefs({ seen: [...seen] }); }
   return `<div class="guide" role="note"><span class="gi">${ic("bulb")}</span><div class="grow"><b class="t">${esc(g.howTitle || "How this page works")}</b><ul>${g.how.map(x => `<li>${x}</li>`).join("")}</ul></div><div class="stack" style="gap:6px;align-items:stretch"><button class="btn sm" data-guide-hide="${sec}">Got it</button>${askBtn("", "", "btn sm ask")}</div></div>`;
 }
-const MONEY_TABS = [["budget", "Money overview"], ["purchasing", "Shopping list"], ["shops", "Where to buy"]];
+const MONEY_TABS = [["budget", "Money overview"], ["purchasing", "Shopping list"]];
 
 /* ============ render loop ============ */
 let renderQueued = false;

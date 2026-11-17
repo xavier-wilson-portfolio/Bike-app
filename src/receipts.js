@@ -163,7 +163,7 @@ VIEWS.receipts = {
     const y = String(new Date().getFullYear()), tot = a => a.reduce((s, d) => s + n(d.total), 0);
     const svcs = svcDone(), withR = svcs.filter(r => r.receipt || r.receiptDoc).length;
     const tagOf = d => ({ service: ["Service", "c-blue"], mod: ["Mod", "c-tan"], parts: ["Parts", "c-green"] }[d.rcptFor] || ["Filed", "c-gray"]);
-    const stat = (cls, k, v, s, a) => `<button class="mh-stat ${cls}" ${a || ""}><span class="mh-k">${k}</span><span class="mh-v">${v}</span><span class="mh-s">${s}</span></button>`;
+    const stat = (cls, k, v, s, a) => { const tg = a ? "button" : "div"; return `<${tg} class="mh-stat ${cls}" ${a || 'style="cursor:default"'}><span class="mh-k">${k}</span><span class="mh-v">${v}</span><span class="mh-s">${s}</span></${tg}>`; };
     return `<div class="ph" data-own="1"><div class="eyebrow">Records</div><h1>Receipts</h1><p>Every receipt for the bike, photographed and filed with the work it paid for.</p>
         <div class="act">${W ? `<button class="btn pri big" data-snap>${ic("camera")} Snap a receipt</button>` : ""}</div></div>
       <div class="mh-stats md-stats">
