@@ -3677,3 +3677,9 @@ div.mh-stat{cursor:default}
 .hp-cap,.herophoto.sil .hp-cap,.mh-stage .hp-cap{top:auto;bottom:12px;left:auto;right:12px;text-align:right}
 .hp-tools{top:12px;bottom:auto}
 @media (max-width:600px){.mh-stage .herophoto .hp-cap{top:auto;bottom:8px;left:auto;right:8px}}
+/* photo credit: show on hover only, sit above the stat cards */
+.hp-cap{opacity:0;pointer-events:none;transition:opacity .2s}
+.herophoto:hover .hp-cap,.herophoto:focus-within .hp-cap,.herophoto:focus .hp-cap{opacity:1;pointer-events:auto}
+.mh-stage .hp-cap,.mh-stage .herophoto .hp-cap{bottom:46px}
+@media (max-width:1020px){.mh-stage .hp-cap,.mh-stage .herophoto .hp-cap{bottom:12px}}
+@media (max-width:600px){.hp-cap,.herophoto.sil .hp-cap{position:absolute;top:auto;bottom:8px;left:auto;right:8px;max-width:calc(100% - 16px);border-radius:8px;background:rgba(255,255,255,.9);font-size:10.5px}.mh-stage .hp-cap,.mh-stage .herophoto .hp-cap{bottom:8px}}
