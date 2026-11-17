@@ -1,0 +1,34 @@
+name: Apply site update
+# Joins deploy/site-update.patch.part* (pushed to the bike-photos branch), checks it,
+# applies it to main and publishes the site. Nothing happens unless the checksum matches.
+on:
+  push:
+    branches: [bike-photos]
+    paths: [deploy/site-update.sha256]
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Join and check the patch
+        run: |
+          cat deploy/site-update.patch.part* > /tmp/site.patch
+          echo "$(cat deploy/site-update.sha256)  /tmp/site.patch" | sha256sum -c -
+      - name: Apply to main
+        run: |
+          git config user.name "photo-bot"
+          git config user.email "photo-bot"
+          git checkout main
+          git apply --index /tmp/site.patch
+          git commit -m "Per-bike courses, bike pictures and headers for the top 100, batches 1-4"
+          git push origin main
+      - name: Publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages.yml --ref main
