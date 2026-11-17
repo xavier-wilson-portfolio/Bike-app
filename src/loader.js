@@ -838,7 +838,7 @@
   }
 
   function showLanding(yearly) {
-    document.title = "Revora · Restore it, ride it, keep the records";
+    document.title = "Revora Garage | Motorcycle Restoration and Maintenance";
     const I = d => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
     const ICO = { wrench: '<path d="M14.7 6.3a4 4 0 0 0 5 5L12 19l-3-3 7.7-7.7z M4 20l3-3"/>', bell: '<path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z M10 20a2 2 0 0 0 4 0"/>', camera: '<path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.5"/>',
       shield: '<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/>', book: '<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z M8 7h7"/>', doc: '<path d="M6 3h9l4 4v14H6z M14 3v5h5 M9 13h6 M9 17h6"/>',
