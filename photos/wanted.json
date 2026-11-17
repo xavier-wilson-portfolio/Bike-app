@@ -17,15 +17,11 @@
  },
  {
   "id": "yamaha-xs650",
-  "file": "Yamaha XS650 (1977).jpg"
+  "file": "1978 Yamaha XS650 Special.JPG"
  },
  {
   "id": "kawasaki-ninja-400",
   "file": "Kawasaki Ninja 400 KRT Edition (facelift model) right side.jpg"
- },
- {
-  "id": "suzuki-gs550",
-  "file": "GS550 Suzuki (17754290602).jpg"
  },
  {
   "id": "harley-street-glide-m8",
@@ -41,7 +37,7 @@
  },
  {
   "id": "honda-rebel-300-2017",
-  "file": "2025 Honda Rebel 300 e-Clutch.jpg"
+  "file": "2020 Honda Rebel 300.jpg"
  },
  {
   "id": "honda-cb550-four-1974",
@@ -57,7 +53,7 @@
  },
  {
   "id": "honda-grom-2022",
-  "file": "Honda grom custom.JPG"
+  "file": "Honda MSX125 Grom.jpg"
  },
  {
   "id": "honda-cb400f-super-sport-1975",
@@ -81,11 +77,11 @@
  },
  {
   "id": "honda-crf300l-2021",
-  "file": "2024 Honda CRF300L.jpg"
+  "file": "2022 Honda CRF300L.jpg"
  },
  {
   "id": "honda-gold-wing-gl1800-2001",
-  "file": "Honda Gold Wing GL1800 White.jpg"
+  "file": "Goldwing1800.jpg"
  },
  {
   "id": "honda-cb200-1973",
@@ -93,7 +89,7 @@
  },
  {
   "id": "honda-africa-twin-crf1100l-2020",
-  "file": "Honda Africa Twin 2025.jpg"
+  "file": "2020 Honda CRF1100L Africa Twin MT.jpg"
  },
  {
   "id": "honda-cx500-1978",
@@ -117,7 +113,7 @@
  },
  {
   "id": "honda-gl1000-gold-wing-1975",
-  "file": "Honda GL1000 Goldwing (1975) - 10233920385.jpg"
+  "file": "1976 Honda Gold Wing GL1000 01.jpg"
  },
  {
   "id": "kawasaki-ninja-650-2017",
@@ -172,10 +168,6 @@
   "file": "Kawasaki Z 400 (1978).jpg"
  },
  {
-  "id": "yamaha-mt-09-2021",
-  "file": "2024 Yamaha MT-09 Y-AMT.jpg"
- },
- {
   "id": "yamaha-yzf-r3-2015",
   "file": "YZF-R3 2015.jpg"
  },
@@ -205,7 +197,7 @@
  },
  {
   "id": "yamaha-rd400-1976",
-  "file": "Yamaha RD400 03.jpg"
+  "file": "RD400.jpg"
  },
  {
   "id": "yamaha-tenere-700-2021",
@@ -264,12 +256,8 @@
   "file": "Suzuki DR650SE.jpg"
  },
  {
-  "id": "suzuki-gs850g-1979",
-  "file": "Suzuki GS850G (1980) - 10233921406.jpg"
- },
- {
   "id": "suzuki-boulevard-m109r-2006",
-  "file": "Suzuki Intruder M1800 DSC00079.JPG"
+  "file": "Suzuki Boulevard M109R McDonald's VT Rte 5 Lyndonville VT August 2019.jpg"
  },
  {
   "id": "suzuki-boulevard-c50-2005",
@@ -289,7 +277,7 @@
  },
  {
   "id": "suzuki-gt750-1972",
-  "file": "Suzuki GT750 (1977).jpg"
+  "file": "1971 Suzuki GT750 at Suzuki Plaza.jpg"
  },
  {
   "id": "harley-davidson-sportster-883-2004",
@@ -324,16 +312,12 @@
   "file": "T140.JPG"
  },
  {
-  "id": "bmw-r75-5-and-6-airheads-1970",
-  "file": "BMW R75-5 r TCE.jpg"
- },
- {
   "id": "royal-enfield-interceptor-650-2019",
   "file": "Royal Enfield Interceptor 650 Jinonice A.jpg"
  },
  {
   "id": "bmw-r100-airheads-1976",
-  "file": "BMW R100 RS (7551836888).jpg"
+  "file": "BMW R100RS.jpg"
  },
  {
   "id": "royal-enfield-himalayan-411-2018",
@@ -345,7 +329,30 @@
  },
  {
   "id": "ducati-scrambler-800-2015",
-  "file": "Ducati Scrambler Classic 2014.jpg"
+  "file": "2015 Ducati Scrambler Icon right.JPG"
+ },
+ {
+  "id": "honda-cb175-cl175-1968",
+  "file": "Ahonda1968 CB175.jpg"
+ },
+ {
+  "id": "kawasaki-kz750-1980",
+  "file": "Kawasaki KZ750 de 1980.jpg"
+ },
+ {
+  "id": "suzuki-gs1000-1978",
+  "file": "Suzuki GS1000S 01.jpg"
+ },
+ {
+  "id": "bmw-r1250gs-2019",
+  "file": "BMW R2150GS.png"
+ },
+ {
+  "id": "harley-davidson-evolution-softail-1984",
+  "file": "1989 Harley Heritage Softail.jpg"
+ },
+ {
+  "id": "triumph-street-triple-765-2017",
+  "file": "Triumph Street Triple 765 RS (2022).jpg"
  }
 ]
-
