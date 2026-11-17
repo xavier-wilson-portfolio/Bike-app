@@ -1,0 +1,92 @@
+{
+ "id": "honda-rebel-500",
+ "make": "Honda",
+ "model": "Rebel 500",
+ "name": "Honda Rebel 500",
+ "years": [
+  2017,
+  2026
+ ],
+ "match": [
+  "rebel 500",
+  "rebel500",
+  "cmx500",
+  "cmx 500"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "471 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "A top-selling cruiser. Most owners here are keeping a modern bike healthy, so check the recalls first.",
+ "focus": [
+  [
+   "Parallel twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs to rebuild"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Open recalls",
+   "Handlebar lock screw"
+  ],
+  [
+   "Low seat",
+   "Easy to work around"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Rebel 500s from 2017-2023 and 2025 are in recall 26V500 for the handlebar lock screw, and some 2020-2021 bikes had a rear reflector recall (21V382). Book any open recall with a Honda dealer.",
+   "reason": "Recall work is free, and the handlebar screw can interfere with steering."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "A": [
+   "2017-2018 bikes also had an EVAP canister hose service campaign (Honda KJ3). Ask the dealer whether yours was done."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "26V500",
+   "years": "2017-2023, 2025",
+   "what": "Handlebar lock screw can loosen and fall between the frame and steering stem.",
+   "fix": "Free repair at a Honda dealer (Honda code KUO).",
+   "src": "https://www.motorcycle.com/bikes/news/honda-recalls-rebel-300-rebel-500-and-scl500-for-loose-screws-44669233"
+  },
+  {
+   "id": "21V382",
+   "years": "2020-2021",
+   "what": "Rear reflector may be too dim.",
+   "fix": "Dealer replaces the reflector free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/21V382000"
+  }
+ ],
+ "known": [
+  {
+   "title": "EVAP canister hose",
+   "what": "2017-2018 service campaign for a hose that lets fuel vapor through.",
+   "src": "https://static.nhtsa.gov/odi/tsbs/2018/MC-10143374-9999.pdf"
+  }
+ ],
+ "forums": [],
+ "silhouette": "honda-rebel-500",
+ "areas": [],
+ "heroName": "REBEL",
+ "hero": {
+  "src": "img/hero/honda-rebel-500.jpg",
+  "artist": "Chris Woodrich",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CMX500_Rebel_parked_at_Hogs_for_Hospice,_Leamington,_Ontario,_2025-08-02.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

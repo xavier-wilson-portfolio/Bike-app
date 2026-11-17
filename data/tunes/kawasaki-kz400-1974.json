@@ -1,0 +1,74 @@
+{
+ "id": "kawasaki-kz400-1974",
+ "make": "Kawasaki",
+ "model": "KZ400",
+ "name": "Kawasaki KZ400",
+ "years": [
+  1974,
+  1984
+ ],
+ "match": [
+  "kz400",
+  "kz 400",
+  "z400",
+  "kz400d",
+  "kz400s"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "398 cc air-cooled SOHC parallel twin",
+ "intro": "Kawasaki's answer to the Honda CB350. A plain, reliable twin that's good to learn on.",
+ "focus": [
+  [
+   "398 cc twin",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Rebuild and sync"
+  ],
+  [
+   "Electric start",
+   "Check the starter"
+  ],
+  [
+   "Charging",
+   "Test before buying parts"
+  ],
+  [
+   "Chain drive",
+   "Sprockets and chain"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "A": [
+   "Get the Kawasaki factory service manual. Owners on KZRider say it saves most beginner mistakes."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KZRider forum",
+   "url": "https://www.kzrider.com/",
+   "what": "Owner forum for classic Kawasakis."
+  }
+ ],
+ "silhouette": "kawasaki-kz400-1974",
+ "areas": [],
+ "heroName": "KZ400",
+ "hero": {
+  "src": "img/hero/kawasaki-kz400-1974.jpg",
+  "artist": "Palauenc05",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_Z_400_(1978).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

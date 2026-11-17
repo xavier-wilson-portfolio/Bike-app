@@ -1,0 +1,75 @@
+{
+ "id": "kawasaki-ninja-500-2024",
+ "make": "Kawasaki",
+ "model": "Ninja 500",
+ "name": "Kawasaki Ninja 500",
+ "years": [
+  2024,
+  2026
+ ],
+ "match": [
+  "ninja 500",
+  "ninja500",
+  "ex500",
+  "z500"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "451 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "Kawasaki's newest small Ninja. Early 2024 bikes have a clutch recall to clear first.",
+ "focus": [
+  [
+   "451 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Clutch recall",
+   "Early 2024 bikes"
+  ],
+  [
+   "Fairing",
+   "Clips and screws to label"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2024 Ninja 500s built in early 2024 are in recall 25V146 for the clutch release shaft.",
+   "reason": "A broken clutch release can leave the bike unable to disengage the clutch. The repair is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "25V146",
+   "years": "2024 (some)",
+   "what": "Clutch release shaft weld can fail and break the clutch lever action.",
+   "fix": "Dealer replaces the clutch release shaft free (Kawasaki MC25-04).",
+   "src": "https://www.rideapart.com/news/754042/kawasaki-ninja500-z500-clutch-recall/"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "silhouette": "kawasaki-ninja-500-2024",
+ "areas": [],
+ "heroName": "NINJA 500",
+ "hero": {
+  "src": "img/hero/kawasaki-ninja-500-2024.jpg",
+  "artist": "Kidfly182",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_Ninja_500.jpg",
+  "lic": "CC BY 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by/4.0"
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "id": "honda-grom-2022",
+ "make": "Honda",
+ "model": "Grom",
+ "name": "Honda Grom",
+ "years": [
+  2022,
+  2026
+ ],
+ "match": [
+  "grom",
+  "msx125",
+  "msx 125"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "124 cc air-cooled single, fuel injected, five-speed",
+ "intro": "Honda's mini bike, with a huge mod scene. Most Groms have been changed somewhere, so note what's stock.",
+ "focus": [
+  [
+   "124 cc single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Five-speed",
+   "Since 2022"
+  ],
+  [
+   "Mod scene",
+   "Note what isn't stock"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Most Groms have aftermarket parts. List every non-stock part in the Mods section before you start."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [],
+ "heroName": "GROM"
+}

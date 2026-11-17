@@ -1,0 +1,76 @@
+{
+ "id": "honda-cb750-nighthawk-1991",
+ "make": "Honda",
+ "model": "CB750 Nighthawk",
+ "name": "Honda CB750 Nighthawk",
+ "years": [
+  1991,
+  2003
+ ],
+ "match": [
+  "nighthawk 750",
+  "cb750 nighthawk",
+  "cb750",
+  "rc39"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "747 cc air-cooled DOHC inline four, four carbs",
+ "intro": "A plain, long-lived Honda four. Many sat for years, so carbs and charging are the usual jobs.",
+ "focus": [
+  [
+   "DOHC inline four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Gum up when stored"
+  ],
+  [
+   "Charging",
+   "Regulator/rectifier"
+  ],
+  [
+   "Parts",
+   "Interchange 1991-2003"
+  ],
+  [
+   "Chain drive",
+   "Sprockets and chain"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "A lot of Nighthawks sat in garages for years. Plan on a full carb clean and sync."
+  ],
+  "A": [
+   "Almost every part interchanges across 1991-2003, which makes used parts easy to find."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Stored bikes",
+   "what": "Many sat for years before resale.",
+   "src": "https://motorcyclistonline.com/how-to/1991-2003-honda-nighthawk-750-smart-money"
+  }
+ ],
+ "forums": [],
+ "silhouette": "honda-cb750-nighthawk-1991",
+ "areas": [],
+ "heroName": "NIGHTHAWK",
+ "hero": {
+  "src": "img/hero/honda-cb750-nighthawk-1991.jpg",
+  "artist": "jon collier",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CB750_Nighthawk_red.jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
+}

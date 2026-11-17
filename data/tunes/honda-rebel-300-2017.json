@@ -1,0 +1,83 @@
+{
+ "id": "honda-rebel-300-2017",
+ "make": "Honda",
+ "model": "Rebel 300",
+ "name": "Honda Rebel 300",
+ "years": [
+  2017,
+  2026
+ ],
+ "match": [
+  "rebel 300",
+  "rebel300",
+  "cmx300",
+  "cmx 300"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "286 cc liquid-cooled single, fuel injected",
+ "intro": "Honda's small Rebel. A simple single that new riders keep for years, so recalls and basic service matter most.",
+ "focus": [
+  [
+   "286 cc single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Open recalls",
+   "Handlebar lock screw"
+  ],
+  [
+   "Low seat",
+   "Easy to work around"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Rebel 300s from 2017-2023 and 2025-2026 are in recall 26V500 for the handlebar lock screw, and some 2020-2021 bikes had a rear reflector recall (21V382). Book any open recall with a Honda dealer.",
+   "reason": "Recall work is free, and the handlebar screw can interfere with steering."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "A": [
+   "2017-2018 bikes also had an EVAP canister hose service campaign (Honda KJ3). Ask the dealer whether yours was done."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "26V500",
+   "years": "2017-2023, 2025-2026",
+   "what": "Handlebar lock screw can loosen and fall between the frame and steering stem.",
+   "fix": "Free repair at a Honda dealer (Honda code KUO).",
+   "src": "https://www.motorcycle.com/bikes/news/honda-recalls-rebel-300-rebel-500-and-scl500-for-loose-screws-44669233"
+  },
+  {
+   "id": "21V382",
+   "years": "2020-2021",
+   "what": "Rear reflector may be too dim.",
+   "fix": "Dealer replaces the reflector free.",
+   "src": "https://www.rideapart.com/news/511787/recall-honda-rear-reflector-defect/"
+  }
+ ],
+ "known": [
+  {
+   "title": "EVAP canister hose",
+   "what": "2017-2018 service campaign for a hose that lets fuel vapor through.",
+   "src": "https://static.nhtsa.gov/odi/tsbs/2018/MC-10143374-9999.pdf"
+  }
+ ],
+ "forums": [],
+ "heroName": "REBEL 300"
+}

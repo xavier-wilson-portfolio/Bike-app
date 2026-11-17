@@ -1,11 +1,32 @@
 /* ============ HOME (car-site layout), PAINT STUDIO, GUIDES ============ */
 function heroPhotoDoc() { const id = meta().heroPhoto, d = id && S.docs[id]; return d && !d.archived && d.file && d.file.startsWith("data:image") ? d : null; }
 const HERO_STOCK = BIKE.hero;
+function tuneKnownHtml(T) {
+  const li = (b, w, src, tag) => `<li><b>${esc(b)}</b>${tag ? ` <span class="tag">${esc(tag)}</span>` : ""}<span class="muted">${esc(w)}</span>${src && /^https?:/.test(src) ? `<a class="linkbtn" href="${esc(src)}" target="_blank" rel="noopener">Source ${ic("next")}</a>` : ""}</li>`;
+  return `<div class="mh-row tune-row">
+    ${(T.known || []).length ? `<section class="mh-panel"><div class="mh-ph"><h2><span class="mh-hi">${ic("alert")}</span>What the ${esc(BIKE.short)} is known for</h2></div><ul class="tune-list">${T.known.map(k => li(k.title, k.what, k.src)).join("")}</ul></section>` : ""}
+    <section class="mh-panel"><div class="mh-ph"><h2><span class="mh-hi">${ic("shield")}</span>Recalls</h2><a class="linkbtn" href="https://www.nhtsa.gov/recalls" target="_blank" rel="noopener">Check your VIN ${ic("next")}</a></div>
+      ${(T.recalls || []).length ? `<ul class="tune-list">${T.recalls.map(r => li(r.what, r.fix, r.src, r.id + " · " + r.years)).join("")}</ul>` : `<p class="muted" style="margin:0">${esc(T.recallNote || "No recalls on file for this bike.")}</p>`}
+    </section></div>`;
+}
 function silHero() {
   const src = silImg(BIKE.silhouette || "bike-" + BIKE.style) || silImg("bike-standard"), c = silCredit(src);
   return c ? { src, alt: "Silhouette of a " + (c.what || "motorcycle"), cap: "Silhouette traced from a photo.", credit: c.artist || "Wikimedia Commons", page: c.page, lic: c.lic, licUrl: c.licUrl, sil: true } : { src, alt: "Motorcycle silhouette", cap: "", none: true, sil: true };
 }
+// project header: a real photo of the bike, color graded with the tan filter and the model name in Revora blue.
+// Library bikes ship a finished header (name behind the bike); an owner's own photo gets the same grade with the name across the top.
+const heroName = () => String((BIKE.tune && BIKE.tune.heroName) || BIKE.short || BIKE.model || "").toUpperCase();
+function tuneHeroHtml(d) {
+  const T = BIKE.tune && BIKE.tune.hero, W = ME.canWrite, name = esc(heroName());
+  if (d) return `<figure class="herophoto has graded"><img src="${d.file}" alt="${esc(d.title || "Photo of the " + (meta().bike || BIKE.name))}"><span class="hp-name" aria-hidden="true">${name}</span>
+    ${W ? `<div class="hp-tools"><button class="btn sm" id="hpChange">${ic("image")} Change photo</button><button class="btn sm" id="hpRemove">${T ? "Use the stock photo" : "Remove photo"}</button></div>` : ""}</figure>`;
+  if (!T) return null;
+  return `<figure class="herophoto has graded stock"><img src="${esc(T.src)}" alt="Photo of a ${esc(BIKE.tune.name)}" width="1600" height="900">
+    <figcaption class="hp-cap">Photo: <a href="${esc(T.page)}" target="_blank" rel="noopener">${esc(T.artist)}</a>, <a href="${esc(T.licUrl)}" target="_blank" rel="noopener">${esc(T.lic)}</a></figcaption>
+    ${W ? `<div class="hp-tools"><button class="btn sm" id="hpAdd">${ic("image")} Use my own photo</button></div>` : ""}</figure>`;
+}
 function heroPhotoHtml() {
+  { const g = !LEGACY && tuneHeroHtml(heroPhotoDoc()); if (g) return g; }
   const d = heroPhotoDoc(), bike = meta().bike || BIKE.name, H = HERO_STOCK || (LEGACY ? { src: "img/bike.svg", alt: "Motorcycle illustration", cap: "", none: true } : silImg(BIKE.silhouette || (BIKE.style ? "bike-" + BIKE.style : "") || (GENERIC ? "bike-standard" : "")) || (GENERIC && silImg("bike-standard")) ? silHero() : null);
   if (!H && !d) return `<figure class="herophoto nophoto"><div class="np-in">${ic("camera")}<b>Add a photo of your ${esc(BIKE.short || "bike")}</b><span class="muted">It shows here and on your garage card.</span>${ME.canWrite ? `<button class="btn tan" id="hpAdd">${ic("image")} Add my photo</button>` : ""}</div></figure>`;
   return `<figure class="herophoto has${d ? "" : " cutout"}${!d && H.sil ? " sil" : ""}">${d ? `<img src="${d.file}" alt="${esc(d.title || "Photo of the " + bike)}">` : `<img class="hp-cut" src="${H.src}" alt="${esc(H.alt)}" width="1097" height="633">${H.none ? "" : `<figcaption class="hp-cap">${esc(H.cap)} Photo: <a href="${H.page}" target="_blank" rel="noopener">${esc(H.credit)}</a>, <a href="${H.licUrl}" target="_blank" rel="noopener">${esc(H.lic)}</a></figcaption>`}`}
@@ -61,7 +82,7 @@ VIEWS.home = {
         </section>
       </div>
       <div class="mh-row">
-        ${UNIVERSAL ? `<section class="mh-panel p-parts"><div class="mh-ph"><h2><span class="mh-hi">${ic("gauge")}</span>Tailored for a ${esc(String(BIKE.styleName || "bike").toLowerCase())}</h2><button class="linkbtn" data-go="guides">Guide ${ic("next")}</button></div>
+        ${UNIVERSAL ? `<section class="mh-panel p-parts"><div class="mh-ph"><h2><span class="mh-hi">${ic("gauge")}</span>${BIKE.tune ? "Built for the " + esc(BIKE.tune.name) : "Tailored for a " + esc(String(BIKE.styleName || "bike").toLowerCase())}</h2><button class="linkbtn" data-go="guides">Guide ${ic("next")}</button></div>
           <div class="rs-specs">${(BIKE.styleFocus || []).map(([v, l]) => `<div><b>${esc(v)}</b><span>${esc(l)}</span></div>`).join("")}</div>
           <p class="faint" style="margin:auto 0 0;font-size:12.5px">${esc(BIKE.styleIntro || "")} Mark any step that doesn't fit your bike as Cancelled, and take every number from its factory manual.</p>
         </section>` : `<section class="mh-panel p-parts"><div class="mh-ph"><h2><span class="mh-hi">${ic("gauge")}</span>Bike specs</h2><a class="linkbtn" href="${SPEC_SOURCE.url}" target="_blank" rel="noopener">Source ${ic("next")}</a></div>
@@ -73,6 +94,7 @@ VIEWS.home = {
           ${act.length < 3 ? `<div class="rs-jump">${[["docs", "camera", "Photos"], ["purchasing", "cart", "Shopping list"], ["gates", "shield", "Safety checks"], ["shops", "store", "Where to buy"]].filter(([k]) => SEC[k]).map(([k, i, t]) => `<button data-go="${k}">${ic(i)}<span>${t}</span></button>`).join("")}</div>` : ""}
         </section>
       </div>
+      ${BIKE.tune && ((BIKE.tune.known || []).length || (BIKE.tune.recalls || []).length) ? tuneKnownHtml(BIKE.tune) : ""}
     </section>`;
   },
   bind(root) { bindHeroPhoto(root); bindSetup(root); bindTables(root); bindLessonLinks(root); bindStepChecks(root); }

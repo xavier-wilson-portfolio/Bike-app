@@ -1,0 +1,87 @@
+{
+ "id": "honda-cbr600rr-2007",
+ "make": "Honda",
+ "model": "CBR600RR",
+ "name": "Honda CBR600RR",
+ "years": [
+  2007,
+  2012
+ ],
+ "match": [
+  "cbr600rr",
+  "cbr 600 rr",
+  "cbr600",
+  "pc40",
+  "600rr"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "599 cc liquid-cooled inline four, fuel injected",
+ "intro": "Honda's 600 supersport. The charging system and a fuel pump recall are the big things to check.",
+ "focus": [
+  [
+   "599 cc inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Regulator/rectifier",
+   "Runs hot"
+  ],
+  [
+   "Fuel pump recall",
+   "24V864"
+  ],
+  [
+   "Fairing",
+   "Clips and screws to label"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Certain 2007 and 2009-2012 CBR600RRs are in recall 24V864 for a fuel pump impeller that can deform. Book any open recall with a Honda dealer.",
+   "reason": "A failing fuel pump can stall the bike. The repair is free."
+  },
+  "F-002": {
+   "title": "Test the charging system",
+   "instructions": "With a charged battery, measure voltage at the battery at idle and at higher rpm. If it's low or high, test the regulator/rectifier and the stator.",
+   "reason": "The regulator/rectifier on these bikes can overheat and fail, leaving a dead battery."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "24V864",
+   "years": "2007, 2009-2012 (some)",
+   "what": "Fuel pump impeller can deform, causing a no-start or stall.",
+   "fix": "Free dealer repair (Honda KR2-KR5).",
+   "src": "https://au7o.io/motorcycle-issues/honda-cbr600rr?year=2012"
+  }
+ ],
+ "known": [
+  {
+   "title": "Regulator/rectifier",
+   "what": "Can overheat and burn out, killing the battery.",
+   "src": "https://enginepatrol.com/honda-cbr600rr-common-problems/"
+  }
+ ],
+ "forums": [],
+ "silhouette": "honda-cbr600rr-2007",
+ "areas": [],
+ "heroName": "CBR600RR",
+ "hero": {
+  "src": "img/hero/honda-cbr600rr-2007.jpg",
+  "artist": "A. I.",
+  "page": "https://commons.wikimedia.org/wiki/File:HondaCBR600RR-01.jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
+}

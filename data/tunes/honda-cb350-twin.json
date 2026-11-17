@@ -1,0 +1,125 @@
+{
+ "id": "honda-cb350-twin",
+ "make": "Honda",
+ "model": "CB350",
+ "name": "Honda CB350 / CL350",
+ "years": [
+  1968,
+  1973
+ ],
+ "match": [
+  "cb350",
+  "cb 350",
+  "cl350",
+  "cl 350",
+  "cb350k",
+  "cl350k",
+  "sl350"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "325 cc air-cooled SOHC parallel twin, two carbs",
+ "intro": "A very common first restoration, with a big owner community and good parts supply.",
+ "focus": [
+  [
+   "SOHC parallel twin",
+   "Air-cooled"
+  ],
+  [
+   "Centrifugal oil filter",
+   "Clean the slinger"
+  ],
+  [
+   "Cam chain tensioner",
+   "Old rubber roller"
+  ],
+  [
+   "Points ignition",
+   "Watch cam bearing wear"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {
+  "H-001": {
+   "title": "Change the oil and clean the oil slinger",
+   "instructions": "Drain the oil, then take off the right-hand cover and clean out the centrifugal oil filter (the oil slinger). Look at what's inside it before you clean it.",
+   "reason": "This engine has no paper filter. Sludge and bits of a broken cam chain roller collect in the slinger."
+  }
+ },
+ "add": [
+  {
+   "id": "X-CB3-01",
+   "phase": "H",
+   "after": "H-001",
+   "title": "Check the cam chain tensioner roller",
+   "instructions": "Inspect the cam chain tensioner roller. The original was rubber and goes hard and brittle with age. Bits in the oil slinger mean it's breaking up.",
+   "reason": "A failing roller lets the cam chain slap and sends debris through the engine.",
+   "src": "Classic Bike Guide via PressReader",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.0,
+   "tools": ""
+  },
+  {
+   "id": "X-CB3-02",
+   "phase": "F",
+   "after": "F-004",
+   "title": "Check the points-side cam bearing",
+   "instructions": "Before setting the points, check the cam bearing cover on the points side for wear and oil weeping.",
+   "reason": "A worn cam bearing lets the points gap and timing wander even after you set them.",
+   "src": "vintagehondatwins.com forum",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "L": [
+   "Don't overtighten the drive chain. Owners see that often on these bikes."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Cam chain tensioner roller",
+   "what": "The rubber roller goes brittle and breaks up.",
+   "src": "https://www.pressreader.com/uk/classic-bike-guide/20210323/282711934802836"
+  },
+  {
+   "title": "Points timing wanders",
+   "what": "A worn points-side cam bearing changes the gap.",
+   "src": "https://vintagehondatwins.com/forums/goto/post?id=199182"
+  },
+  {
+   "title": "Overtight chain",
+   "what": "Owners often run the drive chain too tight.",
+   "src": "https://vintagehondatwins.com/forums/goto/post?id=193108"
+  }
+ ],
+ "forums": [
+  {
+   "name": "Vintage Honda Twins forum",
+   "url": "https://www.vintagehondatwins.com/",
+   "what": "Owner forum for CB/CL 350 and 450 twins."
+  }
+ ],
+ "silhouette": "honda-cb350-twin",
+ "areas": [],
+ "heroName": "CB350",
+ "hero": {
+  "src": "img/hero/honda-cb350-twin.jpg",
+  "artist": "Chrisjapan",
+  "page": "https://commons.wikimedia.org/wiki/File:1971_Honda_CB350K4.jpeg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

@@ -1,0 +1,97 @@
+{
+ "id": "honda-cb175-cl175-1968",
+ "make": "Honda",
+ "model": "CB175",
+ "name": "Honda CB175 / CL175",
+ "years": [
+  1968,
+  1973
+ ],
+ "match": [
+  "cb175",
+  "cl175",
+  "cb 175",
+  "cl 175",
+  "cd175"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "174 cc air-cooled SOHC parallel twin, two carbs",
+ "intro": "A small Honda twin that's simple to learn on. The cam runs straight in the head, so oil care matters.",
+ "focus": [
+  [
+   "174 cc twin",
+   "Air-cooled"
+  ],
+  [
+   "Cam in the head",
+   "No bearings, needs clean oil"
+  ],
+  [
+   "Two carbs",
+   "Rebuild and sync"
+  ],
+  [
+   "Electrics",
+   "Headlight shell wiring"
+  ],
+  [
+   "Chain drive",
+   "Sprockets and chain"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-C17-01",
+   "phase": "H",
+   "after": "H-003",
+   "title": "Check the cam journals and head",
+   "instructions": "With the cam out, check the journals and the bearing surfaces in the head for scoring.",
+   "reason": "The cams run directly in the head on these small twins, so neglected oil changes show up here.",
+   "src": "Classic Bike Guide expert view",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 1.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "H": [
+   "Change the oil often, around every 1,000 miles as Honda said. The cam has no separate bearings."
+  ],
+  "F": [
+   "Most lighting faults trace back to the connectors inside the headlight shell."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Cam and head wear",
+   "what": "Cams run in the head and suffer from old oil.",
+   "src": "https://www.pressreader.com/uk/classic-bike-guide/20221024/282342568751280"
+  }
+ ],
+ "forums": [
+  {
+   "name": "Vintage Honda Twins forum",
+   "url": "https://www.vintagehondatwins.com/",
+   "what": "Owner forum for Honda twins of the 60s and 70s."
+  }
+ ],
+ "silhouette": "honda-cb175-cl175-1968",
+ "areas": [],
+ "heroName": "CB175",
+ "hero": {
+  "src": "img/hero/honda-cb175-cl175-1968.jpg",
+  "artist": "Mcheath (talk) (Uploads)",
+  "page": "https://commons.wikimedia.org/wiki/File:Ahonda1968_CB175.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
+}

@@ -1,0 +1,75 @@
+{
+ "id": "yamaha-yzf-r3-2015",
+ "make": "Yamaha",
+ "model": "YZF-R3",
+ "name": "Yamaha YZF-R3",
+ "years": [
+  2015,
+  2018
+ ],
+ "match": [
+  "yzf-r3",
+  "r3",
+  "yzf r3",
+  "yzfr3"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "321 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "Yamaha's small sport twin. Early bikes had several recalls, so check them all before you start.",
+ "focus": [
+  [
+   "321 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Recalls",
+   "Several on 2015-2016"
+  ],
+  [
+   "Radiator hose",
+   "Recall 18V861"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2015-2018 R3s were in radiator hose recall 18V861, and 2015-2016 bikes also had recalls for the shifter spring (18V860), clutch bearing, fuel tank bracket and ignition switch.",
+   "reason": "Several of these can stall the bike or leak coolant. All repairs are free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "18V861",
+   "years": "2015-2018",
+   "what": "Upper radiator hose may crack and leak coolant.",
+   "fix": "Dealer fits a new hose free.",
+   "src": "https://auto-recalls.justia.com/yamaha/yzf-r3/2017/18v861000"
+  },
+  {
+   "id": "18V860",
+   "years": "2015-2016",
+   "what": "Gear shift return spring may break.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehiclesafetyrecalls.com/recall/18V860000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "silhouette": "yamaha-yzf-r3-2015",
+ "areas": [],
+ "heroName": "R3"
+}

@@ -1,0 +1,91 @@
+{
+ "id": "yamaha-mt07-gen1",
+ "make": "Yamaha",
+ "model": "MT-07",
+ "name": "Yamaha MT-07 / FZ-07",
+ "years": [
+  2014,
+  2017
+ ],
+ "match": [
+  "mt-07",
+  "mt07",
+  "mt 07",
+  "fz-07",
+  "fz07",
+  "fz 07"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "689 cc liquid-cooled parallel twin (CP2), fuel injected",
+ "intro": "Yamaha's CP2 twin. Sold as the FZ-07 in the US for 2015-2017.",
+ "focus": [
+  [
+   "CP2 parallel twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "US name FZ-07",
+   "Same bike, 2015-2017"
+  ],
+  [
+   "One recall",
+   "2015 battery cable"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2015 FZ-07s built May to September 2014 are in recall 14V657 for the positive battery cable. Book any open recall with a Yamaha dealer.",
+   "reason": "A pinched battery cable can short and start a fire."
+  }
+ },
+ "add": [
+  {
+   "id": "X-MT7-01",
+   "phase": "D",
+   "after": "D-002",
+   "title": "Check the battery cable under the seat",
+   "instructions": "With the seat off, look at the positive battery cable where it runs by the seat base and bracket. It should not be pinched or rubbed through.",
+   "reason": "This is the spot the 2015 recall fixed.",
+   "src": "NHTSA 14V657",
+   "safety": "Normal",
+   "skill": "Basic",
+   "estHours": 0.2,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "14V657",
+   "years": "2015 (built May-Sept 2014)",
+   "what": "Positive battery cable can be pinched between the seat base and bracket and short.",
+   "fix": "Dealer replaces the cable and seat bracket free.",
+   "src": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=YAMAHA&model=FZ07&modelYear=2015"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "silhouette": "yamaha-mt07-gen1",
+ "areas": [],
+ "heroName": "MT-07",
+ "hero": {
+  "src": "img/hero/yamaha-mt07-gen1.jpg",
+  "artist": "Trougnouf",
+  "page": "https://commons.wikimedia.org/wiki/File:Yellow_Yamaha_MT-07_(side-view).jpg",
+  "lic": "CC BY 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by/4.0"
+ }
+}

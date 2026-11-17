@@ -1,0 +1,53 @@
+{
+ "id": "kawasaki-versys-650-2015",
+ "make": "Kawasaki",
+ "model": "Versys 650",
+ "name": "Kawasaki Versys 650",
+ "years": [
+  2015,
+  2021
+ ],
+ "match": [
+  "versys 650",
+  "versys",
+  "kle650",
+  "versys 650 lt"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "649 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "An upright road bike on the Ninja 650 engine. Simple to service, with luggage mounts to check.",
+ "focus": [
+  [
+   "649 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Luggage mounts",
+   "Check for cracks"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Shared engine",
+   "Same as Ninja 650"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [],
+ "heroName": "VERSYS"
+}

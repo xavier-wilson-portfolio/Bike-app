@@ -1,0 +1,114 @@
+{
+ "id": "honda-cb400f-super-sport-1975",
+ "make": "Honda",
+ "model": "CB400F",
+ "name": "Honda CB400F Super Sport",
+ "years": [
+  1975,
+  1977
+ ],
+ "match": [
+  "cb400f",
+  "cb 400 f",
+  "cb400 four",
+  "400 four",
+  "cb400f super sport"
+ ],
+ "style": "cafe",
+ "drive": "chain",
+ "engine": "408 cc air-cooled SOHC inline four, four 20 mm carbs, six-speed",
+ "intro": "The 400 Four, with its four-into-one exhaust. A small, complex four that rewards careful work.",
+ "focus": [
+  [
+   "408 cc SOHC four",
+   "Air-cooled"
+  ],
+  [
+   "Four 20 mm carbs",
+   "Small and fussy"
+  ],
+  [
+   "Six-speed",
+   "Clutch shaft splines"
+  ],
+  [
+   "4-into-1 exhaust",
+   "Hard to replace"
+  ],
+  [
+   "Oil pressure switch",
+   "Common fault"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {
+  "A-003": {
+   "title": "Get the service manual",
+   "instructions": "Get the Honda factory service manual, or the Haynes manual that covers the CB400F and CB550 fours.",
+   "reason": "Every torque value, clearance and capacity in this course comes from the manual."
+  }
+ },
+ "add": [
+  {
+   "id": "X-C4F-01",
+   "phase": "F",
+   "after": "F-005",
+   "title": "Test the oil pressure switch",
+   "instructions": "With the ignition on and the engine off, the oil light should come on. Start it and it should go out. Check for oil seeping from the switch.",
+   "reason": "The oil pressure switch is a common fault on these bikes.",
+   "src": "RealClassic CB400F",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.3,
+   "tools": ""
+  },
+  {
+   "id": "X-C4F-02",
+   "phase": "H",
+   "after": "H-005",
+   "title": "Check the clutch shaft splines",
+   "instructions": "With the clutch cover off, check the clutch shaft splines for wear and notching.",
+   "reason": "Worn splines eventually stop the clutch from releasing properly.",
+   "src": "sohc.co.uk forum",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Oil pressure switch",
+   "what": "A common fault on the 400 Four.",
+   "src": "https://www.real-classic.co.uk/?p=1107118"
+  },
+  {
+   "title": "Clutch shaft splines",
+   "what": "Wear over time until the clutch drags.",
+   "src": "https://www.sohc.co.uk/index.php/topic,28427.0.html"
+  }
+ ],
+ "forums": [
+  {
+   "name": "SOHC.co.uk forum",
+   "url": "https://www.sohc.co.uk/",
+   "what": "Has a CB350/400 Four section."
+  }
+ ],
+ "silhouette": "honda-cb400f-super-sport-1975",
+ "areas": [],
+ "heroName": "CB400F",
+ "hero": {
+  "src": "img/hero/honda-cb400f-super-sport-1975.jpg",
+  "artist": "SG2012",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CB400F_(1977).jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

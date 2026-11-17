@@ -1,0 +1,106 @@
+{
+ "id": "kawasaki-z1-1973",
+ "make": "Kawasaki",
+ "model": "Z1",
+ "name": "Kawasaki Z1 / KZ900",
+ "years": [
+  1973,
+  1976
+ ],
+ "match": [
+  "z1",
+  "z1 900",
+  "kz900",
+  "z900 1973",
+  "z1a",
+  "z1b"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "903 cc air-cooled DOHC inline four, four carbs",
+ "intro": "Kawasaki's first big four and a valuable classic. Matching numbers and correct parts matter here.",
+ "focus": [
+  [
+   "903 cc DOHC four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "Cam chain",
+   "Listen cold"
+  ],
+  [
+   "Numbers",
+   "Frame and engine should match"
+  ],
+  [
+   "Tank",
+   "Clean inside before the carbs"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {
+  "A-001": {
+   "title": "Identify your bike exactly",
+   "instructions": "Record the frame and engine numbers and check that they match the model and year. Watch for reproduction parts sold as original.",
+   "reason": "A Z1's value depends heavily on matching numbers and original parts."
+  }
+ },
+ "add": [
+  {
+   "id": "X-Z1-01",
+   "phase": "B",
+   "after": "B-004",
+   "title": "Listen for cam chain noise",
+   "instructions": "Start it cold and listen at the top of the engine. A rattle at idle points at a worn cam chain tensioner.",
+   "reason": "Tensioner wear is a known Z1 issue.",
+   "src": "motoryk.com Z1 900 problems",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.3,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "G": [
+   "Get the tank completely clean inside before you fit rebuilt carbs, or rust will clog them again."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Cam chain tensioner wear",
+   "what": "Rattles at idle when cold.",
+   "src": "https://motoryk.com/bikes/kawasaki/z1-900/problems"
+  },
+  {
+   "title": "Previous owners",
+   "what": "Owners on KZRider say past owner work is the biggest problem.",
+   "src": "https://kzrider.com/11-projects/617418-common-problems-among-the-z1-kz-line"
+  }
+ ],
+ "forums": [
+  {
+   "name": "KZRider forum",
+   "url": "https://www.kzrider.com/",
+   "what": "Owner forum for classic Kawasaki fours."
+  }
+ ],
+ "silhouette": "kawasaki-z1-1973",
+ "areas": [],
+ "heroName": "Z1",
+ "hero": {
+  "src": "img/hero/kawasaki-z1-1973.jpg",
+  "artist": "Manju",
+  "page": "https://commons.wikimedia.org/wiki/File:KAWASAKI_Z1.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
+}

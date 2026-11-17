@@ -3656,3 +3656,19 @@ button.wk-tick:hover{border-color:var(--st-green);color:var(--st-green)}
 .wk-group>header>.grow,.wk-safe>.grow,.wk-3d>.grow{flex:1;min-width:0}
 .wk-group .wk-gp .wk-bar{max-width:220px}
 div.mh-stat{cursor:default}
+/* bike tune: known problems and recalls on the home page */
+.tune-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.tune-list li{display:flex;flex-direction:column;gap:2px;padding:10px 12px;background:var(--b-blue-soft);border-radius:12px}
+.tune-list li b{color:var(--b-navy)}
+.tune-list li .linkbtn{align-self:flex-start;font-size:13px}
+/* graded project header: real photo, tan filter, model name in Revora blue */
+.herophoto.graded{background:#17232C}
+.herophoto.graded img{object-fit:cover;object-position:50% 55%}
+.herophoto.graded:not(.stock) img{filter:sepia(.62) saturate(.78) contrast(1.1) brightness(.84) hue-rotate(-6deg)}
+.herophoto.graded:not(.stock)::after{content:"";position:absolute;inset:0;background:radial-gradient(80% 75% at 50% 50%,transparent 55%,rgba(23,35,44,.45));pointer-events:none}
+.herophoto .hp-name{position:absolute;left:0;right:0;top:6%;z-index:2;text-align:center;font:900 clamp(48px,13vw,170px)/.9 "Inter Display","Inter",system-ui,sans-serif;letter-spacing:-.02em;color:#8DBBD8;opacity:.92;pointer-events:none;white-space:nowrap;overflow:hidden;text-overflow:clip}
+.herophoto.graded .hp-cap{z-index:3}
+.mh-stage .herophoto.graded{background:#17232C}
+.mh-stage .herophoto.graded::before{display:none}
+.mh-stage .herophoto.graded img{position:absolute;inset:0;width:100%;height:100%}
+.mh-stage .herophoto.graded.stock::after{display:none}

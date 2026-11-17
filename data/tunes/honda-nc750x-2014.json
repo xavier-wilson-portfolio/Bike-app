@@ -1,0 +1,83 @@
+{
+ "id": "honda-nc750x-2014",
+ "make": "Honda",
+ "model": "NC750X",
+ "name": "Honda NC750X",
+ "years": [
+  2014,
+  2026
+ ],
+ "match": [
+  "nc750x",
+  "nc 750x",
+  "nc750",
+  "nc750xd",
+  "nc700x"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "745 cc liquid-cooled parallel twin, fuel injected, manual or DCT",
+ "intro": "Honda's practical crossover, with storage where the tank usually is. Some have the DCT gearbox.",
+ "focus": [
+  [
+   "745 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Manual or DCT",
+   "Check which you have"
+  ],
+  [
+   "Frunk",
+   "Fuel filler under the seat"
+  ],
+  [
+   "Recalls",
+   "DCT fuel, front tire"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2021 NC750X DCT bikes were in recall 21V901 for fuel injection programming, and some 2024 bikes are in recall 25V435 for the front tire.",
+   "reason": "Both can cause a crash. Repairs are free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "21V901",
+   "years": "2021 DCT",
+   "what": "Fuel injection programming can starve the engine and stall it.",
+   "fix": "Free ECU update (Honda KN0).",
+   "src": "https://www.rideapart.com/news/550782/honda-nc750x-dct-2021-recall/"
+  },
+  {
+   "id": "25V435",
+   "years": "2024 (some)",
+   "what": "Front tire inner structure may loosen and unravel.",
+   "fix": "Dealer replaces the tire free.",
+   "src": "https://itsrecalled.pages.dev/recall/honda-american-honda-motor-co-recalls-2024-honda-nc750x-25v435000/"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "silhouette": "honda-nc750x-2014",
+ "areas": [],
+ "heroName": "NC750X",
+ "hero": {
+  "src": "img/hero/honda-nc750x-2014.jpg",
+  "artist": "AndreasMacher",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_NC750XD_RH09.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

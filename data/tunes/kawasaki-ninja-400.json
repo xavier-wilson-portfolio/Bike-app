@@ -1,0 +1,76 @@
+{
+ "id": "kawasaki-ninja-400",
+ "make": "Kawasaki",
+ "model": "Ninja 400",
+ "name": "Kawasaki Ninja 400",
+ "years": [
+  2018,
+  2023
+ ],
+ "match": [
+  "ninja 400",
+  "ninja400",
+  "ex400",
+  "ex400g",
+  "ex400h"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "399 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "A very common first sport bike. Fully faired, so most jobs start with taking panels off.",
+ "focus": [
+  [
+   "Parallel twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Fairing",
+   "Clips and screws to label"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "2021 recall",
+   "Cam chain tensioner"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2021 Ninja 400s are in recall 20V774 (Kawasaki MC20-13) for a cam chain tensioner that may not have been heat-treated properly. Book any open recall with a Kawasaki dealer.",
+   "reason": "A damaged tensioner can stall the engine. Kawasaki told owners not to ride affected bikes until fixed."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "20V774",
+   "years": "2021",
+   "what": "Cam chain tensioner may be weak from bad heat treatment and can stall the engine.",
+   "fix": "Dealer replaces the tensioner free (Kawasaki MC20-13).",
+   "src": "https://static.nhtsa.gov/odi/rcl/2020/RCRIT-20V774-9630.pdf"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "silhouette": "kawasaki-ninja-400",
+ "areas": [],
+ "heroName": "NINJA",
+ "hero": {
+  "src": "img/hero/kawasaki-ninja-400.jpg",
+  "artist": "Mr.choppers",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_Ninja_400_KRT_Edition_(facelift_model)_right_side.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

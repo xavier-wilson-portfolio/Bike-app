@@ -1,0 +1,116 @@
+{
+ "id": "honda-cx500-1978",
+ "make": "Honda",
+ "model": "CX500",
+ "name": "Honda CX500",
+ "years": [
+  1978,
+  1983
+ ],
+ "match": [
+  "cx500",
+  "cx 500",
+  "gl500",
+  "cx500c",
+  "cx500 custom",
+  "cx650"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "497 cc liquid-cooled V-twin, pushrod, shaft drive",
+ "intro": "Honda's water-cooled V-twin. Very durable once the cam chain, water pump seal and stator are sorted.",
+ "focus": [
+  [
+   "497 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Cam chain",
+   "The main worry"
+  ],
+  [
+   "Water pump seal",
+   "Engine-out job"
+  ],
+  [
+   "Shaft drive",
+   "Final drive oil"
+  ],
+  [
+   "Stator",
+   "Fails at high miles"
+  ]
+ ],
+ "remove": [],
+ "patch": {
+  "A-002": {
+   "title": "Check the cam chain recall marks",
+   "instructions": "Look beside the engine number on the lower left crankcase for three punch marks. They show the early cam chain tensioner recall was done. 1978 engines up to CX500E-2034366 were covered.",
+   "reason": "The early tensioner could break and lock the engine."
+  }
+ },
+ "add": [
+  {
+   "id": "X-CX5-01",
+   "phase": "B",
+   "after": "B-004",
+   "title": "Listen for cam chain rattle",
+   "instructions": "Start it cold. A rattle that goes away above about 3,000 rpm usually means a worn cam chain. On manual-tensioner bikes, check how much adjustment is left.",
+   "reason": "Not replacing a slapping cam chain is the main cause of CX engine failure.",
+   "src": "CX500 FAQ (motofaction.org)",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.5,
+   "tools": ""
+  },
+  {
+   "id": "X-CX5-02",
+   "phase": "H",
+   "after": "H-004",
+   "title": "Check for water pump seal weep",
+   "instructions": "Look under the water pump cover for coolant weeping. Use silicate-free coolant and distilled water.",
+   "reason": "A failed mechanical seal is an engine-out repair.",
+   "src": "CX500 buying tips (motofaction.org)",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.3,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "H": [
+   "Cam chain, water pump seal and stator tend to go around 40,000 miles. Owners often do all three in one engine-out job."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "The 1978 cam chain tensioner recall is long closed. Check for the punch marks instead.",
+ "known": [
+  {
+   "title": "Cam chain and tensioner",
+   "what": "Needs attention to avoid major engine damage.",
+   "src": "https://rob.motofaction.org/faq/index.html"
+  },
+  {
+   "title": "Water pump seal",
+   "what": "Common failure that needs the engine out.",
+   "src": "https://canadamotoguide.com/1998/04/30/sonics-workshop-honda-cx500-autopsy"
+  }
+ ],
+ "forums": [
+  {
+   "name": "CX500 Forum",
+   "url": "https://www.cx500forum.com/",
+   "what": "Owner forum for CX and GL 500/650."
+  }
+ ],
+ "silhouette": "honda-cx500-1978",
+ "areas": [],
+ "heroName": "CX500",
+ "hero": {
+  "src": "img/hero/honda-cx500-1978.jpg",
+  "artist": "Bernard S. Jansen",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_cx500_1981_blue_rhs.jpg",
+  "lic": "CC BY-SA 2.5",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.5"
+ }
+}

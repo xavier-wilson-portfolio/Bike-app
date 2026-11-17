@@ -1,0 +1,156 @@
+{
+ "id": "kawasaki-kz650",
+ "make": "Kawasaki",
+ "model": "KZ650",
+ "name": "Kawasaki KZ650",
+ "years": [
+  1977,
+  1983
+ ],
+ "match": [
+  "kz650",
+  "kz 650",
+  "z650",
+  "kz650b",
+  "kz650c",
+  "kz650d",
+  "kz650f",
+  "kz650h",
+  "kz650 csr",
+  "kz650 sr"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "652 cc air-cooled DOHC inline four, four carbs",
+ "intro": "A light, quick DOHC four. Cheap to buy, well supported, and mostly let down by tired ignition parts and old rubber.",
+ "focus": [
+  [
+   "DOHC inline four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Keep each carb's parts apart"
+  ],
+  [
+   "Points (early)",
+   "Points and auto advancer"
+  ],
+  [
+   "Old o-rings",
+   "Leaks come one at a time"
+  ],
+  [
+   "JIS screws",
+   "Use JIS bits, not Phillips"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-KZ6-01",
+   "phase": "A",
+   "after": "A-004",
+   "title": "Get JIS screwdriver bits",
+   "instructions": "The cross-head screws on the KZ are JIS, not Phillips. Buy a set of JIS bits before you touch the engine covers or carbs.",
+   "reason": "Phillips bits cam out and strip JIS screws, which turns a 5-minute job into drilling out screws.",
+   "src": "kzrider.com forum",
+   "safety": "Normal",
+   "skill": "Basic",
+   "estHours": 0.2,
+   "tools": "JIS screwdriver set"
+  },
+  {
+   "id": "X-KZ6-02",
+   "phase": "F",
+   "after": "F-004",
+   "title": "Service the points and auto advancer",
+   "instructions": "On points bikes, fit new Kawasaki points and condenser, set the gap, and free up the automatic timing advancer under the right-hand cover. Then set the timing.",
+   "reason": "Worn points and a sticky advancer cause misfires and flat spots that look like carb trouble.",
+   "src": "kzrider.com forum",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.5,
+   "tools": ""
+  },
+  {
+   "id": "X-KZ6-03",
+   "phase": "H",
+   "after": "H-005",
+   "title": "Check the clutch cushion rubbers",
+   "instructions": "With the clutch apart, check the rubber dampers in the clutch basket. After a few decades they break up.",
+   "reason": "Broken cushion rubbers make the clutch rattle and clunk.",
+   "src": "sidyoung.com",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.5,
+   "tools": ""
+  },
+  {
+   "id": "X-KZ6-04",
+   "phase": "H",
+   "after": "H-006",
+   "title": "Track down o-ring leaks",
+   "instructions": "Clean the engine and find each leak at its source. Many come from the engine's rubber o-rings, which age out one at a time.",
+   "reason": "Fixing the right o-ring beats chasing the same leak across the cases.",
+   "src": "kzrider.com forum",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "A": [
+   "Buy the Kawasaki service manual. Owners on KZRider point new restorers to it first."
+  ],
+  "G": [
+   "Keep each carb's parts in a container marked with its number."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Points ignition",
+   "what": "Worn points and a sticky advancer cause high-rpm misfires.",
+   "src": "https://kzrider.com/forum/2-engine/598111-1977-kz650?start=0"
+  },
+  {
+   "title": "Rubber o-ring leaks",
+   "what": "Many small o-rings in the engine fail one at a time.",
+   "src": "https://kzrider.com/forum/13-bike-related/607091-77-kz650c-pre-purchase-inspection"
+  },
+  {
+   "title": "Clutch cushion rubbers",
+   "what": "Dampers in the clutch break up with age.",
+   "src": "https://sidyoung.com/refreshing-a-tired-z650/"
+  },
+  {
+   "title": "Varnished carbs",
+   "what": "Bikes that sat often start only on choke until the jets are cleaned.",
+   "src": "https://kzrider.com/forum/10-new-members/435271-new-bike-first-kz-1981-csr-650-19000-original-mi"
+  }
+ ],
+ "forums": [
+  {
+   "name": "KZRider forum",
+   "url": "https://kzrider.com/",
+   "what": "The main KZ owner forum, with a section for every model."
+  }
+ ],
+ "silhouette": "kawasaki-kz650",
+ "areas": [],
+ "heroName": "KZ650",
+ "hero": {
+  "src": "img/hero/kawasaki-kz650.jpg",
+  "artist": "Daveymat",
+  "page": "https://commons.wikimedia.org/wiki/File:KZ650-B1_from_2008.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

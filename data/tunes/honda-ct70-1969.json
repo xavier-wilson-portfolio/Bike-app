@@ -1,0 +1,77 @@
+{
+ "id": "honda-ct70-1969",
+ "make": "Honda",
+ "model": "CT70",
+ "name": "Honda CT70 Trail 70",
+ "years": [
+  1969,
+  1994
+ ],
+ "match": [
+  "ct70",
+  "ct 70",
+  "trail 70",
+  "trail70",
+  "ct70h"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "72 cc air-cooled single, one carb",
+ "intro": "The Trail 70. A tiny single that's simple to rebuild. Fuel lines, gaskets and the carb cause most trouble.",
+ "focus": [
+  [
+   "72 cc single",
+   "Air-cooled"
+  ],
+  [
+   "One carb",
+   "Clean or replace"
+  ],
+  [
+   "Fuel lines",
+   "Leak with age"
+  ],
+  [
+   "Top end",
+   "Gasket leaks"
+  ],
+  [
+   "Folding bars",
+   "Check the clamps"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Replace old fuel lines and gaskets. A gas smell usually means one of them is leaking."
+  ],
+  "H": [
+   "A little tapping from the top end is normal. These have mechanical valve lifters."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Fuel leaks",
+   "what": "Worn fuel lines and gaskets.",
+   "src": "https://www.motosport.com/blog/common-issues-on-the-1993-honda-ct70-dirt-bike"
+  }
+ ],
+ "forums": [],
+ "silhouette": "honda-ct70-1969",
+ "areas": [],
+ "heroName": "CT70",
+ "hero": {
+  "src": "img/hero/honda-ct70-1969.jpg",
+  "artist": "Brent Soderberg",
+  "page": "https://commons.wikimedia.org/wiki/File:1972_Honda_CT70_Mini_Trail.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

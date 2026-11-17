@@ -1,0 +1,113 @@
+{
+ "id": "yamaha-xs650",
+ "make": "Yamaha",
+ "model": "XS650",
+ "name": "Yamaha XS650",
+ "years": [
+  1970,
+  1983
+ ],
+ "match": [
+  "xs650",
+  "xs 650",
+  "xs1",
+  "xs2",
+  "tx650",
+  "xs650 special",
+  "xs650 heritage special"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "653 cc air-cooled SOHC parallel twin, two carbs",
+ "intro": "A tough parallel twin with a huge following and parts supply. Most trouble on these bikes is electrical.",
+ "focus": [
+  [
+   "SOHC parallel twin",
+   "Air-cooled, roller-bearing bottom end"
+  ],
+  [
+   "Charging system",
+   "Brushes, rectifier, regulator"
+  ],
+  [
+   "Battery-run ignition",
+   "A weak battery causes odd faults"
+  ],
+  [
+   "Cam chain",
+   "Adjust it, check the guide"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {
+  "F-002": {
+   "title": "Test the charging system",
+   "instructions": "With a fully charged battery, measure the voltage at the battery at idle, at 1,200 rpm and at 3,000 rpm, and write the readings in Measurements. If it isn't charging, check the brushes, rectifier, regulator and grounds in that order.",
+   "reason": "The charging system is the XS650's best-known weak spot, and the ignition runs off the battery."
+  }
+ },
+ "add": [
+  {
+   "id": "X-XS6-01",
+   "phase": "H",
+   "after": "H-003",
+   "title": "Adjust the cam chain",
+   "instructions": "Adjust the cam chain tension the way the manual describes. If it's noisy after adjusting, check the cam chain guide for wear.",
+   "reason": "Owners adjust the cam chain as routine. A worn guide makes the top end rattle.",
+   "src": "xs650.com forum",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.7,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "F": [
+   "Charging voltage on a healthy XS650 is about 12.6 V at idle, 13.5 V at 1,200 rpm and 14.5 V at 3,000 rpm (source: Revival Cycles XS650 troubleshooting guide)."
+  ],
+  "A": [
+   "Use the XS650.com VIN lookup to confirm your exact model and year."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Charging system",
+   "what": "Worn brushes, a failed rectifier or regulator, or bad grounds.",
+   "src": "https://revivalparts.freshdesk.com/support/solutions/articles/17000130384-electrical-troubleshooting-guide"
+  },
+  {
+   "title": "Cam chain and guide",
+   "what": "Needs regular adjusting, and the guide wears.",
+   "src": "https://www.xs650.com/threads/cam-chain-guide.63774/page-2"
+  },
+  {
+   "title": "Weak battery",
+   "what": "The ignition runs off the battery, so a tired one causes odd faults.",
+   "src": "https://www.xs650.com/goto/post?id=158549"
+  }
+ ],
+ "forums": [
+  {
+   "name": "XS650.com",
+   "url": "https://www.xs650.com/",
+   "what": "Owner forum with a large tech reference section."
+  },
+  {
+   "name": "XS650 tech references",
+   "url": "https://www.xs650.com/pages/tech/",
+   "what": "Model ID, engine, carbs and wiring articles."
+  }
+ ],
+ "silhouette": "yamaha-xs650",
+ "areas": [],
+ "heroName": "XS650"
+}

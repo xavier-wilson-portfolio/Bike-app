@@ -1,0 +1,75 @@
+{
+ "id": "kawasaki-vulcan-900-2006",
+ "make": "Kawasaki",
+ "model": "Vulcan 900",
+ "name": "Kawasaki Vulcan 900",
+ "years": [
+  2006,
+  2026
+ ],
+ "match": [
+  "vulcan 900",
+  "vn900",
+  "vulcan 900 classic",
+  "vulcan 900 custom"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "903 cc liquid-cooled V-twin, fuel injected, belt drive",
+ "intro": "Kawasaki's long-running mid-size cruiser. Belt drive and a simple service schedule.",
+ "focus": [
+  [
+   "903 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Belt drive",
+   "Check for cracks and tension"
+  ],
+  [
+   "Recalls",
+   "Early fuel hose"
+  ],
+  [
+   "Chrome",
+   "Pitting and rust"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Many 2006-2008 Vulcan 900s were in recall 08V114 to inspect and replace a fuel hose.",
+   "reason": "A damaged fuel hose can leak. The repair is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "08V114",
+   "years": "2006-2008",
+   "what": "Fuel hose may need replacing.",
+   "fix": "Free dealer inspection and replacement.",
+   "src": "https://www.vehiclesafetyrecalls.com/recall/08V114000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "silhouette": "kawasaki-vulcan-900-2006",
+ "areas": [],
+ "heroName": "VULCAN 900",
+ "hero": {
+  "src": "img/hero/kawasaki-vulcan-900-2006.jpg",
+  "artist": "order_242 from Chile",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_Vulcan_900_(11498857165).jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
+}

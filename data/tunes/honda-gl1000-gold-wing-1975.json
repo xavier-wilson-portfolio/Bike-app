@@ -1,0 +1,97 @@
+{
+ "id": "honda-gl1000-gold-wing-1975",
+ "make": "Honda",
+ "model": "GL1000",
+ "name": "Honda GL1000 Gold Wing",
+ "years": [
+  1975,
+  1979
+ ],
+ "match": [
+  "gl1000",
+  "gl 1000",
+  "gold wing 1000",
+  "goldwing 1000"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "999 cc liquid-cooled flat four, belt-driven cams, four carbs, shaft drive",
+ "intro": "The original Gold Wing. Tough engine, but the cam timing belts must be changed by age, not looks.",
+ "focus": [
+  [
+   "999 cc flat four",
+   "Liquid-cooled"
+  ],
+  [
+   "Timing belts",
+   "Change by age"
+  ],
+  [
+   "Four carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "Shaft drive",
+   "Final drive oil"
+  ],
+  [
+   "Exhaust",
+   "Mufflers rust out"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-GL1-01",
+   "phase": "H",
+   "after": "H-003",
+   "title": "Replace the timing belts",
+   "instructions": "Replace both cam timing belts unless there's proof they were done recently. Set the crank to TDC first and follow the manual for the cam marks. Think about doing the water pump and thermostat while the front is open.",
+   "reason": "Belts can look fine and still fail from age, and a snapped belt can do serious engine damage.",
+   "src": "Goldwingparts.com GL1000/GL1100 buyer's guide",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 3.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "G": [
+   "The four carbs are a common headache. Rebuild them as a matched set with updated seals and floats."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Old timing belts",
+   "what": "Belts fail from age even with low miles.",
+   "src": "https://www.goldwingparts.com/blogs/goldwing-rider-blog/gl1000-gl1100-buyers-guide"
+  },
+  {
+   "title": "Rusted exhaust",
+   "what": "Mufflers and sometimes headers rust through.",
+   "src": "https://ngwclub.com/forum/viewtopic.php?p=817129"
+  }
+ ],
+ "forums": [
+  {
+   "name": "NGW Club forum",
+   "url": "https://www.ngwclub.com/",
+   "what": "Owner forum for early Gold Wings."
+  }
+ ],
+ "silhouette": "honda-gl1000-gold-wing-1975",
+ "areas": [],
+ "heroName": "GL1000",
+ "hero": {
+  "src": "img/hero/honda-gl1000-gold-wing-1975.jpg",
+  "artist": "Mike Schinkel",
+  "page": "https://commons.wikimedia.org/wiki/File:1976_Honda_Gold_Wing_GL1000_01.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

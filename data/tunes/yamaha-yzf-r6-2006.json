@@ -1,0 +1,78 @@
+{
+ "id": "yamaha-yzf-r6-2006",
+ "make": "Yamaha",
+ "model": "YZF-R6",
+ "name": "Yamaha YZF-R6",
+ "years": [
+  2006,
+  2016
+ ],
+ "match": [
+  "yzf-r6",
+  "r6",
+  "yzf r6",
+  "yzfr6"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "599 cc liquid-cooled inline four, fuel injected",
+ "intro": "Yamaha's high-revving 600. Check the charging system and gearbox before anything else.",
+ "focus": [
+  [
+   "599 cc inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Throttle body sync"
+  ],
+  [
+   "Charging",
+   "Stator and regulator"
+  ],
+  [
+   "Gearbox",
+   "Check every gear"
+  ],
+  [
+   "Fairing",
+   "Clips and screws to label"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "F-002": {
+   "title": "Test the charging system",
+   "instructions": "With a charged battery, measure voltage at the battery at idle and at higher rpm. If it's low or high, test the regulator/rectifier and the stator.",
+   "reason": "Stator and regulator failures are a known R6 problem."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "B": [
+   "On the test ride, run through every gear under load. Gearbox problems are a known R6 complaint."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "10V365",
+   "years": "2006-2010",
+   "what": "Front side reflectors mounted at the wrong height.",
+   "fix": "Free dealer repair.",
+   "src": "https://www.vehiclesafetyrecalls.com/recall/10V365000"
+  }
+ ],
+ "known": [
+  {
+   "title": "Stator and regulator",
+   "what": "Charging system faults are common on R6s.",
+   "src": "https://www.slashgear.com/1998333/yamaha-r6-biggest-problems/"
+  }
+ ],
+ "forums": [],
+ "silhouette": "yamaha-yzf-r6-2006",
+ "areas": [],
+ "heroName": "R6"
+}

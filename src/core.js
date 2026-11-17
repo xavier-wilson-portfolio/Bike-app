@@ -5,16 +5,39 @@
 const PACK = window.PACK || { bike: {}, catalogue: {}, thumbs: {} };
 const BIKE = Object.assign({ id: "bike", year: "", make: "", model: "", short: "", name: "", variant: "", variantShort: "", catalogueName: "", engine: "", specs: [], specSource: null, links: {}, hero: null, extras: {} }, PACK.bike);
 if (BIKE.universal && window.RV_BIKE_LABEL) { const L = window.RV_BIKE_LABEL; Object.assign(BIKE, { year: L.year || "", make: L.make || "", model: L.model || "", name: [L.year, L.make, L.model].filter(Boolean).join(" ") || BIKE.name, short: L.model || BIKE.short, variant: (BIKE.styleName || "") + " restoration", silhouette: L.silhouette || "", goal: "restore", drive: (BIKE.drives || []).includes(L.drive) ? L.drive : BIKE.drive }); }
+// the bike's own tune (data/tunes): its name for the course panel, its tips, recalls and known problems
+const TUNE = (BIKE.universal && window.RV_TUNE) || null;
+if (TUNE) {
+  BIKE.tune = TUNE;
+  if (TUNE.focus) BIKE.styleFocus = TUNE.focus.slice();
+  if (TUNE.intro) BIKE.styleIntro = TUNE.intro;
+  if (TUNE.silhouette && (!BIKE.silhouette || /^bike-/.test(BIKE.silhouette))) BIKE.silhouette = TUNE.silhouette;
+  const LS = BIKE.content && BIKE.content.lessons;
+  if (BIKE.content && TUNE.forums && TUNE.forums.length) {
+    BIKE.content.shops = Object.assign({}, BIKE.content.shops);
+    TUNE.forums.forEach((f, i) => { BIKE.content.shops["tune" + i] = { name: f.name, url: f.url, short: "Owner forum", what: f.what, tags: ["Owners", "Free"] }; });
+    if (LS && LS.A) LS.A.shops = (LS.A.shops || []).concat(TUNE.forums.map((f, i) => "tune" + i));
+  }
+}
+// course covers drawn for this kind of bike: engine, tank, wheel, rear suspension and headlight, one set per style
+if (BIKE.universal && BIKE.content) {
+  const STY = BIKE.style || "standard", has = n => ((window.RV_CONFIG && window.RV_CONFIG.sil) || []).includes(n + ".svg");
+  const own = c => ["engine", "fuel", "wheels", "suspension", "electrical"].includes(c) && has(c + "-" + STY) ? c + "-" + STY : c;
+  Object.values(BIKE.content.lessons || {}).forEach(l => { if (l && l.cover) l.cover = own(l.cover); });
+  Object.values(BIKE.content.guides || {}).forEach(g => { if (g && g.cover) g.cover = own(g.cover); });
+}
 // universal courses: fill in the rider's own bike wherever the text says {bike}, {short} or {sil}
 if (BIKE.universal) {
   const sil = BIKE.silhouette || "bike-" + (BIKE.style || "standard"), fill = v => typeof v === "string" ? v.replace(/\{bike\}/g, BIKE.name).replace(/\{short\}/g, BIKE.short).replace(/\{sil\}/g, sil) : Array.isArray(v) ? v.map(fill) : v && typeof v === "object" ? Object.fromEntries(Object.entries(v).map(([k, x]) => [k, fill(x)])) : v;
   if (BIKE.content) BIKE.content = fill(BIKE.content);
   // the final drive the rider picked: its lesson text, how-tos and home-page tile
   const dv = BIKE.content && BIKE.content.drives && BIKE.content.drives[BIKE.drive];
-  if (dv) { Object.assign(BIKE.content.lessons.I, dv.lesson); Object.assign(BIKE.content.howto, dv.howto); BIKE.styleFocus = [dv.tile].concat(BIKE.styleFocus || []); }
+  if (dv) { Object.assign(BIKE.content.lessons.I, dv.lesson); Object.assign(BIKE.content.howto, dv.howto); if (!TUNE) BIKE.styleFocus = [dv.tile].concat(BIKE.styleFocus || []); }
   BIKE.links = Object.assign({}, BIKE.links, { ebay: [BIKE.make, BIKE.model].filter(Boolean).join(" ") || "motorcycle", fiche: "https://www.revzilla.com/oem" });
 }
 if (BIKE.generic && window.RV_BIKE_LABEL) { const L = window.RV_BIKE_LABEL; Object.assign(BIKE, { year: L.year || "", make: L.make || "", model: L.model || "", name: [L.year, L.make, L.model].filter(Boolean).join(" ") || "Your bike", short: L.model || "bike", variant: "", style: L.style || "standard", silhouette: L.silhouette || "", goal: L.goal || "" }); }
+// a maintenance-only bike still gets its own traced silhouette when the model has one
+if (BIKE.generic && window.RV_TUNE && window.RV_TUNE.silhouette && (!BIKE.silhouette || /^bike-/.test(BIKE.silhouette))) BIKE.silhouette = window.RV_TUNE.silhouette;
 if (!BIKE.short) BIKE.short = BIKE.model; if (!BIKE.name) BIKE.name = [BIKE.year, BIKE.make, BIKE.model].join(" "); if (!BIKE.variantShort) BIKE.variantShort = BIKE.short;
 const X = BIKE.extras || {};
 const CMS_DATA = PACK.catalogue || {};

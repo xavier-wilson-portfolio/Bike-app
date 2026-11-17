@@ -1,0 +1,87 @@
+{
+ "id": "honda-rebel-1100-2021",
+ "make": "Honda",
+ "model": "Rebel 1100",
+ "name": "Honda Rebel 1100",
+ "years": [
+  2021,
+  2026
+ ],
+ "match": [
+  "rebel 1100",
+  "rebel1100",
+  "cmx1100",
+  "cmx 1100",
+  "rebel 1100 dct"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "1,084 cc liquid-cooled parallel twin, fuel injected, manual or DCT",
+ "intro": "The big Rebel, with the Africa Twin's twin engine. Some have Honda's DCT automatic gearbox.",
+ "focus": [
+  [
+   "1,084 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Manual or DCT",
+   "Check which you have"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Recalls",
+   "Radiator cap, oil leak"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Every 2021 Rebel 1100 was in recall 21V987 for the radiator cap, and some 2024-2025 bikes are in recall 25V358 for an engine oil leak. Book any open recall with a Honda dealer.",
+   "reason": "Both repairs are free. A bad radiator cap can spray hot coolant."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "A": [
+   "Note whether yours is a manual or a DCT. Clutch and gearbox service is different for each."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "21V987",
+   "years": "2021",
+   "what": "Radiator cap may not seal and can leak or spray hot coolant.",
+   "fix": "Dealer replaces the cap and refills coolant free (Honda KN1).",
+   "src": "https://vehiclesafetyrecalls.com/recall/21V987000"
+  },
+  {
+   "id": "25V358",
+   "years": "2024-2025 (some)",
+   "what": "Possible engine oil leak.",
+   "fix": "Free dealer repair (Honda KS2).",
+   "src": "https://www.advpulse.com/?p=120690"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "silhouette": "honda-rebel-1100-2021",
+ "areas": [],
+ "heroName": "REBEL 1100",
+ "hero": {
+  "src": "img/hero/honda-rebel-1100-2021.jpg",
+  "artist": "Retired electrician",
+  "page": "https://commons.wikimedia.org/wiki/File:Moscow,_Honda_CMX_1100_Rebel_black,_Aug_2026_01.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
+}

@@ -1,0 +1,87 @@
+{
+ "id": "honda-gold-wing-gl1800-2001",
+ "make": "Honda",
+ "model": "Gold Wing GL1800",
+ "name": "Honda Gold Wing GL1800",
+ "years": [
+  2001,
+  2017
+ ],
+ "match": [
+  "gold wing",
+  "goldwing",
+  "gl1800",
+  "gl 1800",
+  "gl1800 gold wing"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "engine": "1,832 cc liquid-cooled flat six, fuel injected, shaft drive",
+ "intro": "Honda's big touring flat six. Long-lived, with several recalls to clear and linked brakes to service right.",
+ "focus": [
+  [
+   "1,832 cc flat six",
+   "Liquid-cooled"
+  ],
+  [
+   "Shaft drive",
+   "Final drive oil"
+  ],
+  [
+   "Linked brakes",
+   "Secondary master cylinder"
+  ],
+  [
+   "Recalls",
+   "Brakes, airbag"
+  ],
+  [
+   "Bodywork",
+   "Lots of panels to label"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Recall 11V567 covered rear brake drag on many 2001-2010 and 2012-2015 GL1800s. Airbag-equipped bikes from 2006-2016 had inflator recalls (16V347, 17V031, 18V045). Book any open recall with a Honda dealer.",
+   "reason": "Brake drag can overheat the rear brake, and airbag inflators can fail dangerously. Both repairs are free."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "K": [
+   "The front and rear brakes are linked through a secondary master cylinder. Follow the manual's bleed order."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "11V567",
+   "years": "2001-2010, 2012-2015",
+   "what": "Rear brake may drag after release.",
+   "fix": "Free dealer repair of the secondary master cylinder.",
+   "src": "https://www.rideapart.com/news/253890/honda-recalls-certain-gl1800-models/"
+  },
+  {
+   "id": "18V045",
+   "years": "2009-2010, 2012-2016 (airbag)",
+   "what": "Airbag inflator may explode.",
+   "fix": "Dealer replaces the airbag module free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/18V045000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "silhouette": "honda-gold-wing-gl1800-2001",
+ "areas": [],
+ "heroName": "GOLD WING",
+ "hero": {
+  "src": "img/hero/honda-gold-wing-gl1800-2001.jpg",
+  "artist": "ウェルワィ",
+  "page": "https://commons.wikimedia.org/wiki/File:Goldwing1800.jpg",
+  "lic": "CC BY 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by/3.0"
+ }
+}

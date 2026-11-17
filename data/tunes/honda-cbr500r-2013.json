@@ -1,0 +1,61 @@
+{
+ "id": "honda-cbr500r-2013",
+ "make": "Honda",
+ "model": "CBR500R",
+ "name": "Honda CBR500R",
+ "years": [
+  2013,
+  2018
+ ],
+ "match": [
+  "cbr500r",
+  "cbr 500 r",
+  "cbr500"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "471 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "Honda's 500 sport twin, shares its engine with the Rebel 500. Simple and long-lived.",
+ "focus": [
+  [
+   "471 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Fairing",
+   "Clips and screws to label"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Shared engine",
+   "Same family as Rebel 500"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [],
+ "silhouette": "honda-cbr500r-2013",
+ "areas": [],
+ "heroName": "CBR500R",
+ "hero": {
+  "src": "img/hero/honda-cbr500r-2013.jpg",
+  "artist": "Lorenz.gw",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CBR500R_2019.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

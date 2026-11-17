@@ -1,0 +1,129 @@
+{
+ "id": "harley-street-glide-m8",
+ "make": "Harley-Davidson",
+ "model": "Street Glide",
+ "name": "Harley-Davidson Street Glide (Milwaukee-Eight)",
+ "years": [
+  2017,
+  2023
+ ],
+ "match": [
+  "street glide",
+  "streetglide",
+  "flhx",
+  "flhxs",
+  "street glide special"
+ ],
+ "style": "touring",
+ "drive": "belt",
+ "engine": "Milwaukee-Eight V-twin (107 or 114), fuel injected, belt drive",
+ "intro": "Harley's best-selling bagger. Several recalls touch the oil lines, clutch and charging wiring, so start there.",
+ "focus": [
+  [
+   "Milwaukee-Eight",
+   "107 or 114 V-twin"
+  ],
+  [
+   "Belt drive",
+   "Tension and wear"
+  ],
+  [
+   "Hydraulic clutch",
+   "2017-18 recall"
+  ],
+  [
+   "Batwing fairing",
+   "Wiring behind it"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "G-007"
+ ],
+ "patch": {
+  "H-004": {
+   "title": "Check the oil cooler and its lines",
+   "instructions": "The Street Glide's engine is cooled by air and oil. Check the oil cooler for damage and blocked fins, and check every oil cooler line and clamp for leaks and secure fitting.",
+   "reason": "A loose oil cooler line can dump oil in front of the rear tire. That was the 2017 recall (17V333)."
+  },
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls and ask a Harley dealer to check it too. Street Glides from this era have had recalls for the oil cooler line clamp (2017), the hydraulic clutch actuator (2017-2018) and the voltage regulator wire (2023), among others.",
+   "reason": "Each of these can cause a crash or leave you stranded. The repairs are free."
+  }
+ },
+ "add": [
+  {
+   "id": "X-SG8-01",
+   "phase": "B",
+   "after": "B-002",
+   "title": "Look for oil at the air cleaner",
+   "instructions": "Pull the air cleaner cover and look for oil in the filter or backplate.",
+   "reason": "Oil there can point to the Milwaukee-Eight sumping problem Harley covered in bulletin M1450.",
+   "src": "au7o.io (bulletin M1450)",
+   "safety": "Normal",
+   "skill": "Basic",
+   "estHours": 0.3,
+   "tools": ""
+  },
+  {
+   "id": "X-SG8-02",
+   "phase": "H",
+   "after": "H-005",
+   "title": "Check the clutch disengages fully",
+   "instructions": "With the engine running in neutral, pull the clutch, select first and roll the bike. It should roll freely. If the clutch drags or won't release, check the hydraulic clutch and recall 18V734.",
+   "reason": "The 2017-2018 recall covered a secondary clutch actuator that leaks internally.",
+   "src": "au7o.io (NHTSA 18V734)",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.3,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "17V333",
+   "years": "2017",
+   "what": "Oil cooler line clamp may be installed wrong and the line can come off.",
+   "fix": "Dealer checks and corrects the clamps free (Harley 0170).",
+   "src": "https://vehiclesafetyrecalls.com/recall/17V333000"
+  },
+  {
+   "id": "18V734",
+   "years": "2017-2018",
+   "what": "Hydraulic clutch secondary actuator can leak internally so the clutch won't disengage.",
+   "fix": "Free dealer repair (Harley 0173).",
+   "src": "https://au7o.io/motorcycle-issues/harley-davidson-street-glide?year=2018"
+  },
+  {
+   "id": "24V672",
+   "years": "2023",
+   "what": "Voltage regulator wire can chafe on the crankcase and blow the main fuse.",
+   "fix": "Free dealer repair.",
+   "src": "https://au7o.io/motorcycle-issues/harley-davidson-street-glide?year=2023"
+  }
+ ],
+ "known": [
+  {
+   "title": "Oil sumping",
+   "what": "Excess oil in the crankcase under hard use; oil at the air cleaner (bulletin M1450).",
+   "src": "https://au7o.io/motorcycle-issues/harley-davidson-street-glide?year=2019"
+  }
+ ],
+ "forums": [],
+ "silhouette": "harley-street-glide-m8",
+ "areas": [],
+ "heroName": "GLIDE",
+ "hero": {
+  "src": "img/hero/harley-street-glide-m8.jpg",
+  "artist": "Chris Woodrich",
+  "page": "https://commons.wikimedia.org/wiki/File:Harley-Davidson_Street_Glide,_Petrolia,_Ontario,_2026-05-17_01.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

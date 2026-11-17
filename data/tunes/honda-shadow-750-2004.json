@@ -1,0 +1,81 @@
+{
+ "id": "honda-shadow-750-2004",
+ "make": "Honda",
+ "model": "Shadow 750",
+ "name": "Honda Shadow 750",
+ "years": [
+  2004,
+  2016
+ ],
+ "match": [
+  "shadow 750",
+  "shadow",
+  "vt750",
+  "vt750c",
+  "shadow aero",
+  "shadow phantom",
+  "shadow spirit"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "745 cc liquid-cooled V-twin, carbs to 2009, fuel injected from 2010",
+ "intro": "Honda's middleweight cruiser. Carbs on early bikes, fuel injection later, and a bank angle sensor recall.",
+ "focus": [
+  [
+   "745 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Check your year"
+  ],
+  [
+   "Shaft drive",
+   "Final drive oil"
+  ],
+  [
+   "Bank angle sensor",
+   "Recall on 2010-2016"
+  ],
+  [
+   "Chrome",
+   "Pitting and rust"
+  ]
+ ],
+ "remove": [],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2010-2016 VT750s are in recall 15V874 for the bank angle sensor wire.",
+   "reason": "If the sensor signal drops, the engine can stall while riding. The repair is free."
+  },
+  "G-001": {
+   "title": "Find out which fuel system it has",
+   "instructions": "2004-2009 Shadow 750s use a carburetor. 2010 and later are fuel injected. Do the carb steps or the fuel injection check to match.",
+   "reason": "The fuel steps are different for each."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "15V874",
+   "years": "2010-2016",
+   "what": "Bank angle sensor wire can rub through and stall the engine.",
+   "fix": "Dealer relocates the connector and replaces the sensor free.",
+   "src": "https://incompliancemag.com/honda-recalls-vt750-motorcycles-for-electrical-system-defect/"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "silhouette": "honda-shadow-750-2004",
+ "areas": [],
+ "heroName": "SHADOW",
+ "hero": {
+  "src": "img/hero/honda-shadow-750-2004.jpg",
+  "artist": "Khaosaming",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_Shadow_VT750S_Ponsantie.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

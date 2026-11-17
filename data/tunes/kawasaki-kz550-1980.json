@@ -1,0 +1,70 @@
+{
+ "id": "kawasaki-kz550-1980",
+ "make": "Kawasaki",
+ "model": "KZ550",
+ "name": "Kawasaki KZ550",
+ "years": [
+  1980,
+  1985
+ ],
+ "match": [
+  "kz550",
+  "kz 550",
+  "gpz550 1980",
+  "kz550 ltd",
+  "z550"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "553 cc air-cooled DOHC inline four, four carbs",
+ "intro": "A light middleweight four. Easy to work on, and parts are shared with other KZs.",
+ "focus": [
+  [
+   "553 cc DOHC four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "Cam chain",
+   "Listen cold"
+  ],
+  [
+   "Charging",
+   "Test the stator"
+  ],
+  [
+   "Chain drive",
+   "Sprockets and chain"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KZRider forum",
+   "url": "https://www.kzrider.com/",
+   "what": "Owner forum for classic Kawasakis."
+  }
+ ],
+ "silhouette": "kawasaki-kz550-1980",
+ "areas": [],
+ "heroName": "KZ550",
+ "hero": {
+  "src": "img/hero/kawasaki-kz550-1980.jpg",
+  "artist": "Ing. Günter Tuder, A-3213 Frankenfels",
+  "page": "https://commons.wikimedia.org/wiki/File:2016-09-22_Kawasaki_GP_550_Z_(2).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

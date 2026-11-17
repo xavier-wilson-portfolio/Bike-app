@@ -1,0 +1,146 @@
+{
+ "id": "honda-cb750-sohc",
+ "make": "Honda",
+ "model": "CB750",
+ "name": "Honda CB750 (SOHC four)",
+ "years": [
+  1969,
+  1978
+ ],
+ "match": [
+  "cb750",
+  "cb 750",
+  "cb750k",
+  "cb750f",
+  "cb750a",
+  "cb750 four",
+  "cb750 super sport"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "736 cc air-cooled SOHC inline four, four carbs, dry sump",
+ "intro": "Honda's first big four. Four carbs, points ignition and a dry-sump engine that keeps its oil in a separate tank.",
+ "focus": [
+  [
+   "736 cc SOHC four",
+   "Air-cooled, one cam"
+  ],
+  [
+   "Dry sump",
+   "Oil lives in a separate tank"
+  ],
+  [
+   "Four carbs",
+   "Rebuilt and synced as a set"
+  ],
+  [
+   "Points ignition",
+   "Gap and timing"
+  ],
+  [
+   "Cam chain",
+   "Listen for tensioner rattle"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {
+  "G-004": {
+   "title": "Rebuild the four carbs as a set",
+   "instructions": "Take the carb bank off as one unit. Strip one carb at a time and keep each carb's parts in its own labeled tray. Clean every jet and passage, fit new float bowl gaskets and o-rings, set the float heights, then refit the bank.",
+   "reason": "The four carbs work as one synced system. Mixing parts between them, or rebuilding only one, is how a SOHC ends up running on three."
+  }
+ },
+ "add": [
+  {
+   "id": "X-CB7-01",
+   "phase": "B",
+   "after": "B-004",
+   "title": "Listen for cam chain rattle",
+   "instructions": "Start it cold and listen at the top of the engine at idle and around 2,000 rpm. A rattle that fades as it warms points at the cam chain tensioner.",
+   "reason": "A worn cam chain tensioner is the most common top-end noise on these engines.",
+   "src": "motoryk.com/bikes/honda/cb750",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.3,
+   "tools": ""
+  },
+  {
+   "id": "X-CB7-02",
+   "phase": "H",
+   "after": "H-001",
+   "title": "Check the oil in the separate tank",
+   "instructions": "This engine is dry sump: the oil lives in a tank under the seat, not in the crankcase. Check the level with the dipstick in the tank, the way the manual says, and look for leaks at the tank lines.",
+   "reason": "Checking it like a wet-sump bike gives a wrong reading. Oil that seems to leak from the cases can come from the tank lines.",
+   "src": "Dry-sump layout, vintage buyer guides",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.0,
+   "tools": ""
+  },
+  {
+   "id": "X-CB7-03",
+   "phase": "L",
+   "after": "L-001",
+   "title": "Check the fork sliders before fitting seals",
+   "instructions": "Before fitting new fork seals, look inside the seal bore for scores. A seal levered out with a screwdriver in the past often scars the alloy, and oil then wicks past the new seal.",
+   "reason": "Owners report new seals leaking on scored sliders.",
+   "src": "sohc.co.uk forum",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.3,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "A": [
+   "Write down the engine number. Early K0 bikes differ from later K models in many small parts."
+  ],
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago. Check that past owners didn't skip key service instead.",
+ "known": [
+  {
+   "title": "Cam chain tensioner",
+   "what": "Rattle at idle and around 2,000 rpm, loudest when cold.",
+   "src": "https://motoryk.com/bikes/honda/cb750"
+  },
+  {
+   "title": "Carbs that won't sync",
+   "what": "'Just needs the carbs cleaned' usually means a full rebuild of all four.",
+   "src": "https://ava.ead.domalberto.edu.br/1975-honda-cb750-sale"
+  },
+  {
+   "title": "Scored fork sliders",
+   "what": "New seals leak if an old seal was pried out and scratched the alloy.",
+   "src": "https://www.sohc.co.uk/index.php/topic,4315.0.html"
+  }
+ ],
+ "forums": [
+  {
+   "name": "SOHC.co.uk forum",
+   "url": "https://www.sohc.co.uk/",
+   "what": "Owner forum for single-cam Honda fours."
+  },
+  {
+   "name": "CB750.com forum",
+   "url": "https://www.cb750.com/",
+   "what": "Restoration threads and engine rebuild help."
+  }
+ ],
+ "silhouette": "honda-cb750-sohc",
+ "areas": [],
+ "heroName": "CB750",
+ "hero": {
+  "src": "img/hero/honda-cb750-sohc.jpg",
+  "artist": "Ronoli",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CB_750_Four.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

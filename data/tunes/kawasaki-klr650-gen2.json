@@ -1,0 +1,123 @@
+{
+ "id": "kawasaki-klr650-gen2",
+ "make": "Kawasaki",
+ "model": "KLR650",
+ "name": "Kawasaki KLR650",
+ "years": [
+  2008,
+  2018
+ ],
+ "match": [
+  "klr650",
+  "klr 650",
+  "klr",
+  "kl650",
+  "kl650e"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "651 cc liquid-cooled single, one carb",
+ "intro": "The second-generation KLR. Simple, cheap and owner-maintained, with one famous weak part: the doohickey.",
+ "focus": [
+  [
+   "651 cc single",
+   "Liquid-cooled"
+  ],
+  [
+   "One carb",
+   "No fuel injection"
+  ],
+  [
+   "The doohickey",
+   "Balancer chain lever"
+  ],
+  [
+   "2008-09 recalls",
+   "Muffler bolts, harness"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2008-2009 bikes had recalls for the muffler mount bolts (09V059) and a wiring harness that can chafe on the frame (09V062), and 2008 bikes for the turn signals (08V520).",
+   "reason": "These were all fixed free by dealers if they were done."
+  }
+ },
+ "add": [
+  {
+   "id": "X-KLR-01",
+   "phase": "H",
+   "after": "H-001",
+   "title": "Inspect or upgrade the doohickey",
+   "instructions": "Check the balancer chain idler lever (the 'doohickey') and its spring. Many owners replace it with an aftermarket kit while the left cover is off.",
+   "reason": "The stock part is the KLR's best-known weak spot, and owners still replace it on newer bikes.",
+   "src": "advrider.com",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 2.5,
+   "tools": ""
+  },
+  {
+   "id": "X-KLR-02",
+   "phase": "E",
+   "after": "E-004",
+   "title": "Check the harness where it meets the frame",
+   "instructions": "Follow the main harness along the frame and look for chafed insulation, especially on 2008-2009 bikes.",
+   "reason": "The 09V062 recall fixed a harness that rubbed through and cut engine power.",
+   "src": "au7o.io (NHTSA 09V062)",
+   "safety": "Normal",
+   "skill": "Basic",
+   "estHours": 0.3,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "09V059",
+   "years": "2008-2009",
+   "what": "Muffler mount bolts can loosen.",
+   "fix": "Dealer strips paint from the tabs and fits new bolts free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/09V059000"
+  },
+  {
+   "id": "09V062",
+   "years": "2008-2009",
+   "what": "Main wiring harness can chafe on the frame and cut engine power.",
+   "fix": "Free dealer repair.",
+   "src": "https://au7o.io/motorcycle-issues/kawasaki-klr650"
+  },
+  {
+   "id": "08V520",
+   "years": "2008",
+   "what": "Turn signal assemblies.",
+   "fix": "Dealer replaces all four turn signals free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/08V520000"
+  }
+ ],
+ "known": [
+  {
+   "title": "The doohickey",
+   "what": "The balancer chain idler lever and spring can fail.",
+   "src": "https://www.advrider.com/klr650-doohickey-people-are-still-replacing-this-part-on-3rd-gen-models/"
+  }
+ ],
+ "forums": [],
+ "silhouette": "kawasaki-klr650-gen2",
+ "areas": [],
+ "heroName": "KLR",
+ "hero": {
+  "src": "img/hero/kawasaki-klr650-gen2.jpg",
+  "artist": "Carsamar",
+  "page": "https://commons.wikimedia.org/wiki/File:2009_black_Kawasaki_KLR_650.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

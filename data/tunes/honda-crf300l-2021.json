@@ -1,0 +1,78 @@
+{
+ "id": "honda-crf300l-2021",
+ "make": "Honda",
+ "model": "CRF300L",
+ "name": "Honda CRF300L",
+ "years": [
+  2021,
+  2026
+ ],
+ "match": [
+  "crf300l",
+  "crf 300l",
+  "crf300",
+  "crf300la",
+  "crf300l rally"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "286 cc liquid-cooled single, fuel injected",
+ "intro": "Honda's light dual-sport. Simple and tough, with a fuel system emissions recall worth checking.",
+ "focus": [
+  [
+   "286 cc single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Recalls",
+   "Fuel cap, reflector"
+  ],
+  [
+   "Off-road wear",
+   "Bearings and chain"
+  ],
+  [
+   "Rally version",
+   "Different fairing and tank"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls and ask a Honda dealer about the emissions recall on 2021-2025 CRF300Ls for the fuel system. Some 2021 bikes were also in reflector recall 21V382.",
+   "reason": "Recall work is free. The emissions recall doesn't apply to the Rally model."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "E": [
+   "Trail use wears wheel, steering and swingarm bearings fast. Check them all for play."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "Emissions (L23)",
+   "years": "2021-2025",
+   "what": "Fuel system failed a fuel permeation test.",
+   "fix": "Free dealer repair. Not on Rally models.",
+   "src": "https://static.nhtsa.gov/odi/tsbs/2025/MC-11024257-0001.pdf"
+  },
+  {
+   "id": "21V382",
+   "years": "2021 (some)",
+   "what": "Rear reflector may be too dim.",
+   "fix": "Dealer replaces the reflector free.",
+   "src": "https://www.rideapart.com/news/511787/recall-honda-rear-reflector-defect/"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "CRF300L"
+}

@@ -1,0 +1,62 @@
+{
+ "id": "kawasaki-ninja-650-2017",
+ "make": "Kawasaki",
+ "model": "Ninja 650",
+ "name": "Kawasaki Ninja 650",
+ "years": [
+  2017,
+  2026
+ ],
+ "match": [
+  "ninja 650",
+  "ninja650",
+  "ex650",
+  "er6f"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "649 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "Kawasaki's middleweight sport twin. Simple and durable, so service history matters most.",
+ "focus": [
+  [
+   "649 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Fairing",
+   "Clips and screws to label"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Shared engine",
+   "Same as Z650 and Vulcan S"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [],
+ "silhouette": "kawasaki-ninja-650-2017",
+ "areas": [],
+ "heroName": "NINJA 650",
+ "hero": {
+  "src": "img/hero/kawasaki-ninja-650-2017.jpg",
+  "artist": "A7N8X",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_Ninja_650_2020.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

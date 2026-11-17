@@ -1,0 +1,96 @@
+{
+ "id": "honda-cb500-four-1971",
+ "make": "Honda",
+ "model": "CB500",
+ "name": "Honda CB500 Four",
+ "years": [
+  1971,
+  1973
+ ],
+ "match": [
+  "cb500",
+  "cb 500",
+  "cb500 four",
+  "cb500k",
+  "cb500k0",
+  "cb500k1",
+  "cb500k2"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "498 cc air-cooled SOHC inline four, four carbs",
+ "intro": "Honda's first middleweight four. Smooth and well built, with a few electrical weak spots to sort.",
+ "focus": [
+  [
+   "SOHC inline four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "Fuse box",
+   "Known weak spot"
+  ],
+  [
+   "Charging",
+   "Stator is costly"
+  ],
+  [
+   "Chain drive",
+   "Sprockets and chain"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-CB4-01",
+   "phase": "F",
+   "after": "F-003",
+   "title": "Replace the fuse box if it's tired",
+   "instructions": "Check the original fuse box for heat damage, melted plastic and loose clips. Replace it if there's any doubt.",
+   "reason": "The fuse box is a common failure point on these bikes, and it's easy to replace.",
+   "src": "classicmotorsports.com forum",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.7,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "F": [
+   "Test the charging system before buying parts. Stators can be expensive, so confirm it's the stator first."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Fuse box meltdown",
+   "what": "The original fuse box can overheat and fail.",
+   "src": "https://classicmotorsports.com/forum/sprockets/looking-at-a-non-running-cb500-four-learn-me-please/82307/page1"
+  }
+ ],
+ "forums": [
+  {
+   "name": "SOHC.co.uk forum",
+   "url": "https://www.sohc.co.uk/",
+   "what": "Owner forum for single-cam Honda fours."
+  }
+ ],
+ "silhouette": "honda-cb500-four-1971",
+ "areas": [],
+ "heroName": "CB500",
+ "hero": {
+  "src": "img/hero/honda-cb500-four-1971.jpg",
+  "artist": "FlorianSt1980",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CB_500_Four_K3.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
+}

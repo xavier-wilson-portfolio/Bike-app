@@ -1,0 +1,83 @@
+{
+ "id": "kawasaki-kz1000-1977",
+ "make": "Kawasaki",
+ "model": "KZ1000",
+ "name": "Kawasaki KZ1000",
+ "years": [
+  1977,
+  1980
+ ],
+ "match": [
+  "kz1000",
+  "kz 1000",
+  "z1000 1977",
+  "kz1000a",
+  "kz1000 ltd"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "1,015 cc air-cooled DOHC inline four, four carbs",
+ "intro": "The Z1's bigger brother. A tough engine; most trouble comes from past owners and tired charging parts.",
+ "focus": [
+  [
+   "1,015 cc DOHC four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "Charging",
+   "Separate regulator and rectifier"
+  ],
+  [
+   "Past owner work",
+   "Check every fastener"
+  ],
+  [
+   "Chain drive",
+   "Sprockets and chain"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "F": [
+   "The stock regulator and rectifier are separate units. Test both before buying parts."
+  ],
+  "B": [
+   "Owners on KZRider say careless past owners cause most problems. Check every bolt and wire as you strip it."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Past owner work",
+   "what": "Owners say careless previous work is the most common problem.",
+   "src": "https://kzrider.com/forum/2-engine/601724-what-are-common-kz1000-cylinder-head-problems"
+  }
+ ],
+ "forums": [
+  {
+   "name": "KZRider forum",
+   "url": "https://www.kzrider.com/",
+   "what": "Owner forum for classic Kawasakis."
+  }
+ ],
+ "silhouette": "kawasaki-kz1000-1977",
+ "areas": [],
+ "heroName": "KZ1000",
+ "hero": {
+  "src": "img/hero/kawasaki-kz1000-1977.jpg",
+  "artist": "SG2012",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_Z1000_(1977)_-_15344712220.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

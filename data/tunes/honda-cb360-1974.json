@@ -1,0 +1,99 @@
+{
+ "id": "honda-cb360-1974",
+ "make": "Honda",
+ "model": "CB360",
+ "name": "Honda CB360",
+ "years": [
+  1974,
+  1976
+ ],
+ "match": [
+  "cb360",
+  "cb 360",
+  "cb360t",
+  "cb360g",
+  "cl360"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "356 cc air-cooled SOHC parallel twin, two carbs, six-speed",
+ "intro": "The CB350's replacement. A six-speed twin that's easy to live with once the top end and carbs are right.",
+ "focus": [
+  [
+   "356 cc twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Rebuild and sync"
+  ],
+  [
+   "Rocker shafts",
+   "Early ones wear the cover"
+  ],
+  [
+   "Six-speed",
+   "Clutch cable length"
+  ],
+  [
+   "Chain drive",
+   "Sprockets and chain"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-C36-01",
+   "phase": "H",
+   "after": "H-003",
+   "title": "Check the rocker shafts and cam",
+   "instructions": "With the valve cover off, check that the rocker shafts can't turn in the cover and look for wear in their sockets and on the cam lobes. Later shafts screw in to stop this.",
+   "reason": "Early CB360s used loose rocker shafts that could rotate and wear the cover.",
+   "src": "CB360 history notes",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 1.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "H": [
+   "A clutch cable outer that's a few mm too long makes the clutch fussy to adjust. Check it before you blame the clutch."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Loose rocker shafts",
+   "what": "Early shafts could rotate and wear the head cover.",
+   "src": "https://carolusmixedup.blogspot.com/2015/07/start-restore-my-cb-360.html"
+  },
+  {
+   "title": "Long clutch cables",
+   "what": "Many replacement cables are about 4 mm too long.",
+   "src": "https://www.vintagehondatwins.com/forums/goto/post?id=202608"
+  }
+ ],
+ "forums": [
+  {
+   "name": "Vintage Honda Twins forum",
+   "url": "https://www.vintagehondatwins.com/",
+   "what": "Owner forum for Honda twins of the 60s and 70s."
+  }
+ ],
+ "silhouette": "honda-cb360-1974",
+ "areas": [],
+ "heroName": "CB360",
+ "hero": {
+  "src": "img/hero/honda-cb360-1974.jpg",
+  "artist": "SG2012",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CB360_(1975)_-_29086437541.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

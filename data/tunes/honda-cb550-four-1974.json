@@ -1,0 +1,129 @@
+{
+ "id": "honda-cb550-four-1974",
+ "make": "Honda",
+ "model": "CB550",
+ "name": "Honda CB550 Four",
+ "years": [
+  1974,
+  1978
+ ],
+ "match": [
+  "cb550",
+  "cb 550",
+  "cb550k",
+  "cb550f",
+  "cb550 four",
+  "cb550 super sport"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "544 cc air-cooled SOHC inline four, four carbs",
+ "intro": "The middle of Honda's SOHC four family, between the CB500 and CB750. Tough engine; neglect is its main enemy.",
+ "focus": [
+  [
+   "SOHC inline four",
+   "Air-cooled"
+  ],
+  [
+   "Four Keihin carbs",
+   "Rebuild and sync as a set"
+  ],
+  [
+   "Cam chain",
+   "Stretches on high miles"
+  ],
+  [
+   "Tank and frame rust",
+   "Check inside and at the pivot"
+  ],
+  [
+   "Chain drive",
+   "Sprockets and chain"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {
+  "A-003": {
+   "title": "Get the service manual",
+   "instructions": "Get the Honda factory service manual for your year, or the Haynes manual that covers the CB400F and CB550 fours.",
+   "reason": "Every torque value, clearance and capacity in this course comes from the manual."
+  },
+  "G-004": {
+   "title": "Rebuild the four carbs as a set",
+   "instructions": "Take the carb bank off as one unit. Strip one carb at a time and keep each one's parts in its own tray. Clean every jet and passage, fit new gaskets and o-rings, set the float heights, refit, then sync all four.",
+   "reason": "Dried gaskets, varnished jets and stuck float needles are the usual trouble after storage."
+  }
+ },
+ "add": [
+  {
+   "id": "X-CB5-01",
+   "phase": "B",
+   "after": "B-004",
+   "title": "Listen for cam chain noise",
+   "instructions": "Start it cold and listen at the top of the engine. A rattle that won't settle points at a stretched cam chain or tired tensioner.",
+   "reason": "A stretched cam chain is common on high-mileage engines and can damage the top end if left.",
+   "src": "motoryk.com 1977 CB550 buyer's guide",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.3,
+   "tools": ""
+  },
+  {
+   "id": "X-CB5-02",
+   "phase": "E",
+   "after": "E-002",
+   "title": "Check the frame at the swingarm pivot",
+   "instructions": "Clean and inspect the lower frame rails and the area around the swingarm pivot for rust.",
+   "reason": "That's where frame rust usually starts on these bikes.",
+   "src": "motoryk.com CB550K guide",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "G": [
+   "Look inside the tank with a light. Internal rust needs a liner kit or a new tank before it clogs the rebuilt carbs."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Gummed carbs",
+   "what": "Dried gaskets, varnished jets and stuck floats after storage.",
+   "src": "https://motoryk.com/blog/honda-cb550-four-super-sport-cb550k-common-problems"
+  },
+  {
+   "title": "Stretched cam chain",
+   "what": "Common on high-mileage engines.",
+   "src": "https://motoryk.com/blog/1977-honda-cb550-buyer-s-guide-what-to-inspect-before-you-buy"
+  },
+  {
+   "title": "Frame rust",
+   "what": "Lower rails and swingarm pivot.",
+   "src": "https://motoryk.com/blog/honda-cb550-four-super-sport-cb550k-common-problems"
+  }
+ ],
+ "forums": [
+  {
+   "name": "SOHC.co.uk forum",
+   "url": "https://www.sohc.co.uk/",
+   "what": "Owner forum for single-cam Honda fours."
+  }
+ ],
+ "silhouette": "honda-cb550-four-1974",
+ "areas": [],
+ "heroName": "CB550",
+ "hero": {
+  "src": "img/hero/honda-cb550-four-1974.jpg",
+  "artist": "John Goetzinger",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CB550Four_cropped.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

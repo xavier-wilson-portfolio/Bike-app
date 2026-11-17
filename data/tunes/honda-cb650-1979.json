@@ -1,0 +1,74 @@
+{
+ "id": "honda-cb650-1979",
+ "make": "Honda",
+ "model": "CB650",
+ "name": "Honda CB650",
+ "years": [
+  1979,
+  1982
+ ],
+ "match": [
+  "cb650",
+  "cb 650",
+  "cb650c",
+  "cb650sc",
+  "cb650 custom"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "627 cc air-cooled SOHC inline four, four carbs",
+ "intro": "The last of Honda's single-cam fours. A good runner once the carbs and charging system are sorted.",
+ "focus": [
+  [
+   "SOHC inline four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "Charging",
+   "Test before buying parts"
+  ],
+  [
+   "Cam chain",
+   "Listen cold"
+  ],
+  [
+   "Drive",
+   "Chain on most, check yours"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild and sync the four carbs as one set. Mixing jets between carbs is the usual cause of uneven running."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "SOHC.co.uk forum",
+   "url": "https://www.sohc.co.uk/",
+   "what": "Owner forum for single-cam Honda fours."
+  }
+ ],
+ "silhouette": "honda-cb650-1979",
+ "areas": [],
+ "heroName": "CB650",
+ "hero": {
+  "src": "img/hero/honda-cb650-1979.jpg",
+  "artist": "Strinzer",
+  "page": "https://commons.wikimedia.org/wiki/File:CB650C.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
+}

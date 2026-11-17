@@ -1,0 +1,62 @@
+{
+ "id": "kawasaki-vulcan-s-2015",
+ "make": "Kawasaki",
+ "model": "Vulcan S",
+ "name": "Kawasaki Vulcan S",
+ "years": [
+  2015,
+  2026
+ ],
+ "match": [
+  "vulcan s",
+  "vulcan-s",
+  "en650",
+  "vulcan 650"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "649 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "A cruiser built on the Ninja 650 engine. Simple service with a low seat to work around.",
+ "focus": [
+  [
+   "649 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Low seat",
+   "Easy to work around"
+  ],
+  [
+   "Shared engine",
+   "Same as Ninja 650"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [],
+ "silhouette": "kawasaki-vulcan-s-2015",
+ "areas": [],
+ "heroName": "VULCAN S",
+ "hero": {
+  "src": "img/hero/kawasaki-vulcan-s-2015.jpg",
+  "artist": "Wikithulhu",
+  "page": "https://commons.wikimedia.org/wiki/File:KawasakiVulcanS2020.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

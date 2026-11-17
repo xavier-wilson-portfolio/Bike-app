@@ -1,0 +1,85 @@
+{
+ "id": "honda-africa-twin-crf1100l-2020",
+ "make": "Honda",
+ "model": "Africa Twin",
+ "name": "Honda Africa Twin CRF1100L",
+ "years": [
+  2020,
+  2026
+ ],
+ "match": [
+  "africa twin",
+  "crf1100l",
+  "crf1100",
+  "crf 1100",
+  "africa twin adventure sports"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "1,084 cc liquid-cooled parallel twin, fuel injected, manual or DCT",
+ "intro": "Honda's big adventure twin. Several recalls cover the switchgear, DCT software and Adventure Sports tank.",
+ "focus": [
+  [
+   "1,084 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Manual or DCT",
+   "Check which you have"
+  ],
+  [
+   "Recalls",
+   "Switch, ECU, tank"
+  ],
+  [
+   "Crash bars",
+   "Check mounts after drops"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2020-2022 and 2024-2025 bikes are in recall 25V583 for the left handlebar switch. 2020-2021 DCT bikes had ECU recall 22V662, and 2020 Adventure Sports models had fuel tank recall 20V797.",
+   "reason": "These can cost you the horn, the headlight switch or engine power. Repairs are free."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "E": [
+   "Check the frame and subframe around crash bar and rack mounts for cracks after any drop."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "25V583",
+   "years": "2020-2022, 2024-2025",
+   "what": "Left handlebar switch may lose horn and headlight beam control.",
+   "fix": "Free dealer repair (Honda KS8).",
+   "src": "https://www.advpulse.com/?p=122431"
+  },
+  {
+   "id": "22V662",
+   "years": "2020-2021 DCT",
+   "what": "ECU software can stall the engine or cut drive.",
+   "fix": "Free ECU update.",
+   "src": "https://vehiclesafetyrecalls.com/recall/22V662000"
+  },
+  {
+   "id": "20V797",
+   "years": "2020 Adventure Sports",
+   "what": "Fuel filter may clog from tank weld debris.",
+   "fix": "Free dealer repair (Honda KL4).",
+   "src": "https://vehiclesafetyrecalls.com/recall/20V797000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "AFRICA TWIN"
+}

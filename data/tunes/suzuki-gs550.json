@@ -1,0 +1,89 @@
+{
+ "id": "suzuki-gs550",
+ "make": "Suzuki",
+ "model": "GS550",
+ "name": "Suzuki GS550",
+ "years": [
+  1977,
+  1980
+ ],
+ "match": [
+  "gs550",
+  "gs 550",
+  "gs550e",
+  "gs550l",
+  "gs550b",
+  "gs550ec"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "549 cc air-cooled DOHC inline four, four carbs",
+ "intro": "The GS750's smaller brother, from the same engine family and the same Haynes manual. Overbuilt and long-lived.",
+ "focus": [
+  [
+   "DOHC inline four",
+   "Air-cooled"
+  ],
+  [
+   "Shares with the GS750",
+   "Same family, same manual"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Points ignition",
+   "Gap and timing"
+  ],
+  [
+   "Chain drive",
+   "Sprockets and chain"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {
+  "A-003": {
+   "title": "Get the service manual",
+   "instructions": "Get the Suzuki factory service manual for your year, or the Haynes manual no. 363, which covers the 1976-1982 GS550 and GS750 fours.",
+   "reason": "Every torque value, clearance and capacity in this course comes from the manual."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "H": [
+   "NGK B8ES is the plug GS Resources owners name for the 1977 GS550. Check your manual for your year.",
+   "Suzuki oil filter 16500-45810 fits the 1977-82 GS550 (Total Motorcycle parts list)."
+  ],
+  "K": [
+   "EBC FA38 is listed for the 1977-79 front discs (Total Motorcycle parts list)."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Bikes that sat",
+   "what": "Fuel, carbs and brakes need the full sitting-bike routine before the first start.",
+   "src": "https://www.thegsresources.com/_forum/forum/technical-forums/old-technical-info-forum/22060-1983-suzuki-gs-550-e-12-000-original-miles?p=383593"
+  },
+  {
+   "title": "Points ignition",
+   "what": "Many 'carb' problems on points bikes turn out to be ignition.",
+   "src": "https://thegsresources.com/_forum/forum/featured-forums/gs-owners/74956-detroit-livonia-mi-78-gs550-new-owner"
+  }
+ ],
+ "forums": [
+  {
+   "name": "The GS Resources",
+   "url": "https://www.thegsresources.com/",
+   "what": "The main Suzuki GS forum, with carb, wiring and manual downloads."
+  }
+ ],
+ "silhouette": "suzuki-gs550",
+ "areas": [],
+ "heroName": "GS550"
+}

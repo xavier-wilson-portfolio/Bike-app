@@ -1,0 +1,61 @@
+{
+ "id": "kawasaki-z650-2017",
+ "make": "Kawasaki",
+ "model": "Z650",
+ "name": "Kawasaki Z650",
+ "years": [
+  2017,
+  2026
+ ],
+ "match": [
+  "z650",
+  "z 650",
+  "er650"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "649 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "The naked version of the Ninja 650. Easy to work on with the bodywork mostly out of the way.",
+ "focus": [
+  [
+   "649 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Naked bike",
+   "Little bodywork"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Shared engine",
+   "Same as Ninja 650"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [],
+ "silhouette": "kawasaki-z650-2017",
+ "areas": [],
+ "heroName": "Z650",
+ "hero": {
+  "src": "img/hero/kawasaki-z650-2017.jpg",
+  "artist": "Gamemaster669",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_Z650_schwarz_2020.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

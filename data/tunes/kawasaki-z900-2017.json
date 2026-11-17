@@ -1,0 +1,88 @@
+{
+ "id": "kawasaki-z900-2017",
+ "make": "Kawasaki",
+ "model": "Z900",
+ "name": "Kawasaki Z900",
+ "years": [
+  2017,
+  2026
+ ],
+ "match": [
+  "z900",
+  "z 900",
+  "z900 abs"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "948 cc liquid-cooled inline four, fuel injected",
+ "intro": "Kawasaki's big naked four. Early bikes had recalls for the rear shock mount, brake routing and ABS.",
+ "focus": [
+  [
+   "948 cc inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Recalls",
+   "Shock mount, brakes, ABS"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Naked bike",
+   "Little bodywork"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2017-2018 Z900s had rear shock recall 17V703, some 2018 bikes had brake hose routing recall 18V866, and 2019 ABS bikes had ABS unit recall 19V083.",
+   "reason": "Each one affects braking or the rear suspension. Repairs are free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "17V703",
+   "years": "2017-2018",
+   "what": "Rear shock frame mount holes can elongate.",
+   "fix": "Free dealer repair (Kawasaki MC17-04).",
+   "src": "https://www.motorcyclistonline.com/kawasaki-recalls-late-model-z900-motorcycle-for-possible-rear-suspension-defect/"
+  },
+  {
+   "id": "18V866",
+   "years": "2018 (some)",
+   "what": "Rear brake hose and sensor wire may touch the tire.",
+   "fix": "Free inspection and rerouting (Kawasaki MC18-06).",
+   "src": "https://www.vehiclesafetyrecalls.com/recall/18V866000"
+  },
+  {
+   "id": "19V083",
+   "years": "2019 ABS",
+   "what": "ABS unit debris may lock a wheel.",
+   "fix": "Dealer inspects and replaces the ABS unit free (MC19-01).",
+   "src": "https://vehiclesafetyrecalls.com/recall/19V083000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "silhouette": "kawasaki-z900-2017",
+ "areas": [],
+ "heroName": "Z900",
+ "hero": {
+  "src": "img/hero/kawasaki-z900-2017.jpg",
+  "artist": "T.doi.z900",
+  "page": "https://commons.wikimedia.org/wiki/File:KawasakiZ900.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

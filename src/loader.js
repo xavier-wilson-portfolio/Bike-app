@@ -1043,6 +1043,15 @@
     draw(decided);
   }
 
+  /* ---------- a bike's own tune: its steps, recalls and known problems on top of the style course ---------- */
+  let TUNES = null;
+  async function findTune(L) {
+    if (!L || !L.make || !L.model) return null;
+    if (!TUNES) TUNES = await getJson("tunes/index.json?v=" + (window.RV_BUILD || ""));
+    const mk = norm(L.make), md = norm(L.model), y = +L.year || 0;
+    const hit = (TUNES || []).find(t => norm(t.make) === mk && [t.model, ...(t.match || [])].some(m => norm(m) === md) && (!y || (y >= t.years[0] && y <= t.years[1])));
+    return hit ? await getJson("tunes/" + encodeURIComponent(hit.id) + ".json?v=" + (window.RV_BUILD || "")) : null;
+  }
   /* ---------- open a bike ---------- */
   async function openApp(bikeId, cloud) {
     spin();
@@ -1056,6 +1065,8 @@
       else m = localMeta(bikeId);
       window.RV_BIKE_LABEL = m ? { year: m.year, make: m.make, model: m.model, style: m.style || guessStyle(m.make || "", m.model || ""), silhouette: m.silhouette || "", goal: m.goal || (m.requestKey ? "restore" : "maintain"), drive: m.drive || (bikeOf(bikeId)?.universal ? guessDrive(m.make || "", m.model || "", bikeOf(bikeId).style) : "") } : null;
     }
+    window.RV_TUNE = null;
+    if ((bikeOf(bikeId)?.universal || bikeOf(bikeId)?.generic) && window.RV_BIKE_LABEL) { try { window.RV_TUNE = await findTune(window.RV_BIKE_LABEL); } catch (e) {} }
     try { await loadScript("app.js?v=" + (window.RV_BUILD || Date.now())); } catch (e) { return fail("Couldn't load the app. Check your internet and try again."); }
     // trying it without an account: a strip that says it's only on this browser, and that a free account keeps it
     if (!cloud && !window.RV_DEMO && sb && !session && !document.querySelector(".demo-bar")) {

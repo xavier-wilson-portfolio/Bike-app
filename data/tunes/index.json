@@ -1,0 +1,916 @@
+[
+ {
+  "id": "honda-cb750-sohc",
+  "make": "Honda",
+  "model": "CB750",
+  "name": "Honda CB750 (SOHC four)",
+  "years": [
+   1969,
+   1978
+  ],
+  "match": [
+   "cb750",
+   "cb 750",
+   "cb750k",
+   "cb750f",
+   "cb750a",
+   "cb750 four",
+   "cb750 super sport"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "kawasaki-kz650",
+  "make": "Kawasaki",
+  "model": "KZ650",
+  "name": "Kawasaki KZ650",
+  "years": [
+   1977,
+   1983
+  ],
+  "match": [
+   "kz650",
+   "kz 650",
+   "z650",
+   "kz650b",
+   "kz650c",
+   "kz650d",
+   "kz650f",
+   "kz650h",
+   "kz650 csr",
+   "kz650 sr"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "yamaha-xs650",
+  "make": "Yamaha",
+  "model": "XS650",
+  "name": "Yamaha XS650",
+  "years": [
+   1970,
+   1983
+  ],
+  "match": [
+   "xs650",
+   "xs 650",
+   "xs1",
+   "xs2",
+   "tx650",
+   "xs650 special",
+   "xs650 heritage special"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "suzuki-gs550",
+  "make": "Suzuki",
+  "model": "GS550",
+  "name": "Suzuki GS550",
+  "years": [
+   1977,
+   1980
+  ],
+  "match": [
+   "gs550",
+   "gs 550",
+   "gs550e",
+   "gs550l",
+   "gs550b",
+   "gs550ec"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-cb350-twin",
+  "make": "Honda",
+  "model": "CB350",
+  "name": "Honda CB350 / CL350",
+  "years": [
+   1968,
+   1973
+  ],
+  "match": [
+   "cb350",
+   "cb 350",
+   "cl350",
+   "cl 350",
+   "cb350k",
+   "cl350k",
+   "sl350"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-rebel-500",
+  "make": "Honda",
+  "model": "Rebel 500",
+  "name": "Honda Rebel 500",
+  "years": [
+   2017,
+   2026
+  ],
+  "match": [
+   "rebel 500",
+   "rebel500",
+   "cmx500",
+   "cmx 500"
+  ],
+  "style": "cruiser",
+  "drive": "chain"
+ },
+ {
+  "id": "yamaha-mt07-gen1",
+  "make": "Yamaha",
+  "model": "MT-07",
+  "name": "Yamaha MT-07 / FZ-07",
+  "years": [
+   2014,
+   2017
+  ],
+  "match": [
+   "mt-07",
+   "mt07",
+   "mt 07",
+   "fz-07",
+   "fz07",
+   "fz 07"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "kawasaki-ninja-400",
+  "make": "Kawasaki",
+  "model": "Ninja 400",
+  "name": "Kawasaki Ninja 400",
+  "years": [
+   2018,
+   2023
+  ],
+  "match": [
+   "ninja 400",
+   "ninja400",
+   "ex400",
+   "ex400g",
+   "ex400h"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "harley-street-glide-m8",
+  "make": "Harley-Davidson",
+  "model": "Street Glide",
+  "name": "Harley-Davidson Street Glide (Milwaukee-Eight)",
+  "years": [
+   2017,
+   2023
+  ],
+  "match": [
+   "street glide",
+   "streetglide",
+   "flhx",
+   "flhxs",
+   "street glide special"
+  ],
+  "style": "touring",
+  "drive": "belt"
+ },
+ {
+  "id": "kawasaki-klr650-gen2",
+  "make": "Kawasaki",
+  "model": "KLR650",
+  "name": "Kawasaki KLR650",
+  "years": [
+   2008,
+   2018
+  ],
+  "match": [
+   "klr650",
+   "klr 650",
+   "klr",
+   "kl650",
+   "kl650e"
+  ],
+  "style": "dualsport",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-rebel-300-2017",
+  "make": "Honda",
+  "model": "Rebel 300",
+  "name": "Honda Rebel 300",
+  "years": [
+   2017,
+   2026
+  ],
+  "match": [
+   "rebel 300",
+   "rebel300",
+   "cmx300",
+   "cmx 300"
+  ],
+  "style": "cruiser",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-cb550-four-1974",
+  "make": "Honda",
+  "model": "CB550",
+  "name": "Honda CB550 Four",
+  "years": [
+   1974,
+   1978
+  ],
+  "match": [
+   "cb550",
+   "cb 550",
+   "cb550k",
+   "cb550f",
+   "cb550 four",
+   "cb550 super sport"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-rebel-1100-2021",
+  "make": "Honda",
+  "model": "Rebel 1100",
+  "name": "Honda Rebel 1100",
+  "years": [
+   2021,
+   2026
+  ],
+  "match": [
+   "rebel 1100",
+   "rebel1100",
+   "cmx1100",
+   "cmx 1100",
+   "rebel 1100 dct"
+  ],
+  "style": "cruiser",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-cb500-four-1971",
+  "make": "Honda",
+  "model": "CB500",
+  "name": "Honda CB500 Four",
+  "years": [
+   1971,
+   1973
+  ],
+  "match": [
+   "cb500",
+   "cb 500",
+   "cb500 four",
+   "cb500k",
+   "cb500k0",
+   "cb500k1",
+   "cb500k2"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-grom-2022",
+  "make": "Honda",
+  "model": "Grom",
+  "name": "Honda Grom",
+  "years": [
+   2022,
+   2026
+  ],
+  "match": [
+   "grom",
+   "msx125",
+   "msx 125"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-cb400f-super-sport-1975",
+  "make": "Honda",
+  "model": "CB400F",
+  "name": "Honda CB400F Super Sport",
+  "years": [
+   1975,
+   1977
+  ],
+  "match": [
+   "cb400f",
+   "cb 400 f",
+   "cb400 four",
+   "400 four",
+   "cb400f super sport"
+  ],
+  "style": "cafe",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-cbr600rr-2007",
+  "make": "Honda",
+  "model": "CBR600RR",
+  "name": "Honda CBR600RR",
+  "years": [
+   2007,
+   2012
+  ],
+  "match": [
+   "cbr600rr",
+   "cbr 600 rr",
+   "cbr600",
+   "pc40",
+   "600rr"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-cb450-1965",
+  "make": "Honda",
+  "model": "CB450",
+  "name": "Honda CB450",
+  "years": [
+   1965,
+   1974
+  ],
+  "match": [
+   "cb450",
+   "cb 450",
+   "cl450",
+   "black bomber",
+   "cb450k"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-cbr500r-2013",
+  "make": "Honda",
+  "model": "CBR500R",
+  "name": "Honda CBR500R",
+  "years": [
+   2013,
+   2018
+  ],
+  "match": [
+   "cbr500r",
+   "cbr 500 r",
+   "cbr500"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-cb360-1974",
+  "make": "Honda",
+  "model": "CB360",
+  "name": "Honda CB360",
+  "years": [
+   1974,
+   1976
+  ],
+  "match": [
+   "cb360",
+   "cb 360",
+   "cb360t",
+   "cb360g",
+   "cl360"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-crf300l-2021",
+  "make": "Honda",
+  "model": "CRF300L",
+  "name": "Honda CRF300L",
+  "years": [
+   2021,
+   2026
+  ],
+  "match": [
+   "crf300l",
+   "crf 300l",
+   "crf300",
+   "crf300la",
+   "crf300l rally"
+  ],
+  "style": "dualsport",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-cb175-cl175-1968",
+  "make": "Honda",
+  "model": "CB175",
+  "name": "Honda CB175 / CL175",
+  "years": [
+   1968,
+   1973
+  ],
+  "match": [
+   "cb175",
+   "cl175",
+   "cb 175",
+   "cl 175",
+   "cd175"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-gold-wing-gl1800-2001",
+  "make": "Honda",
+  "model": "Gold Wing GL1800",
+  "name": "Honda Gold Wing GL1800",
+  "years": [
+   2001,
+   2017
+  ],
+  "match": [
+   "gold wing",
+   "goldwing",
+   "gl1800",
+   "gl 1800",
+   "gl1800 gold wing"
+  ],
+  "style": "touring",
+  "drive": "shaft"
+ },
+ {
+  "id": "honda-cb200-1973",
+  "make": "Honda",
+  "model": "CB200",
+  "name": "Honda CB200",
+  "years": [
+   1973,
+   1976
+  ],
+  "match": [
+   "cb200",
+   "cb 200",
+   "cb200t",
+   "cl200"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-africa-twin-crf1100l-2020",
+  "make": "Honda",
+  "model": "Africa Twin",
+  "name": "Honda Africa Twin CRF1100L",
+  "years": [
+   2020,
+   2026
+  ],
+  "match": [
+   "africa twin",
+   "crf1100l",
+   "crf1100",
+   "crf 1100",
+   "africa twin adventure sports"
+  ],
+  "style": "adventure",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-cx500-1978",
+  "make": "Honda",
+  "model": "CX500",
+  "name": "Honda CX500",
+  "years": [
+   1978,
+   1983
+  ],
+  "match": [
+   "cx500",
+   "cx 500",
+   "gl500",
+   "cx500c",
+   "cx500 custom",
+   "cx650"
+  ],
+  "style": "standard",
+  "drive": "shaft"
+ },
+ {
+  "id": "honda-shadow-750-2004",
+  "make": "Honda",
+  "model": "Shadow 750",
+  "name": "Honda Shadow 750",
+  "years": [
+   2004,
+   2016
+  ],
+  "match": [
+   "shadow 750",
+   "shadow",
+   "vt750",
+   "vt750c",
+   "shadow aero",
+   "shadow phantom",
+   "shadow spirit"
+  ],
+  "style": "cruiser",
+  "drive": "shaft"
+ },
+ {
+  "id": "honda-cb650-1979",
+  "make": "Honda",
+  "model": "CB650",
+  "name": "Honda CB650",
+  "years": [
+   1979,
+   1982
+  ],
+  "match": [
+   "cb650",
+   "cb 650",
+   "cb650c",
+   "cb650sc",
+   "cb650 custom"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-nc750x-2014",
+  "make": "Honda",
+  "model": "NC750X",
+  "name": "Honda NC750X",
+  "years": [
+   2014,
+   2026
+  ],
+  "match": [
+   "nc750x",
+   "nc 750x",
+   "nc750",
+   "nc750xd",
+   "nc700x"
+  ],
+  "style": "adventure",
+  "drive": "chain"
+ },
+ {
+  "id": "kawasaki-ninja-500-2024",
+  "make": "Kawasaki",
+  "model": "Ninja 500",
+  "name": "Kawasaki Ninja 500",
+  "years": [
+   2024,
+   2026
+  ],
+  "match": [
+   "ninja 500",
+   "ninja500",
+   "ex500",
+   "z500"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-gl1000-gold-wing-1975",
+  "make": "Honda",
+  "model": "GL1000",
+  "name": "Honda GL1000 Gold Wing",
+  "years": [
+   1975,
+   1979
+  ],
+  "match": [
+   "gl1000",
+   "gl 1000",
+   "gold wing 1000",
+   "goldwing 1000"
+  ],
+  "style": "standard",
+  "drive": "shaft"
+ },
+ {
+  "id": "kawasaki-ninja-650-2017",
+  "make": "Kawasaki",
+  "model": "Ninja 650",
+  "name": "Kawasaki Ninja 650",
+  "years": [
+   2017,
+   2026
+  ],
+  "match": [
+   "ninja 650",
+   "ninja650",
+   "ex650",
+   "er6f"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-cb750-nighthawk-1991",
+  "make": "Honda",
+  "model": "CB750 Nighthawk",
+  "name": "Honda CB750 Nighthawk",
+  "years": [
+   1991,
+   2003
+  ],
+  "match": [
+   "nighthawk 750",
+   "cb750 nighthawk",
+   "cb750",
+   "rc39"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "kawasaki-z650-2017",
+  "make": "Kawasaki",
+  "model": "Z650",
+  "name": "Kawasaki Z650",
+  "years": [
+   2017,
+   2026
+  ],
+  "match": [
+   "z650",
+   "z 650",
+   "er650"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-ct70-1969",
+  "make": "Honda",
+  "model": "CT70",
+  "name": "Honda CT70 Trail 70",
+  "years": [
+   1969,
+   1994
+  ],
+  "match": [
+   "ct70",
+   "ct 70",
+   "trail 70",
+   "trail70",
+   "ct70h"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "kawasaki-z900-2017",
+  "make": "Kawasaki",
+  "model": "Z900",
+  "name": "Kawasaki Z900",
+  "years": [
+   2017,
+   2026
+  ],
+  "match": [
+   "z900",
+   "z 900",
+   "z900 abs"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "kawasaki-z1-1973",
+  "make": "Kawasaki",
+  "model": "Z1",
+  "name": "Kawasaki Z1 / KZ900",
+  "years": [
+   1973,
+   1976
+  ],
+  "match": [
+   "z1",
+   "z1 900",
+   "kz900",
+   "z900 1973",
+   "z1a",
+   "z1b"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "kawasaki-vulcan-s-2015",
+  "make": "Kawasaki",
+  "model": "Vulcan S",
+  "name": "Kawasaki Vulcan S",
+  "years": [
+   2015,
+   2026
+  ],
+  "match": [
+   "vulcan s",
+   "vulcan-s",
+   "en650",
+   "vulcan 650"
+  ],
+  "style": "cruiser",
+  "drive": "chain"
+ },
+ {
+  "id": "kawasaki-kz1000-1977",
+  "make": "Kawasaki",
+  "model": "KZ1000",
+  "name": "Kawasaki KZ1000",
+  "years": [
+   1977,
+   1980
+  ],
+  "match": [
+   "kz1000",
+   "kz 1000",
+   "z1000 1977",
+   "kz1000a",
+   "kz1000 ltd"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "kawasaki-ninja-zx-6r-2019",
+  "make": "Kawasaki",
+  "model": "Ninja ZX-6R",
+  "name": "Kawasaki Ninja ZX-6R",
+  "years": [
+   2019,
+   2026
+  ],
+  "match": [
+   "zx-6r",
+   "zx6r",
+   "zx 6r",
+   "ninja zx-6r",
+   "zx636"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "kawasaki-kz750-1980",
+  "make": "Kawasaki",
+  "model": "KZ750",
+  "name": "Kawasaki KZ750",
+  "years": [
+   1980,
+   1983
+  ],
+  "match": [
+   "kz750",
+   "kz 750",
+   "kz750e",
+   "kz750 ltd",
+   "kz750h",
+   "kz750l"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "kawasaki-versys-650-2015",
+  "make": "Kawasaki",
+  "model": "Versys 650",
+  "name": "Kawasaki Versys 650",
+  "years": [
+   2015,
+   2021
+  ],
+  "match": [
+   "versys 650",
+   "versys",
+   "kle650",
+   "versys 650 lt"
+  ],
+  "style": "adventure",
+  "drive": "chain"
+ },
+ {
+  "id": "kawasaki-kz550-1980",
+  "make": "Kawasaki",
+  "model": "KZ550",
+  "name": "Kawasaki KZ550",
+  "years": [
+   1980,
+   1985
+  ],
+  "match": [
+   "kz550",
+   "kz 550",
+   "gpz550 1980",
+   "kz550 ltd",
+   "z550"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "kawasaki-vulcan-900-2006",
+  "make": "Kawasaki",
+  "model": "Vulcan 900",
+  "name": "Kawasaki Vulcan 900",
+  "years": [
+   2006,
+   2026
+  ],
+  "match": [
+   "vulcan 900",
+   "vn900",
+   "vulcan 900 classic",
+   "vulcan 900 custom"
+  ],
+  "style": "cruiser",
+  "drive": "belt"
+ },
+ {
+  "id": "kawasaki-kz400-1974",
+  "make": "Kawasaki",
+  "model": "KZ400",
+  "name": "Kawasaki KZ400",
+  "years": [
+   1974,
+   1984
+  ],
+  "match": [
+   "kz400",
+   "kz 400",
+   "z400",
+   "kz400d",
+   "kz400s"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "yamaha-yzf-r3-2015",
+  "make": "Yamaha",
+  "model": "YZF-R3",
+  "name": "Yamaha YZF-R3",
+  "years": [
+   2015,
+   2018
+  ],
+  "match": [
+   "yzf-r3",
+   "r3",
+   "yzf r3",
+   "yzfr3"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "kawasaki-h1-mach-iii-500-1969",
+  "make": "Kawasaki",
+  "model": "H1 Mach III",
+  "name": "Kawasaki H1 Mach III 500",
+  "years": [
+   1969,
+   1975
+  ],
+  "match": [
+   "h1",
+   "mach iii",
+   "mach 3",
+   "h1 500",
+   "kh500",
+   "h1 mach iii"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "yamaha-yzf-r6-2006",
+  "make": "Yamaha",
+  "model": "YZF-R6",
+  "name": "Yamaha YZF-R6",
+  "years": [
+   2006,
+   2016
+  ],
+  "match": [
+   "yzf-r6",
+   "r6",
+   "yzf r6",
+   "yzfr6"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ }
+]

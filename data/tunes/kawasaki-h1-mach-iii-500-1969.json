@@ -1,0 +1,109 @@
+{
+ "id": "kawasaki-h1-mach-iii-500-1969",
+ "make": "Kawasaki",
+ "model": "H1 Mach III",
+ "name": "Kawasaki H1 Mach III 500",
+ "years": [
+  1969,
+  1975
+ ],
+ "match": [
+  "h1",
+  "mach iii",
+  "mach 3",
+  "h1 500",
+  "kh500",
+  "h1 mach iii"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "499 cc air-cooled two-stroke triple, three carbs, oil injection, CDI",
+ "intro": "The original Kawasaki triple. A fast two-stroke where crank seals and ignition decide everything.",
+ "focus": [
+  [
+   "Two-stroke triple",
+   "Air-cooled"
+  ],
+  [
+   "Crank seals",
+   "Dry out with age"
+  ],
+  [
+   "Oil injection",
+   "Check the pump"
+  ],
+  [
+   "CDI ignition",
+   "Common fault"
+  ],
+  [
+   "Brakes",
+   "Weak when new"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-H1-01",
+   "phase": "H",
+   "after": "H-001",
+   "title": "Check the crank seals",
+   "instructions": "Pressure or vacuum test the crankcase, or plan on new seals. Old seals between the cylinders leak and let the engine run lean.",
+   "reason": "Seals dry out over the decades, and a leaking seal can seize a two-stroke.",
+   "src": "Classic Bike Guide H1 restoration",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 2.0,
+   "tools": ""
+  },
+  {
+   "id": "X-H1-02",
+   "phase": "H",
+   "after": "H-001",
+   "title": "Service the oil injection pump",
+   "instructions": "Bleed the oil injection lines and check the pump cable adjustment so each cylinder gets oil.",
+   "reason": "The engine is lubricated only by the injected oil.",
+   "src": "Retrospective: 1969 Kawasaki H1",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "F": [
+   "Most H1s use CDI ignition. If it cuts out or won't start when hot, suspect the CDI box or coils first."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Worn crank seals",
+   "what": "Seals wear and dry out with age.",
+   "src": "https://www.pressreader.com/uk/classic-bike-guide/20200824/284051964196201"
+  }
+ ],
+ "forums": [
+  {
+   "name": "Kawasaki Triples forum",
+   "url": "https://www.tapatalk.com/groups/kawasakitriples/",
+   "what": "Owner forum for Kawasaki two-stroke triples."
+  }
+ ],
+ "silhouette": "kawasaki-h1-mach-iii-500-1969",
+ "areas": [],
+ "heroName": "MACH III",
+ "hero": {
+  "src": "img/hero/kawasaki-h1-mach-iii-500-1969.jpg",
+  "artist": "1969_Kawasaki_500_H1_MachIII.jpg: Mike Schinkel\nderivative work: Ligabo (talk)",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_500_Mach_III_H1.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

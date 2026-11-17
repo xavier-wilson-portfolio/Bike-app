@@ -43,6 +43,11 @@ for pdir in sorted((ROOT / 'data' / 'packs').iterdir()):
                  | {'diagrams': len(cms)})
 (out / 'packs' / 'index.json').write_text(json.dumps(index, separators=(',', ':'), ensure_ascii=False))
 
+# ---- bike tunes: a bike's own layer on top of its style course (data/tunes) ----
+(out / 'tunes').mkdir(parents=True, exist_ok=True)
+for f in sorted(glob.glob(str(ROOT / 'data' / 'tunes' / '*.json'))):
+    shutil.copy(f, out / 'tunes' / pathlib.Path(f).name)
+
 # ---- bike library: the source files in data/library become a Supabase seed (supabase/bike_library_seed.sql).
 # The library is served by the lib_lookup function (paid members get every number), not as public files.
 def _q(v): return "'" + str(v).replace("'", "''") + "'"

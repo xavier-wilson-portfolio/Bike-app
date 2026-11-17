@@ -1,0 +1,69 @@
+{
+ "id": "kawasaki-ninja-zx-6r-2019",
+ "make": "Kawasaki",
+ "model": "Ninja ZX-6R",
+ "name": "Kawasaki Ninja ZX-6R",
+ "years": [
+  2019,
+  2026
+ ],
+ "match": [
+  "zx-6r",
+  "zx6r",
+  "zx 6r",
+  "ninja zx-6r",
+  "zx636"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "636 cc liquid-cooled inline four, fuel injected",
+ "intro": "Kawasaki's 636 supersport. 2024-2026 bikes are under a do-not-ride recall for the crankshaft bushing.",
+ "focus": [
+  [
+   "636 cc inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Do-not-ride recall",
+   "2024-2026 bikes"
+  ],
+  [
+   "Fairing",
+   "Clips and screws to label"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls first",
+   "instructions": "Run your VIN at nhtsa.gov/recalls before anything else. 2024-2026 ZX-6Rs are in recall 25V798 (which replaced 25V376) for a crankshaft bushing that can seize. Kawasaki says not to ride affected bikes until the repair is done.",
+   "reason": "The engine can lose power or seize while riding."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "25V798",
+   "years": "2024-2026",
+   "what": "Crankshaft bushing can seize and stop the engine. Do not ride until repaired.",
+   "fix": "Free dealer repair once Kawasaki releases it. Bikes fixed under 25V376 need the new repair too.",
+   "src": "https://cdn-fastly.motorcycle.com/bikes/news/kawasaki-ninja-zx-6r-recalled-a-second-time-for-the-same-issue-44657929"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "silhouette": "kawasaki-ninja-zx-6r-2019",
+ "areas": [],
+ "heroName": "ZX-6R"
+}

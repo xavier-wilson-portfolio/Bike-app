@@ -23,6 +23,23 @@ function withDrive(data, drive) {
   const d = data.drives[drive || (S.meta.project && S.meta.project.drive) || BIKE.drive] || Object.values(data.drives)[0];
   delete data.drives;
   Object.entries(d).forEach(([c, rows]) => { data[c] = c === "steps" ? rows : (data[c] || []).concat(rows); });
+  return withTune(data);
+}
+// the bike's own tune: drop steps that don't apply, rewrite some for this bike, add its own
+function withTune(data) {
+  const T = BIKE.tune; if (!T || !data || !data.tasks) return data;
+  const drop = new Set(T.remove || []);
+  data.tasks = data.tasks.filter(t => !drop.has(t.id)).map(t => {
+    const p = (T.patch || {})[t.id], r = Object.assign({}, t, p || {}, { prereqs: (t.prereqs || []).filter(x => !drop.has(x)) });
+    if (p && p.instructions) r.expected = r.expected || "";
+    return r;
+  });
+  (T.add || []).forEach(a => {
+    const tmpl = data.tasks.find(t => t.phase === a.phase) || data.tasks[0], after = data.tasks.find(t => t.id === a.after);
+    data.tasks.push(Object.assign({}, tmpl, { id: a.id, title: a.title, instructions: a.instructions, reason: a.reason, phase: a.phase, safety: a.safety || "Normal", skill: a.skill || "Intermediate",
+      estHours: a.estHours || 1, tools: a.tools || "", supplies: "", partIds: [], prereqs: after ? [after.id] : [], expected: "Done and noted in the project.", inspectionCriteria: "Done and noted in the project.",
+      manualRef: "VERIFY IN FACTORY SERVICE MANUAL", notes: a.src ? "Source: " + a.src : "", order: (after ? after.order : tmpl.order || 0) + 0.5, comments: [], updatedBy: "Revora course for the " + T.name }));
+  });
   return data;
 }
 async function loadBaseline(replace, quiet) {
