@@ -1,4 +1,4 @@
-/* ============ Settings gear: language, units and currency ============
+/* ============ Settings gear: language, units, currency (and the account, on garage pages) ============
    One gear sits at the far right of every top bar. Its panel sets:
    - language (English plus six hand-translated languages, files in /i18n/<code>.json)
    - units (distance, liquids, pressure, torque, temperature, small lengths, weight)
@@ -341,6 +341,10 @@
 .rv-seg{display:flex;gap:6px;flex-wrap:wrap}.rv-seg button{all:unset;cursor:pointer;padding:8px 13px;border:1px solid var(--line-2,#D6DDE1);border-radius:999px;font-size:13.5px}
 .rv-seg button.on{background:var(--navy,#111418);color:#fff;border-color:var(--navy,#111418)}:root[data-theme="dark"] .rv-seg button.on{background:var(--blue-ink);color:#12191F;border-color:var(--blue-ink)}
 .rv-set .rv-note{margin:8px 0 0;color:var(--faint,#7D878E);font-size:12.5px;line-height:1.45}
+.rv-set .rv-acct{display:grid;grid-template-columns:auto 1fr;gap:10px 14px;align-items:center}.rv-set .rv-acct label,.rv-set .rv-k{color:var(--muted)}
+.rv-set .rv-v{overflow-wrap:anywhere}.rv-set .rv-inline{display:flex;gap:8px}.rv-set .rv-inline input{flex:1;min-width:0;box-sizing:border-box;padding:8px 10px;border:1px solid var(--line-2,#D6DDE1);border-radius:9px;background:var(--surface,#fff);color:inherit;font:inherit}
+.rv-set .rv-btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.rv-set .rv-btns .btn{text-decoration:none;color:inherit}.rv-set .rv-btns .btn.danger{color:var(--red,#B3261E)}.rv-set .rv-line{margin:0;line-height:1.45}.rv-set .rv-legal{margin-top:12px;font-size:13.5px}
+.rv-set .rv-legal a{color:var(--blue-ink,#2C5F7C)}.rv-set .rv-danger h3{color:var(--red,#B3261E)}
 .rv-set .rv-more{all:unset;cursor:pointer;color:var(--blue-ink,#2C5F7C);text-decoration:underline;font-size:13.5px}`;
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
   const sel = (id, opts, cur, noTr) => `<select id="${id}"${noTr ? ' translate="no"' : ""}>${opts.map(([v, l]) => `<option value="${esc(v)}"${v === cur ? " selected" : ""}>${esc(l)}</option>`).join("")}</select>`;
@@ -354,8 +358,10 @@
   function presetOf() { for (const k in PRESETS) if (UNIT_ROWS.every(([q]) => PRESETS[k][q] === ST[q])) return k; return ""; }
   function panelHtml() {
     const pr = presetOf(), th = themeNow(), inApp = typeof VIEWS === "object" && VIEWS && VIEWS.settings && typeof go === "function";
+    const acct = !inApp && window.rvAccountSettings && rvAccountSettings.on() ? rvAccountSettings : null;   // garage pages: account, plan, texts, help, delete account
     return `<div class="rv-set" role="dialog" aria-modal="true" aria-labelledby="rvSetH">
       <div class="rv-set-h"><h2 id="rvSetH">Settings</h2><button type="button" class="rv-set-x" data-rvx aria-label="Close">×</button></div>
+      ${acct ? acct.html("top") : ""}
       <section><h3>Language</h3>${sel("rvLang", LANGS.map(l => [l[0], l[1]]), ST.lang, true)}</section>
       <section><h3>Units</h3>
         <div class="rv-seg" role="radiogroup" aria-label="Unit system">${[["us", "US"], ["uk", "UK"], ["metric", "Metric"]].map(([k, l]) => `<button type="button" role="radio" aria-checked="${pr === k}" class="${pr === k ? "on" : ""}" data-rvpreset="${k}">${l}</button>`).join("")}</div>
@@ -365,6 +371,7 @@
         <p class="rv-note">Changes the symbol and number style. Amounts aren't converted, so prices you typed stay as you typed them. Revora plan prices stay in US dollars.</p></section>
       <section><h3>Appearance</h3><div class="rv-seg" role="radiogroup" aria-label="Theme">${[["light", "Light"], ["dark", "Dark"], ["system", "Match my device"]].map(([v, l]) => `<button type="button" role="radio" aria-checked="${th === v}" class="${th === v ? "on" : ""}" data-rvtheme="${v}">${l}</button>`).join("")}</div></section>
       ${inApp ? `<section><button type="button" class="rv-more" data-rvmore>Bike settings, budget and backups</button></section>` : ""}
+      ${acct ? acct.html("rest") : ""}
     </div>`;
   }
   const curName = (c, n) => { try { return ST.lang === "en" ? n : new Intl.DisplayNames([locale()], { type: "currency" }).of(c); } catch (e) { return n; } };
@@ -387,6 +394,7 @@
     bg.querySelector("#rvCur").onchange = e => { save({ cur: e.target.value }); refreshAll(); };
     bg.querySelectorAll("[data-rvtheme]").forEach(b => b.onclick = () => { setTheme(b.dataset.rvtheme); redraw(); });
     const more = bg.querySelector("[data-rvmore]"); if (more) more.onclick = () => { closePanel(); go("settings"); };
+    if (window.rvAccountSettings && !(typeof VIEWS === "object" && VIEWS && VIEWS.settings && typeof go === "function")) rvAccountSettings.bind(bg, closePanel);
   }
   window.rvOpenSettings = openPanel;
   // for checking coverage: text on the page that has no translation yet

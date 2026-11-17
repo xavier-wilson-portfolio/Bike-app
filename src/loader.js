@@ -470,6 +470,7 @@
     if (error) return fail(friendly(error));
     // shop bikes live in Revora Shop, not the personal garage
     const data = allP.filter(p => !p.shop_id);
+    GARAGE_P = data;
     const [myShop, cHomes] = await Promise.all([window.rvCRM ? rvCRM.mine(sb) : null, window.rvClient ? rvClient.homes(sb) : []]);
     if (!data.length && cHomes.length && !myShop && ls.get("rv.clientHome") !== "own") return rvClient.home(ctx(), cHomes);
     const prog = await projectProgress(data.map(p => p.id));
@@ -600,6 +601,83 @@
     };
     setTimeout(() => conf.focus(), 30);
   }
+
+  /* ---------- the account part of the settings gear (garage pages, signed in) ----------
+     intl.js draws language, units, currency and appearance; this adds the account,
+     plan, texts, help and delete-account sections. Bike settings stay inside the bike. */
+  let GARAGE_P = null;   // the garage's bikes, for the delete-account box
+  function feedbackBox() {
+    const box = document.createElement("div"); box.className = "pk-modal";
+    box.innerHTML = `<div class="pk-card" role="dialog" aria-modal="true" aria-labelledby="fbH"><h2 class="disp-s" id="fbH">Send feedback</h2>
+      <p class="muted">It goes straight to the people building Revora. We read every one.</p>
+      <form class="pk-form" novalidate><label>What's on your mind?<textarea name="msg" rows="5" maxlength="3000"></textarea></label>
+        <div class="pk-err" hidden></div>
+        <div class="pk-links"><button class="btn" type="button" data-x>Cancel</button><button class="btn pri" type="submit">Send</button></div></form></div>`;
+    const f = box.querySelector("form"), err = box.querySelector(".pk-err");
+    box.querySelector("[data-x]").onclick = () => box.remove(); box.onclick = e => { if (e.target === box) box.remove(); };
+    f.onsubmit = async e => { e.preventDefault(); const t = f.msg.value.trim();
+      if (t.length < 3) { err.textContent = "Write a few words first."; err.hidden = false; return; }
+      f.querySelector("[type=submit]").disabled = true;
+      const res = await window.rvFeedback({ kind: "idea", message: t.slice(0, 3000), page: "garage settings", bike: "", app_build: window.RV_BUILD || "", device: (innerWidth < 700 ? "phone" : "desktop") + " · " + navigator.userAgent.slice(0, 160) }).catch(() => ({}));
+      box.remove(); note(res && res.ok ? "Thanks. Your feedback was sent." : "Thanks. We'll send it as soon as you're back online."); };
+    document.body.appendChild(box); setTimeout(() => f.msg.focus(), 40);
+  }
+  window.rvAccountSettings = {
+    on: () => !!(sb && session),
+    html(part) {
+      if (!sb || !session) return "";
+      const u = session.user, google = (u.app_metadata || {}).provider === "google", pl = myPlan(), info = planInfo(pl.id);
+      const planName = pl.admin ? "Admin" : (info.name || "Free") + (pl.trial ? " trial" : "") + (pl.comp ? " (gifted)" : "");
+      if (part === "top") return `<section><h3>Account</h3>
+          <div class="rv-acct"><label for="rvName">Name</label><div class="rv-inline"><input id="rvName" maxlength="60" autocomplete="name" value="${esc(profile?.display_name || "")}"><button type="button" class="btn sm" data-acct="name">Save</button></div>
+          <span class="rv-k">Email</span><span class="rv-v" translate="no">${esc(u.email || "")}</span></div>
+          <p class="rv-note">To change the email on your account, write to info@revoragarage.com from your current address.</p>
+          <div class="rv-btns">${google ? "" : `<button type="button" class="btn sm" data-acct="pass">Change password</button>`}<button type="button" class="btn sm" data-acct="out">Sign out</button></div>
+          ${google ? `<p class="rv-note">You sign in with Google, so your password is managed by Google.</p>` : ""}</section>`;
+      return `<section><h3>Plan and billing</h3>
+          <p class="rv-line">Your plan: <b>${esc(planName)}</b></p>
+          <div class="rv-btns"><button type="button" class="btn sm" data-acct="plans">See plans</button>${pl.paid && RV_CONFIG.billingPortal ? `<a class="btn sm" data-manage href="${esc(RV_CONFIG.billingPortal)}" target="_blank" rel="noopener">Manage billing</a>` : ""}</div>
+          ${pl.paid ? `<p class="rv-note">Change your card, see invoices or cancel your plan in billing.</p>` : ""}</section>
+        <section><h3>Text alerts</h3>
+          <p class="rv-line">Service reminders and news about new features by text, as well as email.</p>
+          <div class="rv-btns"><button type="button" class="btn sm" data-acct="texts">Set up texts</button></div></section>
+        ${window.rvCanInstall && rvCanInstall() ? `<section><h3>Revora on your phone</h3><p class="rv-line">Put Revora on your home screen so it opens full screen, like an app.</p><div class="rv-btns"><button type="button" class="btn sm" data-acct="install">Install the app</button></div></section>` : ""}
+        <section><h3>Help</h3>
+          <div class="rv-btns"><button type="button" class="btn sm" data-acct="feedback">Send feedback</button><a class="btn sm" href="mailto:info@revoragarage.com">Email us</a></div>
+          <p class="rv-line rv-legal"><a href="?privacy">Privacy Policy</a> · <a href="?terms">Terms of Service</a></p></section>
+        <section class="rv-danger"><h3>Delete account</h3>
+          <p class="rv-line">Deletes your account and every bike, record and photo in it. This can't be undone.</p>
+          <div class="rv-btns"><button type="button" class="btn sm danger" data-acct="delete">Delete my account</button></div></section>`;
+    },
+    bind(bg, close) {
+      if (!sb || !session) return;
+      if (window.rvBindManage) window.rvBindManage(bg, async () => (await sb.auth.getSession()).data.session?.access_token);
+      bg.querySelectorAll("[data-acct]").forEach(b => b.onclick = async () => {
+        const k = b.dataset.acct;
+        if (k === "name") {
+          const v = bg.querySelector("#rvName").value.trim().slice(0, 60);
+          if (!v) { note("Enter your name first.", true); return; }
+          b.disabled = true; const { error } = await sb.from("profiles").update({ display_name: v }).eq("id", session.user.id); b.disabled = false;
+          if (error) { note(friendly(error), true); return; }
+          if (profile) profile.display_name = v; else profile = { display_name: v };
+          const top = app.querySelector(".pk-acct .muted"); if (top) top.textContent = v;
+          note("Name saved."); return;
+        }
+        close();
+        if (k === "pass") showAuth("newpass");
+        else if (k === "out") window.rvSignOut();
+        else if (k === "plans") showPlans();
+        else if (k === "texts") { if (CONTACT === undefined) await loadContact(); phoneBox(false); }
+        else if (k === "install") window.rvInstall().then(o => { if (o === "accepted") showProjects(); });
+        else if (k === "feedback") feedbackBox();
+        else if (k === "delete") {
+          let P = GARAGE_P;
+          if (!P) { const { data } = await sb.from("my_projects").select("*"); P = (data || []).filter(p => !p.shop_id); }
+          deleteAccountBox(P);
+        }
+      });
+    }
+  };
 
   function deleteProjectBox(p, done) {
     const own = p.role === "owner", box = document.createElement("div"); box.className = "pk-modal";
