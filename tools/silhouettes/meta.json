@@ -489,5 +489,33 @@
   "lic": "CC BY 2.0",
   "licUrl": "https://creativecommons.org/licenses/by/2.0",
   "artist": "ozz13x"
+ },
+ "triumph-bonneville-t140-1973": {
+  "file": "T140.JPG",
+  "page": "https://commons.wikimedia.org/wiki/File:T140.JPG",
+  "lic": "Public domain",
+  "licUrl": "",
+  "artist": "Nimbus227"
+ },
+ "triumph-street-triple-765-2017": {
+  "file": "Triumph Street Triple 765 RS (2022).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Triumph_Street_Triple_765_RS_(2022).jpg",
+  "lic": "CC BY 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by/4.0",
+  "artist": "Darktiger0512"
+ },
+ "bmw-r100-airheads-1976": {
+  "file": "BMW R100RS.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:BMW_R100RS.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "artist": "JanH015"
+ },
+ "royal-enfield-himalayan-411-2018": {
+  "file": "Royal Enfield Himalayan DB2K5442.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Royal_Enfield_Himalayan_DB2K5442.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "artist": "Ashley Pomeroy"
  }
 }

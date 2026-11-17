@@ -1,0 +1,105 @@
+{
+ "id": "norton-commando-1968",
+ "make": "Norton",
+ "model": "Commando",
+ "name": "Norton Commando",
+ "years": [
+  1968,
+  1977
+ ],
+ "match": [
+  "commando",
+  "norton commando",
+  "commando 750",
+  "commando 850",
+  "fastback",
+  "roadster",
+  "interstate"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "745 or 828 cc air-cooled OHV parallel twin, two Amal carbs, Isolastic mounts",
+ "intro": "The Isolastic-mounted British twin. Isolastic shims and wet sumping are the two things to understand.",
+ "focus": [
+  [
+   "750 or 850 twin",
+   "Air-cooled"
+  ],
+  [
+   "Isolastics",
+   "Shim correctly"
+  ],
+  [
+   "Wet sumping",
+   "Oil drains to sump"
+  ],
+  [
+   "Two Amal carbs",
+   "Inlet leaks"
+  ],
+  [
+   "Matching numbers",
+   "Check the frame"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-NOR-01",
+   "phase": "E",
+   "after": "E-002",
+   "title": "Check and shim the Isolastics",
+   "instructions": "Check the front and rear Isolastic mounts for play. When shimming, keep the shims even on both sides.",
+   "reason": "Worn or badly shimmed Isolastics make the bike handle badly and shake.",
+   "src": "Norton Owners Club forum",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 2.0,
+   "tools": ""
+  },
+  {
+   "id": "X-NOR-02",
+   "phase": "H",
+   "after": "H-001",
+   "title": "Check for wet sumping",
+   "instructions": "Note the oil tank level when you park the bike and again a few days later. If a lot has drained into the sump, check the oil pump and timing cover seals.",
+   "reason": "A worn pump can starve the top end of oil. Some wet sumping on a stored bike is normal.",
+   "src": "Motorcycle Classics wet sumping guide",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "H": [
+   "Don't fit an anti-drain tap. Forgetting to open it can wreck the engine."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Wet sumping",
+   "what": "Oil drains from the tank to the sump when the bike sits. It is common on dry-sump British twins.",
+   "src": "https://www.motorcycleclassics.com/classic-motorcycle-repair/solving-wet-sumping-issues-on-norton-commandos-zm0z21jazbut/"
+  }
+ ],
+ "forums": [
+  {
+   "name": "Norton Owners Club",
+   "url": "https://www.nortonownersclub.org/",
+   "what": "Owner club and forum for Nortons."
+  },
+  {
+   "name": "Access Norton forum",
+   "url": "https://www.accessnorton.com/",
+   "what": "Owner forum for Norton Commandos and other British twins."
+  }
+ ],
+ "heroName": "COMMANDO"
+}

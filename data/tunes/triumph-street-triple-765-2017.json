@@ -1,0 +1,74 @@
+{
+ "id": "triumph-street-triple-765-2017",
+ "make": "Triumph",
+ "model": "Street Triple 765",
+ "name": "Triumph Street Triple 765",
+ "years": [
+  2017,
+  2026
+ ],
+ "match": [
+  "street triple",
+  "street triple 765",
+  "street triple rs",
+  "street triple r",
+  "street triple s",
+  "765"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "765 cc liquid-cooled inline triple, fuel injected",
+ "intro": "Triumph's naked triple. Mostly routine service. Check recalls and crash damage.",
+ "focus": [
+  [
+   "765 cc triple",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Ride-by-wire"
+  ],
+  [
+   "Recalls",
+   "Run the VIN"
+  ],
+  [
+   "Crash damage",
+   "Bars, pegs, radiator"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2018-2020 Street Triple RS bikes were in a Triumph recall (SRAN579) for the Brembo front brake.",
+   "reason": "Brake recalls are free to fix and matter."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "E": [
+   "Check the bar ends, footpegs, levers and radiator for crash damage."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [],
+ "silhouette": "triumph-street-triple-765-2017",
+ "areas": [],
+ "heroName": "STREET TRIPLE",
+ "hero": {
+  "src": "img/hero/triumph-street-triple-765-2017.jpg",
+  "artist": "Darktiger0512",
+  "page": "https://commons.wikimedia.org/wiki/File:Triumph_Street_Triple_765_RS_(2022).jpg",
+  "lic": "CC BY 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by/4.0"
+ }
+}

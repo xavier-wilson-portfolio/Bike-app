@@ -1006,5 +1006,37 @@
   "lic": "CC BY 2.0",
   "licUrl": "https://creativecommons.org/licenses/by/2.0",
   "page": "https://commons.wikimedia.org/wiki/File:Harley_Davidson_Super_Glide_(7760042940).jpg"
+ },
+ "triumph-bonneville-t140-1973.svg": {
+  "what": "Triumph Bonneville T140",
+  "title": "T140",
+  "artist": "Nimbus227",
+  "lic": "Public domain",
+  "licUrl": "",
+  "page": "https://commons.wikimedia.org/wiki/File:T140.JPG"
+ },
+ "triumph-street-triple-765-2017.svg": {
+  "what": "Triumph Street Triple 765",
+  "title": "Triumph Street Triple 765 RS (2022)",
+  "artist": "Darktiger0512",
+  "lic": "CC BY 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Triumph_Street_Triple_765_RS_(2022).jpg"
+ },
+ "bmw-r100-airheads-1976.svg": {
+  "what": "BMW R100 airheads",
+  "title": "BMW R100RS",
+  "artist": "JanH015",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:BMW_R100RS.jpg"
+ },
+ "royal-enfield-himalayan-411-2018.svg": {
+  "what": "Royal Enfield Himalayan 411",
+  "title": "Royal Enfield Himalayan DB2K5442",
+  "artist": "Ashley Pomeroy",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Royal_Enfield_Himalayan_DB2K5442.jpg"
  }
 }

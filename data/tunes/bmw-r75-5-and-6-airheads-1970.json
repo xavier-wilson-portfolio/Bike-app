@@ -1,0 +1,89 @@
+{
+ "id": "bmw-r75-5-and-6-airheads-1970",
+ "make": "BMW",
+ "model": "R75/5",
+ "name": "BMW R75/5 and /6",
+ "years": [
+  1970,
+  1976
+ ],
+ "match": [
+  "r75/5",
+  "r75 5",
+  "r75/6",
+  "r60/5",
+  "r50/5",
+  "r90/6",
+  "r90s",
+  "slash 5",
+  "/5"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "745 cc air-cooled boxer twin, two Bing carbs, shaft drive",
+ "intro": "The /5 and /6 airheads. Tough engines. The charging parts and starter relay cause most trouble.",
+ "focus": [
+  [
+   "Boxer twin",
+   "Air-cooled"
+  ],
+  [
+   "Two Bing carbs",
+   "Easy to service"
+  ],
+  [
+   "Diode board",
+   "Solder joints fail"
+  ],
+  [
+   "Timing chain",
+   "Check tensioner"
+  ],
+  [
+   "Shaft drive",
+   "Splines and U-joints"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-AH5-01",
+   "phase": "F",
+   "after": "F-002",
+   "title": "Check the diode board",
+   "instructions": "With the battery disconnected, take off the front cover. Check the solder joints on the large diodes, the ground wires and the rubber mounts.",
+   "reason": "Diode board failures usually start at a cracked solder joint on a power diode.",
+   "src": "Airheads Beemer Club",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "F": [
+   "The /5 starter relay can act like a weak battery. Check it before buying a new battery."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Diode board",
+   "what": "Most diode board failures are at the solder joints of the large power diodes.",
+   "src": "https://airheads.org/page/11/?p=0"
+  }
+ ],
+ "forums": [
+  {
+   "name": "Airheads Beemer Club",
+   "url": "https://www.airheads.org/",
+   "what": "Tech library and owner club for BMW airhead twins."
+  }
+ ],
+ "heroName": "R75/5"
+}

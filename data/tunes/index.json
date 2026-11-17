@@ -1695,5 +1695,173 @@
   ],
   "style": "standard",
   "drive": "chain"
+ },
+ {
+  "id": "triumph-bonneville-t140-1973",
+  "make": "Triumph",
+  "model": "Bonneville T140",
+  "name": "Triumph Bonneville T140",
+  "years": [
+   1973,
+   1983
+  ],
+  "match": [
+   "t140",
+   "t140v",
+   "t140e",
+   "t140d",
+   "bonneville 750",
+   "tr7",
+   "tiger 750"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "triumph-street-triple-765-2017",
+  "make": "Triumph",
+  "model": "Street Triple 765",
+  "name": "Triumph Street Triple 765",
+  "years": [
+   2017,
+   2026
+  ],
+  "match": [
+   "street triple",
+   "street triple 765",
+   "street triple rs",
+   "street triple r",
+   "street triple s",
+   "765"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "bmw-r75-5-and-6-airheads-1970",
+  "make": "BMW",
+  "model": "R75/5",
+  "name": "BMW R75/5 and /6",
+  "years": [
+   1970,
+   1976
+  ],
+  "match": [
+   "r75/5",
+   "r75 5",
+   "r75/6",
+   "r60/5",
+   "r50/5",
+   "r90/6",
+   "r90s",
+   "slash 5",
+   "/5"
+  ],
+  "style": "standard",
+  "drive": "shaft"
+ },
+ {
+  "id": "royal-enfield-interceptor-650-2019",
+  "make": "Royal Enfield",
+  "model": "Interceptor 650",
+  "name": "Royal Enfield Interceptor 650",
+  "years": [
+   2019,
+   2026
+  ],
+  "match": [
+   "interceptor",
+   "interceptor 650",
+   "int 650",
+   "continental gt 650",
+   "continental gt"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "bmw-r100-airheads-1976",
+  "make": "BMW",
+  "model": "R100",
+  "name": "BMW R100 airheads",
+  "years": [
+   1976,
+   1995
+  ],
+  "match": [
+   "r100",
+   "r100/7",
+   "r100rs",
+   "r100rt",
+   "r100s",
+   "r100gs",
+   "r100r",
+   "r80",
+   "r80g/s",
+   "r65",
+   "airhead"
+  ],
+  "style": "standard",
+  "drive": "shaft"
+ },
+ {
+  "id": "royal-enfield-himalayan-411-2018",
+  "make": "Royal Enfield",
+  "model": "Himalayan 411",
+  "name": "Royal Enfield Himalayan 411",
+  "years": [
+   2018,
+   2023
+  ],
+  "match": [
+   "himalayan",
+   "himalayan 411",
+   "himalayan 410"
+  ],
+  "style": "adventure",
+  "drive": "chain"
+ },
+ {
+  "id": "norton-commando-1968",
+  "make": "Norton",
+  "model": "Commando",
+  "name": "Norton Commando",
+  "years": [
+   1968,
+   1977
+  ],
+  "match": [
+   "commando",
+   "norton commando",
+   "commando 750",
+   "commando 850",
+   "fastback",
+   "roadster",
+   "interstate"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "ducati-scrambler-800-2015",
+  "make": "Ducati",
+  "model": "Scrambler 800",
+  "name": "Ducati Scrambler 800",
+  "years": [
+   2015,
+   2022
+  ],
+  "match": [
+   "scrambler",
+   "ducati scrambler",
+   "scrambler 800",
+   "scrambler icon",
+   "full throttle",
+   "cafe racer",
+   "desert sled",
+   "night shift"
+  ],
+  "style": "standard",
+  "drive": "chain"
  }
 ]

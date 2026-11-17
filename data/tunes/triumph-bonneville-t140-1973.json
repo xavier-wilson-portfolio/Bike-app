@@ -1,0 +1,90 @@
+{
+ "id": "triumph-bonneville-t140-1973",
+ "make": "Triumph",
+ "model": "Bonneville T140",
+ "name": "Triumph Bonneville T140",
+ "years": [
+  1973,
+  1983
+ ],
+ "match": [
+  "t140",
+  "t140v",
+  "t140e",
+  "t140d",
+  "bonneville 750",
+  "tr7",
+  "tiger 750"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "744 cc air-cooled OHV parallel twin, two Amal carbs, oil in frame",
+ "intro": "The last Meriden Bonneville. Spares are easy. Bikes that sat for decades need a real rebuild.",
+ "focus": [
+  [
+   "744 cc OHV twin",
+   "Air-cooled"
+  ],
+  [
+   "Two Amal carbs",
+   "Wear fast"
+  ],
+  [
+   "Oil in frame",
+   "Clean the tank"
+  ],
+  [
+   "Lucas electrics",
+   "Points or electronic"
+  ],
+  [
+   "Seals",
+   "Gearbox output shaft"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-T14-01",
+   "phase": "H",
+   "after": "H-001",
+   "title": "Clean the oil tank in the frame",
+   "instructions": "Drain the frame oil tank and flush out sludge. Check the strainer. If the frame was blasted, make sure no grit is left inside.",
+   "reason": "Sludge or blast grit in the frame tank goes straight into the engine.",
+   "src": "Motorcycle Classics oil-in-frame notes",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "H": [
+   "Bikes that stood for decades usually have hard seals and corroded internals. Plan on a full engine rebuild."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Long storage",
+   "what": "Hard oil seals and corroded engine and gearbox internals are common on bikes that sat for years.",
+   "src": "https://www.pressreader.com/uk/classic-bike-uk/20180901/282862256737502"
+  }
+ ],
+ "forums": [],
+ "silhouette": "triumph-bonneville-t140-1973",
+ "areas": [],
+ "heroName": "T140",
+ "hero": {
+  "src": "img/hero/triumph-bonneville-t140-1973.jpg",
+  "artist": "Nimbus227",
+  "page": "https://commons.wikimedia.org/wiki/File:T140.JPG",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
+}

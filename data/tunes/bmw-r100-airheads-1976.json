@@ -1,0 +1,109 @@
+{
+ "id": "bmw-r100-airheads-1976",
+ "make": "BMW",
+ "model": "R100",
+ "name": "BMW R100 airheads",
+ "years": [
+  1976,
+  1995
+ ],
+ "match": [
+  "r100",
+  "r100/7",
+  "r100rs",
+  "r100rt",
+  "r100s",
+  "r100gs",
+  "r100r",
+  "r80",
+  "r80g/s",
+  "r65",
+  "airhead"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "980 cc air-cooled boxer twin, two Bing carbs, shaft drive",
+ "intro": "The big airheads. Charging system care and a timing chain check cover most of the risks.",
+ "focus": [
+  [
+   "980 cc boxer",
+   "Air-cooled"
+  ],
+  [
+   "Two Bing carbs",
+   "Sync them"
+  ],
+  [
+   "Diode board",
+   "Grounds and mounts"
+  ],
+  [
+   "Timing chain",
+   "Tensioner wear"
+  ],
+  [
+   "Shaft drive",
+   "Splines"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-AH1-01",
+   "phase": "F",
+   "after": "F-002",
+   "title": "Check the charging system",
+   "instructions": "Measure battery voltage at full output; it should be at least 13.2 V. Check the diode board solder joints and replace its rubber mounts and ground wires when you have it out.",
+   "reason": "High resistance in the charging circuit wastes power as heat and kills batteries.",
+   "src": "California BMW charging notes",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.0,
+   "tools": ""
+  },
+  {
+   "id": "X-AH1-02",
+   "phase": "H",
+   "after": "H-003",
+   "title": "Listen for timing chain noise",
+   "instructions": "Listen at the front of the engine for clatter. A worn tensioner is cheap and easy to replace.",
+   "reason": "A worn timing chain tensioner causes clatter and chain wear.",
+   "src": "Classic Bike Hub airhead notes",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Charging",
+   "what": "Excess resistance in the charging circuit is a common cause of a flat battery.",
+   "src": "https://horizonsunlimited.com/node/2545"
+  }
+ ],
+ "forums": [
+  {
+   "name": "Airheads Beemer Club",
+   "url": "https://www.airheads.org/",
+   "what": "Tech library and owner club for BMW airhead twins."
+  }
+ ],
+ "silhouette": "bmw-r100-airheads-1976",
+ "areas": [],
+ "heroName": "R100",
+ "hero": {
+  "src": "img/hero/bmw-r100-airheads-1976.jpg",
+  "artist": "JanH015",
+  "page": "https://commons.wikimedia.org/wiki/File:BMW_R100RS.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

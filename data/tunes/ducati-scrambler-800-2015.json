@@ -1,0 +1,85 @@
+{
+ "id": "ducati-scrambler-800-2015",
+ "make": "Ducati",
+ "model": "Scrambler 800",
+ "name": "Ducati Scrambler 800",
+ "years": [
+  2015,
+  2022
+ ],
+ "match": [
+  "scrambler",
+  "ducati scrambler",
+  "scrambler 800",
+  "scrambler icon",
+  "full throttle",
+  "cafe racer",
+  "desert sled",
+  "night shift"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "803 cc air-cooled L-twin, Desmodue, fuel injected, belt-driven cams",
+ "intro": "Ducati's air-cooled Scrambler. The cam belts and valve service on schedule are the big jobs.",
+ "focus": [
+  [
+   "803 cc L-twin",
+   "Air-cooled"
+  ],
+  [
+   "Cam belts",
+   "Replace on time"
+  ],
+  [
+   "Desmo valves",
+   "Check clearances"
+  ],
+  [
+   "Recalls",
+   "Some years"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Recalls include a side stand pivot nut on 2015-2016 bikes, the front brake master cylinder on 2017-2018 Cafe Racers (17V812), and turn signals on 2021 Night Shift bikes (21V361).",
+   "reason": "The side stand and brake recalls are safety items. Repairs are free."
+  }
+ },
+ "add": [
+  {
+   "id": "X-DSC-01",
+   "phase": "H",
+   "after": "H-003",
+   "title": "Check cam belt age and valve service",
+   "instructions": "Find out when the cam belts were last replaced and when the desmo valves were last checked. If you can't prove it, do both.",
+   "reason": "A cam belt that breaks wrecks the engine.",
+   "src": "Ducati service schedule",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 3.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "17V812",
+   "years": "2017-2018 Cafe Racer",
+   "what": "Front brake master cylinder may fail.",
+   "fix": "Dealer replaces the master cylinder piston free.",
+   "src": "https://motorcyclistonline.com/8000-late-model-ducati-motorcycles-being-recalled-for-brakes-that-may-fail"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "SCRAMBLER"
+}

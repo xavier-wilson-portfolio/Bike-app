@@ -1,0 +1,72 @@
+{
+ "id": "royal-enfield-interceptor-650-2019",
+ "make": "Royal Enfield",
+ "model": "Interceptor 650",
+ "name": "Royal Enfield Interceptor 650",
+ "years": [
+  2019,
+  2026
+ ],
+ "match": [
+  "interceptor",
+  "interceptor 650",
+  "int 650",
+  "continental gt 650",
+  "continental gt"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "648 cc air/oil-cooled SOHC parallel twin, fuel injected",
+ "intro": "Royal Enfield's 650 twin. Simple and easy to work on. Check the brake caliper recall.",
+ "focus": [
+  [
+   "648 cc twin",
+   "Air/oil-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Brake recall",
+   "Caliper corrosion"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Finish",
+   "Check for rust"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2018-2020 Interceptor and Continental GT 650s were in recall 21V045 because road salt can corrode the brake calipers.",
+   "reason": "Corroded calipers can drag or lose braking. The repair is free."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "K": [
+   "If the bike was ridden in winter, look closely at the calipers and brake lines for corrosion."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "21V045",
+   "years": "2018-2020",
+   "what": "Road salt can corrode the brake calipers.",
+   "fix": "Free dealer repair.",
+   "src": "https://auto-recalls.justia.com/royal-enfield/interceptor-650/2019/21v045000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "INTERCEPTOR"
+}
