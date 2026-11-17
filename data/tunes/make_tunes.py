@@ -173,9 +173,10 @@ from batch4 import B4, HERO_NAME_B4
 from batch5 import B5, HERO_NAME_B5
 from batch6 import B6, HERO_NAME_B6
 from batch7 import B7, HERO_NAME_B7
-T += B2 + B3 + B4 + B5 + B6 + B7
+from batch8 import B8, HERO_NAME_B8
+T += B2 + B3 + B4 + B5 + B6 + B7 + B8
 HERO_NAME = {"honda-cb750-sohc": "CB750", "honda-rebel-500": "REBEL", "kawasaki-kz650": "KZ650", "yamaha-mt07-gen1": "MT-07", "yamaha-xs650": "XS650", "kawasaki-ninja-400": "NINJA", "suzuki-gs550": "GS550", "harley-street-glide-m8": "GLIDE", "honda-cb350-twin": "CB350", "kawasaki-klr650-gen2": "KLR"}
-HERO_NAME.update(HERO_NAME_B2); HERO_NAME.update(HERO_NAME_B3); HERO_NAME.update(HERO_NAME_B4); HERO_NAME.update(HERO_NAME_B5); HERO_NAME.update(HERO_NAME_B6); HERO_NAME.update(HERO_NAME_B7)
+HERO_NAME.update(HERO_NAME_B2); HERO_NAME.update(HERO_NAME_B3); HERO_NAME.update(HERO_NAME_B4); HERO_NAME.update(HERO_NAME_B5); HERO_NAME.update(HERO_NAME_B6); HERO_NAME.update(HERO_NAME_B7); HERO_NAME.update(HERO_NAME_B8)
 CRED = json.loads((HERE.parent.parent / "img" / "sil" / "credits.json").read_text())
 AREAS = ["engine", "fuel", "wheels", "brakes", "suspension", "electrical"]
 SIL = HERE.parent.parent / "img" / "sil"

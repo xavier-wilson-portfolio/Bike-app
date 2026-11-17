@@ -1,0 +1,107 @@
+{
+ "id": "suzuki-gs1000-1978",
+ "make": "Suzuki",
+ "model": "GS1000",
+ "name": "Suzuki GS1000",
+ "years": [
+  1978,
+  1980
+ ],
+ "match": [
+  "gs1000",
+  "gs 1000",
+  "gs1000e",
+  "gs1000s",
+  "gs1000g"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "997 cc air-cooled DOHC inline four, four carbs",
+ "intro": "Suzuki's first liter four. Tough engine; the electrics and carbs need the usual GS work.",
+ "focus": [
+  [
+   "997 cc DOHC four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Charging",
+   "Stator Papers checks"
+  ],
+  [
+   "Connectors",
+   "Clean every one"
+  ],
+  [
+   "Shaft (G) or chain",
+   "Check which you have"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-GS1000-01",
+   "phase": "F",
+   "after": "F-002",
+   "title": "Run the Stator Papers checks",
+   "instructions": "Test stator output and regulator voltage as the GS Resources Stator Papers describe. Clean and check every connector in the charging circuit, including the ignition switch.",
+   "reason": "Burned connectors and a failing regulator take out stators on these bikes.",
+   "src": "The GS Resources Stator Papers",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.5,
+   "tools": ""
+  },
+  {
+   "id": "X-GS1000-02",
+   "phase": "G",
+   "after": "G-006",
+   "title": "Replace the intake O-rings",
+   "instructions": "Fit new OEM or Viton O-rings where the intake boots meet the head. Plain nitrile rings break down from the heat.",
+   "reason": "Old O-rings leak air and make the bike run lean and hang its idle.",
+   "src": "The GS Resources forum",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "G": [
+   "Clean carbs, set valves, no air leaks, a clean tank and a working petcock all have to be right before a GS runs right."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Charging system",
+   "what": "Overcharging and burned connectors are the most common GS electrical fault. Clean every connector and run the Stator Papers checks.",
+   "src": "https://thegsresources.com/statorpapers.php"
+  }
+ ],
+ "forums": [
+  {
+   "name": "The GS Resources forum",
+   "url": "https://www.thegsresources.com/",
+   "what": "Owner forum and tech library for Suzuki GS bikes."
+  }
+ ],
+ "silhouette": "suzuki-gs1000-1978",
+ "areas": [],
+ "heroName": "GS1000",
+ "hero": {
+  "src": "img/hero/suzuki-gs1000-1978.jpg",
+  "artist": "Mike Schinkel",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_GS1000S_01.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

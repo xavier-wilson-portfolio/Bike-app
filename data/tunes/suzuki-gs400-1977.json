@@ -1,0 +1,109 @@
+{
+ "id": "suzuki-gs400-1977",
+ "make": "Suzuki",
+ "model": "GS400",
+ "name": "Suzuki GS400 / GS425",
+ "years": [
+  1977,
+  1979
+ ],
+ "match": [
+  "gs400",
+  "gs 400",
+  "gs425",
+  "gs 425",
+  "gs400e",
+  "gs425e",
+  "gs425l"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "398 cc (425 cc on the GS425) air-cooled DOHC parallel twin, two carbs",
+ "intro": "A small GS twin that shares a lot with the bigger fours. Rusty tanks and tired petcocks are common.",
+ "focus": [
+  [
+   "398/425 cc DOHC twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Tank",
+   "Check for rust"
+  ],
+  [
+   "Petcock",
+   "Leaks and clogs"
+  ],
+  [
+   "Charging",
+   "Test the regulator"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-GS400-01",
+   "phase": "F",
+   "after": "F-002",
+   "title": "Run the Stator Papers checks",
+   "instructions": "Test stator output and regulator voltage as the GS Resources Stator Papers describe. Clean and check every connector in the charging circuit, including the ignition switch.",
+   "reason": "Burned connectors and a failing regulator take out stators on these bikes.",
+   "src": "The GS Resources Stator Papers",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.5,
+   "tools": ""
+  },
+  {
+   "id": "X-GS400-02",
+   "phase": "G",
+   "after": "G-006",
+   "title": "Replace the intake O-rings",
+   "instructions": "Fit new OEM or Viton O-rings where the intake boots meet the head. Plain nitrile rings break down from the heat.",
+   "reason": "Old O-rings leak air and make the bike run lean and hang its idle.",
+   "src": "The GS Resources forum",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "G": [
+   "Clean carbs, set valves, no air leaks, a clean tank and a working petcock all have to be right before a GS runs right."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Charging system",
+   "what": "Overcharging and burned connectors are the most common GS electrical fault. Clean every connector and run the Stator Papers checks.",
+   "src": "https://thegsresources.com/statorpapers.php"
+  }
+ ],
+ "forums": [
+  {
+   "name": "The GS Resources forum",
+   "url": "https://www.thegsresources.com/",
+   "what": "Owner forum and tech library for Suzuki GS bikes."
+  }
+ ],
+ "silhouette": "suzuki-gs400-1977",
+ "areas": [],
+ "heroName": "GS400",
+ "hero": {
+  "src": "img/hero/suzuki-gs400-1977.jpg",
+  "artist": "Rainmaker47",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_GS400.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

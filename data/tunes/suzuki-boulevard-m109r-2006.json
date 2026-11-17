@@ -1,0 +1,76 @@
+{
+ "id": "suzuki-boulevard-m109r-2006",
+ "make": "Suzuki",
+ "model": "Boulevard M109R",
+ "name": "Suzuki Boulevard M109R",
+ "years": [
+  2006,
+  2026
+ ],
+ "match": [
+  "m109r",
+  "m109",
+  "boulevard m109r",
+  "vzr1800",
+  "intruder m1800r"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "1783 cc liquid-cooled V-twin, fuel injected, shaft drive",
+ "intro": "Suzuki's big power cruiser. Mostly routine work, plus one accessory recall to check.",
+ "focus": [
+  [
+   "1783 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Shaft drive",
+   "Final drive oil"
+  ],
+  [
+   "Backrest recall",
+   "Accessory bolts only"
+  ],
+  [
+   "Wide rear tire",
+   "Check wear and age"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. If the bike has a Suzuki accessory backrest, check that recall 15E053 was done. Some backrest kits came with bolts of the wrong length.",
+   "reason": "Wrong-length bolts can let the backrest come loose."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "15E053",
+   "years": "2006-2015 with accessory backrest",
+   "what": "Backrest mounting kit may have the wrong-length bolts.",
+   "fix": "Dealer replaces the bolts free.",
+   "src": "https://auto-recalls.justia.com/suzuki/vzr1800/2010/15e053000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "silhouette": "suzuki-boulevard-m109r-2006",
+ "areas": [],
+ "heroName": "M109R",
+ "hero": {
+  "src": "img/hero/suzuki-boulevard-m109r-2006.jpg",
+  "artist": "Artaxerxes",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_Boulevard_M109R_McDonald%27s_VT_Rte_5_Lyndonville_VT_August_2019.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

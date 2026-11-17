@@ -1283,5 +1283,201 @@
   ],
   "style": "dualsport",
   "drive": "chain"
+ },
+ {
+  "id": "suzuki-gs850g-1979",
+  "make": "Suzuki",
+  "model": "GS850G",
+  "name": "Suzuki GS850G",
+  "years": [
+   1979,
+   1983
+  ],
+  "match": [
+   "gs850",
+   "gs 850",
+   "gs850g",
+   "gs850gl"
+  ],
+  "style": "standard",
+  "drive": "shaft"
+ },
+ {
+  "id": "suzuki-gs1000-1978",
+  "make": "Suzuki",
+  "model": "GS1000",
+  "name": "Suzuki GS1000",
+  "years": [
+   1978,
+   1980
+  ],
+  "match": [
+   "gs1000",
+   "gs 1000",
+   "gs1000e",
+   "gs1000s",
+   "gs1000g"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "suzuki-gs1100e-1980",
+  "make": "Suzuki",
+  "model": "GS1100E",
+  "name": "Suzuki GS1100E",
+  "years": [
+   1980,
+   1983
+  ],
+  "match": [
+   "gs1100",
+   "gs 1100",
+   "gs1100e",
+   "gs1100g",
+   "gs1100l"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "suzuki-gs400-1977",
+  "make": "Suzuki",
+  "model": "GS400",
+  "name": "Suzuki GS400 / GS425",
+  "years": [
+   1977,
+   1979
+  ],
+  "match": [
+   "gs400",
+   "gs 400",
+   "gs425",
+   "gs 425",
+   "gs400e",
+   "gs425e",
+   "gs425l"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "suzuki-boulevard-m109r-2006",
+  "make": "Suzuki",
+  "model": "Boulevard M109R",
+  "name": "Suzuki Boulevard M109R",
+  "years": [
+   2006,
+   2026
+  ],
+  "match": [
+   "m109r",
+   "m109",
+   "boulevard m109r",
+   "vzr1800",
+   "intruder m1800r"
+  ],
+  "style": "cruiser",
+  "drive": "shaft"
+ },
+ {
+  "id": "suzuki-boulevard-c50-2005",
+  "make": "Suzuki",
+  "model": "Boulevard C50",
+  "name": "Suzuki Boulevard C50",
+  "years": [
+   2005,
+   2026
+  ],
+  "match": [
+   "c50",
+   "boulevard c50",
+   "c50t",
+   "vl800",
+   "volusia"
+  ],
+  "style": "cruiser",
+  "drive": "shaft"
+ },
+ {
+  "id": "harley-davidson-road-glide-2017",
+  "make": "Harley-Davidson",
+  "model": "Road Glide",
+  "name": "Harley-Davidson Road Glide",
+  "years": [
+   2017,
+   2023
+  ],
+  "match": [
+   "road glide",
+   "fltrx",
+   "fltrxs",
+   "fltru",
+   "fltrk"
+  ],
+  "style": "touring",
+  "drive": "belt"
+ },
+ {
+  "id": "harley-davidson-road-king-2017",
+  "make": "Harley-Davidson",
+  "model": "Road King",
+  "name": "Harley-Davidson Road King",
+  "years": [
+   2017,
+   2023
+  ],
+  "match": [
+   "road king",
+   "flhr",
+   "flhrc",
+   "flhrxs"
+  ],
+  "style": "touring",
+  "drive": "belt"
+ },
+ {
+  "id": "suzuki-gt750-1972",
+  "make": "Suzuki",
+  "model": "GT750",
+  "name": "Suzuki GT750",
+  "years": [
+   1972,
+   1977
+  ],
+  "match": [
+   "gt750",
+   "gt 750",
+   "water buffalo",
+   "kettle",
+   "le mans"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "harley-davidson-sportster-883-2004",
+  "make": "Harley-Davidson",
+  "model": "Sportster 883 / 1200",
+  "name": "Harley-Davidson Sportster 883 / 1200",
+  "years": [
+   2004,
+   2021
+  ],
+  "match": [
+   "sportster",
+   "xl883",
+   "xl1200",
+   "iron 883",
+   "iron 1200",
+   "forty-eight",
+   "48",
+   "883",
+   "1200 custom",
+   "nightster",
+   "superlow"
+  ],
+  "style": "cruiser",
+  "drive": "belt"
  }
 ]

@@ -1,0 +1,86 @@
+{
+ "id": "harley-davidson-sportster-883-2004",
+ "make": "Harley-Davidson",
+ "model": "Sportster 883 / 1200",
+ "name": "Harley-Davidson Sportster 883 / 1200",
+ "years": [
+  2004,
+  2021
+ ],
+ "match": [
+  "sportster",
+  "xl883",
+  "xl1200",
+  "iron 883",
+  "iron 1200",
+  "forty-eight",
+  "48",
+  "883",
+  "1200 custom",
+  "nightster",
+  "superlow"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "883 or 1202 cc air-cooled Evolution V-twin, rubber mounted, carb (2004-2006) or fuel injection (2007 on)",
+ "intro": "The rubber-mount Sportster. Simple and well supported. Know whether yours has a carb or fuel injection.",
+ "focus": [
+  [
+   "Evolution V-twin",
+   "883 or 1200"
+  ],
+  [
+   "Carb or EFI",
+   "EFI from 2007"
+  ],
+  [
+   "Belt drive",
+   "Check for cracks"
+  ],
+  [
+   "Primary",
+   "Separate oil"
+  ],
+  [
+   "Headlight recall",
+   "2019-2021"
+  ]
+ ],
+ "remove": [
+  "H-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Many 2019-2021 Sportsters were in recall 21V225 because the headlight bulb can fail and kill both beams.",
+   "reason": "Losing the headlight at night is a crash risk. The repair is free."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "G": [
+   "2004-2006 Sportsters have a carb. 2007 and later are fuel injected. Skip the steps that don't match your bike."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "21V225",
+   "years": "2019-2021 (some)",
+   "what": "Headlight bulb may fail, losing high and low beam.",
+   "fix": "Dealer fits a bulb shield free.",
+   "src": "https://ultimatemotorcycling.com/2021/04/12/harley-recalls-31346-sportsters-due-to-possible-headlight-failure"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "silhouette": "harley-davidson-sportster-883-2004",
+ "areas": [],
+ "heroName": "SPORTSTER",
+ "hero": {
+  "src": "img/hero/harley-davidson-sportster-883-2004.jpg",
+  "artist": "order_242 from Chile",
+  "page": "https://commons.wikimedia.org/wiki/File:Harley_Davidson_XL_883_N_Sportster_2011_(15762289430).jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
+}

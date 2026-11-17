@@ -1,0 +1,79 @@
+{
+ "id": "suzuki-boulevard-c50-2005",
+ "make": "Suzuki",
+ "model": "Boulevard C50",
+ "name": "Suzuki Boulevard C50",
+ "years": [
+  2005,
+  2026
+ ],
+ "match": [
+  "c50",
+  "boulevard c50",
+  "c50t",
+  "vl800",
+  "volusia"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "805 cc liquid-cooled V-twin, fuel injected, shaft drive",
+ "intro": "A common mid-size Suzuki cruiser. Check the 2005-2006 ignition switch recall and the charging system.",
+ "focus": [
+  [
+   "805 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Ignition switch recall",
+   "2005-2006"
+  ],
+  [
+   "Charging",
+   "Stator and regulator"
+  ],
+  [
+   "Shaft drive",
+   "Final drive oil"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2005 and 2006 C50s were recalled for the ignition switch, and Suzuki said not to ride them until it was replaced.",
+   "reason": "A failing ignition switch can shut the engine off while riding."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "F": [
+   "A battery that keeps dying often points to a failing regulator/rectifier or loose battery leads. Test charging voltage at idle and 5,000 rpm."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [
+  {
+   "title": "Charging",
+   "what": "Stator and regulator/rectifier failures cause dim lights and dead batteries.",
+   "src": "https://enginepatrol.com/suzuki-boulevard-c50-c50t-common-problems/"
+  }
+ ],
+ "forums": [],
+ "silhouette": "suzuki-boulevard-c50-2005",
+ "areas": [],
+ "heroName": "C50",
+ "hero": {
+  "src": "img/hero/suzuki-boulevard-c50-2005.jpg",
+  "artist": "Warrakkk",
+  "page": "https://commons.wikimedia.org/wiki/File:2005_Suzuki_Boulevard_C50.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

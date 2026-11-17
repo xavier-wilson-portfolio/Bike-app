@@ -1,0 +1,96 @@
+{
+ "id": "harley-davidson-road-king-2017",
+ "make": "Harley-Davidson",
+ "model": "Road King",
+ "name": "Harley-Davidson Road King",
+ "years": [
+  2017,
+  2023
+ ],
+ "match": [
+  "road king",
+  "flhr",
+  "flhrc",
+  "flhrxs"
+ ],
+ "style": "touring",
+ "drive": "belt",
+ "engine": "Milwaukee-Eight 107 or 114 V-twin, oil-cooled heads, fuel injected, belt drive",
+ "intro": "A Milwaukee-Eight touring Harley. Check for oil sumping on early bikes and the clutch actuator recall.",
+ "focus": [
+  [
+   "Milwaukee-Eight",
+   "107 or 114 cu in"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Oil sumping",
+   "2017-2019"
+  ],
+  [
+   "Hydraulic clutch",
+   "Recall 18V734"
+  ],
+  [
+   "Belt drive",
+   "Check for cracks and tension"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2017-2018 touring bikes are in recall 18V734 because the hydraulic clutch actuator can leak inside and stop the clutch from releasing.",
+   "reason": "A clutch that won't release can cause a crash. The repair is free."
+  }
+ },
+ "add": [
+  {
+   "id": "X-M8-01",
+   "phase": "H",
+   "after": "H-001",
+   "title": "Check for oil sumping",
+   "instructions": "On 2017-2019 bikes, look for oil in the air cleaner and on the right side of the engine after a long ride. Ask whether the oil pump was updated to the 2020 part.",
+   "reason": "Sumping wastes oil and can coat the air filter.",
+   "src": "Harley-Davidson 2020 service bulletin on M8 sumping",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "18V734",
+   "years": "2017-2018 (some)",
+   "what": "Clutch actuator can leak inside, and the clutch may not disengage.",
+   "fix": "Free dealer repair (Harley recall 0173).",
+   "src": "https://au7o.io/motorcycle-issues/harley-davidson-road-king?year=2017"
+  }
+ ],
+ "known": [
+  {
+   "title": "Oil sumping (2017-2019)",
+   "what": "Early Milwaukee-Eight engines can build up oil in the crankcase and push it out the air cleaner. The fix is the 2020-style oil pump.",
+   "src": "https://www.lawabidingbiker.com/250/"
+  }
+ ],
+ "forums": [],
+ "silhouette": "harley-davidson-road-king-2017",
+ "areas": [],
+ "heroName": "ROAD KING",
+ "hero": {
+  "src": "img/hero/harley-davidson-road-king-2017.jpg",
+  "artist": "Livioandronico2013",
+  "page": "https://commons.wikimedia.org/wiki/File:Harley-Davidson_Road_King_-_Lateral_view.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

@@ -1,0 +1,101 @@
+{
+ "id": "suzuki-gt750-1972",
+ "make": "Suzuki",
+ "model": "GT750",
+ "name": "Suzuki GT750",
+ "years": [
+  1972,
+  1977
+ ],
+ "match": [
+  "gt750",
+  "gt 750",
+  "water buffalo",
+  "kettle",
+  "le mans"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "738 cc liquid-cooled two-stroke triple, three carbs, oil injection",
+ "intro": "The Water Buffalo. A liquid-cooled two-stroke triple whose crank seals and water pump decide everything.",
+ "focus": [
+  [
+   "738 cc two-stroke triple",
+   "Liquid-cooled"
+  ],
+  [
+   "Crank seals",
+   "Leak-down test"
+  ],
+  [
+   "Water pump",
+   "Nylon gear and seals"
+  ],
+  [
+   "Three carbs",
+   "Clean and sync"
+  ],
+  [
+   "Exhaust studs",
+   "Threads strip"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-GT7-01",
+   "phase": "H",
+   "after": "H-001",
+   "title": "Leak-down test the crankcase",
+   "instructions": "Seal the ports and pressure test the crankcase. Leaking seals mean the bottom end has to come apart.",
+   "reason": "Old crank seals are the classic GT750 fault and let it run lean.",
+   "src": "The GS Resources GT750 thread",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 2.0,
+   "tools": ""
+  },
+  {
+   "id": "X-GT7-02",
+   "phase": "H",
+   "after": "H-004",
+   "title": "Check the water pump gear and seals",
+   "instructions": "Inspect the nylon water pump drive gear for worn or broken teeth, and the pump seals for leaks.",
+   "reason": "A failed water pump cooks the engine.",
+   "src": "Motoryk GT750 notes",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "H": [
+   "Check the exhaust flange threads in the head. Stripped threads are common on early-70s Suzukis."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Crank seals",
+   "what": "Hardened crank seals are common and need a full bottom-end rebuild.",
+   "src": "https://motoryk.com/bikes/suzuki/gt-750"
+  }
+ ],
+ "forums": [],
+ "silhouette": "suzuki-gt750-1972",
+ "areas": [],
+ "heroName": "GT750",
+ "hero": {
+  "src": "img/hero/suzuki-gt750-1972.jpg",
+  "artist": "Rainmaker47",
+  "page": "https://commons.wikimedia.org/wiki/File:1971_Suzuki_GT750_at_Suzuki_Plaza.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}
