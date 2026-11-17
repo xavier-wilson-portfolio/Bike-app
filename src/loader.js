@@ -860,7 +860,7 @@
     const sil = n => { const f = (CFG.sil || []).find(x => x.replace(/\.\w+$/, "") === n); return f ? "img/sil/" + f : ""; };
     app.innerHTML = `<div class="ld">
       <header class="ld-top"><a class="pk-logo" href="${esc(url({}))}" aria-label="Revora"><img class="brand-icon" src="img/revora-icon.svg" alt=""><img class="wordmark" src="img/revora-word.svg" alt="Revora"></a>
-        <nav class="ld-nav"><a href="#ld-features">Features</a><a href="?builds">Builds</a><a href="#ld-plans">Plans</a><button class="btn sm" data-nav="signin">Sign in</button><button class="btn sm tan" data-nav="signup">Get started</button></nav></header>
+        <nav class="ld-nav"><a href="#ld-features">Features</a><a href="?builds">Builds</a><a href="#ld-plans">Plans</a><a href="?about">About</a><button class="btn sm" data-nav="signin">Sign in</button><button class="btn sm tan" data-nav="signup">Get started</button></nav></header>
       <section class="ld-hero"><div class="ld-hero-t"><div class="ld-stage" aria-hidden="true"><div class="ld-glow"></div>${["bike-cafe", "bike-sport", "bike-adventure", "bike-cruiser", "bike-standard", "bike-touring", "bike-dualsport", "bike-scooter"].map((n, i) => sil(n) ? `<img class="ld-sb" style="animation-delay:${i * 5.5}s" src="${sil(n)}" alt="">` : "").join("")}
             ${[[["amb", "Valve check", "due in 1,200 mi"], ["blu", "Carb rebuild", "step 4 of 9"]], [["amb", "Chain lube", "due in 150 mi"], ["grn", "Recalls", "all clear"]], [["amb", "Tire pressure", "check before your trip"], ["grn", "Air filter", "changed 2 weeks ago"]], [["amb", "Oil change", "due in 320 mi"], ["blu", "Insurance", "renews in 12 days"]], [["amb", "Brake fluid", "due in 3 months"], ["blu", "Receipt read", "$84.20 saved"]], [["blu", "Spring wake-up", "6 of 11 done"], ["grn", "Registration", "renewed"]], [["amb", "Rear tire", "about 900 mi left"], ["grn", "Recalls", "all clear"]], [["amb", "Battery", "charge it this week"], ["grn", "Service log", "12 entries"]]].map((pr, i) => `<div class="ld-cg" style="animation-delay:${i * 5.5}s;--d:${i * 5.5}s">${pr.map((c, j) => `<div class="ld-chip c${j + 1}"><i class="${c[0]}"></i><span><b>${c[1]}</b>${c[2]}</span></div>`).join("")}</div>`).join("")}</div><span class="ld-k">For riders, restorers and shops</span>
           <h1>Restore it. Ride it. Keep every record.</h1>
@@ -878,9 +878,9 @@
         <div><span>1</span><b>Add your bike</b><p>Search for it or type the year, make and model. Pick whether you're restoring it or keeping it running.</p></div>
         <div><span>2</span><b>Log as you go</b><p>Snap receipts, log services and fill-ups, and tick off checklists. It takes seconds.</p></div>
         <div><span>3</span><b>Know what's next</b><p>Reminders, recall alerts and renewal dates come to you, and the history report builds itself.</p></div></div></section>
-      <section class="ld-sec" id="ld-plans"><h2>Plans</h2><p class="ld-sub">Start free. New members get 25% off for their first 24 hours.</p>${window.rvPlansHtml({ yearly, mode: "choose" })}</section>
+      <section class="ld-sec" id="ld-plans"><h2>Plans</h2><p class="ld-sub">Start free. New members get 25% off for their first 24 hours.</p>${window.rvPlansHtml({ yearly, mode: "choose" })}<p class="ld-about-l">Who's behind Revora? <a href="?about">Read about us</a></p></section>
       <section class="ld-end"><h2>Your bike's whole story, kept right.</h2><button class="btn tan big" data-nav="signup">Get started free</button><span class="ld-small">Free for one bike. No card needed.</span><button class="linkbtn" data-demo>Try the demo first</button></section>
-      <footer class="ld-foot"><span>Revora</span><span>Made for people who work on their own bikes.</span>${socialsHtml("light")}<span class="ld-legal"><a href="?privacy">Privacy</a> · <a href="?terms">Terms</a> · <a href="mailto:info@revoragarage.com">info@revoragarage.com</a></span></footer></div>`;
+      <footer class="ld-foot"><span>Revora</span><span>Made for people who work on their own bikes.</span>${socialsHtml("light")}<span class="ld-legal"><a href="?about">About</a> · <a href="?privacy">Privacy</a> · <a href="?terms">Terms</a> · <a href="mailto:info@revoragarage.com">info@revoragarage.com</a></span></footer></div>`;
     app.querySelectorAll("[data-pl-bill]").forEach(b => b.onclick = () => { showLanding(b.dataset.plBill === "y"); document.getElementById("ld-plans").scrollIntoView(); });
     app.querySelectorAll("[data-pl-pick]").forEach(b => b.onclick = () => showAuth("signup"));
     app.querySelectorAll("[data-demo]").forEach(b => b.onclick = () => goUrl({ demo: 1 }));
@@ -893,6 +893,43 @@
   function showLegal(kind) {
     document.title = (kind === "terms" ? "Terms of Service" : "Privacy Policy") + " · Revora";
     frame(`<article class="legal">${window.RV_LEGAL[kind]}<p class="legal-nav"><a href="?privacy">Privacy Policy</a> · <a href="?terms">Terms of Service</a> · <a href="./">Back to Revora</a></p></article>`, { wide: true });
+    window.scrollTo(0, 0);
+  }
+
+  /* ---------- about Revora ---------- */
+  function showAbout() {
+    document.title = "About us · Revora";
+    const sil = n => { const f = (CFG.sil || []).find(x => x.replace(/\.\w+$/, "") === n); return f ? "img/sil/" + f : ""; };
+    const I = d => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+    const right = session ? `<button class="btn sm tan" data-nav="projects">Your garage</button>` : `<button class="btn sm" data-nav="signin">Sign in</button><button class="btn sm tan" data-nav="signup">Get started</button>`;
+    const WHAT = [['<path d="M14.7 6.3a4 4 0 0 0 5 5L12 19l-3-3 7.7-7.7z M4 20l3-3"/>', "Restoration", "A step-by-step restoration course tailored to your exact bike, whatever make, model or year you ride."],
+      ['<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z M8 7h7"/>', "Maintenance", "A service log with mileage, parts and cost, reminders before anything comes due, recall alerts, and every receipt in one place."],
+      ['<path d="M3 21h18 M5 21V9l7-5 7 5v12 M9 21v-6h6v6"/>', "Shops", "A client book, work orders, estimates and invoices, and service reminders sent to customers under the shop's own name."]];
+    const VALUES = [["Real facts only", "Specs and part numbers come from a real source. If one can't be confirmed, we say so and point you to the factory service manual."],
+      ["Any bike", "Old or new, stock or modified. Add yours by year, make and model and Revora sets itself up around it."],
+      ["Your records stay yours", "Export or print your bike's history any time. Nothing is deleted if you change plans."],
+      ["Free to start", "One bike is free for good, with no card needed. Pay only when you want more."]];
+    app.innerHTML = `<div class="ld ab">
+      <header class="ld-top"><a class="pk-logo" href="./" aria-label="Revora"><img class="brand-icon" src="img/revora-icon.svg" alt=""><img class="wordmark" src="img/revora-word.svg" alt="Revora"></a>
+        <nav class="ld-nav"><a href="./">Home</a><a href="?builds">Builds</a><a href="?plans">Plans</a><a href="?about" aria-current="page">About</a>${right}</nav></header>
+      <section class="ab-hero"><div class="ab-hero-t"><span class="ab-k">About Revora</span>
+          <h1>Restore what matters.</h1>
+          <p>Revora Garage gives motorcycle owners a clear plan for restoring their bike and one place to keep its whole history, from the first bolt to the last oil change.</p></div>
+        ${sil("bike-cafe") ? `<img class="ab-hero-art" src="${sil("bike-cafe")}" alt="">` : ""}</section>
+      <section class="ab-facts"><div><b>2026</b><span>Founded</span></div><div><b>Any bike</b><span>Search the library or add your own</span></div><div><b>Tailored</b><span>A course built around your bike, whatever you ride</span></div><div><b>Free</b><span>For one bike, no card needed</span></div></section>
+      <section class="ab-sec ab-story"><div><span class="ab-k">Our story</span><h2>It started with one bike.</h2></div>
+        <div class="ab-story-t"><p>Revora began in the summer of 2026 as GS750 Restoration HQ. Xavier was restoring a 1977 Suzuki GS750 and built a site to keep the project organized: the parts diagrams, the part numbers and a step-by-step plan for that one bike.</p>
+          <p>The same tools worked just as well for other motorcycles, so the site was rebuilt to handle any bike and renamed Revora Garage. Today it covers restoration projects, everyday maintenance and the shops that work on bikes for a living.</p></div></section>
+      <section class="ab-sec"><span class="ab-k c">What we do</span><h2 class="c">One place for your bike's whole life</h2>
+        <div class="ab-what">${WHAT.map(([ic, t, d]) => `<article><span class="ab-ic">${I(ic)}</span><b>${t}</b><p>${d}</p></article>`).join("")}</div></section>
+      <section class="ab-sec"><span class="ab-k c">How we work</span><h2 class="c">What you can count on</h2>
+        <div class="ab-vals">${VALUES.map(([t, d], i) => `<div><span class="ab-n">0${i + 1}</span><b>${t}</b><p>${d}</p></div>`).join("")}</div></section>
+      <section class="ab-sec ab-founder"><img src="img/revora-icon.svg" alt="" width="64" height="64"><div><span class="ab-k">Leadership</span><b>Xavier</b><span class="ab-role">Founder and CEO</span>
+        <p>Xavier started Revora while restoring his own GS750 and still runs it day to day, from the restoration courses to the tools for shops.</p></div></section>
+      <section class="ab-cta"><h2>Start with the bike in your garage.</h2><p>Free for one bike. No card needed.</p>
+        <div class="ab-cta-b">${session ? `<button class="btn tan big" data-nav="projects">Go to your garage</button>` : `<button class="btn tan big" data-nav="signup">Create free account</button>`}<a class="btn ghost-l big" href="?plans">See plans</a></div></section>
+      <section class="ab-sec ab-contact"><div><span class="ab-k">Contact</span><h2>Get in touch</h2><p>Questions, partnerships or press: <a href="mailto:info@revoragarage.com">info@revoragarage.com</a></p></div>${socialsHtml("light")}</section>
+      <footer class="ld-foot"><span>Revora</span><span>Made for people who work on their own bikes.</span>${socialsHtml("light")}<span class="ld-legal"><a href="?about">About</a> · <a href="?privacy">Privacy</a> · <a href="?terms">Terms</a> · <a href="mailto:info@revoragarage.com">info@revoragarage.com</a></span></footer></div>`;
     window.scrollTo(0, 0);
   }
 
@@ -1149,6 +1186,7 @@
       }
     }
     if (qs.has("demo")) { window.RV_DEMO = true; track("demo_open", "", true); return openApp("suzuki-dl650a-2012", null); }
+    if (qs.has("about")) return showAbout();
     if (qs.has("privacy") || qs.has("terms")) return showLegal(qs.has("terms") ? "terms" : "privacy");
     if (qs.get("report")) return showReport(qs.get("report"));
     if (qs.get("build")) return showBuild(qs.get("build"));
