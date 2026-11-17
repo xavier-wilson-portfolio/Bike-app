@@ -1,0 +1,62 @@
+{
+ "id": "honda-cbr250r-2011",
+ "make": "Honda",
+ "model": "CBR250R",
+ "name": "Honda CBR250R",
+ "years": [
+  2011,
+  2013
+ ],
+ "match": [
+  "cbr250r",
+  "cbr 250r",
+  "cbr250"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "249 cc liquid-cooled single, fuel injected",
+ "intro": "A simple learner sport bike. Some owners report stalling when downshifting to a stop.",
+ "focus": [
+  [
+   "249 cc single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Stalling",
+   "On downshift"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Drops",
+   "Check levers and pegs"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "If it stalls when you pull the clutch to stop, check idle speed and the throttle body first."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [
+  {
+   "title": "Stalling on downshift",
+   "what": "Owners have reported the engine dying when downshifting with the clutch in. NHTSA looked into it and closed the case.",
+   "src": "https://vehicleflaws.com/vehicle/honda/cbr250r/2013"
+  }
+ ],
+ "forums": [],
+ "heroName": "CBR250R"
+}

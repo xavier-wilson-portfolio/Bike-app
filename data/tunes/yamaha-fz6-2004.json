@@ -1,0 +1,67 @@
+{
+ "id": "yamaha-fz6-2004",
+ "make": "Yamaha",
+ "model": "FZ6",
+ "name": "Yamaha FZ6",
+ "years": [
+  2004,
+  2009
+ ],
+ "match": [
+  "fz6",
+  "fz-6",
+  "fzs600",
+  "fazer 600",
+  "fz6 fazer"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "600 cc liquid-cooled inline four, fuel injected",
+ "intro": "An R6-based all-rounder. Some 2005s had a factory fix for an unstable idle.",
+ "focus": [
+  [
+   "600 cc four",
+   "R6-based"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "2005 campaign",
+   "Idle fix"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Valve clearances",
+   "Check on time"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2005 FZ6s were in campaign 09V360 for unstable engine idling.",
+   "reason": "An engine that stalls at idle is a safety risk. The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "09V360",
+   "years": "2005 (some)",
+   "what": "Unstable engine idling.",
+   "fix": "Free dealer repair.",
+   "src": "https://static.nhtsa.gov/odi/rcl/2009/RCRIT-09V360-2873.pdf"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "FZ6"
+}

@@ -1,0 +1,71 @@
+{
+ "id": "honda-nc700x-2012",
+ "make": "Honda",
+ "model": "NC700X",
+ "name": "Honda NC700X",
+ "years": [
+  2012,
+  2015
+ ],
+ "match": [
+  "nc700x",
+  "nc700",
+  "nc 700x",
+  "nc700xd",
+  "nc750x"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "670 cc liquid-cooled parallel twin, fuel injected, manual or DCT",
+ "intro": "Honda's practical commuter-adventure twin. Check the drive chain and starter relay recalls.",
+ "focus": [
+  [
+   "670 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Manual or DCT",
+   "Know which"
+  ],
+  [
+   "Chain recall",
+   "2012"
+  ],
+  [
+   "Storage bin",
+   "Where the tank usually is"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2012 NC700Xs were in recall 12V461 because the drive chain plates may not have been hardened correctly. Some 2014-2016 NC700s were in recall 15V439 for the starter relay switch.",
+   "reason": "A broken chain or a stall can cause a crash. Repairs are free."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "G": [
+   "DCT bikes need the DCT clutch and filter serviced on schedule."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "12V461",
+   "years": "2012 (some)",
+   "what": "Drive chain plates may not be properly hardened and can fracture.",
+   "fix": "Dealer inspects and replaces the chain free.",
+   "src": "https://www.motorcyclistonline.com/news/recall-hondas-new-2012-nc700x"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "NC700X"
+}

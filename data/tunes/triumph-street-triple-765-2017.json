@@ -63,12 +63,5 @@
  "forums": [],
  "silhouette": "triumph-street-triple-765-2017",
  "areas": [],
- "heroName": "STREET TRIPLE",
- "hero": {
-  "src": "img/hero/triumph-street-triple-765-2017.jpg",
-  "artist": "Darktiger0512",
-  "page": "https://commons.wikimedia.org/wiki/File:Triumph_Street_Triple_765_RS_(2022).jpg",
-  "lic": "CC BY 4.0",
-  "licUrl": "https://creativecommons.org/licenses/by/4.0"
- }
+ "heroName": "STREET TRIPLE"
 }

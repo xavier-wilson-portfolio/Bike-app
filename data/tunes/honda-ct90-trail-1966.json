@@ -1,0 +1,85 @@
+{
+ "id": "honda-ct90-trail-1966",
+ "make": "Honda",
+ "model": "CT90 Trail",
+ "name": "Honda CT90 Trail 90",
+ "years": [
+  1966,
+  1979
+ ],
+ "match": [
+  "ct90",
+  "trail 90",
+  "ct 90",
+  "ct200",
+  "trail90"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "89 cc air-cooled OHC single, one carb, dual-range gearbox (most)",
+ "intro": "Honda's step-through trail bike. Simple to bring back. Mind the cam timing on reassembly.",
+ "focus": [
+  [
+   "89 cc single",
+   "Air-cooled"
+  ],
+  [
+   "One carb",
+   "Pilot jet clogs"
+  ],
+  [
+   "Cam timing",
+   "Align the marks"
+  ],
+  [
+   "Rectifier",
+   "Common upgrade"
+  ],
+  [
+   "Plug cap",
+   "Check the lead"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-CT9-01",
+   "phase": "H",
+   "after": "H-003",
+   "title": "Check cam timing marks on reassembly",
+   "instructions": "The cam can go in two ways. Line up the marks on the cam and sprocket before you button it up.",
+   "reason": "A cam fitted 180 degrees out is a common reason a rebuilt CT90 won't start.",
+   "src": "CT90 restoration blog",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "G": [
+   "The pilot jet has a tiny hole that clogs with varnish. Make sure you can see light through it."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Won't start after rebuild",
+   "what": "Installing the cam 180 degrees out is a common mistake.",
+   "src": "https://ct90restoration.blogspot.com/2019/02/my-approach-to-getting-ct90-that-wont.html"
+  }
+ ],
+ "forums": [
+  {
+   "name": "Honda Trail CT forum",
+   "url": "https://www.tapatalk.com/groups/hondatrailcts/",
+   "what": "Owner forum for the CT90, CT110 and other Honda trail bikes."
+  }
+ ],
+ "heroName": "CT90"
+}

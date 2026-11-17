@@ -1,0 +1,52 @@
+{
+ "id": "honda-cb1000r-2008",
+ "make": "Honda",
+ "model": "CB1000R",
+ "name": "Honda CB1000R",
+ "years": [
+  2008,
+  2026
+ ],
+ "match": [
+  "cb1000r",
+  "cb 1000r",
+  "cb1000 r"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "998 cc liquid-cooled inline four, fuel injected",
+ "intro": "Honda's naked liter bike. Mostly routine service. Check for crash damage on the single-sided swingarm.",
+ "focus": [
+  [
+   "998 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Single-sided arm",
+   "Check the hub"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Crash damage",
+   "Bars, pegs, radiator"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [],
+ "heroName": "CB1000R"
+}

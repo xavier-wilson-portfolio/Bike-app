@@ -1,0 +1,75 @@
+{
+ "id": "yamaha-rz350-1984",
+ "make": "Yamaha",
+ "model": "RZ350",
+ "name": "Yamaha RZ350",
+ "years": [
+  1984,
+  1985
+ ],
+ "match": [
+  "rz350",
+  "rz 350",
+  "rd350 ypvs",
+  "rd350lc",
+  "kenny roberts rz"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "347 cc liquid-cooled two-stroke twin, YPVS power valves, two carbs",
+ "intro": "The power-valve two-stroke. Stuck valves, crank seals and the oil pump decide how well it runs.",
+ "focus": [
+  [
+   "347 cc two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "YPVS",
+   "Valves and cables"
+  ],
+  [
+   "Crank seals",
+   "Leak test"
+  ],
+  [
+   "Oil pump",
+   "Rebuild kit"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-RZ3-01",
+   "phase": "H",
+   "after": "H-001",
+   "title": "Free up the power valves",
+   "instructions": "Remove the valve covers, clean the valves and check they turn by hand. Lube the cables and check the servo cycles at key on.",
+   "reason": "Road muck makes the valves stick and wear into the head.",
+   "src": "Classic Mechanics RD350 YPVS guide",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 2.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Power valves",
+   "what": "Road dirt can make the power valves wear into the cylinder head. Fresh seals and lubed cables help.",
+   "src": "https://www.classicmechanics.com/?p=6288"
+  }
+ ],
+ "forums": [],
+ "heroName": "RZ350"
+}

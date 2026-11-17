@@ -1,0 +1,69 @@
+{
+ "id": "yamaha-xt250-2008",
+ "make": "Yamaha",
+ "model": "XT250",
+ "name": "Yamaha XT250",
+ "years": [
+  2008,
+  2026
+ ],
+ "match": [
+  "xt250",
+  "xt 250",
+  "xt250x"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 cc air-cooled SOHC single; carb or fuel injection depending on year",
+ "intro": "A light dual-sport. 2013-2015 bikes had an air induction hose recall.",
+ "focus": [
+  [
+   "249 cc single",
+   "Air-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Depends on year"
+  ],
+  [
+   "2013-15 recall",
+   "Air induction hose"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Off-road wear",
+   "Bearings"
+  ]
+ ],
+ "remove": [
+  "H-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2013-2015 XT250s are in recall 14V754. Dealers replace the air induction pipe and hose.",
+   "reason": "The repair is free."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check whether your bike has a carb or fuel injection and skip the steps that don't match."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "14V754",
+   "years": "2013-2015 (some)",
+   "what": "Air induction pipe and hose defect.",
+   "fix": "Dealer replaces the pipe and hose free.",
+   "src": "https://auto-recalls.justia.com/yamaha/xt250/2013/14v754000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "XT250"
+}

@@ -1,0 +1,65 @@
+{
+ "id": "kawasaki-z400-2019",
+ "make": "Kawasaki",
+ "model": "Z400",
+ "name": "Kawasaki Z400",
+ "years": [
+  2019,
+  2026
+ ],
+ "match": [
+  "z400",
+  "z 400",
+  "z400 abs"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "399 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "The naked Ninja 400. Check the 2021 cam chain tensioner recall, which carries a do-not-ride warning.",
+ "focus": [
+  [
+   "399 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Tensioner recall",
+   "2021"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Drops",
+   "Levers and pegs"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls first",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2021 Z400 ABS bikes are in recall 20V774 because the cam chain tensioner may be too weak. Kawasaki says not to ride until it's replaced.",
+   "reason": "A failed tensioner can wreck the engine. The repair is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "20V774",
+   "years": "2021 (some)",
+   "what": "Cam chain tensioner may be improperly heat-treated and fail. Do not ride until repaired.",
+   "fix": "Dealer replaces the tensioner free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/20V774000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "Z400"
+}

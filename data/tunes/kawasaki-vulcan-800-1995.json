@@ -1,0 +1,60 @@
+{
+ "id": "kawasaki-vulcan-800-1995",
+ "make": "Kawasaki",
+ "model": "Vulcan 800",
+ "name": "Kawasaki Vulcan 800",
+ "years": [
+  1995,
+  2006
+ ],
+ "match": [
+  "vulcan 800",
+  "vn800",
+  "vulcan 800 classic",
+  "vulcan 800 drifter",
+  "drifter 800"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "805 cc liquid-cooled V-twin, one carb, chain drive",
+ "intro": "A simple mid-size Vulcan. Unlike most cruisers it uses a chain. Charging and the carb are the usual jobs.",
+ "focus": [
+  [
+   "805 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "One carb",
+   "Clean if stored"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Charging",
+   "Stator and R/R"
+  ],
+  [
+   "Cooling",
+   "Check coolant"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Chain drive",
+   "what": "The VN800 is chain-driven, so it needs regular chain care.",
+   "src": "https://maintenanceschedule.com/?p=4565"
+  }
+ ],
+ "forums": [],
+ "heroName": "VULCAN 800"
+}

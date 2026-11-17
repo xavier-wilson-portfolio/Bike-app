@@ -1,0 +1,66 @@
+{
+ "id": "kawasaki-ninja-250-ex250-2008",
+ "make": "Kawasaki",
+ "model": "Ninja 250 EX250",
+ "name": "Kawasaki Ninja 250R",
+ "years": [
+  2008,
+  2012
+ ],
+ "match": [
+  "ninja 250",
+  "ninja 250r",
+  "ex250",
+  "ex250j"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "249 cc liquid-cooled parallel twin, carbs",
+ "intro": "The classic learner Ninja. Very tough. Check the few early recalls and look for drop damage.",
+ "focus": [
+  [
+   "249 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean if stored"
+  ],
+  [
+   "Recalls",
+   "Several small ones"
+  ],
+  [
+   "Drops",
+   "Levers, pegs, fairing"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Recalls include the front brake hose bracket on some 2008 bikes (08V115), engine case oil leaks on some 2009-2010 bikes (09V464) and passenger footpeg circlips on some 2012 bikes (12V081).",
+   "reason": "These affect brakes, oil on the tire and pegs. Repairs are free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "09V464",
+   "years": "2009-2010 (some)",
+   "what": "Porous engine case may leak oil onto the rear tire.",
+   "fix": "Free dealer inspection and repair.",
+   "src": "https://www.autoevolution.com/news/kawasaki-recalls-2009-2010-ninja-250r-bikes-14464.html"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "NINJA 250"
+}

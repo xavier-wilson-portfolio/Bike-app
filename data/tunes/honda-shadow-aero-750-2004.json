@@ -1,0 +1,78 @@
+{
+ "id": "honda-shadow-aero-750-2004",
+ "make": "Honda",
+ "model": "Shadow Aero 750",
+ "name": "Honda Shadow Aero 750",
+ "years": [
+  2004,
+  2016
+ ],
+ "match": [
+  "shadow aero",
+  "shadow 750",
+  "vt750",
+  "vt750c",
+  "shadow phantom",
+  "shadow spirit 750",
+  "aero 750"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "745 cc liquid-cooled V-twin, carb (to 2009) or fuel injection (2010 on), shaft drive",
+ "intro": "A very common Honda cruiser. Check the bank angle sensor recall on 2010-2016 bikes.",
+ "focus": [
+  [
+   "745 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "EFI from 2010"
+  ],
+  [
+   "Recalls",
+   "Fuel valve, sensor wire"
+  ],
+  [
+   "Shaft drive",
+   "Final drive oil"
+  ],
+  [
+   "Charging",
+   "Test the R/R"
+  ]
+ ],
+ "remove": [],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2007-2008 VT750s were in recall 08V141 for a fuel valve that can drip fuel. 2010-2016 Shadow 750s were in recall 15V874 because the bank angle sensor wire can rub through and stall the engine.",
+   "reason": "A stall or a fuel leak is a crash or fire risk. Repairs are free."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "G": [
+   "2004-2009 bikes have a carb. 2010 and later are fuel injected. Skip the steps that don't match your bike."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "15V874",
+   "years": "2010-2016",
+   "what": "Bank angle sensor wire can rub on the harness and stall the engine.",
+   "fix": "Free dealer repair (Honda JW7).",
+   "src": "https://www.motorcyclistonline.com/recall-news-honda-recalls-2010-2016-vt750-shadow-cruisers-for-potential-stalling-issue/"
+  },
+  {
+   "id": "08V141",
+   "years": "2007-2008 (some)",
+   "what": "Fuel control valve diaphragm may drip fuel.",
+   "fix": "Dealer replaces the diaphragm free.",
+   "src": "https://thekneeslider.com/honda-recalls-vt600-vt750-vtx1300/"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "AERO"
+}

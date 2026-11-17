@@ -1,0 +1,72 @@
+{
+ "id": "kawasaki-vulcan-1500-1600-1987",
+ "make": "Kawasaki",
+ "model": "Vulcan 1500/1600",
+ "name": "Kawasaki Vulcan 1500 / 1600",
+ "years": [
+  1987,
+  2008
+ ],
+ "match": [
+  "vulcan 1500",
+  "vulcan 1600",
+  "vn1500",
+  "vn1600",
+  "nomad",
+  "drifter",
+  "mean streak",
+  "vulcan classic"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "1470 or 1552 cc liquid-cooled V-twin, carb or fuel injection, shaft drive",
+ "intro": "Kawasaki's big Vulcans. Tough engines. Check the 2003-2004 oil filter recall on some models.",
+ "focus": [
+  [
+   "Big V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Depends on model"
+  ],
+  [
+   "Oil filter recall",
+   "2003-2004"
+  ],
+  [
+   "Shaft drive",
+   "Final drive oil"
+  ],
+  [
+   "Charging",
+   "Test the R/R"
+  ]
+ ],
+ "remove": [],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2003 Vulcan 1500 Classic, Drifter, 1600 Classic and 2003-2004 Mean Streak and Nomad FI bikes were in recall 04V023 because high oil pressure on a cold start can deform the oil filter.",
+   "reason": "A deformed filter can leak oil. The repair is free."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "G": [
+   "Some Vulcans have a carb and some are fuel injected. Skip the steps that don't match your bike."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "04V023",
+   "years": "2003-2004 (some models)",
+   "what": "High oil pressure at cold start can deform the oil filter cartridge.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehicleflaws.com/vehicle/kawasaki/vn1500-e6/2003"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "VULCAN"
+}

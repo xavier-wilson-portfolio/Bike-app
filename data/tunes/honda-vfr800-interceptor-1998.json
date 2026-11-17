@@ -1,0 +1,93 @@
+{
+ "id": "honda-vfr800-interceptor-1998",
+ "make": "Honda",
+ "model": "VFR800 Interceptor",
+ "name": "Honda VFR800 Interceptor",
+ "years": [
+  1998,
+  2017
+ ],
+ "match": [
+  "vfr800",
+  "vfr 800",
+  "interceptor",
+  "vfr800fi",
+  "vfr800 vtec"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "781 cc liquid-cooled V4, gear-driven cams (1998-2001) or VTEC (2002 on), fuel injected",
+ "intro": "Honda's V4 sport tourer. Regulator/rectifier failures and cam chain tensioners on VTEC bikes are the known issues.",
+ "focus": [
+  [
+   "781 cc V4",
+   "Liquid-cooled"
+  ],
+  [
+   "Regulator/rectifier",
+   "Fails from heat"
+  ],
+  [
+   "Cam tensioners",
+   "VTEC bikes"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Chain drive",
+   "Single-sided arm"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-VFR-01",
+   "phase": "F",
+   "after": "F-002",
+   "title": "Check the regulator/rectifier and stator plug",
+   "instructions": "Measure battery voltage at idle and at 5,000 rpm. Look for a melted or brown stator connector and a scorched regulator. Clean and solder the connections if needed.",
+   "reason": "Hot connectors and a failing regulator are a common way these bikes stop charging.",
+   "src": "VFR World forum",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.0,
+   "tools": ""
+  },
+  {
+   "id": "X-VFR-02",
+   "phase": "H",
+   "after": "H-003",
+   "title": "Listen for cam chain rattle",
+   "instructions": "On a cold start, listen for a rattle in the first 30 seconds. On 2002 and later VTEC bikes, the front tensioner is the usual culprit.",
+   "reason": "Worn tensioners let the cam chain slap.",
+   "src": "Motor and Wheels VFR notes",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [
+  {
+   "title": "Regulator/rectifier",
+   "what": "Premature regulator/rectifier failure is the most common VFR800 complaint.",
+   "src": "https://motorandwheels.com/common-problems-honda-interceptor/"
+  }
+ ],
+ "forums": [
+  {
+   "name": "VFR World",
+   "url": "https://vfrworld.com/",
+   "what": "Owner forum for Honda VFRs."
+  }
+ ],
+ "heroName": "VFR800"
+}

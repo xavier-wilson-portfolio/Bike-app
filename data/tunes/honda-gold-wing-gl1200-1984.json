@@ -1,0 +1,85 @@
+{
+ "id": "honda-gold-wing-gl1200-1984",
+ "make": "Honda",
+ "model": "Gold Wing GL1200",
+ "name": "Honda Gold Wing GL1200",
+ "years": [
+  1984,
+  1987
+ ],
+ "match": [
+  "gl1200",
+  "gold wing 1200",
+  "goldwing 1200",
+  "gl1200a",
+  "gl1200i",
+  "aspencade"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "engine": "1182 cc liquid-cooled flat four, timing belts, shaft drive",
+ "intro": "A flat-four Gold Wing. Timing belts and the stator, which sits behind the engine, are the big jobs.",
+ "focus": [
+  [
+   "Flat four",
+   "Liquid-cooled"
+  ],
+  [
+   "Timing belts",
+   "Change by age"
+  ],
+  [
+   "Stator",
+   "Engine must come out"
+  ],
+  [
+   "Pulse generator",
+   "Cuts out hot"
+  ],
+  [
+   "Shaft drive",
+   "Final drive oil"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-GW-BELT",
+   "phase": "H",
+   "after": "H-003",
+   "title": "Replace the timing belts",
+   "instructions": "If you can't prove the timing belts were changed in the last 10 years, replace them and the tensioners. Look at the water pump while the front cover is off.",
+   "reason": "A snapped timing belt on these engines can bend valves.",
+   "src": "The GS Resources Gold Wing thread",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 3.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "F": [
+   "The stator sits at the back of the engine and the engine has to come out to change it. Test charging before you decide."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Timing belts",
+   "what": "Replace them every 10 years or 100,000 miles, even if they look fine.",
+   "src": "https://www.thegsresources.com/_forum/forum/other-bikes/other-questions/86883-goldwing-what-are-the-usual-suspects-to-watch-out-for?p=1521205"
+  }
+ ],
+ "forums": [
+  {
+   "name": "Goldwingparts.com rider blog",
+   "url": "https://www.goldwingparts.com/blogs/goldwing-rider-blog",
+   "what": "Gold Wing repair notes by model."
+  }
+ ],
+ "heroName": "GL1200"
+}

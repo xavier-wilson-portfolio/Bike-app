@@ -1,0 +1,83 @@
+{
+ "id": "kawasaki-ninja-zx-10r-2004",
+ "make": "Kawasaki",
+ "model": "Ninja ZX-10R",
+ "name": "Kawasaki Ninja ZX-10R",
+ "years": [
+  2004,
+  2020
+ ],
+ "match": [
+  "zx-10r",
+  "zx10r",
+  "ninja zx-10r",
+  "zx1000"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "998 cc liquid-cooled inline four, fuel injected",
+ "intro": "Kawasaki's liter superbike. Several recalls across the years. Check for track and crash wear.",
+ "focus": [
+  [
+   "998 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Recalls",
+   "R/R, gears, ECU"
+  ],
+  [
+   "Crash damage",
+   "Frame and subframe"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Recalls include the regulator/rectifier on 2008-2011 bikes (12V064), transmission gears on 2016-2018 bikes, and an ECU backfire fix on 2019-2020 bikes (20V307).",
+   "reason": "These can strand you, lock the gearbox or cause a fire. Repairs are free."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "E": [
+   "Check the frame spars, subframe and fairing mounts for scrapes and cracks."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "12V064",
+   "years": "2008-2011 (some)",
+   "what": "Regulator/rectifier may not charge the battery properly.",
+   "fix": "Dealer replaces the regulator free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/12V064000"
+  },
+  {
+   "id": "20V307",
+   "years": "2019-2020",
+   "what": "ECU programming can cause backfires that damage the air suction valves.",
+   "fix": "Dealer reprograms the ECU and replaces damaged parts free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/20V307000"
+  }
+ ],
+ "known": [
+  {
+   "title": "Transmission gears",
+   "what": "Kawasaki recalled 2016-2018 ZX-10Rs because hard shifting could break gears.",
+   "src": "https://www.thedrive.com/motorcycles/18508/kawasaki-recalls-zx-10r-motorcycles-for-weak-gears.md"
+  }
+ ],
+ "forums": [],
+ "heroName": "ZX-10R"
+}

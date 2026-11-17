@@ -1,0 +1,82 @@
+{
+ "id": "kawasaki-kz1300-1979",
+ "make": "Kawasaki",
+ "model": "KZ1300",
+ "name": "Kawasaki KZ1300 / Z1300",
+ "years": [
+  1979,
+  1989
+ ],
+ "match": [
+  "kz1300",
+  "z1300",
+  "kz 1300",
+  "voyager 1300",
+  "zn1300"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "1286 cc liquid-cooled DOHC inline six, three carbs (later fuel injected), shaft drive",
+ "intro": "Kawasaki's liquid-cooled six. The water pump drive and its mechanical seal are the big worry.",
+ "focus": [
+  [
+   "1286 cc inline six",
+   "Liquid-cooled"
+  ],
+  [
+   "Water pump seal",
+   "Check for water in oil"
+  ],
+  [
+   "Carbs or EFI",
+   "Depends on year"
+  ],
+  [
+   "Shaft drive",
+   "Final drive oil"
+  ],
+  [
+   "Cooling",
+   "Thermostat and flow"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-Z13-01",
+   "phase": "H",
+   "after": "H-004",
+   "title": "Check the water pump and its seal",
+   "instructions": "Check the oil for coolant and the weep hole for drips. Inspect the water pump drive and mechanical seal.",
+   "reason": "A failed mechanical seal puts coolant in the oil.",
+   "src": "KZ1300 forum",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 3.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "G": [
+   "Early bikes have carbs and later ones are fuel injected. Skip the steps that don't match your bike."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Water pump seal",
+   "what": "A broken water pump mechanical seal can let coolant into the oil.",
+   "src": "https://kz1300.kzrider.com/forum/engines/4053-waterpump-mechanical-seal?start=12"
+  }
+ ],
+ "forums": [
+  {
+   "name": "KZ1300 forum",
+   "url": "https://kz1300.kzrider.com/",
+   "what": "Owner forum for the Kawasaki Z1300 six."
+  }
+ ],
+ "heroName": "KZ1300"
+}

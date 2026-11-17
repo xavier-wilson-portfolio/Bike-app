@@ -1,0 +1,80 @@
+{
+ "id": "honda-shadow-vt1100-1985",
+ "make": "Honda",
+ "model": "Shadow VT1100",
+ "name": "Honda Shadow 1100",
+ "years": [
+  1985,
+  2007
+ ],
+ "match": [
+  "shadow 1100",
+  "vt1100",
+  "shadow spirit",
+  "shadow sabre",
+  "shadow ace",
+  "shadow aero 1100",
+  "vt1100c"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "1099 cc liquid-cooled V-twin, carbs, shaft drive",
+ "intro": "Honda's long-running 1100 cruiser. Very durable. Charging parts and gummed carbs are the usual trouble.",
+ "focus": [
+  [
+   "1099 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Carbs",
+   "Gum up in storage"
+  ],
+  [
+   "Charging",
+   "Stator plug and R/R"
+  ],
+  [
+   "Shaft drive",
+   "Grease the splines"
+  ],
+  [
+   "Petcock",
+   "Check for leaks"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-VT11-01",
+   "phase": "F",
+   "after": "F-002",
+   "title": "Check the regulator/rectifier and stator plug",
+   "instructions": "Measure battery voltage at idle and at 5,000 rpm. Look for a melted or brown stator connector and a scorched regulator. Clean and solder the connections if needed.",
+   "reason": "Hot connectors and a failing regulator are a common way these bikes stop charging.",
+   "src": "Valkyrie Riders forum",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "E": [
+   "Grease the driveshaft splines when the rear wheel is out. Dry splines wear out."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Charging system",
+   "what": "The regulator/rectifier and stator connector run hot and fail on many 1990s-2000s Hondas.",
+   "src": "https://motorandwheels.com/problems-with-honda-vt-1100-spirit-shadow/"
+  }
+ ],
+ "forums": [],
+ "heroName": "SHADOW"
+}

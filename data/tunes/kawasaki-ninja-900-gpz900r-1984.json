@@ -1,0 +1,67 @@
+{
+ "id": "kawasaki-ninja-900-gpz900r-1984",
+ "make": "Kawasaki",
+ "model": "Ninja 900 / GPz900R",
+ "name": "Kawasaki Ninja 900 / GPz900R",
+ "years": [
+  1984,
+  1990
+ ],
+ "match": [
+  "gpz900r",
+  "gpz 900r",
+  "ninja 900",
+  "zx900",
+  "zx900a",
+  "top gun ninja"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "908 cc liquid-cooled DOHC 16-valve inline four, four carbs",
+ "intro": "The first Ninja. A strong engine. Age brings tired wiring, cam chain tensioners and hard-to-find parts.",
+ "focus": [
+  [
+   "908 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Cam chain tensioner",
+   "Rattle"
+  ],
+  [
+   "Wiring",
+   "Brittle and corroded"
+  ],
+  [
+   "Parts",
+   "Bodywork scarce"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Wiring",
+   "what": "The harness can become brittle and corroded with age.",
+   "src": "https://atvutv.neocities.org/kawasaki-gpz900r-problems"
+  }
+ ],
+ "forums": [
+  {
+   "name": "KZRider forum",
+   "url": "https://www.kzrider.com/",
+   "what": "Owner forum for classic Kawasakis."
+  }
+ ],
+ "heroName": "GPZ900R"
+}

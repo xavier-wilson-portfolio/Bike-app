@@ -1,0 +1,78 @@
+{
+ "id": "kawasaki-w650-w800-1999",
+ "make": "Kawasaki",
+ "model": "W650/W800",
+ "name": "Kawasaki W650 / W800",
+ "years": [
+  1999,
+  2016
+ ],
+ "match": [
+  "w650",
+  "w800",
+  "w 650",
+  "w 800",
+  "w400"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "676 cc (W650, carbs) or 773 cc (W800, fuel injected) air-cooled SOHC parallel twin, bevel-drive cam",
+ "intro": "Kawasaki's retro twin with a bevel-driven cam. Very reliable. The bevel drive must be set up right after any work.",
+ "focus": [
+  [
+   "Air-cooled twin",
+   "Bevel-drive cam"
+  ],
+  [
+   "Carb or EFI",
+   "W650 carbs, W800 EFI"
+  ],
+  [
+   "Bevel drive",
+   "Listen and look for weeps"
+  ],
+  [
+   "Carb diaphragms",
+   "Crack with age"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-W65-01",
+   "phase": "H",
+   "after": "H-003",
+   "title": "Check the bevel drive",
+   "instructions": "Listen for unusual noise from the bevel drive tower and look for oil weeping at the top and bottom of the shaft.",
+   "reason": "The bevel drive is easy to set up wrong during service, and that causes wear.",
+   "src": "Return of the Cafe Racers W650 notes",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "G": [
+   "W650s have carbs and W800s are fuel injected. Skip the steps that don't match your bike."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [
+  {
+   "title": "Bevel drive setup",
+   "what": "Owners say the bevel drive adjustment is different from Ducati's and often gets done wrong during service.",
+   "src": "https://www.returnofthecaferacers.com/?p=1060"
+  }
+ ],
+ "forums": [],
+ "heroName": "W650"
+}

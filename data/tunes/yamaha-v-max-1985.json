@@ -1,0 +1,74 @@
+{
+ "id": "yamaha-v-max-1985",
+ "make": "Yamaha",
+ "model": "V-Max",
+ "name": "Yamaha V-Max 1200",
+ "years": [
+  1985,
+  2007
+ ],
+ "match": [
+  "v-max",
+  "vmax",
+  "v max",
+  "vmx12",
+  "vmx1200"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "1198 cc liquid-cooled V4, four carbs with V-Boost, shaft drive",
+ "intro": "Yamaha's original muscle V4. Carb diaphragms and the V-Boost servo are the usual jobs.",
+ "focus": [
+  [
+   "1198 cc V4",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Diaphragms and sync"
+  ],
+  [
+   "V-Boost",
+   "Servo and butterflies"
+  ],
+  [
+   "Shaft drive",
+   "Final drive oil"
+  ],
+  [
+   "Frame",
+   "Check for rust"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-VMX-01",
+   "phase": "G",
+   "after": "G-005",
+   "title": "Check the V-Boost system",
+   "instructions": "With the key on, check that the V-Boost servo cycles and the butterflies between the carb pairs open and close freely. Clean and lube the linkage.",
+   "reason": "A stuck V-Boost takes away the top-end rush or makes the bike run badly.",
+   "src": "Clymer V-Max manual",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Carb diaphragms",
+   "what": "Cracked carb diaphragms cause rough idle and hesitation.",
+   "src": "https://www.motoryk.com/bikes/yamaha/v-max-1200/problems"
+  }
+ ],
+ "forums": [],
+ "heroName": "V-MAX"
+}

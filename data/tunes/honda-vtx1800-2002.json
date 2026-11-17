@@ -1,0 +1,83 @@
+{
+ "id": "honda-vtx1800-2002",
+ "make": "Honda",
+ "model": "VTX1800",
+ "name": "Honda VTX1800",
+ "years": [
+  2002,
+  2008
+ ],
+ "match": [
+  "vtx1800",
+  "vtx 1800",
+  "vtx1800c",
+  "vtx1800r",
+  "vtx1800s",
+  "vtx1800n",
+  "vtx1800f",
+  "vtx1800t"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "1795 cc liquid-cooled V-twin, fuel injected, shaft drive",
+ "intro": "Honda's huge-torque cruiser. Check the rear wheel and final drive flange bearings, a common owner complaint.",
+ "focus": [
+  [
+   "1795 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Rear flange bearings",
+   "Wear early"
+  ],
+  [
+   "Shaft drive",
+   "Final drive oil"
+  ],
+  [
+   "2002 recalls",
+   "Swingarm, gearbox"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some early 2002 VTX1800s were recalled for a swingarm weld and a transmission circlip.",
+   "reason": "Both can cause a crash. Repairs are free."
+  }
+ },
+ "add": [
+  {
+   "id": "X-VTX18-01",
+   "phase": "E",
+   "after": "E-002",
+   "title": "Check the rear wheel and final drive bearings",
+   "instructions": "With the rear wheel out, check the wheel bearings and the final drive flange bearing for roughness or play.",
+   "reason": "Owners report worn flange bearings on these bikes, often found at a tire change.",
+   "src": "NHTSA owner complaints",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [
+  {
+   "title": "Rear flange bearings",
+   "what": "Final drive flange and rear wheel bearings wear early on many VTX1800s.",
+   "src": "https://vindecoder.site/makes/honda/vtx1800/2004"
+  }
+ ],
+ "forums": [],
+ "heroName": "VTX1800"
+}

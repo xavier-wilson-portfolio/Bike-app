@@ -1,0 +1,53 @@
+{
+ "id": "kawasaki-klx300-2021",
+ "make": "Kawasaki",
+ "model": "KLX300",
+ "name": "Kawasaki KLX300",
+ "years": [
+  2021,
+  2026
+ ],
+ "match": [
+  "klx300",
+  "klx 300",
+  "klx300sm",
+  "klx300r"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "292 cc liquid-cooled DOHC single, fuel injected",
+ "intro": "A light, simple dual-sport. Mostly routine service and off-road wear.",
+ "focus": [
+  [
+   "292 cc single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valve clearances",
+   "Check on time"
+  ],
+  [
+   "Off-road wear",
+   "Bearings and chain"
+  ],
+  [
+   "Air filter",
+   "Clean often"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [],
+ "heroName": "KLX300"
+}

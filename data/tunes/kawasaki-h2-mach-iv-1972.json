@@ -1,0 +1,88 @@
+{
+ "id": "kawasaki-h2-mach-iv-1972",
+ "make": "Kawasaki",
+ "model": "H2 Mach IV",
+ "name": "Kawasaki H2 Mach IV 750",
+ "years": [
+  1972,
+  1975
+ ],
+ "match": [
+  "h2",
+  "mach iv",
+  "mach 4",
+  "h2 750",
+  "h2a",
+  "h2b",
+  "h2c"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "748 cc air-cooled two-stroke triple, three carbs, CDI ignition, oil injection",
+ "intro": "Kawasaki's wild 750 triple. Crank seals between the cylinders and the oil pump decide whether it survives.",
+ "focus": [
+  [
+   "748 cc two-stroke triple",
+   "Air-cooled"
+  ],
+  [
+   "Crank seals",
+   "Need a specialist"
+  ],
+  [
+   "Oil injection",
+   "Pump and lines"
+  ],
+  [
+   "Three carbs",
+   "Clean and sync"
+  ],
+  [
+   "Handling",
+   "Check steering head"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-H2-01",
+   "phase": "H",
+   "after": "H-001",
+   "title": "Leak-down test the crankcase",
+   "instructions": "Pressure test each crankcase. The center seals between cylinders can't be changed without pressing the crank apart.",
+   "reason": "Dried-out crank seals are expected on triples that sat, and leaking seals make a cylinder run lean.",
+   "src": "Grassroots Motorsports H1 thread",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 2.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "H": [
+   "Have the crank rebuilt by a shop that knows Kawasaki triple cranks."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Crank seals",
+   "what": "Multi-cylinder two-strokes have seals between the cylinders that dry out with age.",
+   "src": "https://grassrootsmotorsports.com/forum/build-projects-and-project-cars/1971-kawasaki-h1/138158/page1"
+  }
+ ],
+ "forums": [
+  {
+   "name": "Kawasaki Triples forum",
+   "url": "https://www.tapatalk.com/groups/kawasakitriples/",
+   "what": "Owner forum for Kawasaki two-stroke triples."
+  }
+ ],
+ "heroName": "H2"
+}

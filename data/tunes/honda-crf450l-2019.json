@@ -1,0 +1,65 @@
+{
+ "id": "honda-crf450l-2019",
+ "make": "Honda",
+ "model": "CRF450L",
+ "name": "Honda CRF450L",
+ "years": [
+  2019,
+  2020
+ ],
+ "match": [
+  "crf450l",
+  "crf 450l",
+  "crf450rl"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "449 cc liquid-cooled single, fuel injected",
+ "intro": "A street-legal version of Honda's motocross 450. High-strung and needs frequent service.",
+ "focus": [
+  [
+   "449 cc single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Horn recall",
+   "2019"
+  ],
+  [
+   "Valve clearances",
+   "Check often"
+  ],
+  [
+   "Off-road wear",
+   "Bearings and chain"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. All 2019 CRF450Ls were in recall 19V703 because the horn mount can break and the horn can fall off.",
+   "reason": "The fix is free and quick."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "19V703",
+   "years": "2019",
+   "what": "Horn mount can break and the horn can detach.",
+   "fix": "Dealer replaces the horn and mount free.",
+   "src": "https://ultimatemotorcycling.com/2019/10/17/honda-recalls-2019-crf450l-due-to-horn-bracket-defect/"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "CRF450L"
+}

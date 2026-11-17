@@ -1,0 +1,83 @@
+{
+ "id": "yamaha-xt500-1976",
+ "make": "Yamaha",
+ "model": "XT500",
+ "name": "Yamaha XT500",
+ "years": [
+  1976,
+  1981
+ ],
+ "match": [
+  "xt500",
+  "xt 500",
+  "tt500"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "499 cc air-cooled SOHC single, one carb, kick start, dry sump (oil in the frame)",
+ "intro": "The classic big thumper. Kick start technique, the carb and the oil-in-frame system matter most.",
+ "focus": [
+  [
+   "499 cc single",
+   "Kick start"
+  ],
+  [
+   "One carb",
+   "Rebuild kit is cheap"
+  ],
+  [
+   "Oil in frame",
+   "Flush the frame"
+  ],
+  [
+   "Kick start",
+   "Ratchet wear"
+  ],
+  [
+   "Tank",
+   "Check for rust"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-XT5-01",
+   "phase": "H",
+   "after": "H-001",
+   "title": "Flush the oil frame",
+   "instructions": "The frame holds the engine oil. Drain it fully and flush out sludge and rust before refilling.",
+   "reason": "Old sludge in the frame goes straight into the engine.",
+   "src": "Odin XT500 forum",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "G": [
+   "Starting problems are often the carb. A rebuild kit is cheap."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Kick start ratchet",
+   "what": "Owners report cracked kick start ratchets, often from kicking too hard. Yamaha revised the part.",
+   "src": "https://www.tapatalk.com/groups/odinxt500/viewtopic.php?p=97228"
+  }
+ ],
+ "forums": [
+  {
+   "name": "Odin XT500 forum",
+   "url": "https://www.tapatalk.com/groups/odinxt500/",
+   "what": "Owner forum for XT500, TT500 and SR500 singles."
+  }
+ ],
+ "heroName": "XT500"
+}

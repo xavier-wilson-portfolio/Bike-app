@@ -1,0 +1,75 @@
+{
+ "id": "honda-cb900f-1979",
+ "make": "Honda",
+ "model": "CB900F",
+ "name": "Honda CB900F",
+ "years": [
+  1979,
+  1983
+ ],
+ "match": [
+  "cb900f",
+  "cb 900f",
+  "cb900 super sport",
+  "cb900c",
+  "cb900"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "902 cc air-cooled DOHC 16-valve inline four, four carbs",
+ "intro": "Honda's early-80s 900 four. Cam chain tensioners and charging parts need attention on old ones.",
+ "focus": [
+  [
+   "902 cc DOHC four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Cam chain tensioner",
+   "Listen at cold start"
+  ],
+  [
+   "Charging",
+   "Test the R/R"
+  ],
+  [
+   "Chain drive",
+   "Sprockets and chain"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-CB9-01",
+   "phase": "H",
+   "after": "H-003",
+   "title": "Check the cam chain tensioner",
+   "instructions": "Listen for a rattle at cold start. Check the tensioner and guides for cracks.",
+   "reason": "Worn tensioners and cracked guides let the cam chain slap.",
+   "src": "Honda V4 and inline-four tensioner notes",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Cam chain tensioners",
+   "what": "Honda fours of this era often have tired cam chain tensioners.",
+   "src": "https://math.uwaterloo.ca/~rblander/V4_info.html"
+  }
+ ],
+ "forums": [],
+ "heroName": "CB900F"
+}

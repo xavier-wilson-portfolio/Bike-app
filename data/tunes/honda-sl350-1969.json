@@ -1,0 +1,57 @@
+{
+ "id": "honda-sl350-1969",
+ "make": "Honda",
+ "model": "SL350",
+ "name": "Honda SL350",
+ "years": [
+  1969,
+  1973
+ ],
+ "match": [
+  "sl350",
+  "sl 350",
+  "motosport 350"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "325 cc air-cooled SOHC parallel twin, two carbs",
+ "intro": "Honda's early dual-purpose 350 twin. It shares most of its engine with the CB/CL350.",
+ "focus": [
+  [
+   "325 cc twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Points ignition",
+   "Set the gap"
+  ],
+  [
+   "Cam chain",
+   "Adjust the tensioner"
+  ],
+  [
+   "Chain drive",
+   "Sprockets and chain"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Parts are shared with the CB350 and CL350, which makes the engine easy to source."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [],
+ "heroName": "SL350"
+}

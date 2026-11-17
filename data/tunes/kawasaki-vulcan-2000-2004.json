@@ -1,0 +1,79 @@
+{
+ "id": "kawasaki-vulcan-2000-2004",
+ "make": "Kawasaki",
+ "model": "Vulcan 2000",
+ "name": "Kawasaki Vulcan 2000",
+ "years": [
+  2004,
+  2010
+ ],
+ "match": [
+  "vulcan 2000",
+  "vn2000",
+  "vulcan 2000 classic"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "2053 cc liquid-cooled V-twin, fuel injected, belt drive",
+ "intro": "Kawasaki's huge V-twin cruiser. Check the 2004 brake hose recall and the front belt pulley.",
+ "focus": [
+  [
+   "2053 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "2004 recall",
+   "Brake hose"
+  ],
+  [
+   "Belt drive",
+   "Front pulley"
+  ],
+  [
+   "Charging",
+   "Stator and R/R"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2004 Vulcan 2000s were in recall 04V367 for a brake hose.",
+   "reason": "A brake hose fault can cost you braking. The repair is free."
+  }
+ },
+ "add": [
+  {
+   "id": "X-V2K-01",
+   "phase": "E",
+   "after": "E-002",
+   "title": "Check the front belt pulley",
+   "instructions": "With the cover off, check the front drive pulley teeth and the pulley nut. Owners report stripped front pulleys.",
+   "reason": "A stripped pulley leaves you with no drive.",
+   "src": "NHTSA owner complaints",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "04V367",
+   "years": "2004 (some)",
+   "what": "Brake hose recall on some 2004 bikes.",
+   "fix": "Free dealer repair.",
+   "src": "https://auto-recalls.justia.com/kawasaki/vulcan-2000/2004/04v367000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "VULCAN 2000"
+}

@@ -1,0 +1,68 @@
+{
+ "id": "honda-vtx1300-2003",
+ "make": "Honda",
+ "model": "VTX1300",
+ "name": "Honda VTX1300",
+ "years": [
+  2003,
+  2009
+ ],
+ "match": [
+  "vtx1300",
+  "vtx 1300",
+  "vtx1300c",
+  "vtx1300r",
+  "vtx1300s",
+  "vtx1300t"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "1312 cc liquid-cooled V-twin, carb, shaft drive",
+ "intro": "Honda's mid-size power cruiser. Simple to own. Check the fuel valve recall on 2007-2008 bikes.",
+ "focus": [
+  [
+   "1312 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "One carb",
+   "Clean if stored"
+  ],
+  [
+   "Fuel valve recall",
+   "2007-2008"
+  ],
+  [
+   "Shaft drive",
+   "Final drive oil"
+  ],
+  [
+   "Charging",
+   "Test the R/R"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2007-2008 VTX1300s were in recall 08V141 because the fuel control valve diaphragm can drip fuel.",
+   "reason": "Leaking fuel is a fire risk. The repair is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "08V141",
+   "years": "2007-2008 (some)",
+   "what": "Fuel control valve diaphragm may drip fuel.",
+   "fix": "Dealer replaces the diaphragm free.",
+   "src": "https://thekneeslider.com/honda-recalls-vt600-vt750-vtx1300/"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "VTX1300"
+}

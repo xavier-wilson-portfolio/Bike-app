@@ -1,0 +1,80 @@
+{
+ "id": "yamaha-royal-star-1996",
+ "make": "Yamaha",
+ "model": "Royal Star",
+ "name": "Yamaha Royal Star",
+ "years": [
+  1996,
+  2013
+ ],
+ "match": [
+  "royal star",
+  "xvz1300",
+  "royal star tour deluxe",
+  "rstd",
+  "royal star venture"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "1294 cc liquid-cooled V4, four carbs, shaft drive",
+ "intro": "A smooth V4 cruiser. Four carbs that need clean floats, intact vacuum caps and a good sync.",
+ "focus": [
+  [
+   "1294 cc V4",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Floats and sync"
+  ],
+  [
+   "Vacuum caps",
+   "Split with age"
+  ],
+  [
+   "Shaft drive",
+   "Final drive oil"
+  ],
+  [
+   "Parts",
+   "Some carb bits are rare"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-RST-01",
+   "phase": "G",
+   "after": "G-005",
+   "title": "Check the carb vacuum caps",
+   "instructions": "Check the rubber caps on the carb sync ports. They often split where the clamps go. Replace any that are cracked.",
+   "reason": "A split cap is an air leak that makes one cylinder run lean.",
+   "src": "Venture Rider forum",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Float levels",
+   "what": "Owners report float levels out of adjustment causing fuel overflow and poor running.",
+   "src": "https://www.venturerider.org/forum/forums/topic/67654-need-a-little-input-from-my-tech-guys-and-gals"
+  }
+ ],
+ "forums": [
+  {
+   "name": "Venture Rider forum",
+   "url": "https://www.venturerider.org/forum/",
+   "what": "Owner forum for Yamaha Venture and Royal Star V4s."
+  }
+ ],
+ "heroName": "ROYAL STAR"
+}

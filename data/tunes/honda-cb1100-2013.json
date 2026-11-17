@@ -1,0 +1,60 @@
+{
+ "id": "honda-cb1100-2013",
+ "make": "Honda",
+ "model": "CB1100",
+ "name": "Honda CB1100",
+ "years": [
+  2013,
+  2021
+ ],
+ "match": [
+  "cb1100",
+  "cb 1100",
+  "cb1100ex",
+  "cb1100rs"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "1140 cc air/oil-cooled DOHC inline four, fuel injected",
+ "intro": "Honda's modern retro four. Very reliable. Mostly routine service.",
+ "focus": [
+  [
+   "1140 cc four",
+   "Air/oil-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valve clearances",
+   "Screw adjusters"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Chrome",
+   "Check for pitting"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [
+  {
+   "name": "CB1100 Community Forum",
+   "url": "https://cb1100forum.net/forum/",
+   "what": "Owner forum for the CB1100."
+  }
+ ],
+ "heroName": "CB1100"
+}

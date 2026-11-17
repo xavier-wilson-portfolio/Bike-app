@@ -1,0 +1,74 @@
+{
+ "id": "honda-ruckus-2003",
+ "make": "Honda",
+ "model": "Ruckus",
+ "name": "Honda Ruckus",
+ "years": [
+  2003,
+  2026
+ ],
+ "match": [
+  "ruckus",
+  "zoomer",
+  "nps50"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 cc liquid-cooled single, carb (to 2017) or fuel injection, CVT belt drive",
+ "intro": "A cult 50 cc scooter. Starting problems usually trace to the battery, fuel filter or carb.",
+ "focus": [
+  [
+   "49 cc single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Clean if stored"
+  ],
+  [
+   "Battery",
+   "Starting trouble"
+  ],
+  [
+   "Drive belt",
+   "Check width"
+  ],
+  [
+   "Final drive oil",
+   "Check level"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-RUK-01",
+   "phase": "G",
+   "after": "G-001",
+   "title": "Check the drive belt and final drive oil",
+   "instructions": "Measure the CVT belt width against spec and check the final drive oil level at the check bolt.",
+   "reason": "A worn belt slips, and low final drive oil wears the gears.",
+   "src": "Maintenance Schedule Ruckus notes",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "G": [
+   "If it dies when cold or won't climb hills, clean the carb and replace the fuel filter first."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [
+  {
+   "title": "Starting",
+   "what": "A weak battery is a frequent cause of no-start. Tight valves can also cause trouble.",
+   "src": "https://cararac.com/blog/honda-ruckus-problems-and-ways-to-fix.html"
+  }
+ ],
+ "forums": [],
+ "heroName": "RUCKUS"
+}

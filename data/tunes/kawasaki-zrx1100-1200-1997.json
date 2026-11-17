@@ -1,0 +1,64 @@
+{
+ "id": "kawasaki-zrx1100-1200-1997",
+ "make": "Kawasaki",
+ "model": "ZRX1100/1200",
+ "name": "Kawasaki ZRX1100 / ZRX1200",
+ "years": [
+  1997,
+  2005
+ ],
+ "match": [
+  "zrx1100",
+  "zrx1200",
+  "zrx",
+  "zrx1200r",
+  "zrx1200s"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "1052 or 1164 cc liquid-cooled DOHC inline four, four carbs",
+ "intro": "Kawasaki's retro muscle bike. Strong and simple. Carb sync and the charging system are the usual jobs.",
+ "focus": [
+  [
+   "Big inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Sync and floats"
+  ],
+  [
+   "Charging",
+   "Stator and R/R"
+  ],
+  [
+   "Brakes",
+   "Check for warped discs"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "If it sat, clean the carbs and set float levels. Sync them after."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Carbs",
+   "what": "The Keihin CVK carbs gum up and need cleaning if the bike sat.",
+   "src": "https://atvutv.neocities.org/kawasaki-zrx-1100-problems"
+  }
+ ],
+ "forums": [],
+ "heroName": "ZRX"
+}

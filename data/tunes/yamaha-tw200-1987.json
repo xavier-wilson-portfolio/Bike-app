@@ -1,0 +1,67 @@
+{
+ "id": "yamaha-tw200-1987",
+ "make": "Yamaha",
+ "model": "TW200",
+ "name": "Yamaha TW200",
+ "years": [
+  1987,
+  2026
+ ],
+ "match": [
+  "tw200",
+  "tw 200",
+  "t-dub",
+  "tdub"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "196 cc air-cooled SOHC single, one carb, fat tires",
+ "intro": "A simple, tough trail bike. Routine care for most years. The 2026 model has a speedometer recall.",
+ "focus": [
+  [
+   "196 cc single",
+   "Air-cooled"
+  ],
+  [
+   "One carb",
+   "Clean if stored"
+  ],
+  [
+   "2026 recall",
+   "Speedometer"
+  ],
+  [
+   "Fat tires",
+   "Check age and pressure"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2026 TW200s are in recall 26V197 because the speedometer gear may fail. Yamaha says not to ride until it's fixed.",
+   "reason": "A dead speedometer makes it hard to judge speed. The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "26V197",
+   "years": "2026 (some)",
+   "what": "Speedometer gear may deform and stop the speedometer. Do not ride until repaired.",
+   "fix": "Free dealer repair.",
+   "src": "https://www.vehiclesafetyrecalls.com/recall/26V197000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "TW200"
+}

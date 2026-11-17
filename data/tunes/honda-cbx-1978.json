@@ -1,0 +1,70 @@
+{
+ "id": "honda-cbx-1978",
+ "make": "Honda",
+ "model": "CBX",
+ "name": "Honda CBX",
+ "years": [
+  1978,
+  1982
+ ],
+ "match": [
+  "cbx",
+  "cbx1000",
+  "cbx 1000",
+  "honda six"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "1047 cc air-cooled DOHC 24-valve inline six, six carbs",
+ "intro": "Honda's six-cylinder icon. Reliable if used. Six carbs are the big job on a bike that sat.",
+ "focus": [
+  [
+   "1047 cc inline six",
+   "Air-cooled"
+  ],
+  [
+   "Six carbs",
+   "Clog when stored"
+  ],
+  [
+   "Starting",
+   "Hard after storage"
+  ],
+  [
+   "Exhaust",
+   "Costly to replace"
+  ],
+  [
+   "Cam chain",
+   "Check tensioners"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "If the bike sits for weeks, modern fuel can clog all six carbs. Drain the carbs before storage."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Carbs after storage",
+   "what": "Six Keihin carbs clog with modern fuel residue if the bike isn't run regularly.",
+   "src": "https://www.real-classic.co.uk/?p=1107122"
+  }
+ ],
+ "forums": [
+  {
+   "name": "CBX Club",
+   "url": "https://www.cbxclub.com/",
+   "what": "Owner club and forum for the Honda CBX six."
+  }
+ ],
+ "heroName": "CBX"
+}

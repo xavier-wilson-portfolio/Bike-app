@@ -1,0 +1,78 @@
+{
+ "id": "honda-xr650l-1993",
+ "make": "Honda",
+ "model": "XR650L",
+ "name": "Honda XR650L",
+ "years": [
+  1993,
+  2026
+ ],
+ "match": [
+  "xr650l",
+  "xr 650l",
+  "xr650",
+  "xr600"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "644 cc air/oil-cooled SOHC single, one carb",
+ "intro": "A simple, tough big single. Keep the valves adjusted and expect to fix the lean stock jetting.",
+ "focus": [
+  [
+   "644 cc single",
+   "Air/oil-cooled"
+  ],
+  [
+   "One carb",
+   "Lean from factory"
+  ],
+  [
+   "Valve clearances",
+   "Check often"
+  ],
+  [
+   "Pulse generator",
+   "Causes stalls"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-XR6-01",
+   "phase": "H",
+   "after": "H-003",
+   "title": "Check valve clearances",
+   "instructions": "Set the valves to spec with the engine cold. The screw adjusters are easy to reach.",
+   "reason": "Valves that drift out of clearance cause stalling and long-term damage.",
+   "src": "Motor and Wheels XR650L notes",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "G": [
+   "The stock carb runs lean. Backfiring on decel and poor throttle response usually mean it needs re-jetting."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [
+  {
+   "title": "Valves and stalling",
+   "what": "Valves fall out of clearance and cause stalling. A failing pulse generator can too.",
+   "src": "https://motorandwheels.com/problems-with-honda-xr600-650l/"
+  }
+ ],
+ "forums": [],
+ "heroName": "XR650L"
+}

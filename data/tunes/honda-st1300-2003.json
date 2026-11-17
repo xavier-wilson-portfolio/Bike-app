@@ -1,0 +1,66 @@
+{
+ "id": "honda-st1300-2003",
+ "make": "Honda",
+ "model": "ST1300",
+ "name": "Honda ST1300",
+ "years": [
+  2003,
+  2013
+ ],
+ "match": [
+  "st1300",
+  "st 1300",
+  "pan european",
+  "st1300a"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "engine": "1261 cc liquid-cooled V4, fuel injected, shaft drive",
+ "intro": "Honda's V4 sport tourer. Durable. Check the rear brake hose recall on 2008-2010 bikes.",
+ "focus": [
+  [
+   "1261 cc V4",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Rear brake hose recall",
+   "2008-2010"
+  ],
+  [
+   "Shaft drive",
+   "Final drive oil"
+  ],
+  [
+   "Linked brakes",
+   "Bleed correctly"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2008-2010 ST1300s were in recall 11V356 because the rear brake reservoir hose can be damaged when the suspension bottoms out.",
+   "reason": "A damaged hose can leak brake fluid and lose the rear brake. The repair is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "11V356",
+   "years": "2008-2010",
+   "what": "Rear brake reservoir hose can be damaged and leak fluid.",
+   "fix": "Dealer replaces the hose free.",
+   "src": "https://calemonlaw.com/blog/?p=2318"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "ST1300"
+}

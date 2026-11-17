@@ -1,0 +1,66 @@
+{
+ "id": "honda-monkey-125-2019",
+ "make": "Honda",
+ "model": "Monkey 125",
+ "name": "Honda Monkey 125",
+ "years": [
+  2019,
+  2026
+ ],
+ "match": [
+  "monkey",
+  "monkey 125",
+  "z125"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "124 cc air-cooled SOHC single, fuel injected",
+ "intro": "Honda's modern mini bike. Very simple. Mostly routine service and a reflector recall on early bikes.",
+ "focus": [
+  [
+   "124 cc single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carb"
+  ],
+  [
+   "Reflector recall",
+   "2020-2021"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Valve clearance",
+   "Check on time"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Many 2020-2021 Monkeys were in recall 21V382 because the rear reflector may not be bright enough.",
+   "reason": "A dim reflector makes the bike harder to see at night. The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "21V382",
+   "years": "2020-2021",
+   "what": "Rear reflector lens may not be bright enough.",
+   "fix": "Dealer replaces the reflector free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/21V382000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "MONKEY"
+}

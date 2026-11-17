@@ -1,0 +1,56 @@
+{
+ "id": "yamaha-fz1-2001",
+ "make": "Yamaha",
+ "model": "FZ1",
+ "name": "Yamaha FZ1",
+ "years": [
+  2001,
+  2015
+ ],
+ "match": [
+  "fz1",
+  "fz-1",
+  "fzs1000",
+  "fz1 fazer",
+  "fazer 1000"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "998 cc liquid-cooled inline four, carbs (2001-2005) or fuel injected (2006 on)",
+ "intro": "An R1-based naked bike. Early ones have carbs, later ones are fuel injected.",
+ "focus": [
+  [
+   "998 cc four",
+   "R1-based"
+  ],
+  [
+   "Carb or EFI",
+   "Depends on year"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Charging",
+   "Check voltage"
+  ],
+  [
+   "Brakes",
+   "Pads and fluid"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "2001-2005 bikes have carbs and 2006 on are fuel injected. Skip the steps that don't match your bike."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [],
+ "heroName": "FZ1"
+}

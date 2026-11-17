@@ -1,0 +1,72 @@
+{
+ "id": "yamaha-road-star-1600-1700-1999",
+ "make": "Yamaha",
+ "model": "Road Star 1600/1700",
+ "name": "Yamaha Road Star 1600 / 1700",
+ "years": [
+  1999,
+  2014
+ ],
+ "match": [
+  "road star",
+  "roadstar",
+  "xv1600",
+  "xv1700",
+  "road star silverado",
+  "midnight star"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "1602 or 1670 cc air-cooled pushrod V-twin, carb (later fuel injected), belt drive",
+ "intro": "Yamaha's big air-cooled cruiser. Early 1600s had a transmission recall. Carbs and fuel delivery are common complaints.",
+ "focus": [
+  [
+   "Big V-twin",
+   "Air-cooled pushrod"
+  ],
+  [
+   "Carb or EFI",
+   "Depends on year"
+  ],
+  [
+   "Transmission",
+   "1999-2001 recall"
+  ],
+  [
+   "Belt drive",
+   "Tension and wear"
+  ],
+  [
+   "Fuel system",
+   "Common complaints"
+  ]
+ ],
+ "remove": [
+  "H-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 1999-2001 XV1600s were in recall 06V397 for the transmission.",
+   "reason": "Transmission recalls are free to fix."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "G": [
+   "Early bikes have a carb and later 1700s are fuel injected. Skip the steps that don't match your bike."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "06V397",
+   "years": "1999-2001 (some XV1600)",
+   "what": "Transmission recall on certain Road Star models.",
+   "fix": "Free dealer repair.",
+   "src": "https://static.nhtsa.gov/odi/rcl/2006/RCDNN-06V397-6285.pdf"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "ROAD STAR"
+}

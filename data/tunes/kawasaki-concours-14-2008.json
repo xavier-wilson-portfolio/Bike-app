@@ -1,0 +1,67 @@
+{
+ "id": "kawasaki-concours-14-2008",
+ "make": "Kawasaki",
+ "model": "Concours 14",
+ "name": "Kawasaki Concours 14",
+ "years": [
+  2008,
+  2016
+ ],
+ "match": [
+  "concours 14",
+  "concours",
+  "zg1400",
+  "c14",
+  "1400gtr"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "engine": "1352 cc liquid-cooled inline four, variable valve timing, fuel injected, shaft drive",
+ "intro": "Kawasaki's sport tourer. Strong engine. Check the 2008-2012 recall and the ABS on high-mile bikes.",
+ "focus": [
+  [
+   "1352 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "2008-2012 recall",
+   "Run the VIN"
+  ],
+  [
+   "Shaft drive",
+   "Final drive oil"
+  ],
+  [
+   "ABS",
+   "Check function"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2008-2012 Concours 14s were in recall 12V343. Police-model bikes had several more.",
+   "reason": "Open recalls are free to fix."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "12V343",
+   "years": "2008-2012",
+   "what": "Kawasaki safety recall on 2008-2012 Concours 14 models. Check the VIN for details.",
+   "fix": "Free dealer repair.",
+   "src": "https://recallcheck.net/recall/12V343000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "CONCOURS"
+}

@@ -1,0 +1,82 @@
+{
+ "id": "honda-magna-v45-v65-1982",
+ "make": "Honda",
+ "model": "Magna V45/V65",
+ "name": "Honda Magna V45 / V65",
+ "years": [
+  1982,
+  1986
+ ],
+ "match": [
+  "magna",
+  "v45",
+  "v65",
+  "v45 magna",
+  "v65 magna",
+  "vf700c",
+  "vf750c",
+  "vf1100c",
+  "sabre"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "748 or 1098 cc liquid-cooled V4, four carbs, shaft drive",
+ "intro": "Honda's early V4 cruisers. Fast and smooth. Early engines are known for cam and rocker wear.",
+ "focus": [
+  [
+   "V4 engine",
+   "Liquid-cooled"
+  ],
+  [
+   "Cam wear",
+   "Early engines"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Charging",
+   "Stator connector"
+  ],
+  [
+   "Shaft drive",
+   "Final drive oil"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-V4-01",
+   "phase": "H",
+   "after": "H-003",
+   "title": "Inspect the cams and rockers",
+   "instructions": "With the valve covers off, look at the cam lobes and rocker faces for pitting and wear. Check the oil feed to the heads.",
+   "reason": "Premature cam and rocker wear is the best-known problem on first-generation Honda V4s.",
+   "src": "The Honda V4 Cam Story",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 3.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "H": [
+   "Warm the engine fully before riding hard. Low oil flow to the top end at low rpm is part of the cam wear story."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Cam wear",
+   "what": "Early V4 engines wore cam lobes, rocker faces and cam bearings prematurely.",
+   "src": "https://www.math.uwaterloo.ca/~rblander/V4_cams.html"
+  }
+ ],
+ "forums": [],
+ "heroName": "MAGNA"
+}

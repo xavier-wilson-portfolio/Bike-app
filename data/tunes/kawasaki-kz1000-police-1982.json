@@ -1,0 +1,81 @@
+{
+ "id": "kawasaki-kz1000-police-1982",
+ "make": "Kawasaki",
+ "model": "KZ1000 Police",
+ "name": "Kawasaki KZ1000P Police",
+ "years": [
+  1982,
+  2005
+ ],
+ "match": [
+  "kz1000p",
+  "kz1000 police",
+  "kzp",
+  "kz1000-p",
+  "police kawasaki"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "1015 cc air-cooled DOHC inline four, four carbs, high-output alternator",
+ "intro": "The long-running Kawasaki police bike. Tough engine. Fleet wear and hacked police wiring are the usual trouble.",
+ "focus": [
+  [
+   "1015 cc DOHC four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Pilot jets clog"
+  ],
+  [
+   "Charging",
+   "R/R and connectors"
+  ],
+  [
+   "Police wiring",
+   "Check every splice"
+  ],
+  [
+   "Cam chain tensioner",
+   "Cold rattle"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-KZP-01",
+   "phase": "F",
+   "after": "F-003",
+   "title": "Check the police wiring",
+   "instructions": "Trace any leftover radio, siren and light wiring. Remove what isn't used and check for melted connectors.",
+   "reason": "Ex-police wiring is often cut and spliced, and it causes battery drain and shorts.",
+   "src": "Motoryk KZ1000P notes",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 2.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Charging and wiring",
+   "what": "The alternator, regulator/rectifier and hacked police wiring are the classic weak points.",
+   "src": "https://motoryk.com/bikes/kawasaki/kz1000p"
+  }
+ ],
+ "forums": [
+  {
+   "name": "KZRider forum",
+   "url": "https://www.kzrider.com/",
+   "what": "Owner forum for classic Kawasakis."
+  }
+ ],
+ "heroName": "KZ1000P"
+}

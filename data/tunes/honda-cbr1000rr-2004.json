@@ -1,0 +1,70 @@
+{
+ "id": "honda-cbr1000rr-2004",
+ "make": "Honda",
+ "model": "CBR1000RR",
+ "name": "Honda CBR1000RR",
+ "years": [
+  2004,
+  2016
+ ],
+ "match": [
+  "cbr1000rr",
+  "cbr 1000rr",
+  "fireblade",
+  "cbr1000"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "998 cc liquid-cooled inline four, fuel injected",
+ "intro": "Honda's liter superbike. Check the fuel pump recall on 2008-2016 bikes and look for crash damage.",
+ "focus": [
+  [
+   "998 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Fuel pump recall",
+   "2008-2016"
+  ],
+  [
+   "Crash damage",
+   "Frame, subframe"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Many 2008-2016 CBR1000RRs are in recall 24V864 for a fuel pump that can fail and stall the engine.",
+   "reason": "A stall at speed can cause a crash. The repair is free."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "E": [
+   "Check the frame spars, subframe and fairing mounts for scrapes and cracks."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "24V864",
+   "years": "2008-2016 (some)",
+   "what": "Fuel pump can fail and stall the engine.",
+   "fix": "Dealer inspects and replaces the fuel pump free.",
+   "src": "https://motorsportsnewswire.com/?p=195115"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "CBR1000RR"
+}

@@ -1,0 +1,73 @@
+{
+ "id": "kawasaki-klr650-1987",
+ "make": "Kawasaki",
+ "model": "KLR650 (first gen)",
+ "name": "Kawasaki KLR650 (1987-2007)",
+ "years": [
+  1987,
+  2007
+ ],
+ "match": [
+  "klr650",
+  "klr 650",
+  "kl650",
+  "klr"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "651 cc liquid-cooled DOHC single, one carb, balancer shaft",
+ "intro": "The first-generation KLR. Tough and simple. Upgrade the 'doohickey' balancer tensioner before it fails.",
+ "focus": [
+  [
+   "651 cc single",
+   "Liquid-cooled"
+  ],
+  [
+   "Doohickey",
+   "Upgrade it"
+  ],
+  [
+   "One carb",
+   "Jetting"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Oil use",
+   "Check level often"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-KLR-01",
+   "phase": "H",
+   "after": "H-001",
+   "title": "Replace the doohickey and spring",
+   "instructions": "Fit an upgraded balancer chain idler lever and torsion spring, then set the balancer chain tension.",
+   "reason": "The stock welded lever and spring can break, the balancer chain goes slack, and the engine can be destroyed.",
+   "src": "Law Abiding Biker KLR notes",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 3.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Doohickey",
+   "what": "The balancer chain tensioner lever and spring are prone to failure on 1987-2007 KLRs.",
+   "src": "https://happy-trail.com/klr650-doohickey-balancer-idle-lever-parts-tools-all-years.html"
+  }
+ ],
+ "forums": [],
+ "heroName": "KLR650"
+}

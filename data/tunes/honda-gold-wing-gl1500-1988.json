@@ -1,0 +1,82 @@
+{
+ "id": "honda-gold-wing-gl1500-1988",
+ "make": "Honda",
+ "model": "Gold Wing GL1500",
+ "name": "Honda Gold Wing GL1500",
+ "years": [
+  1988,
+  2000
+ ],
+ "match": [
+  "gl1500",
+  "gold wing 1500",
+  "goldwing 1500",
+  "gl1500se",
+  "gl1500a",
+  "gl1500i",
+  "aspencade 1500"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "engine": "1520 cc liquid-cooled flat six, two carbs, shaft drive",
+ "intro": "The six-cylinder Wing. Very tough. Starter clutch and charging parts are the usual wear items.",
+ "focus": [
+  [
+   "1520 cc flat six",
+   "Liquid-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean if stored"
+  ],
+  [
+   "Starter clutch",
+   "Grinds or slips"
+  ],
+  [
+   "Charging",
+   "Stator and R/R"
+  ],
+  [
+   "Shaft drive",
+   "Final drive oil"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-GL15-01",
+   "phase": "F",
+   "after": "F-004",
+   "title": "Check the starter clutch",
+   "instructions": "If the starter grinds or spins without engaging, the starter clutch is worn or sticky.",
+   "reason": "The starter clutch is one of the most common GL1500 complaints.",
+   "src": "Engine Patrol Gold Wing notes",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Starter clutch",
+   "what": "The starter clutch can wear and cause grinding or slow engagement.",
+   "src": "https://vincheck.info/report/honda/gl1500a/1988"
+  }
+ ],
+ "forums": [
+  {
+   "name": "Goldwingparts.com rider blog",
+   "url": "https://www.goldwingparts.com/blogs/goldwing-rider-blog",
+   "what": "Gold Wing repair notes by model."
+  }
+ ],
+ "heroName": "GL1500"
+}

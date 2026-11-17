@@ -1,0 +1,57 @@
+{
+ "id": "honda-cl450-scrambler-1968",
+ "make": "Honda",
+ "model": "CL450 Scrambler",
+ "name": "Honda CL450 Scrambler",
+ "years": [
+  1968,
+  1974
+ ],
+ "match": [
+  "cl450",
+  "cl 450",
+  "cl450 scrambler"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "444 cc air-cooled DOHC parallel twin, torsion bar valve springs, two CV carbs",
+ "intro": "The scrambler version of the CB450 'Black Bomber' twin. Shares most engine parts with the CB450.",
+ "focus": [
+  [
+   "444 cc DOHC twin",
+   "Torsion bar valves"
+  ],
+  [
+   "Two CV carbs",
+   "Diaphragms age"
+  ],
+  [
+   "High pipes",
+   "Rust and heat shields"
+  ],
+  [
+   "Charging",
+   "Test the rectifier"
+  ],
+  [
+   "Points ignition",
+   "Set the gap"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the CV carb diaphragms for pinholes while the carbs are apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [],
+ "heroName": "CL450"
+}

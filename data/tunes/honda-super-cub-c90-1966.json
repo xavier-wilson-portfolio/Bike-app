@@ -1,0 +1,67 @@
+{
+ "id": "honda-super-cub-c90-1966",
+ "make": "Honda",
+ "model": "Super Cub C90",
+ "name": "Honda Super Cub C90",
+ "years": [
+  1966,
+  2003
+ ],
+ "match": [
+  "c90",
+  "super cub 90",
+  "cub 90",
+  "c90 cub",
+  "cm90",
+  "cm91",
+  "passport"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "89 cc air-cooled OHC single, one carb, semi-automatic gearbox",
+ "intro": "The step-through Cub. Simple and tough. Rust, old wiring and a gummed carb are the usual jobs.",
+ "focus": [
+  [
+   "89 cc single",
+   "Air-cooled"
+  ],
+  [
+   "One carb",
+   "Clean the tiny jets"
+  ],
+  [
+   "Rust",
+   "Frame and fenders"
+  ],
+  [
+   "Wiring",
+   "Old connectors"
+  ],
+  [
+   "Valve clearance",
+   "Closes up"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Check the valve clearances. On these small Hondas they tend to close up and the engine runs poorly."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Rust and electrics",
+   "what": "Rust and old electrics are the usual trouble on aging C90s.",
+   "src": "https://bigbikereviews.com/honda-c90/"
+  }
+ ],
+ "forums": [],
+ "heroName": "C90"
+}
