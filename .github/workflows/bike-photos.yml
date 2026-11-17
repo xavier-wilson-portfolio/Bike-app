@@ -1,7 +1,9 @@
 name: Bike photos
-# Downloads the licensed Wikimedia Commons photos listed in photos/wanted.json into photos/,
-# with each photo's license and author in photos/meta.json. Runs only on the bike-photos branch,
-# so nothing here touches the live site.
+# Downloads licensed Wikimedia Commons photos into photos/ on the bike-photos branch,
+# with each photo's license and author in photos/meta.json. Nothing here touches the live site.
+# An entry in photos/wanted.json is either {"id", "file"} for a named Commons file, or
+# {"id", "q"} to search Commons and save the two best licensed landscape photos as
+# photos/<id>.jpg and photos/<id>--2.jpg.
 on:
   push:
     branches: [bike-photos]
@@ -18,7 +20,9 @@ jobs:
         run: |
           python3 - <<'PY'
           import json, os, re, time, urllib.parse, urllib.request
-          UA = {"User-Agent": "RevoraGarage/1.0 (https://revoragarage.com; info@revoragarage.com)"}
+          UA = {"User-Agent": "RevoraGarage-bike-photos/1.1 (https://revoragarage.com)"}
+          API = "https://commons.wikimedia.org/w/api.php?"
+          BAD = re.compile(r"engine|motor\b|detail|cockpit|dash|tank|logo|badge|rider|riding|race|racing|crash|wheel|seat|exhaust|interior|museum|instrument|speedo|close|parade|meeting|lineup", re.I)
           def get(url):
               for n in range(4):
                   try:
@@ -26,31 +30,53 @@ jobs:
                   except Exception as e:
                       time.sleep(3 * (n + 1)); err = e
               raise err
+          def lic_ok(lic):
+              return re.search(r"CC BY|CC0|Public domain", lic, re.I) and not re.search(r"\bNC\b|\bND\b", lic)
+          def save(pid, title, ii):
+              m = ii.get("extmetadata", {})
+              open(f"photos/{pid}.jpg", "wb").write(get(ii.get("thumburl") or ii["url"]))
+              meta[pid] = {"file": title, "page": ii["descriptionurl"], "lic": m.get("LicenseShortName", {}).get("value", ""),
+                           "licUrl": m.get("LicenseUrl", {}).get("value", ""),
+                           "artist": re.sub(r"<[^>]+>", "", m.get("Artist", {}).get("value", "")).strip()}
+              print("ok", pid, title); time.sleep(1)
           os.makedirs("photos", exist_ok=True)
           want = json.load(open("photos/wanted.json"))
           meta = json.load(open("photos/meta.json")) if os.path.exists("photos/meta.json") else {}
           for w in want:
-              pid, title = w["id"], w["file"]
-              if meta.get(pid, {}).get("file") == title and os.path.exists(f"photos/{pid}.jpg"):
-                  continue
-              q = "https://commons.wikimedia.org/w/api.php?" + urllib.parse.urlencode({"action": "query", "format": "json", "prop": "imageinfo",
-                  "iiprop": "url|extmetadata", "iiurlwidth": 2000, "titles": "File:" + title})
-              page = list(json.loads(get(q))["query"]["pages"].values())[0]
-              if "imageinfo" not in page:
-                  print("missing", pid, title); continue
-              ii = page["imageinfo"][0]; m = ii.get("extmetadata", {})
-              lic = m.get("LicenseShortName", {}).get("value", "")
-              if not re.search(r"CC BY|CC0|Public domain", lic, re.I):
-                  print("skipped, license", pid, lic); continue
-              open(f"photos/{pid}.jpg", "wb").write(get(ii.get("thumburl") or ii["url"]))
-              meta[pid] = {"file": title, "page": ii["descriptionurl"], "lic": lic, "licUrl": m.get("LicenseUrl", {}).get("value", ""),
-                           "artist": re.sub(r"<[^>]+>", "", m.get("Artist", {}).get("value", "")).strip()}
-              print("ok", pid); time.sleep(1)
+              pid = w["id"]
+              try:
+                  if "q" in w:
+                      if pid in meta or (pid + "--none") in meta: continue
+                      q = API + urllib.parse.urlencode({"action": "query", "format": "json", "generator": "search", "gsrsearch": w["q"] + " filetype:bitmap",
+                          "gsrnamespace": 6, "gsrlimit": 25, "prop": "imageinfo", "iiprop": "url|size|extmetadata|mime", "iiurlwidth": 2000})
+                      pages = sorted(json.loads(get(q)).get("query", {}).get("pages", {}).values(), key=lambda p: p.get("index", 0))
+                      n = 0
+                      for p in pages:
+                          ii = (p.get("imageinfo") or [None])[0]
+                          if not ii: continue
+                          t = p["title"][5:]; r = ii["width"] / max(ii["height"], 1)
+                          lic = ii.get("extmetadata", {}).get("LicenseShortName", {}).get("value", "")
+                          if ii.get("mime") != "image/jpeg" or ii["width"] < 1500 or not (1.25 <= r <= 2.1) or not lic_ok(lic) or BAD.search(t): continue
+                          save(pid if n == 0 else pid + "--2", t, ii); n += 1
+                          if n >= 2: break
+                      if n == 0: meta[pid + "--none"] = {"q": w["q"]}; print("none", pid)
+                      continue
+                  title = w["file"]
+                  if meta.get(pid, {}).get("file") == title and os.path.exists(f"photos/{pid}.jpg"): continue
+                  q = API + urllib.parse.urlencode({"action": "query", "format": "json", "prop": "imageinfo",
+                      "iiprop": "url|extmetadata", "iiurlwidth": 2000, "titles": "File:" + title})
+                  page = list(json.loads(get(q))["query"]["pages"].values())[0]
+                  if "imageinfo" not in page: print("missing", pid, title); continue
+                  ii = page["imageinfo"][0]
+                  if not lic_ok(ii.get("extmetadata", {}).get("LicenseShortName", {}).get("value", "")): print("skipped, license", pid); continue
+                  save(pid, title, ii)
+              except Exception as e:
+                  print("error", pid, e)
           json.dump(meta, open("photos/meta.json", "w"), indent=1, ensure_ascii=False)
           PY
       - name: Commit
         run: |
-          git config user.name "revora-bot"
-          git config user.email "info@revoragarage.com"
+          git config user.name "photo-bot"
+          git config user.email "photo-bot"
           git add photos
           git diff --cached --quiet || (git commit -m "Bike photos" && git push)
