@@ -1,0 +1,75 @@
+{
+ "id": "yamaha-bolt-2014",
+ "make": "Yamaha",
+ "model": "Bolt",
+ "name": "Yamaha Bolt",
+ "years": [
+  2014,
+  2026
+ ],
+ "match": [
+  "bolt",
+  "xvs950",
+  "xv950",
+  "bolt r-spec",
+  "star bolt"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "942 cc air-cooled V-twin, fuel injected, belt drive",
+ "intro": "Yamaha's small bobber. Simple to service, with two recalls to clear on some years.",
+ "focus": [
+  [
+   "942 cc V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Belt drive",
+   "Check for cracks and tension"
+  ],
+  [
+   "Recalls",
+   "2014 wiring, 2020-21 oil leak"
+  ],
+  [
+   "Low seat",
+   "Easy to work around"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2014 Bolts were in recall 13V298 for a wiring harness that can melt, and some 2020-2021 Bolt R-Specs were in recall 21V806 for an engine case that can leak oil onto the rear tire.",
+   "reason": "Both can cause a crash. Repairs are free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "13V298",
+   "years": "2014",
+   "what": "Wiring harness may melt and stall the engine.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehiclesafetyrecalls.com/recall/13V298000"
+  },
+  {
+   "id": "21V806",
+   "years": "2020-2021 R-Spec (some)",
+   "what": "Engine case may leak oil onto the rear tire. Do not ride until fixed.",
+   "fix": "Free dealer repair.",
+   "src": "https://motorsportsnewswire.com/?p=166149"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "BOLT"
+}

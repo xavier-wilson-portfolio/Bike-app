@@ -1,0 +1,75 @@
+{
+ "id": "yamaha-wr250r-2008",
+ "make": "Yamaha",
+ "model": "WR250R",
+ "name": "Yamaha WR250R",
+ "years": [
+  2008,
+  2020
+ ],
+ "match": [
+  "wr250r",
+  "wr 250 r",
+  "wr250x",
+  "wr250"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "250 cc liquid-cooled single, fuel injected",
+ "intro": "A high-revving dual-sport single. Most 2008-2015 bikes needed the stator recall.",
+ "focus": [
+  [
+   "250 cc single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Stator recall",
+   "2008-2015"
+  ],
+  [
+   "Valve clearances",
+   "Check on schedule"
+  ],
+  [
+   "Off-road wear",
+   "Bearings and chain"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2008-2015 WR250Rs were in recall 15V410 for the stator. The new stator has a white core. Some 2014-2016 bikes also had a clutch recall (16V800).",
+   "reason": "The old stator can short out and kill the charging system. Repairs are free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "15V410",
+   "years": "2008-2015",
+   "what": "Stator coil insulation can fail and short out.",
+   "fix": "Dealer fits a new stator free (white core).",
+   "src": "https://static.nhtsa.gov/odi/rcl/2015/RCLRPT-15V410-1220.PDF"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "silhouette": "yamaha-wr250r-2008",
+ "areas": [],
+ "heroName": "WR250R",
+ "hero": {
+  "src": "img/hero/yamaha-wr250r-2008.jpg",
+  "artist": "Tr-909",
+  "page": "https://commons.wikimedia.org/wiki/File:YAMAHA_WR250R.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "id": "suzuki-sv650-2017",
+ "make": "Suzuki",
+ "model": "SV650",
+ "name": "Suzuki SV650",
+ "years": [
+  2017,
+  2026
+ ],
+ "match": [
+  "sv650",
+  "sv 650",
+  "sv650x",
+  "sv650a"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "645 cc liquid-cooled 90-degree V-twin, fuel injected",
+ "intro": "A simple, tough V-twin standard. Mostly routine service, plus a careful look at crash damage.",
+ "focus": [
+  [
+   "645 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Crash damage",
+   "Bars, levers, radiator"
+  ],
+  [
+   "Cooling",
+   "Coolant age"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "E": [
+   "Many SVs are first bikes and get dropped. Check the bar ends, levers, footpegs and radiator for damage."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [],
+ "heroName": "SV650"
+}

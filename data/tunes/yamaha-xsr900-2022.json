@@ -1,0 +1,66 @@
+{
+ "id": "yamaha-xsr900-2022",
+ "make": "Yamaha",
+ "model": "XSR900",
+ "name": "Yamaha XSR900",
+ "years": [
+  2022,
+  2026
+ ],
+ "match": [
+  "xsr900",
+  "xsr 900"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "890 cc liquid-cooled inline triple, fuel injected",
+ "intro": "Yamaha's retro-styled triple, on the MT-09 platform. Check the throttle sensor recall.",
+ "focus": [
+  [
+   "890 cc triple",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Ride-by-wire"
+  ],
+  [
+   "Recall",
+   "Throttle position sensor"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Shared platform",
+   "Same as MT-09"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2022-2024 XSR900s are in recall 25V248 for the throttle position sensor.",
+   "reason": "A failing sensor can cause unstable idle or a stall. The repair is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "25V248",
+   "years": "2022-2024 (some)",
+   "what": "Throttle position sensor can fail, causing rough idle or a stall.",
+   "fix": "Free dealer repair.",
+   "src": "https://www.vehiclesafetyrecalls.com/recall/25V248000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "silhouette": "yamaha-xsr900-2022",
+ "areas": [],
+ "heroName": "XSR900"
+}

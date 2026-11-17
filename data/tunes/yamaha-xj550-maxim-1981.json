@@ -1,0 +1,95 @@
+{
+ "id": "yamaha-xj550-maxim-1981",
+ "make": "Yamaha",
+ "model": "XJ550",
+ "name": "Yamaha XJ550 Maxim / Seca",
+ "years": [
+  1981,
+  1983
+ ],
+ "match": [
+  "xj550",
+  "xj 550",
+  "xj550 maxim",
+  "xj550 seca",
+  "maxim 550",
+  "seca 550"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "528 cc air-cooled DOHC inline four, four Mikuni carbs, YICS",
+ "intro": "A light, quick Yamaha four. Carb setup is fussy, and the YICS passage plugs matter.",
+ "focus": [
+  [
+   "528 cc DOHC four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Fussy float setup"
+  ],
+  [
+   "YICS",
+   "Check the end plugs"
+  ],
+  [
+   "Charging",
+   "Test the stator"
+  ],
+  [
+   "Chain drive",
+   "Sprockets and chain"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-XJ5-01",
+   "phase": "G",
+   "after": "G-006",
+   "title": "Check the YICS passage plugs",
+   "instructions": "Look at both ends of the YICS passage in the cylinder head. The plugs must be there and sealed.",
+   "reason": "A missing YICS plug causes starting and idle problems.",
+   "src": "XJBikes forum",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.3,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "G": [
+   "The XJ550 carb rack is fussy. Set the float heights, then check the fuel level with the bike running."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "YICS plugs",
+   "what": "Missing plugs at the ends of the YICS passage upset idle and starting.",
+   "src": "https://xjbikes.com/forums/posts/73805"
+  }
+ ],
+ "forums": [
+  {
+   "name": "XJBikes forum",
+   "url": "https://www.xjbikes.com/",
+   "what": "Owner forum for Yamaha XJ models."
+  }
+ ],
+ "silhouette": "yamaha-xj550-maxim-1981",
+ "areas": [],
+ "heroName": "XJ550",
+ "hero": {
+  "src": "img/hero/yamaha-xj550-maxim-1981.jpg",
+  "artist": "ALMundy",
+  "page": "https://commons.wikimedia.org/wiki/File:XJ550.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
+}

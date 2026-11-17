@@ -1,0 +1,79 @@
+{
+ "id": "suzuki-gsx-r600-2011",
+ "make": "Suzuki",
+ "model": "GSX-R600",
+ "name": "Suzuki GSX-R600",
+ "years": [
+  2011,
+  2024
+ ],
+ "match": [
+  "gsx-r600",
+  "gsxr600",
+  "gsxr 600",
+  "gixxer 600"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "599 cc liquid-cooled DOHC inline four, fuel injected",
+ "intro": "Suzuki's 600 supersport. Check the front brake recall on 2011-2013 bikes and look hard for crash damage.",
+ "focus": [
+  [
+   "599 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Front brake recall",
+   "2011-2013"
+  ],
+  [
+   "Crash damage",
+   "Frame, subframe, fairings"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2004-2013 GSX-R600s were in recall 13V449 for front brake master cylinder corrosion.",
+   "reason": "A corroded piston gives a soft lever and longer stops. The repair is free."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "E": [
+   "Check the frame spars, subframe and fairing mounts for scrapes and cracks. Track and street crashes are common on these."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "13V449",
+   "years": "2004-2013",
+   "what": "Front brake master cylinder piston can corrode, giving a soft lever.",
+   "fix": "Dealer replaces the master cylinder parts free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/13V449000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "silhouette": "suzuki-gsx-r600-2011",
+ "areas": [],
+ "heroName": "GSX-R600",
+ "hero": {
+  "src": "img/hero/suzuki-gsx-r600-2011.jpg",
+  "artist": "Heselnut",
+  "page": "https://commons.wikimedia.org/wiki/File:2015_Suzuki_GSX-R600.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

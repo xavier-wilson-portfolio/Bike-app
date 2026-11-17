@@ -1,0 +1,87 @@
+{
+ "id": "yamaha-tenere-700-2021",
+ "make": "Yamaha",
+ "model": "Tenere 700",
+ "name": "Yamaha Tenere 700",
+ "years": [
+  2021,
+  2026
+ ],
+ "match": [
+  "tenere 700",
+  "ténéré 700",
+  "t7",
+  "xtz700",
+  "xtz7"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "689 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "Yamaha's off-road-ready adventure twin, built on the MT-07 engine. Check two do-not-ride recalls.",
+ "focus": [
+  [
+   "689 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Recalls",
+   "2022 brakes, 2025 signals"
+  ],
+  [
+   "Off-road wear",
+   "Bearings and chain"
+  ],
+  [
+   "Crash damage",
+   "Bars, guards, subframe"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls first",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2022 Tenere 700s are in recall 23V472 for front brake caliper bolts, and 2025 bikes are in recall 26V367 for the turn signals. Both carry a do-not-ride advisory until repaired.",
+   "reason": "The 2022 caliper can detach and cost you the front brake."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "E": [
+   "Check the subframe and crash bar mounts for cracks after any off-road drop."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "23V472",
+   "years": "2022 (some)",
+   "what": "Front brake caliper bolts may be the wrong length and the caliper can detach.",
+   "fix": "Dealer inspects and replaces the bolts free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/23V472000"
+  },
+  {
+   "id": "26V367",
+   "years": "2025",
+   "what": "Turn signals may fail. Do not ride until repaired.",
+   "fix": "Free dealer repair (Yamaha 990190).",
+   "src": "https://www.carwhere.com/recalls/campaign/26V367000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "silhouette": "yamaha-tenere-700-2021",
+ "areas": [],
+ "heroName": "TENERE",
+ "hero": {
+  "src": "img/hero/yamaha-tenere-700-2021.jpg",
+  "artist": "Wikisympathisant",
+  "page": "https://commons.wikimedia.org/wiki/File:06-2024_Yamaha_Rally_Tenere_700_side.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

@@ -1,0 +1,84 @@
+{
+ "id": "suzuki-v-strom-650-2012",
+ "make": "Suzuki",
+ "model": "V-Strom 650",
+ "name": "Suzuki V-Strom 650",
+ "years": [
+  2012,
+  2016
+ ],
+ "match": [
+  "v-strom 650",
+  "vstrom 650",
+  "v strom 650",
+  "dl650",
+  "wee-strom",
+  "weestrom"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "645 cc liquid-cooled V-twin, fuel injected",
+ "intro": "The second-generation Wee-Strom. Reliable, but three recalls hit these years.",
+ "focus": [
+  [
+   "645 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Recalls",
+   "Stator, cams, brake switch"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Luggage mounts",
+   "Check for cracks"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2012-2016 bikes were in recall 16V878 for the stator. 2012-2014 bikes were in recall 15V852 for tappet and cam wear. Some 2012 bikes had a front brake light switch recall (12V038).",
+   "reason": "A failed stator can stall the bike. Repairs are free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "16V878",
+   "years": "2012-2016",
+   "what": "Stator can short out and stop charging, which can stall the engine.",
+   "fix": "Dealer replaces the stator free.",
+   "src": "https://www.hupy.com/news/suzuki-v-strom-and-kingsquad-recall.cfm"
+  },
+  {
+   "id": "15V852",
+   "years": "2012-2014",
+   "what": "Tappets and camshafts can wear early.",
+   "fix": "Free dealer inspection and repair.",
+   "src": "https://motorcyclistonline.com/recall-suzuki-recalls-sfv650-v-strom-650-and-burgman-650-for-tappet-cam-wear-issues"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "silhouette": "suzuki-v-strom-650-2012",
+ "areas": [],
+ "heroName": "V-STROM",
+ "hero": {
+  "src": "img/hero/suzuki-v-strom-650-2012.jpg",
+  "artist": "Benkorashii",
+  "page": "https://commons.wikimedia.org/wiki/File:V-Strom_650.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

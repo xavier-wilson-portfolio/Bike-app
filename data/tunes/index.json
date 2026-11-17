@@ -912,5 +912,376 @@
   ],
   "style": "sport",
   "drive": "chain"
+ },
+ {
+  "id": "kawasaki-gpz550-1981",
+  "make": "Kawasaki",
+  "model": "GPz550",
+  "name": "Kawasaki GPz550",
+  "years": [
+   1981,
+   1985
+  ],
+  "match": [
+   "gpz550",
+   "gpz 550",
+   "kz550h",
+   "zx550"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "yamaha-v-star-650-1998",
+  "make": "Yamaha",
+  "model": "V Star 650",
+  "name": "Yamaha V Star 650",
+  "years": [
+   1998,
+   2016
+  ],
+  "match": [
+   "v star 650",
+   "vstar 650",
+   "v-star 650",
+   "xvs650",
+   "dragstar 650",
+   "drag star 650"
+  ],
+  "style": "cruiser",
+  "drive": "shaft"
+ },
+ {
+  "id": "yamaha-rd350-1973",
+  "make": "Yamaha",
+  "model": "RD350",
+  "name": "Yamaha RD350",
+  "years": [
+   1973,
+   1975
+  ],
+  "match": [
+   "rd350",
+   "rd 350",
+   "rd347"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "yamaha-rd400-1976",
+  "make": "Yamaha",
+  "model": "RD400",
+  "name": "Yamaha RD400",
+  "years": [
+   1976,
+   1979
+  ],
+  "match": [
+   "rd400",
+   "rd 400",
+   "rd398"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "yamaha-bolt-2014",
+  "make": "Yamaha",
+  "model": "Bolt",
+  "name": "Yamaha Bolt",
+  "years": [
+   2014,
+   2026
+  ],
+  "match": [
+   "bolt",
+   "xvs950",
+   "xv950",
+   "bolt r-spec",
+   "star bolt"
+  ],
+  "style": "cruiser",
+  "drive": "belt"
+ },
+ {
+  "id": "yamaha-tenere-700-2021",
+  "make": "Yamaha",
+  "model": "Tenere 700",
+  "name": "Yamaha Tenere 700",
+  "years": [
+   2021,
+   2026
+  ],
+  "match": [
+   "tenere 700",
+   "ténéré 700",
+   "t7",
+   "xtz700",
+   "xtz7"
+  ],
+  "style": "adventure",
+  "drive": "chain"
+ },
+ {
+  "id": "yamaha-xs400-1977",
+  "make": "Yamaha",
+  "model": "XS400",
+  "name": "Yamaha XS400",
+  "years": [
+   1977,
+   1982
+  ],
+  "match": [
+   "xs400",
+   "xs 400",
+   "xs400 special",
+   "xs400 maxim",
+   "xs400 seca"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "yamaha-xsr900-2022",
+  "make": "Yamaha",
+  "model": "XSR900",
+  "name": "Yamaha XSR900",
+  "years": [
+   2022,
+   2026
+  ],
+  "match": [
+   "xsr900",
+   "xsr 900"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "yamaha-xj550-maxim-1981",
+  "make": "Yamaha",
+  "model": "XJ550",
+  "name": "Yamaha XJ550 Maxim / Seca",
+  "years": [
+   1981,
+   1983
+  ],
+  "match": [
+   "xj550",
+   "xj 550",
+   "xj550 maxim",
+   "xj550 seca",
+   "maxim 550",
+   "seca 550"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "yamaha-wr250r-2008",
+  "make": "Yamaha",
+  "model": "WR250R",
+  "name": "Yamaha WR250R",
+  "years": [
+   2008,
+   2020
+  ],
+  "match": [
+   "wr250r",
+   "wr 250 r",
+   "wr250x",
+   "wr250"
+  ],
+  "style": "dualsport",
+  "drive": "chain"
+ },
+ {
+  "id": "yamaha-xj650-maxim-1980",
+  "make": "Yamaha",
+  "model": "XJ650 Maxim",
+  "name": "Yamaha XJ650 Maxim",
+  "years": [
+   1980,
+   1983
+  ],
+  "match": [
+   "xj650",
+   "xj 650",
+   "maxim 650",
+   "xj650 maxim",
+   "xj650 seca",
+   "seca 650"
+  ],
+  "style": "standard",
+  "drive": "shaft"
+ },
+ {
+  "id": "suzuki-sv650-2017",
+  "make": "Suzuki",
+  "model": "SV650",
+  "name": "Suzuki SV650",
+  "years": [
+   2017,
+   2026
+  ],
+  "match": [
+   "sv650",
+   "sv 650",
+   "sv650x",
+   "sv650a"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "yamaha-xs750-triple-1976",
+  "make": "Yamaha",
+  "model": "XS750",
+  "name": "Yamaha XS750 Triple",
+  "years": [
+   1976,
+   1979
+  ],
+  "match": [
+   "xs750",
+   "xs 750",
+   "xs750 triple",
+   "xs750se",
+   "xs750e",
+   "xs750f",
+   "xs850"
+  ],
+  "style": "standard",
+  "drive": "shaft"
+ },
+ {
+  "id": "suzuki-v-strom-650-2012",
+  "make": "Suzuki",
+  "model": "V-Strom 650",
+  "name": "Suzuki V-Strom 650",
+  "years": [
+   2012,
+   2016
+  ],
+  "match": [
+   "v-strom 650",
+   "vstrom 650",
+   "v strom 650",
+   "dl650",
+   "wee-strom",
+   "weestrom"
+  ],
+  "style": "adventure",
+  "drive": "chain"
+ },
+ {
+  "id": "yamaha-xs1100-1978",
+  "make": "Yamaha",
+  "model": "XS1100",
+  "name": "Yamaha XS1100",
+  "years": [
+   1978,
+   1981
+  ],
+  "match": [
+   "xs1100",
+   "xs 1100",
+   "xs11",
+   "xs eleven",
+   "xs1100 special",
+   "venturer"
+  ],
+  "style": "standard",
+  "drive": "shaft"
+ },
+ {
+  "id": "suzuki-gsx-r600-2011",
+  "make": "Suzuki",
+  "model": "GSX-R600",
+  "name": "Suzuki GSX-R600",
+  "years": [
+   2011,
+   2024
+  ],
+  "match": [
+   "gsx-r600",
+   "gsxr600",
+   "gsxr 600",
+   "gixxer 600"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "yamaha-sr500-1978",
+  "make": "Yamaha",
+  "model": "SR500",
+  "name": "Yamaha SR500",
+  "years": [
+   1978,
+   1981
+  ],
+  "match": [
+   "sr500",
+   "sr 500",
+   "sr400"
+  ],
+  "style": "cafe",
+  "drive": "chain"
+ },
+ {
+  "id": "suzuki-hayabusa-1999",
+  "make": "Suzuki",
+  "model": "Hayabusa",
+  "name": "Suzuki Hayabusa",
+  "years": [
+   1999,
+   2007
+  ],
+  "match": [
+   "hayabusa",
+   "gsx1300r",
+   "gsx 1300 r",
+   "busa"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "yamaha-xv750-virago-1981",
+  "make": "Yamaha",
+  "model": "XV750 Virago",
+  "name": "Yamaha XV750 Virago",
+  "years": [
+   1981,
+   1997
+  ],
+  "match": [
+   "virago 750",
+   "xv750",
+   "xv 750",
+   "virago xv750"
+  ],
+  "style": "cruiser",
+  "drive": "shaft"
+ },
+ {
+  "id": "suzuki-dr650-1996",
+  "make": "Suzuki",
+  "model": "DR650",
+  "name": "Suzuki DR650",
+  "years": [
+   1996,
+   2026
+  ],
+  "match": [
+   "dr650",
+   "dr 650",
+   "dr650se",
+   "dr650s"
+  ],
+  "style": "dualsport",
+  "drive": "chain"
  }
 ]

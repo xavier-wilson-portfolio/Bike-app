@@ -1,0 +1,91 @@
+{
+ "id": "yamaha-xs1100-1978",
+ "make": "Yamaha",
+ "model": "XS1100",
+ "name": "Yamaha XS1100",
+ "years": [
+  1978,
+  1981
+ ],
+ "match": [
+  "xs1100",
+  "xs 1100",
+  "xs11",
+  "xs eleven",
+  "xs1100 special",
+  "venturer"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "1101 cc air-cooled DOHC inline four, four carbs, shaft drive",
+ "intro": "Yamaha's big shaft-drive four. Tough engine, but the ignition wiring is a known weak spot.",
+ "focus": [
+  [
+   "1101 cc DOHC four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Pulser wires",
+   "Break near the advance"
+  ],
+  [
+   "Shaft drive",
+   "Final drive oil"
+  ],
+  [
+   "Weight",
+   "Use a good stand"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-XS11-01",
+   "phase": "F",
+   "after": "F-003",
+   "title": "Check the pulser coil wires",
+   "instructions": "Take off the left lower cover and inspect the braided wires from the pulser coils to the harness. Look for breaks near the splice.",
+   "reason": "Broken pulser wires are a common reason two cylinders stop firing.",
+   "src": "XS11 Club forum",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Pulser coil wires",
+   "what": "The braided wires to the pulser coils break and kill two cylinders.",
+   "src": "https://xs11.club/forum/idle-talk-forum/xs11-xj11-discussion/876496-1981-xs1100-midnight-special-slow-restoration?p=878845"
+  }
+ ],
+ "forums": [
+  {
+   "name": "XS11 Club forum",
+   "url": "https://xs11.club/forum/",
+   "what": "Owner forum for the XS1100 and XJ1100."
+  }
+ ],
+ "silhouette": "yamaha-xs1100-1978",
+ "areas": [],
+ "heroName": "XS1100",
+ "hero": {
+  "src": "img/hero/yamaha-xs1100-1978.jpg",
+  "artist": "Farmforce",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha-XS1100-8-1-1100x733.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

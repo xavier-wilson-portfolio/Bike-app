@@ -1,0 +1,94 @@
+{
+ "id": "yamaha-xs400-1977",
+ "make": "Yamaha",
+ "model": "XS400",
+ "name": "Yamaha XS400",
+ "years": [
+  1977,
+  1982
+ ],
+ "match": [
+  "xs400",
+  "xs 400",
+  "xs400 special",
+  "xs400 maxim",
+  "xs400 seca"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "391 cc air-cooled SOHC parallel twin, two carbs",
+ "intro": "A cheap, common Yamaha twin. The usual weak spots are the charging parts and starter clutch.",
+ "focus": [
+  [
+   "391 cc twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Regulator/rectifier",
+   "Common failure"
+  ],
+  [
+   "Starter clutch",
+   "Slips with weak springs"
+  ],
+  [
+   "Wiring",
+   "Check under the seat"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-XS4-01",
+   "phase": "F",
+   "after": "F-004",
+   "title": "Check the starter clutch",
+   "instructions": "If the starter spins but the engine only turns now and then, the starter clutch is slipping. Check its springs and rollers.",
+   "reason": "Worn or broken starter clutch springs are a known XS400 fault.",
+   "src": "XS400.com forum",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "F": [
+   "The voltage regulator/rectifier is a common failure on these. Test it before blaming the stator."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Regulator/rectifier",
+   "what": "A common failure on XS400s.",
+   "src": "https://www.xs400.com/threads/the-xs400-flaws.11473/"
+  }
+ ],
+ "forums": [
+  {
+   "name": "XS400.com forum",
+   "url": "https://www.xs400.com/",
+   "what": "Owner forum for the Yamaha XS400."
+  }
+ ],
+ "silhouette": "yamaha-xs400-1977",
+ "areas": [],
+ "heroName": "XS400",
+ "hero": {
+  "src": "img/hero/yamaha-xs400-1977.jpg",
+  "artist": "Fmaschek Felix Maschek, Hamburg",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_XS-400.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

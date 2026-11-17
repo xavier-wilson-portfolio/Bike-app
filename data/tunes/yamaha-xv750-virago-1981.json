@@ -1,0 +1,83 @@
+{
+ "id": "yamaha-xv750-virago-1981",
+ "make": "Yamaha",
+ "model": "XV750 Virago",
+ "name": "Yamaha XV750 Virago",
+ "years": [
+  1981,
+  1997
+ ],
+ "match": [
+  "virago 750",
+  "xv750",
+  "xv 750",
+  "virago xv750"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "748 cc air-cooled V-twin, two carbs, shaft drive",
+ "intro": "Yamaha's first V-twin cruiser. Dependable, with one famous weak spot: the starter gears.",
+ "focus": [
+  [
+   "748 cc V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Starter gears",
+   "Grind and slip"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Shaft drive",
+   "Final drive oil"
+  ],
+  [
+   "Charging",
+   "Test the regulator"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-XV7-01",
+   "phase": "F",
+   "after": "F-004",
+   "title": "Check the starter gears",
+   "instructions": "If the starter grinds or spins without turning the engine, check the starter idler gear and its tension clip. Yamaha's fix is a new clip, part 904-68291-06-00.",
+   "reason": "Worn starter gears are the Virago's best-known fault.",
+   "src": "Canada Moto Guide Virago starter notes",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Starter grinding",
+   "what": "The starter drive gears wear and grind. The starter motor itself is usually fine.",
+   "src": "https://canadamotoguide.com/images/stories/archives/sonic/ViragoStarters/home.html"
+  }
+ ],
+ "forums": [],
+ "silhouette": "yamaha-xv750-virago-1981",
+ "areas": [],
+ "heroName": "VIRAGO",
+ "hero": {
+  "src": "img/hero/yamaha-xv750-virago-1981.jpg",
+  "artist": "Paul Hermans at Dutch Wikipedia",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_virago_750_donderwolk.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
+}

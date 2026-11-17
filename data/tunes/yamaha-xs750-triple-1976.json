@@ -1,0 +1,90 @@
+{
+ "id": "yamaha-xs750-triple-1976",
+ "make": "Yamaha",
+ "model": "XS750",
+ "name": "Yamaha XS750 Triple",
+ "years": [
+  1976,
+  1979
+ ],
+ "match": [
+  "xs750",
+  "xs 750",
+  "xs750 triple",
+  "xs750se",
+  "xs750e",
+  "xs750f",
+  "xs850"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "747 cc air-cooled DOHC inline triple, three Mikuni carbs, shaft drive",
+ "intro": "Yamaha's shaft-drive triple. Known for second gear trouble and fussy vacuum petcocks.",
+ "focus": [
+  [
+   "747 cc DOHC triple",
+   "Air-cooled"
+  ],
+  [
+   "Three carbs",
+   "Clean and sync"
+  ],
+  [
+   "Second gear",
+   "Can pop out"
+  ],
+  [
+   "Vacuum petcocks",
+   "Leak into carbs"
+  ],
+  [
+   "Shaft drive",
+   "Final drive oil"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-XS7-01",
+   "phase": "H",
+   "after": "H-005",
+   "title": "Test second gear under load",
+   "instructions": "On a test ride, load the bike hard in second gear. If it pops out, the shift forks or gear dogs are worn and the cases need to come apart.",
+   "reason": "Second gear failure is the best-known XS750 fault.",
+   "src": "XS650.com forum",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "G": [
+   "Check the vacuum petcocks. A leaking diaphragm can flood the carbs or pull fuel into the engine."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Second gear",
+   "what": "Second gear can pop out, often fixed by shimming or new parts.",
+   "src": "https://www.xs650.com/threads/is-an-xs750-worth-messing-with.14285/"
+  }
+ ],
+ "forums": [],
+ "silhouette": "yamaha-xs750-triple-1976",
+ "areas": [],
+ "heroName": "XS750",
+ "hero": {
+  "src": "img/hero/yamaha-xs750-triple-1976.jpg",
+  "artist": "Piero at Dutch Wikipedia",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_XS_750.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
+}

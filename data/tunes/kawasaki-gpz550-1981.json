@@ -1,0 +1,82 @@
+{
+ "id": "kawasaki-gpz550-1981",
+ "make": "Kawasaki",
+ "model": "GPz550",
+ "name": "Kawasaki GPz550",
+ "years": [
+  1981,
+  1985
+ ],
+ "match": [
+  "gpz550",
+  "gpz 550",
+  "kz550h",
+  "zx550"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "553 cc air-cooled DOHC inline four, four carbs",
+ "intro": "Kawasaki's early-80s sport 550. Shares a lot with the KZ550, but some trim parts are rare.",
+ "focus": [
+  [
+   "553 cc DOHC four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "Tank and fuel",
+   "Rust clogs the carbs"
+  ],
+  [
+   "Rare parts",
+   "Trim and gauges"
+  ],
+  [
+   "Chain drive",
+   "Sprockets and chain"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Clean the tank, lines and petcock before the rebuilt carbs go on. Rust and gunk from storage are common."
+  ],
+  "A": [
+   "Some GPz550 parts were made for one model year only. Check part numbers before you buy."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Rust in the fuel system",
+   "what": "Long storage fills the tank, lines and carbs with rust and gunk.",
+   "src": "https://cdnbkr.ca/vintage-motorcycles/great-chemistry-a-gpz550-revival"
+  }
+ ],
+ "forums": [
+  {
+   "name": "KZRider forum",
+   "url": "https://www.kzrider.com/",
+   "what": "Owner forum for classic Kawasakis."
+  }
+ ],
+ "silhouette": "kawasaki-gpz550-1981",
+ "areas": [],
+ "heroName": "GPZ550",
+ "hero": {
+  "src": "img/hero/kawasaki-gpz550-1981.jpg",
+  "artist": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Gpz550.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
+}

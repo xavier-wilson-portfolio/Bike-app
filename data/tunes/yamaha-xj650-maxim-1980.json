@@ -1,0 +1,95 @@
+{
+ "id": "yamaha-xj650-maxim-1980",
+ "make": "Yamaha",
+ "model": "XJ650 Maxim",
+ "name": "Yamaha XJ650 Maxim",
+ "years": [
+  1980,
+  1983
+ ],
+ "match": [
+  "xj650",
+  "xj 650",
+  "maxim 650",
+  "xj650 maxim",
+  "xj650 seca",
+  "seca 650"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "653 cc air-cooled DOHC inline four, four Hitachi carbs, shaft drive",
+ "intro": "Yamaha's shaft-drive four. Smooth and tough, but the carbs and the YICS plugs need attention.",
+ "focus": [
+  [
+   "653 cc DOHC four",
+   "Air-cooled"
+  ],
+  [
+   "Hitachi carbs",
+   "Clean as a set"
+  ],
+  [
+   "YICS",
+   "Check the end plugs"
+  ],
+  [
+   "Shaft drive",
+   "Final drive oil"
+  ],
+  [
+   "Charging",
+   "Test the stator"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-XJ6-01",
+   "phase": "G",
+   "after": "G-006",
+   "title": "Check the YICS passage plugs",
+   "instructions": "Look at both ends of the YICS passage in the cylinder head. The plugs must be there and sealed.",
+   "reason": "A missing YICS plug causes starting and idle problems.",
+   "src": "XJBikes forum",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.3,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "G": [
+   "The Hitachi carbs on the XJ650 have small passages that clog in storage. Clean them all, not just the jets."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "YICS plugs",
+   "what": "Missing plugs at the ends of the YICS passage upset idle and starting.",
+   "src": "https://xjbikes.com/forums/posts/73805"
+  }
+ ],
+ "forums": [
+  {
+   "name": "XJBikes forum",
+   "url": "https://www.xjbikes.com/",
+   "what": "Owner forum for Yamaha XJ models."
+  }
+ ],
+ "silhouette": "yamaha-xj650-maxim-1980",
+ "areas": [],
+ "heroName": "XJ650",
+ "hero": {
+  "src": "img/hero/yamaha-xj650-maxim-1980.jpg",
+  "artist": "Barnstarbob",
+  "page": "https://commons.wikimedia.org/wiki/File:1980_Yamaha_XJ650_Maxim_I_side.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

@@ -1,0 +1,100 @@
+{
+ "id": "suzuki-dr650-1996",
+ "make": "Suzuki",
+ "model": "DR650",
+ "name": "Suzuki DR650",
+ "years": [
+  1996,
+  2026
+ ],
+ "match": [
+  "dr650",
+  "dr 650",
+  "dr650se",
+  "dr650s"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "644 cc air/oil-cooled SOHC single, one carb",
+ "intro": "A tough, simple dual-sport single. A few known weak spots, all cheap to fix.",
+ "focus": [
+  [
+   "644 cc single",
+   "Air/oil-cooled"
+  ],
+  [
+   "One carb",
+   "Lean from the factory"
+  ],
+  [
+   "Countershaft seal",
+   "Oil leaks"
+  ],
+  [
+   "Upper chain roller",
+   "Can crack the frame"
+  ],
+  [
+   "Countershaft nut",
+   "Check torque"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-DR6-01",
+   "phase": "H",
+   "after": "H-005",
+   "title": "Check the countershaft nut and seal",
+   "instructions": "With the clutch cover off, check the countershaft nut torque (72.5 ft-lb, left-hand thread). Look for oil at the countershaft seal and fit the seal retainer, Suzuki part 24751-32E00.",
+   "reason": "A loose nut damages the key, and a leaking seal sprays oil on the chain.",
+   "src": "DR650 Wiki",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.5,
+   "tools": ""
+  },
+  {
+   "id": "X-DR6-02",
+   "phase": "E",
+   "after": "E-002",
+   "title": "Check the upper chain roller mount",
+   "instructions": "Inspect the frame where the upper chain roller bolts on. Look for cracks around the hole.",
+   "reason": "The roller mount can crack the frame.",
+   "src": "DR650 Wiki",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.3,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "G": [
+   "The stock carb runs lean. Popping on decel or a rough idle at altitude often goes away with a jet or needle change."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [
+  {
+   "name": "DR650 Wiki",
+   "url": "https://dr650.fandom.com/wiki/Potential_problems_to_be_aware_of",
+   "what": "Owner-written list of known DR650 issues by year."
+  }
+ ],
+ "silhouette": "suzuki-dr650-1996",
+ "areas": [],
+ "heroName": "DR650",
+ "hero": {
+  "src": "img/hero/suzuki-dr650-1996.jpg",
+  "artist": "Yitzachmmeyer",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_DR650SE.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

@@ -1,0 +1,75 @@
+{
+ "id": "yamaha-v-star-650-1998",
+ "make": "Yamaha",
+ "model": "V Star 650",
+ "name": "Yamaha V Star 650",
+ "years": [
+  1998,
+  2016
+ ],
+ "match": [
+  "v star 650",
+  "vstar 650",
+  "v-star 650",
+  "xvs650",
+  "dragstar 650",
+  "drag star 650"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "649 cc air-cooled V-twin, carbs, shaft drive",
+ "intro": "A simple, common cruiser. Most trouble comes from gummed carbs and the fuel pump.",
+ "focus": [
+  [
+   "649 cc V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Gum up when stored"
+  ],
+  [
+   "Fuel pump",
+   "Check flow"
+  ],
+  [
+   "Shaft drive",
+   "Final drive oil"
+  ],
+  [
+   "Charging",
+   "Test the stator"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Bogging and backfiring usually trace to the carbs or a weak fuel pump. Check fuel flow before you blame the jets."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [
+  {
+   "title": "Carbs and fuel pump",
+   "what": "Bogging, backfiring and fuel pump faults are common owner complaints.",
+   "src": "https://cararac.com/blog/ommon-problems-with-yamaha-v-star-650.html"
+  }
+ ],
+ "forums": [],
+ "silhouette": "yamaha-v-star-650-1998",
+ "areas": [],
+ "heroName": "V STAR",
+ "hero": {
+  "src": "img/hero/yamaha-v-star-650-1998.jpg",
+  "artist": "",
+  "page": "https://commons.wikimedia.org/wiki/File:YamahaDragstar.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
+}

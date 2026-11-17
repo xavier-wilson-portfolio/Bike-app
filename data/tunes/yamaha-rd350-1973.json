@@ -1,0 +1,96 @@
+{
+ "id": "yamaha-rd350-1973",
+ "make": "Yamaha",
+ "model": "RD350",
+ "name": "Yamaha RD350",
+ "years": [
+  1973,
+  1975
+ ],
+ "match": [
+  "rd350",
+  "rd 350",
+  "rd347"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "347 cc air-cooled two-stroke twin, two carbs, Autolube oil injection",
+ "intro": "Yamaha's street two-stroke twin. Crank seals and the oil pump decide whether it lives or seizes.",
+ "focus": [
+  [
+   "Two-stroke twin",
+   "Air-cooled"
+  ],
+  [
+   "Crank seals",
+   "Leak with age"
+  ],
+  [
+   "Autolube pump",
+   "Check and bleed"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Expansion chambers",
+   "Rust inside"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-RD-01",
+   "phase": "H",
+   "after": "H-001",
+   "title": "Leak-down test the crankcase",
+   "instructions": "Seal the intake and exhaust ports and pressure test the crankcase. A failed test means new crank seals, which needs the cases split.",
+   "reason": "Leaking crank seals let a two-stroke run lean and seize.",
+   "src": "RD400 restoration thread",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 2.0,
+   "tools": ""
+  },
+  {
+   "id": "X-RD-02",
+   "phase": "H",
+   "after": "H-001",
+   "title": "Service the Autolube oil pump",
+   "instructions": "Check the oil pump cable adjustment and bleed the lines so both cylinders get oil. Look for sludge or stuck parts if it won't pump.",
+   "reason": "The engine is lubricated only by the injected oil.",
+   "src": "Yamaha Autolube notes",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Crank seals",
+   "what": "Old two-stroke crank seals leak and need a full engine split.",
+   "src": "https://hobby-machinist.com/threads/a-bicentenial-restoration-rescue-76-rd400.86132/page-2"
+  }
+ ],
+ "forums": [],
+ "silhouette": "yamaha-rd350-1973",
+ "areas": [],
+ "heroName": "RD350",
+ "hero": {
+  "src": "img/hero/yamaha-rd350-1973.jpg",
+  "artist": "Bergfalke2",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_RD_350_2011-01-29.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

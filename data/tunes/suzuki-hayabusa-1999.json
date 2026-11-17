@@ -1,0 +1,93 @@
+{
+ "id": "suzuki-hayabusa-1999",
+ "make": "Suzuki",
+ "model": "Hayabusa",
+ "name": "Suzuki Hayabusa",
+ "years": [
+  1999,
+  2007
+ ],
+ "match": [
+  "hayabusa",
+  "gsx1300r",
+  "gsx 1300 r",
+  "busa"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "1299 cc liquid-cooled DOHC inline four, fuel injected",
+ "intro": "The first-generation Busa. Check the cam chain tensioner, second gear and any drag-bike mods.",
+ "focus": [
+  [
+   "1299 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Cam chain tensioner",
+   "Rattle and wear"
+  ],
+  [
+   "Second gear",
+   "Check for popping out"
+  ],
+  [
+   "Mods",
+   "Stretch kits and nitrous"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 1999 Hayabusas were in recall 00V319 (which replaced 99V270) because the cam chain tensioner spring could break.",
+   "reason": "A jumped cam chain can wreck the engine."
+  }
+ },
+ "add": [
+  {
+   "id": "X-BUSA-01",
+   "phase": "H",
+   "after": "H-003",
+   "title": "Check the cam chain tensioner",
+   "instructions": "Listen for a rattle at idle. Pull the tensioner and check that it holds the chain. Replace it if in doubt.",
+   "reason": "A weak tensioner lets the cam chain slap or jump teeth.",
+   "src": "Au7o Hayabusa notes",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "H": [
+   "Second gear on first-generation bikes can pop out after hard shifting. Test it under load on the ride."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "00V319",
+   "years": "1999",
+   "what": "Cam chain tensioner spring can break and let the chain jump.",
+   "fix": "Dealer replaced the tensioner.",
+   "src": "https://au7o.io/motorcycle-issues/suzuki-hayabusa?year=1999"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "silhouette": "suzuki-hayabusa-1999",
+ "areas": [],
+ "heroName": "HAYABUSA",
+ "hero": {
+  "src": "img/hero/suzuki-hayabusa-1999.jpg",
+  "artist": "Yama kujira",
+  "page": "https://commons.wikimedia.org/wiki/File:2000_GSX1300R_HAYABUSA_Pearl_Suzuki_Deep_Blue%C3%97Metallic_Sonic_Silver.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
+}

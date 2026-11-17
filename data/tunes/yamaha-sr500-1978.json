@@ -1,0 +1,77 @@
+{
+ "id": "yamaha-sr500-1978",
+ "make": "Yamaha",
+ "model": "SR500",
+ "name": "Yamaha SR500",
+ "years": [
+  1978,
+  1981
+ ],
+ "match": [
+  "sr500",
+  "sr 500",
+  "sr400"
+ ],
+ "style": "cafe",
+ "drive": "chain",
+ "engine": "499 cc air-cooled SOHC single, one carb, kick start only",
+ "intro": "A kick-only big single. Simple, but it needs the right starting routine and correct valve clearances.",
+ "focus": [
+  [
+   "499 cc single",
+   "Air-cooled"
+  ],
+  [
+   "Kick start",
+   "Learn the routine"
+  ],
+  [
+   "Decompressor",
+   "Check the cable"
+  ],
+  [
+   "Valve clearances",
+   "Tight valves = hard start"
+  ],
+  [
+   "One carb",
+   "Easy to clean"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-SR5-01",
+   "phase": "H",
+   "after": "H-003",
+   "title": "Check the decompressor",
+   "instructions": "Make sure the decompression lever cable has a little free play and the valve opens and closes cleanly.",
+   "reason": "A worn or misadjusted decompressor makes the bike hard to kick and can cause kickback.",
+   "src": "Motoryk SR500 notes",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "B": [
+   "Starting routine: choke on, pull the decompressor, ease the kickstarter until the silver mark shows in the window, release the lever, then give one full kick."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Hard starting",
+   "what": "Tight exhaust valves and a worn decompressor are common causes.",
+   "src": "https://motoryk.com/bikes/yamaha/sr500"
+  }
+ ],
+ "forums": [],
+ "heroName": "SR500"
+}
