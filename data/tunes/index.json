@@ -1479,5 +1479,221 @@
   ],
   "style": "cruiser",
   "drive": "belt"
+ },
+ {
+  "id": "suzuki-gt380-1972",
+  "make": "Suzuki",
+  "model": "GT380",
+  "name": "Suzuki GT380",
+  "years": [
+   1972,
+   1978
+  ],
+  "match": [
+   "gt380",
+   "gt 380",
+   "sebring"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "harley-davidson-softail-2018",
+  "make": "Harley-Davidson",
+  "model": "Softail (M8)",
+  "name": "Harley-Davidson Softail (Milwaukee-Eight)",
+  "years": [
+   2018,
+   2026
+  ],
+  "match": [
+   "softail",
+   "fat boy",
+   "heritage classic",
+   "street bob",
+   "low rider",
+   "low rider s",
+   "breakout",
+   "fat bob",
+   "sport glide",
+   "deluxe",
+   "flhc",
+   "flhcs",
+   "fxlrs",
+   "fxbb"
+  ],
+  "style": "cruiser",
+  "drive": "belt"
+ },
+ {
+  "id": "suzuki-gs500e-1989",
+  "make": "Suzuki",
+  "model": "GS500E",
+  "name": "Suzuki GS500E",
+  "years": [
+   1989,
+   2009
+  ],
+  "match": [
+   "gs500",
+   "gs 500",
+   "gs500e",
+   "gs500f"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "harley-davidson-dyna-2006",
+  "make": "Harley-Davidson",
+  "model": "Dyna",
+  "name": "Harley-Davidson Dyna",
+  "years": [
+   2006,
+   2017
+  ],
+  "match": [
+   "dyna",
+   "street bob",
+   "fat bob",
+   "wide glide",
+   "super glide",
+   "low rider",
+   "switchback",
+   "fxd",
+   "fxdb",
+   "fxdf",
+   "fxdwg",
+   "fxdl"
+  ],
+  "style": "cruiser",
+  "drive": "belt"
+ },
+ {
+  "id": "harley-davidson-sportster-ironhead-1972",
+  "make": "Harley-Davidson",
+  "model": "Sportster Ironhead",
+  "name": "Harley-Davidson Sportster Ironhead",
+  "years": [
+   1972,
+   1985
+  ],
+  "match": [
+   "ironhead",
+   "ironhead sportster",
+   "xlh",
+   "xlch",
+   "xls",
+   "xlx",
+   "xr1000"
+  ],
+  "style": "cruiser",
+  "drive": "chain"
+ },
+ {
+  "id": "bmw-r1250gs-2019",
+  "make": "BMW",
+  "model": "R1250GS",
+  "name": "BMW R1250GS",
+  "years": [
+   2019,
+   2023
+  ],
+  "match": [
+   "r1250gs",
+   "r 1250 gs",
+   "r1250 gs",
+   "r1250gsa",
+   "1250gs",
+   "gs adventure"
+  ],
+  "style": "adventure",
+  "drive": "shaft"
+ },
+ {
+  "id": "harley-davidson-shovelhead-flh-1966",
+  "make": "Harley-Davidson",
+  "model": "Shovelhead FLH",
+  "name": "Harley-Davidson Shovelhead FLH",
+  "years": [
+   1966,
+   1984
+  ],
+  "match": [
+   "shovelhead",
+   "shovel",
+   "flh",
+   "electra glide",
+   "flhs",
+   "fx",
+   "super glide",
+   "low rider",
+   "wide glide",
+   "fxwg"
+  ],
+  "style": "touring",
+  "drive": "chain"
+ },
+ {
+  "id": "bmw-r1200gs-2013",
+  "make": "BMW",
+  "model": "R1200GS",
+  "name": "BMW R1200GS (water-cooled)",
+  "years": [
+   2013,
+   2018
+  ],
+  "match": [
+   "r1200gs",
+   "r 1200 gs",
+   "r1200 gs",
+   "r1200gsa",
+   "1200gs",
+   "gs lc"
+  ],
+  "style": "adventure",
+  "drive": "shaft"
+ },
+ {
+  "id": "harley-davidson-evolution-softail-1984",
+  "make": "Harley-Davidson",
+  "model": "Evolution Softail",
+  "name": "Harley-Davidson Evolution Softail",
+  "years": [
+   1984,
+   1999
+  ],
+  "match": [
+   "evo softail",
+   "evolution softail",
+   "fxst",
+   "flstc",
+   "flstf",
+   "fat boy",
+   "heritage softail",
+   "softail custom",
+   "springer softail",
+   "evo"
+  ],
+  "style": "cruiser",
+  "drive": "belt"
+ },
+ {
+  "id": "triumph-bonneville-t120-2016",
+  "make": "Triumph",
+  "model": "Bonneville T120",
+  "name": "Triumph Bonneville T120",
+  "years": [
+   2016,
+   2026
+  ],
+  "match": [
+   "t120",
+   "bonneville t120",
+   "bonneville",
+   "t120 black"
+  ],
+  "style": "standard",
+  "drive": "chain"
  }
 ]

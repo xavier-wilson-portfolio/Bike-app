@@ -1,0 +1,73 @@
+{
+ "id": "suzuki-gs500e-1989",
+ "make": "Suzuki",
+ "model": "GS500E",
+ "name": "Suzuki GS500E",
+ "years": [
+  1989,
+  2009
+ ],
+ "match": [
+  "gs500",
+  "gs 500",
+  "gs500e",
+  "gs500f"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "487 cc air/oil-cooled DOHC parallel twin, two carbs",
+ "intro": "A tough, common learner bike. Most problems come from varnished carbs and old wiring.",
+ "focus": [
+  [
+   "487 cc twin",
+   "Air/oil-cooled"
+  ],
+  [
+   "Two carbs",
+   "Varnish and diaphragms"
+  ],
+  [
+   "Wiring",
+   "Connectors and grounds"
+  ],
+  [
+   "Chain drive",
+   "Sprockets and chain"
+  ],
+  [
+   "High miles",
+   "Check the history"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the carb slide diaphragms for cracks while the carbs are apart. Cracked diaphragms cause flat spots."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Carbs",
+   "what": "Varnished jets cause poor idle, hesitation and hard starting.",
+   "src": "https://vincheck.info/report/suzuki/gs500e/2007"
+  }
+ ],
+ "forums": [],
+ "silhouette": "suzuki-gs500e-1989",
+ "areas": [],
+ "heroName": "GS500",
+ "hero": {
+  "src": "img/hero/suzuki-gs500e-1989.jpg",
+  "artist": "Steve Cadman",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_GS500E_01.jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
+}

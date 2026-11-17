@@ -1,0 +1,72 @@
+{
+ "id": "bmw-r1200gs-2013",
+ "make": "BMW",
+ "model": "R1200GS",
+ "name": "BMW R1200GS (water-cooled)",
+ "years": [
+  2013,
+  2018
+ ],
+ "match": [
+  "r1200gs",
+  "r 1200 gs",
+  "r1200 gs",
+  "r1200gsa",
+  "1200gs",
+  "gs lc"
+ ],
+ "style": "adventure",
+ "drive": "shaft",
+ "engine": "1170 cc air/liquid-cooled boxer twin, fuel injected, shaft drive",
+ "intro": "The first water-cooled GS. Check the fork tube recall before anything else.",
+ "focus": [
+  [
+   "1170 cc boxer",
+   "Air/liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Fork tube recall",
+   "2014-2017"
+  ],
+  [
+   "Shaft drive",
+   "Final drive oil"
+  ],
+  [
+   "Off-road wear",
+   "Bearings and spokes"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls first",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Water-cooled GS and GS Adventure bikes built from November 2013 to June 2017 were recalled because the fixed fork tube can separate after a hard hit. Dealers fit an extra fork tube bush.",
+   "reason": "A separated fork tube can cause a loss of steering. The repair is free."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "E": [
+   "After any hard hit or crash, have the fork tubes checked even if the recall bush is fitted."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "BMW fork tube recall",
+   "years": "2014-2017 (built Nov 2013 to Jun 2017)",
+   "what": "Fixed fork tube can separate from its top plug after a hard hit.",
+   "fix": "Dealer fits an extra fork tube bush free, or replaces a damaged fork.",
+   "src": "https://www.asphaltandrubber.com/?p=139397"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "R1200GS"
+}

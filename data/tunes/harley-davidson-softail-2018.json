@@ -1,0 +1,92 @@
+{
+ "id": "harley-davidson-softail-2018",
+ "make": "Harley-Davidson",
+ "model": "Softail (M8)",
+ "name": "Harley-Davidson Softail (Milwaukee-Eight)",
+ "years": [
+  2018,
+  2026
+ ],
+ "match": [
+  "softail",
+  "fat boy",
+  "heritage classic",
+  "street bob",
+  "low rider",
+  "low rider s",
+  "breakout",
+  "fat bob",
+  "sport glide",
+  "deluxe",
+  "flhc",
+  "flhcs",
+  "fxlrs",
+  "fxbb"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "Milwaukee-Eight 107 or 114 V-twin, fuel injected, belt drive",
+ "intro": "The 2018-on Softail frame with the Milwaukee-Eight. Check the rear shock adjuster recall first.",
+ "focus": [
+  [
+   "Milwaukee-Eight",
+   "107 or 114 cu in"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Shock adjuster recall",
+   "Can puncture the tire"
+  ],
+  [
+   "Belt drive",
+   "Check for cracks"
+  ],
+  [
+   "Oil sumping",
+   "Early bikes"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls first",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Many 2018-2024 Softails (Heritage, Low Rider S and ST, Deluxe and others) are in recall 25V375. The rear shock preload adjuster bracket can break and puncture the rear tire. Bikes fixed under the earlier recall 23V591 need the new fix too.",
+   "reason": "A sudden flat rear tire can cause a crash. The repair is free and quick."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "25V375",
+   "years": "2018-2024 (several models)",
+   "what": "Rear shock preload adjuster bracket can break and puncture the rear tire.",
+   "fix": "Dealer fits a new bracket free (Harley recall 0188).",
+   "src": "https://www.rideapart.com/news/762791/harley-softail-recall-rear-tire-blowout/"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "Fix My Hog",
+   "url": "https://www.fixmyhog.com/",
+   "what": "Harley-Davidson how-to videos and buyer guides by year."
+  }
+ ],
+ "silhouette": "harley-davidson-softail-2018",
+ "areas": [],
+ "heroName": "SOFTAIL",
+ "hero": {
+  "src": "img/hero/harley-davidson-softail-2018.jpg",
+  "artist": "Nitot",
+  "page": "https://commons.wikimedia.org/wiki/File:Harley_Davidson_Softail_Slim_2018.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

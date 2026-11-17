@@ -1,0 +1,68 @@
+{
+ "id": "bmw-r1250gs-2019",
+ "make": "BMW",
+ "model": "R1250GS",
+ "name": "BMW R1250GS",
+ "years": [
+  2019,
+  2023
+ ],
+ "match": [
+  "r1250gs",
+  "r 1250 gs",
+  "r1250 gs",
+  "r1250gsa",
+  "1250gs",
+  "gs adventure"
+ ],
+ "style": "adventure",
+ "drive": "shaft",
+ "engine": "1254 cc air/liquid-cooled boxer twin, ShiftCam, fuel injected, shaft drive",
+ "intro": "BMW's ShiftCam boxer. Every 2019-2023 bike was in the gearbox input shaft recall.",
+ "focus": [
+  [
+   "1254 cc boxer",
+   "Air/liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Gearbox recall",
+   "All 2019-2023"
+  ],
+  [
+   "Shaft drive",
+   "Final drive oil"
+  ],
+  [
+   "Electronics",
+   "Check for faults"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. All 2019-2023 R1250GS and GS Adventure bikes are in recall 23V011 for the gearbox input shaft. The fix is new engine control software.",
+   "reason": "A broken input shaft can lock the rear wheel. The update is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "23V011",
+   "years": "2019-2023",
+   "what": "Gearbox input shaft can be damaged or break and lock the rear wheel.",
+   "fix": "Dealer updates the engine control software free.",
+   "src": "https://www.rideapart.com/news/633453/bmw-r1250gs-gearbox-shaft-recall/"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "R1250GS"
+}

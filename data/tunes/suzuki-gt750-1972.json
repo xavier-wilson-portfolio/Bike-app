@@ -88,14 +88,5 @@
   }
  ],
  "forums": [],
- "silhouette": "suzuki-gt750-1972",
- "areas": [],
- "heroName": "GT750",
- "hero": {
-  "src": "img/hero/suzuki-gt750-1972.jpg",
-  "artist": "Rainmaker47",
-  "page": "https://commons.wikimedia.org/wiki/File:1971_Suzuki_GT750_at_Suzuki_Plaza.jpg",
-  "lic": "CC BY-SA 3.0",
-  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
- }
+ "heroName": "GT750"
 }

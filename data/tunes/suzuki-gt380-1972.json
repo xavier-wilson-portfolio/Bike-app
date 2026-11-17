@@ -1,0 +1,84 @@
+{
+ "id": "suzuki-gt380-1972",
+ "make": "Suzuki",
+ "model": "GT380",
+ "name": "Suzuki GT380",
+ "years": [
+  1972,
+  1978
+ ],
+ "match": [
+  "gt380",
+  "gt 380",
+  "sebring"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "371 cc air-cooled two-stroke triple, three carbs, Ram Air head, oil injection",
+ "intro": "Suzuki's small two-stroke triple. Check the oil injection system before anything else.",
+ "focus": [
+  [
+   "371 cc two-stroke triple",
+   "Air-cooled, Ram Air"
+  ],
+  [
+   "Oil injection",
+   "Pump, lines, linkage"
+  ],
+  [
+   "Three carbs",
+   "Clean and sync"
+  ],
+  [
+   "Crank seals",
+   "Outer seals leak"
+  ],
+  [
+   "Exhaust",
+   "Baffles clog"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-GT3-01",
+   "phase": "H",
+   "after": "H-001",
+   "title": "Service the oil injection system",
+   "instructions": "Check the injector pump, its shaft seal, the lines and the check valves. Check the link from the carb to the pump. Bleed the lines so every cylinder gets oil.",
+   "reason": "A two-stroke with no oil seizes. The pump linkage and line leaks are known weak points.",
+   "src": "Old Japanese Bikes GT Resource",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "H": [
+   "Crank seals on the GT380 are small. Outer seals can often be changed without splitting the cases."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Oil injection",
+   "what": "The carb-to-pump linkage joint and the pump shaft seal are known failure points.",
+   "src": "https://www.oldjapanesebikes.com/mraxl_GT_Resource/user_tips/page-2"
+  }
+ ],
+ "forums": [
+  {
+   "name": "Old Japanese Bikes GT Resource",
+   "url": "https://www.oldjapanesebikes.com/mraxl_GT_Resource/user_tips/page-2",
+   "what": "Owner tips for Suzuki GT two-stroke triples."
+  }
+ ],
+ "heroName": "GT380"
+}

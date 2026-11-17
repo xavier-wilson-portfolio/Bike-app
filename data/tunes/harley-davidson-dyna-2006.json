@@ -1,0 +1,100 @@
+{
+ "id": "harley-davidson-dyna-2006",
+ "make": "Harley-Davidson",
+ "model": "Dyna",
+ "name": "Harley-Davidson Dyna",
+ "years": [
+  2006,
+  2017
+ ],
+ "match": [
+  "dyna",
+  "street bob",
+  "fat bob",
+  "wide glide",
+  "super glide",
+  "low rider",
+  "switchback",
+  "fxd",
+  "fxdb",
+  "fxdf",
+  "fxdwg",
+  "fxdl"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "Twin Cam 96 or 103 V-twin, fuel injected (some 2006 carbureted), belt drive, six-speed",
+ "intro": "The rubber-mount Twin Cam Dyna. Hydraulic cam tensioners, but the shoes still wear and should be checked.",
+ "focus": [
+  [
+   "Twin Cam 96/103",
+   "Air-cooled"
+  ],
+  [
+   "Cam tensioner shoes",
+   "Inspect for wear"
+  ],
+  [
+   "Fuel injected",
+   "Some 2006 carbs"
+  ],
+  [
+   "Belt drive",
+   "Check for cracks"
+  ],
+  [
+   "Six-speed",
+   "Check shifting"
+  ]
+ ],
+ "remove": [
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-DYNA-01",
+   "phase": "H",
+   "after": "H-003",
+   "title": "Inspect the cam chain tensioner shoes",
+   "instructions": "Take off the cam cover and look at the tensioner shoes for wear grooves and chunks missing. Replace them if they are worn.",
+   "reason": "Worn shoes drop plastic into the oil and can let the cam chain slap.",
+   "src": "Fix My Hog cam tensioner notes",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "G": [
+   "Most 2006-2017 Dynas are fuel injected, but some 2006 bikes have a carb. Skip the steps that don't match your bike."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [
+  {
+   "title": "Cam tensioners",
+   "what": "Harley moved Dynas to hydraulic tensioners in 2006, but the shoes still wear and are worth checking at higher miles.",
+   "src": "https://www.fixmyhog.com/post/cam-chain-adjuster-shoes/"
+  }
+ ],
+ "forums": [
+  {
+   "name": "Fix My Hog",
+   "url": "https://www.fixmyhog.com/",
+   "what": "Harley-Davidson how-to videos and buyer guides by year."
+  }
+ ],
+ "silhouette": "harley-davidson-dyna-2006",
+ "areas": [],
+ "heroName": "DYNA",
+ "hero": {
+  "src": "img/hero/harley-davidson-dyna-2006.jpg",
+  "artist": "ozz13x",
+  "page": "https://commons.wikimedia.org/wiki/File:Harley_Davidson_Super_Glide_(7760042940).jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

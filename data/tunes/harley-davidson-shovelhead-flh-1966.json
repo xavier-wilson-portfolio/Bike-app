@@ -1,0 +1,103 @@
+{
+ "id": "harley-davidson-shovelhead-flh-1966",
+ "make": "Harley-Davidson",
+ "model": "Shovelhead FLH",
+ "name": "Harley-Davidson Shovelhead FLH",
+ "years": [
+  1966,
+  1984
+ ],
+ "match": [
+  "shovelhead",
+  "shovel",
+  "flh",
+  "electra glide",
+  "flhs",
+  "fx",
+  "super glide",
+  "low rider",
+  "wide glide",
+  "fxwg"
+ ],
+ "style": "touring",
+ "drive": "chain",
+ "engine": "1200 or 1340 cc air-cooled Shovelhead V-twin, one carb, chain drive",
+ "intro": "The Shovelhead big twin. Expect oil leaks and valve guide wear. Later bikes got the better oil pump and guides.",
+ "focus": [
+  [
+   "Shovelhead V-twin",
+   "74 or 80 cu in"
+  ],
+  [
+   "Oil leaks",
+   "The Shovelhead drip"
+  ],
+  [
+   "Valve guides",
+   "Smoke and oil use"
+  ],
+  [
+   "One carb",
+   "Often swapped"
+  ],
+  [
+   "Vibration",
+   "Check every bolt"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-SHOV-01",
+   "phase": "H",
+   "after": "H-003",
+   "title": "Check the valve guides",
+   "instructions": "Look for blue smoke on start-up and oil on the plugs. Wiggle-test the valves in the guides with the heads off.",
+   "reason": "Valves and guides were a weak spot, especially on AMF-era engines.",
+   "src": "Shovelhead engine history",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 2.0,
+   "tools": ""
+  },
+  {
+   "id": "X-SHOV-02",
+   "phase": "E",
+   "after": "E-002",
+   "title": "Re-torque fasteners",
+   "instructions": "Go over every engine mount, bracket and fender bolt and tighten to spec. These engines shake bolts loose.",
+   "reason": "Loose bolts lead to cracked brackets and lost parts.",
+   "src": "Shovelhead tech tips",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "H": [
+   "For leaks, start with a leak-down test, then check head gaskets, rocker covers and the oil pump."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Oil leaks",
+   "what": "Leaks from head gaskets, rocker covers and the oil pump are so common owners call it the Shovelhead drip.",
+   "src": "https://cararac.com/blog/shovelhead-problems-harley-engine-flaws.html"
+  }
+ ],
+ "forums": [
+  {
+   "name": "Fix My Hog",
+   "url": "https://www.fixmyhog.com/",
+   "what": "Harley-Davidson how-to videos and buyer guides by year."
+  }
+ ],
+ "heroName": "SHOVELHEAD"
+}

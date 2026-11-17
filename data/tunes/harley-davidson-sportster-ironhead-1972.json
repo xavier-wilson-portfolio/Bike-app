@@ -1,0 +1,81 @@
+{
+ "id": "harley-davidson-sportster-ironhead-1972",
+ "make": "Harley-Davidson",
+ "model": "Sportster Ironhead",
+ "name": "Harley-Davidson Sportster Ironhead",
+ "years": [
+  1972,
+  1985
+ ],
+ "match": [
+  "ironhead",
+  "ironhead sportster",
+  "xlh",
+  "xlch",
+  "xls",
+  "xlx",
+  "xr1000"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "1000 cc air-cooled Ironhead V-twin, one carb, chain drive",
+ "intro": "The cast-iron-head Sportster. Simple, but most have been through several cheap owners.",
+ "focus": [
+  [
+   "1000 cc Ironhead",
+   "Iron heads"
+  ],
+  [
+   "One carb",
+   "Often swapped"
+  ],
+  [
+   "Cases",
+   "Check for cracks"
+  ],
+  [
+   "Charging",
+   "Generator or alternator"
+  ],
+  [
+   "Chain drive",
+   "Sprockets and chain"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-IRON-01",
+   "phase": "E",
+   "after": "E-002",
+   "title": "Check the engine cases",
+   "instructions": "Look for cracks, stripped threads and broken bolts in the cases. On pre-1973 cases, check the lower right transmission area near the speedometer drive.",
+   "reason": "Cracked or mismatched cases cause leaks and gearbox trouble.",
+   "src": "Classic Motorcycle Build Ironhead notes",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "A": [
+   "Many Ironheads have had several owners who skimped on parts. Check what has been changed before you trust anything."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Engine cases",
+   "what": "Early cases crack near the speedometer drive, and mismatched cases cause gearbox wear.",
+   "src": "https://www.classic-motorcycle-build.com/ironhead-engine-cases.html"
+  }
+ ],
+ "forums": [],
+ "heroName": "IRONHEAD"
+}

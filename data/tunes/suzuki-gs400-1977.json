@@ -98,12 +98,5 @@
  ],
  "silhouette": "suzuki-gs400-1977",
  "areas": [],
- "heroName": "GS400",
- "hero": {
-  "src": "img/hero/suzuki-gs400-1977.jpg",
-  "artist": "Rainmaker47",
-  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_GS400.JPG",
-  "lic": "CC BY-SA 3.0",
-  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
- }
+ "heroName": "GS400"
 }

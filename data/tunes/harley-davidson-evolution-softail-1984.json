@@ -1,0 +1,86 @@
+{
+ "id": "harley-davidson-evolution-softail-1984",
+ "make": "Harley-Davidson",
+ "model": "Evolution Softail",
+ "name": "Harley-Davidson Evolution Softail",
+ "years": [
+  1984,
+  1999
+ ],
+ "match": [
+  "evo softail",
+  "evolution softail",
+  "fxst",
+  "flstc",
+  "flstf",
+  "fat boy",
+  "heritage softail",
+  "softail custom",
+  "springer softail",
+  "evo"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "1340 cc air-cooled Evolution V-twin, one carb, belt drive (most)",
+ "intro": "The Evo Softail. Reliable, but base gasket and rocker box leaks are almost a given.",
+ "focus": [
+  [
+   "1340 cc Evolution",
+   "Air-cooled"
+  ],
+  [
+   "Base gaskets",
+   "Weep oil"
+  ],
+  [
+   "One carb",
+   "CV carb on most"
+  ],
+  [
+   "Belt drive",
+   "Check for cracks"
+  ],
+  [
+   "Early clutch",
+   "1984-89 noisy"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-EVO-01",
+   "phase": "H",
+   "after": "H-001",
+   "title": "Check the base and rocker box gaskets",
+   "instructions": "Clean the engine and look for oil at the cylinder base, especially near the oil return, and at the rocker boxes. Plan a top-end reseal if they weep.",
+   "reason": "Base gasket leaks are the best-known Evo fault and get worse as the gasket bakes.",
+   "src": "Fix My Hog Evo top-end notes",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Base and rocker gaskets",
+   "what": "Most Evos that haven't been rebuilt leak at the base and rocker box gaskets.",
+   "src": "https://www.fixmyhog.com/video/evolution-top-end-introduction-033091"
+  }
+ ],
+ "forums": [
+  {
+   "name": "Fix My Hog",
+   "url": "https://www.fixmyhog.com/",
+   "what": "Harley-Davidson how-to videos and buyer guides by year."
+  }
+ ],
+ "heroName": "EVO"
+}
