@@ -3672,3 +3672,8 @@ div.mh-stat{cursor:default}
 .mh-stage .herophoto.graded::before{display:none}
 .mh-stage .herophoto.graded img{position:absolute;inset:0;width:100%;height:100%}
 .mh-stage .herophoto.graded.stock::after{display:none}
+
+/* Photo credit tag sits in the bottom right of the picture. Tools move to the top right so they don't overlap it. */
+.hp-cap,.herophoto.sil .hp-cap,.mh-stage .hp-cap{top:auto;bottom:12px;left:auto;right:12px;text-align:right}
+.hp-tools{top:12px;bottom:auto}
+@media (max-width:600px){.mh-stage .herophoto .hp-cap{top:auto;bottom:8px;left:auto;right:8px}}
