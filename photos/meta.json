@@ -5191,18 +5191,6 @@
   "licUrl": "",
   "artist": "Maxquijano (talk)"
  },
- "honda-shadow-ace-750-1998--none": {
-  "q": "Honda Shadow ACE VT750C"
- },
- "honda-vt1300-fury-stateline-sabre-interstate-2010--none": {
-  "q": "Honda VT1300CX Fury"
- },
- "honda-helix-cn250-1986--none": {
-  "q": "Honda CN250 Helix"
- },
- "honda-forza-300-350-2014--none": {
-  "q": "Honda Forza 300"
- },
  "honda-silver-wing-fsc600-2002": {
   "file": "Honda Silver Wing GT(400) ABS.jpg",
   "page": "https://commons.wikimedia.org/wiki/File:Honda_Silver_Wing_GT(400)_ABS.jpg",
@@ -5231,18 +5219,12 @@
   "licUrl": "",
   "artist": "Lorddiagram at English Wikipedia"
  },
- "honda-xl600r-1983--none": {
-  "q": "Honda XL600R"
- },
  "honda-cr250r-1978": {
   "file": "Honda 1997 CR250R in the Honda Collection Hall.JPG",
   "page": "https://commons.wikimedia.org/wiki/File:Honda_1997_CR250R_in_the_Honda_Collection_Hall.JPG",
   "lic": "CC BY-SA 3.0",
   "licUrl": "https://creativecommons.org/licenses/by-sa/3.0",
   "artist": "Rainmaker47"
- },
- "honda-cb400t-hawk-1978--none": {
-  "q": "Honda CB400T"
  },
  "kawasaki-concours-zg1000-1986": {
   "file": "Kawasaki GTR 1000.jpg",
@@ -5257,9 +5239,6 @@
   "lic": "CC BY 2.0",
   "licUrl": "https://creativecommons.org/licenses/by/2.0",
   "artist": "Mark Werner Hamilton from Atlanta, USA"
- },
- "kawasaki-voyager-xii-zg1200-1986--none": {
-  "q": "Kawasaki Voyager 1200"
  },
  "kawasaki-vulcan-1700-voyager-nomad-vaquero-2009": {
   "file": "Kawasaki Vulcan 1700 V-Twin (12578186333).jpg",
@@ -5281,9 +5260,6 @@
   "lic": "CC BY-SA 4.0",
   "licUrl": "https://creativecommons.org/licenses/by-sa/4.0",
   "artist": "Addvisor"
- },
- "kawasaki-klx110-2002--none": {
-  "q": "Kawasaki KLX110"
  },
  "kawasaki-kx250-two-stroke-1974": {
   "file": "US Navy 060601-N-9076B-105 Navy Petty Officer 3rd Class Adelaida Sojo hands out American flags to local Filipinos at the Zamboanga Medical Center during the Military Sealift Command (MSC) Hospital ship USNS Mercy's (T-AH 19) vi.jpg",
@@ -5327,9 +5303,6 @@
   "licUrl": "https://creativecommons.org/licenses/by-sa/3.0",
   "artist": "Z1ocn"
  },
- "kawasaki-zr-7-zr550-zephyr-1990--none": {
-  "q": "Kawasaki Zephyr 550"
- },
  "kawasaki-s1-s2-s3-triple-1972": {
   "file": "Kawasaki KH400 Steventon CherryTree right.jpg",
   "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_KH400_Steventon_CherryTree_right.jpg",
@@ -5358,27 +5331,12 @@
   "licUrl": "https://creativecommons.org/licenses/by-sa/4.0",
   "artist": "Addvisor"
  },
- "kawasaki-mean-streak-1500-1600-2002--none": {
-  "q": "Kawasaki Vulcan Mean Streak"
- },
- "yamaha-majesty-yp400-2004--none": {
-  "q": "Yamaha Majesty 400"
- },
  "yamaha-fz-07-mt-07-tracer-7-2019": {
   "file": "2018-08-16 (702) Haus Stecher, Vogelweide 306 Pfunds, Tyrol, Austria.jpg",
   "page": "https://commons.wikimedia.org/wiki/File:2018-08-16_(702)_Haus_Stecher,_Vogelweide_306_Pfunds,_Tyrol,_Austria.jpg",
   "lic": "CC BY-SA 4.0",
   "licUrl": "https://creativecommons.org/licenses/by-sa/4.0",
   "artist": "GT1976"
- },
- "yamaha-virago-xv920-xv1000-1981--none": {
-  "q": "Yamaha XV920"
- },
- "yamaha-xv1600-1700-road-star-warrior-2002--none": {
-  "q": "Yamaha Road Star Warrior"
- },
- "yamaha-tt-r125-tt-r230-2000--none": {
-  "q": "Yamaha TT-R230"
  },
  "yamaha-yz250-two-stroke-1974": {
   "file": "YZ250.jpg",
@@ -5393,12 +5351,6 @@
   "lic": "CC BY-SA 4.0",
   "licUrl": "https://creativecommons.org/licenses/by-sa/4.0",
   "artist": "Rainmaker47"
- },
- "yamaha-pw50-1981--none": {
-  "q": "Yamaha PW50"
- },
- "yamaha-dt175-dt100-1974--none": {
-  "q": "Yamaha DT175"
  },
  "yamaha-zuma-125-yw125-2009": {
   "file": "Yamaha bws fi 125.jpg",
@@ -5421,33 +5373,12 @@
   "licUrl": "https://creativecommons.org/licenses/by-sa/4.0",
   "artist": "DavidIvar"
  },
- "suzuki-gsx-r750-early-1985--none": {
-  "q": "Suzuki GSX-R750 1986"
- },
- "suzuki-rm-z250-2004--none": {
-  "q": "Suzuki RM-Z250"
- },
  "suzuki-sv650-second-gen-2003": {
   "file": "2003 SV650S Gearshift.jpg",
   "page": "https://commons.wikimedia.org/wiki/File:2003_SV650S_Gearshift.jpg",
   "lic": "Public domain",
   "licUrl": "",
   "artist": "Tckma at English Wikipedia"
- },
- "suzuki-dr-z250-2001--none": {
-  "q": "Suzuki DR-Z250"
- },
- "suzuki-gs1150-1984--none": {
-  "q": "Suzuki GS1150"
- },
- "suzuki-boulevard-m90-m109r2-2009--none": {
-  "q": "Suzuki Boulevard M90"
- },
- "suzuki-rm-z450-2005--none": {
-  "q": "Suzuki RM-Z450"
- },
- "harley-davidson-sportster-883-solid-mount-evo-1986--none": {
-  "q": "Harley-Davidson XLH 883"
  },
  "harley-davidson-street-bob-low-rider-m8-softail-2018--none": {
   "q": "Harley-Davidson Street Bob 114"
@@ -5465,9 +5396,6 @@
   "lic": "CC BY-SA 3.0",
   "licUrl": "https://creativecommons.org/licenses/by-sa/3.0",
   "artist": "Mrziggy22"
- },
- "harley-davidson-shovelhead-fxr-fxb-sturgis-1980--none": {
-  "q": "Harley-Davidson FXB Sturgis"
  },
  "harley-davidson-evolution-electra-glide-tour-glide-1984": {
   "file": "Harley-Davidson Road Glide (MSP15).JPG",
@@ -5499,21 +5427,6 @@
   "lic": "CC BY-SA 3.0",
   "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
   "artist": "ウェルワィ"
- },
- "triumph-speed-triple-1200-rs-2021--none": {
-  "q": "Triumph Speed Triple 1200 RS"
- },
- "ducati-hypermotard-821-939-950-2013--none": {
-  "q": "Ducati Hypermotard 939"
- },
- "ktm-500-exc-f-350-exc-f-2012--none": {
-  "q": "KTM 350 EXC-F"
- },
- "husqvarna-701-enduro-supermoto-2016--none": {
-  "q": "Husqvarna 701 Enduro"
- },
- "vespa-primavera-sprint-50-150-2014--none": {
-  "q": "Vespa Primavera 150"
  },
  "vespa-vbb-sprint-super-smallframe-and-largeframe-1960": {
   "file": "Veglia-Borletti-Tacho einer Vespa (Sp 2).JPG",
@@ -5557,9 +5470,6 @@
   "licUrl": "https://creativecommons.org/licenses/by-sa/4.0",
   "artist": "Jhcbs1019"
  },
- "piaggio-mp3-250-400-500-2007--none": {
-  "q": "Piaggio MP3 500"
- },
  "piaggio-bv-350-fly-150-2007": {
   "file": "Paris - Salon de la moto 2011 - Piaggio - Beverly Sport Touring 350 - 004.jpg",
   "page": "https://commons.wikimedia.org/wiki/File:Paris_-_Salon_de_la_moto_2011_-_Piaggio_-_Beverly_Sport_Touring_350_-_004.jpg",
@@ -5573,9 +5483,6 @@
   "lic": "CC BY-SA 3.0",
   "licUrl": "https://creativecommons.org/licenses/by-sa/3.0",
   "artist": "Thesupermat"
- },
- "cfmoto-300nk-650nk-700cl-x-2017--none": {
-  "q": "CFMoto 650NK"
  },
  "kawasaki-klr250-1985": {
   "file": "KLR250.jpg",

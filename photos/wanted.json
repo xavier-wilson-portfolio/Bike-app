@@ -1,234 +1,134 @@
 [
  {
-  "id": "honda-cbr600-hurricane-1987",
-  "q": "Honda CBR600F 1987"
- },
- {
   "id": "honda-shadow-ace-750-1998",
-  "q": "Honda Shadow ACE VT750C"
+  "q": "Honda Shadow 750 ACE"
  },
  {
   "id": "honda-vt1300-fury-stateline-sabre-interstate-2010",
-  "q": "Honda VT1300CX Fury"
+  "q": "Honda Fury motorcycle"
  },
  {
   "id": "honda-helix-cn250-1986",
-  "q": "Honda CN250 Helix"
+  "q": "Honda Helix scooter"
  },
  {
   "id": "honda-forza-300-350-2014",
-  "q": "Honda Forza 300"
- },
- {
-  "id": "honda-silver-wing-fsc600-2002",
-  "q": "Honda Silver Wing 600"
- },
- {
-  "id": "honda-xl250-xl350-1972",
-  "q": "Honda XL250"
+  "q": "Honda Forza 350"
  },
  {
   "id": "honda-xl600r-1983",
-  "q": "Honda XL600R"
- },
- {
-  "id": "honda-cr250r-1978",
-  "q": "Honda CR250R"
+  "q": "Honda XL 600"
  },
  {
   "id": "honda-cb400t-hawk-1978",
-  "q": "Honda CB400T"
- },
- {
-  "id": "kawasaki-concours-zg1000-1986",
-  "q": "Kawasaki GTR1000"
+  "q": "Honda Hawk 400"
  },
  {
   "id": "kawasaki-voyager-xii-zg1200-1986",
-  "q": "Kawasaki Voyager 1200"
- },
- {
-  "id": "kawasaki-vulcan-1700-voyager-nomad-vaquero-2009",
-  "q": "Kawasaki Vulcan 1700"
- },
- {
-  "id": "kawasaki-vulcan-1500-nomad-drifter-1998",
-  "q": "Kawasaki VN1500 Drifter"
+  "q": "Kawasaki ZG1200"
  },
  {
   "id": "kawasaki-klx110-2002",
-  "q": "Kawasaki KLX110"
- },
- {
-  "id": "kawasaki-kx250-two-stroke-1974",
-  "q": "Kawasaki KX250"
- },
- {
-  "id": "kawasaki-kz200-kz250-1977",
-  "q": "Kawasaki Z250"
- },
- {
-  "id": "kawasaki-kz900-1976",
-  "q": "Kawasaki Z900 1976"
+  "q": "Kawasaki KLX 110"
  },
  {
   "id": "kawasaki-zr-7-zr550-zephyr-1990",
-  "q": "Kawasaki Zephyr 550"
- },
- {
-  "id": "kawasaki-s1-s2-s3-triple-1972",
-  "q": "Kawasaki KH400"
- },
- {
-  "id": "kawasaki-vulcan-88-vn1500-1987",
-  "q": "Kawasaki VN1500"
+  "q": "Kawasaki ZR-7"
  },
  {
   "id": "kawasaki-mean-streak-1500-1600-2002",
-  "q": "Kawasaki Vulcan Mean Streak"
+  "q": "Kawasaki Mean Streak"
  },
  {
   "id": "yamaha-majesty-yp400-2004",
-  "q": "Yamaha Majesty 400"
- },
- {
-  "id": "yamaha-fz-07-mt-07-tracer-7-2019",
-  "q": "Yamaha MT-07 2018"
+  "q": "Yamaha YP400"
  },
  {
   "id": "yamaha-virago-xv920-xv1000-1981",
-  "q": "Yamaha XV920"
+  "q": "Yamaha Virago 1000"
  },
  {
   "id": "yamaha-xv1600-1700-road-star-warrior-2002",
-  "q": "Yamaha Road Star Warrior"
+  "q": "Yamaha Warrior XV1700"
  },
  {
   "id": "yamaha-tt-r125-tt-r230-2000",
-  "q": "Yamaha TT-R230"
- },
- {
-  "id": "yamaha-yz250-two-stroke-1974",
-  "q": "Yamaha YZ250"
+  "q": "Yamaha TT-R125"
  },
  {
   "id": "yamaha-pw50-1981",
-  "q": "Yamaha PW50"
+  "q": "Yamaha PW 50"
  },
  {
   "id": "yamaha-dt175-dt100-1974",
-  "q": "Yamaha DT175"
- },
- {
-  "id": "yamaha-zuma-125-yw125-2009",
-  "q": "Yamaha BWs 125"
- },
- {
-  "id": "yamaha-xj900-xj1100-maxim-1982",
-  "q": "Yamaha XJ900"
+  "q": "Yamaha DT 175"
  },
  {
   "id": "suzuki-gsx-r750-early-1985",
-  "q": "Suzuki GSX-R750 1986"
+  "q": "Suzuki GSX-R 750 1985"
  },
  {
   "id": "suzuki-rm-z250-2004",
-  "q": "Suzuki RM-Z250"
- },
- {
-  "id": "suzuki-sv650-second-gen-2003",
-  "q": "Suzuki SV650S 2003"
+  "q": "Suzuki RMZ 250"
  },
  {
   "id": "suzuki-dr-z250-2001",
-  "q": "Suzuki DR-Z250"
+  "q": "Suzuki DRZ250"
  },
  {
   "id": "suzuki-gs1150-1984",
-  "q": "Suzuki GS1150"
+  "q": "Suzuki GS 1150"
  },
  {
   "id": "suzuki-boulevard-m90-m109r2-2009",
-  "q": "Suzuki Boulevard M90"
+  "q": "Suzuki VZ1500"
  },
  {
   "id": "suzuki-rm-z450-2005",
-  "q": "Suzuki RM-Z450"
+  "q": "Suzuki RMZ450"
  },
  {
   "id": "harley-davidson-sportster-883-solid-mount-evo-1986",
-  "q": "Harley-Davidson XLH 883"
+  "q": "Harley-Davidson Sportster 883 1990"
  },
  {
-  "id": "harley-davidson-street-bob-low-rider-m8-softail-2018",
-  "q": "Harley-Davidson Street Bob 114"
- },
- {
-  "id": "harley-davidson-electra-glide-m8-2017",
-  "q": "Harley-Davidson Electra Glide Ultra"
+  "id": "harley-davidson-softail-slim-fls-2012",
+  "q": "Harley-Davidson Softail Slim"
  },
  {
   "id": "harley-davidson-shovelhead-fxr-fxb-sturgis-1980",
-  "q": "Harley-Davidson FXB Sturgis"
+  "q": "Harley-Davidson Sturgis 1980"
  },
  {
-  "id": "harley-davidson-evolution-electra-glide-tour-glide-1984",
-  "q": "Harley-Davidson Tour Glide"
- },
- {
-  "id": "harley-davidson-low-rider-s-st-2022",
+  "id": "harley-davidson-low-rider-st-2022",
   "q": "Harley-Davidson Low Rider ST"
  },
  {
-  "id": "harley-davidson-xr1200-sportster-2008",
-  "q": "Harley-Davidson XR1200"
- },
- {
   "id": "triumph-speed-triple-1200-rs-2021",
-  "q": "Triumph Speed Triple 1200 RS"
+  "q": "Triumph Speed Triple 1200"
  },
  {
   "id": "ducati-hypermotard-821-939-950-2013",
-  "q": "Ducati Hypermotard 939"
+  "q": "Ducati Hypermotard 950"
  },
  {
   "id": "ktm-500-exc-f-350-exc-f-2012",
-  "q": "KTM 350 EXC-F"
+  "q": "KTM 500 EXC"
  },
  {
   "id": "husqvarna-701-enduro-supermoto-2016",
-  "q": "Husqvarna 701 Enduro"
+  "q": "Husqvarna 701 Supermoto"
  },
  {
   "id": "vespa-primavera-sprint-50-150-2014",
-  "q": "Vespa Primavera 150"
- },
- {
-  "id": "vespa-vbb-sprint-super-smallframe-and-largeframe-1960",
-  "q": "Vespa Sprint 150"
- },
- {
-  "id": "kymco-like-150-people-150-2005",
-  "q": "Kymco Like 125"
- },
- {
-  "id": "kymco-downtown-300-ak-550-2009",
-  "q": "Kymco Downtown 300i"
+  "q": "Vespa Sprint 125"
  },
  {
   "id": "piaggio-mp3-250-400-500-2007",
-  "q": "Piaggio MP3 500"
- },
- {
-  "id": "piaggio-bv-350-fly-150-2007",
-  "q": "Piaggio Beverly 350"
+  "q": "Piaggio MP3 scooter"
  },
  {
   "id": "cfmoto-300nk-650nk-700cl-x-2017",
-  "q": "CFMoto 650NK"
- },
- {
-  "id": "kawasaki-klr250-1985",
-  "q": "Kawasaki KLR250"
+  "q": "CFMoto 700CL-X"
  }
 ]
