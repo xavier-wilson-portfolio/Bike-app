@@ -1,0 +1,79 @@
+{
+ "id": "yamaha-mt-03-2020",
+ "make": "Yamaha",
+ "model": "MT-03",
+ "name": "Yamaha MT-03",
+ "years": [
+  2020,
+  2026
+ ],
+ "match": [
+  "mt-03",
+  "mt03",
+  "mt 03",
+  "yamaha mt-03"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "321 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "The naked version of the R3. 2020 bikes had a reflector recall and a VIN label recall.",
+ "focus": [
+  [
+   "321 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Recalls",
+   "2020 bikes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2020 MT-03s are in recall 20V611 (rear reflector) and some in 21V048 (VIN on the certification label may not match the frame).",
+   "reason": "Both fixes are free. A wrong VIN label can cause title trouble."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "20V611",
+   "years": "2020",
+   "what": "Condensation can collect on the rear reflector lens and make it less effective.",
+   "fix": "Dealer replaces the rear reflector free.",
+   "src": "https://vehicleflaws.com/recall/20V611000"
+  },
+  {
+   "id": "21V048",
+   "years": "2020 (some)",
+   "what": "VIN on the federal certification label may not match the frame.",
+   "fix": "Dealer checks and replaces the label free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/21V048000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "heroName": "MT-03"
+}

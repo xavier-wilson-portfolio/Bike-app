@@ -1,0 +1,68 @@
+{
+ "id": "honda-cbr1000f-hurricane-1987",
+ "make": "Honda",
+ "model": "CBR1000F Hurricane",
+ "name": "Honda CBR1000F",
+ "years": [
+  1987,
+  1996
+ ],
+ "match": [
+  "cbr1000f",
+  "cbr1000 hurricane",
+  "hurricane 1000",
+  "cbr 1000f"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "998 cc liquid-cooled inline four, four carbs, linked brakes on later bikes",
+ "intro": "Honda's big enclosed sport tourer of the late 80s and early 90s. Later bikes have linked brakes.",
+ "focus": [
+  [
+   "998 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "Linked brakes",
+   "Later bikes"
+  ],
+  [
+   "Cooling",
+   "Hoses and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ],
+  "K": [
+   "Later bikes have linked brakes. Bleed them in the order the manual gives."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "CBR Forum",
+   "url": "https://www.cbrforum.com/",
+   "what": "Owner forum for Honda CBR models."
+  }
+ ],
+ "silhouette": "honda-cbr1000f-hurricane-1987",
+ "areas": [],
+ "heroName": "CBR1000F"
+}

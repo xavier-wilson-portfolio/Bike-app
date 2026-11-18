@@ -94,7 +94,7 @@ B2.append(dict(id="honda-cbr600rr-2007", make="Honda", model="CBR600RR", name="H
   forums=[]))
 
 B2.append(dict(id="honda-cb450-1965", make="Honda", model="CB450", name="Honda CB450", years=[1965, 1974],
-  match=["cb450", "cb 450", "cl450", "black bomber", "cb450k"], style="standard", drive="chain",
+  match=["cb450", "cb 450", "black bomber", "cb450k"], style="standard", drive="chain",
   engine="444 cc air-cooled DOHC parallel twin, torsion bar valve springs, CV carbs",
   intro="The Black Bomber. Honda's first big twin, with torsion bars in place of coil valve springs.",
   focus=[["DOHC parallel twin", "Air-cooled"], ["Torsion bar valves", "No coil springs"], ["CV carbs", "Clean and sync"], ["Long-stored bikes", "Check bar tension"], ["Chain drive", "Sprockets and chain"]],

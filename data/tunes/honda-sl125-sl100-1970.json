@@ -1,0 +1,69 @@
+{
+ "id": "honda-sl125-sl100-1970",
+ "make": "Honda",
+ "model": "SL125 / SL100",
+ "name": "Honda SL125 / SL100",
+ "years": [
+  1970,
+  1975
+ ],
+ "match": [
+  "sl125",
+  "sl100",
+  "sl 125",
+  "sl 100",
+  "motosport 125",
+  "motosport 100"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "122 or 99 cc air-cooled OHC single, carb, points, six-volt",
+ "intro": "Small early Honda trail bikes. Six-volt electrics, points and one small carb.",
+ "focus": [
+  [
+   "Small single",
+   "Air-cooled"
+  ],
+  [
+   "Six-volt",
+   "Weak lights"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "F": [
+   "These are six-volt bikes. Use six-volt bulbs and a six-volt battery and charger."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [],
+ "silhouette": "honda-sl125-sl100-1970",
+ "areas": [],
+ "heroName": "SL125",
+ "hero": {
+  "src": "img/hero/honda-sl125-sl100-1970.jpg",
+  "artist": "Cjp24",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_SL125.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

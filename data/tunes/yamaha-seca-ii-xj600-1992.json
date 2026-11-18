@@ -1,0 +1,75 @@
+{
+ "id": "yamaha-seca-ii-xj600-1992",
+ "make": "Yamaha",
+ "model": "Seca II (XJ600)",
+ "name": "Yamaha Seca II (XJ600)",
+ "years": [
+  1992,
+  1998
+ ],
+ "match": [
+  "seca ii",
+  "seca 2",
+  "xj600",
+  "xj600s",
+  "xj 600",
+  "diversion 600"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "598 cc air-cooled inline four, four carbs",
+ "intro": "A simple air-cooled 600 four with a half fairing. Four carbs and not much else to worry about.",
+ "focus": [
+  [
+   "598 cc four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "Valves",
+   "Shim under bucket"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "silhouette": "yamaha-seca-ii-xj600-1992",
+ "areas": [],
+ "heroName": "SECA II",
+ "hero": {
+  "src": "img/hero/yamaha-seca-ii-xj600-1992.jpg",
+  "artist": "Tcc8",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha-seca-ii-green.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

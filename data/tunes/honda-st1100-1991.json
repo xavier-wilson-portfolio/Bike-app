@@ -1,0 +1,66 @@
+{
+ "id": "honda-st1100-1991",
+ "make": "Honda",
+ "model": "ST1100",
+ "name": "Honda ST1100",
+ "years": [
+  1991,
+  2002
+ ],
+ "match": [
+  "st1100",
+  "st 1100",
+  "pan european",
+  "st1100a",
+  "pan european 1100"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "engine": "1084 cc liquid-cooled longitudinal V4, four carbs, shaft drive",
+ "intro": "Honda's long-legged V4 sport tourer. Four carbs, shaft drive and a lot of plastic to get off before any job.",
+ "focus": [
+  [
+   "1084 cc V4",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "Shaft drive",
+   "Change the oil"
+  ],
+  [
+   "Bodywork",
+   "Many panels"
+  ],
+  [
+   "ABS/TCS",
+   "Some bikes"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ST Owners",
+   "url": "https://www.st-owners.com/",
+   "what": "Owner forum for Honda ST1100 and ST1300 sport tourers."
+  }
+ ],
+ "silhouette": "honda-st1100-1991",
+ "areas": [],
+ "heroName": "ST1100"
+}

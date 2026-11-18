@@ -1,0 +1,65 @@
+{
+ "id": "honda-helix-cn250-1986",
+ "make": "Honda",
+ "model": "Helix CN250",
+ "name": "Honda Helix (CN250)",
+ "years": [
+  1986,
+  2007
+ ],
+ "match": [
+  "helix",
+  "cn250",
+  "cn 250",
+  "honda helix",
+  "helix 250",
+  "fusion 250"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "244 cc liquid-cooled single, carb, CVT",
+ "intro": "Honda's long, low touring scooter. Lots of bodywork to remove and one carb that clogs when it sits.",
+ "focus": [
+  [
+   "244 cc single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Bodywork",
+   "Many panels"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "The carb hides under the bodywork. Bag and label every panel screw as it comes out."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Honda scooters."
+  }
+ ],
+ "heroName": "HELIX"
+}

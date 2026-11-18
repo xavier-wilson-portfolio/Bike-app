@@ -1,0 +1,74 @@
+{
+ "id": "yamaha-mt-10-fz-10-2017",
+ "make": "Yamaha",
+ "model": "MT-10 / FZ-10",
+ "name": "Yamaha MT-10 / FZ-10",
+ "years": [
+  2017,
+  2026
+ ],
+ "match": [
+  "mt-10",
+  "mt10",
+  "fz-10",
+  "fz10",
+  "mt 10",
+  "mt-10 sp"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "998 cc liquid-cooled crossplane inline four, fuel injected",
+ "intro": "The naked R1. 2017-2020 bikes are in a front brake switch recall.",
+ "focus": [
+  [
+   "998 cc four",
+   "Crossplane"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Brake switch",
+   "2017-20 recall"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2017-2020 MT-10 and FZ-10 bikes are in recall 20V814 for the front brake switch.",
+   "reason": "A failed switch can leave you without a brake light. The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "20V814",
+   "years": "2017-2020",
+   "what": "Front brake switch can fail from silicon oxide buildup, so the brake light may not work.",
+   "fix": "Dealer replaces the front brake switch free.",
+   "src": "https://auto-recalls.justia.com/yamaha/mt10/2020/20v814000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "heroName": "MT-10"
+}

@@ -1,0 +1,82 @@
+{
+ "id": "kawasaki-ninja-zx-4rr-2023",
+ "make": "Kawasaki",
+ "model": "Ninja ZX-4R / ZX-4RR",
+ "name": "Kawasaki Ninja ZX-4R / ZX-4RR",
+ "years": [
+  2023,
+  2026
+ ],
+ "match": [
+  "zx-4rr",
+  "zx4rr",
+  "zx-4r",
+  "zx4r",
+  "ninja zx-4rr",
+  "ninja zx-4r",
+  "zx400"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "399 cc liquid-cooled inline four, fuel injected",
+ "intro": "A small four that revs past 15,000 rpm. Some early bikes have spark plug and alternator recalls.",
+ "focus": [
+  [
+   "399 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Spark plugs",
+   "Recall"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2023-2024 bikes are in recall 24V221 (spark plugs), and some 2023 ZX-4RR KRT Editions in 23V515 (alternator rotor bolt).",
+   "reason": "Both can stall the engine. The fixes are free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "24V221",
+   "years": "2023-2024 (some)",
+   "what": "Spark plugs may have been damaged in assembly, causing rough idle, hesitation or stalling.",
+   "fix": "Dealer replaces the spark plugs free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/24V221000"
+  },
+  {
+   "id": "23V515",
+   "years": "2023 ZX-4RR KRT Edition",
+   "what": "Alternator rotor bolt may not be tight, which can cause an engine stall.",
+   "fix": "Dealer checks the bolt and tightens it free.",
+   "src": "https://static.nhtsa.gov/odi/rcl/2023/RCRIT-23V515-9817.pdf"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "ZX Forums",
+   "url": "https://www.zxforums.com/",
+   "what": "Owner forum for Kawasaki Ninja ZX models."
+  }
+ ],
+ "heroName": "ZX-4RR"
+}

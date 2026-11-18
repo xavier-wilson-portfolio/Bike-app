@@ -1,0 +1,81 @@
+{
+ "id": "yamaha-xsr700-2018",
+ "make": "Yamaha",
+ "model": "XSR700",
+ "name": "Yamaha XSR700",
+ "years": [
+  2018,
+  2026
+ ],
+ "match": [
+  "xsr700",
+  "xsr 700",
+  "xsr-700",
+  "xsr700 xtribute"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "689 cc liquid-cooled CP2 parallel twin, fuel injected",
+ "intro": "The retro MT-07. Some 2018 bikes had a chain guard bolt recall.",
+ "focus": [
+  [
+   "689 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Chain guard",
+   "2018 recall"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2018 XSR700s are in recall 18V483 for chain guard bolts that can loosen.",
+   "reason": "The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "18V483",
+   "years": "2018 (some)",
+   "what": "Chain guard mounting bolts can loosen from vibration.",
+   "fix": "Dealer replaces both chain guard bolts free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/18V483000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "FZ-07.org",
+   "url": "https://www.fz07.org/",
+   "what": "Owner forum for the Yamaha MT-07, FZ-07 and their relatives."
+  }
+ ],
+ "silhouette": "yamaha-xsr700-2018",
+ "areas": [],
+ "heroName": "XSR700",
+ "hero": {
+  "src": "img/hero/yamaha-xsr700-2018.jpg",
+  "artist": "Zac56105",
+  "page": "https://commons.wikimedia.org/wiki/File:Red_Yamaha_XSR700_parked_near_a_bicycle_2018.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

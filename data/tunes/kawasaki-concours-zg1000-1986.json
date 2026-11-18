@@ -1,0 +1,64 @@
+{
+ "id": "kawasaki-concours-zg1000-1986",
+ "make": "Kawasaki",
+ "model": "Concours ZG1000",
+ "name": "Kawasaki Concours (ZG1000)",
+ "years": [
+  1986,
+  2006
+ ],
+ "match": [
+  "concours",
+  "zg1000",
+  "zg 1000",
+  "concours 1000",
+  "c10"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "engine": "997 cc liquid-cooled inline four, four carbs, shaft drive",
+ "intro": "The first Concours, built on the GPz900R engine. Four carbs, shaft drive and a long production run.",
+ "focus": [
+  [
+   "997 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "Shaft drive",
+   "Change the oil"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Bodywork",
+   "Many panels"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "COG (Concours Owners Group)",
+   "url": "https://www.cog-online.org/",
+   "what": "Owner club for Kawasaki Concours sport tourers."
+  }
+ ],
+ "heroName": "CONCOURS"
+}

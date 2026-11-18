@@ -1,0 +1,60 @@
+{
+ "id": "yamaha-tt-r125-tt-r230-2000",
+ "make": "Yamaha",
+ "model": "TT-R125 / TT-R230",
+ "name": "Yamaha TT-R125 / TT-R230",
+ "years": [
+  2000,
+  2026
+ ],
+ "match": [
+  "tt-r125",
+  "ttr125",
+  "tt-r230",
+  "ttr230",
+  "ttr 125",
+  "ttr 230",
+  "tt-r225",
+  "ttr225",
+  "tt-r110",
+  "ttr110"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "124 to 223 cc air-cooled single, carb",
+ "intro": "Yamaha's trail bikes for new riders. One carb, simple and very common.",
+ "focus": [
+  [
+   "Small single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Air filter",
+   "Foam, oiled"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [],
+ "heroName": "TT-R"
+}

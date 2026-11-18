@@ -1,0 +1,55 @@
+{
+ "id": "suzuki-rm-z250-2004",
+ "make": "Suzuki",
+ "model": "RM-Z250",
+ "name": "Suzuki RM-Z250",
+ "years": [
+  2004,
+  2026
+ ],
+ "match": [
+  "rm-z250",
+  "rmz250",
+  "rmz 250",
+  "rm-z 250"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 cc liquid-cooled four-stroke single, carb then fuel injection",
+ "intro": "Suzuki's 250 four-stroke motocross bike. Hour-based service, valves to check and no lights.",
+ "focus": [
+  [
+   "249 cc single",
+   "Four-stroke"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "Valves",
+   "Check by hours"
+  ],
+  [
+   "Air filter",
+   "Foam, oiled"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Four-stroke motocross engines need frequent valve checks and oil changes. Follow the hour-based schedule in the manual, not the calendar."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [],
+ "heroName": "RM-Z250"
+}

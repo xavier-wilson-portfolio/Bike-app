@@ -1,0 +1,63 @@
+{
+ "id": "honda-cb400t-hawk-1978",
+ "make": "Honda",
+ "model": "CB400T Hawk",
+ "name": "Honda CB400T Hawk",
+ "years": [
+  1978,
+  1981
+ ],
+ "match": [
+  "cb400t",
+  "hawk",
+  "hawk 400",
+  "cb400 hawk",
+  "cb400a hondamatic",
+  "cm400t",
+  "cb400tii"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "395 cc air-cooled parallel twin, three valves per cylinder, two carbs",
+ "intro": "The 400 Hawk twin. Two CV carbs, a cam chain tensioner to check and a starter clutch that can slip.",
+ "focus": [
+  [
+   "395 cc twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Cam chain",
+   "Check tensioner"
+  ],
+  [
+   "Starter clutch",
+   "Can slip"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Honda Twins",
+   "url": "https://www.hondatwins.net/",
+   "what": "Owner forum for older Honda twins."
+  }
+ ],
+ "heroName": "HAWK"
+}

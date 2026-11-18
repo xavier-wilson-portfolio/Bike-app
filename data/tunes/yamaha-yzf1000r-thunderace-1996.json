@@ -1,0 +1,73 @@
+{
+ "id": "yamaha-yzf1000r-thunderace-1996",
+ "make": "Yamaha",
+ "model": "YZF1000R Thunderace",
+ "name": "Yamaha YZF1000R Thunderace",
+ "years": [
+  1996,
+  2003
+ ],
+ "match": [
+  "thunderace",
+  "yzf1000r",
+  "yzf1000",
+  "yzf 1000r",
+  "thunder ace"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "1002 cc liquid-cooled inline four, four carbs, EXUP valve",
+ "intro": "Yamaha's big sport tourer of the late 90s. Four carbs and an EXUP valve to keep free.",
+ "focus": [
+  [
+   "1002 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "EXUP valve",
+   "Keep it free"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "silhouette": "yamaha-yzf1000r-thunderace-1996",
+ "areas": [],
+ "heroName": "THUNDERACE",
+ "hero": {
+  "src": "img/hero/yamaha-yzf1000r-thunderace-1996.jpg",
+  "artist": "t.yamasaki",
+  "page": "https://commons.wikimedia.org/wiki/File:20100410%E6%A1%9C_-_panoramio.jpg",
+  "lic": "CC BY 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by/3.0"
+ }
+}

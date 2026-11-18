@@ -1,0 +1,56 @@
+{
+ "id": "suzuki-dr-z125-dr-z70-2003",
+ "make": "Suzuki",
+ "model": "DR-Z125 / DR-Z70",
+ "name": "Suzuki DR-Z125 / DR-Z70",
+ "years": [
+  2003,
+  2026
+ ],
+ "match": [
+  "dr-z125",
+  "drz125",
+  "drz 125",
+  "dr-z70",
+  "drz70",
+  "drz125l"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "67 or 124 cc air-cooled single, carb",
+ "intro": "Suzuki's small kids' and trail bikes. One carb and simple everything.",
+ "focus": [
+  [
+   "Small single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Air filter",
+   "Foam, oiled"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [],
+ "heroName": "DR-Z125"
+}

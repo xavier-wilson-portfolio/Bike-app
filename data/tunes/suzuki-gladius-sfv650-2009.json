@@ -1,0 +1,81 @@
+{
+ "id": "suzuki-gladius-sfv650-2009",
+ "make": "Suzuki",
+ "model": "Gladius (SFV650)",
+ "name": "Suzuki Gladius (SFV650)",
+ "years": [
+  2009,
+  2015
+ ],
+ "match": [
+  "gladius",
+  "sfv650",
+  "sfv 650",
+  "gladius 650"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "645 cc liquid-cooled V-twin, fuel injected",
+ "intro": "The SV650 engine in a styled steel frame. 2009-2010 bikes are in a regulator/rectifier recall.",
+ "focus": [
+  [
+   "645 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Regulator",
+   "2009-10 recall"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2009-2010 Gladius bikes are in recall 16V018 for the regulator/rectifier.",
+   "reason": "A failed regulator can stall the engine. The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "16V018",
+   "years": "2008-2012 (model list varies)",
+   "what": "Regulator/rectifier can fail and stop charging the battery, which can stall the engine.",
+   "fix": "Dealer replaces the regulator/rectifier free.",
+   "src": "https://www.vehiclesafetyrecalls.com/recall/16V018000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "SVRider",
+   "url": "https://www.svrider.com/",
+   "what": "Owner forum for Suzuki SV650, SV1000 and Gladius."
+  }
+ ],
+ "silhouette": "suzuki-gladius-sfv650-2009",
+ "areas": [],
+ "heroName": "GLADIUS",
+ "hero": {
+  "src": "img/hero/suzuki-gladius-sfv650-2009.jpg",
+  "artist": "Gualex",
+  "page": "https://commons.wikimedia.org/wiki/File:2009SFVGladius.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
+}

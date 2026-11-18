@@ -1,0 +1,86 @@
+{
+ "id": "kawasaki-ninja-h2-2015",
+ "make": "Kawasaki",
+ "model": "Ninja H2",
+ "name": "Kawasaki Ninja H2 / H2 SX",
+ "years": [
+  2015,
+  2026
+ ],
+ "match": [
+  "ninja h2",
+  "h2",
+  "h2 sx",
+  "ninja h2 sx",
+  "h2 carbon",
+  "zx1000n",
+  "ninja h2 sx se"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "998 cc supercharged liquid-cooled inline four, fuel injected",
+ "intro": "Kawasaki's supercharged four. Most of the work here is on the dealer side, and many bikes are in a cam chain tensioner recall.",
+ "focus": [
+  [
+   "998 cc four",
+   "Supercharged"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Cam tensioner",
+   "Recall"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Many 2015-2023 H2 models are in recall 22V912 (cam chain tensioner), and some 2020-2021 bikes in 21V593 (oil pressure relief valve).",
+   "reason": "Both can stall the engine while riding. The fixes are free."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "H": [
+   "The supercharger and its service are dealer work for most owners. Follow the manual's intervals."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "22V912",
+   "years": "2015-2023 (model list varies)",
+   "what": "Cam chain tensioner plunger can lock, which can stall the engine.",
+   "fix": "Dealer replaces the cam chain tensioner free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/22V912000"
+  },
+  {
+   "id": "21V593",
+   "years": "2020-2021 (some)",
+   "what": "Oil pressure relief valve problem can cause a loss of oil pressure and an engine stall.",
+   "fix": "Dealer replaces the valve free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/21V593000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "KawiForums",
+   "url": "https://www.kawiforums.com/",
+   "what": "Owner forum for Kawasaki motorcycles."
+  }
+ ],
+ "heroName": "NINJA H2"
+}

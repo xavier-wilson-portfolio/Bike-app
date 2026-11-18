@@ -1,0 +1,69 @@
+{
+ "id": "kawasaki-ninja-zx-12r-2000",
+ "make": "Kawasaki",
+ "model": "Ninja ZX-12R",
+ "name": "Kawasaki Ninja ZX-12R",
+ "years": [
+  2000,
+  2005
+ ],
+ "match": [
+  "zx-12r",
+  "zx12r",
+  "zx12",
+  "ninja zx-12r",
+  "zx1200"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "1199 cc liquid-cooled inline four, fuel injected, monocoque frame",
+ "intro": "Kawasaki's top-speed bike of the early 2000s. Fuel injected, with an aluminum monocoque frame that doubles as the airbox.",
+ "focus": [
+  [
+   "1199 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Cooling",
+   "Hoses and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ZX Forums",
+   "url": "https://www.zxforums.com/",
+   "what": "Owner forum for Kawasaki Ninja ZX models."
+  }
+ ],
+ "silhouette": "kawasaki-ninja-zx-12r-2000",
+ "areas": [],
+ "heroName": "ZX-12R",
+ "hero": {
+  "src": "img/hero/kawasaki-ninja-zx-12r-2000.jpg",
+  "artist": "uploader was Maggus 1978 at de.wikipedia",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_ZX-12R_Bj._2001.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
+}

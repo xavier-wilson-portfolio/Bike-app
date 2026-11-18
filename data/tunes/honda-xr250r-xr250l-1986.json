@@ -1,0 +1,67 @@
+{
+ "id": "honda-xr250r-xr250l-1986",
+ "make": "Honda",
+ "model": "XR250R / XR250L",
+ "name": "Honda XR250R / XR250L",
+ "years": [
+  1986,
+  2004
+ ],
+ "match": [
+  "xr250r",
+  "xr250l",
+  "xr250",
+  "xr 250",
+  "xr 250r",
+  "xr 250l"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 cc air-cooled four-valve single, carb",
+ "intro": "The XR250 trail bike. Simple, tough, and very often ridden hard and stored wet.",
+ "focus": [
+  [
+   "249 cc single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Check often"
+  ],
+  [
+   "Air filter",
+   "Foam, oiled"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Air-cooled Honda singles need the valve clearance checked often. A tight exhaust valve is the usual cause of hard starting."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XR's Only",
+   "url": "https://www.xrsonly.com/",
+   "what": "Parts and know-how for Honda XR dirt bikes."
+  }
+ ],
+ "silhouette": "honda-xr250r-xr250l-1986",
+ "areas": [],
+ "heroName": "XR250"
+}

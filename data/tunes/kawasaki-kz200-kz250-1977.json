@@ -1,0 +1,62 @@
+{
+ "id": "kawasaki-kz200-kz250-1977",
+ "make": "Kawasaki",
+ "model": "KZ200 / KZ250",
+ "name": "Kawasaki KZ200 / KZ250",
+ "years": [
+  1977,
+  1983
+ ],
+ "match": [
+  "kz200",
+  "kz250",
+  "kz 200",
+  "kz 250",
+  "kz250 ltd",
+  "kz250 csr"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "198 or 249 cc air-cooled single, one carb",
+ "intro": "Kawasaki's small four-stroke singles. Simple, cheap to fix and often the first bike for a new rider.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Points",
+   "On many bikes"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KZRider",
+   "url": "https://www.kzrider.com/",
+   "what": "Forum for vintage Kawasaki KZ and Z bikes."
+  }
+ ],
+ "heroName": "KZ250"
+}

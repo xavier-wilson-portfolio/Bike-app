@@ -1,0 +1,73 @@
+{
+ "id": "suzuki-sv650-second-gen-2003",
+ "make": "Suzuki",
+ "model": "SV650 (2003-2016)",
+ "name": "Suzuki SV650 / SV650S (2003-2016)",
+ "years": [
+  2003,
+  2016
+ ],
+ "match": [
+  "sv650",
+  "sv 650",
+  "sv650s",
+  "sv650n",
+  "sv650a"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "645 cc liquid-cooled V-twin, fuel injected",
+ "intro": "The second SV650. Fuel injected and easy to live with. Some California bikes had a fuel tank recall.",
+ "focus": [
+  [
+   "645 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Fuel tank",
+   "CA recall"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. California-spec 2003-2005 SV650s and some 2006 bikes are in recall 06V013 for a fuel tank that can crack at a bracket weld.",
+   "reason": "A cracked tank can leak fuel. The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "06V013",
+   "years": "2003-2006 California models (some)",
+   "what": "Fuel tank can crack at the vapor separator bracket weld and leak.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehicleflaws.com/vehicle/suzuki/sv650/2005"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "SVRider",
+   "url": "https://www.svrider.com/",
+   "what": "Owner forum for Suzuki SV650, SV1000 and Gladius."
+  }
+ ],
+ "heroName": "SV650"
+}

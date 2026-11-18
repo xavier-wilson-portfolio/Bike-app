@@ -1,0 +1,68 @@
+{
+ "id": "yamaha-xj900-xj1100-maxim-1982",
+ "make": "Yamaha",
+ "model": "XJ1100 Maxim / XJ900",
+ "name": "Yamaha XJ1100 Maxim / XJ900 Seca",
+ "years": [
+  1982,
+  1985
+ ],
+ "match": [
+  "xj1100",
+  "xj 1100",
+  "maxim 1100",
+  "xj1100 maxim",
+  "xj900",
+  "xj 900",
+  "seca 900",
+  "xj900rk"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "853 to 1101 cc air-cooled inline four, four carbs, shaft drive",
+ "intro": "Yamaha's big shaft-drive fours of the early 80s. Four carbs, shaft drive and old wiring.",
+ "focus": [
+  [
+   "Inline four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "Shaft drive",
+   "Change the oil"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Starter",
+   "Check clutch"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "heroName": "MAXIM"
+}

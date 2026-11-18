@@ -1,0 +1,67 @@
+{
+ "id": "yamaha-virago-xv920-xv1000-1981",
+ "make": "Yamaha",
+ "model": "Virago XV920 / XV1000",
+ "name": "Yamaha Virago 920 / 1000",
+ "years": [
+  1981,
+  1985
+ ],
+ "match": [
+  "virago 920",
+  "xv920",
+  "virago 1000",
+  "xv1000",
+  "xv 920",
+  "xv920r",
+  "tr1"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "920 or 981 cc air-cooled V-twin, two carbs, shaft or chain drive",
+ "intro": "The early big Viragos. Two carbs, a starter that is known to give trouble, and a monoshock frame.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Starter",
+   "Known weak point"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Final drive",
+   "Shaft or chain"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "F": [
+   "Virago starters are a known weak point. If it grinds or slips, check the starter clutch and gear before buying a new starter."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Star Bike Forums",
+   "url": "https://www.starbikeforums.com/",
+   "what": "Owner forum for Yamaha Star cruisers."
+  }
+ ],
+ "heroName": "VIRAGO"
+}

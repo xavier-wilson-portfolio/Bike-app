@@ -1,0 +1,64 @@
+{
+ "id": "suzuki-gn125-gn250-1982",
+ "make": "Suzuki",
+ "model": "GN125 / GN250",
+ "name": "Suzuki GN125 / GN250",
+ "years": [
+  1982,
+  2001
+ ],
+ "match": [
+  "gn125",
+  "gn250",
+  "gn 125",
+  "gn 250",
+  "gn125e"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "124 or 249 cc air-cooled single, one carb",
+ "intro": "Suzuki's simple small singles. Cheap, slow and easy to fix.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Drum rear",
+   "Shoes and rod"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [],
+ "silhouette": "suzuki-gn125-gn250-1982",
+ "areas": [],
+ "heroName": "GN250",
+ "hero": {
+  "src": "img/hero/suzuki-gn125-gn250-1982.jpg",
+  "artist": "Michelle Ward",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_GN125_red_01.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

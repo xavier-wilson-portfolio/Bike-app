@@ -14,7 +14,7 @@ B11.append(dict(id="honda-shadow-vt1100-1985", make="Honda", model="Shadow VT110
   recalls=[], recallNote=OLD, known=[HONDA_CHG], forums=[]))
 
 B11.append(dict(id="honda-shadow-aero-750-2004", make="Honda", model="Shadow Aero 750", name="Honda Shadow Aero 750", years=[2004, 2016],
-  match=["shadow aero", "shadow 750", "vt750", "vt750c", "shadow phantom", "shadow spirit 750", "aero 750"], style="cruiser", drive="shaft",
+  match=["shadow aero", "shadow phantom", "shadow spirit 750", "aero 750"], style="cruiser", drive="shaft",
   engine="745 cc liquid-cooled V-twin, carb (to 2009) or fuel injection (2010 on), shaft drive",
   intro="A very common Honda cruiser. Check the bank angle sensor recall on 2010-2016 bikes.",
   focus=[["745 cc V-twin", "Liquid-cooled"], ["Carb or EFI", "EFI from 2010"], ["Recalls", "Fuel valve, sensor wire"], ["Shaft drive", "Final drive oil"], ["Charging", "Test the R/R"]],
@@ -79,7 +79,7 @@ B11.append(dict(id="honda-cb1100-2013", make="Honda", model="CB1100", name="Hond
   recalls=[], recallNote=VIN, known=[], forums=[dict(name="CB1100 Community Forum", url="https://cb1100forum.net/forum/", what="Owner forum for the CB1100.")]))
 
 B11.append(dict(id="honda-xr650l-1993", make="Honda", model="XR650L", name="Honda XR650L", years=[1993, 2026],
-  match=["xr650l", "xr 650l", "xr650", "xr600"], style="dualsport", drive="chain",
+  match=["xr650l", "xr 650l", "xr650"], style="dualsport", drive="chain",
   engine="644 cc air/oil-cooled SOHC single, one carb",
   intro="A simple, tough big single. Keep the valves adjusted and expect to fix the lean stock jetting.",
   focus=[["644 cc single", "Air/oil-cooled"], ["One carb", "Lean from factory"], ["Valve clearances", "Check often"], ["Pulse generator", "Causes stalls"], ["Chain drive", "Slack and lube"]],

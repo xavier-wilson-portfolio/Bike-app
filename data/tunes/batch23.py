@@ -15,7 +15,7 @@ B23.append(dict(id="kawasaki-ex500-ninja-500-1987", make="Kawasaki", model="EX50
   forums=[dict(name="Ninja500.org", url="https://ninja500.org/", what="Owner forum for the EX500 and Ninja 500R.")]))
 
 B23.append(dict(id="kawasaki-zx-6r-1995", make="Kawasaki", model="Ninja ZX-6R", name="Kawasaki Ninja ZX-6R", years=[1995, 2018],
-  match=["zx-6r", "zx6r", "zx 6r", "ninja zx-6r", "zx636", "zx600", "636"], style="sport", drive="chain",
+  match=["zx-6r", "zx6r", "zx 6r", "ninja zx-6r", "zx636", "636"], style="sport", drive="chain",
   engine="599 or 636 cc liquid-cooled inline four, carbs (to 2002) or fuel injected",
   intro="Kawasaki's long-running middleweight. Carbs on early bikes, EFI later. 2009-2012 bikes had a regulator/rectifier recall.",
   focus=[["Inline four", "Liquid-cooled"], ["Carb or EFI", "Depends on year"], ["R/R recall", "2009-2012"], ["Cooling", "Hoses and fan"], ["Chain drive", "Slack and lube"]],

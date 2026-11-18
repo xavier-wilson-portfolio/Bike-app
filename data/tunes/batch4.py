@@ -78,7 +78,7 @@ B4.append(dict(id="kawasaki-z900-2017", make="Kawasaki", model="Z900", name="Kaw
   known=[], forums=[]))
 
 B4.append(dict(id="kawasaki-z1-1973", make="Kawasaki", model="Z1", name="Kawasaki Z1 / KZ900", years=[1973, 1976],
-  match=["z1", "z1 900", "kz900", "z900 1973", "z1a", "z1b"], style="standard", drive="chain",
+  match=["z1", "z1 900", "z900 1973", "z1a", "z1b"], style="standard", drive="chain",
   engine="903 cc air-cooled DOHC inline four, four carbs",
   intro="Kawasaki's first big four and a valuable classic. Matching numbers and correct parts matter here.",
   focus=[["903 cc DOHC four", "Air-cooled"], ["Four carbs", "Rebuild as a set"], ["Cam chain", "Listen cold"], ["Numbers", "Frame and engine should match"], ["Tank", "Clean inside before the carbs"]],

@@ -1,0 +1,66 @@
+{
+ "id": "yamaha-fz600-fz700-fz750-1985",
+ "make": "Yamaha",
+ "model": "FZ600 / FZ700 / FZ750",
+ "name": "Yamaha FZ600 / FZ700 / FZ750",
+ "years": [
+  1985,
+  1991
+ ],
+ "match": [
+  "fz600",
+  "fz700",
+  "fz750",
+  "fz 750",
+  "fz 600",
+  "fz 700",
+  "fazer 750"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "598 to 749 cc liquid- or air-cooled inline four, four carbs, five valves per cylinder on the 700 and 750",
+ "intro": "Yamaha's mid-80s sport fours. The 750 brought the five-valve head. Four carbs on all of them.",
+ "focus": [
+  [
+   "Inline four",
+   "Sport tune"
+  ],
+  [
+   "Four carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Cooling",
+   "Check hoses"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "heroName": "FZ750"
+}

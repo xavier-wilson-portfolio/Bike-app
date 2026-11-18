@@ -1,0 +1,64 @@
+{
+ "id": "honda-cbr600-hurricane-1987",
+ "make": "Honda",
+ "model": "CBR600 Hurricane",
+ "name": "Honda CBR600 Hurricane (CBR600F)",
+ "years": [
+  1987,
+  1990
+ ],
+ "match": [
+  "cbr600 hurricane",
+  "hurricane 600",
+  "cbr600f hurricane",
+  "cbr600 1988",
+  "cbr600f1"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "598 cc liquid-cooled inline four, four carbs",
+ "intro": "The first CBR600. Fully enclosed bodywork, four carbs and a lot of fasteners to keep track of.",
+ "focus": [
+  [
+   "598 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "Full fairing",
+   "Many fasteners"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "CBR Forum",
+   "url": "https://www.cbrforum.com/",
+   "what": "Owner forum for Honda CBR models."
+  }
+ ],
+ "heroName": "HURRICANE"
+}

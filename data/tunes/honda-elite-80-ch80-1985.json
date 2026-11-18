@@ -1,0 +1,56 @@
+{
+ "id": "honda-elite-80-ch80-1985",
+ "make": "Honda",
+ "model": "Elite 80 (CH80)",
+ "name": "Honda Elite 80",
+ "years": [
+  1985,
+  2007
+ ],
+ "match": [
+  "elite 80",
+  "ch80",
+  "elite80",
+  "honda elite",
+  "elite 50",
+  "aero 80"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "80 cc air-cooled four-stroke single, carb, CVT",
+ "intro": "A long-running small Honda scooter. One small carb that clogs when old fuel sits in it.",
+ "focus": [
+  [
+   "80 cc single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Gear oil",
+   "Change it"
+  ],
+  [
+   "Drum brakes",
+   "Shoes and cables"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [],
+ "heroName": "ELITE 80"
+}

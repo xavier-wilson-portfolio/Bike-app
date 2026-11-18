@@ -1,0 +1,96 @@
+{
+ "id": "honda-forza-300-350-2014",
+ "make": "Honda",
+ "model": "Forza 300 / 350",
+ "name": "Honda Forza (NSS300 / NSS350)",
+ "years": [
+  2014,
+  2026
+ ],
+ "match": [
+  "forza",
+  "forza 300",
+  "forza 350",
+  "nss300",
+  "nss350",
+  "nss300a",
+  "forza 125"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "279 or 330 cc liquid-cooled single, fuel injected, CVT",
+ "intro": "Honda's midsize maxi-scooter. Early 2014-2015 bikes had fuel pump and brake line recalls, so check those first.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Fuel pump",
+   "2014-2015 recalls"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2014-2015 NSS300 Forzas had two fuel pump recalls (14V672 and 16V661), some 2014 bikes a rear brake line recall (16V109), and 2014-2015 bikes a starter relay recall (15V439).",
+   "reason": "A seized fuel pump stalls the engine while riding. All fixes are free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "14V672",
+   "years": "2014",
+   "what": "A resin bracket inside the fuel pump can swell and jam the impeller, so the engine can stall.",
+   "fix": "Dealer replaces the fuel pump free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/14V672000"
+  },
+  {
+   "id": "16V661",
+   "years": "2014-2015 (some)",
+   "what": "Fuel pump can seize and stop fuel flow, so the engine stalls.",
+   "fix": "Dealer replaces the fuel pump free.",
+   "src": "https://static.nhtsa.gov/odi/rcl/2016/RCRIT-16V661-0493.pdf"
+  },
+  {
+   "id": "16V109",
+   "years": "2014 (Jun-Sep 2013 build)",
+   "what": "Rear brake line joint may not be torqued right and can leak fluid.",
+   "fix": "Dealer checks and fixes the joint free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/16V109000"
+  },
+  {
+   "id": "15V439",
+   "years": "2014-2015 (model list varies)",
+   "what": "Starter relay switch can fail, so the bike may not start, or the starter may keep running.",
+   "fix": "Dealer replaces the starter relay free.",
+   "src": "https://recallcheck.net/recall/15V439000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Honda scooters."
+  }
+ ],
+ "heroName": "FORZA"
+}

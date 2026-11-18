@@ -1,0 +1,83 @@
+{
+ "id": "honda-vfr1200f-2010",
+ "make": "Honda",
+ "model": "VFR1200F",
+ "name": "Honda VFR1200F",
+ "years": [
+  2010,
+  2017
+ ],
+ "match": [
+  "vfr1200f",
+  "vfr1200",
+  "vfr 1200",
+  "vfr1200fd",
+  "vfr1200x crosstourer",
+  "crosstourer"
+ ],
+ "style": "sport",
+ "drive": "shaft",
+ "engine": "1237 cc liquid-cooled V4, fuel injected, shaft drive, manual or DCT",
+ "intro": "Honda's big shaft-drive V4. 2010 and 2012-2013 bikes had a driveshaft recall and a fuel pump recall.",
+ "focus": [
+  [
+   "1237 cc V4",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Shaft drive",
+   "U-joint recall"
+  ],
+  [
+   "DCT option",
+   "Automatic"
+  ],
+  [
+   "Fuel pump",
+   "Recall"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2010 and 2012-2013 VFR1200F and FD bikes are in recall 15V821 (driveshaft U-joint) and recall 24V864 (fuel pump).",
+   "reason": "A broken U-joint can lock the rear wheel. Both fixes are free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "15V821",
+   "years": "2010, 2012-2013",
+   "what": "Driveshaft U-joint bearings can wear early and break, which can lock the rear wheel.",
+   "fix": "Dealer replaces the driveshaft free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/15V821000"
+  },
+  {
+   "id": "24V864",
+   "years": "2010, 2012-2013 (some)",
+   "what": "Fuel pump can fail and stall the engine.",
+   "fix": "Dealer inspects and replaces the fuel pump free.",
+   "src": "https://motorsportsnewswire.com/?p=195115"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "VFRDiscussion",
+   "url": "https://www.vfrdiscussion.com/",
+   "what": "Owner forum for Honda VFR and Interceptor models."
+  }
+ ],
+ "silhouette": "honda-vfr1200f-2010",
+ "areas": [],
+ "heroName": "VFR1200F"
+}

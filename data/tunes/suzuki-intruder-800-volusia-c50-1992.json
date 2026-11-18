@@ -1,0 +1,64 @@
+{
+ "id": "suzuki-intruder-800-volusia-c50-1992",
+ "make": "Suzuki",
+ "model": "Intruder 800 / Volusia",
+ "name": "Suzuki Intruder 800 / Volusia 800",
+ "years": [
+  1992,
+  2004
+ ],
+ "match": [
+  "intruder 800",
+  "vs800",
+  "vs 800",
+  "volusia",
+  "volusia 800",
+  "vl800 volusia",
+  "vs800gl"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "805 cc liquid-cooled V-twin, two carbs, shaft drive",
+ "intro": "Suzuki's 800 cruisers before the Boulevard name. Two carbs and shaft drive.",
+ "focus": [
+  [
+   "805 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Shaft drive",
+   "Change the oil"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Suzuki Boulevard forums",
+   "url": "https://www.boulevardriders.com/",
+   "what": "Owner forum for Suzuki Boulevard and Intruder cruisers."
+  }
+ ],
+ "silhouette": "suzuki-intruder-800-volusia-c50-1992",
+ "areas": [],
+ "heroName": "INTRUDER"
+}

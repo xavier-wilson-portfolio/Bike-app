@@ -1,0 +1,75 @@
+{
+ "id": "honda-adv150-adv160-2020",
+ "make": "Honda",
+ "model": "ADV150 / ADV160",
+ "name": "Honda ADV150 / ADV160",
+ "years": [
+  2020,
+  2026
+ ],
+ "match": [
+  "adv150",
+  "adv160",
+  "adv 150",
+  "adv 160",
+  "honda adv"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "149 or 157 cc liquid-cooled single, fuel injected, CVT",
+ "intro": "Honda's adventure-styled small scooter. Some 2024-2025 ADV160s have an oil pump recall that can leave you without drive.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Oil pump gear",
+   "2024-25 recall"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2024-2025 ADV160s are in recall 25V195 (oil pump driven gear).",
+   "reason": "If the gear fails you lose drive power. The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "25V195",
+   "years": "2024-2025 ADV160 (some)",
+   "what": "Oil pump driven gear may fail, causing a loss of drive power.",
+   "fix": "Dealer replaces the oil pump driven gear free.",
+   "src": "https://www.vehiclesafetyrecalls.com/recall/25V195000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Honda scooters."
+  }
+ ],
+ "silhouette": "honda-adv150-adv160-2020",
+ "areas": [],
+ "heroName": "ADV160"
+}

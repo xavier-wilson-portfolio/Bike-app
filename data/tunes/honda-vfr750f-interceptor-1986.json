@@ -1,0 +1,80 @@
+{
+ "id": "honda-vfr750f-interceptor-1986",
+ "make": "Honda",
+ "model": "VFR750F Interceptor",
+ "name": "Honda VFR750F",
+ "years": [
+  1986,
+  1997
+ ],
+ "match": [
+  "vfr750",
+  "vfr750f",
+  "vfr 750",
+  "interceptor 750 1990",
+  "vfr750 interceptor"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "748 cc liquid-cooled V4, gear-driven cams, four carbs",
+ "intro": "The VFR that fixed the early V4's cam problems with gear-driven cams. Four carbs in the V and a single-sided swingarm from 1990.",
+ "focus": [
+  [
+   "748 cc V4",
+   "Gear-driven cams"
+  ],
+  [
+   "Four carbs",
+   "In the V"
+  ],
+  [
+   "Charging",
+   "R/R and stator"
+  ],
+  [
+   "Cooling",
+   "Hoses and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-VFR7-01",
+   "phase": "F",
+   "after": "F-002",
+   "title": "Test the charging system",
+   "instructions": "Check voltage at idle and at 5,000 rpm. Below about 13 V at speed points at the regulator/rectifier or stator. Check the connectors for heat damage too.",
+   "reason": "Regulator/rectifier and stator failures are a common VFR problem.",
+   "src": "VFRDiscussion",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "G": [
+   "The carbs sit in the V of the engine. Plan for the time it takes to get to them."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "VFRDiscussion",
+   "url": "https://www.vfrdiscussion.com/",
+   "what": "Owner forum for Honda VFR and Interceptor models."
+  }
+ ],
+ "silhouette": "honda-vfr750f-interceptor-1986",
+ "areas": [],
+ "heroName": "VFR750F"
+}

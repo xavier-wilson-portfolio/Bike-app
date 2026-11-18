@@ -1,0 +1,58 @@
+{
+ "id": "yamaha-xt350-1985",
+ "make": "Yamaha",
+ "model": "XT350",
+ "name": "Yamaha XT350",
+ "years": [
+  1985,
+  2000
+ ],
+ "match": [
+  "xt350",
+  "xt 350",
+  "xt350 dual sport"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "346 cc air-cooled four-valve single, two carbs",
+ "intro": "A light, well-liked Yamaha dual-sport. Twin carbs on one cylinder and simple everything else.",
+ "focus": [
+  [
+   "346 cc single",
+   "Air-cooled"
+  ],
+  [
+   "Twin carbs",
+   "Clean both"
+  ],
+  [
+   "Valves",
+   "Check often"
+  ],
+  [
+   "Air filter",
+   "Foam, oiled"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "heroName": "XT350"
+}

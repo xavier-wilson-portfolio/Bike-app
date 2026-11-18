@@ -1,0 +1,60 @@
+{
+ "id": "yamaha-majesty-yp400-2004",
+ "make": "Yamaha",
+ "model": "Majesty YP400",
+ "name": "Yamaha Majesty 400",
+ "years": [
+  2004,
+  2013
+ ],
+ "match": [
+  "majesty",
+  "majesty 400",
+  "yp400",
+  "yp 400",
+  "yamaha majesty"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "395 cc liquid-cooled single, fuel injected, CVT",
+ "intro": "Yamaha's 400 maxi-scooter. Lots of underseat storage and lots of panels between you and the engine.",
+ "focus": [
+  [
+   "395 cc single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Bodywork",
+   "Many panels"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "heroName": "MAJESTY"
+}

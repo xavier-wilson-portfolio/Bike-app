@@ -1,0 +1,64 @@
+{
+ "id": "suzuki-rg500-gamma-rg250-1985",
+ "make": "Suzuki",
+ "model": "RG500 Gamma / RG250",
+ "name": "Suzuki RG500 Gamma / RG250 Gamma",
+ "years": [
+  1985,
+  1987
+ ],
+ "match": [
+  "rg500",
+  "rg 500",
+  "rg500 gamma",
+  "rg250",
+  "rg250 gamma",
+  "gamma"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "498 cc square-four or 247 cc twin two-stroke, liquid-cooled, multiple carbs",
+ "intro": "Suzuki's GP-replica two-strokes. Never sold new in the US, so most here are imports. Expensive parts and careful work.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "Carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "Crank seals",
+   "Check them"
+  ],
+  [
+   "Oil injection",
+   "Bleed the pump"
+  ],
+  [
+   "Import papers",
+   "Check title"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "A": [
+   "These were never sold new in the US. Make sure the title and import paperwork match the VIN before you put money in."
+  ],
+  "B": [
+   "A two-stroke with leaking crank seals runs lean and can seize. Get the seals checked before riding hard."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [],
+ "heroName": "RG500"
+}

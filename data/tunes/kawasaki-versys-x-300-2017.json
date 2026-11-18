@@ -1,0 +1,75 @@
+{
+ "id": "kawasaki-versys-x-300-2017",
+ "make": "Kawasaki",
+ "model": "Versys-X 300",
+ "name": "Kawasaki Versys-X 300",
+ "years": [
+  2017,
+  2026
+ ],
+ "match": [
+  "versys-x 300",
+  "versys x 300",
+  "versys x300",
+  "versys 300",
+  "kle300"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "296 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "Kawasaki's small adventure bike, built on the Ninja 300 engine. Some 2017 bikes had a tail light recall.",
+ "focus": [
+  [
+   "296 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Tail light",
+   "2017 recall"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2017 Versys-X 300s are in recall 17V465 for a loose tail/brake light socket.",
+   "reason": "Without a brake light you are hard to see. The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "17V465",
+   "years": "2017 (some)",
+   "what": "Tail/brake light socket can come loose and let the bulb fall out.",
+   "fix": "Dealer replaces the socket free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/17V465000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "KawiForums",
+   "url": "https://www.kawiforums.com/",
+   "what": "Owner forum for Kawasaki motorcycles."
+  }
+ ],
+ "silhouette": "kawasaki-versys-x-300-2017",
+ "areas": [],
+ "heroName": "VERSYS-X"
+}

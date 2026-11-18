@@ -1,0 +1,61 @@
+{
+ "id": "honda-shadow-ace-750-1998",
+ "make": "Honda",
+ "model": "Shadow ACE 750",
+ "name": "Honda Shadow ACE 750 (VT750C)",
+ "years": [
+  1998,
+  2003
+ ],
+ "match": [
+  "shadow ace 750",
+  "ace 750",
+  "vt750c ace",
+  "vt750cd",
+  "shadow ace deluxe",
+  "ace tourer"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "745 cc liquid-cooled V-twin, two carbs",
+ "intro": "The retro-styled Shadow 750. Two carbs and chain drive.",
+ "focus": [
+  [
+   "745 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Cooling",
+   "Hoses and fan"
+  ],
+  [
+   "Fuel petcock",
+   "Vacuum type"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Shadow Riders",
+   "url": "https://www.shadowriders.com/",
+   "what": "Owner forum for Honda Shadows and other Honda cruisers."
+  }
+ ],
+ "heroName": "SHADOW ACE"
+}

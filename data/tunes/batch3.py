@@ -94,7 +94,7 @@ B3.append(dict(id="honda-cx500-1978", make="Honda", model="CX500", name="Honda C
   forums=[dict(name="CX500 Forum", url="https://www.cx500forum.com/", what="Owner forum for CX and GL 500/650.")]))
 
 B3.append(dict(id="honda-shadow-750-2004", make="Honda", model="Shadow 750", name="Honda Shadow 750", years=[2004, 2016],
-  match=["shadow 750", "shadow", "vt750", "vt750c", "shadow aero", "shadow phantom", "shadow spirit"], style="cruiser", drive="shaft",
+  match=["shadow 750", "shadow", "vt750", "vt750c"], style="cruiser", drive="shaft",
   engine="745 cc liquid-cooled V-twin, carbs to 2009, fuel injected from 2010",
   intro="Honda's middleweight cruiser. Carbs on early bikes, fuel injection later, and a bank angle sensor recall.",
   focus=[["745 cc V-twin", "Liquid-cooled"], ["Carb or EFI", "Check your year"], ["Shaft drive", "Final drive oil"], ["Bank angle sensor", "Recall on 2010-2016"], ["Chrome", "Pitting and rust"]],
@@ -114,7 +114,7 @@ B3.append(dict(id="honda-cb650-1979", make="Honda", model="CB650", name="Honda C
   recalls=[], recallNote=OLD, known=[], forums=[SOHC]))
 
 B3.append(dict(id="honda-nc750x-2014", make="Honda", model="NC750X", name="Honda NC750X", years=[2014, 2026],
-  match=["nc750x", "nc 750x", "nc750", "nc750xd", "nc700x"], style="adventure", drive="chain",
+  match=["nc750x", "nc 750x", "nc750", "nc750xd"], style="adventure", drive="chain",
   engine="745 cc liquid-cooled parallel twin, fuel injected, manual or DCT",
   intro="Honda's practical crossover, with storage where the tank usually is. Some have the DCT gearbox.",
   focus=[["745 cc twin", "Liquid-cooled"], ["Manual or DCT", "Check which you have"], ["Frunk", "Fuel filler under the seat"], ["Recalls", "DCT fuel, front tire"], ["Chain drive", "Slack and lube"]],

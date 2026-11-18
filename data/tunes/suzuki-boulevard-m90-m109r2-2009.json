@@ -1,0 +1,72 @@
+{
+ "id": "suzuki-boulevard-m90-m109r2-2009",
+ "make": "Suzuki",
+ "model": "Boulevard M90",
+ "name": "Suzuki Boulevard M90",
+ "years": [
+  2009,
+  2019
+ ],
+ "match": [
+  "m90",
+  "boulevard m90",
+  "vz1500",
+  "m90 boulevard"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "1462 cc liquid-cooled V-twin, fuel injected, shaft drive",
+ "intro": "The middle Boulevard muscle cruiser. 2009-2010 bikes are in a regulator/rectifier recall.",
+ "focus": [
+  [
+   "1462 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Regulator",
+   "2009-10 recall"
+  ],
+  [
+   "Shaft drive",
+   "Change the oil"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2009-2010 M90s are in recall 16V018 for the regulator/rectifier.",
+   "reason": "A failed regulator can stall the engine. The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "16V018",
+   "years": "2008-2012 (model list varies)",
+   "what": "Regulator/rectifier can fail and stop charging the battery, which can stall the engine.",
+   "fix": "Dealer replaces the regulator/rectifier free.",
+   "src": "https://www.vehiclesafetyrecalls.com/recall/16V018000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "Suzuki Boulevard forums",
+   "url": "https://www.boulevardriders.com/",
+   "what": "Owner forum for Suzuki Boulevard and Intruder cruisers."
+  }
+ ],
+ "heroName": "M90"
+}

@@ -1,0 +1,67 @@
+{
+ "id": "suzuki-gsx-r1100-1986",
+ "make": "Suzuki",
+ "model": "GSX-R1100",
+ "name": "Suzuki GSX-R1100",
+ "years": [
+  1986,
+  1998
+ ],
+ "match": [
+  "gsx-r1100",
+  "gsxr1100",
+  "gsx r1100",
+  "gsxr 1100",
+  "gixxer 1100"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "1052 to 1074 cc oil-cooled (later liquid-cooled) inline four, four carbs",
+ "intro": "The big early GSX-R. Oil-cooled until 1992, then water-cooled. Four carbs either way.",
+ "focus": [
+  [
+   "Inline four",
+   "Oil or water cooled"
+  ],
+  [
+   "Four carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "Oil cooler",
+   "Check lines"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ],
+  "E": [
+   "Oil-cooled GSX-Rs depend on the oil to cool the engine. Use the oil spec in the manual and check the cooler lines for leaks."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "GSXR.com",
+   "url": "https://www.gsxr.com/",
+   "what": "Owner forum for Suzuki GSX-R models, including the early oil-cooled bikes."
+  }
+ ],
+ "heroName": "GSX-R1100"
+}

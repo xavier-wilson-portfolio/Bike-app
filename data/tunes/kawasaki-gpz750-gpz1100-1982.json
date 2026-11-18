@@ -1,0 +1,64 @@
+{
+ "id": "kawasaki-gpz750-gpz1100-1982",
+ "make": "Kawasaki",
+ "model": "GPz750 / GPz1100",
+ "name": "Kawasaki GPz750 / GPz1100",
+ "years": [
+  1982,
+  1985
+ ],
+ "match": [
+  "gpz750",
+  "gpz1100",
+  "gpz 750",
+  "gpz 1100",
+  "zx750a",
+  "zx1100a",
+  "kz1100 gpz"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "738 or 1089 cc air-cooled inline four, carbs or early fuel injection",
+ "intro": "Kawasaki's early 80s sport fours. Some GPz1100s have an early fuel injection system that takes patience to sort out.",
+ "focus": [
+  [
+   "Inline four",
+   "Air-cooled"
+  ],
+  [
+   "Fuel",
+   "Carbs or early EFI"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Cam chain",
+   "Check tensioner"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check which fuel system you have. Early injected GPz1100s need the sensors and wiring checked, not a carb rebuild."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KZRider",
+   "url": "https://www.kzrider.com/",
+   "what": "Forum for vintage Kawasaki KZ and Z bikes."
+  }
+ ],
+ "heroName": "GPZ"
+}

@@ -1,0 +1,65 @@
+{
+ "id": "suzuki-gs1150-1984",
+ "make": "Suzuki",
+ "model": "GS1150",
+ "name": "Suzuki GS1150E / ES",
+ "years": [
+  1984,
+  1986
+ ],
+ "match": [
+  "gs1150",
+  "gs 1150",
+  "gs1150e",
+  "gs1150es",
+  "gs1150g"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "1135 cc air-cooled inline four, four carbs",
+ "intro": "The last of the big air-cooled GS fours. Four carbs, anti-dive forks and lots of torque.",
+ "focus": [
+  [
+   "1135 cc four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "Anti-dive",
+   "Check seals"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The GS Resources",
+   "url": "https://www.thegsresources.com/",
+   "what": "Owner forum for air-cooled Suzuki GS fours."
+  }
+ ],
+ "heroName": "GS1150"
+}

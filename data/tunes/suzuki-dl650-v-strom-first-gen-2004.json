@@ -1,0 +1,62 @@
+{
+ "id": "suzuki-dl650-v-strom-first-gen-2004",
+ "make": "Suzuki",
+ "model": "V-Strom 650 (2004-2011)",
+ "name": "Suzuki V-Strom 650 (DL650, 2004-2011)",
+ "years": [
+  2004,
+  2011
+ ],
+ "match": [
+  "v-strom 650",
+  "vstrom 650",
+  "v strom 650",
+  "dl650",
+  "wee-strom",
+  "weestrom",
+  "dl650a"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "645 cc liquid-cooled V-twin, fuel injected",
+ "intro": "The first V-Strom 650. The SV650 engine in a tall, comfortable bike that people ride for a very long time.",
+ "focus": [
+  [
+   "645 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Charging",
+   "Check stator"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [
+  {
+   "name": "StromTrooper",
+   "url": "https://www.stromtrooper.com/",
+   "what": "Owner forum for Suzuki V-Strom models."
+  }
+ ],
+ "heroName": "V-STROM"
+}

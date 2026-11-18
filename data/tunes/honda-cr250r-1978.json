@@ -1,0 +1,74 @@
+{
+ "id": "honda-cr250r-1978",
+ "make": "Honda",
+ "model": "CR250R",
+ "name": "Honda CR250R (two-stroke)",
+ "years": [
+  1978,
+  2007
+ ],
+ "match": [
+  "cr250r",
+  "cr250",
+  "cr 250",
+  "cr 250r",
+  "elsinore 250"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 cc two-stroke single, carb, premix",
+ "intro": "Honda's 250 two-stroke motocross bike. Premix, a top end that wears, and no lights.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Top end",
+   "Check compression"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Air filter",
+   "Foam, oiled"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-CR25-01",
+   "phase": "G",
+   "after": "G-004",
+   "title": "Check compression and the top end",
+   "instructions": "Do a compression test. Low or uneven numbers mean the piston and rings are due. Look at the piston through the exhaust port for scoring.",
+   "reason": "A tired top end is the most common problem on a used two-stroke motocross bike.",
+   "src": "Two-stroke basics",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual. There is no oil tank."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [],
+ "heroName": "CR250R"
+}

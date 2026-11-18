@@ -1,0 +1,65 @@
+{
+ "id": "yamaha-tenere-xt660z-2008",
+ "make": "Yamaha",
+ "model": "XT660Z Tenere",
+ "name": "Yamaha XT660Z Tenere",
+ "years": [
+  2008,
+  2016
+ ],
+ "match": [
+  "xt660z",
+  "xt660",
+  "tenere 660",
+  "xt 660",
+  "xt660r",
+  "xt660x"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "660 cc liquid-cooled single, fuel injected",
+ "intro": "Yamaha's 660 single adventure bike. Mostly sold outside the US, so many here are imports.",
+ "focus": [
+  [
+   "660 cc single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Import papers",
+   "Check title"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "A": [
+   "Many US XT660Zs are imports. Make sure the title and VIN paperwork match before you put money in."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "heroName": "TENERE"
+}

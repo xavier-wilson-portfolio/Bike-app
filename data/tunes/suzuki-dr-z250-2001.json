@@ -1,0 +1,54 @@
+{
+ "id": "suzuki-dr-z250-2001",
+ "make": "Suzuki",
+ "model": "DR-Z250",
+ "name": "Suzuki DR-Z250",
+ "years": [
+  2001,
+  2007
+ ],
+ "match": [
+  "dr-z250",
+  "drz250",
+  "drz 250",
+  "dr-z 250"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 cc air-cooled single, carb",
+ "intro": "A small street-legal Suzuki trail bike. One carb and simple service.",
+ "focus": [
+  [
+   "249 cc single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Shim type"
+  ],
+  [
+   "Air filter",
+   "Foam, oiled"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [],
+ "heroName": "DR-Z250"
+}

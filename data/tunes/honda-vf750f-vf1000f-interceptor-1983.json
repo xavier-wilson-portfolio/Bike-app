@@ -1,0 +1,88 @@
+{
+ "id": "honda-vf750f-vf1000f-interceptor-1983",
+ "make": "Honda",
+ "model": "VF750F / VF1000F Interceptor",
+ "name": "Honda VF750F / VF1000F Interceptor",
+ "years": [
+  1983,
+  1986
+ ],
+ "match": [
+  "vf750f",
+  "vf1000f",
+  "vf750 interceptor",
+  "vf1000 interceptor",
+  "vf1000r",
+  "interceptor 750 1983"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "748 or 998 cc liquid-cooled V4, chain-driven cams, four carbs",
+ "intro": "The first V4 Interceptors. Fast for their day, with chain-driven cams that are known to wear.",
+ "focus": [
+  [
+   "V4",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "In the V"
+  ],
+  [
+   "Cam wear",
+   "Known issue"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-V4-01",
+   "phase": "H",
+   "after": "H-003",
+   "title": "Check for cam and rocker wear",
+   "instructions": "With the valve covers off, look at the cam lobes and rocker pads for pitting or flat spots. Early Honda V4s are known for cam wear, often from poor oiling or old oil.",
+   "reason": "Worn cams on early V4 Interceptors are a known weak point.",
+   "src": "Owner experience",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 3.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "VFRDiscussion",
+   "url": "https://www.vfrdiscussion.com/",
+   "what": "Owner forum for Honda VFR and Interceptor models."
+  }
+ ],
+ "silhouette": "honda-vf750f-vf1000f-interceptor-1983",
+ "areas": [],
+ "heroName": "INTERCEPTOR",
+ "hero": {
+  "src": "img/hero/honda-vf750f-vf1000f-interceptor-1983.jpg",
+  "artist": "Rainmaker47",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_VF750F_in_the_Honda_Collection_Hall..JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

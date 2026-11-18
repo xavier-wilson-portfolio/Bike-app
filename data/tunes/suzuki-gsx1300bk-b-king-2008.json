@@ -1,0 +1,67 @@
+{
+ "id": "suzuki-gsx1300bk-b-king-2008",
+ "make": "Suzuki",
+ "model": "B-King (GSX1300BK)",
+ "name": "Suzuki B-King",
+ "years": [
+  2008,
+  2012
+ ],
+ "match": [
+  "b-king",
+  "bking",
+  "gsx1300bk",
+  "b king",
+  "gsx1300bka"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "1340 cc liquid-cooled inline four (Hayabusa engine), fuel injected",
+ "intro": "The naked Hayabusa. Fuel injected and huge. 2008 bikes are in a regulator/rectifier recall.",
+ "focus": [
+  [
+   "1340 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Regulator",
+   "2008 recall"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2008 B-Kings are in recall 16V018 for the regulator/rectifier.",
+   "reason": "A failed regulator can stall the engine. The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "16V018",
+   "years": "2008-2012 (model list varies)",
+   "what": "Regulator/rectifier can fail and stop charging the battery, which can stall the engine.",
+   "fix": "Dealer replaces the regulator/rectifier free.",
+   "src": "https://www.vehiclesafetyrecalls.com/recall/16V018000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "B-KING"
+}

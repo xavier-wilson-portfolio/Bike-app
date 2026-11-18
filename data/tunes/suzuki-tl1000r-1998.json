@@ -1,0 +1,68 @@
+{
+ "id": "suzuki-tl1000r-1998",
+ "make": "Suzuki",
+ "model": "TL1000R",
+ "name": "Suzuki TL1000R",
+ "years": [
+  1998,
+  2003
+ ],
+ "match": [
+  "tl1000r",
+  "tl 1000r",
+  "tlr",
+  "tl1000 r"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "996 cc liquid-cooled 90-degree V-twin, fuel injected, rotary rear damper",
+ "intro": "Suzuki's V-twin superbike. Fuel injected, with a rotary rear damper and a cam chain tensioner worth checking.",
+ "focus": [
+  [
+   "996 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Rear damper",
+   "Rotary"
+  ],
+  [
+   "Cam chain",
+   "Check tensioners"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "SVRider",
+   "url": "https://www.svrider.com/",
+   "what": "Owner forum for Suzuki SV650, SV1000 and Gladius."
+  }
+ ],
+ "silhouette": "suzuki-tl1000r-1998",
+ "areas": [],
+ "heroName": "TL1000R",
+ "hero": {
+  "src": "img/hero/suzuki-tl1000r-1998.jpg",
+  "artist": "RubSub",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_TL1000R.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

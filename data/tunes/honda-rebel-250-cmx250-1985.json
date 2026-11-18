@@ -1,0 +1,59 @@
+{
+ "id": "honda-rebel-250-cmx250-1985",
+ "make": "Honda",
+ "model": "Rebel 250 (CMX250)",
+ "name": "Honda Rebel 250",
+ "years": [
+  1985,
+  2016
+ ],
+ "match": [
+  "rebel 250",
+  "cmx250",
+  "cmx250c",
+  "rebel250",
+  "cmx 250"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "234 cc air-cooled parallel twin, one carb",
+ "intro": "The classic small Rebel. One carb, chain drive and drum rear brake. Very common as a first bike.",
+ "focus": [
+  [
+   "234 cc twin",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Drum rear",
+   "Shoes and cable"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Most no-starts on a stored Rebel 250 come from a clogged pilot jet. Clean it first."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [],
+ "heroName": "REBEL 250"
+}

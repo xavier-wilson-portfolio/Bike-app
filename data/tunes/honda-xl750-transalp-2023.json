@@ -1,0 +1,67 @@
+{
+ "id": "honda-xl750-transalp-2023",
+ "make": "Honda",
+ "model": "XL750 Transalp",
+ "name": "Honda XL750 Transalp",
+ "years": [
+  2023,
+  2026
+ ],
+ "match": [
+  "transalp",
+  "xl750",
+  "xl 750",
+  "transalp 750",
+  "xl750 transalp"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "755 cc liquid-cooled parallel twin, fuel injected, ride-by-wire",
+ "intro": "Honda's modern middleweight adventure bike. Some 2024-2025 bikes have an oil leak recall for a crankcase sealing bolt.",
+ "focus": [
+  [
+   "755 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Electronics",
+   "Ride modes"
+  ],
+  [
+   "Sealing bolt",
+   "2024-25 recall"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2024-2025 Transalps are in recall 25V358 for a crankcase sealing bolt that can leak oil onto the rear tire.",
+   "reason": "Oil on the tire can cause a crash. The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "25V358",
+   "years": "2024-2025 (some)",
+   "what": "Crankcase sealing bolt may be faulty and leak oil onto the rear tire.",
+   "fix": "Dealer replaces the sealing bolt free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/25V358000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "TRANSALP"
+}

@@ -1,0 +1,73 @@
+{
+ "id": "yamaha-royal-star-venture-1999",
+ "make": "Yamaha",
+ "model": "Royal Star Venture",
+ "name": "Yamaha Royal Star Venture",
+ "years": [
+  1999,
+  2013
+ ],
+ "match": [
+  "royal star venture",
+  "rsv",
+  "xvz13td",
+  "royal star venture s",
+  "venture 1300"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "engine": "1294 cc liquid-cooled V4, four carbs, shaft drive",
+ "intro": "Yamaha's full-dress V4 tourer. Four carbs under a lot of bodywork, and shaft drive.",
+ "focus": [
+  [
+   "1294 cc V4",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "Shaft drive",
+   "Change the oil"
+  ],
+  [
+   "Fairing",
+   "Lots of wiring"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "The carbs sit in the V under the tank. Plan for the time it takes to get to them."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Venture Riders",
+   "url": "https://www.ventureriders.org/",
+   "what": "Owner club for Yamaha Venture touring bikes."
+  }
+ ],
+ "silhouette": "yamaha-royal-star-venture-1999",
+ "areas": [],
+ "heroName": "VENTURE",
+ "hero": {
+  "src": "img/hero/yamaha-royal-star-venture-1999.jpg",
+  "artist": "kolochkov",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_XVZ1300TF_Royal_Star_Venture_2005.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

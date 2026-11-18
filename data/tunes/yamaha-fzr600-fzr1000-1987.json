@@ -1,0 +1,82 @@
+{
+ "id": "yamaha-fzr600-fzr1000-1987",
+ "make": "Yamaha",
+ "model": "FZR600 / FZR1000",
+ "name": "Yamaha FZR600 / FZR1000",
+ "years": [
+  1987,
+  1999
+ ],
+ "match": [
+  "fzr600",
+  "fzr1000",
+  "fzr 600",
+  "fzr 1000",
+  "fzr",
+  "fzr400",
+  "fzr600r"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "599 or 989 cc liquid-cooled inline four, four carbs, EXUP valve on the 1000",
+ "intro": "Yamaha's late 80s and 90s sport fours. Four carbs, a Deltabox frame and on the 1000 an EXUP exhaust valve that seizes.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "EXUP valve",
+   "1000 only"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-FZR-01",
+   "phase": "H",
+   "after": "H-003",
+   "title": "Free the EXUP valve (FZR1000)",
+   "instructions": "Remove the EXUP cover on the collector, check the valve turns freely and the cables are adjusted. Clean and grease it if it is stuck.",
+   "reason": "A seized EXUP valve kills midrange power and can strain the servo.",
+   "src": "Owner experience",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "silhouette": "yamaha-fzr600-fzr1000-1987",
+ "areas": [],
+ "heroName": "FZR1000"
+}

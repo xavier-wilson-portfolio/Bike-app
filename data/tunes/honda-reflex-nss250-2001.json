@@ -1,0 +1,61 @@
+{
+ "id": "honda-reflex-nss250-2001",
+ "make": "Honda",
+ "model": "Reflex NSS250",
+ "name": "Honda Reflex (NSS250)",
+ "years": [
+  2001,
+  2007
+ ],
+ "match": [
+  "reflex",
+  "nss250",
+  "nss 250",
+  "honda reflex",
+  "reflex 250",
+  "nss250a"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "249 cc liquid-cooled single, carb, CVT",
+ "intro": "The Forza's older sibling. One carb, a CVT belt and a lot of panels.",
+ "focus": [
+  [
+   "249 cc single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Bodywork",
+   "Many panels"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Honda scooters."
+  }
+ ],
+ "heroName": "REFLEX"
+}

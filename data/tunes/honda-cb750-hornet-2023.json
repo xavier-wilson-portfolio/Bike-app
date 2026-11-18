@@ -1,0 +1,54 @@
+{
+ "id": "honda-cb750-hornet-2023",
+ "make": "Honda",
+ "model": "CB750 Hornet",
+ "name": "Honda CB750 Hornet",
+ "years": [
+  2023,
+  2026
+ ],
+ "match": [
+  "cb750 hornet",
+  "hornet 750",
+  "cb750 2023",
+  "honda hornet",
+  "cb 750 hornet"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "755 cc liquid-cooled parallel twin, fuel injected, ride-by-wire",
+ "intro": "Honda's modern 750 naked twin. Same engine as the Transalp, with rider modes and a TFT dash.",
+ "focus": [
+  [
+   "755 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Electronics",
+   "Ride modes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [],
+ "heroName": "HORNET"
+}

@@ -1,0 +1,67 @@
+{
+ "id": "suzuki-ts185-ts250-1971",
+ "make": "Suzuki",
+ "model": "TS185 / TS250",
+ "name": "Suzuki TS185 / TS250",
+ "years": [
+  1971,
+  1981
+ ],
+ "match": [
+  "ts185",
+  "ts250",
+  "ts 185",
+  "ts 250",
+  "ts125",
+  "ts100"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "183 or 246 cc air-cooled two-stroke single, carb, Posi-Force oil injection",
+ "intro": "Suzuki's two-stroke trail bikes of the 70s. Oil injection, points and six-volt electrics on many.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Oil injected"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Oil pump",
+   "Bleed it"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Suzuki Cycles forum",
+   "url": "https://www.suzukicycles.org/",
+   "what": "Owner site for vintage Suzuki motorcycles."
+  }
+ ],
+ "heroName": "TS250"
+}

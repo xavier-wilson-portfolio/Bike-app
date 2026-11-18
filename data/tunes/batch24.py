@@ -5,7 +5,7 @@ KZR = dict(name="KZRider", url="https://www.kzrider.com/", what="Owner forum for
 YBRAKE = dict(id="20V814", years="2013-2020 FJR1300, 2018-2020 Super Tenere and others (some)", what="Front brake light switch may fail, so the brake light may not come on.", fix="Dealer replaces the switch free.", src="https://vehicleflaws.com/recall/20V814000")
 
 B24.append(dict(id="kawasaki-z1000-2003", make="Kawasaki", model="Z1000", name="Kawasaki Z1000", years=[2003, 2016],
-  match=["z1000", "z 1000", "zr1000", "z1000 abs", "z1000sx", "ninja 1000"], style="standard", drive="chain",
+  match=["z1000", "z 1000", "zr1000", "z1000 abs"], style="standard", drive="chain",
   engine="953 or 1043 cc liquid-cooled inline four, fuel injected",
   intro="Kawasaki's big naked four. Mostly normal upkeep on a fast road bike.",
   focus=[["Inline four", "Liquid-cooled"], ["Fuel injected", "No carbs"], ["Cooling", "Hoses and fan"], ["Chain drive", "Slack and lube"], ["Brakes", "Fluid and pads"]],

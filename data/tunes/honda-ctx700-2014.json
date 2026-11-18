@@ -1,0 +1,80 @@
+{
+ "id": "honda-ctx700-2014",
+ "make": "Honda",
+ "model": "CTX700",
+ "name": "Honda CTX700",
+ "years": [
+  2014,
+  2018
+ ],
+ "match": [
+  "ctx700",
+  "ctx 700",
+  "ctx700n",
+  "ctx700d",
+  "ctx700dct"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "670 cc liquid-cooled parallel twin, fuel injected, manual or DCT automatic",
+ "intro": "Honda's low, easy-going 700 twin. Some early ABS bikes had a recall, and 2014-2015 bikes a starter relay recall.",
+ "focus": [
+  [
+   "670 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "DCT option",
+   "Automatic"
+  ],
+  [
+   "Starter relay",
+   "2014-2015 recall"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 235 early 2014 CTX700ND bikes are in recall 13V307 (ABS modulator). 2014-2015 CTX700s are in recall 15V439 (starter relay).",
+   "reason": "Both fixes are free."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "J": [
+   "DCT bikes have no clutch lever. Check the DCT fluid and filter at the service intervals in the manual."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "13V307",
+   "years": "2014 CTX700ND (Mar-Apr 2013 build)",
+   "what": "ABS may malfunction and let the wheels lock.",
+   "fix": "Dealer replaces the ABS modulator free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/13V307000"
+  },
+  {
+   "id": "15V439",
+   "years": "2014-2015 (model list varies)",
+   "what": "Starter relay switch can fail, so the bike may not start, or the starter may keep running.",
+   "fix": "Dealer replaces the starter relay free.",
+   "src": "https://recallcheck.net/recall/15V439000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "silhouette": "honda-ctx700-2014",
+ "areas": [],
+ "heroName": "CTX700"
+}

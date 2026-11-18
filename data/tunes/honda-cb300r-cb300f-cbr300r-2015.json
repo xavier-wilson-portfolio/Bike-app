@@ -1,0 +1,100 @@
+{
+ "id": "honda-cb300r-cb300f-cbr300r-2015",
+ "make": "Honda",
+ "model": "CB300R / CB300F / CBR300R",
+ "name": "Honda CB300R / CB300F / CBR300R",
+ "years": [
+  2015,
+  2026
+ ],
+ "match": [
+  "cb300r",
+  "cb300f",
+  "cbr300r",
+  "cbr300",
+  "cb 300r",
+  "cbr 300r",
+  "cb300",
+  "cbr300ra"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "286 cc liquid-cooled single, fuel injected",
+ "intro": "Honda's 300 single in three styles. Several recalls cover different years, so run the VIN.",
+ "focus": [
+  [
+   "286 cc single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Recalls",
+   "Several"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2015 CB300F and CBR300R bikes are in recall 15V439 (starter relay). 2020-2021 CBR300Rs are in 21V382 (rear reflector). Some 2019 CB300Rs are in 19V412 (transmission circlip), and 2018-2025 CB300Rs are in 25V210 (headlight).",
+   "reason": "All fixes are free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "15V439",
+   "years": "2014-2015 (model list varies)",
+   "what": "Starter relay switch can fail, so the bike may not start, or the starter may keep running.",
+   "fix": "Dealer replaces the starter relay free.",
+   "src": "https://recallcheck.net/recall/15V439000"
+  },
+  {
+   "id": "21V382",
+   "years": "2020-2021 (some)",
+   "what": "Rear reflector lens may be too dim to meet the lighting standard.",
+   "fix": "Dealer replaces the rear reflector free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/21V382000"
+  },
+  {
+   "id": "19V412",
+   "years": "2019 CB300R (some)",
+   "what": "A transmission circlip can come off and misalign the gears.",
+   "fix": "Dealer replaces the transmission main shaft free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/19V412000"
+  },
+  {
+   "id": "25V210",
+   "years": "2018-2025 CB300R",
+   "what": "Headlight may flicker or shut off while riding.",
+   "fix": "Dealer replaces the headlight assembly free.",
+   "src": "https://www.vehiclesafetyrecalls.com/recall/25V210000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "silhouette": "honda-cb300r-cb300f-cbr300r-2015",
+ "areas": [],
+ "heroName": "CB300R",
+ "hero": {
+  "src": "img/hero/honda-cb300r-cb300f-cbr300r-2015.jpg",
+  "artist": "wanderley santos vie…",
+  "page": "https://commons.wikimedia.org/wiki/File:Vila_Rica,_Sabar%C3%A1_-_MG,_Brazil_-_panoramio_(3).jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

@@ -1,0 +1,54 @@
+{
+ "id": "kawasaki-klx110-2002",
+ "make": "Kawasaki",
+ "model": "KLX110",
+ "name": "Kawasaki KLX110",
+ "years": [
+  2002,
+  2026
+ ],
+ "match": [
+  "klx110",
+  "klx 110",
+  "klx110l",
+  "klx110r"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "112 cc air-cooled single, carb, semi-auto or manual clutch",
+ "intro": "A small kids' and pit bike. One carb, simple to work on, and usually ridden hard.",
+ "focus": [
+  [
+   "112 cc single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Clutch",
+   "Auto or manual"
+  ],
+  [
+   "Air filter",
+   "Foam, oiled"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [],
+ "heroName": "KLX110"
+}

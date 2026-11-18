@@ -1,0 +1,76 @@
+{
+ "id": "yamaha-fz-07-mt-07-tracer-7-2019",
+ "make": "Yamaha",
+ "model": "MT-07 / FZ-07 / Tracer 7",
+ "name": "Yamaha MT-07 / Tracer 7 (2018 on)",
+ "years": [
+  2018,
+  2026
+ ],
+ "match": [
+  "mt-07",
+  "mt07",
+  "fz-07",
+  "fz07",
+  "tracer 7",
+  "tracer 700",
+  "mt 07",
+  "tracer 7 gt"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "689 cc liquid-cooled CP2 parallel twin, fuel injected",
+ "intro": "The updated MT-07 and its touring sibling. Some 2018 bikes had a chain guard bolt recall.",
+ "focus": [
+  [
+   "689 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Chain guard",
+   "2018 recall"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2018 MT-07s are in recall 18V483 for chain guard mounting bolts that can loosen.",
+   "reason": "The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "18V483",
+   "years": "2018 (some)",
+   "what": "Chain guard mounting bolts can loosen from vibration.",
+   "fix": "Dealer replaces both chain guard bolts free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/18V483000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "FZ-07.org",
+   "url": "https://www.fz07.org/",
+   "what": "Owner forum for the Yamaha MT-07, FZ-07 and their relatives."
+  }
+ ],
+ "heroName": "MT-07"
+}

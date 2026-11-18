@@ -1,0 +1,73 @@
+{
+ "id": "kawasaki-kx250-two-stroke-1974",
+ "make": "Kawasaki",
+ "model": "KX250 (two-stroke)",
+ "name": "Kawasaki KX250 (two-stroke)",
+ "years": [
+  1974,
+  2007
+ ],
+ "match": [
+  "kx250",
+  "kx 250",
+  "kx250 two stroke",
+  "kx250 2 stroke"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 cc two-stroke single, carb, premix",
+ "intro": "Kawasaki's 250 two-stroke motocross bike. Premix, a top end that wears and no lights.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Top end",
+   "Check compression"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Air filter",
+   "Foam, oiled"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-KX25-01",
+   "phase": "G",
+   "after": "G-004",
+   "title": "Check compression and the top end",
+   "instructions": "Do a compression test. Low or uneven numbers mean the piston and rings are due. Look at the piston through the exhaust port for scoring.",
+   "reason": "A tired top end is the most common problem on a used two-stroke motocross bike.",
+   "src": "Two-stroke basics",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual. There is no oil tank."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [],
+ "heroName": "KX250"
+}

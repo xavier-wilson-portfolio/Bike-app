@@ -1,0 +1,75 @@
+{
+ "id": "kawasaki-ninja-600r-zx-600-1985",
+ "make": "Kawasaki",
+ "model": "Ninja 600R / ZX-600",
+ "name": "Kawasaki Ninja 600R (ZX600)",
+ "years": [
+  1985,
+  1997
+ ],
+ "match": [
+  "ninja 600r",
+  "zx600",
+  "zx-600",
+  "ninja 600",
+  "gpz600r",
+  "zx600a",
+  "zx600c"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "592 cc liquid-cooled inline four, four carbs",
+ "intro": "The early Ninja 600. Four carbs, full fairing and a lot of 80s and 90s wiring.",
+ "focus": [
+  [
+   "592 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Cooling",
+   "Hoses and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ZX Forums",
+   "url": "https://www.zxforums.com/",
+   "what": "Owner forum for Kawasaki Ninja ZX models."
+  }
+ ],
+ "silhouette": "kawasaki-ninja-600r-zx-600-1985",
+ "areas": [],
+ "heroName": "NINJA 600R",
+ "hero": {
+  "src": "img/hero/kawasaki-ninja-600r-zx-600-1985.jpg",
+  "artist": "Gearhead291",
+  "page": "https://commons.wikimedia.org/wiki/File:Ninja_600r.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

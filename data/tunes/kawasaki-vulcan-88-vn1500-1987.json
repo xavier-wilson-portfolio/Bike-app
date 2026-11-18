@@ -1,0 +1,60 @@
+{
+ "id": "kawasaki-vulcan-88-vn1500-1987",
+ "make": "Kawasaki",
+ "model": "Vulcan 88 (VN1500A)",
+ "name": "Kawasaki Vulcan 88 (VN1500)",
+ "years": [
+  1987,
+  1999
+ ],
+ "match": [
+  "vulcan 88",
+  "vn1500a",
+  "vulcan 88 1500",
+  "vulcan 88 se",
+  "vn1500 88"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "1470 cc liquid-cooled V-twin, one carb, shaft drive",
+ "intro": "The first big Vulcan. One carb, shaft drive, and a simple bike under the chrome.",
+ "focus": [
+  [
+   "1470 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Shaft drive",
+   "Change the oil"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vulcan Riders Association",
+   "url": "https://www.vulcanriders.org/",
+   "what": "Owner club and forum for Kawasaki Vulcans."
+  }
+ ],
+ "heroName": "VULCAN 88"
+}

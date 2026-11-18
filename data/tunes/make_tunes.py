@@ -81,7 +81,7 @@ T.append(dict(id="suzuki-gs550", make="Suzuki", model="GS550", name="Suzuki GS55
   forums=[dict(name="The GS Resources", url="https://www.thegsresources.com/", what="The main Suzuki GS forum, with carb, wiring and manual downloads.")]))
 
 T.append(dict(id="honda-cb350-twin", make="Honda", model="CB350", name="Honda CB350 / CL350", years=[1968, 1973],
-  match=["cb350", "cb 350", "cl350", "cl 350", "cb350k", "cl350k", "sl350"], style="standard", drive="chain",
+  match=["cb350", "cb 350", "cl350", "cl 350", "cb350k", "cl350k"], style="standard", drive="chain",
   engine="325 cc air-cooled SOHC parallel twin, two carbs",
   intro="A very common first restoration, with a big owner community and good parts supply.",
   focus=[["SOHC parallel twin", "Air-cooled"], ["Centrifugal oil filter", "Clean the slinger"], ["Cam chain tensioner", "Old rubber roller"], ["Points ignition", "Watch cam bearing wear"], ["Two carbs", "Clean and sync"]],
@@ -196,9 +196,19 @@ from batch27 import B27, HERO_NAME_B27
 from batch28 import B28, HERO_NAME_B28
 from batch29 import B29, HERO_NAME_B29
 from batch30 import B30, HERO_NAME_B30
-T += B2 + B3 + B4 + B5 + B6 + B7 + B8 + B9 + B10 + B11 + B12 + B13 + B14 + B15 + B16 + B17 + B18 + B19 + B20 + B21 + B22 + B23 + B24 + B25 + B26 + B27 + B28 + B29 + B30
+from batch31 import B31, HERO_NAME_B31
+from batch32 import B32, HERO_NAME_B32
+from batch33 import B33, HERO_NAME_B33
+from batch34 import B34, HERO_NAME_B34
+from batch35 import B35, HERO_NAME_B35
+from batch36 import B36, HERO_NAME_B36
+from batch37 import B37, HERO_NAME_B37
+from batch38 import B38, HERO_NAME_B38
+from batch39 import B39, HERO_NAME_B39
+from batch40 import B40, HERO_NAME_B40
+T += B2 + B3 + B4 + B5 + B6 + B7 + B8 + B9 + B10 + B11 + B12 + B13 + B14 + B15 + B16 + B17 + B18 + B19 + B20 + B21 + B22 + B23 + B24 + B25 + B26 + B27 + B28 + B29 + B30 + B31 + B32 + B33 + B34 + B35 + B36 + B37 + B38 + B39 + B40
 HERO_NAME = {"honda-cb750-sohc": "CB750", "honda-rebel-500": "REBEL", "kawasaki-kz650": "KZ650", "yamaha-mt07-gen1": "MT-07", "yamaha-xs650": "XS650", "kawasaki-ninja-400": "NINJA", "suzuki-gs550": "GS550", "harley-street-glide-m8": "GLIDE", "honda-cb350-twin": "CB350", "kawasaki-klr650-gen2": "KLR"}
-HERO_NAME.update(HERO_NAME_B2); HERO_NAME.update(HERO_NAME_B3); HERO_NAME.update(HERO_NAME_B4); HERO_NAME.update(HERO_NAME_B5); HERO_NAME.update(HERO_NAME_B6); HERO_NAME.update(HERO_NAME_B7); HERO_NAME.update(HERO_NAME_B8); HERO_NAME.update(HERO_NAME_B9); HERO_NAME.update(HERO_NAME_B10); HERO_NAME.update(HERO_NAME_B11); HERO_NAME.update(HERO_NAME_B12); HERO_NAME.update(HERO_NAME_B13); HERO_NAME.update(HERO_NAME_B14); HERO_NAME.update(HERO_NAME_B15); HERO_NAME.update(HERO_NAME_B16); HERO_NAME.update(HERO_NAME_B17); HERO_NAME.update(HERO_NAME_B18); HERO_NAME.update(HERO_NAME_B19); HERO_NAME.update(HERO_NAME_B20); HERO_NAME.update(HERO_NAME_B21); HERO_NAME.update(HERO_NAME_B22); HERO_NAME.update(HERO_NAME_B23); HERO_NAME.update(HERO_NAME_B24); HERO_NAME.update(HERO_NAME_B25); HERO_NAME.update(HERO_NAME_B26); HERO_NAME.update(HERO_NAME_B27); HERO_NAME.update(HERO_NAME_B28); HERO_NAME.update(HERO_NAME_B29); HERO_NAME.update(HERO_NAME_B30)
+HERO_NAME.update(HERO_NAME_B2); HERO_NAME.update(HERO_NAME_B3); HERO_NAME.update(HERO_NAME_B4); HERO_NAME.update(HERO_NAME_B5); HERO_NAME.update(HERO_NAME_B6); HERO_NAME.update(HERO_NAME_B7); HERO_NAME.update(HERO_NAME_B8); HERO_NAME.update(HERO_NAME_B9); HERO_NAME.update(HERO_NAME_B10); HERO_NAME.update(HERO_NAME_B11); HERO_NAME.update(HERO_NAME_B12); HERO_NAME.update(HERO_NAME_B13); HERO_NAME.update(HERO_NAME_B14); HERO_NAME.update(HERO_NAME_B15); HERO_NAME.update(HERO_NAME_B16); HERO_NAME.update(HERO_NAME_B17); HERO_NAME.update(HERO_NAME_B18); HERO_NAME.update(HERO_NAME_B19); HERO_NAME.update(HERO_NAME_B20); HERO_NAME.update(HERO_NAME_B21); HERO_NAME.update(HERO_NAME_B22); HERO_NAME.update(HERO_NAME_B23); HERO_NAME.update(HERO_NAME_B24); HERO_NAME.update(HERO_NAME_B25); HERO_NAME.update(HERO_NAME_B26); HERO_NAME.update(HERO_NAME_B27); HERO_NAME.update(HERO_NAME_B28); HERO_NAME.update(HERO_NAME_B29); HERO_NAME.update(HERO_NAME_B30); HERO_NAME.update(HERO_NAME_B31); HERO_NAME.update(HERO_NAME_B32); HERO_NAME.update(HERO_NAME_B33); HERO_NAME.update(HERO_NAME_B34); HERO_NAME.update(HERO_NAME_B35); HERO_NAME.update(HERO_NAME_B36); HERO_NAME.update(HERO_NAME_B37); HERO_NAME.update(HERO_NAME_B38); HERO_NAME.update(HERO_NAME_B39); HERO_NAME.update(HERO_NAME_B40)
 CRED = json.loads((HERE.parent.parent / "img" / "sil" / "credits.json").read_text())
 AREAS = ["engine", "fuel", "wheels", "brakes", "suspension", "electrical"]
 SIL = HERE.parent.parent / "img" / "sil"

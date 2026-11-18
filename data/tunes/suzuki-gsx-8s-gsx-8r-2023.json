@@ -1,0 +1,69 @@
+{
+ "id": "suzuki-gsx-8s-gsx-8r-2023",
+ "make": "Suzuki",
+ "model": "GSX-8S / GSX-8R",
+ "name": "Suzuki GSX-8S / GSX-8R",
+ "years": [
+  2023,
+  2026
+ ],
+ "match": [
+  "gsx-8s",
+  "gsx8s",
+  "gsx-8r",
+  "gsx8r",
+  "gsx 8s",
+  "gsx 8r",
+  "gsx800"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "776 cc liquid-cooled parallel twin, fuel injected, ride-by-wire",
+ "intro": "Suzuki's 800 twin street bikes. Some early 2024 GSX-8Rs had a drive chain recall.",
+ "focus": [
+  [
+   "776 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Drive chain",
+   "2024 recall"
+  ],
+  [
+   "Electronics",
+   "Ride modes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2024 GSX-8Rs are in recall 24V081 for a drive chain with missing rivets.",
+   "reason": "A chain that comes apart cuts drive to the rear wheel. The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "24V081",
+   "years": "2024 GSX-8R (some)",
+   "what": "Drive chain may be missing rivets and can come apart.",
+   "fix": "Dealer inspects and replaces the chain free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/24V081000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "GSX-8S"
+}

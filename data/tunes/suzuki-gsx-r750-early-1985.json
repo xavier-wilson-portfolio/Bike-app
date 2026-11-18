@@ -1,0 +1,68 @@
+{
+ "id": "suzuki-gsx-r750-early-1985",
+ "make": "Suzuki",
+ "model": "GSX-R750 (oil-cooled and early)",
+ "name": "Suzuki GSX-R750 (1985-1995)",
+ "years": [
+  1985,
+  1995
+ ],
+ "match": [
+  "gsx-r750",
+  "gsxr750",
+  "gsxr 750",
+  "gixxer 750",
+  "gsx r750",
+  "slingshot"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "749 cc oil-cooled (water-cooled from 1992) inline four, four carbs",
+ "intro": "The first GSX-R750s. Oil-cooled until 1992, four carbs, and a big part of sportbike history.",
+ "focus": [
+  [
+   "749 cc four",
+   "Oil or water cooled"
+  ],
+  [
+   "Four carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "Oil cooler",
+   "Check lines"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ],
+  "E": [
+   "Oil-cooled GSX-Rs depend on the oil to cool the engine. Use the oil spec in the manual and check the cooler lines for leaks."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "GSXR.com",
+   "url": "https://www.gsxr.com/",
+   "what": "Owner forum for Suzuki GSX-R models, including the early oil-cooled bikes."
+  }
+ ],
+ "heroName": "GSX-R750"
+}

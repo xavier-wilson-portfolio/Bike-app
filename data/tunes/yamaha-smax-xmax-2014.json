@@ -1,0 +1,90 @@
+{
+ "id": "yamaha-smax-xmax-2014",
+ "make": "Yamaha",
+ "model": "SMAX / XMAX",
+ "name": "Yamaha SMAX / XMAX",
+ "years": [
+  2014,
+  2026
+ ],
+ "match": [
+  "xmax",
+  "x-max",
+  "xmax 300",
+  "czd300",
+  "smax",
+  "s-max",
+  "smax 155",
+  "xc155"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "155 or 292 cc liquid-cooled single, fuel injected, CVT",
+ "intro": "Yamaha's modern maxi-scooters. 2018-2022 XMAXs have a cam retainer bolt recall that NHTSA flagged do-not-ride.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Cam retainer",
+   "XMAX recall"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2018-2022 XMAXs are in recall 25V778 (camshaft retainer bolt). 2018-2020 XMAXs are in 20V611 (rear reflector) and some 2019-2020 bikes in 21V048 (VIN label).",
+   "reason": "The cam bolt can stall the engine. All fixes are free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "25V778",
+   "years": "2018-2022 XMAX (some)",
+   "what": "Camshaft retainer bolt can loosen and the cam can come loose, stalling the engine.",
+   "fix": "Free dealer repair.",
+   "src": "https://motorsportsnewswire.com/?p=203407"
+  },
+  {
+   "id": "20V611",
+   "years": "2018-2020 XMAX",
+   "what": "Condensation can collect on the rear reflector lens and make it less effective.",
+   "fix": "Dealer replaces the rear reflector free.",
+   "src": "https://vehicleflaws.com/recall/20V611000"
+  },
+  {
+   "id": "21V048",
+   "years": "2019-2020 XMAX (some)",
+   "what": "VIN on the federal certification label may not match the frame.",
+   "fix": "Dealer checks and replaces the label free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/21V048000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "XMAX"
+}

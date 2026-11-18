@@ -1,0 +1,79 @@
+{
+ "id": "kawasaki-kdx200-1983",
+ "make": "Kawasaki",
+ "model": "KDX200",
+ "name": "Kawasaki KDX200",
+ "years": [
+  1983,
+  2006
+ ],
+ "match": [
+  "kdx200",
+  "kdx 200",
+  "kdx220",
+  "kdx220r",
+  "kdx 220"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "198 cc liquid-cooled two-stroke single, carb, oil injection or premix",
+ "intro": "Kawasaki's two-stroke enduro bike. Light, simple and usually ridden hard in the woods.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "Top end",
+   "Check compression"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Air filter",
+   "Foam, oiled"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-KDX-01",
+   "phase": "G",
+   "after": "G-004",
+   "title": "Check compression and the top end",
+   "instructions": "Do a compression test. Low numbers mean the piston and rings are due. Look at the piston through the exhaust port for scoring.",
+   "reason": "A tired top end is the most common problem on a used two-stroke.",
+   "src": "Two-stroke basics",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [],
+ "silhouette": "kawasaki-kdx200-1983",
+ "areas": [],
+ "heroName": "KDX200",
+ "hero": {
+  "src": "img/hero/kawasaki-kdx200-1983.jpg",
+  "artist": "Prognation",
+  "page": "https://commons.wikimedia.org/wiki/File:1987_KDX200_C.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

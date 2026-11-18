@@ -1,0 +1,66 @@
+{
+ "id": "honda-xr600r-1985",
+ "make": "Honda",
+ "model": "XR600R",
+ "name": "Honda XR600R",
+ "years": [
+  1985,
+  2000
+ ],
+ "match": [
+  "xr600r",
+  "xr600",
+  "xr 600",
+  "xr 600r"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "591 cc air-cooled four-valve single, carb, kick start",
+ "intro": "The big air-cooled XR. Kick start only, with a decompression lever you need to use.",
+ "focus": [
+  [
+   "591 cc single",
+   "Air-cooled"
+  ],
+  [
+   "Kick start",
+   "Use the decomp"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Check often"
+  ],
+  [
+   "Air filter",
+   "Foam, oiled"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Air-cooled Honda singles need the valve clearance checked often. A tight exhaust valve is the usual cause of hard starting."
+  ],
+  "B": [
+   "Find top dead center with the decompression lever before you kick. A big single can kick back hard."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XR's Only",
+   "url": "https://www.xrsonly.com/",
+   "what": "Parts and know-how for Honda XR dirt bikes."
+  }
+ ],
+ "heroName": "XR600R"
+}

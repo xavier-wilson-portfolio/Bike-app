@@ -1,0 +1,66 @@
+{
+ "id": "kawasaki-kz900-1976",
+ "make": "Kawasaki",
+ "model": "KZ900",
+ "name": "Kawasaki KZ900 / Z900",
+ "years": [
+  1976,
+  1977
+ ],
+ "match": [
+  "kz900",
+  "kz 900",
+  "z900 1976",
+  "z900 1977",
+  "kz900 ltd",
+  "kz900a"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "903 cc air-cooled DOHC inline four, four carbs, points",
+ "intro": "The Z1's direct follow-up. Four carbs, points ignition and a crank that rewards a careful rebuild.",
+ "focus": [
+  [
+   "903 cc four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Cam chain",
+   "Check tensioner"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KZRider",
+   "url": "https://www.kzrider.com/",
+   "what": "Forum for vintage Kawasaki KZ and Z bikes."
+  }
+ ],
+ "heroName": "KZ900"
+}

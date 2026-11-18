@@ -20,7 +20,7 @@ B13.append(dict(id="honda-cb1000r-2008", make="Honda", model="CB1000R", name="Ho
   recalls=[], recallNote=VIN, known=[], forums=[]))
 
 B13.append(dict(id="honda-nc700x-2012", make="Honda", model="NC700X", name="Honda NC700X", years=[2012, 2015],
-  match=["nc700x", "nc700", "nc 700x", "nc700xd", "nc750x"], style="adventure", drive="chain",
+  match=["nc700x", "nc700", "nc 700x", "nc700xd"], style="adventure", drive="chain",
   engine="670 cc liquid-cooled parallel twin, fuel injected, manual or DCT",
   intro="Honda's practical commuter-adventure twin. Check the drive chain and starter relay recalls.",
   focus=[["670 cc twin", "Liquid-cooled"], ["Fuel injected", "No carbs"], ["Manual or DCT", "Know which"], ["Chain recall", "2012"], ["Storage bin", "Where the tank usually is"]],
@@ -100,7 +100,7 @@ B13.append(dict(id="kawasaki-concours-14-2008", make="Kawasaki", model="Concours
   known=[], forums=[]))
 
 B13.append(dict(id="kawasaki-vulcan-1500-1600-1987", make="Kawasaki", model="Vulcan 1500/1600", name="Kawasaki Vulcan 1500 / 1600", years=[1987, 2008],
-  match=["vulcan 1500", "vulcan 1600", "vn1500", "vn1600", "nomad", "drifter", "mean streak", "vulcan classic"], style="cruiser", drive="shaft",
+  match=["vulcan 1500", "vulcan 1600", "vn1500", "vn1600", "vulcan classic"], style="cruiser", drive="shaft",
   engine="1470 or 1552 cc liquid-cooled V-twin, carb or fuel injection, shaft drive",
   intro="Kawasaki's big Vulcans. Tough engines. Check the 2003-2004 oil filter recall on some models.",
   focus=[["Big V-twin", "Liquid-cooled"], ["Carb or EFI", "Depends on model"], ["Oil filter recall", "2003-2004"], ["Shaft drive", "Final drive oil"], ["Charging", "Test the R/R"]],

@@ -1,0 +1,88 @@
+{
+ "id": "yamaha-xv1600-1700-road-star-warrior-2002",
+ "make": "Yamaha",
+ "model": "Road Star Warrior",
+ "name": "Yamaha Road Star Warrior (XV1700PC)",
+ "years": [
+  2002,
+  2010
+ ],
+ "match": [
+  "road star warrior",
+  "warrior",
+  "xv1700pc",
+  "star warrior",
+  "xv17pc",
+  "warrior 1700"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "1670 cc air-cooled V-twin, fuel injected, belt drive",
+ "intro": "Yamaha's sport cruiser. Fuel injected, belt drive and an aluminum frame. Early bikes had several recalls.",
+ "focus": [
+  [
+   "1670 cc V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Belt drive",
+   "Check wear"
+  ],
+  [
+   "Early recalls",
+   "2002-2007"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2002 Warriors had a fuel tank mount recall (02V181), 2002-2003 bikes a transmission recall (03V309), and some later bikes a pickup coil wire recall (07V039).",
+   "reason": "These are old, but a bike that missed one still has the fault."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "02V181",
+   "years": "2002",
+   "what": "Fuel tank mounting problem.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehicleflaws.com/vehicle/yamaha/xv1700pc/2002"
+  },
+  {
+   "id": "03V309",
+   "years": "2002-2003",
+   "what": "Transmission defect.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehicleflaws.com/vehicle/yamaha/xv17pcp/2003"
+  },
+  {
+   "id": "07V039",
+   "years": "Some Warriors (VIN check)",
+   "what": "Pickup coil lead wires can break while running, stalling the engine with no restart.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehiclesafetyrecalls.com/recall/07V039000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "Star Bike Forums",
+   "url": "https://www.starbikeforums.com/",
+   "what": "Owner forum for Yamaha Star cruisers."
+  }
+ ],
+ "heroName": "WARRIOR"
+}

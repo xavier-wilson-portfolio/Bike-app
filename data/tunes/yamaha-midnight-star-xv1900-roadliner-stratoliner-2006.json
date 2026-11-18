@@ -1,0 +1,84 @@
+{
+ "id": "yamaha-midnight-star-xv1900-roadliner-stratoliner-2006",
+ "make": "Yamaha",
+ "model": "Roadliner / Stratoliner / Midnight Star 1900",
+ "name": "Yamaha Roadliner / Stratoliner (XV1900)",
+ "years": [
+  2006,
+  2013
+ ],
+ "match": [
+  "roadliner",
+  "stratoliner",
+  "xv1900",
+  "xv19",
+  "midnight star 1900",
+  "star roadliner",
+  "star stratoliner"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "1854 cc air-cooled V-twin, fuel injected, belt drive",
+ "intro": "Yamaha's big 1900 cruisers. Fuel injected and belt drive. Some 2006 bikes had a throttle cable recall.",
+ "focus": [
+  [
+   "1854 cc V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Belt drive",
+   "Check wear"
+  ],
+  [
+   "Throttle cable",
+   "2006 recall"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2006 XV1900s are in recall 07V147 for the throttle cables.",
+   "reason": "The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "07V147",
+   "years": "2006 (some)",
+   "what": "Throttle cable problem.",
+   "fix": "Free dealer repair.",
+   "src": "https://auto-recalls.justia.com/yamaha/xv19/2006/07v147000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "Star Bike Forums",
+   "url": "https://www.starbikeforums.com/",
+   "what": "Owner forum for Yamaha Star cruisers."
+  }
+ ],
+ "silhouette": "yamaha-midnight-star-xv1900-roadliner-stratoliner-2006",
+ "areas": [],
+ "heroName": "ROADLINER",
+ "hero": {
+  "src": "img/hero/yamaha-midnight-star-xv1900-roadliner-stratoliner-2006.jpg",
+  "artist": "Retired electrician",
+  "page": "https://commons.wikimedia.org/wiki/File:Moscow,_Yamaha_XV1900_Stratoliner,_May_2026_01.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
+}

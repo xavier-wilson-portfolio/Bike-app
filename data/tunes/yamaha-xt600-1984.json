@@ -1,0 +1,70 @@
+{
+ "id": "yamaha-xt600-1984",
+ "make": "Yamaha",
+ "model": "XT600",
+ "name": "Yamaha XT600",
+ "years": [
+  1984,
+  1995
+ ],
+ "match": [
+  "xt600",
+  "xt 600",
+  "xt600e",
+  "xt600z",
+  "tenere 600",
+  "xt600a"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "595 cc air-cooled four-valve single, carb",
+ "intro": "Yamaha's big air-cooled dual-sport single. Simple and tough, with a valve check that matters.",
+ "focus": [
+  [
+   "595 cc single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Check often"
+  ],
+  [
+   "Air filter",
+   "Foam, oiled"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "silhouette": "yamaha-xt600-1984",
+ "areas": [],
+ "heroName": "XT600",
+ "hero": {
+  "src": "img/hero/yamaha-xt600-1984.jpg",
+  "artist": "SG2012",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_XT600_(1988).jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

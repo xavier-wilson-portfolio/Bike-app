@@ -1,0 +1,86 @@
+{
+ "id": "suzuki-intruder-1500-lc-c90-1998",
+ "make": "Suzuki",
+ "model": "Intruder 1500 LC / Boulevard C90",
+ "name": "Suzuki Intruder 1500 LC / Boulevard C90",
+ "years": [
+  1998,
+  2014
+ ],
+ "match": [
+  "intruder 1500",
+  "vl1500",
+  "vl 1500",
+  "c90",
+  "boulevard c90",
+  "c90t",
+  "c90 boss"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "1462 cc liquid-cooled V-twin, carbs then fuel injection, shaft drive",
+ "intro": "Suzuki's 1500 cruiser. 1998-2005 bikes and some 2006 bikes have a fuel tank recall that Suzuki said not to ride with.",
+ "focus": [
+  [
+   "1462 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel",
+   "Carbs then EFI"
+  ],
+  [
+   "Fuel tank",
+   "1998-2006 recall"
+  ],
+  [
+   "Shaft drive",
+   "Change the oil"
+  ],
+  [
+   "Charging",
+   "Stator"
+  ]
+ ],
+ "remove": [],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. All 1998-2005 VL1500s and some 2006 VL1500 and C90 bikes are in recall 06V025 for a fuel tank that can seep fuel.",
+   "reason": "Seeping fuel is a fire risk. Suzuki said not to ride an affected bike until it is fixed. The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check which you have. Carbureted bikes get the carb steps; fuel-injected bikes skip them."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "06V025",
+   "years": "1998-2005, some 2006",
+   "what": "Fuel tank can seep fuel, which is a fire risk.",
+   "fix": "Dealer inspects and replaces the fuel tank free.",
+   "src": "https://auto-recalls.justia.com/suzuki/vl1500/2001/06v025000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "Suzuki Boulevard forums",
+   "url": "https://www.boulevardriders.com/",
+   "what": "Owner forum for Suzuki Boulevard and Intruder cruisers."
+  }
+ ],
+ "silhouette": "suzuki-intruder-1500-lc-c90-1998",
+ "areas": [],
+ "heroName": "C90",
+ "hero": {
+  "src": "img/hero/suzuki-intruder-1500-lc-c90-1998.jpg",
+  "artist": "No.666",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_Intruder_VL_1500_LC_1.JPG",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
+}

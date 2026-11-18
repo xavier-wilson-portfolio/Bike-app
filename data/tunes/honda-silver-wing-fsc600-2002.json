@@ -1,0 +1,88 @@
+{
+ "id": "honda-silver-wing-fsc600-2002",
+ "make": "Honda",
+ "model": "Silver Wing FSC600",
+ "name": "Honda Silver Wing (FSC600)",
+ "years": [
+  2002,
+  2013
+ ],
+ "match": [
+  "silver wing",
+  "silverwing",
+  "fsc600",
+  "fsc 600",
+  "silver wing 600",
+  "fsc600a"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "582 cc liquid-cooled parallel twin, fuel injected, CVT",
+ "intro": "Honda's 600 twin maxi-scooter. Early 2002-2004 bikes had several recalls, from the rear wheel to the stand.",
+ "focus": [
+  [
+   "582 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Early recalls",
+   "2002-2004"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2002 Silver Wings had a rear wheel recall (02V250), 2002-2003 bikes a handlebar recall (03V513), and 2002-2004 bikes a stand recall (04V290).",
+   "reason": "These are old, but a bike that missed them still has the fault."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "02V250",
+   "years": "2002",
+   "what": "Rear wheel spokes can fail and the wheel can collapse.",
+   "fix": "Dealer replaces the rear wheel free.",
+   "src": "https://www.carproblemzoo.com/recalls/honda-silverwing.php"
+  },
+  {
+   "id": "03V513",
+   "years": "2002-2003",
+   "what": "Handlebar problem that could cause a loss of steering control.",
+   "fix": "Free dealer repair.",
+   "src": "https://auto-recalls.justia.com/honda/fsc600/2003/03v513000"
+  },
+  {
+   "id": "04V290",
+   "years": "2002-2004",
+   "what": "Kickstand or center stand can come loose and fall off.",
+   "fix": "Free dealer repair.",
+   "src": "https://auto-recalls.justia.com/honda/fsc600/2003/04v290000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Honda scooters."
+  }
+ ],
+ "heroName": "SILVER WING"
+}

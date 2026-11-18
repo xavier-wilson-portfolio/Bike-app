@@ -1,0 +1,87 @@
+{
+ "id": "honda-vf500f-interceptor-1984",
+ "make": "Honda",
+ "model": "VF500F Interceptor",
+ "name": "Honda VF500F Interceptor",
+ "years": [
+  1984,
+  1986
+ ],
+ "match": [
+  "vf500f",
+  "vf500",
+  "interceptor 500",
+  "vf 500f",
+  "vf500c magna"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "498 cc liquid-cooled V4, four carbs",
+ "intro": "The small V4 Interceptor. Four tiny carbs in the V and a lot of 1980s wiring.",
+ "focus": [
+  [
+   "498 cc V4",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "In the V"
+  ],
+  [
+   "Cam wear",
+   "Check it"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-V4-01",
+   "phase": "H",
+   "after": "H-003",
+   "title": "Check for cam and rocker wear",
+   "instructions": "With the valve covers off, look at the cam lobes and rocker pads for pitting or flat spots. Early Honda V4s are known for cam wear, often from poor oiling or old oil.",
+   "reason": "Worn cams on early V4 Interceptors are a known weak point.",
+   "src": "Owner experience",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 3.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "VFRDiscussion",
+   "url": "https://www.vfrdiscussion.com/",
+   "what": "Owner forum for Honda VFR and Interceptor models."
+  }
+ ],
+ "silhouette": "honda-vf500f-interceptor-1984",
+ "areas": [],
+ "heroName": "VF500F",
+ "hero": {
+  "src": "img/hero/honda-vf500f-interceptor-1984.jpg",
+  "artist": "Mike Schinkel",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_VF_500_Interceptor.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

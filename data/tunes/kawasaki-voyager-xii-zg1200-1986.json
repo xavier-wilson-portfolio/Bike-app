@@ -1,0 +1,64 @@
+{
+ "id": "kawasaki-voyager-xii-zg1200-1986",
+ "make": "Kawasaki",
+ "model": "Voyager XII (ZG1200)",
+ "name": "Kawasaki Voyager XII",
+ "years": [
+  1986,
+  2003
+ ],
+ "match": [
+  "voyager xii",
+  "voyager 1200",
+  "zg1200",
+  "zg 1200",
+  "voyager 12"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "engine": "1196 cc liquid-cooled inline four, four carbs, shaft drive",
+ "intro": "Kawasaki's full-dress tourer for nearly 20 years. Four carbs, shaft drive and a lot of fairing.",
+ "focus": [
+  [
+   "1196 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "Shaft drive",
+   "Change the oil"
+  ],
+  [
+   "Fairing",
+   "Lots of wiring"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KawiForums",
+   "url": "https://www.kawiforums.com/",
+   "what": "Owner forum for Kawasaki motorcycles."
+  }
+ ],
+ "heroName": "VOYAGER"
+}

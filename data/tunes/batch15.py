@@ -28,7 +28,7 @@ B15.append(dict(id="yamaha-road-star-1600-1700-1999", make="Yamaha", model="Road
   known=[], forums=[]))
 
 B15.append(dict(id="yamaha-royal-star-1996", make="Yamaha", model="Royal Star", name="Yamaha Royal Star", years=[1996, 2013],
-  match=["royal star", "xvz1300", "royal star tour deluxe", "rstd", "royal star venture"], style="cruiser", drive="shaft",
+  match=["royal star", "xvz1300", "royal star tour deluxe", "rstd"], style="cruiser", drive="shaft",
   engine="1294 cc liquid-cooled V4, four carbs, shaft drive",
   intro="A smooth V4 cruiser. Four carbs that need clean floats, intact vacuum caps and a good sync.",
   focus=[["1294 cc V4", "Liquid-cooled"], ["Four carbs", "Floats and sync"], ["Vacuum caps", "Split with age"], ["Shaft drive", "Final drive oil"], ["Parts", "Some carb bits are rare"]],

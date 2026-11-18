@@ -1,0 +1,73 @@
+{
+ "id": "yamaha-zuma-125-yw125-2009",
+ "make": "Yamaha",
+ "model": "Zuma 125 (YW125)",
+ "name": "Yamaha Zuma 125",
+ "years": [
+  2009,
+  2026
+ ],
+ "match": [
+  "zuma 125",
+  "yw125",
+  "yw 125",
+  "zuma125",
+  "bws 125"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "125 cc air-cooled single, fuel injected, CVT",
+ "intro": "The chunky 125 Zuma. Fuel injected, with a fuel pump recall on 2009 scooters.",
+ "focus": [
+  [
+   "125 cc single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Fuel pump",
+   "2009 recall"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Gear oil",
+   "Change it"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2009 Zuma 125s are in recall 13V035 for a fuel pump that can starve the engine and stall it in hot weather.",
+   "reason": "The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "13V035",
+   "years": "2009",
+   "what": "Fuel pump may have wrong internal clearances and can fail, stalling the engine.",
+   "fix": "Dealer replaces the fuel pump with a new design free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/13V035000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "ZUMA 125"
+}

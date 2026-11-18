@@ -1,0 +1,74 @@
+{
+ "id": "kawasaki-vulcan-1500-nomad-drifter-1998",
+ "make": "Kawasaki",
+ "model": "Vulcan 1500 Nomad / Drifter / Classic",
+ "name": "Kawasaki Vulcan 1500 (Nomad, Drifter, Classic)",
+ "years": [
+  1998,
+  2008
+ ],
+ "match": [
+  "vulcan 1500 nomad",
+  "nomad 1500",
+  "vn1500 nomad",
+  "drifter",
+  "vulcan drifter",
+  "drifter 1500",
+  "vulcan 1500 classic",
+  "vn1500 classic",
+  "nomad"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "1470 cc liquid-cooled V-twin, carb or fuel injected depending on model, shaft drive",
+ "intro": "The later 1500 Vulcans. Some have a carb, some fuel injection. All are shaft drive.",
+ "focus": [
+  [
+   "1470 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "Shaft drive",
+   "Change the oil"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check which you have. Carbureted bikes get the carb steps; fuel-injected bikes skip them."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "04V023",
+   "years": "2003-2004 (some Classic, Drifter, Mean Streak, Nomad FI)",
+   "what": "High oil pressure on a cold start can deform the oil filter cartridge.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehiclesafetyrecalls.com/recall/04V023000"
+  }
+ ],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vulcan Riders Association",
+   "url": "https://www.vulcanriders.org/",
+   "what": "Owner club and forum for Kawasaki Vulcans."
+  }
+ ],
+ "heroName": "NOMAD"
+}

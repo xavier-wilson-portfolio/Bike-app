@@ -1,0 +1,64 @@
+{
+ "id": "yamaha-pw50-1981",
+ "make": "Yamaha",
+ "model": "PW50",
+ "name": "Yamaha PW50 (Pee Wee)",
+ "years": [
+  1981,
+  2026
+ ],
+ "match": [
+  "pw50",
+  "pw 50",
+  "pee wee",
+  "peewee 50",
+  "yamaha pw50",
+  "y-zinger"
+ ],
+ "style": "dualsport",
+ "drive": "shaft",
+ "engine": "49 cc air-cooled two-stroke single, carb, automatic, shaft drive",
+ "intro": "The kids' bike most riders started on. Two-stroke with oil injection, automatic, and shaft drive.",
+ "focus": [
+  [
+   "49 cc two-stroke",
+   "Oil injected"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Automatic",
+   "No clutch"
+  ],
+  [
+   "Shaft drive",
+   "Check oil"
+  ],
+  [
+   "Throttle limiter",
+   "Set for the rider"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ],
+  "B": [
+   "Set the throttle limiter screw for the rider's skill before the first ride."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [],
+ "heroName": "PW50"
+}

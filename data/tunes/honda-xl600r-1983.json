@@ -1,0 +1,67 @@
+{
+ "id": "honda-xl600r-1983",
+ "make": "Honda",
+ "model": "XL600R",
+ "name": "Honda XL600R",
+ "years": [
+  1983,
+  1987
+ ],
+ "match": [
+  "xl600r",
+  "xl600",
+  "xl 600",
+  "xl 600r",
+  "xl600rm"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "589 cc air-cooled four-valve single, twin carbs, kick start",
+ "intro": "The street-legal big Honda single of the 80s. Kick start only on most, with two carbs feeding one cylinder.",
+ "focus": [
+  [
+   "589 cc single",
+   "Air-cooled"
+  ],
+  [
+   "Twin carbs",
+   "Clean both"
+  ],
+  [
+   "Kick start",
+   "Use the decomp"
+  ],
+  [
+   "Valves",
+   "Check often"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Air-cooled Honda singles need the valve clearance checked often. A tight exhaust valve is the usual cause of hard starting."
+  ],
+  "G": [
+   "There are two carbs on one cylinder. The second one only opens at higher throttle, so it gums up first when the bike sits."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XR's Only",
+   "url": "https://www.xrsonly.com/",
+   "what": "Parts and know-how for Honda XR dirt bikes."
+  }
+ ],
+ "heroName": "XL600R"
+}

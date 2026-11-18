@@ -1,0 +1,74 @@
+{
+ "id": "yamaha-yz250-two-stroke-1974",
+ "make": "Yamaha",
+ "model": "YZ250 (two-stroke)",
+ "name": "Yamaha YZ250 (two-stroke)",
+ "years": [
+  1974,
+  2026
+ ],
+ "match": [
+  "yz250",
+  "yz 250",
+  "yz250x",
+  "yz250 two stroke",
+  "yz250 2 stroke"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 cc two-stroke single, carb, premix",
+ "intro": "Yamaha's long-running 250 two-stroke. Premix, a top end that wears and no lights.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Top end",
+   "Check compression"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Power valve",
+   "Clean it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-YZ25-01",
+   "phase": "G",
+   "after": "G-004",
+   "title": "Check compression and the top end",
+   "instructions": "Do a compression test. Low numbers mean the piston and rings are due. Pull and clean the power valve while you are in there.",
+   "reason": "A tired top end and a gummed power valve are the most common problems on a used two-stroke.",
+   "src": "Two-stroke basics",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual. There is no oil tank."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [],
+ "heroName": "YZ250"
+}

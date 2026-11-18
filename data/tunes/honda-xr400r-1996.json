@@ -1,0 +1,72 @@
+{
+ "id": "honda-xr400r-1996",
+ "make": "Honda",
+ "model": "XR400R",
+ "name": "Honda XR400R",
+ "years": [
+  1996,
+  2004
+ ],
+ "match": [
+  "xr400r",
+  "xr400",
+  "xr 400",
+  "xr 400r"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "397 cc air-cooled four-valve single, carb, kick start",
+ "intro": "A kick-start air-cooled dirt bike. Many have been plated for the street.",
+ "focus": [
+  [
+   "397 cc single",
+   "Air-cooled"
+  ],
+  [
+   "Kick start",
+   "Learn the drill"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Check often"
+  ],
+  [
+   "Air filter",
+   "Foam, oiled"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Air-cooled Honda singles need the valve clearance checked often. A tight exhaust valve is the usual cause of hard starting."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XR's Only",
+   "url": "https://www.xrsonly.com/",
+   "what": "Parts and know-how for Honda XR dirt bikes."
+  }
+ ],
+ "silhouette": "honda-xr400r-1996",
+ "areas": [],
+ "heroName": "XR400R",
+ "hero": {
+  "src": "img/hero/honda-xr400r-1996.jpg",
+  "artist": "Poorsob",
+  "page": "https://commons.wikimedia.org/wiki/File:XR400R_with_custom_rack.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

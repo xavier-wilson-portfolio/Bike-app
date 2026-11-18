@@ -100,8 +100,7 @@
    "cl350",
    "cl 350",
    "cb350k",
-   "cl350k",
-   "sl350"
+   "cl350k"
   ],
   "style": "standard",
   "drive": "chain"
@@ -346,7 +345,6 @@
   "match": [
    "cb450",
    "cb 450",
-   "cl450",
    "black bomber",
    "cb450k"
   ],
@@ -516,10 +514,7 @@
    "shadow 750",
    "shadow",
    "vt750",
-   "vt750c",
-   "shadow aero",
-   "shadow phantom",
-   "shadow spirit"
+   "vt750c"
   ],
   "style": "cruiser",
   "drive": "shaft"
@@ -555,8 +550,7 @@
    "nc750x",
    "nc 750x",
    "nc750",
-   "nc750xd",
-   "nc700x"
+   "nc750xd"
   ],
   "style": "adventure",
   "drive": "chain"
@@ -698,7 +692,6 @@
   "match": [
    "z1",
    "z1 900",
-   "kz900",
    "z900 1973",
    "z1a",
    "z1b"
@@ -1886,9 +1879,6 @@
   ],
   "match": [
    "shadow aero",
-   "shadow 750",
-   "vt750",
-   "vt750c",
    "shadow phantom",
    "shadow spirit 750",
    "aero 750"
@@ -2003,8 +1993,7 @@
   "match": [
    "xr650l",
    "xr 650l",
-   "xr650",
-   "xr600"
+   "xr650"
   ],
   "style": "dualsport",
   "drive": "chain"
@@ -2282,8 +2271,7 @@
    "nc700x",
    "nc700",
    "nc 700x",
-   "nc700xd",
-   "nc750x"
+   "nc700xd"
   ],
   "style": "adventure",
   "drive": "chain"
@@ -2415,9 +2403,6 @@
    "vulcan 1600",
    "vn1500",
    "vn1600",
-   "nomad",
-   "drifter",
-   "mean streak",
    "vulcan classic"
   ],
   "style": "cruiser",
@@ -2663,8 +2648,7 @@
    "royal star",
    "xvz1300",
    "royal star tour deluxe",
-   "rstd",
-   "royal star venture"
+   "rstd"
   ],
   "style": "cruiser",
   "drive": "shaft"
@@ -4181,7 +4165,6 @@
    "zx 6r",
    "ninja zx-6r",
    "zx636",
-   "zx600",
    "636"
   ],
   "style": "sport",
@@ -4355,9 +4338,7 @@
    "z1000",
    "z 1000",
    "zr1000",
-   "z1000 abs",
-   "z1000sx",
-   "ninja 1000"
+   "z1000 abs"
   ],
   "style": "standard",
   "drive": "chain"
@@ -5770,6 +5751,1992 @@
    "a50"
   ],
   "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-cbr600f2-f3-1991",
+  "make": "Honda",
+  "model": "CBR600F2 / F3",
+  "name": "Honda CBR600F2 / F3",
+  "years": [
+   1991,
+   1998
+  ],
+  "match": [
+   "cbr600f2",
+   "cbr600f3",
+   "cbr600 f2",
+   "cbr600 f3",
+   "f2",
+   "f3"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-cbr600-hurricane-1987",
+  "make": "Honda",
+  "model": "CBR600 Hurricane",
+  "name": "Honda CBR600 Hurricane (CBR600F)",
+  "years": [
+   1987,
+   1990
+  ],
+  "match": [
+   "cbr600 hurricane",
+   "hurricane 600",
+   "cbr600f hurricane",
+   "cbr600 1988",
+   "cbr600f1"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-cbr1000f-hurricane-1987",
+  "make": "Honda",
+  "model": "CBR1000F Hurricane",
+  "name": "Honda CBR1000F",
+  "years": [
+   1987,
+   1996
+  ],
+  "match": [
+   "cbr1000f",
+   "cbr1000 hurricane",
+   "hurricane 1000",
+   "cbr 1000f"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-vfr750f-interceptor-1986",
+  "make": "Honda",
+  "model": "VFR750F Interceptor",
+  "name": "Honda VFR750F",
+  "years": [
+   1986,
+   1997
+  ],
+  "match": [
+   "vfr750",
+   "vfr750f",
+   "vfr 750",
+   "interceptor 750 1990",
+   "vfr750 interceptor"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-vf500f-interceptor-1984",
+  "make": "Honda",
+  "model": "VF500F Interceptor",
+  "name": "Honda VF500F Interceptor",
+  "years": [
+   1984,
+   1986
+  ],
+  "match": [
+   "vf500f",
+   "vf500",
+   "interceptor 500",
+   "vf 500f",
+   "vf500c magna"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-vf750f-vf1000f-interceptor-1983",
+  "make": "Honda",
+  "model": "VF750F / VF1000F Interceptor",
+  "name": "Honda VF750F / VF1000F Interceptor",
+  "years": [
+   1983,
+   1986
+  ],
+  "match": [
+   "vf750f",
+   "vf1000f",
+   "vf750 interceptor",
+   "vf1000 interceptor",
+   "vf1000r",
+   "interceptor 750 1983"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-shadow-ace-750-1998",
+  "make": "Honda",
+  "model": "Shadow ACE 750",
+  "name": "Honda Shadow ACE 750 (VT750C)",
+  "years": [
+   1998,
+   2003
+  ],
+  "match": [
+   "shadow ace 750",
+   "ace 750",
+   "vt750c ace",
+   "vt750cd",
+   "shadow ace deluxe",
+   "ace tourer"
+  ],
+  "style": "cruiser",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-vt1300-fury-stateline-sabre-interstate-2010",
+  "make": "Honda",
+  "model": "VT1300 Fury / Stateline / Sabre / Interstate",
+  "name": "Honda VT1300 (Fury, Stateline, Sabre, Interstate)",
+  "years": [
+   2010,
+   2020
+  ],
+  "match": [
+   "fury",
+   "vt1300cx",
+   "stateline",
+   "vt1300cr",
+   "sabre 1300",
+   "vt1300cs",
+   "interstate 1300",
+   "vt1300ct",
+   "vt1300"
+  ],
+  "style": "cruiser",
+  "drive": "shaft"
+ },
+ {
+  "id": "honda-ctx700-2014",
+  "make": "Honda",
+  "model": "CTX700",
+  "name": "Honda CTX700",
+  "years": [
+   2014,
+   2018
+  ],
+  "match": [
+   "ctx700",
+   "ctx 700",
+   "ctx700n",
+   "ctx700d",
+   "ctx700dct"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-elite-80-ch80-1985",
+  "make": "Honda",
+  "model": "Elite 80 (CH80)",
+  "name": "Honda Elite 80",
+  "years": [
+   1985,
+   2007
+  ],
+  "match": [
+   "elite 80",
+   "ch80",
+   "elite80",
+   "honda elite",
+   "elite 50",
+   "aero 80"
+  ],
+  "style": "scooter",
+  "drive": "belt"
+ },
+ {
+  "id": "honda-helix-cn250-1986",
+  "make": "Honda",
+  "model": "Helix CN250",
+  "name": "Honda Helix (CN250)",
+  "years": [
+   1986,
+   2007
+  ],
+  "match": [
+   "helix",
+   "cn250",
+   "cn 250",
+   "honda helix",
+   "helix 250",
+   "fusion 250"
+  ],
+  "style": "scooter",
+  "drive": "belt"
+ },
+ {
+  "id": "honda-forza-300-350-2014",
+  "make": "Honda",
+  "model": "Forza 300 / 350",
+  "name": "Honda Forza (NSS300 / NSS350)",
+  "years": [
+   2014,
+   2026
+  ],
+  "match": [
+   "forza",
+   "forza 300",
+   "forza 350",
+   "nss300",
+   "nss350",
+   "nss300a",
+   "forza 125"
+  ],
+  "style": "scooter",
+  "drive": "belt"
+ },
+ {
+  "id": "honda-silver-wing-fsc600-2002",
+  "make": "Honda",
+  "model": "Silver Wing FSC600",
+  "name": "Honda Silver Wing (FSC600)",
+  "years": [
+   2002,
+   2013
+  ],
+  "match": [
+   "silver wing",
+   "silverwing",
+   "fsc600",
+   "fsc 600",
+   "silver wing 600",
+   "fsc600a"
+  ],
+  "style": "scooter",
+  "drive": "belt"
+ },
+ {
+  "id": "honda-reflex-nss250-2001",
+  "make": "Honda",
+  "model": "Reflex NSS250",
+  "name": "Honda Reflex (NSS250)",
+  "years": [
+   2001,
+   2007
+  ],
+  "match": [
+   "reflex",
+   "nss250",
+   "nss 250",
+   "honda reflex",
+   "reflex 250",
+   "nss250a"
+  ],
+  "style": "scooter",
+  "drive": "belt"
+ },
+ {
+  "id": "honda-adv150-adv160-2020",
+  "make": "Honda",
+  "model": "ADV150 / ADV160",
+  "name": "Honda ADV150 / ADV160",
+  "years": [
+   2020,
+   2026
+  ],
+  "match": [
+   "adv150",
+   "adv160",
+   "adv 150",
+   "adv 160",
+   "honda adv"
+  ],
+  "style": "scooter",
+  "drive": "belt"
+ },
+ {
+  "id": "honda-super-cub-c125-2019",
+  "make": "Honda",
+  "model": "Super Cub C125",
+  "name": "Honda Super Cub C125",
+  "years": [
+   2019,
+   2026
+  ],
+  "match": [
+   "super cub",
+   "c125",
+   "supercub",
+   "super cub 125",
+   "c125 super cub"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-xr250r-xr250l-1986",
+  "make": "Honda",
+  "model": "XR250R / XR250L",
+  "name": "Honda XR250R / XR250L",
+  "years": [
+   1986,
+   2004
+  ],
+  "match": [
+   "xr250r",
+   "xr250l",
+   "xr250",
+   "xr 250",
+   "xr 250r",
+   "xr 250l"
+  ],
+  "style": "dualsport",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-xr400r-1996",
+  "make": "Honda",
+  "model": "XR400R",
+  "name": "Honda XR400R",
+  "years": [
+   1996,
+   2004
+  ],
+  "match": [
+   "xr400r",
+   "xr400",
+   "xr 400",
+   "xr 400r"
+  ],
+  "style": "dualsport",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-xr600r-1985",
+  "make": "Honda",
+  "model": "XR600R",
+  "name": "Honda XR600R",
+  "years": [
+   1985,
+   2000
+  ],
+  "match": [
+   "xr600r",
+   "xr600",
+   "xr 600",
+   "xr 600r"
+  ],
+  "style": "dualsport",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-xl250-xl350-1972",
+  "make": "Honda",
+  "model": "XL250 / XL350",
+  "name": "Honda XL250 / XL350",
+  "years": [
+   1972,
+   1985
+  ],
+  "match": [
+   "xl250",
+   "xl350",
+   "xl 250",
+   "xl 350",
+   "xl250s",
+   "xl350r",
+   "xl250r",
+   "motosport 250"
+  ],
+  "style": "dualsport",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-xl600r-1983",
+  "make": "Honda",
+  "model": "XL600R",
+  "name": "Honda XL600R",
+  "years": [
+   1983,
+   1987
+  ],
+  "match": [
+   "xl600r",
+   "xl600",
+   "xl 600",
+   "xl 600r",
+   "xl600rm"
+  ],
+  "style": "dualsport",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-cr250r-1978",
+  "make": "Honda",
+  "model": "CR250R",
+  "name": "Honda CR250R (two-stroke)",
+  "years": [
+   1978,
+   2007
+  ],
+  "match": [
+   "cr250r",
+   "cr250",
+   "cr 250",
+   "cr 250r",
+   "elsinore 250"
+  ],
+  "style": "dualsport",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-cb919-599-hornet-2002",
+  "make": "Honda",
+  "model": "919 / 599 Hornet",
+  "name": "Honda 919 (CB900F) / 599 (CB600F Hornet)",
+  "years": [
+   2002,
+   2007
+  ],
+  "match": [
+   "919",
+   "cb919",
+   "cb900f 2002",
+   "honda 919",
+   "599",
+   "cb599",
+   "cb600f hornet",
+   "hornet 600",
+   "hornet 900"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-cb400t-hawk-1978",
+  "make": "Honda",
+  "model": "CB400T Hawk",
+  "name": "Honda CB400T Hawk",
+  "years": [
+   1978,
+   1981
+  ],
+  "match": [
+   "cb400t",
+   "hawk",
+   "hawk 400",
+   "cb400 hawk",
+   "cb400a hondamatic",
+   "cm400t",
+   "cb400tii"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-sl125-sl100-1970",
+  "make": "Honda",
+  "model": "SL125 / SL100",
+  "name": "Honda SL125 / SL100",
+  "years": [
+   1970,
+   1975
+  ],
+  "match": [
+   "sl125",
+   "sl100",
+   "sl 125",
+   "sl 100",
+   "motosport 125",
+   "motosport 100"
+  ],
+  "style": "dualsport",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-xl750-transalp-2023",
+  "make": "Honda",
+  "model": "XL750 Transalp",
+  "name": "Honda XL750 Transalp",
+  "years": [
+   2023,
+   2026
+  ],
+  "match": [
+   "transalp",
+   "xl750",
+   "xl 750",
+   "transalp 750",
+   "xl750 transalp"
+  ],
+  "style": "adventure",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-rebel-250-cmx250-1985",
+  "make": "Honda",
+  "model": "Rebel 250 (CMX250)",
+  "name": "Honda Rebel 250",
+  "years": [
+   1985,
+   2016
+  ],
+  "match": [
+   "rebel 250",
+   "cmx250",
+   "cmx250c",
+   "rebel250",
+   "cmx 250"
+  ],
+  "style": "cruiser",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-st1100-1991",
+  "make": "Honda",
+  "model": "ST1100",
+  "name": "Honda ST1100",
+  "years": [
+   1991,
+   2002
+  ],
+  "match": [
+   "st1100",
+   "st 1100",
+   "pan european",
+   "st1100a",
+   "pan european 1100"
+  ],
+  "style": "touring",
+  "drive": "shaft"
+ },
+ {
+  "id": "honda-vfr1200f-2010",
+  "make": "Honda",
+  "model": "VFR1200F",
+  "name": "Honda VFR1200F",
+  "years": [
+   2010,
+   2017
+  ],
+  "match": [
+   "vfr1200f",
+   "vfr1200",
+   "vfr 1200",
+   "vfr1200fd",
+   "vfr1200x crosstourer",
+   "crosstourer"
+  ],
+  "style": "sport",
+  "drive": "shaft"
+ },
+ {
+  "id": "honda-cb300r-cb300f-cbr300r-2015",
+  "make": "Honda",
+  "model": "CB300R / CB300F / CBR300R",
+  "name": "Honda CB300R / CB300F / CBR300R",
+  "years": [
+   2015,
+   2026
+  ],
+  "match": [
+   "cb300r",
+   "cb300f",
+   "cbr300r",
+   "cbr300",
+   "cb 300r",
+   "cbr 300r",
+   "cb300",
+   "cbr300ra"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "honda-cb750-hornet-2023",
+  "make": "Honda",
+  "model": "CB750 Hornet",
+  "name": "Honda CB750 Hornet",
+  "years": [
+   2023,
+   2026
+  ],
+  "match": [
+   "cb750 hornet",
+   "hornet 750",
+   "cb750 2023",
+   "honda hornet",
+   "cb 750 hornet"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "kawasaki-ninja-1000-ninja-1000sx-2011",
+  "make": "Kawasaki",
+  "model": "Ninja 1000 / Ninja 1000SX",
+  "name": "Kawasaki Ninja 1000 / 1000SX",
+  "years": [
+   2011,
+   2026
+  ],
+  "match": [
+   "ninja 1000",
+   "ninja 1000sx",
+   "ninja1000",
+   "z1000sx",
+   "zx1000 2011",
+   "ninja 1000 abs"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "kawasaki-ninja-h2-2015",
+  "make": "Kawasaki",
+  "model": "Ninja H2",
+  "name": "Kawasaki Ninja H2 / H2 SX",
+  "years": [
+   2015,
+   2026
+  ],
+  "match": [
+   "ninja h2",
+   "h2",
+   "h2 sx",
+   "ninja h2 sx",
+   "h2 carbon",
+   "zx1000n",
+   "ninja h2 sx se"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "kawasaki-z-h2-2020",
+  "make": "Kawasaki",
+  "model": "Z H2",
+  "name": "Kawasaki Z H2",
+  "years": [
+   2020,
+   2026
+  ],
+  "match": [
+   "z h2",
+   "zh2",
+   "z h2 se",
+   "zr1000k",
+   "z-h2"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "kawasaki-z900rs-2018",
+  "make": "Kawasaki",
+  "model": "Z900RS",
+  "name": "Kawasaki Z900RS",
+  "years": [
+   2018,
+   2026
+  ],
+  "match": [
+   "z900rs",
+   "z900 rs",
+   "z900rs cafe",
+   "zr900c",
+   "z900rs se"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "kawasaki-concours-zg1000-1986",
+  "make": "Kawasaki",
+  "model": "Concours ZG1000",
+  "name": "Kawasaki Concours (ZG1000)",
+  "years": [
+   1986,
+   2006
+  ],
+  "match": [
+   "concours",
+   "zg1000",
+   "zg 1000",
+   "concours 1000",
+   "c10"
+  ],
+  "style": "touring",
+  "drive": "shaft"
+ },
+ {
+  "id": "kawasaki-voyager-xii-zg1200-1986",
+  "make": "Kawasaki",
+  "model": "Voyager XII (ZG1200)",
+  "name": "Kawasaki Voyager XII",
+  "years": [
+   1986,
+   2003
+  ],
+  "match": [
+   "voyager xii",
+   "voyager 1200",
+   "zg1200",
+   "zg 1200",
+   "voyager 12"
+  ],
+  "style": "touring",
+  "drive": "shaft"
+ },
+ {
+  "id": "kawasaki-vulcan-1700-voyager-nomad-vaquero-2009",
+  "make": "Kawasaki",
+  "model": "Vulcan 1700 Voyager / Nomad / Vaquero",
+  "name": "Kawasaki Vulcan 1700 (Voyager, Nomad, Vaquero, Classic)",
+  "years": [
+   2009,
+   2023
+  ],
+  "match": [
+   "vulcan 1700",
+   "vn1700",
+   "voyager 1700",
+   "vulcan 1700 voyager",
+   "nomad 1700",
+   "vaquero",
+   "vulcan 1700 vaquero",
+   "vulcan 1700 classic"
+  ],
+  "style": "touring",
+  "drive": "belt"
+ },
+ {
+  "id": "kawasaki-vulcan-1500-nomad-drifter-1998",
+  "make": "Kawasaki",
+  "model": "Vulcan 1500 Nomad / Drifter / Classic",
+  "name": "Kawasaki Vulcan 1500 (Nomad, Drifter, Classic)",
+  "years": [
+   1998,
+   2008
+  ],
+  "match": [
+   "vulcan 1500 nomad",
+   "nomad 1500",
+   "vn1500 nomad",
+   "drifter",
+   "vulcan drifter",
+   "drifter 1500",
+   "vulcan 1500 classic",
+   "vn1500 classic",
+   "nomad"
+  ],
+  "style": "cruiser",
+  "drive": "shaft"
+ },
+ {
+  "id": "kawasaki-klx110-2002",
+  "make": "Kawasaki",
+  "model": "KLX110",
+  "name": "Kawasaki KLX110",
+  "years": [
+   2002,
+   2026
+  ],
+  "match": [
+   "klx110",
+   "klx 110",
+   "klx110l",
+   "klx110r"
+  ],
+  "style": "dualsport",
+  "drive": "chain"
+ },
+ {
+  "id": "kawasaki-kx250-two-stroke-1974",
+  "make": "Kawasaki",
+  "model": "KX250 (two-stroke)",
+  "name": "Kawasaki KX250 (two-stroke)",
+  "years": [
+   1974,
+   2007
+  ],
+  "match": [
+   "kx250",
+   "kx 250",
+   "kx250 two stroke",
+   "kx250 2 stroke"
+  ],
+  "style": "dualsport",
+  "drive": "chain"
+ },
+ {
+  "id": "kawasaki-kz200-kz250-1977",
+  "make": "Kawasaki",
+  "model": "KZ200 / KZ250",
+  "name": "Kawasaki KZ200 / KZ250",
+  "years": [
+   1977,
+   1983
+  ],
+  "match": [
+   "kz200",
+   "kz250",
+   "kz 200",
+   "kz 250",
+   "kz250 ltd",
+   "kz250 csr"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "kawasaki-gpz750-gpz1100-1982",
+  "make": "Kawasaki",
+  "model": "GPz750 / GPz1100",
+  "name": "Kawasaki GPz750 / GPz1100",
+  "years": [
+   1982,
+   1985
+  ],
+  "match": [
+   "gpz750",
+   "gpz1100",
+   "gpz 750",
+   "gpz 1100",
+   "zx750a",
+   "zx1100a",
+   "kz1100 gpz"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "kawasaki-kz900-1976",
+  "make": "Kawasaki",
+  "model": "KZ900",
+  "name": "Kawasaki KZ900 / Z900",
+  "years": [
+   1976,
+   1977
+  ],
+  "match": [
+   "kz900",
+   "kz 900",
+   "z900 1976",
+   "z900 1977",
+   "kz900 ltd",
+   "kz900a"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "kawasaki-zr-7-zr550-zephyr-1990",
+  "make": "Kawasaki",
+  "model": "ZR-7 / ZR550 Zephyr",
+  "name": "Kawasaki ZR-7 / Zephyr 550 / 750",
+  "years": [
+   1990,
+   2003
+  ],
+  "match": [
+   "zr7",
+   "zr-7",
+   "zr-7s",
+   "zephyr",
+   "zephyr 550",
+   "zr550",
+   "zephyr 750",
+   "zr750"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "kawasaki-ninja-600r-zx-600-1985",
+  "make": "Kawasaki",
+  "model": "Ninja 600R / ZX-600",
+  "name": "Kawasaki Ninja 600R (ZX600)",
+  "years": [
+   1985,
+   1997
+  ],
+  "match": [
+   "ninja 600r",
+   "zx600",
+   "zx-600",
+   "ninja 600",
+   "gpz600r",
+   "zx600a",
+   "zx600c"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "kawasaki-zx-6-zzr600-1990",
+  "make": "Kawasaki",
+  "model": "ZX-6 / ZZR600",
+  "name": "Kawasaki ZX-6 / ZZR600",
+  "years": [
+   1990,
+   2008
+  ],
+  "match": [
+   "zzr600",
+   "zzr 600",
+   "zx-6",
+   "zx6",
+   "zx600d",
+   "zx600e",
+   "ninja zx-6"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "kawasaki-ninja-zx-12r-2000",
+  "make": "Kawasaki",
+  "model": "Ninja ZX-12R",
+  "name": "Kawasaki Ninja ZX-12R",
+  "years": [
+   2000,
+   2005
+  ],
+  "match": [
+   "zx-12r",
+   "zx12r",
+   "zx12",
+   "ninja zx-12r",
+   "zx1200"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "kawasaki-ninja-zx-4rr-2023",
+  "make": "Kawasaki",
+  "model": "Ninja ZX-4R / ZX-4RR",
+  "name": "Kawasaki Ninja ZX-4R / ZX-4RR",
+  "years": [
+   2023,
+   2026
+  ],
+  "match": [
+   "zx-4rr",
+   "zx4rr",
+   "zx-4r",
+   "zx4r",
+   "ninja zx-4rr",
+   "ninja zx-4r",
+   "zx400"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "kawasaki-versys-x-300-2017",
+  "make": "Kawasaki",
+  "model": "Versys-X 300",
+  "name": "Kawasaki Versys-X 300",
+  "years": [
+   2017,
+   2026
+  ],
+  "match": [
+   "versys-x 300",
+   "versys x 300",
+   "versys x300",
+   "versys 300",
+   "kle300"
+  ],
+  "style": "adventure",
+  "drive": "chain"
+ },
+ {
+  "id": "kawasaki-s1-s2-s3-triple-1972",
+  "make": "Kawasaki",
+  "model": "S1 / S2 / S3 triple",
+  "name": "Kawasaki S1 / S2 / S3 (KH250 / KH400)",
+  "years": [
+   1972,
+   1975
+  ],
+  "match": [
+   "s1",
+   "s2",
+   "s3",
+   "kh250",
+   "kh400",
+   "s1 250",
+   "s2 350",
+   "s3 400",
+   "mach i",
+   "mach ii"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "kawasaki-kdx200-1983",
+  "make": "Kawasaki",
+  "model": "KDX200",
+  "name": "Kawasaki KDX200",
+  "years": [
+   1983,
+   2006
+  ],
+  "match": [
+   "kdx200",
+   "kdx 200",
+   "kdx220",
+   "kdx220r",
+   "kdx 220"
+  ],
+  "style": "dualsport",
+  "drive": "chain"
+ },
+ {
+  "id": "kawasaki-vulcan-88-vn1500-1987",
+  "make": "Kawasaki",
+  "model": "Vulcan 88 (VN1500A)",
+  "name": "Kawasaki Vulcan 88 (VN1500)",
+  "years": [
+   1987,
+   1999
+  ],
+  "match": [
+   "vulcan 88",
+   "vn1500a",
+   "vulcan 88 1500",
+   "vulcan 88 se",
+   "vn1500 88"
+  ],
+  "style": "cruiser",
+  "drive": "shaft"
+ },
+ {
+  "id": "kawasaki-mean-streak-1500-1600-2002",
+  "make": "Kawasaki",
+  "model": "Vulcan Mean Streak 1500 / 1600",
+  "name": "Kawasaki Vulcan Mean Streak",
+  "years": [
+   2002,
+   2008
+  ],
+  "match": [
+   "mean streak",
+   "meanstreak",
+   "vulcan mean streak",
+   "vn1500p",
+   "vn1600b",
+   "mean streak 1600"
+  ],
+  "style": "cruiser",
+  "drive": "belt"
+ },
+ {
+  "id": "yamaha-fzr600-fzr1000-1987",
+  "make": "Yamaha",
+  "model": "FZR600 / FZR1000",
+  "name": "Yamaha FZR600 / FZR1000",
+  "years": [
+   1987,
+   1999
+  ],
+  "match": [
+   "fzr600",
+   "fzr1000",
+   "fzr 600",
+   "fzr 1000",
+   "fzr",
+   "fzr400",
+   "fzr600r"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "yamaha-yzf1000r-thunderace-1996",
+  "make": "Yamaha",
+  "model": "YZF1000R Thunderace",
+  "name": "Yamaha YZF1000R Thunderace",
+  "years": [
+   1996,
+   2003
+  ],
+  "match": [
+   "thunderace",
+   "yzf1000r",
+   "yzf1000",
+   "yzf 1000r",
+   "thunder ace"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "yamaha-majesty-yp400-2004",
+  "make": "Yamaha",
+  "model": "Majesty YP400",
+  "name": "Yamaha Majesty 400",
+  "years": [
+   2004,
+   2013
+  ],
+  "match": [
+   "majesty",
+   "majesty 400",
+   "yp400",
+   "yp 400",
+   "yamaha majesty"
+  ],
+  "style": "scooter",
+  "drive": "belt"
+ },
+ {
+  "id": "yamaha-fz-07-mt-07-tracer-7-2019",
+  "make": "Yamaha",
+  "model": "MT-07 / FZ-07 / Tracer 7",
+  "name": "Yamaha MT-07 / Tracer 7 (2018 on)",
+  "years": [
+   2018,
+   2026
+  ],
+  "match": [
+   "mt-07",
+   "mt07",
+   "fz-07",
+   "fz07",
+   "tracer 7",
+   "tracer 700",
+   "mt 07",
+   "tracer 7 gt"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "yamaha-mt-03-2020",
+  "make": "Yamaha",
+  "model": "MT-03",
+  "name": "Yamaha MT-03",
+  "years": [
+   2020,
+   2026
+  ],
+  "match": [
+   "mt-03",
+   "mt03",
+   "mt 03",
+   "yamaha mt-03"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "yamaha-mt-10-fz-10-2017",
+  "make": "Yamaha",
+  "model": "MT-10 / FZ-10",
+  "name": "Yamaha MT-10 / FZ-10",
+  "years": [
+   2017,
+   2026
+  ],
+  "match": [
+   "mt-10",
+   "mt10",
+   "fz-10",
+   "fz10",
+   "mt 10",
+   "mt-10 sp"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "yamaha-xsr700-2018",
+  "make": "Yamaha",
+  "model": "XSR700",
+  "name": "Yamaha XSR700",
+  "years": [
+   2018,
+   2026
+  ],
+  "match": [
+   "xsr700",
+   "xsr 700",
+   "xsr-700",
+   "xsr700 xtribute"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "yamaha-virago-xv920-xv1000-1981",
+  "make": "Yamaha",
+  "model": "Virago XV920 / XV1000",
+  "name": "Yamaha Virago 920 / 1000",
+  "years": [
+   1981,
+   1985
+  ],
+  "match": [
+   "virago 920",
+   "xv920",
+   "virago 1000",
+   "xv1000",
+   "xv 920",
+   "xv920r",
+   "tr1"
+  ],
+  "style": "cruiser",
+  "drive": "shaft"
+ },
+ {
+  "id": "yamaha-xv1600-1700-road-star-warrior-2002",
+  "make": "Yamaha",
+  "model": "Road Star Warrior",
+  "name": "Yamaha Road Star Warrior (XV1700PC)",
+  "years": [
+   2002,
+   2010
+  ],
+  "match": [
+   "road star warrior",
+   "warrior",
+   "xv1700pc",
+   "star warrior",
+   "xv17pc",
+   "warrior 1700"
+  ],
+  "style": "cruiser",
+  "drive": "belt"
+ },
+ {
+  "id": "yamaha-midnight-star-xv1900-roadliner-stratoliner-2006",
+  "make": "Yamaha",
+  "model": "Roadliner / Stratoliner / Midnight Star 1900",
+  "name": "Yamaha Roadliner / Stratoliner (XV1900)",
+  "years": [
+   2006,
+   2013
+  ],
+  "match": [
+   "roadliner",
+   "stratoliner",
+   "xv1900",
+   "xv19",
+   "midnight star 1900",
+   "star roadliner",
+   "star stratoliner"
+  ],
+  "style": "cruiser",
+  "drive": "belt"
+ },
+ {
+  "id": "yamaha-royal-star-venture-1999",
+  "make": "Yamaha",
+  "model": "Royal Star Venture",
+  "name": "Yamaha Royal Star Venture",
+  "years": [
+   1999,
+   2013
+  ],
+  "match": [
+   "royal star venture",
+   "rsv",
+   "xvz13td",
+   "royal star venture s",
+   "venture 1300"
+  ],
+  "style": "touring",
+  "drive": "shaft"
+ },
+ {
+  "id": "yamaha-star-venture-2018",
+  "make": "Yamaha",
+  "model": "Star Venture",
+  "name": "Yamaha Star Venture / Eluder",
+  "years": [
+   2018,
+   2021
+  ],
+  "match": [
+   "star venture",
+   "xv1900 venture",
+   "star eluder",
+   "eluder",
+   "venture tc",
+   "star venture tc"
+  ],
+  "style": "touring",
+  "drive": "belt"
+ },
+ {
+  "id": "yamaha-xt600-1984",
+  "make": "Yamaha",
+  "model": "XT600",
+  "name": "Yamaha XT600",
+  "years": [
+   1984,
+   1995
+  ],
+  "match": [
+   "xt600",
+   "xt 600",
+   "xt600e",
+   "xt600z",
+   "tenere 600",
+   "xt600a"
+  ],
+  "style": "dualsport",
+  "drive": "chain"
+ },
+ {
+  "id": "yamaha-xt350-1985",
+  "make": "Yamaha",
+  "model": "XT350",
+  "name": "Yamaha XT350",
+  "years": [
+   1985,
+   2000
+  ],
+  "match": [
+   "xt350",
+   "xt 350",
+   "xt350 dual sport"
+  ],
+  "style": "dualsport",
+  "drive": "chain"
+ },
+ {
+  "id": "yamaha-tt-r125-tt-r230-2000",
+  "make": "Yamaha",
+  "model": "TT-R125 / TT-R230",
+  "name": "Yamaha TT-R125 / TT-R230",
+  "years": [
+   2000,
+   2026
+  ],
+  "match": [
+   "tt-r125",
+   "ttr125",
+   "tt-r230",
+   "ttr230",
+   "ttr 125",
+   "ttr 230",
+   "tt-r225",
+   "ttr225",
+   "tt-r110",
+   "ttr110"
+  ],
+  "style": "dualsport",
+  "drive": "chain"
+ },
+ {
+  "id": "yamaha-yz250-two-stroke-1974",
+  "make": "Yamaha",
+  "model": "YZ250 (two-stroke)",
+  "name": "Yamaha YZ250 (two-stroke)",
+  "years": [
+   1974,
+   2026
+  ],
+  "match": [
+   "yz250",
+   "yz 250",
+   "yz250x",
+   "yz250 two stroke",
+   "yz250 2 stroke"
+  ],
+  "style": "dualsport",
+  "drive": "chain"
+ },
+ {
+  "id": "yamaha-pw50-1981",
+  "make": "Yamaha",
+  "model": "PW50",
+  "name": "Yamaha PW50 (Pee Wee)",
+  "years": [
+   1981,
+   2026
+  ],
+  "match": [
+   "pw50",
+   "pw 50",
+   "pee wee",
+   "peewee 50",
+   "yamaha pw50",
+   "y-zinger"
+  ],
+  "style": "dualsport",
+  "drive": "shaft"
+ },
+ {
+  "id": "yamaha-dt175-dt100-1974",
+  "make": "Yamaha",
+  "model": "DT175 / DT100",
+  "name": "Yamaha DT175 / DT100",
+  "years": [
+   1974,
+   1981
+  ],
+  "match": [
+   "dt175",
+   "dt100",
+   "dt 175",
+   "dt 100",
+   "dt125",
+   "dt 125",
+   "enduro 175"
+  ],
+  "style": "dualsport",
+  "drive": "chain"
+ },
+ {
+  "id": "yamaha-yr-rd200-1973",
+  "make": "Yamaha",
+  "model": "RD200",
+  "name": "Yamaha RD200",
+  "years": [
+   1973,
+   1976
+  ],
+  "match": [
+   "rd200",
+   "rd 200",
+   "rd200b",
+   "rd200dx",
+   "cs5"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "yamaha-zuma-125-yw125-2009",
+  "make": "Yamaha",
+  "model": "Zuma 125 (YW125)",
+  "name": "Yamaha Zuma 125",
+  "years": [
+   2009,
+   2026
+  ],
+  "match": [
+   "zuma 125",
+   "yw125",
+   "yw 125",
+   "zuma125",
+   "bws 125"
+  ],
+  "style": "scooter",
+  "drive": "belt"
+ },
+ {
+  "id": "yamaha-xj900-xj1100-maxim-1982",
+  "make": "Yamaha",
+  "model": "XJ1100 Maxim / XJ900",
+  "name": "Yamaha XJ1100 Maxim / XJ900 Seca",
+  "years": [
+   1982,
+   1985
+  ],
+  "match": [
+   "xj1100",
+   "xj 1100",
+   "maxim 1100",
+   "xj1100 maxim",
+   "xj900",
+   "xj 900",
+   "seca 900",
+   "xj900rk"
+  ],
+  "style": "standard",
+  "drive": "shaft"
+ },
+ {
+  "id": "yamaha-seca-ii-xj600-1992",
+  "make": "Yamaha",
+  "model": "Seca II (XJ600)",
+  "name": "Yamaha Seca II (XJ600)",
+  "years": [
+   1992,
+   1998
+  ],
+  "match": [
+   "seca ii",
+   "seca 2",
+   "xj600",
+   "xj600s",
+   "xj 600",
+   "diversion 600"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "yamaha-fz600-fz700-fz750-1985",
+  "make": "Yamaha",
+  "model": "FZ600 / FZ700 / FZ750",
+  "name": "Yamaha FZ600 / FZ700 / FZ750",
+  "years": [
+   1985,
+   1991
+  ],
+  "match": [
+   "fz600",
+   "fz700",
+   "fz750",
+   "fz 750",
+   "fz 600",
+   "fz 700",
+   "fazer 750"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "yamaha-smax-xmax-2014",
+  "make": "Yamaha",
+  "model": "SMAX / XMAX",
+  "name": "Yamaha SMAX / XMAX",
+  "years": [
+   2014,
+   2026
+  ],
+  "match": [
+   "xmax",
+   "x-max",
+   "xmax 300",
+   "czd300",
+   "smax",
+   "s-max",
+   "smax 155",
+   "xc155"
+  ],
+  "style": "scooter",
+  "drive": "belt"
+ },
+ {
+  "id": "yamaha-tenere-xt660z-2008",
+  "make": "Yamaha",
+  "model": "XT660Z Tenere",
+  "name": "Yamaha XT660Z Tenere",
+  "years": [
+   2008,
+   2016
+  ],
+  "match": [
+   "xt660z",
+   "xt660",
+   "tenere 660",
+   "xt 660",
+   "xt660r",
+   "xt660x"
+  ],
+  "style": "adventure",
+  "drive": "chain"
+ },
+ {
+  "id": "suzuki-gsx-r1100-1986",
+  "make": "Suzuki",
+  "model": "GSX-R1100",
+  "name": "Suzuki GSX-R1100",
+  "years": [
+   1986,
+   1998
+  ],
+  "match": [
+   "gsx-r1100",
+   "gsxr1100",
+   "gsx r1100",
+   "gsxr 1100",
+   "gixxer 1100"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "suzuki-gsx-r750-early-1985",
+  "make": "Suzuki",
+  "model": "GSX-R750 (oil-cooled and early)",
+  "name": "Suzuki GSX-R750 (1985-1995)",
+  "years": [
+   1985,
+   1995
+  ],
+  "match": [
+   "gsx-r750",
+   "gsxr750",
+   "gsxr 750",
+   "gixxer 750",
+   "gsx r750",
+   "slingshot"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "suzuki-rm-z250-2004",
+  "make": "Suzuki",
+  "model": "RM-Z250",
+  "name": "Suzuki RM-Z250",
+  "years": [
+   2004,
+   2026
+  ],
+  "match": [
+   "rm-z250",
+   "rmz250",
+   "rmz 250",
+   "rm-z 250"
+  ],
+  "style": "dualsport",
+  "drive": "chain"
+ },
+ {
+  "id": "suzuki-gsx1300bk-b-king-2008",
+  "make": "Suzuki",
+  "model": "B-King (GSX1300BK)",
+  "name": "Suzuki B-King",
+  "years": [
+   2008,
+   2012
+  ],
+  "match": [
+   "b-king",
+   "bking",
+   "gsx1300bk",
+   "b king",
+   "gsx1300bka"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "suzuki-tl1000r-1998",
+  "make": "Suzuki",
+  "model": "TL1000R",
+  "name": "Suzuki TL1000R",
+  "years": [
+   1998,
+   2003
+  ],
+  "match": [
+   "tl1000r",
+   "tl 1000r",
+   "tlr",
+   "tl1000 r"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "suzuki-sv650-second-gen-2003",
+  "make": "Suzuki",
+  "model": "SV650 (2003-2016)",
+  "name": "Suzuki SV650 / SV650S (2003-2016)",
+  "years": [
+   2003,
+   2016
+  ],
+  "match": [
+   "sv650",
+   "sv 650",
+   "sv650s",
+   "sv650n",
+   "sv650a"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "suzuki-gladius-sfv650-2009",
+  "make": "Suzuki",
+  "model": "Gladius (SFV650)",
+  "name": "Suzuki Gladius (SFV650)",
+  "years": [
+   2009,
+   2015
+  ],
+  "match": [
+   "gladius",
+   "sfv650",
+   "sfv 650",
+   "gladius 650"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "suzuki-v-strom-800de-2023",
+  "make": "Suzuki",
+  "model": "V-Strom 800DE / 800",
+  "name": "Suzuki V-Strom 800DE / 800",
+  "years": [
+   2023,
+   2026
+  ],
+  "match": [
+   "v-strom 800",
+   "vstrom 800",
+   "v-strom 800de",
+   "800de",
+   "dl800",
+   "v strom 800",
+   "v-strom 800re"
+  ],
+  "style": "adventure",
+  "drive": "chain"
+ },
+ {
+  "id": "suzuki-gsx-8s-gsx-8r-2023",
+  "make": "Suzuki",
+  "model": "GSX-8S / GSX-8R",
+  "name": "Suzuki GSX-8S / GSX-8R",
+  "years": [
+   2023,
+   2026
+  ],
+  "match": [
+   "gsx-8s",
+   "gsx8s",
+   "gsx-8r",
+   "gsx8r",
+   "gsx 8s",
+   "gsx 8r",
+   "gsx800"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "suzuki-dr-z125-dr-z70-2003",
+  "make": "Suzuki",
+  "model": "DR-Z125 / DR-Z70",
+  "name": "Suzuki DR-Z125 / DR-Z70",
+  "years": [
+   2003,
+   2026
+  ],
+  "match": [
+   "dr-z125",
+   "drz125",
+   "drz 125",
+   "dr-z70",
+   "drz70",
+   "drz125l"
+  ],
+  "style": "dualsport",
+  "drive": "chain"
+ },
+ {
+  "id": "suzuki-rm250-two-stroke-1976",
+  "make": "Suzuki",
+  "model": "RM250 (two-stroke)",
+  "name": "Suzuki RM250 (two-stroke)",
+  "years": [
+   1976,
+   2012
+  ],
+  "match": [
+   "rm250",
+   "rm 250",
+   "rm250 two stroke",
+   "rm250 2 stroke"
+  ],
+  "style": "dualsport",
+  "drive": "chain"
+ },
+ {
+  "id": "suzuki-ts185-ts250-1971",
+  "make": "Suzuki",
+  "model": "TS185 / TS250",
+  "name": "Suzuki TS185 / TS250",
+  "years": [
+   1971,
+   1981
+  ],
+  "match": [
+   "ts185",
+   "ts250",
+   "ts 185",
+   "ts 250",
+   "ts125",
+   "ts100"
+  ],
+  "style": "dualsport",
+  "drive": "chain"
+ },
+ {
+  "id": "suzuki-gn125-gn250-1982",
+  "make": "Suzuki",
+  "model": "GN125 / GN250",
+  "name": "Suzuki GN125 / GN250",
+  "years": [
+   1982,
+   2001
+  ],
+  "match": [
+   "gn125",
+   "gn250",
+   "gn 125",
+   "gn 250",
+   "gn125e"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "suzuki-dr-z250-2001",
+  "make": "Suzuki",
+  "model": "DR-Z250",
+  "name": "Suzuki DR-Z250",
+  "years": [
+   2001,
+   2007
+  ],
+  "match": [
+   "dr-z250",
+   "drz250",
+   "drz 250",
+   "dr-z 250"
+  ],
+  "style": "dualsport",
+  "drive": "chain"
+ },
+ {
+  "id": "suzuki-gs1150-1984",
+  "make": "Suzuki",
+  "model": "GS1150",
+  "name": "Suzuki GS1150E / ES",
+  "years": [
+   1984,
+   1986
+  ],
+  "match": [
+   "gs1150",
+   "gs 1150",
+   "gs1150e",
+   "gs1150es",
+   "gs1150g"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "suzuki-intruder-800-volusia-c50-1992",
+  "make": "Suzuki",
+  "model": "Intruder 800 / Volusia",
+  "name": "Suzuki Intruder 800 / Volusia 800",
+  "years": [
+   1992,
+   2004
+  ],
+  "match": [
+   "intruder 800",
+   "vs800",
+   "vs 800",
+   "volusia",
+   "volusia 800",
+   "vl800 volusia",
+   "vs800gl"
+  ],
+  "style": "cruiser",
+  "drive": "shaft"
+ },
+ {
+  "id": "suzuki-intruder-1500-lc-c90-1998",
+  "make": "Suzuki",
+  "model": "Intruder 1500 LC / Boulevard C90",
+  "name": "Suzuki Intruder 1500 LC / Boulevard C90",
+  "years": [
+   1998,
+   2014
+  ],
+  "match": [
+   "intruder 1500",
+   "vl1500",
+   "vl 1500",
+   "c90",
+   "boulevard c90",
+   "c90t",
+   "c90 boss"
+  ],
+  "style": "cruiser",
+  "drive": "shaft"
+ },
+ {
+  "id": "suzuki-boulevard-m90-m109r2-2009",
+  "make": "Suzuki",
+  "model": "Boulevard M90",
+  "name": "Suzuki Boulevard M90",
+  "years": [
+   2009,
+   2019
+  ],
+  "match": [
+   "m90",
+   "boulevard m90",
+   "vz1500",
+   "m90 boulevard"
+  ],
+  "style": "cruiser",
+  "drive": "shaft"
+ },
+ {
+  "id": "suzuki-rm-z450-2005",
+  "make": "Suzuki",
+  "model": "RM-Z450",
+  "name": "Suzuki RM-Z450",
+  "years": [
+   2005,
+   2026
+  ],
+  "match": [
+   "rm-z450",
+   "rmz450",
+   "rmz 450",
+   "rm-z 450"
+  ],
+  "style": "dualsport",
+  "drive": "chain"
+ },
+ {
+  "id": "suzuki-rg500-gamma-rg250-1985",
+  "make": "Suzuki",
+  "model": "RG500 Gamma / RG250",
+  "name": "Suzuki RG500 Gamma / RG250 Gamma",
+  "years": [
+   1985,
+   1987
+  ],
+  "match": [
+   "rg500",
+   "rg 500",
+   "rg500 gamma",
+   "rg250",
+   "rg250 gamma",
+   "gamma"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "suzuki-dl650-v-strom-first-gen-2004",
+  "make": "Suzuki",
+  "model": "V-Strom 650 (2004-2011)",
+  "name": "Suzuki V-Strom 650 (DL650, 2004-2011)",
+  "years": [
+   2004,
+   2011
+  ],
+  "match": [
+   "v-strom 650",
+   "vstrom 650",
+   "v strom 650",
+   "dl650",
+   "wee-strom",
+   "weestrom",
+   "dl650a"
+  ],
+  "style": "adventure",
   "drive": "chain"
  }
 ]

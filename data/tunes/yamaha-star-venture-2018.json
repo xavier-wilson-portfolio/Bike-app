@@ -1,0 +1,74 @@
+{
+ "id": "yamaha-star-venture-2018",
+ "make": "Yamaha",
+ "model": "Star Venture",
+ "name": "Yamaha Star Venture / Eluder",
+ "years": [
+  2018,
+  2021
+ ],
+ "match": [
+  "star venture",
+  "xv1900 venture",
+  "star eluder",
+  "eluder",
+  "venture tc",
+  "star venture tc"
+ ],
+ "style": "touring",
+ "drive": "belt",
+ "engine": "1854 cc air-cooled V-twin, fuel injected, belt drive",
+ "intro": "Yamaha's modern full-dress tourer. Lots of electronics, and a front brake switch recall on many bikes.",
+ "focus": [
+  [
+   "1854 cc V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Brake switch",
+   "Recall"
+  ],
+  [
+   "Infotainment",
+   "Lots of wiring"
+  ],
+  [
+   "Belt drive",
+   "Check wear"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Many 2018-2021 Star Ventures and 2018 Eluders are in recall 20V814 for the front brake switch.",
+   "reason": "NHTSA flagged it do-not-ride until fixed. The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "20V814",
+   "years": "2018-2021 (some)",
+   "what": "Front brake switch can fail from silicon oxide buildup, leaving the brake light on or cutting out cruise control.",
+   "fix": "Dealer replaces the front brake switch free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/20V814000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "Venture Riders",
+   "url": "https://www.ventureriders.org/",
+   "what": "Owner club for Yamaha Venture touring bikes."
+  }
+ ],
+ "heroName": "STAR VENTURE"
+}

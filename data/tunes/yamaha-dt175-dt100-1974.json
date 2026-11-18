@@ -1,0 +1,62 @@
+{
+ "id": "yamaha-dt175-dt100-1974",
+ "make": "Yamaha",
+ "model": "DT175 / DT100",
+ "name": "Yamaha DT175 / DT100",
+ "years": [
+  1974,
+  1981
+ ],
+ "match": [
+  "dt175",
+  "dt100",
+  "dt 175",
+  "dt 100",
+  "dt125",
+  "dt 125",
+  "enduro 175"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "97 to 171 cc air-cooled two-stroke single, carb, Autolube oil injection",
+ "intro": "Yamaha's small two-stroke enduros. Autolube oil injection, six-volt electrics on many, and points.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Autolube"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Oil pump",
+   "Bleed it"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Six-volt",
+   "On many"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [],
+ "heroName": "DT175"
+}

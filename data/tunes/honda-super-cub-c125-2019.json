@@ -1,0 +1,71 @@
+{
+ "id": "honda-super-cub-c125-2019",
+ "make": "Honda",
+ "model": "Super Cub C125",
+ "name": "Honda Super Cub C125",
+ "years": [
+  2019,
+  2026
+ ],
+ "match": [
+  "super cub",
+  "c125",
+  "supercub",
+  "super cub 125",
+  "c125 super cub"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "125 cc air-cooled single, fuel injected, four-speed semi-auto",
+ "intro": "The modern Super Cub. Simple to work on. 2020-2021 bikes had a reflector recall, and Honda has an emissions recall on 2019-2024 bikes.",
+ "focus": [
+  [
+   "125 cc single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Semi-auto",
+   "No clutch lever"
+  ],
+  [
+   "Recalls",
+   "Reflector, fuel system"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls and ask a Honda dealer too. 2020-2021 C125s are in recall 21V382 (rear reflector). Honda also has an emissions recall on all 2019-2024 C125s for the fuel system.",
+   "reason": "Both fixes are free."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "F": [
+   "The C125 has an automatic clutch. Don't hunt for a clutch cable to adjust."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "21V382",
+   "years": "2020-2021 (some)",
+   "what": "Rear reflector lens may be too dim to meet the lighting standard.",
+   "fix": "Dealer replaces the rear reflector free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/21V382000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "SUPER CUB"
+}

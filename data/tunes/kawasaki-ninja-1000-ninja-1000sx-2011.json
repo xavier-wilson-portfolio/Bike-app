@@ -1,0 +1,63 @@
+{
+ "id": "kawasaki-ninja-1000-ninja-1000sx-2011",
+ "make": "Kawasaki",
+ "model": "Ninja 1000 / Ninja 1000SX",
+ "name": "Kawasaki Ninja 1000 / 1000SX",
+ "years": [
+  2011,
+  2026
+ ],
+ "match": [
+  "ninja 1000",
+  "ninja 1000sx",
+  "ninja1000",
+  "z1000sx",
+  "zx1000 2011",
+  "ninja 1000 abs"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "1043 cc liquid-cooled inline four, fuel injected",
+ "intro": "Kawasaki's sport tourer four. Comfortable, fast and often fitted with bags.",
+ "focus": [
+  [
+   "1043 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Luggage",
+   "Check mounts"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KawiForums",
+   "url": "https://www.kawiforums.com/",
+   "what": "Owner forum for Kawasaki motorcycles."
+  }
+ ],
+ "silhouette": "kawasaki-ninja-1000-ninja-1000sx-2011",
+ "areas": [],
+ "heroName": "NINJA 1000"
+}

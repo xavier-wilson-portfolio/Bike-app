@@ -1,0 +1,69 @@
+{
+ "id": "honda-cb919-599-hornet-2002",
+ "make": "Honda",
+ "model": "919 / 599 Hornet",
+ "name": "Honda 919 (CB900F) / 599 (CB600F Hornet)",
+ "years": [
+  2002,
+  2007
+ ],
+ "match": [
+  "919",
+  "cb919",
+  "cb900f 2002",
+  "honda 919",
+  "599",
+  "cb599",
+  "cb600f hornet",
+  "hornet 600",
+  "hornet 900"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "919 cc fuel injected or 599 cc carbureted inline four, liquid-cooled",
+ "intro": "Honda's naked fours of the 2000s. The 919 is fuel injected; the 599 has four carbs.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel",
+   "EFI on 919, carbs on 599"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Cooling",
+   "Hoses and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "The 919 is fuel injected. The 599 has four carbs; rebuild those as a set."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [],
+ "silhouette": "honda-cb919-599-hornet-2002",
+ "areas": [],
+ "heroName": "919",
+ "hero": {
+  "src": "img/hero/honda-cb919-599-hornet-2002.jpg",
+  "artist": "Aconcagua",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_Hornet_900_4.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

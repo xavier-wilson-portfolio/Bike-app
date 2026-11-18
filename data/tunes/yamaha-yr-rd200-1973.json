@@ -1,0 +1,72 @@
+{
+ "id": "yamaha-yr-rd200-1973",
+ "make": "Yamaha",
+ "model": "RD200",
+ "name": "Yamaha RD200",
+ "years": [
+  1973,
+  1976
+ ],
+ "match": [
+  "rd200",
+  "rd 200",
+  "rd200b",
+  "rd200dx",
+  "cs5"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "195 cc air-cooled two-stroke twin, two carbs, Autolube",
+ "intro": "A small two-stroke twin that punches above its size. Two carbs, Autolube and points.",
+ "focus": [
+  [
+   "Two-stroke twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Oil pump",
+   "Bleed it"
+  ],
+  [
+   "Points",
+   "Two sets"
+  ],
+  [
+   "Crank seals",
+   "Check them"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ],
+  "B": [
+   "A two-stroke with leaking crank seals runs lean and can seize. Get the seals checked before riding hard."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [],
+ "silhouette": "yamaha-yr-rd200-1973",
+ "areas": [],
+ "heroName": "RD200",
+ "hero": {
+  "src": "img/hero/yamaha-yr-rd200-1973.jpg",
+  "artist": "sv1ambo",
+  "page": "https://commons.wikimedia.org/wiki/File:1972_Yamaha_200_motorcycle_(5962611829).jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

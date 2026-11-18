@@ -1,0 +1,87 @@
+{
+ "id": "kawasaki-z900rs-2018",
+ "make": "Kawasaki",
+ "model": "Z900RS",
+ "name": "Kawasaki Z900RS",
+ "years": [
+  2018,
+  2026
+ ],
+ "match": [
+  "z900rs",
+  "z900 rs",
+  "z900rs cafe",
+  "zr900c",
+  "z900rs se"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "948 cc liquid-cooled inline four, fuel injected",
+ "intro": "The retro Kawasaki four. Looks like a Z1, works like a modern bike. A few recalls cover different years.",
+ "focus": [
+  [
+   "948 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Recalls",
+   "Several"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2018 bikes are in recall 18V866 (rear brake hose routing), some 2019 bikes in 19V083 (ABS unit), and some 2024 bikes in 24V270 (front tire).",
+   "reason": "All fixes are free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "18V866",
+   "years": "2018 (some)",
+   "what": "Rear brake hose and wheel sensor wire may be routed wrong and touch the rear tire.",
+   "fix": "Free dealer repair.",
+   "src": "https://www.vehiclesafetyrecalls.com/recall/18V866000"
+  },
+  {
+   "id": "19V083",
+   "years": "2019 ABS (some)",
+   "what": "ABS unit fault that may lock a wheel.",
+   "fix": "Dealer inspects the ABS unit and replaces it if needed, free.",
+   "src": "https://auto-recalls.justia.com/kawasaki/z900/2019/19v083000"
+  },
+  {
+   "id": "24V270",
+   "years": "2024 (some)",
+   "what": "Front tire may have inner wall blistering and fail.",
+   "fix": "Dealer replaces the front tire free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/24V270000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "KawiForums",
+   "url": "https://www.kawiforums.com/",
+   "what": "Owner forum for Kawasaki motorcycles."
+  }
+ ],
+ "heroName": "Z900RS"
+}

@@ -1,0 +1,68 @@
+{
+ "id": "kawasaki-zr-7-zr550-zephyr-1990",
+ "make": "Kawasaki",
+ "model": "ZR-7 / ZR550 Zephyr",
+ "name": "Kawasaki ZR-7 / Zephyr 550 / 750",
+ "years": [
+  1990,
+  2003
+ ],
+ "match": [
+  "zr7",
+  "zr-7",
+  "zr-7s",
+  "zephyr",
+  "zephyr 550",
+  "zr550",
+  "zephyr 750",
+  "zr750"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "553 to 738 cc air-cooled inline four, four carbs",
+ "intro": "Kawasaki's retro air-cooled fours. Four carbs and old-school maintenance.",
+ "focus": [
+  [
+   "Inline four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "Valves",
+   "Shim under bucket"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KawiForums",
+   "url": "https://www.kawiforums.com/",
+   "what": "Owner forum for Kawasaki motorcycles."
+  }
+ ],
+ "heroName": "ZR-7"
+}

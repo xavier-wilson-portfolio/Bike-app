@@ -1,0 +1,75 @@
+{
+ "id": "kawasaki-zx-6-zzr600-1990",
+ "make": "Kawasaki",
+ "model": "ZX-6 / ZZR600",
+ "name": "Kawasaki ZX-6 / ZZR600",
+ "years": [
+  1990,
+  2008
+ ],
+ "match": [
+  "zzr600",
+  "zzr 600",
+  "zx-6",
+  "zx6",
+  "zx600d",
+  "zx600e",
+  "ninja zx-6"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "599 cc liquid-cooled inline four, four carbs",
+ "intro": "Kawasaki's 600 sport tourer. Four carbs, ram air on later bikes and a long run in the US.",
+ "focus": [
+  [
+   "599 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Cooling",
+   "Hoses and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ZX Forums",
+   "url": "https://www.zxforums.com/",
+   "what": "Owner forum for Kawasaki Ninja ZX models."
+  }
+ ],
+ "silhouette": "kawasaki-zx-6-zzr600-1990",
+ "areas": [],
+ "heroName": "ZZR600",
+ "hero": {
+  "src": "img/hero/kawasaki-zx-6-zzr600-1990.jpg",
+  "artist": "Shohei ninomiya",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_zzr600.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

@@ -1,0 +1,75 @@
+{
+ "id": "suzuki-v-strom-800de-2023",
+ "make": "Suzuki",
+ "model": "V-Strom 800DE / 800",
+ "name": "Suzuki V-Strom 800DE / 800",
+ "years": [
+  2023,
+  2026
+ ],
+ "match": [
+  "v-strom 800",
+  "vstrom 800",
+  "v-strom 800de",
+  "800de",
+  "dl800",
+  "v strom 800",
+  "v-strom 800re"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "776 cc liquid-cooled parallel twin, fuel injected, ride-by-wire",
+ "intro": "Suzuki's newer middleweight adventure bike. Early 800DEs had a rear tire recall that NHTSA flagged do-not-ride.",
+ "focus": [
+  [
+   "776 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Rear tire",
+   "2023-24 recall"
+  ],
+  [
+   "Electronics",
+   "Ride modes"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2023-2024 800DE and 800DE Adventure bikes are in recall 24V535 for the original rear tire.",
+   "reason": "The tread can separate. Don't ride on the original rear tire until it is checked. The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "24V535",
+   "years": "2023-2024 800DE (some)",
+   "what": "Original rear tire tread can separate from the tire.",
+   "fix": "Dealer replaces the rear tire free.",
+   "src": "https://www.advpulse.com/?p=113253"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "StromTrooper",
+   "url": "https://www.stromtrooper.com/",
+   "what": "Owner forum for Suzuki V-Strom models."
+  }
+ ],
+ "heroName": "V-STROM 800"
+}

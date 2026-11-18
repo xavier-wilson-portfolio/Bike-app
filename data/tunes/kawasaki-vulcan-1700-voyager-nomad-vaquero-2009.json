@@ -1,0 +1,76 @@
+{
+ "id": "kawasaki-vulcan-1700-voyager-nomad-vaquero-2009",
+ "make": "Kawasaki",
+ "model": "Vulcan 1700 Voyager / Nomad / Vaquero",
+ "name": "Kawasaki Vulcan 1700 (Voyager, Nomad, Vaquero, Classic)",
+ "years": [
+  2009,
+  2023
+ ],
+ "match": [
+  "vulcan 1700",
+  "vn1700",
+  "voyager 1700",
+  "vulcan 1700 voyager",
+  "nomad 1700",
+  "vaquero",
+  "vulcan 1700 vaquero",
+  "vulcan 1700 classic"
+ ],
+ "style": "touring",
+ "drive": "belt",
+ "engine": "1700 cc liquid-cooled V-twin, fuel injected, belt drive",
+ "intro": "Kawasaki's big belt-drive V-twin tourers. 2009-2015 Voyagers and 2011-2015 Vaqueros have an ignition wire recall.",
+ "focus": [
+  [
+   "1700 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Belt drive",
+   "Check wear"
+  ],
+  [
+   "Ignition wire",
+   "2009-15 recall"
+  ],
+  [
+   "Fairing",
+   "Lots of wiring"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2009-2015 Voyagers and 2011-2015 Vaqueros are in recall 15V550 for an ignition switch wire that can chafe on the tank.",
+   "reason": "A short can stall the engine. The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "15V550",
+   "years": "2009-2015 Voyager, 2011-2015 Vaquero",
+   "what": "Ignition switch wire can chafe against the fuel tank and short, stalling the engine.",
+   "fix": "Dealer replaces damaged switches and adds shielding and padding, free.",
+   "src": "https://www.vehiclesafetyrecalls.com/recall/15V550000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "Vulcan Riders Association",
+   "url": "https://www.vulcanriders.org/",
+   "what": "Owner club and forum for Kawasaki Vulcans."
+  }
+ ],
+ "heroName": "VULCAN 1700"
+}

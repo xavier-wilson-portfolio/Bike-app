@@ -1,0 +1,84 @@
+{
+ "id": "honda-vt1300-fury-stateline-sabre-interstate-2010",
+ "make": "Honda",
+ "model": "VT1300 Fury / Stateline / Sabre / Interstate",
+ "name": "Honda VT1300 (Fury, Stateline, Sabre, Interstate)",
+ "years": [
+  2010,
+  2020
+ ],
+ "match": [
+  "fury",
+  "vt1300cx",
+  "stateline",
+  "vt1300cr",
+  "sabre 1300",
+  "vt1300cs",
+  "interstate 1300",
+  "vt1300ct",
+  "vt1300"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "1312 cc liquid-cooled V-twin, fuel injected, shaft drive",
+ "intro": "Honda's 1300 cruisers. Some 2014-2015 bikes have a starter relay recall, and a few Furies a fuel tank weld recall.",
+ "focus": [
+  [
+   "1312 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Shaft drive",
+   "Change the oil"
+  ],
+  [
+   "Starter relay",
+   "2014-2015 recall"
+  ],
+  [
+   "Cooling",
+   "Hoses and fan"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2014-2015 VT1300 bikes are in recall 15V439 (starter relay). A few 2010, 2016 and 2017 Furies are in recall 17V805 (fuel tank bracket welds missing).",
+   "reason": "A fuel leak is a fire risk. Both fixes are free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "15V439",
+   "years": "2014-2015 (model list varies)",
+   "what": "Starter relay switch can fail, so the bike may not start, or the starter may keep running.",
+   "fix": "Dealer replaces the starter relay free.",
+   "src": "https://recallcheck.net/recall/15V439000"
+  },
+  {
+   "id": "17V805",
+   "years": "2010, 2016-2017 Fury (20 bikes)",
+   "what": "Fuel tank may be missing welds at the mounting bracket, so the bracket can separate and fuel can leak.",
+   "fix": "Dealer inspects the welds and replaces the tank if needed, free.",
+   "src": "https://auto-recalls.justia.com/honda/vt1300cx/2017/17v805000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "Shadow Riders",
+   "url": "https://www.shadowriders.com/",
+   "what": "Owner forum for Honda Shadows and other Honda cruisers."
+  }
+ ],
+ "heroName": "FURY"
+}

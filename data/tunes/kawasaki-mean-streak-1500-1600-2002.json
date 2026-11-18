@@ -1,0 +1,74 @@
+{
+ "id": "kawasaki-mean-streak-1500-1600-2002",
+ "make": "Kawasaki",
+ "model": "Vulcan Mean Streak 1500 / 1600",
+ "name": "Kawasaki Vulcan Mean Streak",
+ "years": [
+  2002,
+  2008
+ ],
+ "match": [
+  "mean streak",
+  "meanstreak",
+  "vulcan mean streak",
+  "vn1500p",
+  "vn1600b",
+  "mean streak 1600"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "1470 or 1552 cc liquid-cooled V-twin, fuel injected, belt drive",
+ "intro": "Kawasaki's performance cruiser. Fuel injected, with better brakes and suspension than the other Vulcans of its day.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Belt drive",
+   "Check wear"
+  ],
+  [
+   "Oil filter",
+   "2003-04 recall"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2003-2004 Mean Streaks are in recall 04V023 for an oil filter that can deform on a cold start.",
+   "reason": "The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "04V023",
+   "years": "2003-2004 (some Classic, Drifter, Mean Streak, Nomad FI)",
+   "what": "High oil pressure on a cold start can deform the oil filter cartridge.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehiclesafetyrecalls.com/recall/04V023000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "Vulcan Riders Association",
+   "url": "https://www.vulcanriders.org/",
+   "what": "Owner club and forum for Kawasaki Vulcans."
+  }
+ ],
+ "heroName": "MEAN STREAK"
+}

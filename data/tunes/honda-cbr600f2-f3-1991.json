@@ -1,0 +1,67 @@
+{
+ "id": "honda-cbr600f2-f3-1991",
+ "make": "Honda",
+ "model": "CBR600F2 / F3",
+ "name": "Honda CBR600F2 / F3",
+ "years": [
+  1991,
+  1998
+ ],
+ "match": [
+  "cbr600f2",
+  "cbr600f3",
+  "cbr600 f2",
+  "cbr600 f3",
+  "f2",
+  "f3"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "599 cc liquid-cooled inline four, four carbs",
+ "intro": "The 1990s CBR600. Four carbs, plenty of plastic, and usually a few owners' worth of wear.",
+ "focus": [
+  [
+   "599 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Cooling",
+   "Hoses and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "CBR Forum",
+   "url": "https://www.cbrforum.com/",
+   "what": "Owner forum for Honda CBR models."
+  }
+ ],
+ "silhouette": "honda-cbr600f2-f3-1991",
+ "areas": [],
+ "heroName": "CBR600F3"
+}
