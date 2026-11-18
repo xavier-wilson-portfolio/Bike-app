@@ -1,0 +1,74 @@
+{
+ "id": "suzuki-s40-savage-1986",
+ "make": "Suzuki",
+ "model": "S40 Savage",
+ "name": "Suzuki Savage / Boulevard S40",
+ "years": [
+  1986,
+  2019
+ ],
+ "match": [
+  "savage",
+  "ls650",
+  "s40",
+  "boulevard s40",
+  "savage 650"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "652 cc air-cooled SOHC single, one carb, belt drive",
+ "intro": "A simple big-single cruiser. Keep up with valve adjustments, the carb and the belt.",
+ "focus": [
+  [
+   "652 cc single",
+   "Air-cooled"
+  ],
+  [
+   "One carb",
+   "Clean if stored"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Belt drive",
+   "Tension"
+  ],
+  [
+   "Brakes",
+   "Weak front"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "The valves need regular adjustment. Don't skip it."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Valve adjustments",
+   "what": "Older bikes wear on valve adjustments and the clutch. Brakes are a common complaint.",
+   "src": "https://vincheck.info/?p=80846"
+  }
+ ],
+ "forums": [],
+ "silhouette": "suzuki-s40-savage-1986",
+ "areas": [],
+ "heroName": "SAVAGE",
+ "hero": {
+  "src": "img/hero/suzuki-s40-savage-1986.jpg",
+  "artist": "jack_spellingbacon",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_Savage_LS650.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

@@ -1,0 +1,73 @@
+{
+ "id": "ktm-690-enduro-r-2008",
+ "make": "KTM",
+ "model": "690 Enduro R",
+ "name": "KTM 690 Enduro R",
+ "years": [
+  2008,
+  2026
+ ],
+ "match": [
+  "690 enduro",
+  "690 enduro r",
+  "ktm 690",
+  "690r"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "654 or 690 cc liquid-cooled single, fuel injected",
+ "intro": "A powerful single-cylinder dual-sport. Fuel pump failures are the most reported problem.",
+ "focus": [
+  [
+   "Big single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "In-tank pump"
+  ],
+  [
+   "Fuel pump",
+   "Common failure"
+  ],
+  [
+   "Water pump",
+   "Seal weeps"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-690-01",
+   "phase": "G",
+   "after": "G-004",
+   "title": "Check the fuel pump and filter",
+   "instructions": "Check fuel pressure and the in-tank filter. Look for black residue in the tank from a worn pump. Don't run the tank dry.",
+   "reason": "Fuel pump failure is one of the most common 690 problems, and a dying pump can clog the filter and injector.",
+   "src": "Engine Patrol 690 notes",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [
+  {
+   "title": "Fuel pump",
+   "what": "Fuel pump failure is one of the most common 690 Enduro R problems.",
+   "src": "https://enginepatrol.com/?p=7910"
+  }
+ ],
+ "forums": [],
+ "heroName": "690 ENDURO"
+}

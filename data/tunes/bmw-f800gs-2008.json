@@ -1,0 +1,95 @@
+{
+ "id": "bmw-f800gs-2008",
+ "make": "BMW",
+ "model": "F800GS",
+ "name": "BMW F800GS",
+ "years": [
+  2008,
+  2018
+ ],
+ "match": [
+  "f800gs",
+  "f 800 gs",
+  "f800 gs",
+  "f800gsa",
+  "f650gs twin",
+  "f700gs"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "798 cc liquid-cooled parallel twin, fuel injected, chain drive",
+ "intro": "A capable mid-size GS. The water pump seal is the known weak spot. Watch the weep hole.",
+ "focus": [
+  [
+   "798 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Water pump",
+   "Weep hole"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Off-road wear",
+   "Bearings"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-F8-01",
+   "phase": "H",
+   "after": "H-004",
+   "title": "Check the water pump weep hole",
+   "instructions": "Look under the water pump for coolant drips from the weep hole. Check the oil for a milky look.",
+   "reason": "Worn water pump seals are a known fault on the 800 twins.",
+   "src": "UKGSer F800GS thread",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [
+  {
+   "title": "Water pump seals",
+   "what": "Owners say the water pump seals fail and leak from the weep hole on the 800 twin engines.",
+   "src": "https://www.ukgser.com/community/threads/f800-gs-coolant-leak.206902/"
+  }
+ ],
+ "forums": [
+  {
+   "name": "UKGSer forum",
+   "url": "https://www.ukgser.com/community/",
+   "what": "Owner forum for BMW GS models."
+  },
+  {
+   "name": "F650.com",
+   "url": "https://f650.com/",
+   "what": "Owner forum and FAQs for BMW F650 and F800 models."
+  }
+ ],
+ "silhouette": "bmw-f800gs-2008",
+ "areas": [],
+ "heroName": "F800GS",
+ "hero": {
+  "src": "img/hero/bmw-f800gs-2008.jpg",
+  "artist": "ich",
+  "page": "https://commons.wikimedia.org/wiki/File:Liesel_14-11-10_BMW_F800GS_V2.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

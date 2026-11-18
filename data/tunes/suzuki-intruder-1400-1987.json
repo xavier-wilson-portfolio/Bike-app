@@ -1,0 +1,70 @@
+{
+ "id": "suzuki-intruder-1400-1987",
+ "make": "Suzuki",
+ "model": "Intruder 1400",
+ "name": "Suzuki Intruder 1400",
+ "years": [
+  1987,
+  2004
+ ],
+ "match": [
+  "intruder 1400",
+  "vs1400",
+  "vs 1400",
+  "boulevard s83",
+  "s83"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "1360 cc air/oil-cooled SOHC V-twin, two carbs, four-speed, shaft drive",
+ "intro": "A tough, long-lived cruiser. Carbs and starting problems are the usual jobs.",
+ "focus": [
+  [
+   "1360 cc V-twin",
+   "Air/oil-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Starting",
+   "Single click"
+  ],
+  [
+   "Shaft drive",
+   "Final drive oil"
+  ],
+  [
+   "Four-speed",
+   "Normal for it"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Starting",
+   "what": "A single click at the starter button is one of the most reported problems.",
+   "src": "https://atvutv.neocities.org/suzuki-intruder-1400-problems"
+  }
+ ],
+ "forums": [],
+ "silhouette": "suzuki-intruder-1400-1987",
+ "areas": [],
+ "heroName": "INTRUDER",
+ "hero": {
+  "src": "img/hero/suzuki-intruder-1400-1987.jpg",
+  "artist": "Talkrabb",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki-Intruder-VS1400-1.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

@@ -76,5 +76,14 @@
    "what": "Owner forum for Yamaha Venture and Royal Star V4s."
   }
  ],
- "heroName": "ROYAL STAR"
+ "silhouette": "yamaha-royal-star-1996",
+ "areas": [],
+ "heroName": "ROYAL STAR",
+ "hero": {
+  "src": "img/hero/yamaha-royal-star-1996.jpg",
+  "artist": "kolochkov",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_XVZ1300TF_Royal_Star_Venture_2005.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

@@ -78,5 +78,14 @@
    "what": "Owner forum for the Kawasaki Z1300 six."
   }
  ],
- "heroName": "KZ1300"
+ "silhouette": "kawasaki-kz1300-1979",
+ "areas": [],
+ "heroName": "KZ1300",
+ "hero": {
+  "src": "img/hero/kawasaki-kz1300-1979.jpg",
+  "artist": "Rikita",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_Z1300_(KZ1300_US).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

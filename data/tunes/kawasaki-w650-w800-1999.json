@@ -74,5 +74,14 @@
   }
  ],
  "forums": [],
- "heroName": "W650"
+ "silhouette": "kawasaki-w650-w800-1999",
+ "areas": [],
+ "heroName": "W650",
+ "hero": {
+  "src": "img/hero/kawasaki-w650-w800-1999.jpg",
+  "artist": "Khaosaming (Khaosaming)",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_W650_2000_Retro_High_Bar.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
 }

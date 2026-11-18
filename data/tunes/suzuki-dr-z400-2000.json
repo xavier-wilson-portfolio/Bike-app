@@ -1,0 +1,101 @@
+{
+ "id": "suzuki-dr-z400-2000",
+ "make": "Suzuki",
+ "model": "DR-Z400",
+ "name": "Suzuki DR-Z400",
+ "years": [
+  2000,
+  2026
+ ],
+ "match": [
+  "dr-z400",
+  "drz400",
+  "drz 400",
+  "dr-z400s",
+  "dr-z400sm",
+  "drz400s",
+  "drz400sm",
+  "dr-z4s"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "398 cc liquid-cooled DOHC single, carb (the new 2025 DR-Z4S is fuel injected)",
+ "intro": "A tough dual-sport. The stator, the front sprocket nut and the bearings are the things to watch.",
+ "focus": [
+  [
+   "398 cc single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Jetting and cleaning"
+  ],
+  [
+   "Stator",
+   "Hard starting"
+  ],
+  [
+   "Sprocket nut",
+   "Can back off"
+  ],
+  [
+   "Bearings",
+   "Swingarm and steering"
+  ]
+ ],
+ "remove": [],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2025-2026 models are in recall 25V873 for the rear brake.",
+   "reason": "A brake problem can cost you stopping power. The fix is free."
+  }
+ },
+ "add": [
+  {
+   "id": "X-DRZ-01",
+   "phase": "E",
+   "after": "E-002",
+   "title": "Check the front sprocket nut",
+   "instructions": "Pull the sprocket cover and check the front sprocket nut is tight and locked.",
+   "reason": "Owners say the front sprocket nut coming loose is a common problem.",
+   "src": "ThumperTalk via Engine Patrol",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "G": [
+   "Older bikes have a carb. The 2025 DR-Z4S is fuel injected. Skip the steps that don't match your bike."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "25V873",
+   "years": "2025-2026 (some)",
+   "what": "Rear brake fastener issue that could cause a loss of braking power.",
+   "fix": "Free dealer repair.",
+   "src": "https://www.advpulse.com/?p=123903"
+  }
+ ],
+ "known": [
+  {
+   "title": "Stator",
+   "what": "Hard starting on older bikes is often a stator that failed early.",
+   "src": "https://enginepatrol.com/?p=14768"
+  }
+ ],
+ "forums": [],
+ "silhouette": "suzuki-dr-z400-2000",
+ "areas": [],
+ "heroName": "DR-Z400",
+ "hero": {
+  "src": "img/hero/suzuki-dr-z400-2000.jpg",
+  "artist": "Farwestern",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_DR-Z400.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
+}

@@ -69,5 +69,14 @@
   }
  ],
  "forums": [],
- "heroName": "KLR650"
+ "silhouette": "kawasaki-klr650-1987",
+ "areas": [],
+ "heroName": "KLR650",
+ "hero": {
+  "src": "img/hero/kawasaki-klr650-1987.jpg",
+  "artist": "Carsamar",
+  "page": "https://commons.wikimedia.org/wiki/File:2009_black_Kawasaki_KLR_650.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

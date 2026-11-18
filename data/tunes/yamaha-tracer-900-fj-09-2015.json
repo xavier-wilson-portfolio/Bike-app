@@ -1,0 +1,76 @@
+{
+ "id": "yamaha-tracer-900-fj-09-2015",
+ "make": "Yamaha",
+ "model": "Tracer 900 / FJ-09",
+ "name": "Yamaha FJ-09 / Tracer 900",
+ "years": [
+  2015,
+  2020
+ ],
+ "match": [
+  "fj-09",
+  "fj09",
+  "tracer 900",
+  "tracer 900 gt",
+  "mt-09 tracer"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "847 cc liquid-cooled inline triple, fuel injected",
+ "intro": "A triple-engined sport tourer. 2015-2017 FJ-09s had a handlebar holder recall.",
+ "focus": [
+  [
+   "847 cc triple",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "2015-17 recall",
+   "Handlebar holder"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Valves",
+   "Check on time"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2015-2017 FJ-09s are in recall 17V221 because the lower handlebar holder may loosen.",
+   "reason": "Loose bars can cost you control. The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "17V221",
+   "years": "2015-2017",
+   "what": "Lower handlebar holder may loosen.",
+   "fix": "Dealer replaces the holder free.",
+   "src": "https://www.motorverso.com/recalls/yamaha/17V221000/"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "silhouette": "yamaha-tracer-900-fj-09-2015",
+ "areas": [],
+ "heroName": "FJ-09",
+ "hero": {
+  "src": "img/hero/yamaha-tracer-900-fj-09-2015.jpg",
+  "artist": "Daniel Vinals",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_FJ-09.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

@@ -48,5 +48,14 @@
  "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
  "known": [],
  "forums": [],
- "heroName": "CB1000R"
+ "silhouette": "honda-cb1000r-2008",
+ "areas": [],
+ "heroName": "CB1000R",
+ "hero": {
+  "src": "img/hero/honda-cb1000r-2008.jpg",
+  "artist": "Addvisor",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CB1000R_red.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

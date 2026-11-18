@@ -64,5 +64,14 @@
  ],
  "known": [],
  "forums": [],
- "heroName": "VTX1300"
+ "silhouette": "honda-vtx1300-2003",
+ "areas": [],
+ "heroName": "VTX1300",
+ "hero": {
+  "src": "img/hero/honda-vtx1300-2003.jpg",
+  "artist": "Chris Woodrich",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_VTX_1300_parked_at_Hogs_for_Hospice,_Leamington,_Ontario,_2025-08-02.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

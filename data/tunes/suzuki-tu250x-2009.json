@@ -1,0 +1,62 @@
+{
+ "id": "suzuki-tu250x-2009",
+ "make": "Suzuki",
+ "model": "TU250X",
+ "name": "Suzuki TU250X",
+ "years": [
+  2009,
+  2020
+ ],
+ "match": [
+  "tu250x",
+  "tu250",
+  "tu 250"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "249 cc air-cooled SOHC single, fuel injected",
+ "intro": "A simple retro single. Fuel injected and easy to keep running.",
+ "focus": [
+  [
+   "249 cc single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearances"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Battery",
+   "Keep it charged"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [],
+ "silhouette": "suzuki-tu250x-2009",
+ "areas": [],
+ "heroName": "TU250X",
+ "hero": {
+  "src": "img/hero/suzuki-tu250x-2009.jpg",
+  "artist": "Dbratland",
+  "page": "https://commons.wikimedia.org/wiki/File:2010_Suzuki_TU250X_at_Aurora_Suzuki_2.jpg",
+  "lic": "CC BY 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by/3.0"
+ }
+}

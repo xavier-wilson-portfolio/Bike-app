@@ -1,0 +1,75 @@
+{
+ "id": "yamaha-radian-yx600-1986",
+ "make": "Yamaha",
+ "model": "Radian YX600",
+ "name": "Yamaha Radian YX600",
+ "years": [
+  1986,
+  1990
+ ],
+ "match": [
+  "radian",
+  "yx600",
+  "yx 600",
+  "radian 600"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "598 cc air-cooled DOHC inline four, four carbs",
+ "intro": "A simple, quick little four. Carbs, charging and old shocks are the usual jobs.",
+ "focus": [
+  [
+   "598 cc four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Charging",
+   "Check voltage"
+  ],
+  [
+   "Rear shock",
+   "Seals leak"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Shocks",
+   "what": "Leaking shock seals are a top UK MOT failure on the Radian.",
+   "src": "https://carverify.co.uk/car-check/yamaha/radian"
+  }
+ ],
+ "forums": [
+  {
+   "name": "XJBikes forum",
+   "url": "https://www.xjbikes.com/forums/",
+   "what": "Owner forum for Yamaha XJ, Seca, Maxim and Radian fours."
+  }
+ ],
+ "silhouette": "yamaha-radian-yx600-1986",
+ "areas": [],
+ "heroName": "RADIAN",
+ "hero": {
+  "src": "img/hero/yamaha-radian-yx600-1986.jpg",
+  "artist": "Chaz360 (talk)",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_YX_600_Radian.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
+}

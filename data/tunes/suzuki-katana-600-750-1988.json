@@ -1,0 +1,68 @@
+{
+ "id": "suzuki-katana-600-750-1988",
+ "make": "Suzuki",
+ "model": "Katana 600/750",
+ "name": "Suzuki Katana 600 / 750 (GSX600F / GSX750F)",
+ "years": [
+  1988,
+  2006
+ ],
+ "match": [
+  "katana 600",
+  "katana 750",
+  "gsx600f",
+  "gsx750f",
+  "gsx 600f",
+  "gsx 750f"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "600 or 748 cc oil-cooled DOHC inline four, four carbs",
+ "intro": "A comfy sport tourer. Gummed carbs are the usual reason one won't run right.",
+ "focus": [
+  [
+   "600 or 750 four",
+   "Oil-cooled"
+  ],
+  [
+   "Four carbs",
+   "Gum up when stored"
+  ],
+  [
+   "Fork seals",
+   "Check for leaks"
+  ],
+  [
+   "Charging",
+   "Check voltage"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "If it sat, clean the carbs fully. Gummed jets are the most common problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Carbs",
+   "what": "Carburetor gumming and clogged jets cause rough idle and hesitation.",
+   "src": "https://www.motoryk.com/bikes/suzuki/gsx600f-katana/problems"
+  }
+ ],
+ "forums": [],
+ "silhouette": "suzuki-katana-600-750-1988",
+ "areas": [],
+ "heroName": "KATANA"
+}

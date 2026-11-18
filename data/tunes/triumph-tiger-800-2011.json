@@ -1,0 +1,89 @@
+{
+ "id": "triumph-tiger-800-2011",
+ "make": "Triumph",
+ "model": "Tiger 800",
+ "name": "Triumph Tiger 800",
+ "years": [
+  2011,
+  2019
+ ],
+ "match": [
+  "tiger 800",
+  "tiger 800 xc",
+  "tiger 800 xcx",
+  "tiger 800 xrx",
+  "tiger 800 xr"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "800 cc liquid-cooled inline triple, fuel injected",
+ "intro": "A popular mid-size adventure triple. Early and 2014-2015 bikes had engine management and injector recalls.",
+ "focus": [
+  [
+   "800 cc triple",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Recalls",
+   "2011-12, 2014-15"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Off-road wear",
+   "Bearings"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2011-2012 bikes are in recall 11V434 (engine management software). Some 2014-2015 bikes are in recall 14V694 (fuel injectors).",
+   "reason": "Both fixes are free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "11V434",
+   "years": "2011-2012 (some)",
+   "what": "Engine management software problem.",
+   "fix": "Free dealer repair (Triumph recall 431).",
+   "src": "https://www.vehiclesafetyrecalls.com/recall/11V434000"
+  },
+  {
+   "id": "14V694",
+   "years": "2014-2015 (some, Feb-Aug 2014 build)",
+   "what": "Fuel injector may activate when it shouldn't.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehiclesafetyrecalls.com/recall/14V694000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "silhouette": "triumph-tiger-800-2011",
+ "areas": [],
+ "heroName": "TIGER 800",
+ "hero": {
+  "src": "img/hero/triumph-tiger-800-2011.jpg",
+  "artist": "H005",
+  "page": "https://commons.wikimedia.org/wiki/File:Triumph_Tiger_800_MY_2012.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
+}

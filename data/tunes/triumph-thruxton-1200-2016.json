@@ -1,0 +1,81 @@
+{
+ "id": "triumph-thruxton-1200-2016",
+ "make": "Triumph",
+ "model": "Thruxton 1200",
+ "name": "Triumph Thruxton 1200",
+ "years": [
+  2016,
+  2026
+ ],
+ "match": [
+  "thruxton 1200",
+  "thruxton r",
+  "thruxton 1200r",
+  "thruxton rs"
+ ],
+ "style": "cafe",
+ "drive": "chain",
+ "engine": "1200 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "Triumph's modern cafe racer. Bikes with the accessory cafe fairing had a wiring recall.",
+ "focus": [
+  [
+   "1200 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Fairing recall",
+   "Accessory fairing"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Electronics",
+   "Updates"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2016-2018 bikes fitted with the accessory cafe racer fairing are in recall 19E029 because the fairing can damage the wiring.",
+   "reason": "Damaged wiring can kill the lights or stall the engine. The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "19E029",
+   "years": "2016-2018 (with accessory fairing)",
+   "what": "The accessory cafe fairing may damage the wiring, causing loss of lights or a stall.",
+   "fix": "Dealer replaces the wire conduits free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/19E029000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "silhouette": "triumph-thruxton-1200-2016",
+ "areas": [],
+ "heroName": "THRUXTON",
+ "hero": {
+  "src": "img/hero/triumph-thruxton-1200-2016.jpg",
+  "artist": "Sör Paule",
+  "page": "https://commons.wikimedia.org/wiki/File:Triumph_Thruxton_1200_R.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

@@ -75,5 +75,14 @@
  ],
  "known": [],
  "forums": [],
- "heroName": "VULCAN 2000"
+ "silhouette": "kawasaki-vulcan-2000-2004",
+ "areas": [],
+ "heroName": "VULCAN 2000",
+ "hero": {
+  "src": "img/hero/kawasaki-vulcan-2000-2004.jpg",
+  "artist": "Arthurrh",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_Vulcan_1500_(2000).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

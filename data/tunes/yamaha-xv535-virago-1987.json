@@ -1,0 +1,83 @@
+{
+ "id": "yamaha-xv535-virago-1987",
+ "make": "Yamaha",
+ "model": "XV535 Virago",
+ "name": "Yamaha Virago 535",
+ "years": [
+  1987,
+  2003
+ ],
+ "match": [
+  "virago 535",
+  "xv535",
+  "xv 535",
+  "virago 500"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "535 cc air-cooled SOHC V-twin, two carbs, shaft drive",
+ "intro": "A light, easy cruiser. Starting problems usually trace to the battery, the starter or the starter clutch.",
+ "focus": [
+  [
+   "535 cc V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean if stored"
+  ],
+  [
+   "Starting",
+   "Battery and starter clutch"
+  ],
+  [
+   "Shaft drive",
+   "Final drive oil"
+  ],
+  [
+   "Electrics",
+   "Connectors"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-V53-01",
+   "phase": "F",
+   "after": "F-002",
+   "title": "Check the starter system",
+   "instructions": "Test the battery first. Then check that the starter engages cleanly. A starter that spins freely points at the starter clutch.",
+   "reason": "A worn starter clutch is a common cause of no-start on these bikes.",
+   "src": "Cafe Racer Webshop XV535 kit notes",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Virago Tech forum",
+   "url": "http://viragotechforum.com/",
+   "what": "Owner forum for Yamaha Viragos."
+  }
+ ],
+ "silhouette": "yamaha-xv535-virago-1987",
+ "areas": [],
+ "heroName": "VIRAGO 535",
+ "hero": {
+  "src": "img/hero/yamaha-xv535-virago-1987.jpg",
+  "artist": "Jacek Halicki",
+  "page": "https://commons.wikimedia.org/wiki/File:2014_Yamaha_XV_535_Virago.JPG",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

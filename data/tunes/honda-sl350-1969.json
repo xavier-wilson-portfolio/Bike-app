@@ -53,5 +53,14 @@
  "recallNote": "Any recalls on bikes this old were closed long ago.",
  "known": [],
  "forums": [],
- "heroName": "SL350"
+ "silhouette": "honda-sl350-1969",
+ "areas": [],
+ "heroName": "SL350",
+ "hero": {
+  "src": "img/hero/honda-sl350-1969.jpg",
+  "artist": "Tanceymae",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_71-SL350.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

@@ -53,5 +53,14 @@
  "recallNote": "Any recalls on bikes this old were closed long ago.",
  "known": [],
  "forums": [],
- "heroName": "CL450"
+ "silhouette": "honda-cl450-scrambler-1968",
+ "areas": [],
+ "heroName": "CL450",
+ "hero": {
+  "src": "img/hero/honda-cl450-scrambler-1968.jpg",
+  "artist": "Jayt1980 at English Wikipedia",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CL450_RHS.JPG",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

@@ -1,0 +1,54 @@
+{
+ "id": "suzuki-dr200-1996",
+ "make": "Suzuki",
+ "model": "DR200",
+ "name": "Suzuki DR200",
+ "years": [
+  1996,
+  2026
+ ],
+ "match": [
+  "dr200",
+  "dr 200",
+  "dr200s",
+  "dr200se"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "199 cc air-cooled SOHC single, one carb",
+ "intro": "A simple, light trail bike. Mostly routine carb, chain and valve care.",
+ "focus": [
+  [
+   "199 cc single",
+   "Air-cooled"
+  ],
+  [
+   "One carb",
+   "Clean if stored"
+  ],
+  [
+   "Valves",
+   "Check clearances"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Tires",
+   "Check age"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [],
+ "heroName": "DR200"
+}

@@ -1,0 +1,77 @@
+{
+ "id": "harley-davidson-v-rod-2002",
+ "make": "Harley-Davidson",
+ "model": "V-Rod",
+ "name": "Harley-Davidson V-Rod",
+ "years": [
+  2002,
+  2017
+ ],
+ "match": [
+  "v-rod",
+  "vrod",
+  "v rod",
+  "vrsc",
+  "vrsca",
+  "night rod",
+  "night rod special",
+  "muscle",
+  "v-rod muscle"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "1130 or 1250 cc liquid-cooled Revolution DOHC V-twin, fuel injected, belt drive",
+ "intro": "Harley's liquid-cooled muscle cruiser. Cooling leaks, cam chain tensioners and the under-seat tank are things to check.",
+ "focus": [
+  [
+   "Revolution V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Cooling",
+   "Radiator leaks"
+  ],
+  [
+   "Cam tensioner",
+   "Cold rattle"
+  ],
+  [
+   "Fuel tank",
+   "Under the seat"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "The fuel tank sits under the seat. Check it for rust if the bike was stored."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [
+  {
+   "title": "Tensioner and cooling",
+   "what": "Cam chain tensioner wear and radiator leaks are the most reported problems.",
+   "src": "https://motoryk.com/bikes/harley-davidson/vrsca-v-rod"
+  }
+ ],
+ "forums": [],
+ "silhouette": "harley-davidson-v-rod-2002",
+ "areas": [],
+ "heroName": "V-ROD",
+ "hero": {
+  "src": "img/hero/harley-davidson-v-rod-2002.jpg",
+  "artist": "Remi Jouan",
+  "page": "https://commons.wikimedia.org/wiki/File:Harley_Davidson_(1).jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
+}

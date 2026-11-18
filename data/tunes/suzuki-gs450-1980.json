@@ -1,0 +1,81 @@
+{
+ "id": "suzuki-gs450-1980",
+ "make": "Suzuki",
+ "model": "GS450",
+ "name": "Suzuki GS450",
+ "years": [
+  1980,
+  1988
+ ],
+ "match": [
+  "gs450",
+  "gs 450",
+  "gs450e",
+  "gs450l",
+  "gs450t",
+  "gs450txz"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "448 cc air-cooled DOHC parallel twin, two carbs",
+ "intro": "A light, simple twin. Clean carbs, set valves and air leaks decide how it runs.",
+ "focus": [
+  [
+   "448 cc twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Check clearances"
+  ],
+  [
+   "Intake boots",
+   "No air leaks"
+  ],
+  [
+   "Tank",
+   "Check for rust"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Clean carbs, set valves, no intake leaks, a clean tank and a working petcock all have to be right for it to run well."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Running basics",
+   "what": "Clean carbs, adjusted valves, no intake air leaks, a clean tank and a working petcock are needed for these bikes to run properly.",
+   "src": "https://www.thegsresources.com/_forum/forum/featured-forums/gs-owners/1701789-buying-a-650g"
+  }
+ ],
+ "forums": [
+  {
+   "name": "The GS Resources forum",
+   "url": "https://www.thegsresources.com/_forum/",
+   "what": "Owner forum for Suzuki GS fours and twins."
+  }
+ ],
+ "silhouette": "suzuki-gs450-1980",
+ "areas": [],
+ "heroName": "GS450",
+ "hero": {
+  "src": "img/hero/suzuki-gs450-1980.jpg",
+  "artist": "Jan050313",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_GS_450.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

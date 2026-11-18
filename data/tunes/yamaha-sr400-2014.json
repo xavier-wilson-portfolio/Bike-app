@@ -1,0 +1,66 @@
+{
+ "id": "yamaha-sr400-2014",
+ "make": "Yamaha",
+ "model": "SR400",
+ "name": "Yamaha SR400",
+ "years": [
+  2014,
+  2021
+ ],
+ "match": [
+  "sr400",
+  "sr 400",
+  "sr500"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "399 cc air-cooled SOHC single, fuel injected, kick start only",
+ "intro": "A simple kick-start single. 2015-2018 bikes had a recall for an oil hose that can leak onto the rear tire.",
+ "focus": [
+  [
+   "399 cc single",
+   "Kick start only"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "2015-18 recall",
+   "Oil hose"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Valves",
+   "Check clearances"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2015-2018 SR400s are in recall 18V730 because the oil hose flare nut may be loose and leak oil onto the rear tire.",
+   "reason": "Oil on the rear tire can cause a crash. The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "18V730",
+   "years": "2015-2018",
+   "what": "Engine oil line flare nut may be loose and leak oil onto the rear tire.",
+   "fix": "Dealer tightens the nut, or replaces the oil line if it leaks, free.",
+   "src": "https://auto-recalls.justia.com/yamaha/sr400/2018/18v730000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "SR400"
+}

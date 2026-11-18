@@ -1,0 +1,89 @@
+{
+ "id": "ktm-390-duke-2013",
+ "make": "KTM",
+ "model": "390 Duke",
+ "name": "KTM 390 Duke",
+ "years": [
+  2013,
+  2026
+ ],
+ "match": [
+  "390 duke",
+  "duke 390",
+  "ktm 390",
+  "390duke"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "373 or 399 cc liquid-cooled single, fuel injected",
+ "intro": "A light, fun single. Several recent model years have throttle, fuel cap and ECU recalls.",
+ "focus": [
+  [
+   "Single cylinder",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Ride-by-wire"
+  ],
+  [
+   "Recalls",
+   "2022-2025"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Valves",
+   "Check on time"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls first",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2022-2023 bikes are in recall 26V196 (water in the e-throttle can cause loss of drive). 2024 bikes are in recall 25V740 (fuel cap seal leak). 2024-2025 bikes are in recall 25V825 (loss of drive power).",
+   "reason": "Losing drive in traffic is dangerous. The fixes are free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "26V196",
+   "years": "2022-2023 (some)",
+   "what": "Water may enter the e-throttle unit and cause loss of drive power. Expands recall 25V598.",
+   "fix": "Dealer replaces the throttle assembly free.",
+   "src": "https://www.vehiclesafetyrecalls.com/recall/26V196000"
+  },
+  {
+   "id": "25V740",
+   "years": "2024 (some)",
+   "what": "Fuel filler cap seal may crack and leak fuel.",
+   "fix": "Free dealer repair.",
+   "src": "https://www.vehiclesafetyrecalls.com/recall/25V740000"
+  },
+  {
+   "id": "25V825",
+   "years": "2024-2025 (some)",
+   "what": "Loss of drive power.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehiclesafetyrecalls.com/recall/25V825000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "silhouette": "ktm-390-duke-2013",
+ "areas": [],
+ "heroName": "390 DUKE",
+ "hero": {
+  "src": "img/hero/ktm-390-duke-2013.jpg",
+  "artist": "Retired electrician",
+  "page": "https://commons.wikimedia.org/wiki/File:Moscow,_KTM_Duke_390_with_Crazy_Iron_cage,_Oct_2026_05.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
+}

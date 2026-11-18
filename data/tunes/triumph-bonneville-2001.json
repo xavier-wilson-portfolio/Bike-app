@@ -1,0 +1,86 @@
+{
+ "id": "triumph-bonneville-2001",
+ "make": "Triumph",
+ "model": "Bonneville (air-cooled 865)",
+ "name": "Triumph Bonneville (air-cooled)",
+ "years": [
+  2001,
+  2015
+ ],
+ "match": [
+  "bonneville",
+  "bonneville t100",
+  "bonneville se",
+  "bonneville 865",
+  "bonneville 790",
+  "bonnie"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "790 or 865 cc air/oil-cooled DOHC parallel twin, carbs (to 2007) or fuel injected",
+ "intro": "The modern air-cooled Bonnie. Early ones have carbs, later ones are fuel injected. Some 2014-2015 bikes had an injector recall.",
+ "focus": [
+  [
+   "Parallel twin",
+   "Air/oil-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Depends on year"
+  ],
+  [
+   "2014-15 recall",
+   "Injectors"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Oil cooler",
+   "Check unions"
+  ]
+ ],
+ "remove": [
+  "H-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2014-2015 Bonnevilles built Feb-Aug 2014 are in recall 14V694 for the fuel injectors.",
+   "reason": "The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "G": [
+   "2001-2007 bikes have carbs. Later ones are fuel injected. Skip the steps that don't match your bike."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "14V694",
+   "years": "2014-2015 (some, Feb-Aug 2014 build)",
+   "what": "Fuel injector may activate when it shouldn't.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehiclesafetyrecalls.com/recall/14V694000"
+  }
+ ],
+ "known": [
+  {
+   "title": "Carbs then EFI",
+   "what": "Early 2001-2007 bikes are carbureted. Later bikes are fuel injected.",
+   "src": "https://motoryk.com/blog/2026-04-20-used-triumph-bonneville-buying-guide-classic-style-modern-re"
+  }
+ ],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "silhouette": "triumph-bonneville-2001",
+ "areas": [],
+ "heroName": "BONNEVILLE"
+}

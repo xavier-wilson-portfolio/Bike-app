@@ -1,0 +1,81 @@
+{
+ "id": "bmw-g310gs-2017",
+ "make": "BMW",
+ "model": "G310GS",
+ "name": "BMW G310GS",
+ "years": [
+  2017,
+  2026
+ ],
+ "match": [
+  "g310gs",
+  "g 310 gs",
+  "g310 gs"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "313 cc liquid-cooled single, fuel injected",
+ "intro": "BMW's small adventure single. Early bikes had side stand and brake caliper recalls.",
+ "focus": [
+  [
+   "313 cc single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Side stand recall",
+   "2018"
+  ],
+  [
+   "Caliper recall",
+   "2018-2020"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2018 G310GS bikes are in recall 18V408 (side stand and frame). 2018-2020 bikes are in recall 19V593 (brake calipers may corrode).",
+   "reason": "Both fixes are free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "18V408",
+   "years": "2018",
+   "what": "Repeated side stand use can damage the stand and the frame, and the bike may fall over.",
+   "fix": "Dealer fits a reinforcement plate and new stand, or replaces the frame, free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/18V408000"
+  },
+  {
+   "id": "19V593",
+   "years": "2018-2020",
+   "what": "Front and rear brake calipers may corrode and stick or drag.",
+   "fix": "Dealer replaces the calipers free.",
+   "src": "https://auto-recalls.justia.com/bmw/g310-gs/2018/19v593000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "silhouette": "bmw-g310gs-2017",
+ "areas": [],
+ "heroName": "G310GS",
+ "hero": {
+  "src": "img/hero/bmw-g310gs-2017.jpg",
+  "artist": "Bayahusa",
+  "page": "https://commons.wikimedia.org/wiki/File:Bmw_g310gs_blau.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

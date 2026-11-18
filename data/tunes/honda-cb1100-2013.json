@@ -56,5 +56,14 @@
    "what": "Owner forum for the CB1100."
   }
  ],
- "heroName": "CB1100"
+ "silhouette": "honda-cb1100-2013",
+ "areas": [],
+ "heroName": "CB1100",
+ "hero": {
+  "src": "img/hero/honda-cb1100-2013.jpg",
+  "artist": "bluXgraphics(motorcycle design Japan)=Midorikawa",
+  "page": "https://commons.wikimedia.org/wiki/File:%E4%BB%8A%E5%B8%82%E5%B8%82%E5%B0%8F%E5%80%89%E3%81%AB%E3%81%A6.jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
 }

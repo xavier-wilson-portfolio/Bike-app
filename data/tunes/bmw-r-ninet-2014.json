@@ -1,0 +1,101 @@
+{
+ "id": "bmw-r-ninet-2014",
+ "make": "BMW",
+ "model": "R nineT",
+ "name": "BMW R nineT",
+ "years": [
+  2014,
+  2026
+ ],
+ "match": [
+  "r ninet",
+  "r nine t",
+  "rninet",
+  "r9t",
+  "r ninet scrambler",
+  "r ninet pure",
+  "r ninet racer",
+  "r ninet urban gs"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "1170 cc air/oil-cooled boxer twin, fuel injected, shaft drive",
+ "intro": "BMW's retro boxer. Early bikes had a swingarm pivot bolt recall. Grease the drive splines.",
+ "focus": [
+  [
+   "1170 cc boxer",
+   "Air/oil-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Swingarm recall",
+   "2014-2017"
+  ],
+  [
+   "Shaft drive",
+   "Splines"
+  ],
+  [
+   "Brakes",
+   "Fluid cap recall"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2014-2017 bikes are in recall 17V502 (swingarm pivot pin bolts may loosen). Some 2018-2020 bikes are in recall 20V166 (brake fluid reservoir cap).",
+   "reason": "Both fixes are free."
+  }
+ },
+ "add": [
+  {
+   "id": "X-BGS-01",
+   "phase": "E",
+   "after": "E-002",
+   "title": "Lube the drive splines",
+   "instructions": "Pull the rear drive and clean and grease the shaft splines with a moly paste. Look for oil in the swingarm.",
+   "reason": "Dry splines wear and fail. Most owners forget to grease them.",
+   "src": "Motoryk R1150GS notes",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 2.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "17V502",
+   "years": "2014-2017",
+   "what": "Right-side swingarm pivot pin bolts may loosen.",
+   "fix": "Dealer cleans and refits the bolts free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/17V502000"
+  },
+  {
+   "id": "20V166",
+   "years": "2018-2020 (some)",
+   "what": "Brake fluid reservoir cap problem.",
+   "fix": "Dealer replaces the cap free.",
+   "src": "https://recallcheck.net/recall/20V166000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "silhouette": "bmw-r-ninet-2014",
+ "areas": [],
+ "heroName": "R NINET",
+ "hero": {
+  "src": "img/hero/bmw-r-ninet-2014.jpg",
+  "artist": "Wikisympathisant",
+  "page": "https://commons.wikimedia.org/wiki/File:719-look_BMW_R_NineT_rear-side_view.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

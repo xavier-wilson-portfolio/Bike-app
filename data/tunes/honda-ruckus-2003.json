@@ -70,5 +70,14 @@
   }
  ],
  "forums": [],
- "heroName": "RUCKUS"
+ "silhouette": "honda-ruckus-2003",
+ "areas": [],
+ "heroName": "RUCKUS",
+ "hero": {
+  "src": "img/hero/honda-ruckus-2003.jpg",
+  "artist": "Fritszoomer",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_Zoomer.JPG",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

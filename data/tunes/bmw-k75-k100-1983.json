@@ -1,0 +1,103 @@
+{
+ "id": "bmw-k75-k100-1983",
+ "make": "BMW",
+ "model": "K75/K100",
+ "name": "BMW K75 / K100",
+ "years": [
+  1983,
+  1995
+ ],
+ "match": [
+  "k75",
+  "k100",
+  "k 75",
+  "k 100",
+  "k75s",
+  "k75c",
+  "k75rt",
+  "k100rs",
+  "k100rt",
+  "k100lt",
+  "flying brick"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "740 cc triple (K75) or 987 cc four (K100), liquid-cooled, fuel injected, shaft drive",
+ "intro": "BMW's flying brick. The in-tank fuel pump, the oil/water pump and the splines are the usual jobs.",
+ "focus": [
+  [
+   "Laid-down engine",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "In-tank pump"
+  ],
+  [
+   "Oil/water pump",
+   "Rebuild"
+  ],
+  [
+   "Splines",
+   "Lube them"
+  ],
+  [
+   "Side stand switch",
+   "Kills the pump"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-KB-01",
+   "phase": "G",
+   "after": "G-004",
+   "title": "Renew the in-tank fuel parts",
+   "instructions": "Pull the fuel pump, its rubber mounts, the hoses and the float. Replace anything that has gone hard or soft. Use hose rated for submerged EFI use.",
+   "reason": "Old fuel kills the pump rubbers and hoses. These are the classic K-bike failures after storage.",
+   "src": "BMW MOA forum",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 2.0,
+   "tools": ""
+  },
+  {
+   "id": "X-BGS-01",
+   "phase": "E",
+   "after": "E-002",
+   "title": "Lube the drive splines",
+   "instructions": "Pull the rear drive and clean and grease the shaft splines with a moly paste. Look for oil in the swingarm.",
+   "reason": "Dry splines wear and fail. Most owners forget to grease them.",
+   "src": "Motoryk R1150GS notes",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 2.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "F": [
+   "If the fuel pump won't run, check the side stand switch first. It is in the pump relay circuit."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Trouble spots",
+   "what": "After the fuel system, the rear crank O-ring and the oil/water pump are the historic trouble spots. They need renewing every decade or two.",
+   "src": "https://forums.bmwmoa.org/goto/post?id=1326598"
+  }
+ ],
+ "forums": [
+  {
+   "name": "BMW Motorcycle Tech (Snowbum)",
+   "url": "https://bmwmotorcycletech.info/",
+   "what": "Long-running technical notes for classic BMW K and R bikes."
+  }
+ ],
+ "heroName": "K100"
+}

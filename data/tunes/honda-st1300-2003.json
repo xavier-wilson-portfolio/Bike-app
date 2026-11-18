@@ -62,5 +62,14 @@
  ],
  "known": [],
  "forums": [],
- "heroName": "ST1300"
+ "silhouette": "honda-st1300-2003",
+ "areas": [],
+ "heroName": "ST1300",
+ "hero": {
+  "src": "img/hero/honda-st1300-2003.jpg",
+  "artist": "Cjp24",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_ST1300_Pan-European_(1).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

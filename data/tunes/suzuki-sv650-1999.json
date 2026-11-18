@@ -1,0 +1,88 @@
+{
+ "id": "suzuki-sv650-1999",
+ "make": "Suzuki",
+ "model": "SV650 (first gen)",
+ "name": "Suzuki SV650 (1999-2002)",
+ "years": [
+  1999,
+  2002
+ ],
+ "match": [
+  "sv650",
+  "sv 650",
+  "sv650s",
+  "sv650n"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "645 cc liquid-cooled DOHC 90-degree V-twin, two carbs",
+ "intro": "A great all-round twin. The regulator/rectifier is the known weak spot on the early ones.",
+ "focus": [
+  [
+   "645 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Charging",
+   "R/R and stator"
+  ],
+  [
+   "Front forks",
+   "Soft stock"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-SV1-01",
+   "phase": "F",
+   "after": "F-002",
+   "title": "Test the regulator/rectifier",
+   "instructions": "Check battery voltage at idle and at 5,000 rpm. If it is low or above about 15 volts, test the stator and replace the regulator/rectifier.",
+   "reason": "Early SV650s are known for regulator/rectifier failures that can kill the battery or the stator.",
+   "src": "Motoryk SV650 notes",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Charging",
+   "what": "1999-2002 models are prone to regulator/rectifier failure, which can kill the battery or damage the stator.",
+   "src": "https://motoryk.com/bikes/suzuki/sv650"
+  }
+ ],
+ "forums": [
+  {
+   "name": "SVRider forum",
+   "url": "https://www.svrider.com/",
+   "what": "Owner forum for the Suzuki SV650 and SV1000."
+  }
+ ],
+ "silhouette": "suzuki-sv650-1999",
+ "areas": [],
+ "heroName": "SV650",
+ "hero": {
+  "src": "img/hero/suzuki-sv650-1999.jpg",
+  "artist": "Leadcimn",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_sv_650.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

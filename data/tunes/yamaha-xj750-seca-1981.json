@@ -1,0 +1,90 @@
+{
+ "id": "yamaha-xj750-seca-1981",
+ "make": "Yamaha",
+ "model": "XJ750 Seca",
+ "name": "Yamaha XJ750 Seca",
+ "years": [
+  1981,
+  1983
+ ],
+ "match": [
+  "xj750",
+  "seca 750",
+  "xj 750",
+  "xj750 seca",
+  "xj750rh"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "748 cc air-cooled DOHC inline four, four carbs, shaft drive",
+ "intro": "A capable early-80s four. The starter clutch, carbs and anti-dive brake system need the most care.",
+ "focus": [
+  [
+   "748 cc four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Starter clutch",
+   "Can slip"
+  ],
+  [
+   "Brakes",
+   "Anti-dive bleeding"
+  ],
+  [
+   "Electrics",
+   "Old connectors"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-XJ75-01",
+   "phase": "K",
+   "after": "K-001",
+   "title": "Bleed the brakes through the anti-dive",
+   "instructions": "Flush fluid through each caliper and out through the anti-dive units. Expect it to take patience to get all the air out.",
+   "reason": "Air trapped in the anti-dive parts gives a soft lever.",
+   "src": "XJBikes forum",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 2.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Starter clutch",
+   "what": "Owners say starter clutch issues are real on the Seca 750.",
+   "src": "https://www.xjbikes.com/forums/threads/just-picked-up-82-seca-750-have-s.133071"
+  }
+ ],
+ "forums": [
+  {
+   "name": "XJBikes forum",
+   "url": "https://www.xjbikes.com/forums/",
+   "what": "Owner forum for Yamaha XJ, Seca, Maxim and Radian fours."
+  }
+ ],
+ "silhouette": "yamaha-xj750-seca-1981",
+ "areas": [],
+ "heroName": "SECA",
+ "hero": {
+  "src": "img/hero/yamaha-xj750-seca-1981.jpg",
+  "artist": "Andyheine",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_XJ_750_Seca.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

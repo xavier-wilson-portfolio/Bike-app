@@ -56,5 +56,14 @@
   }
  ],
  "forums": [],
- "heroName": "VULCAN 800"
+ "silhouette": "kawasaki-vulcan-800-1995",
+ "areas": [],
+ "heroName": "VULCAN 800",
+ "hero": {
+  "src": "img/hero/kawasaki-vulcan-800-1995.jpg",
+  "artist": "Michaël Bemelmans",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_vulcan_800_mod%C3%A8le_1999,_bi-ton_noire_et_vanille.JPG",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

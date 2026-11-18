@@ -74,5 +74,14 @@
   }
  ],
  "forums": [],
- "heroName": "XR650L"
+ "silhouette": "honda-xr650l-1993",
+ "areas": [],
+ "heroName": "XR650L",
+ "hero": {
+  "src": "img/hero/honda-xr650l-1993.jpg",
+  "artist": "mw",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_XR650L.JPG",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

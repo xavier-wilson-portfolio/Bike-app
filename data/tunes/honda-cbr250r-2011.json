@@ -58,5 +58,14 @@
   }
  ],
  "forums": [],
- "heroName": "CBR250R"
+ "silhouette": "honda-cbr250r-2011",
+ "areas": [],
+ "heroName": "CBR250R",
+ "hero": {
+  "src": "img/hero/honda-cbr250r-2011.jpg",
+  "artist": "Rjcastillo",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CBR250R_24.04.2026.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

@@ -1,0 +1,68 @@
+{
+ "id": "yamaha-yzf600r-1995",
+ "make": "Yamaha",
+ "model": "YZF600R",
+ "name": "Yamaha YZF600R Thundercat",
+ "years": [
+  1995,
+  2007
+ ],
+ "match": [
+  "yzf600r",
+  "yzf 600r",
+  "thundercat",
+  "yzf600"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "599 cc liquid-cooled DOHC 16-valve inline four, four carbs",
+ "intro": "A comfortable, reliable 600. Carbs that sat, fork seals and the charging system are the usual jobs.",
+ "focus": [
+  [
+   "599 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Fork seals",
+   "Check for leaks"
+  ],
+  [
+   "Charging",
+   "R/R and connectors"
+  ],
+  [
+   "Rear shock",
+   "Often tired"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Wear items",
+   "what": "Check for a tired rear shock, leaking fork seals and a weak regulator/rectifier.",
+   "src": "https://motoryk.com/bikes/yamaha/yzf600r"
+  }
+ ],
+ "forums": [],
+ "silhouette": "yamaha-yzf600r-1995",
+ "areas": [],
+ "heroName": "YZF600R",
+ "hero": {
+  "src": "img/hero/yamaha-yzf600r-1995.jpg",
+  "artist": "Tarpa600tc",
+  "page": "https://commons.wikimedia.org/wiki/File:YAMAHA_YZF600R_Thundercat.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

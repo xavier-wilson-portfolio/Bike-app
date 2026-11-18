@@ -1,0 +1,92 @@
+{
+ "id": "triumph-speed-triple-1050-2005",
+ "make": "Triumph",
+ "model": "Speed Triple 1050",
+ "name": "Triumph Speed Triple 1050",
+ "years": [
+  2005,
+  2015
+ ],
+ "match": [
+  "speed triple",
+  "speed triple 1050",
+  "speed triple r",
+  "speedie"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "1050 cc liquid-cooled inline triple, fuel injected",
+ "intro": "The classic streetfighter triple. The regulator/rectifier and the clocks are the known weak spots.",
+ "focus": [
+  [
+   "1050 cc triple",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Charging",
+   "R/R known weak"
+  ],
+  [
+   "Clocks",
+   "Water gets in"
+  ],
+  [
+   "Starter sprag",
+   "Check"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-ST1-01",
+   "phase": "F",
+   "after": "F-002",
+   "title": "Test the regulator/rectifier",
+   "instructions": "Check battery voltage at idle and at 5,000 rpm. Look at the R/R connector for heat damage. Replace with a better unit if it is weak.",
+   "reason": "The regulator/rectifier is a known weak spot on Speed Triples.",
+   "src": "Kiwi Rider long-term test",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "F": [
+   "Avoid jet washing near the clocks. The 1050 clocks are known to fail."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [
+  {
+   "title": "Regulator/rectifier",
+   "what": "The regulator/rectifier is a known weak spot on Speed Triples.",
+   "src": "https://kiwirider.co.nz/kiwi-rider-december-2020-vol1/0353186001606795730/p48"
+  }
+ ],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "silhouette": "triumph-speed-triple-1050-2005",
+ "areas": [],
+ "heroName": "SPEED TRIPLE",
+ "hero": {
+  "src": "img/hero/triumph-speed-triple-1050-2005.jpg",
+  "artist": "DeFacto",
+  "page": "https://commons.wikimedia.org/wiki/File:Triumph_Speed_Triple_1050_2011.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

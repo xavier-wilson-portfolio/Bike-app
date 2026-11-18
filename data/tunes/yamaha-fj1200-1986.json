@@ -1,0 +1,89 @@
+{
+ "id": "yamaha-fj1200-1986",
+ "make": "Yamaha",
+ "model": "FJ1200",
+ "name": "Yamaha FJ1200",
+ "years": [
+  1986,
+  1993
+ ],
+ "match": [
+  "fj1200",
+  "fj 1200",
+  "fj1100",
+  "fj1200a"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "1188 cc air/oil-cooled DOHC inline four, four carbs",
+ "intro": "A tough air-cooled sport tourer. The rear suspension linkage and old brake calipers need the most attention.",
+ "focus": [
+  [
+   "1188 cc four",
+   "Air/oil-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Rear linkage",
+   "Grease the bearings"
+  ],
+  [
+   "Brakes",
+   "Calipers stick"
+  ],
+  [
+   "Wiring",
+   "Corroded connectors"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-FJ12-01",
+   "phase": "E",
+   "after": "E-002",
+   "title": "Grease the rear suspension linkage",
+   "instructions": "Strip the rear linkage, clean the bearings and bushings and grease them. Replace any that are seized or notchy.",
+   "reason": "Owners call the linkage bearings the FJ's weak spot. They can seize if left dry.",
+   "src": "Devitt FJ1200 owner notes",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 2.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Suspension linkage",
+   "what": "The rear suspension linkage bearings can seize. Owners re-grease them regularly.",
+   "src": "https://www.devittinsurance.com/?p=110034"
+  }
+ ],
+ "forums": [
+  {
+   "name": "FJ Owners forum",
+   "url": "https://fjowners.com/",
+   "what": "Owner forum for the Yamaha FJ1100 and FJ1200."
+  }
+ ],
+ "silhouette": "yamaha-fj1200-1986",
+ "areas": [],
+ "heroName": "FJ1200",
+ "hero": {
+  "src": "img/hero/yamaha-fj1200-1986.jpg",
+  "artist": "Markusrafus",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_fj1200_87.JPG",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

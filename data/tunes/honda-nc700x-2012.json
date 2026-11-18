@@ -67,5 +67,14 @@
  ],
  "known": [],
  "forums": [],
- "heroName": "NC700X"
+ "silhouette": "honda-nc700x-2012",
+ "areas": [],
+ "heroName": "NC700X",
+ "hero": {
+  "src": "img/hero/honda-nc700x-2012.jpg",
+  "artist": "Cweinandt",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_nc700x_sw_side.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

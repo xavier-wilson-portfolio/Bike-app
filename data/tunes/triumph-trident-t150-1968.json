@@ -1,0 +1,80 @@
+{
+ "id": "triumph-trident-t150-1968",
+ "make": "Triumph",
+ "model": "Trident T150",
+ "name": "Triumph Trident T150",
+ "years": [
+  1968,
+  1975
+ ],
+ "match": [
+  "trident",
+  "t150",
+  "t150v",
+  "t160",
+  "trident t150",
+  "rocket 3"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "740 cc air-cooled OHV triple, three carbs, points ignition",
+ "intro": "Triumph's 1969 triple. Clean carbs and points, and a clutch that fully releases, make it a good bike.",
+ "focus": [
+  [
+   "740 cc triple",
+   "Air-cooled"
+  ],
+  [
+   "Three carbs",
+   "Clean and sync"
+  ],
+  [
+   "Points",
+   "Set and time"
+  ],
+  [
+   "Clutch",
+   "Hard to find neutral"
+  ],
+  [
+   "Gearbox",
+   "Four or five speed"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-T15-01",
+   "phase": "H",
+   "after": "H-005",
+   "title": "Set up the clutch release",
+   "instructions": "Adjust the clutch so it fully releases. Check the clutch bearing.",
+   "reason": "A clutch that doesn't fully release makes neutral hard to find, a common Trident problem.",
+   "src": "Greg Marsh T150V notes",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "E": [
+   "Early T150s are four-speed. The T150V from 1972 is five-speed, and a front disc came in 1973."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Neutral",
+   "what": "It is a common Trident problem to struggle to find neutral when the clutch doesn't fully release.",
+   "src": "https://gregmarsh.com/mc/Triumph/T150VJJ.aspx"
+  }
+ ],
+ "forums": [],
+ "heroName": "TRIDENT"
+}

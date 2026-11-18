@@ -1,0 +1,88 @@
+{
+ "id": "bmw-r1100gs-1994",
+ "make": "BMW",
+ "model": "R1100GS",
+ "name": "BMW R1100GS",
+ "years": [
+  1994,
+  1999
+ ],
+ "match": [
+  "r1100gs",
+  "r 1100 gs",
+  "1100gs"
+ ],
+ "style": "adventure",
+ "drive": "shaft",
+ "engine": "1085 cc oil/air-cooled boxer twin, fuel injected, shaft drive",
+ "intro": "The first oilhead GS. Owners point to the final drive bearing, the front brake hose and the clutch arm.",
+ "focus": [
+  [
+   "1085 cc boxer",
+   "Oil/air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Sync throttle bodies"
+  ],
+  [
+   "Final drive",
+   "Bearing"
+  ],
+  [
+   "Brake hose",
+   "Front master"
+  ],
+  [
+   "Clutch arm",
+   "Actuator wear"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-BGS-01",
+   "phase": "E",
+   "after": "E-002",
+   "title": "Lube the drive splines",
+   "instructions": "Pull the rear drive and clean and grease the shaft splines with a moly paste. Look for oil in the swingarm.",
+   "reason": "Dry splines wear and fail. Most owners forget to grease them.",
+   "src": "Motoryk R1150GS notes",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 2.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Common issues",
+   "what": "Owners report the final drive bearing, the front master cylinder brake hose and the clutch actuator arm as common issues.",
+   "src": "https://www.ukgser.com/community/threads/r1100gs-common-issues.205846/post-2683609"
+  }
+ ],
+ "forums": [
+  {
+   "name": "UKGSer forum",
+   "url": "https://www.ukgser.com/community/",
+   "what": "Owner forum for BMW GS models."
+  }
+ ],
+ "silhouette": "bmw-r1100gs-1994",
+ "areas": [],
+ "heroName": "R1100GS",
+ "hero": {
+  "src": "img/hero/bmw-r1100gs-1994.jpg",
+  "artist": "Lothar Spurzem",
+  "page": "https://commons.wikimedia.org/wiki/File:BMW_R_1100_GS_(2008-02-07_3716_Sp_2).JPG",
+  "lic": "CC BY-SA 3.0 de",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en"
+ }
+}

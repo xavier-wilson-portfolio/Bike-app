@@ -1,0 +1,84 @@
+{
+ "id": "harley-davidson-panhead-1948",
+ "make": "Harley-Davidson",
+ "model": "Panhead",
+ "name": "Harley-Davidson Panhead",
+ "years": [
+  1948,
+  1965
+ ],
+ "match": [
+  "panhead",
+  "pan head",
+  "hydra-glide",
+  "duo-glide"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "61 or 74 cu in air-cooled OHV V-twin, one carb, generator",
+ "intro": "Harley's 1948-1965 big twin. Oil leaks, a correct engine and a sound front end are the big checks.",
+ "focus": [
+  [
+   "OHV V-twin",
+   "Air-cooled"
+  ],
+  [
+   "One carb",
+   "Linkert or later"
+  ],
+  [
+   "Oil leaks",
+   "Rocker covers, pump"
+  ],
+  [
+   "Generator",
+   "Six or 12 volt"
+  ],
+  [
+   "Numbers",
+   "Engine matches year"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-PAN-01",
+   "phase": "H",
+   "after": "H-001",
+   "title": "Find the oil leaks",
+   "instructions": "Check the rocker covers, the oil pump and its return line, and the oil filter housing. Look for hairline cracks on cast pumps.",
+   "reason": "Panheads are known for oil leaks, and a cracked pump line drips oil while stored.",
+   "src": "AMCA Panhead forum",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 2.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "A": [
+   "Check the engine number is right for the year and model before you buy."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Rocker covers",
+   "what": "The stock rocker covers are known for oil seepage.",
+   "src": "https://www.jpcycles.com/product/custom-cycle-engineering-rocker-box-covers-for-harley-panhead-1948-1965"
+  }
+ ],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "PANHEAD"
+}

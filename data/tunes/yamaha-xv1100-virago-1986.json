@@ -1,0 +1,89 @@
+{
+ "id": "yamaha-xv1100-virago-1986",
+ "make": "Yamaha",
+ "model": "XV1100 Virago",
+ "name": "Yamaha Virago 1100",
+ "years": [
+  1986,
+  1999
+ ],
+ "match": [
+  "virago 1100",
+  "xv1100",
+  "xv 1100",
+  "virago xv1100"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "1063 cc air-cooled SOHC V-twin, two carbs, shaft drive",
+ "intro": "The big Virago. The starter clutch is the known weak spot. Carbs and the regulator need the usual care.",
+ "focus": [
+  [
+   "1063 cc V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Starter clutch",
+   "Known weak spot"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Shaft drive",
+   "Final drive oil"
+  ],
+  [
+   "Charging",
+   "R/R heat"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-V11-01",
+   "phase": "F",
+   "after": "F-002",
+   "title": "Check the starter clutch",
+   "instructions": "Listen for grinding or a starter that spins without turning the engine. If it slips, rebuild or replace the starter clutch.",
+   "reason": "The later Viragos use a starter clutch under the side cover that often fails.",
+   "src": "XS11 forum Virago notes",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 3.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Starter clutch",
+   "what": "The 750 and 1100 Viragos use a starter clutch under the side cover that often fails.",
+   "src": "https://xs11.club/forum/idle-talk-forum/other-bike-discussion/18682-750-virago?p=272343"
+  }
+ ],
+ "forums": [
+  {
+   "name": "Virago Tech forum",
+   "url": "http://viragotechforum.com/",
+   "what": "Owner forum for Yamaha Viragos."
+  }
+ ],
+ "silhouette": "yamaha-xv1100-virago-1986",
+ "areas": [],
+ "heroName": "VIRAGO",
+ "hero": {
+  "src": "img/hero/yamaha-xv1100-virago-1986.jpg",
+  "artist": "Addvisor",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_Virago_1100_DSCF4687.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

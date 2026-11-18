@@ -1,0 +1,64 @@
+{
+ "id": "suzuki-bandit-1200-1996",
+ "make": "Suzuki",
+ "model": "Bandit 1200",
+ "name": "Suzuki Bandit 1200",
+ "years": [
+  1996,
+  2006
+ ],
+ "match": [
+  "bandit 1200",
+  "gsf1200",
+  "gsf 1200",
+  "bandit 1200s"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "1157 cc oil-cooled DOHC inline four, four carbs",
+ "intro": "A tough, cheap muscle bike. The engine lasts. Carbs, the regulator/rectifier and a worn second gear are things to check.",
+ "focus": [
+  [
+   "1157 cc four",
+   "Oil-cooled"
+  ],
+  [
+   "Four carbs",
+   "Pilot jets clog"
+  ],
+  [
+   "Charging",
+   "R/R failures"
+  ],
+  [
+   "Second gear",
+   "Test under load"
+  ],
+  [
+   "Frame",
+   "Check for rust"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "The tappets use screw and locknut adjusters, which makes valve checks easy."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Easy valves",
+   "what": "The engines are tough and easy to service with screw and locknut tappets.",
+   "src": "https://bennetts.co.uk/bikesocial/reviews/bikes/suzuki/suzuki-gsf1200sn-bandit-used-guide-value-spec"
+  }
+ ],
+ "forums": [],
+ "heroName": "BANDIT"
+}

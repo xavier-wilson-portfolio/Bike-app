@@ -1,0 +1,89 @@
+{
+ "id": "yamaha-v-star-1100-1999",
+ "make": "Yamaha",
+ "model": "V Star 1100",
+ "name": "Yamaha V Star 1100",
+ "years": [
+  1999,
+  2009
+ ],
+ "match": [
+  "v star 1100",
+  "vstar 1100",
+  "xvs1100",
+  "drag star 1100",
+  "dragstar 1100",
+  "v-star 1100"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "1063 cc air-cooled SOHC V-twin, two carbs, shaft drive",
+ "intro": "A popular big cruiser. Owners report many starter clutch failures. Yamaha sells a repair kit for it.",
+ "focus": [
+  [
+   "1063 cc V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Starter clutch",
+   "Common failure"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Shaft drive",
+   "Listen for whine"
+  ],
+  [
+   "Charging",
+   "R/R placement"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-VS11-01",
+   "phase": "F",
+   "after": "F-002",
+   "title": "Check the starter clutch",
+   "instructions": "Listen for kickback or grinding on start. If the starter spins without turning the engine, fit Yamaha's starter clutch repair kit.",
+   "reason": "Owners report widespread starter clutch failures on these bikes.",
+   "src": "V Star 1100 knowledge base",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 4.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "F": [
+   "Learning the right starting routine helps prevent most starter clutch trouble."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Starter clutch kit",
+   "what": "Yamaha sells a starter clutch repair kit, part 99999-03908.",
+   "src": "https://sites.google.com/site/vstar1100kb/home/repairs/starter-clutch"
+  }
+ ],
+ "forums": [],
+ "silhouette": "yamaha-v-star-1100-1999",
+ "areas": [],
+ "heroName": "V STAR",
+ "hero": {
+  "src": "img/hero/yamaha-v-star-1100-1999.jpg",
+  "artist": "Johntorcasio",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_V_Star_1100_Classic.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

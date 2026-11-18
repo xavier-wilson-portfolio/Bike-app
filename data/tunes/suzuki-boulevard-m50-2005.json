@@ -1,0 +1,75 @@
+{
+ "id": "suzuki-boulevard-m50-2005",
+ "make": "Suzuki",
+ "model": "Boulevard M50",
+ "name": "Suzuki Boulevard M50",
+ "years": [
+  2005,
+  2009
+ ],
+ "match": [
+  "boulevard m50",
+  "m50",
+  "vz800",
+  "marauder 800"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "805 cc liquid-cooled SOHC V-twin, fuel injected, shaft drive",
+ "intro": "A simple mid-size cruiser. Some 2008-2009 bikes were in a 2011 recall, so check the VIN.",
+ "focus": [
+  [
+   "805 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "2011 recall",
+   "Some 2008-09"
+  ],
+  [
+   "Shaft drive",
+   "Final drive oil"
+  ],
+  [
+   "Cooling",
+   "Check coolant"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2008-2010 C50 and M50 Boulevards were in recall 11V108.",
+   "reason": "Recall repairs are free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "11V108",
+   "years": "2008-2010 (some)",
+   "what": "Recall covering certain Suzuki models including the C50/M50 Boulevard.",
+   "fix": "Free dealer repair.",
+   "src": "https://issues.cycleworld.com/article/2011/5/1/recall-roster"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "silhouette": "suzuki-boulevard-m50-2005",
+ "areas": [],
+ "heroName": "M50",
+ "hero": {
+  "src": "img/hero/suzuki-boulevard-m50-2005.jpg",
+  "artist": "Bob Adams from Amanzimtoti, South Africa",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_Boulevard_M50_(16883776492).jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
+}

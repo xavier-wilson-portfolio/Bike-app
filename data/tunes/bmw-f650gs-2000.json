@@ -1,0 +1,80 @@
+{
+ "id": "bmw-f650gs-2000",
+ "make": "BMW",
+ "model": "F650GS",
+ "name": "BMW F650GS (single)",
+ "years": [
+  2000,
+  2007
+ ],
+ "match": [
+  "f650gs",
+  "f 650 gs",
+  "f650gs dakar",
+  "f650 dakar",
+  "g650gs"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "652 cc liquid-cooled Rotax single, fuel injected, chain drive",
+ "intro": "A light, simple single-cylinder GS. The water pump seals are the famous weak spot.",
+ "focus": [
+  [
+   "652 cc single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Water pump",
+   "Seals wear"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Head bearings",
+   "Check play"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-F65-01",
+   "phase": "H",
+   "after": "H-004",
+   "title": "Check the water pump seals",
+   "instructions": "Look for coolant at the weep hole and check the oil for a milky look. If either shows, replace the seals and the pump shaft.",
+   "reason": "The shaft wears a groove at the seals. Milky oil means both seals have failed.",
+   "src": "F650.com water pump FAQ",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 2.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Water pump",
+   "what": "The pump shaft wears a groove at the seals, and frothy oil means stop and fix it.",
+   "src": "https://faq.f650.com/FAQs/Water_Pump_Seal_Repair_FAQ.htm"
+  }
+ ],
+ "forums": [
+  {
+   "name": "F650.com",
+   "url": "https://f650.com/",
+   "what": "Owner forum and FAQs for BMW F650 and F800 models."
+  }
+ ],
+ "heroName": "F650GS"
+}

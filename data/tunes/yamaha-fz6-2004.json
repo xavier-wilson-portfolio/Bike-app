@@ -63,5 +63,14 @@
  ],
  "known": [],
  "forums": [],
- "heroName": "FZ6"
+ "silhouette": "yamaha-fz6-2004",
+ "areas": [],
+ "heroName": "FZ6",
+ "hero": {
+  "src": "img/hero/yamaha-fz6-2004.jpg",
+  "artist": "Trougnouf",
+  "page": "https://commons.wikimedia.org/wiki/File:2005_Yamaha_FZ6.jpg",
+  "lic": "CC BY 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by/4.0"
+ }
 }

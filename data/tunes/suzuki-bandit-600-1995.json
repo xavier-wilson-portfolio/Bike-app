@@ -1,0 +1,83 @@
+{
+ "id": "suzuki-bandit-600-1995",
+ "make": "Suzuki",
+ "model": "Bandit 600",
+ "name": "Suzuki Bandit 600",
+ "years": [
+  1995,
+  2004
+ ],
+ "match": [
+  "bandit 600",
+  "gsf600",
+  "gsf 600",
+  "bandit 600s"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "599 cc oil-cooled DOHC inline four, four carbs",
+ "intro": "A simple, popular four. Frame rust and seized rear suspension linkages are the big things to check.",
+ "focus": [
+  [
+   "599 cc four",
+   "Oil-cooled"
+  ],
+  [
+   "Four carbs",
+   "Sync and idle"
+  ],
+  [
+   "Rear linkage",
+   "Often seized"
+  ],
+  [
+   "Frame",
+   "Check for rust"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-BN6-01",
+   "phase": "E",
+   "after": "E-002",
+   "title": "Free up the rear suspension linkage",
+   "instructions": "Strip the rear linkage, clean and grease the bearings, and replace any that are seized.",
+   "reason": "Seized linkages are a known weak spot on the Bandit and costly if left.",
+   "src": "Bennetts Bandit 600 guide",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 2.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Rust and linkages",
+   "what": "Frame rust is common, and seized suspension linkages are a known weak area.",
+   "src": "https://www.bennetts.co.uk/bikesocial/reviews/bikes/suzuki/suzuki-gsf600ns-1995-2004-buying-guide"
+  }
+ ],
+ "forums": [],
+ "silhouette": "suzuki-bandit-600-1995",
+ "areas": [],
+ "heroName": "BANDIT 600",
+ "hero": {
+  "src": "img/hero/suzuki-bandit-600-1995.jpg",
+  "artist": "Gillofreak",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_GSG_600_S_Bandit_K2_2002_Gillo.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

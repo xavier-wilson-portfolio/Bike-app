@@ -1,0 +1,67 @@
+{
+ "id": "harley-davidson-fxr-1982",
+ "make": "Harley-Davidson",
+ "model": "FXR",
+ "name": "Harley-Davidson FXR",
+ "years": [
+  1982,
+  1994
+ ],
+ "match": [
+  "fxr",
+  "fxrs",
+  "fxlr",
+  "fxrt",
+  "fxrd",
+  "super glide fxr",
+  "low rider fxr"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "80 cu in air-cooled V-twin (Shovelhead early, Evolution from 1984), one carb, rubber mounted",
+ "intro": "The rubber-mounted Harley people love for its handling. Check the frame and the usual Evo leaks.",
+ "focus": [
+  [
+   "Evo V-twin",
+   "Air-cooled"
+  ],
+  [
+   "One carb",
+   "CV or Bendix"
+  ],
+  [
+   "Frame",
+   "Cracks at mounts"
+  ],
+  [
+   "Oil leaks",
+   "Primary and shifter"
+  ],
+  [
+   "Primary",
+   "Chain and clutch"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "E": [
+   "Look closely for frame cracks around the engine mounts."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Frame and primary",
+   "what": "Inspect for frame cracks around the engine mounts and check the primary chain and clutch.",
+   "src": "https://vincheck.info/?p=102598"
+  }
+ ],
+ "forums": [],
+ "heroName": "FXR"
+}

@@ -62,5 +62,14 @@
  ],
  "known": [],
  "forums": [],
- "heroName": "NINJA 250"
+ "silhouette": "kawasaki-ninja-250-ex250-2008",
+ "areas": [],
+ "heroName": "NINJA 250",
+ "hero": {
+  "src": "img/hero/kawasaki-ninja-250-ex250-2008.jpg",
+  "artist": "Holger 1983",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_Ninja_250R_schwarz.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

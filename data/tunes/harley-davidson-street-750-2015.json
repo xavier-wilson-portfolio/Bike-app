@@ -1,0 +1,77 @@
+{
+ "id": "harley-davidson-street-750-2015",
+ "make": "Harley-Davidson",
+ "model": "Street 750",
+ "name": "Harley-Davidson Street 750",
+ "years": [
+  2015,
+  2020
+ ],
+ "match": [
+  "street 750",
+  "xg750",
+  "street rod",
+  "xg750a",
+  "street 500",
+  "xg500"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "749 cc liquid-cooled Revolution X V-twin, fuel injected, belt drive",
+ "intro": "Harley's small liquid-cooled twin. Many were in a brake caliper corrosion recall.",
+ "focus": [
+  [
+   "749 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Brake recall",
+   "Calipers"
+  ],
+  [
+   "Belt drive",
+   "Check tension"
+  ],
+  [
+   "Cooling",
+   "Check coolant"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2016-2019 Street 500 and 750 bikes are in recall 18V927 because salt corrosion in the brake calipers can make the brakes drag.",
+   "reason": "Dragging brakes can affect stability. Dealers fit new calipers free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "18V927",
+   "years": "2016-2019",
+   "what": "Brake caliper piston bore corrosion can make the brakes drag.",
+   "fix": "Dealer fits new front and rear calipers free (Harley recall 0174).",
+   "src": "https://vehiclesafetyrecalls.com/recall/18V927000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "silhouette": "harley-davidson-street-750-2015",
+ "areas": [],
+ "heroName": "STREET 750",
+ "hero": {
+  "src": "img/hero/harley-davidson-street-750-2015.jpg",
+  "artist": "Ryan Urlacher from USA",
+  "page": "https://commons.wikimedia.org/wiki/File:2014_Harley-Davidson_Street_750_front.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

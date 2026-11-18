@@ -1,0 +1,89 @@
+{
+ "id": "suzuki-t500-titan-1968",
+ "make": "Suzuki",
+ "model": "T500 Titan",
+ "name": "Suzuki T500 Titan",
+ "years": [
+  1968,
+  1975
+ ],
+ "match": [
+  "t500",
+  "titan",
+  "t 500",
+  "gt500",
+  "cobra 500"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "492 cc air-cooled two-stroke twin, two carbs, oil injection",
+ "intro": "Suzuki's big two-stroke twin. Crank seals and the gearbox oil level are the big worries.",
+ "focus": [
+  [
+   "492 cc two-stroke twin",
+   "Air-cooled"
+  ],
+  [
+   "Crank seals",
+   "Leak test"
+  ],
+  [
+   "Gearbox",
+   "Check 4th and 5th"
+  ],
+  [
+   "Oil pump",
+   "Seals"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-T5-01",
+   "phase": "H",
+   "after": "H-001",
+   "title": "Leak-down test the crankcase",
+   "instructions": "Seal the ports and pressure test at about 6-8 psi to check the crank seals.",
+   "reason": "Old crank seals dry out and make it run lean.",
+   "src": "DoTheTon T500 thread",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 2.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "H": [
+   "Early T500s had too little gearbox oil. Suzuki's bulletin T-3 raised it from 1200cc to 1400cc. Use the higher level."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Gearbox oil",
+   "what": "Suzuki raised the oil capacity from 1200cc to 1400cc to stop early 4th and 5th gear failures.",
+   "src": "https://mail.oldjapanesebikes.com/1968_T500/page-2"
+  }
+ ],
+ "forums": [],
+ "silhouette": "suzuki-t500-titan-1968",
+ "areas": [],
+ "heroName": "T500",
+ "hero": {
+  "src": "img/hero/suzuki-t500-titan-1968.jpg",
+  "artist": "Thesupermat",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_T500_-_1972_-_Mondial_de_l%27Automobile_de_Paris_2018_-_001.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

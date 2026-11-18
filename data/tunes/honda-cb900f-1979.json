@@ -71,5 +71,14 @@
   }
  ],
  "forums": [],
- "heroName": "CB900F"
+ "silhouette": "honda-cb900f-1979",
+ "areas": [],
+ "heroName": "CB900F",
+ "hero": {
+  "src": "img/hero/honda-cb900f-1979.jpg",
+  "artist": "Jon1234567",
+  "page": "https://commons.wikimedia.org/wiki/File:Jon_1982_Honda_CB900F.JPG",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

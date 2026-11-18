@@ -1,0 +1,80 @@
+{
+ "id": "suzuki-gs650-1981",
+ "make": "Suzuki",
+ "model": "GS650",
+ "name": "Suzuki GS650",
+ "years": [
+  1981,
+  1983
+ ],
+ "match": [
+  "gs650",
+  "gs 650",
+  "gs650g",
+  "gs650e",
+  "gs650gl"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "673 cc air-cooled DOHC inline four, four carbs (G models shaft drive, E models chain)",
+ "intro": "A capable early-80s four. Most are shaft-drive G models. The basics of carbs, valves and air leaks matter most.",
+ "focus": [
+  [
+   "673 cc four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shims on top"
+  ],
+  [
+   "Shaft drive",
+   "Most G models"
+  ],
+  [
+   "Tank",
+   "Check for rust"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "E": [
+   "The G is shaft drive. The rarer E is chain drive and shares little else with the G."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "G vs E",
+   "what": "The G is the common model. The chain-drive E is rare and quite different.",
+   "src": "https://www.thegsresources.com/_forum/forum/technical-forums/projects-rebuilds/67234-83-gs650g-project-which-direction-to-go"
+  }
+ ],
+ "forums": [
+  {
+   "name": "The GS Resources forum",
+   "url": "https://www.thegsresources.com/_forum/",
+   "what": "Owner forum for Suzuki GS fours and twins."
+  }
+ ],
+ "silhouette": "suzuki-gs650-1981",
+ "areas": [],
+ "heroName": "GS650",
+ "hero": {
+  "src": "img/hero/suzuki-gs650-1981.jpg",
+  "artist": "NESR",
+  "page": "https://commons.wikimedia.org/wiki/File:John_N_GS650_(17762652685).jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
+}

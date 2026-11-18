@@ -76,5 +76,14 @@
   }
  ],
  "forums": [],
- "heroName": "SHADOW"
+ "silhouette": "honda-shadow-vt1100-1985",
+ "areas": [],
+ "heroName": "SHADOW",
+ "hero": {
+  "src": "img/hero/honda-shadow-vt1100-1985.jpg",
+  "artist": "Addvisor",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_VT_1100_Shadow_DSCF0746.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

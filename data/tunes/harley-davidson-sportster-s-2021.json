@@ -1,0 +1,72 @@
+{
+ "id": "harley-davidson-sportster-s-2021",
+ "make": "Harley-Davidson",
+ "model": "Sportster S",
+ "name": "Harley-Davidson Sportster S",
+ "years": [
+  2021,
+  2026
+ ],
+ "match": [
+  "sportster s",
+  "rh1250s",
+  "sportster s 1250"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "1252 cc liquid-cooled Revolution Max V-twin, fuel injected, belt drive",
+ "intro": "The liquid-cooled Sportster. Check the upper triple clamp recall before riding.",
+ "focus": [
+  [
+   "1252 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Triple clamp recall",
+   "2021-2026"
+  ],
+  [
+   "Belt drive",
+   "Tension"
+  ],
+  [
+   "Electronics",
+   "Updates"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls first",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Many 2021-2026 Sportster S bikes are in recall 26V075 because the upper triple clamp may fracture. It expands the earlier recall 25V590, so bikes fixed under that one need the new fix too.",
+   "reason": "A broken triple clamp can cost you steering. The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "26V075",
+   "years": "2021-2026",
+   "what": "Upper triple clamp may fracture. Expands recall 25V590.",
+   "fix": "Free dealer repair (Harley recall 0191).",
+   "src": "https://recallcheck.net/make/harley-davidson/rh1250s/2022"
+  },
+  {
+   "id": "22V030",
+   "years": "2021 (some)",
+   "what": "Instrument cluster may not show the speedometer and neutral light when cold.",
+   "fix": "Dealer updates the cluster software free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/22V030000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "SPORTSTER S"
+}

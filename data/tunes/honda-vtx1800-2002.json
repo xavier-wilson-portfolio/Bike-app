@@ -79,5 +79,14 @@
   }
  ],
  "forums": [],
- "heroName": "VTX1800"
+ "silhouette": "honda-vtx1800-2002",
+ "areas": [],
+ "heroName": "VTX1800",
+ "hero": {
+  "src": "img/hero/honda-vtx1800-2002.jpg",
+  "artist": "Chris Woodrich",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_VTX_in_Walkerville,_Windsor,_Ontario,_2025-08-29.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

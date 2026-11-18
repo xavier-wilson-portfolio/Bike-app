@@ -62,5 +62,14 @@
  ],
  "known": [],
  "forums": [],
- "heroName": "MONKEY"
+ "silhouette": "honda-monkey-125-2019",
+ "areas": [],
+ "heroName": "MONKEY",
+ "hero": {
+  "src": "img/hero/honda-monkey-125-2019.jpg",
+  "artist": "Rundvald",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda-Monkey-125-ABS-byRundvald.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

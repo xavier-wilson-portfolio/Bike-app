@@ -70,5 +70,14 @@
   }
  ],
  "forums": [],
- "heroName": "V-MAX"
+ "silhouette": "yamaha-v-max-1985",
+ "areas": [],
+ "heroName": "V-MAX",
+ "hero": {
+  "src": "img/hero/yamaha-v-max-1985.jpg",
+  "artist": "PekePON",
+  "page": "https://commons.wikimedia.org/wiki/File:YAMAHA_Vmax.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

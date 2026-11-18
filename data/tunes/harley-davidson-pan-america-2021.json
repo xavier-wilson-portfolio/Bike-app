@@ -1,0 +1,76 @@
+{
+ "id": "harley-davidson-pan-america-2021",
+ "make": "Harley-Davidson",
+ "model": "Pan America",
+ "name": "Harley-Davidson Pan America",
+ "years": [
+  2021,
+  2026
+ ],
+ "match": [
+  "pan america",
+  "ra1250",
+  "ra1250s",
+  "pan america 1250",
+  "pan america special"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "1252 cc liquid-cooled Revolution Max V-twin, fuel injected, chain drive",
+ "intro": "Harley's adventure bike. Early 2021 bikes had seat base and instrument cluster recalls.",
+ "focus": [
+  [
+   "1252 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "2021 recalls",
+   "Seat base, cluster"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Off-road wear",
+   "Bearings"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2021 bikes are in recall 21V924 (seat base) and 22V030 (instrument cluster).",
+   "reason": "Both fixes are free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "21V924",
+   "years": "2021 (some)",
+   "what": "Seat base may not be fastened properly, and the handhold part can fracture.",
+   "fix": "Free dealer repair (Harley recall 0178).",
+   "src": "https://www.rideapart.com/news/552305/harley-pan-america-2021-recall/"
+  },
+  {
+   "id": "22V030",
+   "years": "2021 (some)",
+   "what": "Instrument cluster may not show the speedometer and neutral light when cold.",
+   "fix": "Dealer updates the cluster software free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/22V030000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "silhouette": "harley-davidson-pan-america-2021",
+ "areas": [],
+ "heroName": "PAN AMERICA"
+}

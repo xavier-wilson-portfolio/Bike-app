@@ -63,5 +63,14 @@
  ],
  "known": [],
  "forums": [],
- "heroName": "TW200"
+ "silhouette": "yamaha-tw200-1987",
+ "areas": [],
+ "heroName": "TW200",
+ "hero": {
+  "src": "img/hero/yamaha-tw200-1987.jpg",
+  "artist": "Addvisor",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_TW_in_Otovice.JPG",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

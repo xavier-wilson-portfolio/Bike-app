@@ -1,0 +1,100 @@
+{
+ "id": "harley-davidson-dyna-1991",
+ "make": "Harley-Davidson",
+ "model": "Dyna (Evo/early Twin Cam)",
+ "name": "Harley-Davidson Dyna (1991-2005)",
+ "years": [
+  1991,
+  2005
+ ],
+ "match": [
+  "dyna",
+  "fxd",
+  "fxdl",
+  "fxdwg",
+  "wide glide",
+  "super glide",
+  "low rider",
+  "fxdx",
+  "dyna glide"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "Evolution 80 cu in (1991-1998) or Twin Cam 88 (1999-2005) V-twin, carb or fuel injected",
+ "intro": "Early Dynas came with the Evo, later ones with the Twin Cam 88. On Twin Cams, check the cam chain tensioner shoes.",
+ "focus": [
+  [
+   "Evo or Twin Cam",
+   "Depends on year"
+  ],
+  [
+   "Carb or EFI",
+   "Mostly carbs"
+  ],
+  [
+   "Cam tensioners",
+   "1999-2005 TC"
+  ],
+  [
+   "Oil leaks",
+   "Normal sumping"
+  ],
+  [
+   "Belt drive",
+   "Check for cracks"
+  ]
+ ],
+ "remove": [
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-TC-01",
+   "phase": "H",
+   "after": "H-003",
+   "title": "Inspect the cam chain tensioner shoes",
+   "instructions": "Pull the cam cover and look at the plastic tensioner shoes. If they are worn deep or cracked, replace them, or fit the later hydraulic tensioners or a gear drive.",
+   "reason": "The spring-loaded shoes on 1999-2006 Twin Cams wear through and can send debris into the oil pump.",
+   "src": "Fix My Hog Twin Cam tensioner notes",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 2.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "H": [
+   "The tensioner step only applies to 1999-2005 Twin Cam bikes. Evo bikes use a different cam drive."
+  ],
+  "G": [
+   "Most of these have a carb. Skip the fuel injection steps if yours does."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Cam chain tensioners",
+   "what": "1999-2006 Twin Cams (except the 2006 Dyna) use spring-loaded plastic tensioner shoes that wear out. Harley moved to hydraulic tensioners in 2006 and 2007.",
+   "src": "https://fixmyhog.com/video/twin-cam-gear-drive-conversion-015478"
+  }
+ ],
+ "forums": [
+  {
+   "name": "Fix My Hog",
+   "url": "https://fixmyhog.com/",
+   "what": "Harley repair videos, including Twin Cam tensioner work."
+  }
+ ],
+ "silhouette": "harley-davidson-dyna-1991",
+ "areas": [],
+ "heroName": "DYNA",
+ "hero": {
+  "src": "img/hero/harley-davidson-dyna-1991.jpg",
+  "artist": "Cjp24",
+  "page": "https://commons.wikimedia.org/wiki/File:Harley-Davidson_Dyna_Wide_Glide.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

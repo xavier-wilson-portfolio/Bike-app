@@ -1,0 +1,71 @@
+{
+ "id": "yamaha-zuma-50-1989",
+ "make": "Yamaha",
+ "model": "Zuma 50",
+ "name": "Yamaha Zuma 50",
+ "years": [
+  1989,
+  2026
+ ],
+ "match": [
+  "zuma",
+  "zuma 50",
+  "zuma 50f",
+  "yw50",
+  "bws 50"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 cc single (two-stroke on early models, four-stroke on later Zuma 50F), CVT belt drive",
+ "intro": "A tough little scooter. Early ones are two-strokes and later ones are four-strokes, so check which you have.",
+ "focus": [
+  [
+   "49 cc single",
+   "2T or 4T"
+  ],
+  [
+   "CVT belt",
+   "Check wear"
+  ],
+  [
+   "Carb",
+   "Clean if stored"
+  ],
+  [
+   "Brakes",
+   "Shoes and pads"
+  ],
+  [
+   "Tires",
+   "Check age"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check whether your Zuma is a two-stroke or a four-stroke and skip the steps that don't match."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [
+  {
+   "title": "2005 brake recall",
+   "what": "Some 2005 Zumas were recalled because the rear brake shoe lining could separate.",
+   "src": "https://arfc.org/motorcycles/yamaha/zuma/recalls.aspx"
+  }
+ ],
+ "forums": [],
+ "silhouette": "yamaha-zuma-50-1989",
+ "areas": [],
+ "heroName": "ZUMA",
+ "hero": {
+  "src": "img/hero/yamaha-zuma-50-1989.jpg",
+  "artist": "Terry Ross from Corpus Christi, Texas, United States",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_Zuma_Texas.jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
+}

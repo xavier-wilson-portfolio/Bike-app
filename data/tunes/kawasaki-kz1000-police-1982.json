@@ -77,5 +77,14 @@
    "what": "Owner forum for classic Kawasakis."
   }
  ],
- "heroName": "KZ1000P"
+ "silhouette": "kawasaki-kz1000-police-1982",
+ "areas": [],
+ "heroName": "KZ1000P",
+ "hero": {
+  "src": "img/hero/kawasaki-kz1000-police-1982.jpg",
+  "artist": "Ken Collins",
+  "page": "https://commons.wikimedia.org/wiki/File:KZ1000p.jpg",
+  "lic": "CC BY 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by/4.0"
+ }
 }
