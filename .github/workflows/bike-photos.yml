@@ -79,4 +79,7 @@ jobs:
           git config user.name "photo-bot"
           git config user.email "photo-bot"
           git add photos
-          git diff --cached --quiet || (git commit -m "Bike photos" && git push)
+          git diff --cached --quiet && exit 0
+          git commit -m "Bike photos"
+          for i in 1 2 3 4 5; do git pull --rebase -q origin bike-photos && git push && exit 0; sleep 5; done
+          exit 1
