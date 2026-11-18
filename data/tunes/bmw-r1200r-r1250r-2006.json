@@ -1,0 +1,67 @@
+{
+ "id": "bmw-r1200r-r1250r-2006",
+ "make": "BMW",
+ "model": "R1200R / R1250R",
+ "name": "BMW R1200R / R1250R",
+ "years": [
+  2006,
+  2026
+ ],
+ "match": [
+  "r1200r",
+  "r1250r",
+  "r 1200 r",
+  "r 1250 r",
+  "r1200r classic",
+  "r1300r"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "1170 or 1254 cc boxer twin, air/oil then air/liquid cooled, fuel injected, shaft drive",
+ "intro": "BMW's naked boxer roadsters. Shaft drive and an engine you can reach easily.",
+ "focus": [
+  [
+   "Boxer twin",
+   "Air/oil or liquid"
+  ],
+  [
+   "Fuel injected",
+   "Sync bodies"
+  ],
+  [
+   "Final drive",
+   "Check oil and play"
+  ],
+  [
+   "Clutch",
+   "Dry or wet"
+  ],
+  [
+   "Electronics",
+   "CANbus"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Boxer twins need the valve clearance checked on both sides and the throttle bodies synced. Do both at the same service."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "BMW has issued several recalls across these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BMW MOA forum",
+   "url": "https://forums.bmwmoa.org/",
+   "what": "BMW Motorcycle Owners of America forum."
+  }
+ ],
+ "silhouette": "bmw-r1200r-r1250r-2006",
+ "areas": [],
+ "heroName": "R1250R"
+}

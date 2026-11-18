@@ -1,0 +1,70 @@
+{
+ "id": "bmw-r1100rt-r1150rt-1996",
+ "make": "BMW",
+ "model": "R1100RT / R1150RT",
+ "name": "BMW R1100RT / R1150RT",
+ "years": [
+  1996,
+  2005
+ ],
+ "match": [
+  "r1100rt",
+  "r1150rt",
+  "r 1100 rt",
+  "r 1150 rt",
+  "r1150rt-p",
+  "r1100rt-p"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "engine": "1085 or 1130 cc air/oil-cooled boxer twin, fuel injected, shaft drive",
+ "intro": "The oilhead RT tourers. Fuel injected boxer, shaft drive, and on R1150RTs a servo ABS that needs care.",
+ "focus": [
+  [
+   "Boxer twin",
+   "Air/oil cooled"
+  ],
+  [
+   "Fuel injected",
+   "Sync bodies"
+  ],
+  [
+   "Final drive",
+   "Check oil and play"
+  ],
+  [
+   "Servo ABS",
+   "R1150RT"
+  ],
+  [
+   "Fairing",
+   "Many panels"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Boxer twins need the valve clearance checked on both sides and the throttle bodies synced. Do both at the same service."
+  ],
+  "K": [
+   "Servo-assisted ABS on the R1150RT needs a special bleed procedure. Read the manual before touching the brakes."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "BMW has issued several recalls across these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BMW MOA forum",
+   "url": "https://forums.bmwmoa.org/",
+   "what": "BMW Motorcycle Owners of America forum."
+  }
+ ],
+ "silhouette": "bmw-r1100rt-r1150rt-1996",
+ "areas": [],
+ "heroName": "R1150RT"
+}

@@ -1,0 +1,61 @@
+{
+ "id": "piaggio-bv-350-fly-150-2007",
+ "make": "Piaggio",
+ "model": "BV 350 / Fly 150",
+ "name": "Piaggio BV (Beverly) 350 / Fly 150",
+ "years": [
+  2007,
+  2026
+ ],
+ "match": [
+  "bv 350",
+  "bv350",
+  "beverly",
+  "bv 250",
+  "fly 150",
+  "fly 50",
+  "piaggio fly",
+  "piaggio bv"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 to 330 cc single, air- or liquid-cooled, fuel injected or carb, CVT",
+ "intro": "Piaggio's big-wheel and commuter scooters. Simple, with a CVT and plastic bodywork.",
+ "focus": [
+  [
+   "Single",
+   "Air or liquid cooled"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Gear oil",
+   "Change it"
+  ],
+  [
+   "Bodywork",
+   "Many panels"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "BV 350"
+}

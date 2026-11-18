@@ -1,0 +1,65 @@
+{
+ "id": "ducati-monster-821-1200-2014",
+ "make": "Ducati",
+ "model": "Monster 821 / 1200",
+ "name": "Ducati Monster 821 / 1200",
+ "years": [
+  2014,
+  2021
+ ],
+ "match": [
+  "monster 821",
+  "monster 1200",
+  "monster 1200 s",
+  "monster 1200 r",
+  "monster 797",
+  "monster 821 stealth"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "803 to 1198 cc Testastretta L-twin, liquid-cooled (air-cooled 797), fuel injected",
+ "intro": "The liquid-cooled Monsters before the 937. Fuel injected, desmo valves and timing belts.",
+ "focus": [
+  [
+   "L-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Desmo valves",
+   "On schedule"
+  ],
+  [
+   "Timing belts",
+   "Change on time"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Desmo valve service needs both opening and closing shims checked. Follow the interval in the manual; it is not a job to skip."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Ducati has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "heroName": "MONSTER"
+}

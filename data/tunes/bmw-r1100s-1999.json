@@ -1,0 +1,65 @@
+{
+ "id": "bmw-r1100s-1999",
+ "make": "BMW",
+ "model": "R1100S",
+ "name": "BMW R1100S",
+ "years": [
+  1999,
+  2005
+ ],
+ "match": [
+  "r1100s",
+  "r 1100 s",
+  "r1100 s",
+  "r1100s boxer cup"
+ ],
+ "style": "sport",
+ "drive": "shaft",
+ "engine": "1085 cc air/oil-cooled boxer twin, fuel injected, shaft drive",
+ "intro": "BMW's sporty oilhead. Fuel injected boxer, shaft drive and a single-sided swingarm.",
+ "focus": [
+  [
+   "Boxer twin",
+   "Air/oil cooled"
+  ],
+  [
+   "Fuel injected",
+   "Sync bodies"
+  ],
+  [
+   "Final drive",
+   "Check oil and play"
+  ],
+  [
+   "Clutch",
+   "Dry, check spline"
+  ],
+  [
+   "Charging",
+   "Check alternator belt"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Boxer twins need the valve clearance checked on both sides and the throttle bodies synced. Do both at the same service."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "BMW has issued several recalls across these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BMW MOA forum",
+   "url": "https://forums.bmwmoa.org/",
+   "what": "BMW Motorcycle Owners of America forum."
+  }
+ ],
+ "silhouette": "bmw-r1100s-1999",
+ "areas": [],
+ "heroName": "R1100S"
+}

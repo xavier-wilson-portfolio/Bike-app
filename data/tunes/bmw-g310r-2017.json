@@ -1,0 +1,59 @@
+{
+ "id": "bmw-g310r-2017",
+ "make": "BMW",
+ "model": "G310R",
+ "name": "BMW G310R",
+ "years": [
+  2017,
+  2026
+ ],
+ "match": [
+  "g310r",
+  "g 310 r",
+  "g310 r",
+  "g310rr"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "313 cc liquid-cooled single with reversed cylinder head, fuel injected",
+ "intro": "BMW's small naked single, built in India by TVS. Fuel injected and simple.",
+ "focus": [
+  [
+   "313 cc single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check interval"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "BMW has issued several recalls across these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BMW MOA forum",
+   "url": "https://forums.bmwmoa.org/",
+   "what": "BMW Motorcycle Owners of America forum."
+  }
+ ],
+ "heroName": "G310R"
+}

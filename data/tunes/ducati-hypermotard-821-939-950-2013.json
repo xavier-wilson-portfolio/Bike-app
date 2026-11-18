@@ -1,0 +1,65 @@
+{
+ "id": "ducati-hypermotard-821-939-950-2013",
+ "make": "Ducati",
+ "model": "Hypermotard 821 / 939 / 950",
+ "name": "Ducati Hypermotard 821 / 939 / 950",
+ "years": [
+  2013,
+  2026
+ ],
+ "match": [
+  "hypermotard",
+  "hypermotard 821",
+  "hypermotard 939",
+  "hypermotard 950",
+  "hyperstrada",
+  "hypermotard sp"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "821 to 937 cc liquid-cooled Testastretta L-twin, fuel injected",
+ "intro": "Ducati's tall supermoto-style twins. Fuel injected, desmo valves and a lot of fun.",
+ "focus": [
+  [
+   "L-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Desmo valves",
+   "On schedule"
+  ],
+  [
+   "Timing belts",
+   "Change on time"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Desmo valve service needs both opening and closing shims checked. Follow the interval in the manual; it is not a job to skip."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Ducati has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "heroName": "HYPERMOTARD"
+}

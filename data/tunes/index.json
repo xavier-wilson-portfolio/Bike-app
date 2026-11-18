@@ -1739,7 +1739,6 @@
    "r60/5",
    "r50/5",
    "r90/6",
-   "r90s",
    "slash 5",
    "/5"
   ],
@@ -5384,9 +5383,7 @@
    "ducati 996",
    "ducati 998",
    "916 sps",
-   "996s",
-   "748",
-   "ducati 748"
+   "996s"
   ],
   "style": "sport",
   "drive": "chain"
@@ -7737,6 +7734,2031 @@
    "dl650a"
   ],
   "style": "adventure",
+  "drive": "chain"
+ },
+ {
+  "id": "suzuki-an125-uh200-burgman-2006",
+  "make": "Suzuki",
+  "model": "Burgman 125 / 200",
+  "name": "Suzuki Burgman 125 / 200",
+  "years": [
+   2006,
+   2026
+  ],
+  "match": [
+   "burgman 200",
+   "uh200",
+   "burgman 125",
+   "an125",
+   "uh125",
+   "burgman street"
+  ],
+  "style": "scooter",
+  "drive": "belt"
+ },
+ {
+  "id": "harley-davidson-sportster-883-solid-mount-evo-1986",
+  "make": "Harley-Davidson",
+  "model": "Sportster 883 (solid mount Evo)",
+  "name": "Harley-Davidson Sportster 883 (1986-2003)",
+  "years": [
+   1986,
+   2003
+  ],
+  "match": [
+   "xlh883",
+   "xlh 883",
+   "sportster 883",
+   "883 hugger",
+   "xlh883 hugger",
+   "xl883 evo",
+   "883 sportster"
+  ],
+  "style": "cruiser",
+  "drive": "belt"
+ },
+ {
+  "id": "harley-davidson-softail-slim-fls-2012",
+  "make": "Harley-Davidson",
+  "model": "Softail Slim (FLS)",
+  "name": "Harley-Davidson Softail Slim (FLS)",
+  "years": [
+   2012,
+   2017
+  ],
+  "match": [
+   "softail slim",
+   "fls",
+   "flss",
+   "slim s",
+   "softail slim s"
+  ],
+  "style": "cruiser",
+  "drive": "belt"
+ },
+ {
+  "id": "harley-davidson-tri-glide-freewheeler-2009",
+  "make": "Harley-Davidson",
+  "model": "Tri Glide / Freewheeler",
+  "name": "Harley-Davidson Tri Glide / Freewheeler",
+  "years": [
+   2009,
+   2026
+  ],
+  "match": [
+   "tri glide",
+   "triglide",
+   "flhtcutg",
+   "freewheeler",
+   "flrt",
+   "tri glide ultra"
+  ],
+  "style": "touring",
+  "drive": "belt"
+ },
+ {
+  "id": "harley-davidson-electra-glide-m8-2017",
+  "make": "Harley-Davidson",
+  "model": "Electra Glide / Ultra Limited (M8)",
+  "name": "Harley-Davidson Electra Glide (Milwaukee-Eight)",
+  "years": [
+   2017,
+   2026
+  ],
+  "match": [
+   "electra glide",
+   "ultra limited",
+   "flhtk",
+   "flhtcu",
+   "electra glide ultra",
+   "ultra classic",
+   "flht"
+  ],
+  "style": "touring",
+  "drive": "belt"
+ },
+ {
+  "id": "harley-davidson-shovelhead-fxr-fxb-sturgis-1980",
+  "make": "Harley-Davidson",
+  "model": "FXB Sturgis / FXEF (Shovelhead)",
+  "name": "Harley-Davidson FXB Sturgis (Shovelhead)",
+  "years": [
+   1980,
+   1984
+  ],
+  "match": [
+   "fxb",
+   "sturgis",
+   "fxb sturgis",
+   "fxdg",
+   "disc glide"
+  ],
+  "style": "cruiser",
+  "drive": "belt"
+ },
+ {
+  "id": "harley-davidson-sprint-aermacchi-1961",
+  "make": "Harley-Davidson",
+  "model": "Sprint (Aermacchi)",
+  "name": "Harley-Davidson Sprint (Aermacchi)",
+  "years": [
+   1961,
+   1974
+  ],
+  "match": [
+   "sprint",
+   "aermacchi",
+   "sprint 250",
+   "sprint 350",
+   "ss350",
+   "sx350",
+   "h sprint"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "harley-davidson-evolution-electra-glide-tour-glide-1984",
+  "make": "Harley-Davidson",
+  "model": "Evo Electra Glide / Tour Glide",
+  "name": "Harley-Davidson Electra Glide / Tour Glide (Evo)",
+  "years": [
+   1985,
+   1998
+  ],
+  "match": [
+   "tour glide",
+   "fltc",
+   "fltcu",
+   "evo electra glide",
+   "flhtc evo",
+   "flhtcu evo",
+   "electra glide classic"
+  ],
+  "style": "touring",
+  "drive": "belt"
+ },
+ {
+  "id": "harley-davidson-low-rider-st-2022",
+  "make": "Harley-Davidson",
+  "model": "Low Rider ST",
+  "name": "Harley-Davidson Low Rider ST",
+  "years": [
+   2022,
+   2026
+  ],
+  "match": [
+   "low rider st",
+   "fxlrst",
+   "lowrider st",
+   "low rider st 117"
+  ],
+  "style": "touring",
+  "drive": "belt"
+ },
+ {
+  "id": "harley-davidson-xr1200-sportster-2008",
+  "make": "Harley-Davidson",
+  "model": "XR1200",
+  "name": "Harley-Davidson XR1200",
+  "years": [
+   2008,
+   2013
+  ],
+  "match": [
+   "xr1200",
+   "xr 1200",
+   "xr1200x",
+   "xr1200 sportster"
+  ],
+  "style": "standard",
+  "drive": "belt"
+ },
+ {
+  "id": "harley-davidson-buell-xb9-xb12-2003",
+  "make": "Buell",
+  "model": "XB9 / XB12 (Firebolt, Lightning, Ulysses)",
+  "name": "Buell XB9 / XB12",
+  "years": [
+   2003,
+   2010
+  ],
+  "match": [
+   "xb9",
+   "xb12",
+   "firebolt",
+   "lightning",
+   "ulysses",
+   "xb12r",
+   "xb12s",
+   "xb9sx",
+   "city x",
+   "xb12x"
+  ],
+  "style": "sport",
+  "drive": "belt"
+ },
+ {
+  "id": "harley-davidson-buell-s1-x1-m2-tube-frame-1995",
+  "make": "Buell",
+  "model": "S1 / X1 / M2 / S3 (tube frame)",
+  "name": "Buell tube-frame (S1, X1, M2, S3)",
+  "years": [
+   1995,
+   2002
+  ],
+  "match": [
+   "s1 lightning",
+   "x1 lightning",
+   "m2 cyclone",
+   "cyclone",
+   "s3 thunderbolt",
+   "thunderbolt",
+   "s1w",
+   "x1"
+  ],
+  "style": "sport",
+  "drive": "belt"
+ },
+ {
+  "id": "harley-davidson-buell-blast-2000",
+  "make": "Buell",
+  "model": "Blast",
+  "name": "Buell Blast",
+  "years": [
+   2000,
+   2009
+  ],
+  "match": [
+   "blast",
+   "buell blast",
+   "p3",
+   "blast 500"
+  ],
+  "style": "standard",
+  "drive": "belt"
+ },
+ {
+  "id": "harley-davidson-buell-1125r-1125cr-2008",
+  "make": "Buell",
+  "model": "1125R / 1125CR",
+  "name": "Buell 1125R / 1125CR",
+  "years": [
+   2008,
+   2010
+  ],
+  "match": [
+   "1125r",
+   "1125cr",
+   "buell 1125",
+   "1125 r",
+   "1125 cr"
+  ],
+  "style": "sport",
+  "drive": "belt"
+ },
+ {
+  "id": "bmw-r1100rt-r1150rt-1996",
+  "make": "BMW",
+  "model": "R1100RT / R1150RT",
+  "name": "BMW R1100RT / R1150RT",
+  "years": [
+   1996,
+   2005
+  ],
+  "match": [
+   "r1100rt",
+   "r1150rt",
+   "r 1100 rt",
+   "r 1150 rt",
+   "r1150rt-p",
+   "r1100rt-p"
+  ],
+  "style": "touring",
+  "drive": "shaft"
+ },
+ {
+  "id": "bmw-r1100s-1999",
+  "make": "BMW",
+  "model": "R1100S",
+  "name": "BMW R1100S",
+  "years": [
+   1999,
+   2005
+  ],
+  "match": [
+   "r1100s",
+   "r 1100 s",
+   "r1100 s",
+   "r1100s boxer cup"
+  ],
+  "style": "sport",
+  "drive": "shaft"
+ },
+ {
+  "id": "bmw-r850r-r1100r-r1150r-1994",
+  "make": "BMW",
+  "model": "R850R / R1100R / R1150R",
+  "name": "BMW R850R / R1100R / R1150R",
+  "years": [
+   1994,
+   2006
+  ],
+  "match": [
+   "r850r",
+   "r1100r",
+   "r1150r",
+   "r 850 r",
+   "r 1100 r",
+   "r 1150 r",
+   "r1150r rockster",
+   "rockster"
+  ],
+  "style": "standard",
+  "drive": "shaft"
+ },
+ {
+  "id": "bmw-k1200s-k1300s-2005",
+  "make": "BMW",
+  "model": "K1200S / K1300S",
+  "name": "BMW K1200S / K1300S",
+  "years": [
+   2005,
+   2016
+  ],
+  "match": [
+   "k1200s",
+   "k1300s",
+   "k 1200 s",
+   "k 1300 s",
+   "k1200r",
+   "k1300r",
+   "k1200gt",
+   "k1300gt"
+  ],
+  "style": "sport",
+  "drive": "shaft"
+ },
+ {
+  "id": "bmw-k1600gt-gtl-2011",
+  "make": "BMW",
+  "model": "K1600GT / GTL / B",
+  "name": "BMW K1600GT / GTL / B",
+  "years": [
+   2011,
+   2026
+  ],
+  "match": [
+   "k1600gt",
+   "k1600gtl",
+   "k1600b",
+   "k 1600",
+   "k1600",
+   "grand america",
+   "k1600 grand america"
+  ],
+  "style": "touring",
+  "drive": "shaft"
+ },
+ {
+  "id": "bmw-f800st-f800s-2006",
+  "make": "BMW",
+  "model": "F800ST / F800S / F800GT",
+  "name": "BMW F800ST / F800S / F800GT",
+  "years": [
+   2006,
+   2019
+  ],
+  "match": [
+   "f800st",
+   "f800s",
+   "f800gt",
+   "f 800 st",
+   "f 800 s",
+   "f 800 gt",
+   "f800r"
+  ],
+  "style": "sport",
+  "drive": "belt"
+ },
+ {
+  "id": "bmw-f650cs-g650gs-2002",
+  "make": "BMW",
+  "model": "F650CS / G650GS",
+  "name": "BMW F650CS Scarver / G650GS",
+  "years": [
+   2002,
+   2016
+  ],
+  "match": [
+   "f650cs",
+   "f 650 cs",
+   "scarver",
+   "g650gs sertao",
+   "sertao",
+   "g650x"
+  ],
+  "style": "standard",
+  "drive": "belt"
+ },
+ {
+  "id": "bmw-g310r-2017",
+  "make": "BMW",
+  "model": "G310R",
+  "name": "BMW G310R",
+  "years": [
+   2017,
+   2026
+  ],
+  "match": [
+   "g310r",
+   "g 310 r",
+   "g310 r",
+   "g310rr"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "bmw-r18-2020",
+  "make": "BMW",
+  "model": "R 18",
+  "name": "BMW R 18",
+  "years": [
+   2020,
+   2026
+  ],
+  "match": [
+   "r18",
+   "r 18",
+   "r18 classic",
+   "r18 transcontinental",
+   "r18 b",
+   "r 18 b"
+  ],
+  "style": "cruiser",
+  "drive": "shaft"
+ },
+ {
+  "id": "bmw-r1250rt-2019",
+  "make": "BMW",
+  "model": "R1250RT",
+  "name": "BMW R1250RT",
+  "years": [
+   2019,
+   2026
+  ],
+  "match": [
+   "r1250rt",
+   "r 1250 rt",
+   "r1250 rt",
+   "r1300rt"
+  ],
+  "style": "touring",
+  "drive": "shaft"
+ },
+ {
+  "id": "bmw-s1000xr-2015",
+  "make": "BMW",
+  "model": "S1000XR",
+  "name": "BMW S1000XR",
+  "years": [
+   2015,
+   2026
+  ],
+  "match": [
+   "s1000xr",
+   "s 1000 xr",
+   "s1000 xr",
+   "m1000xr"
+  ],
+  "style": "adventure",
+  "drive": "chain"
+ },
+ {
+  "id": "bmw-r1200r-r1250r-2006",
+  "make": "BMW",
+  "model": "R1200R / R1250R",
+  "name": "BMW R1200R / R1250R",
+  "years": [
+   2006,
+   2026
+  ],
+  "match": [
+   "r1200r",
+   "r1250r",
+   "r 1200 r",
+   "r 1250 r",
+   "r1200r classic",
+   "r1300r"
+  ],
+  "style": "standard",
+  "drive": "shaft"
+ },
+ {
+  "id": "bmw-r60-2-and-r69s-slash-2-1955",
+  "make": "BMW",
+  "model": "R50 / R60 / R69S (Earles fork)",
+  "name": "BMW R50, R60/2 and R69S",
+  "years": [
+   1955,
+   1969
+  ],
+  "match": [
+   "r60/2",
+   "r69s",
+   "r50/2",
+   "r60",
+   "r69",
+   "r50s",
+   "r27",
+   "earles fork"
+  ],
+  "style": "standard",
+  "drive": "shaft"
+ },
+ {
+  "id": "bmw-r90s-1973",
+  "make": "BMW",
+  "model": "R90S",
+  "name": "BMW R90S",
+  "years": [
+   1973,
+   1976
+  ],
+  "match": [
+   "r90s",
+   "r 90 s",
+   "r90 s"
+  ],
+  "style": "sport",
+  "drive": "shaft"
+ },
+ {
+  "id": "triumph-speed-triple-1200-rs-2021",
+  "make": "Triumph",
+  "model": "Speed Triple 1200 RS / RR",
+  "name": "Triumph Speed Triple 1200 RS / RR",
+  "years": [
+   2021,
+   2026
+  ],
+  "match": [
+   "speed triple 1200",
+   "speed triple 1200 rs",
+   "speed triple 1200 rr",
+   "speed triple rs 1200",
+   "speed triple 1160"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "triumph-tiger-900-2020",
+  "make": "Triumph",
+  "model": "Tiger 900",
+  "name": "Triumph Tiger 900",
+  "years": [
+   2020,
+   2026
+  ],
+  "match": [
+   "tiger 900",
+   "tiger 900 gt",
+   "tiger 900 rally",
+   "tiger 900 rally pro",
+   "tiger 900 gt pro"
+  ],
+  "style": "adventure",
+  "drive": "chain"
+ },
+ {
+  "id": "triumph-speed-400-scrambler-400-x-2024",
+  "make": "Triumph",
+  "model": "Speed 400 / Scrambler 400 X",
+  "name": "Triumph Speed 400 / Scrambler 400 X",
+  "years": [
+   2024,
+   2026
+  ],
+  "match": [
+   "speed 400",
+   "scrambler 400 x",
+   "scrambler 400x",
+   "speed 400 triumph",
+   "scrambler 400"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "triumph-thunderbird-1600-1700-2010",
+  "make": "Triumph",
+  "model": "Thunderbird 1600 / 1700",
+  "name": "Triumph Thunderbird 1600 / 1700",
+  "years": [
+   2010,
+   2018
+  ],
+  "match": [
+   "thunderbird 1600",
+   "thunderbird 1700",
+   "thunderbird storm",
+   "thunderbird lt",
+   "thunderbird commander",
+   "thunderbird nightstorm"
+  ],
+  "style": "cruiser",
+  "drive": "belt"
+ },
+ {
+  "id": "triumph-america-speedmaster-865-2002",
+  "make": "Triumph",
+  "model": "America / Speedmaster (865)",
+  "name": "Triumph America / Speedmaster",
+  "years": [
+   2002,
+   2017
+  ],
+  "match": [
+   "triumph america",
+   "america 865",
+   "speedmaster",
+   "speedmaster 865",
+   "america lt"
+  ],
+  "style": "cruiser",
+  "drive": "chain"
+ },
+ {
+  "id": "triumph-sprint-st-gt-1999",
+  "make": "Triumph",
+  "model": "Sprint ST / GT",
+  "name": "Triumph Sprint ST / Sprint GT",
+  "years": [
+   1999,
+   2016
+  ],
+  "match": [
+   "sprint st",
+   "sprint gt",
+   "sprint st 955",
+   "sprint st 1050",
+   "sprint 1050",
+   "sprint rs"
+  ],
+  "style": "touring",
+  "drive": "chain"
+ },
+ {
+  "id": "triumph-tr6-trophy-1956",
+  "make": "Triumph",
+  "model": "TR6 Trophy",
+  "name": "Triumph TR6 Trophy (650)",
+  "years": [
+   1956,
+   1973
+  ],
+  "match": [
+   "tr6",
+   "tr6r",
+   "tr6c",
+   "trophy 650",
+   "tr6 trophy",
+   "tiger 650"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "triumph-tiger-cub-t20-1954",
+  "make": "Triumph",
+  "model": "Tiger Cub (T20)",
+  "name": "Triumph Tiger Cub (T20)",
+  "years": [
+   1954,
+   1968
+  ],
+  "match": [
+   "tiger cub",
+   "t20",
+   "terrier",
+   "t20 tiger cub"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "triumph-thruxton-900-2004",
+  "make": "Triumph",
+  "model": "Thruxton 900",
+  "name": "Triumph Thruxton 900",
+  "years": [
+   2004,
+   2015
+  ],
+  "match": [
+   "thruxton",
+   "thruxton 900",
+   "thruxton 865",
+   "thruxton ace"
+  ],
+  "style": "cafe",
+  "drive": "chain"
+ },
+ {
+  "id": "triumph-bonneville-bobber-2017",
+  "make": "Triumph",
+  "model": "Bonneville Bobber",
+  "name": "Triumph Bonneville Bobber",
+  "years": [
+   2017,
+   2026
+  ],
+  "match": [
+   "bobber",
+   "bonneville bobber",
+   "bobber black",
+   "bobber tfc",
+   "speedmaster 1200"
+  ],
+  "style": "cruiser",
+  "drive": "chain"
+ },
+ {
+  "id": "ducati-hypermotard-821-939-950-2013",
+  "make": "Ducati",
+  "model": "Hypermotard 821 / 939 / 950",
+  "name": "Ducati Hypermotard 821 / 939 / 950",
+  "years": [
+   2013,
+   2026
+  ],
+  "match": [
+   "hypermotard",
+   "hypermotard 821",
+   "hypermotard 939",
+   "hypermotard 950",
+   "hyperstrada",
+   "hypermotard sp"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "ducati-monster-821-1200-2014",
+  "make": "Ducati",
+  "model": "Monster 821 / 1200",
+  "name": "Ducati Monster 821 / 1200",
+  "years": [
+   2014,
+   2021
+  ],
+  "match": [
+   "monster 821",
+   "monster 1200",
+   "monster 1200 s",
+   "monster 1200 r",
+   "monster 797",
+   "monster 821 stealth"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "ducati-monster-937-2021",
+  "make": "Ducati",
+  "model": "Monster (937)",
+  "name": "Ducati Monster 937",
+  "years": [
+   2021,
+   2026
+  ],
+  "match": [
+   "monster 937",
+   "monster plus",
+   "monster sp",
+   "monster 2021",
+   "monster+"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "ducati-desertx-2022",
+  "make": "Ducati",
+  "model": "DesertX",
+  "name": "Ducati DesertX",
+  "years": [
+   2022,
+   2026
+  ],
+  "match": [
+   "desertx",
+   "desert x",
+   "desertx rally",
+   "desertx discovery"
+  ],
+  "style": "adventure",
+  "drive": "chain"
+ },
+ {
+  "id": "ducati-diavel-2011",
+  "make": "Ducati",
+  "model": "Diavel / XDiavel",
+  "name": "Ducati Diavel / XDiavel",
+  "years": [
+   2011,
+   2026
+  ],
+  "match": [
+   "diavel",
+   "xdiavel",
+   "diavel carbon",
+   "diavel 1260",
+   "diavel v4",
+   "xdiavel s"
+  ],
+  "style": "cruiser",
+  "drive": "chain"
+ },
+ {
+  "id": "ducati-st2-st3-st4-1997",
+  "make": "Ducati",
+  "model": "ST2 / ST3 / ST4",
+  "name": "Ducati ST2 / ST3 / ST4",
+  "years": [
+   1997,
+   2007
+  ],
+  "match": [
+   "st2",
+   "st3",
+   "st4",
+   "st4s",
+   "ducati st2",
+   "ducati st4",
+   "st3s"
+  ],
+  "style": "touring",
+  "drive": "chain"
+ },
+ {
+  "id": "ducati-748-749-999-1995",
+  "make": "Ducati",
+  "model": "748 / 749 / 999",
+  "name": "Ducati 748 / 749 / 999",
+  "years": [
+   1995,
+   2006
+  ],
+  "match": [
+   "748",
+   "749",
+   "999",
+   "ducati 748",
+   "ducati 749",
+   "ducati 999",
+   "749s",
+   "999s"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "ducati-1098-1198-848-2007",
+  "make": "Ducati",
+  "model": "1098 / 1198 / 848",
+  "name": "Ducati 1098 / 1198 / 848",
+  "years": [
+   2007,
+   2013
+  ],
+  "match": [
+   "1098",
+   "1198",
+   "848",
+   "ducati 1098",
+   "ducati 1198",
+   "848 evo",
+   "1198s",
+   "1098s"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "ducati-panigale-v4-2018",
+  "make": "Ducati",
+  "model": "Panigale V4",
+  "name": "Ducati Panigale V4",
+  "years": [
+   2018,
+   2026
+  ],
+  "match": [
+   "panigale v4",
+   "panigale v4 s",
+   "panigale v4 r",
+   "v4 panigale",
+   "streetfighter v4",
+   "panigale v4s"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "ducati-scrambler-1100-2018",
+  "make": "Ducati",
+  "model": "Scrambler 1100",
+  "name": "Ducati Scrambler 1100",
+  "years": [
+   2018,
+   2026
+  ],
+  "match": [
+   "scrambler 1100",
+   "scrambler 1100 sport",
+   "scrambler 1100 special",
+   "scrambler 1100 pro",
+   "scrambler 1100 tribute"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "ktm-200-250-390-duke-gen-2-3-2017",
+  "make": "KTM",
+  "model": "125 / 200 / 250 Duke",
+  "name": "KTM 125 / 200 / 250 Duke",
+  "years": [
+   2017,
+   2026
+  ],
+  "match": [
+   "200 duke",
+   "250 duke",
+   "125 duke",
+   "duke 200",
+   "duke 250",
+   "duke 125"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "ktm-rc-390-2015",
+  "make": "KTM",
+  "model": "RC 390",
+  "name": "KTM RC 390",
+  "years": [
+   2015,
+   2026
+  ],
+  "match": [
+   "rc 390",
+   "rc390",
+   "rc 200",
+   "rc 125",
+   "ktm rc"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "ktm-690-duke-690-smc-r-2008",
+  "make": "KTM",
+  "model": "690 Duke / 690 SMC R",
+  "name": "KTM 690 Duke / 690 SMC R",
+  "years": [
+   2008,
+   2024
+  ],
+  "match": [
+   "690 duke",
+   "duke 690",
+   "690 smc",
+   "690 smc r",
+   "690 duke r",
+   "smc r 690"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "ktm-1190-1290-super-adventure-2013",
+  "make": "KTM",
+  "model": "1190 Adventure / 1290 Super Adventure",
+  "name": "KTM 1190 Adventure / 1290 Super Adventure",
+  "years": [
+   2013,
+   2026
+  ],
+  "match": [
+   "1190 adventure",
+   "1290 super adventure",
+   "1290 adventure",
+   "super adventure",
+   "1190 adventure r",
+   "1290 super adventure s",
+   "1290 super adventure r"
+  ],
+  "style": "adventure",
+  "drive": "chain"
+ },
+ {
+  "id": "ktm-500-exc-f-350-exc-f-2012",
+  "make": "KTM",
+  "model": "500 / 350 EXC-F",
+  "name": "KTM 500 EXC-F / 350 EXC-F",
+  "years": [
+   2012,
+   2026
+  ],
+  "match": [
+   "500 exc-f",
+   "350 exc-f",
+   "500 exc",
+   "350 exc",
+   "500 excf",
+   "350 excf",
+   "exc-f"
+  ],
+  "style": "dualsport",
+  "drive": "chain"
+ },
+ {
+  "id": "ktm-300-xc-w-250-exc-two-stroke-1998",
+  "make": "KTM",
+  "model": "300 XC-W / 250 EXC (two-stroke)",
+  "name": "KTM 250 / 300 two-stroke enduro",
+  "years": [
+   1998,
+   2026
+  ],
+  "match": [
+   "300 xc-w",
+   "250 exc",
+   "300 exc",
+   "250 xc-w",
+   "300 xcw",
+   "300 tpi",
+   "250 tpi",
+   "300 xc"
+  ],
+  "style": "dualsport",
+  "drive": "chain"
+ },
+ {
+  "id": "ktm-640-adventure-lc4-640-1998",
+  "make": "KTM",
+  "model": "640 Adventure / LC4 640",
+  "name": "KTM 640 Adventure / LC4",
+  "years": [
+   1998,
+   2007
+  ],
+  "match": [
+   "640 adventure",
+   "lc4 640",
+   "640 lc4",
+   "ktm 640",
+   "620 adventure",
+   "640 duke"
+  ],
+  "style": "adventure",
+  "drive": "chain"
+ },
+ {
+  "id": "ktm-990-super-duke-2005",
+  "make": "KTM",
+  "model": "990 Super Duke",
+  "name": "KTM 990 Super Duke",
+  "years": [
+   2005,
+   2013
+  ],
+  "match": [
+   "990 super duke",
+   "super duke 990",
+   "990 sd",
+   "990 super duke r",
+   "superduke 990"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "ktm-1290-super-duke-gt-2016",
+  "make": "KTM",
+  "model": "1290 Super Duke GT",
+  "name": "KTM 1290 Super Duke GT",
+  "years": [
+   2016,
+   2026
+  ],
+  "match": [
+   "super duke gt",
+   "1290 super duke gt",
+   "1290 gt",
+   "sd gt",
+   "superduke gt"
+  ],
+  "style": "touring",
+  "drive": "chain"
+ },
+ {
+  "id": "ktm-50-sx-65-sx-2000",
+  "make": "KTM",
+  "model": "50 SX / 65 SX",
+  "name": "KTM 50 SX / 65 SX",
+  "years": [
+   2000,
+   2026
+  ],
+  "match": [
+   "50 sx",
+   "65 sx",
+   "ktm 50",
+   "ktm 65",
+   "50sx",
+   "65sx",
+   "50 sx mini"
+  ],
+  "style": "dualsport",
+  "drive": "chain"
+ },
+ {
+  "id": "aprilia-rs-660-tuono-660-2021",
+  "make": "Aprilia",
+  "model": "RS 660 / Tuono 660",
+  "name": "Aprilia RS 660 / Tuono 660",
+  "years": [
+   2021,
+   2026
+  ],
+  "match": [
+   "rs 660",
+   "rs660",
+   "tuono 660",
+   "tuono660",
+   "rs 660 extrema"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "aprilia-rsv4-tuono-v4-2009",
+  "make": "Aprilia",
+  "model": "RSV4 / Tuono V4",
+  "name": "Aprilia RSV4 / Tuono V4",
+  "years": [
+   2009,
+   2026
+  ],
+  "match": [
+   "rsv4",
+   "tuono v4",
+   "rsv4 rf",
+   "rsv4 factory",
+   "tuono v4 1100",
+   "rsv4 1100",
+   "tuono v4r"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "aprilia-rsv-mille-tuono-1000-1998",
+  "make": "Aprilia",
+  "model": "RSV Mille / Tuono 1000",
+  "name": "Aprilia RSV Mille / Tuono 1000",
+  "years": [
+   1998,
+   2010
+  ],
+  "match": [
+   "rsv mille",
+   "mille",
+   "rsv 1000",
+   "tuono 1000",
+   "rsv1000r",
+   "tuono r",
+   "rsv mille r"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "aprilia-shiver-750-dorsoduro-750-2008",
+  "make": "Aprilia",
+  "model": "Shiver 750 / Dorsoduro 750",
+  "name": "Aprilia Shiver 750 / Dorsoduro 750",
+  "years": [
+   2008,
+   2017
+  ],
+  "match": [
+   "shiver",
+   "shiver 750",
+   "dorsoduro",
+   "dorsoduro 750",
+   "dorsoduro 1200",
+   "shiver 900",
+   "dorsoduro 900"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "aprilia-tuareg-660-2022",
+  "make": "Aprilia",
+  "model": "Tuareg 660",
+  "name": "Aprilia Tuareg 660",
+  "years": [
+   2022,
+   2026
+  ],
+  "match": [
+   "tuareg",
+   "tuareg 660",
+   "tuareg660"
+  ],
+  "style": "adventure",
+  "drive": "chain"
+ },
+ {
+  "id": "aprilia-rs-250-rs-50-1995",
+  "make": "Aprilia",
+  "model": "RS 250 / RS 50",
+  "name": "Aprilia RS 250 / RS 50",
+  "years": [
+   1995,
+   2005
+  ],
+  "match": [
+   "rs 250",
+   "rs250",
+   "rs 50",
+   "rs50",
+   "rs 125",
+   "rs125"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "mv-agusta-f3-brutale-675-800-2012",
+  "make": "MV Agusta",
+  "model": "F3 / Brutale 675 / 800",
+  "name": "MV Agusta F3 / Brutale 675 / 800",
+  "years": [
+   2012,
+   2026
+  ],
+  "match": [
+   "f3",
+   "f3 675",
+   "f3 800",
+   "brutale 675",
+   "brutale 800",
+   "dragster 800",
+   "turismo veloce",
+   "rivale 800"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "mv-agusta-f4-brutale-1000-1999",
+  "make": "MV Agusta",
+  "model": "F4 / Brutale 750-1090",
+  "name": "MV Agusta F4 / Brutale (four)",
+  "years": [
+   1999,
+   2019
+  ],
+  "match": [
+   "f4",
+   "f4 750",
+   "f4 1000",
+   "brutale 1090",
+   "brutale 910",
+   "brutale 989",
+   "brutale 750",
+   "f4 rr"
+  ],
+  "style": "sport",
+  "drive": "chain"
+ },
+ {
+  "id": "moto-guzzi-california-1100-1400-1994",
+  "make": "Moto Guzzi",
+  "model": "California 1100 / 1400",
+  "name": "Moto Guzzi California 1100 / 1400",
+  "years": [
+   1994,
+   2020
+  ],
+  "match": [
+   "california",
+   "california 1100",
+   "california 1400",
+   "california ev",
+   "california vintage",
+   "eldorado 1400",
+   "audace",
+   "california touring"
+  ],
+  "style": "cruiser",
+  "drive": "shaft"
+ },
+ {
+  "id": "moto-guzzi-v85-tt-2019",
+  "make": "Moto Guzzi",
+  "model": "V85 TT",
+  "name": "Moto Guzzi V85 TT",
+  "years": [
+   2019,
+   2026
+  ],
+  "match": [
+   "v85",
+   "v85 tt",
+   "v85tt",
+   "v85 tt travel"
+  ],
+  "style": "adventure",
+  "drive": "shaft"
+ },
+ {
+  "id": "moto-guzzi-eldorado-ambassador-v7-special-loop-frame-1967",
+  "make": "Moto Guzzi",
+  "model": "Eldorado / Ambassador / V7 Special (loop frame)",
+  "name": "Moto Guzzi loop-frame (V7, Ambassador, Eldorado)",
+  "years": [
+   1967,
+   1974
+  ],
+  "match": [
+   "eldorado",
+   "ambassador",
+   "v7 special",
+   "v750",
+   "v850 eldorado",
+   "loop frame",
+   "guzzi police"
+  ],
+  "style": "cruiser",
+  "drive": "shaft"
+ },
+ {
+  "id": "moto-guzzi-griso-breva-stelvio-2004",
+  "make": "Moto Guzzi",
+  "model": "Griso / Breva / Stelvio / Norge",
+  "name": "Moto Guzzi Griso, Breva, Stelvio, Norge",
+  "years": [
+   2004,
+   2017
+  ],
+  "match": [
+   "griso",
+   "breva",
+   "stelvio",
+   "norge",
+   "breva 1100",
+   "griso 1200",
+   "stelvio ntx",
+   "norge gt"
+  ],
+  "style": "standard",
+  "drive": "shaft"
+ },
+ {
+  "id": "indian-ftr-1200-2019",
+  "make": "Indian",
+  "model": "FTR 1200",
+  "name": "Indian FTR 1200 / FTR",
+  "years": [
+   2019,
+   2026
+  ],
+  "match": [
+   "ftr",
+   "ftr 1200",
+   "ftr1200",
+   "ftr s",
+   "ftr rally",
+   "ftr r carbon",
+   "ftr sport"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "indian-chief-1940s-1953-1940",
+  "make": "Indian",
+  "model": "Chief (1940-1953)",
+  "name": "Indian Chief (1940-1953)",
+  "years": [
+   1940,
+   1953
+  ],
+  "match": [
+   "chief 1940s",
+   "1947 chief",
+   "1948 chief",
+   "roadmaster chief",
+   "indian chief 74",
+   "chief 80",
+   "blackhawk chief"
+  ],
+  "style": "cruiser",
+  "drive": "chain"
+ },
+ {
+  "id": "indian-challenger-pursuit-2020",
+  "make": "Indian",
+  "model": "Challenger / Pursuit",
+  "name": "Indian Challenger / Pursuit",
+  "years": [
+   2020,
+   2026
+  ],
+  "match": [
+   "challenger",
+   "indian challenger",
+   "pursuit",
+   "indian pursuit",
+   "challenger dark horse",
+   "pursuit limited",
+   "powerplus"
+  ],
+  "style": "touring",
+  "drive": "belt"
+ },
+ {
+  "id": "victory-vegas-hammer-kingpin-2003",
+  "make": "Victory",
+  "model": "Vegas / Hammer / Kingpin",
+  "name": "Victory Vegas, Hammer, Kingpin",
+  "years": [
+   2003,
+   2017
+  ],
+  "match": [
+   "vegas",
+   "vegas 8 ball",
+   "hammer",
+   "kingpin",
+   "high-ball",
+   "highball",
+   "gunner",
+   "judge",
+   "boardwalk",
+   "jackpot"
+  ],
+  "style": "cruiser",
+  "drive": "belt"
+ },
+ {
+  "id": "victory-cross-country-vision-2008",
+  "make": "Victory",
+  "model": "Cross Country / Vision / Magnum",
+  "name": "Victory Cross Country, Vision, Magnum",
+  "years": [
+   2008,
+   2017
+  ],
+  "match": [
+   "cross country",
+   "cross roads",
+   "vision",
+   "vision tour",
+   "magnum",
+   "cross country tour",
+   "victory vision"
+  ],
+  "style": "touring",
+  "drive": "belt"
+ },
+ {
+  "id": "royal-enfield-hunter-350-meteor-350-2021",
+  "make": "Royal Enfield",
+  "model": "Hunter 350 / Meteor 350",
+  "name": "Royal Enfield Hunter 350 / Meteor 350",
+  "years": [
+   2021,
+   2026
+  ],
+  "match": [
+   "hunter 350",
+   "meteor 350",
+   "hunter",
+   "meteor"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "royal-enfield-super-meteor-650-shotgun-650-2023",
+  "make": "Royal Enfield",
+  "model": "Super Meteor 650 / Shotgun 650",
+  "name": "Royal Enfield Super Meteor 650 / Shotgun 650",
+  "years": [
+   2023,
+   2026
+  ],
+  "match": [
+   "super meteor",
+   "super meteor 650",
+   "shotgun 650",
+   "shotgun"
+  ],
+  "style": "cruiser",
+  "drive": "chain"
+ },
+ {
+  "id": "royal-enfield-himalayan-450-2024",
+  "make": "Royal Enfield",
+  "model": "Himalayan 450",
+  "name": "Royal Enfield Himalayan 450",
+  "years": [
+   2024,
+   2026
+  ],
+  "match": [
+   "himalayan 450",
+   "himalayan 452",
+   "guerrilla 450",
+   "himalayan 2024"
+  ],
+  "style": "adventure",
+  "drive": "chain"
+ },
+ {
+  "id": "norton-atlas-dominator-650-1956",
+  "make": "Norton",
+  "model": "Dominator / Atlas / 650SS",
+  "name": "Norton Dominator, 650SS and Atlas",
+  "years": [
+   1956,
+   1968
+  ],
+  "match": [
+   "dominator",
+   "atlas",
+   "650ss",
+   "norton atlas",
+   "norton dominator",
+   "dominator 99",
+   "88ss",
+   "featherbed"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "bsa-gold-star-dbd34-1938",
+  "make": "BSA",
+  "model": "Gold Star",
+  "name": "BSA Gold Star",
+  "years": [
+   1938,
+   1963
+  ],
+  "match": [
+   "gold star",
+   "goldie",
+   "dbd34",
+   "db34",
+   "bsa gold star",
+   "cb34",
+   "zb32"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "bsa-b50-b44-victor-1965",
+  "make": "BSA",
+  "model": "B44 / B50 Victor",
+  "name": "BSA B44 / B50 Victor",
+  "years": [
+   1965,
+   1973
+  ],
+  "match": [
+   "b44",
+   "b50",
+   "victor",
+   "b44 victor",
+   "b50 victor",
+   "victor special",
+   "b50ss gold star",
+   "shooting star"
+  ],
+  "style": "dualsport",
+  "drive": "chain"
+ },
+ {
+  "id": "triumph-t100-tiger-500-daytona-500-1959",
+  "make": "Triumph",
+  "model": "T100 Tiger / Daytona 500",
+  "name": "Triumph T100 Tiger / Daytona 500",
+  "years": [
+   1959,
+   1974
+  ],
+  "match": [
+   "t100",
+   "t100r",
+   "t100c",
+   "tiger 100",
+   "daytona 500",
+   "t100 daytona",
+   "tiger 500"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "husqvarna-svartpilen-vitpilen-401-2018",
+  "make": "Husqvarna",
+  "model": "Svartpilen / Vitpilen 401",
+  "name": "Husqvarna Svartpilen / Vitpilen 401",
+  "years": [
+   2018,
+   2026
+  ],
+  "match": [
+   "svartpilen",
+   "vitpilen",
+   "svartpilen 401",
+   "vitpilen 401",
+   "svartpilen 701",
+   "vitpilen 701",
+   "svartpilen 250"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "husqvarna-701-enduro-supermoto-2016",
+  "make": "Husqvarna",
+  "model": "701 Enduro / 701 Supermoto",
+  "name": "Husqvarna 701 Enduro / Supermoto",
+  "years": [
+   2016,
+   2026
+  ],
+  "match": [
+   "701 enduro",
+   "701 supermoto",
+   "husqvarna 701",
+   "701 lr",
+   "701"
+  ],
+  "style": "dualsport",
+  "drive": "chain"
+ },
+ {
+  "id": "husqvarna-norden-901-2022",
+  "make": "Husqvarna",
+  "model": "Norden 901",
+  "name": "Husqvarna Norden 901",
+  "years": [
+   2022,
+   2026
+  ],
+  "match": [
+   "norden",
+   "norden 901",
+   "norden 901 expedition"
+  ],
+  "style": "adventure",
+  "drive": "chain"
+ },
+ {
+  "id": "ural-gear-up-ct-sidecar-2001",
+  "make": "Ural",
+  "model": "Gear Up / CT / Patrol (sidecar)",
+  "name": "Ural sidecar rigs (Gear Up, CT, Patrol)",
+  "years": [
+   2001,
+   2026
+  ],
+  "match": [
+   "ural",
+   "gear up",
+   "gear-up",
+   "ural ct",
+   "ural patrol",
+   "ural tourist",
+   "ural retro",
+   "ural sidecar"
+  ],
+  "style": "standard",
+  "drive": "shaft"
+ },
+ {
+  "id": "vespa-gts-250-300-2005",
+  "make": "Vespa",
+  "model": "GTS 250 / 300",
+  "name": "Vespa GTS 250 / 300",
+  "years": [
+   2005,
+   2026
+  ],
+  "match": [
+   "gts",
+   "gts 300",
+   "gts 250",
+   "gts super",
+   "gtv",
+   "gts 300 super",
+   "gts 310"
+  ],
+  "style": "scooter",
+  "drive": "belt"
+ },
+ {
+  "id": "vespa-primavera-sprint-50-150-2014",
+  "make": "Vespa",
+  "model": "Primavera / Sprint (50-150)",
+  "name": "Vespa Primavera / Sprint",
+  "years": [
+   2014,
+   2026
+  ],
+  "match": [
+   "primavera",
+   "primavera 150",
+   "primavera 50",
+   "sprint 150",
+   "sprint 50",
+   "vespa sprint",
+   "vespa primavera"
+  ],
+  "style": "scooter",
+  "drive": "belt"
+ },
+ {
+  "id": "vespa-et4-et2-lx150-1996",
+  "make": "Vespa",
+  "model": "ET4 / ET2 / LX150",
+  "name": "Vespa ET4 / ET2 / LX150",
+  "years": [
+   1996,
+   2013
+  ],
+  "match": [
+   "et4",
+   "et2",
+   "lx150",
+   "lx 150",
+   "lx50",
+   "s150",
+   "vespa lx",
+   "vespa et4"
+  ],
+  "style": "scooter",
+  "drive": "belt"
+ },
+ {
+  "id": "vespa-vbb-sprint-super-smallframe-and-largeframe-1960",
+  "make": "Vespa",
+  "model": "VBB / Sprint / Super (classic)",
+  "name": "Vespa classic largeframe and smallframe (VBB, Sprint, Super)",
+  "years": [
+   1960,
+   1979
+  ],
+  "match": [
+   "vbb",
+   "vba",
+   "vespa sprint 150",
+   "vespa super",
+   "vespa rally",
+   "vespa 50",
+   "vespa 90",
+   "smallframe",
+   "largeframe",
+   "vespa gl"
+  ],
+  "style": "scooter",
+  "drive": "chain"
+ },
+ {
+  "id": "lambretta-li-tv-sx-1958",
+  "make": "Lambretta",
+  "model": "Li / TV / SX",
+  "name": "Lambretta Li, TV and SX",
+  "years": [
+   1958,
+   1971
+  ],
+  "match": [
+   "lambretta",
+   "li 150",
+   "tv 175",
+   "sx 200",
+   "sx 150",
+   "li special",
+   "gp 200",
+   "lambretta li",
+   "lambretta sx"
+  ],
+  "style": "scooter",
+  "drive": "chain"
+ },
+ {
+  "id": "kymco-like-150-people-150-2005",
+  "make": "Kymco",
+  "model": "Like 150 / People 150",
+  "name": "Kymco Like 150 / People 150",
+  "years": [
+   2005,
+   2026
+  ],
+  "match": [
+   "like 150",
+   "like 50",
+   "like 200",
+   "people 150",
+   "people gt",
+   "kymco like",
+   "kymco people",
+   "agility"
+  ],
+  "style": "scooter",
+  "drive": "belt"
+ },
+ {
+  "id": "kymco-downtown-300-ak-550-2009",
+  "make": "Kymco",
+  "model": "Downtown 300i / AK 550",
+  "name": "Kymco Downtown 300i / AK 550",
+  "years": [
+   2009,
+   2026
+  ],
+  "match": [
+   "downtown 300",
+   "downtown 300i",
+   "downtown 350",
+   "ak 550",
+   "ak550",
+   "xciting",
+   "xciting 400"
+  ],
+  "style": "scooter",
+  "drive": "belt"
+ },
+ {
+  "id": "piaggio-mp3-250-400-500-2007",
+  "make": "Piaggio",
+  "model": "MP3 250 / 400 / 500",
+  "name": "Piaggio MP3",
+  "years": [
+   2007,
+   2026
+  ],
+  "match": [
+   "mp3",
+   "mp3 500",
+   "mp3 400",
+   "mp3 250",
+   "piaggio mp3",
+   "mp3 530",
+   "yourban"
+  ],
+  "style": "scooter",
+  "drive": "belt"
+ },
+ {
+  "id": "piaggio-bv-350-fly-150-2007",
+  "make": "Piaggio",
+  "model": "BV 350 / Fly 150",
+  "name": "Piaggio BV (Beverly) 350 / Fly 150",
+  "years": [
+   2007,
+   2026
+  ],
+  "match": [
+   "bv 350",
+   "bv350",
+   "beverly",
+   "bv 250",
+   "fly 150",
+   "fly 50",
+   "piaggio fly",
+   "piaggio bv"
+  ],
+  "style": "scooter",
+  "drive": "belt"
+ },
+ {
+  "id": "cfmoto-300nk-650nk-700cl-x-2017",
+  "make": "CFMoto",
+  "model": "300NK / 650NK / 700CL-X",
+  "name": "CFMoto 300NK / 650NK / 700CL-X",
+  "years": [
+   2017,
+   2026
+  ],
+  "match": [
+   "300nk",
+   "650nk",
+   "700cl-x",
+   "700 cl-x",
+   "300ss",
+   "650gt",
+   "ibex 800",
+   "450ss",
+   "800nk"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "kawasaki-klr250-1985",
+  "make": "Kawasaki",
+  "model": "KLR250",
+  "name": "Kawasaki KLR250",
+  "years": [
+   1985,
+   2005
+  ],
+  "match": [
+   "klr250",
+   "klr 250",
+   "klr250 dual sport",
+   "kl250"
+  ],
+  "style": "dualsport",
+  "drive": "chain"
+ },
+ {
+  "id": "can-am-spyder-rt-f3-2008",
+  "make": "Can-Am",
+  "model": "Spyder RT / F3 / RS",
+  "name": "Can-Am Spyder (RT, F3, RS, ST)",
+  "years": [
+   2008,
+   2026
+  ],
+  "match": [
+   "spyder",
+   "spyder rt",
+   "spyder f3",
+   "spyder rs",
+   "spyder st",
+   "can-am spyder"
+  ],
+  "style": "touring",
+  "drive": "belt"
+ },
+ {
+  "id": "hyosung-gt250r-gv250-aquila-2002",
+  "make": "Hyosung",
+  "model": "GT250R / GV250 Aquila",
+  "name": "Hyosung GT250R / GV250 Aquila",
+  "years": [
+   2002,
+   2018
+  ],
+  "match": [
+   "gt250r",
+   "gt250",
+   "gv250",
+   "aquila",
+   "gt650r",
+   "gv650",
+   "comet 250"
+  ],
+  "style": "standard",
+  "drive": "chain"
+ },
+ {
+  "id": "bultaco-sherpa-t-pursang-1964",
+  "make": "Bultaco",
+  "model": "Sherpa T / Pursang",
+  "name": "Bultaco Sherpa T / Pursang",
+  "years": [
+   1964,
+   1979
+  ],
+  "match": [
+   "sherpa t",
+   "sherpa",
+   "pursang",
+   "bultaco",
+   "matador",
+   "alpina",
+   "frontera"
+  ],
+  "style": "dualsport",
   "drive": "chain"
  }
 ]

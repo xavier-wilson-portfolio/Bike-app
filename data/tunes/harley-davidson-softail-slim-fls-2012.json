@@ -1,0 +1,60 @@
+{
+ "id": "harley-davidson-softail-slim-fls-2012",
+ "make": "Harley-Davidson",
+ "model": "Softail Slim (FLS)",
+ "name": "Harley-Davidson Softail Slim (FLS)",
+ "years": [
+  2012,
+  2017
+ ],
+ "match": [
+  "softail slim",
+  "fls",
+  "flss",
+  "slim s",
+  "softail slim s"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "1690 or 1801 cc air-cooled Twin Cam 103/110B V-twin, fuel injected",
+ "intro": "The stripped-down Twin Cam Softail. Hidden rear shocks, belt drive and fuel injection.",
+ "focus": [
+  [
+   "Twin Cam B",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Cam tensioners",
+   "Check pads"
+  ],
+  [
+   "Primary",
+   "Chain and oil"
+  ],
+  [
+   "Belt drive",
+   "Check wear"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Harley-Davidson has issued several recalls that touch these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "HDForums",
+   "url": "https://www.hdforums.com/",
+   "what": "Large owner forum for all Harley-Davidson models."
+  }
+ ],
+ "heroName": "SLIM"
+}

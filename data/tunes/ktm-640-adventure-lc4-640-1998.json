@@ -1,0 +1,70 @@
+{
+ "id": "ktm-640-adventure-lc4-640-1998",
+ "make": "KTM",
+ "model": "640 Adventure / LC4 640",
+ "name": "KTM 640 Adventure / LC4",
+ "years": [
+  1998,
+  2007
+ ],
+ "match": [
+  "640 adventure",
+  "lc4 640",
+  "640 lc4",
+  "ktm 640",
+  "620 adventure",
+  "640 duke"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "625 cc liquid-cooled LC4 single, carb, kick and electric start",
+ "intro": "The rally-styled KTM single. One big carb, tall seat and twin tanks.",
+ "focus": [
+  [
+   "625 cc single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Check often"
+  ],
+  [
+   "Twin tanks",
+   "Check petcocks"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "KTM has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "silhouette": "ktm-640-adventure-lc4-640-1998",
+ "areas": [],
+ "heroName": "640 ADVENTURE",
+ "hero": {
+  "src": "img/hero/ktm-640-adventure-lc4-640-1998.jpg",
+  "artist": "Loadedagain",
+  "page": "https://commons.wikimedia.org/wiki/File:2002_KTM_640_Adventure.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

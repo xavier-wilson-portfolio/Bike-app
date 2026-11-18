@@ -1,0 +1,70 @@
+{
+ "id": "triumph-thruxton-900-2004",
+ "make": "Triumph",
+ "model": "Thruxton 900",
+ "name": "Triumph Thruxton 900",
+ "years": [
+  2004,
+  2015
+ ],
+ "match": [
+  "thruxton",
+  "thruxton 900",
+  "thruxton 865",
+  "thruxton ace"
+ ],
+ "style": "cafe",
+ "drive": "chain",
+ "engine": "865 cc air-cooled parallel twin, carbs then fuel injection",
+ "intro": "The cafe racer version of the air-cooled Bonneville. Carbs on early bikes, fuel injection later.",
+ "focus": [
+  [
+   "865 cc twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel",
+   "Carbs or EFI"
+  ],
+  [
+   "Valves",
+   "Shim type"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check which you have. Carbureted bikes get the carb steps; fuel-injected bikes skip them."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Triumph has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "silhouette": "triumph-thruxton-900-2004",
+ "areas": [],
+ "heroName": "THRUXTON",
+ "hero": {
+  "src": "img/hero/triumph-thruxton-900-2004.jpg",
+  "artist": "Lothar Spurzem",
+  "page": "https://commons.wikimedia.org/wiki/File:Thriumph_Thruxton_900_(2017-06-11_Sp_2).JPG",
+  "lic": "CC BY-SA 2.0 de",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0/de/deed.en"
+ }
+}

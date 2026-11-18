@@ -1,0 +1,63 @@
+{
+ "id": "triumph-thunderbird-1600-1700-2010",
+ "make": "Triumph",
+ "model": "Thunderbird 1600 / 1700",
+ "name": "Triumph Thunderbird 1600 / 1700",
+ "years": [
+  2010,
+  2018
+ ],
+ "match": [
+  "thunderbird 1600",
+  "thunderbird 1700",
+  "thunderbird storm",
+  "thunderbird lt",
+  "thunderbird commander",
+  "thunderbird nightstorm"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "1597 or 1699 cc liquid-cooled parallel twin, fuel injected, belt drive",
+ "intro": "Triumph's big parallel-twin cruisers. Fuel injected and belt drive.",
+ "focus": [
+  [
+   "Parallel twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Belt drive",
+   "Check wear"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Triumph has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "silhouette": "triumph-thunderbird-1600-1700-2010",
+ "areas": [],
+ "heroName": "THUNDERBIRD"
+}

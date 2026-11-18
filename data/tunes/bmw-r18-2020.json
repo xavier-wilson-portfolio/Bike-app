@@ -1,0 +1,65 @@
+{
+ "id": "bmw-r18-2020",
+ "make": "BMW",
+ "model": "R 18",
+ "name": "BMW R 18",
+ "years": [
+  2020,
+  2026
+ ],
+ "match": [
+  "r18",
+  "r 18",
+  "r18 classic",
+  "r18 transcontinental",
+  "r18 b",
+  "r 18 b"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "1802 cc air/oil-cooled boxer twin, fuel injected, exposed shaft drive",
+ "intro": "BMW's big-boxer cruiser. Huge cylinders, an exposed driveshaft and a lot of chrome.",
+ "focus": [
+  [
+   "1802 cc boxer",
+   "Air/oil cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Shaft drive",
+   "Check oil"
+  ],
+  [
+   "Valves",
+   "Check interval"
+  ],
+  [
+   "Electronics",
+   "Ride modes"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Boxer twins need the valve clearance checked on both sides and the throttle bodies synced. Do both at the same service."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "BMW has issued several recalls across these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BMW MOA forum",
+   "url": "https://forums.bmwmoa.org/",
+   "what": "BMW Motorcycle Owners of America forum."
+  }
+ ],
+ "heroName": "R 18"
+}

@@ -1,0 +1,60 @@
+{
+ "id": "vespa-primavera-sprint-50-150-2014",
+ "make": "Vespa",
+ "model": "Primavera / Sprint (50-150)",
+ "name": "Vespa Primavera / Sprint",
+ "years": [
+  2014,
+  2026
+ ],
+ "match": [
+  "primavera",
+  "primavera 150",
+  "primavera 50",
+  "sprint 150",
+  "sprint 50",
+  "vespa sprint",
+  "vespa primavera"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "50 or 155 cc air-cooled single, fuel injected or carb, CVT",
+ "intro": "Vespa's modern small-frame scooters. Simple, with a CVT and a steel body.",
+ "focus": [
+  [
+   "Small single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel",
+   "EFI or carb"
+  ],
+  [
+   "CVT belt",
+   "Change on time"
+  ],
+  [
+   "Steel body",
+   "Check rust"
+  ],
+  [
+   "Gear oil",
+   "Change it"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Piaggio has issued recalls on some Vespas in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "PRIMAVERA"
+}

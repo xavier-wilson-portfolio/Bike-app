@@ -1,0 +1,71 @@
+{
+ "id": "aprilia-shiver-750-dorsoduro-750-2008",
+ "make": "Aprilia",
+ "model": "Shiver 750 / Dorsoduro 750",
+ "name": "Aprilia Shiver 750 / Dorsoduro 750",
+ "years": [
+  2008,
+  2017
+ ],
+ "match": [
+  "shiver",
+  "shiver 750",
+  "dorsoduro",
+  "dorsoduro 750",
+  "dorsoduro 1200",
+  "shiver 900",
+  "dorsoduro 900"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "750 or 896 cc liquid-cooled V-twin, ride-by-wire fuel injection",
+ "intro": "Aprilia's middleweight V-twins. Early ride-by-wire and a trellis frame.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Ride-by-wire"
+  ],
+  [
+   "Electronics",
+   "Ride modes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Aprilia has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ApriliaForum",
+   "url": "https://www.apriliaforum.com/",
+   "what": "Owner forum for Aprilia motorcycles."
+  }
+ ],
+ "silhouette": "aprilia-shiver-750-dorsoduro-750-2008",
+ "areas": [],
+ "heroName": "SHIVER",
+ "hero": {
+  "src": "img/hero/aprilia-shiver-750-dorsoduro-750-2008.jpg",
+  "artist": "George E. Koronaios",
+  "page": "https://commons.wikimedia.org/wiki/File:Aprilia_SL_750_Shiver_in_Athens_on_10-30-2023.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

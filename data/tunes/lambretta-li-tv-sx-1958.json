@@ -1,0 +1,72 @@
+{
+ "id": "lambretta-li-tv-sx-1958",
+ "make": "Lambretta",
+ "model": "Li / TV / SX",
+ "name": "Lambretta Li, TV and SX",
+ "years": [
+  1958,
+  1971
+ ],
+ "match": [
+  "lambretta",
+  "li 150",
+  "tv 175",
+  "sx 200",
+  "sx 150",
+  "li special",
+  "gp 200",
+  "lambretta li",
+  "lambretta sx"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "125 to 198 cc air-cooled two-stroke single, carb, four-speed hand shift",
+ "intro": "Classic Lambrettas. Hand shift, premix, a frame under removable side panels, and points ignition.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Hand shift",
+   "Cables"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Frame",
+   "Check rust"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Lambretta Club USA",
+   "url": "https://www.lambrettaclubusa.org/",
+   "what": "US club for classic Lambretta scooters."
+  }
+ ],
+ "silhouette": "lambretta-li-tv-sx-1958",
+ "areas": [],
+ "heroName": "LAMBRETTA"
+}

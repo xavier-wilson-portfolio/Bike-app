@@ -1,0 +1,62 @@
+{
+ "id": "indian-ftr-1200-2019",
+ "make": "Indian",
+ "model": "FTR 1200",
+ "name": "Indian FTR 1200 / FTR",
+ "years": [
+  2019,
+  2026
+ ],
+ "match": [
+  "ftr",
+  "ftr 1200",
+  "ftr1200",
+  "ftr s",
+  "ftr rally",
+  "ftr r carbon",
+  "ftr sport"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "1203 cc liquid-cooled V-twin, fuel injected",
+ "intro": "Indian's flat-track styled street bike. Liquid-cooled V-twin with the fuel tank under the seat.",
+ "focus": [
+  [
+   "1203 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Fuel tank",
+   "Under seat"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Polaris (Indian and Victory) issued several recalls on these bikes. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Indian Motorcycle Forum",
+   "url": "https://www.indianmotorcycleforum.com/",
+   "what": "Owner forum for modern Indian motorcycles."
+  }
+ ],
+ "heroName": "FTR"
+}

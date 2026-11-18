@@ -1,0 +1,61 @@
+{
+ "id": "kymco-like-150-people-150-2005",
+ "make": "Kymco",
+ "model": "Like 150 / People 150",
+ "name": "Kymco Like 150 / People 150",
+ "years": [
+  2005,
+  2026
+ ],
+ "match": [
+  "like 150",
+  "like 50",
+  "like 200",
+  "people 150",
+  "people gt",
+  "kymco like",
+  "kymco people",
+  "agility"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 to 163 cc air-cooled single, carb or fuel injection, CVT",
+ "intro": "Kymco's small retro and commuter scooters. Simple and cheap to run.",
+ "focus": [
+  [
+   "Small single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Gear oil",
+   "Change it"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "LIKE 150"
+}

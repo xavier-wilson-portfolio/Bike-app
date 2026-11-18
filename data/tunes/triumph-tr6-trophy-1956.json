@@ -1,0 +1,71 @@
+{
+ "id": "triumph-tr6-trophy-1956",
+ "make": "Triumph",
+ "model": "TR6 Trophy",
+ "name": "Triumph TR6 Trophy (650)",
+ "years": [
+  1956,
+  1973
+ ],
+ "match": [
+  "tr6",
+  "tr6r",
+  "tr6c",
+  "trophy 650",
+  "tr6 trophy",
+  "tiger 650"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "649 cc air-cooled parallel twin, one carb, points",
+ "intro": "The single-carb 650 Triumph. Simpler than a Bonneville, with the same old-British wiring and oil leaks.",
+ "focus": [
+  [
+   "649 cc twin",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Amal"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Lucas wiring",
+   "Check grounds"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "silhouette": "triumph-tr6-trophy-1956",
+ "areas": [],
+ "heroName": "TR6",
+ "hero": {
+  "src": "img/hero/triumph-tr6-trophy-1956.jpg",
+  "artist": "Jamescowdery",
+  "page": "https://commons.wikimedia.org/wiki/File:Triumph_Trophy_TR6R_1964.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
+}

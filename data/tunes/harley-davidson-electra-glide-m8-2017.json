@@ -1,0 +1,62 @@
+{
+ "id": "harley-davidson-electra-glide-m8-2017",
+ "make": "Harley-Davidson",
+ "model": "Electra Glide / Ultra Limited (M8)",
+ "name": "Harley-Davidson Electra Glide (Milwaukee-Eight)",
+ "years": [
+  2017,
+  2026
+ ],
+ "match": [
+  "electra glide",
+  "ultra limited",
+  "flhtk",
+  "flhtcu",
+  "electra glide ultra",
+  "ultra classic",
+  "flht"
+ ],
+ "style": "touring",
+ "drive": "belt",
+ "engine": "1746 to 1923 cc Milwaukee-Eight V-twin, fuel injected, belt drive",
+ "intro": "The Milwaukee-Eight Electra Glides. Fork fairing, lots of electronics and belt drive.",
+ "focus": [
+  [
+   "Milwaukee-Eight",
+   "Oil/liquid cooled heads"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Infotainment",
+   "Lots of wiring"
+  ],
+  [
+   "Primary",
+   "Chain and oil"
+  ],
+  [
+   "Belt drive",
+   "Check wear"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Harley-Davidson has issued several recalls that touch these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "HDForums",
+   "url": "https://www.hdforums.com/",
+   "what": "Large owner forum for all Harley-Davidson models."
+  }
+ ],
+ "heroName": "ELECTRA"
+}

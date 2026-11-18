@@ -28,7 +28,7 @@ B10.append(dict(id="triumph-street-triple-765-2017", make="Triumph", model="Stre
   recalls=[], recallNote=VIN, known=[], forums=[]))
 
 B10.append(dict(id="bmw-r75-5-and-6-airheads-1970", make="BMW", model="R75/5", name="BMW R75/5 and /6", years=[1970, 1976],
-  match=["r75/5", "r75 5", "r75/6", "r60/5", "r50/5", "r90/6", "r90s", "slash 5", "/5"], style="standard", drive="shaft",
+  match=["r75/5", "r75 5", "r75/6", "r60/5", "r50/5", "r90/6", "slash 5", "/5"], style="standard", drive="shaft",
   engine="745 cc air-cooled boxer twin, two Bing carbs, shaft drive",
   intro="The /5 and /6 airheads. Tough engines. The charging parts and starter relay cause most trouble.",
   focus=[["Boxer twin", "Air-cooled"], ["Two Bing carbs", "Easy to service"], ["Diode board", "Solder joints fail"], ["Timing chain", "Check tensioner"], ["Shaft drive", "Splines and U-joints"]],

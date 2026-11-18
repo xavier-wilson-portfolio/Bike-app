@@ -1,0 +1,67 @@
+{
+ "id": "harley-davidson-tri-glide-freewheeler-2009",
+ "make": "Harley-Davidson",
+ "model": "Tri Glide / Freewheeler",
+ "name": "Harley-Davidson Tri Glide / Freewheeler",
+ "years": [
+  2009,
+  2026
+ ],
+ "match": [
+  "tri glide",
+  "triglide",
+  "flhtcutg",
+  "freewheeler",
+  "flrt",
+  "tri glide ultra"
+ ],
+ "style": "touring",
+ "drive": "belt",
+ "engine": "Twin Cam or Milwaukee-Eight V-twin, fuel injected, belt drive, two rear wheels",
+ "intro": "Harley's factory trikes. Two rear wheels, a reverse gear and the touring bike underneath.",
+ "focus": [
+  [
+   "V-twin",
+   "Twin Cam or M8"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Rear axle",
+   "Trike parts"
+  ],
+  [
+   "Reverse",
+   "Check it"
+  ],
+  [
+   "Belt drive",
+   "Check wear"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "K": [
+   "The trike has its own rear brake setup and parking brake. Use the trike service manual, not the two-wheeler one."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Harley-Davidson has issued several recalls that touch these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "HDForums",
+   "url": "https://www.hdforums.com/",
+   "what": "Large owner forum for all Harley-Davidson models."
+  }
+ ],
+ "silhouette": "harley-davidson-tri-glide-freewheeler-2009",
+ "areas": [],
+ "heroName": "TRI GLIDE"
+}

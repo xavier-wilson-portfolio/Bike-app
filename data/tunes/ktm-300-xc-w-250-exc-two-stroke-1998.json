@@ -1,0 +1,82 @@
+{
+ "id": "ktm-300-xc-w-250-exc-two-stroke-1998",
+ "make": "KTM",
+ "model": "300 XC-W / 250 EXC (two-stroke)",
+ "name": "KTM 250 / 300 two-stroke enduro",
+ "years": [
+  1998,
+  2026
+ ],
+ "match": [
+  "300 xc-w",
+  "250 exc",
+  "300 exc",
+  "250 xc-w",
+  "300 xcw",
+  "300 tpi",
+  "250 tpi",
+  "300 xc"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 or 293 cc liquid-cooled two-stroke single, carb or TPI fuel injection",
+ "intro": "KTM's two-stroke enduro bikes. Carb on older bikes, TPI fuel injection from 2018.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel",
+   "Carb or TPI"
+  ],
+  [
+   "Top end",
+   "Check compression"
+  ],
+  [
+   "Power valve",
+   "Clean it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-KTM2-01",
+   "phase": "G",
+   "after": "G-004",
+   "title": "Check compression and the top end",
+   "instructions": "Do a compression test. Low numbers mean the piston and rings are due. Clean the power valve while you are in there.",
+   "reason": "A tired top end and a gummed power valve are the most common problems on a used two-stroke.",
+   "src": "Two-stroke basics",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "B": [
+   "Carbureted bikes run on premix. TPI bikes have an oil tank and injection. Check which you have before you fill up."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "KTM has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KTM Forums",
+   "url": "https://www.ktmforums.com/",
+   "what": "Owner forum for KTM street and adventure bikes."
+  }
+ ],
+ "heroName": "300 XC-W"
+}

@@ -1,0 +1,59 @@
+{
+ "id": "harley-davidson-xr1200-sportster-2008",
+ "make": "Harley-Davidson",
+ "model": "XR1200",
+ "name": "Harley-Davidson XR1200",
+ "years": [
+  2008,
+  2013
+ ],
+ "match": [
+  "xr1200",
+  "xr 1200",
+  "xr1200x",
+  "xr1200 sportster"
+ ],
+ "style": "standard",
+ "drive": "belt",
+ "engine": "1202 cc air/oil-cooled Evolution V-twin, fuel injected",
+ "intro": "The flat-track styled Sportster. Fuel injected, with an oil cooler and better brakes than most Sportsters.",
+ "focus": [
+  [
+   "1202 cc Evo",
+   "Air/oil cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Oil cooler",
+   "Check lines"
+  ],
+  [
+   "Primary",
+   "Chain and oil"
+  ],
+  [
+   "Belt drive",
+   "Check wear"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Harley-Davidson has issued several recalls that touch these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XLForum",
+   "url": "https://www.xlforum.net/",
+   "what": "Owner forum for Harley Sportsters."
+  }
+ ],
+ "heroName": "XR1200"
+}

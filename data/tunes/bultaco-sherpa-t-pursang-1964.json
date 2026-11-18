@@ -1,0 +1,62 @@
+{
+ "id": "bultaco-sherpa-t-pursang-1964",
+ "make": "Bultaco",
+ "model": "Sherpa T / Pursang",
+ "name": "Bultaco Sherpa T / Pursang",
+ "years": [
+  1964,
+  1979
+ ],
+ "match": [
+  "sherpa t",
+  "sherpa",
+  "pursang",
+  "bultaco",
+  "matador",
+  "alpina",
+  "frontera"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "125 to 350 cc air-cooled two-stroke single, Amal or Bing carb, premix",
+ "intro": "The Spanish trials and motocross Bultacos. Premix two-strokes, magneto ignition and a strong club scene.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Crank seals",
+   "Check them"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [],
+ "heroName": "SHERPA"
+}

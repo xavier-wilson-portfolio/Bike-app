@@ -1,0 +1,72 @@
+{
+ "id": "bmw-k1200s-k1300s-2005",
+ "make": "BMW",
+ "model": "K1200S / K1300S",
+ "name": "BMW K1200S / K1300S",
+ "years": [
+  2005,
+  2016
+ ],
+ "match": [
+  "k1200s",
+  "k1300s",
+  "k 1200 s",
+  "k 1300 s",
+  "k1200r",
+  "k1300r",
+  "k1200gt",
+  "k1300gt"
+ ],
+ "style": "sport",
+ "drive": "shaft",
+ "engine": "1157 or 1293 cc liquid-cooled inline four, fuel injected, shaft drive, Duolever front",
+ "intro": "BMW's fast K-bikes. Inline four laid forward, shaft drive and Duolever front suspension.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Final drive",
+   "Check oil and play"
+  ],
+  [
+   "Duolever",
+   "Check bearings"
+  ],
+  [
+   "Electronics",
+   "CANbus"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "BMW has issued several recalls across these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BMW MOA forum",
+   "url": "https://forums.bmwmoa.org/",
+   "what": "BMW Motorcycle Owners of America forum."
+  }
+ ],
+ "silhouette": "bmw-k1200s-k1300s-2005",
+ "areas": [],
+ "heroName": "K1300S",
+ "hero": {
+  "src": "img/hero/bmw-k1200s-k1300s-2005.jpg",
+  "artist": "BMW Group PressClub",
+  "page": "https://commons.wikimedia.org/wiki/File:BMW_K_1300_S_Lupinblau_metallic_Alpinweiss_uni_Saphirschwarz_metallic.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
+}

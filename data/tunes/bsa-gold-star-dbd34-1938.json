@@ -1,0 +1,67 @@
+{
+ "id": "bsa-gold-star-dbd34-1938",
+ "make": "BSA",
+ "model": "Gold Star",
+ "name": "BSA Gold Star",
+ "years": [
+  1938,
+  1963
+ ],
+ "match": [
+  "gold star",
+  "goldie",
+  "dbd34",
+  "db34",
+  "bsa gold star",
+  "cb34",
+  "zb32"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "348 or 499 cc air-cooled single, Amal GP carb, magneto",
+ "intro": "The classic British clubman single. Amal GP carb, magneto and a lot of fakes, so check the numbers.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Amal GP carb",
+   "Tune it"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Numbers",
+   "Check they match"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "A": [
+   "Many 'Gold Stars' are built from other BSAs. Check frame and engine numbers against club records before you pay or restore."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "GOLD STAR"
+}

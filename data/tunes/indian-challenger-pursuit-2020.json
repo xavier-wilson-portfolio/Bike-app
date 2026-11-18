@@ -1,0 +1,62 @@
+{
+ "id": "indian-challenger-pursuit-2020",
+ "make": "Indian",
+ "model": "Challenger / Pursuit",
+ "name": "Indian Challenger / Pursuit",
+ "years": [
+  2020,
+  2026
+ ],
+ "match": [
+  "challenger",
+  "indian challenger",
+  "pursuit",
+  "indian pursuit",
+  "challenger dark horse",
+  "pursuit limited",
+  "powerplus"
+ ],
+ "style": "touring",
+ "drive": "belt",
+ "engine": "1768 cc liquid-cooled PowerPlus V-twin, fuel injected, belt drive",
+ "intro": "Indian's liquid-cooled baggers. Lots of electronics, belt drive and a big fairing.",
+ "focus": [
+  [
+   "PowerPlus V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Infotainment",
+   "Ride Command"
+  ],
+  [
+   "Cooling",
+   "Coolant and fans"
+  ],
+  [
+   "Belt drive",
+   "Check wear"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Polaris (Indian and Victory) issued several recalls on these bikes. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Indian Motorcycle Forum",
+   "url": "https://www.indianmotorcycleforum.com/",
+   "what": "Owner forum for modern Indian motorcycles."
+  }
+ ],
+ "heroName": "CHALLENGER"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "bsa-b50-b44-victor-1965",
+ "make": "BSA",
+ "model": "B44 / B50 Victor",
+ "name": "BSA B44 / B50 Victor",
+ "years": [
+  1965,
+  1973
+ ],
+ "match": [
+  "b44",
+  "b50",
+  "victor",
+  "b44 victor",
+  "b50 victor",
+  "victor special",
+  "b50ss gold star",
+  "shooting star"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "441 or 499 cc air-cooled unit single, Amal carb, points",
+ "intro": "BSA's big unit singles. Kick start only, Amal carb and points, and known for being hard to start if anything is off.",
+ "focus": [
+  [
+   "Unit single",
+   "Air-cooled"
+  ],
+  [
+   "Amal carb",
+   "Clean it out"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Kick start",
+   "Set timing right"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "silhouette": "bsa-b50-b44-victor-1965",
+ "areas": [],
+ "heroName": "VICTOR"
+}

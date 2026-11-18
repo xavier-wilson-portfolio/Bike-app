@@ -1,0 +1,62 @@
+{
+ "id": "triumph-tiger-900-2020",
+ "make": "Triumph",
+ "model": "Tiger 900",
+ "name": "Triumph Tiger 900",
+ "years": [
+  2020,
+  2026
+ ],
+ "match": [
+  "tiger 900",
+  "tiger 900 gt",
+  "tiger 900 rally",
+  "tiger 900 rally pro",
+  "tiger 900 gt pro"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "888 cc liquid-cooled triple with T-plane crank, fuel injected",
+ "intro": "Triumph's middleweight adventure triple. Ride modes, a TFT dash and a T-plane crank.",
+ "focus": [
+  [
+   "888 cc triple",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Electronics",
+   "Ride modes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Triumph has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "silhouette": "triumph-tiger-900-2020",
+ "areas": [],
+ "heroName": "TIGER 900"
+}

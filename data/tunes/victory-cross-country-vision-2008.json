@@ -1,0 +1,62 @@
+{
+ "id": "victory-cross-country-vision-2008",
+ "make": "Victory",
+ "model": "Cross Country / Vision / Magnum",
+ "name": "Victory Cross Country, Vision, Magnum",
+ "years": [
+  2008,
+  2017
+ ],
+ "match": [
+  "cross country",
+  "cross roads",
+  "vision",
+  "vision tour",
+  "magnum",
+  "cross country tour",
+  "victory vision"
+ ],
+ "style": "touring",
+ "drive": "belt",
+ "engine": "1731 cc air/oil-cooled Freedom V-twin, fuel injected, belt drive",
+ "intro": "Victory's baggers and the space-age Vision. Belt drive, lots of bodywork and some hard-to-find parts.",
+ "focus": [
+  [
+   "Freedom V-twin",
+   "Air/oil cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Bodywork",
+   "Many panels"
+  ],
+  [
+   "Belt drive",
+   "Check wear"
+  ],
+  [
+   "Parts",
+   "Brand ended 2017"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Polaris (Indian and Victory) issued several recalls on these bikes. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Victory Motorcycle Club forums",
+   "url": "https://www.victorymotorcycleclub.com/",
+   "what": "Owner club for Victory motorcycles."
+  }
+ ],
+ "heroName": "CROSS COUNTRY"
+}

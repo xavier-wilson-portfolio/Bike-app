@@ -1,0 +1,69 @@
+{
+ "id": "moto-guzzi-griso-breva-stelvio-2004",
+ "make": "Moto Guzzi",
+ "model": "Griso / Breva / Stelvio / Norge",
+ "name": "Moto Guzzi Griso, Breva, Stelvio, Norge",
+ "years": [
+  2004,
+  2017
+ ],
+ "match": [
+  "griso",
+  "breva",
+  "stelvio",
+  "norge",
+  "breva 1100",
+  "griso 1200",
+  "stelvio ntx",
+  "norge gt"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "744 to 1151 cc air-cooled transverse V-twin, fuel injected, shaft drive",
+ "intro": "Guzzi's 2000s range. Fuel injected V-twins, shaft drive and CARC final drive on the big ones.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Balance bodies"
+  ],
+  [
+   "Shaft drive",
+   "Check oil"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Electronics",
+   "Some CANbus"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Guzzi V-twins need the valves set and the throttle bodies or carbs balanced together. Do both at the same service."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Moto Guzzi has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moto Guzzi National Owners Club",
+   "url": "https://www.mgnoc.org/",
+   "what": "US owner club for Moto Guzzi."
+  }
+ ],
+ "silhouette": "moto-guzzi-griso-breva-stelvio-2004",
+ "areas": [],
+ "heroName": "GRISO"
+}

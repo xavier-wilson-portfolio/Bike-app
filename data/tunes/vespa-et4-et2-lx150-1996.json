@@ -1,0 +1,73 @@
+{
+ "id": "vespa-et4-et2-lx150-1996",
+ "make": "Vespa",
+ "model": "ET4 / ET2 / LX150",
+ "name": "Vespa ET4 / ET2 / LX150",
+ "years": [
+  1996,
+  2013
+ ],
+ "match": [
+  "et4",
+  "et2",
+  "lx150",
+  "lx 150",
+  "lx50",
+  "s150",
+  "vespa lx",
+  "vespa et4"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 to 150 cc air-cooled single, carb, CVT",
+ "intro": "The Vespas between the classics and today's Primavera. Carbs, CVT and a steel body.",
+ "focus": [
+  [
+   "Small single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Steel body",
+   "Check rust"
+  ],
+  [
+   "Gear oil",
+   "Change it"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "silhouette": "vespa-et4-et2-lx150-1996",
+ "areas": [],
+ "heroName": "ET4",
+ "hero": {
+  "src": "img/hero/vespa-et4-et2-lx150-1996.jpg",
+  "artist": "Khaosaming",
+  "page": "https://commons.wikimedia.org/wiki/File:Vespa_LX150_3V_2013_Tampere_Finland.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

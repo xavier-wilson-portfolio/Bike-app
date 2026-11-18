@@ -1,0 +1,75 @@
+{
+ "id": "ducati-diavel-2011",
+ "make": "Ducati",
+ "model": "Diavel / XDiavel",
+ "name": "Ducati Diavel / XDiavel",
+ "years": [
+  2011,
+  2026
+ ],
+ "match": [
+  "diavel",
+  "xdiavel",
+  "diavel carbon",
+  "diavel 1260",
+  "diavel v4",
+  "xdiavel s"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "1198 to 1262 cc Testastretta L-twin (V4 from 2023), fuel injected",
+ "intro": "Ducati's power cruiser. Big rear tire, big twin, and belt drive on the XDiavel.",
+ "focus": [
+  [
+   "Big twin or V4",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Desmo valves",
+   "On schedule"
+  ],
+  [
+   "Timing belts",
+   "Change on time"
+  ],
+  [
+   "Final drive",
+   "Chain or belt"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Desmo valve service needs both opening and closing shims checked. Follow the interval in the manual; it is not a job to skip.",
+   "Ducati timing belts are changed by time as well as miles. If you can't prove when they were done, do them before riding."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Ducati has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "silhouette": "ducati-diavel-2011",
+ "areas": [],
+ "heroName": "DIAVEL",
+ "hero": {
+  "src": "img/hero/ducati-diavel-2011.jpg",
+  "artist": "XDVRACE",
+  "page": "https://commons.wikimedia.org/wiki/File:Ducati_Diavel_V4.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

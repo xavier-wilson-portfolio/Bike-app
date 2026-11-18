@@ -1,0 +1,60 @@
+{
+ "id": "triumph-speed-triple-1200-rs-2021",
+ "make": "Triumph",
+ "model": "Speed Triple 1200 RS / RR",
+ "name": "Triumph Speed Triple 1200 RS / RR",
+ "years": [
+  2021,
+  2026
+ ],
+ "match": [
+  "speed triple 1200",
+  "speed triple 1200 rs",
+  "speed triple 1200 rr",
+  "speed triple rs 1200",
+  "speed triple 1160"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "1160 cc liquid-cooled inline triple, fuel injected",
+ "intro": "The newest Speed Triple. Big triple, lots of electronics and top-shelf brakes.",
+ "focus": [
+  [
+   "1160 cc triple",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Electronics",
+   "Ride modes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Triumph has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "heroName": "SPEED TRIPLE"
+}

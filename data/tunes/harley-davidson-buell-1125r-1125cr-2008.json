@@ -1,0 +1,62 @@
+{
+ "id": "harley-davidson-buell-1125r-1125cr-2008",
+ "make": "Buell",
+ "model": "1125R / 1125CR",
+ "name": "Buell 1125R / 1125CR",
+ "years": [
+  2008,
+  2010
+ ],
+ "match": [
+  "1125r",
+  "1125cr",
+  "buell 1125",
+  "1125 r",
+  "1125 cr"
+ ],
+ "style": "sport",
+ "drive": "belt",
+ "engine": "1125 cc liquid-cooled Rotax Helicon V-twin, fuel injected, belt drive",
+ "intro": "The liquid-cooled Buells with a Rotax engine. Fuel injected, belt drive, and some known charging and cooling issues.",
+ "focus": [
+  [
+   "1125 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Charging",
+   "Stator, R/R"
+  ],
+  [
+   "Cooling",
+   "Hoses and fans"
+  ],
+  [
+   "Belt drive",
+   "Check wear"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Buell and Harley-Davidson issued several recalls on these bikes. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BadWeB",
+   "url": "https://www.badweatherbikers.com/buell/",
+   "what": "Long-running Buell owner forum."
+  }
+ ],
+ "silhouette": "harley-davidson-buell-1125r-1125cr-2008",
+ "areas": [],
+ "heroName": "1125R"
+}

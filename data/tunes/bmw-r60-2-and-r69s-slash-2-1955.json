@@ -1,0 +1,77 @@
+{
+ "id": "bmw-r60-2-and-r69s-slash-2-1955",
+ "make": "BMW",
+ "model": "R50 / R60 / R69S (Earles fork)",
+ "name": "BMW R50, R60/2 and R69S",
+ "years": [
+  1955,
+  1969
+ ],
+ "match": [
+  "r60/2",
+  "r69s",
+  "r50/2",
+  "r60",
+  "r69",
+  "r50s",
+  "r27",
+  "earles fork"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "494 to 594 cc air-cooled boxer twin, two carbs, magneto ignition, six-volt",
+ "intro": "The Earles-fork BMW twins. Magneto ignition, six-volt electrics and a lot of careful parts hunting.",
+ "focus": [
+  [
+   "Boxer twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Bing, sync them"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Six-volt",
+   "Weak lights"
+  ],
+  [
+   "Shaft drive",
+   "Check oil"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "F": [
+   "These are six-volt bikes with a magneto. Use six-volt parts and don't add a 12-volt battery without converting the whole system."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BMW Vintage Club",
+   "url": "https://www.bmwvintageclub.org/",
+   "what": "Club for pre-1970 BMW motorcycles."
+  }
+ ],
+ "silhouette": "bmw-r60-2-and-r69s-slash-2-1955",
+ "areas": [],
+ "heroName": "R69S",
+ "hero": {
+  "src": "img/hero/bmw-r60-2-and-r69s-slash-2-1955.jpg",
+  "artist": "SG2012",
+  "page": "https://commons.wikimedia.org/wiki/File:BMW_R60_600cc_(1961).jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

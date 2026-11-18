@@ -1,0 +1,63 @@
+{
+ "id": "mv-agusta-f3-brutale-675-800-2012",
+ "make": "MV Agusta",
+ "model": "F3 / Brutale 675 / 800",
+ "name": "MV Agusta F3 / Brutale 675 / 800",
+ "years": [
+  2012,
+  2026
+ ],
+ "match": [
+  "f3",
+  "f3 675",
+  "f3 800",
+  "brutale 675",
+  "brutale 800",
+  "dragster 800",
+  "turismo veloce",
+  "rivale 800"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "675 or 798 cc liquid-cooled inline triple with counter-rotating crank, fuel injected",
+ "intro": "MV's triples. Fast, pretty, and known for electronics and dealer-only service quirks.",
+ "focus": [
+  [
+   "Inline triple",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Electronics",
+   "Check updates"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "MV Agusta has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "MV Agusta forum",
+   "url": "https://www.mvagusta.net/",
+   "what": "Owner forum for MV Agusta motorcycles."
+  }
+ ],
+ "heroName": "F3"
+}

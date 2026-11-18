@@ -1,0 +1,60 @@
+{
+ "id": "triumph-speed-400-scrambler-400-x-2024",
+ "make": "Triumph",
+ "model": "Speed 400 / Scrambler 400 X",
+ "name": "Triumph Speed 400 / Scrambler 400 X",
+ "years": [
+  2024,
+  2026
+ ],
+ "match": [
+  "speed 400",
+  "scrambler 400 x",
+  "scrambler 400x",
+  "speed 400 triumph",
+  "scrambler 400"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "398 cc liquid-cooled single, fuel injected",
+ "intro": "Triumph's small singles, built with Bajaj. Simple, light and new to the US.",
+ "focus": [
+  [
+   "398 cc single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check interval"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Triumph has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "heroName": "SPEED 400"
+}

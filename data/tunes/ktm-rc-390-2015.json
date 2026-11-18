@@ -1,0 +1,62 @@
+{
+ "id": "ktm-rc-390-2015",
+ "make": "KTM",
+ "model": "RC 390",
+ "name": "KTM RC 390",
+ "years": [
+  2015,
+  2026
+ ],
+ "match": [
+  "rc 390",
+  "rc390",
+  "rc 200",
+  "rc 125",
+  "ktm rc"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "373 or 399 cc liquid-cooled single, fuel injected",
+ "intro": "KTM's small faired sportbike. Fuel injected single, tight bodywork.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check interval"
+  ],
+  [
+   "Bodywork",
+   "Many fasteners"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "KTM has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KTM Forums",
+   "url": "https://www.ktmforums.com/",
+   "what": "Owner forum for KTM street and adventure bikes."
+  }
+ ],
+ "silhouette": "ktm-rc-390-2015",
+ "areas": [],
+ "heroName": "RC 390"
+}

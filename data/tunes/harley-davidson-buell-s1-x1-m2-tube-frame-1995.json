@@ -1,0 +1,74 @@
+{
+ "id": "harley-davidson-buell-s1-x1-m2-tube-frame-1995",
+ "make": "Buell",
+ "model": "S1 / X1 / M2 / S3 (tube frame)",
+ "name": "Buell tube-frame (S1, X1, M2, S3)",
+ "years": [
+  1995,
+  2002
+ ],
+ "match": [
+  "s1 lightning",
+  "x1 lightning",
+  "m2 cyclone",
+  "cyclone",
+  "s3 thunderbolt",
+  "thunderbolt",
+  "s1w",
+  "x1"
+ ],
+ "style": "sport",
+ "drive": "belt",
+ "engine": "1203 cc air-cooled Sportster-based V-twin, carb or fuel injection, belt drive",
+ "intro": "The tube-frame Buells. Sportster engine, carb on most, fuel injection on the X1 and later S3s.",
+ "focus": [
+  [
+   "1203 cc V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "Rubber mounts",
+   "Check them"
+  ],
+  [
+   "Primary",
+   "Chain and oil"
+  ],
+  [
+   "Belt drive",
+   "Check wear"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check which you have. Carbureted bikes get the carb steps; fuel-injected bikes skip them."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Buell and Harley-Davidson issued several recalls on these bikes. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BadWeB",
+   "url": "https://www.badweatherbikers.com/buell/",
+   "what": "Long-running Buell owner forum."
+  }
+ ],
+ "silhouette": "harley-davidson-buell-s1-x1-m2-tube-frame-1995",
+ "areas": [],
+ "heroName": "BUELL",
+ "hero": {
+  "src": "img/hero/harley-davidson-buell-s1-x1-m2-tube-frame-1995.jpg",
+  "artist": "しおつち",
+  "page": "https://commons.wikimedia.org/wiki/File:X1_Lightning.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

@@ -1,0 +1,67 @@
+{
+ "id": "ducati-scrambler-1100-2018",
+ "make": "Ducati",
+ "model": "Scrambler 1100",
+ "name": "Ducati Scrambler 1100",
+ "years": [
+  2018,
+  2026
+ ],
+ "match": [
+  "scrambler 1100",
+  "scrambler 1100 sport",
+  "scrambler 1100 special",
+  "scrambler 1100 pro",
+  "scrambler 1100 tribute"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "1079 cc air/oil-cooled L-twin, fuel injected",
+ "intro": "The big air-cooled Scrambler. Two-valve desmo heads and timing belts.",
+ "focus": [
+  [
+   "1079 cc L-twin",
+   "Air/oil cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Desmo valves",
+   "On schedule"
+  ],
+  [
+   "Timing belts",
+   "Change on time"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Desmo valve service needs both opening and closing shims checked. Follow the interval in the manual; it is not a job to skip.",
+   "Ducati timing belts are changed by time as well as miles. If you can't prove when they were done, do them before riding."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Ducati has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "silhouette": "ducati-scrambler-1100-2018",
+ "areas": [],
+ "heroName": "SCRAMBLER 1100"
+}

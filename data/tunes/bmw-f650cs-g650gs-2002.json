@@ -1,0 +1,63 @@
+{
+ "id": "bmw-f650cs-g650gs-2002",
+ "make": "BMW",
+ "model": "F650CS / G650GS",
+ "name": "BMW F650CS Scarver / G650GS",
+ "years": [
+  2002,
+  2016
+ ],
+ "match": [
+  "f650cs",
+  "f 650 cs",
+  "scarver",
+  "g650gs sertao",
+  "sertao",
+  "g650x"
+ ],
+ "style": "standard",
+ "drive": "belt",
+ "engine": "652 cc liquid-cooled single (Rotax), fuel injected",
+ "intro": "BMW's 650 singles after the first F650. The CS has belt drive; the G650GS is chain driven.",
+ "focus": [
+  [
+   "652 cc single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Final drive",
+   "Belt or chain"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Fuel tank",
+   "Under seat"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "BMW has issued several recalls across these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BMW MOA forum",
+   "url": "https://forums.bmwmoa.org/",
+   "what": "BMW Motorcycle Owners of America forum."
+  }
+ ],
+ "silhouette": "bmw-f650cs-g650gs-2002",
+ "areas": [],
+ "heroName": "G650GS"
+}

@@ -1,0 +1,63 @@
+{
+ "id": "bmw-r1250rt-2019",
+ "make": "BMW",
+ "model": "R1250RT",
+ "name": "BMW R1250RT",
+ "years": [
+  2019,
+  2026
+ ],
+ "match": [
+  "r1250rt",
+  "r 1250 rt",
+  "r1250 rt",
+  "r1300rt"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "engine": "1254 cc air/liquid-cooled ShiftCam boxer twin, fuel injected, shaft drive",
+ "intro": "The ShiftCam RT. Lots of electronics, a big fairing and shaft drive.",
+ "focus": [
+  [
+   "ShiftCam boxer",
+   "Air/liquid cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Final drive",
+   "Check oil and play"
+  ],
+  [
+   "Electronics",
+   "CANbus"
+  ],
+  [
+   "Fairing",
+   "Many panels"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Boxer twins need the valve clearance checked on both sides and the throttle bodies synced. Do both at the same service."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "BMW has issued several recalls across these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BMW MOA forum",
+   "url": "https://forums.bmwmoa.org/",
+   "what": "BMW Motorcycle Owners of America forum."
+  }
+ ],
+ "heroName": "R1250RT"
+}

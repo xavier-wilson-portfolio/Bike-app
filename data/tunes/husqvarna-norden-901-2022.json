@@ -1,0 +1,60 @@
+{
+ "id": "husqvarna-norden-901-2022",
+ "make": "Husqvarna",
+ "model": "Norden 901",
+ "name": "Husqvarna Norden 901",
+ "years": [
+  2022,
+  2026
+ ],
+ "match": [
+  "norden",
+  "norden 901",
+  "norden 901 expedition"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "889 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "Husqvarna's adventure twin, shared with the KTM 890 Adventure.",
+ "focus": [
+  [
+   "889 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Electronics",
+   "Ride modes"
+  ],
+  [
+   "Spoked wheels",
+   "Tubeless"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Husqvarna (KTM group) has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "silhouette": "husqvarna-norden-901-2022",
+ "areas": [],
+ "heroName": "NORDEN"
+}

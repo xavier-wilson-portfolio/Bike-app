@@ -1,0 +1,61 @@
+{
+ "id": "harley-davidson-shovelhead-fxr-fxb-sturgis-1980",
+ "make": "Harley-Davidson",
+ "model": "FXB Sturgis / FXEF (Shovelhead)",
+ "name": "Harley-Davidson FXB Sturgis (Shovelhead)",
+ "years": [
+  1980,
+  1984
+ ],
+ "match": [
+  "fxb",
+  "sturgis",
+  "fxb sturgis",
+  "fxdg",
+  "disc glide"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "1340 cc air-cooled Shovelhead V-twin, one carb, belt primary and final drive",
+ "intro": "The belt-drive Shovelhead Sturgis. One carb, points or early electronic ignition, and a lot of character.",
+ "focus": [
+  [
+   "Shovelhead",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Belt primary",
+   "Check wear"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Oil leaks",
+   "Normal-ish"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "HDForums",
+   "url": "https://www.hdforums.com/",
+   "what": "Large owner forum for all Harley-Davidson models."
+  }
+ ],
+ "heroName": "STURGIS"
+}

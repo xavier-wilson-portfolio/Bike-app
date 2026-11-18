@@ -1,0 +1,76 @@
+{
+ "id": "bmw-r850r-r1100r-r1150r-1994",
+ "make": "BMW",
+ "model": "R850R / R1100R / R1150R",
+ "name": "BMW R850R / R1100R / R1150R",
+ "years": [
+  1994,
+  2006
+ ],
+ "match": [
+  "r850r",
+  "r1100r",
+  "r1150r",
+  "r 850 r",
+  "r 1100 r",
+  "r 1150 r",
+  "r1150r rockster",
+  "rockster"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "848 to 1130 cc air/oil-cooled boxer twin, fuel injected, shaft drive",
+ "intro": "The naked oilhead roadsters. Simple, tough and easy to work on for a BMW.",
+ "focus": [
+  [
+   "Boxer twin",
+   "Air/oil cooled"
+  ],
+  [
+   "Fuel injected",
+   "Sync bodies"
+  ],
+  [
+   "Final drive",
+   "Check oil and play"
+  ],
+  [
+   "Clutch",
+   "Dry, check spline"
+  ],
+  [
+   "Charging",
+   "Check alternator belt"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Boxer twins need the valve clearance checked on both sides and the throttle bodies synced. Do both at the same service."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "BMW has issued several recalls across these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BMW MOA forum",
+   "url": "https://forums.bmwmoa.org/",
+   "what": "BMW Motorcycle Owners of America forum."
+  }
+ ],
+ "silhouette": "bmw-r850r-r1100r-r1150r-1994",
+ "areas": [],
+ "heroName": "R1150R",
+ "hero": {
+  "src": "img/hero/bmw-r850r-r1100r-r1150r-1994.jpg",
+  "artist": "Muddy250",
+  "page": "https://commons.wikimedia.org/wiki/File:BMW_R1150R.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
+}

@@ -1,0 +1,72 @@
+{
+ "id": "triumph-t100-tiger-500-daytona-500-1959",
+ "make": "Triumph",
+ "model": "T100 Tiger / Daytona 500",
+ "name": "Triumph T100 Tiger / Daytona 500",
+ "years": [
+  1959,
+  1974
+ ],
+ "match": [
+  "t100",
+  "t100r",
+  "t100c",
+  "tiger 100",
+  "daytona 500",
+  "t100 daytona",
+  "tiger 500"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "490 cc air-cooled unit parallel twin, one or two Amal carbs, points",
+ "intro": "Triumph's unit 500 twins. Smaller and lighter than the 650s, with the same Lucas wiring to sort out.",
+ "focus": [
+  [
+   "490 cc twin",
+   "Air-cooled"
+  ],
+  [
+   "Amal carbs",
+   "Clean and sync"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Lucas wiring",
+   "Check grounds"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "silhouette": "triumph-t100-tiger-500-daytona-500-1959",
+ "areas": [],
+ "heroName": "T100",
+ "hero": {
+  "src": "img/hero/triumph-t100-tiger-500-daytona-500-1959.jpg",
+  "artist": "No machine-readable author provided. Gede~commonswiki assumed (based on copyright claims).",
+  "page": "https://commons.wikimedia.org/wiki/File:Triumph_T100.jpg",
+  "lic": "CC BY 2.5",
+  "licUrl": "https://creativecommons.org/licenses/by/2.5"
+ }
+}

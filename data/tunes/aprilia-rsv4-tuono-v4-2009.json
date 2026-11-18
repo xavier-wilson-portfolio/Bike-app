@@ -1,0 +1,62 @@
+{
+ "id": "aprilia-rsv4-tuono-v4-2009",
+ "make": "Aprilia",
+ "model": "RSV4 / Tuono V4",
+ "name": "Aprilia RSV4 / Tuono V4",
+ "years": [
+  2009,
+  2026
+ ],
+ "match": [
+  "rsv4",
+  "tuono v4",
+  "rsv4 rf",
+  "rsv4 factory",
+  "tuono v4 1100",
+  "rsv4 1100",
+  "tuono v4r"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "999 or 1077/1099 cc liquid-cooled 65-degree V4, fuel injected",
+ "intro": "Aprilia's V4 superbike and its naked version. Cam chains, lots of electronics and tight packaging.",
+ "focus": [
+  [
+   "V4",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Electronics",
+   "APRC"
+  ],
+  [
+   "Cooling",
+   "Coolant and fans"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Aprilia has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ApriliaForum",
+   "url": "https://www.apriliaforum.com/",
+   "what": "Owner forum for Aprilia motorcycles."
+  }
+ ],
+ "heroName": "RSV4"
+}

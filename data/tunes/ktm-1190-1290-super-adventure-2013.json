@@ -1,0 +1,64 @@
+{
+ "id": "ktm-1190-1290-super-adventure-2013",
+ "make": "KTM",
+ "model": "1190 Adventure / 1290 Super Adventure",
+ "name": "KTM 1190 Adventure / 1290 Super Adventure",
+ "years": [
+  2013,
+  2026
+ ],
+ "match": [
+  "1190 adventure",
+  "1290 super adventure",
+  "1290 adventure",
+  "super adventure",
+  "1190 adventure r",
+  "1290 super adventure s",
+  "1290 super adventure r"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "1195 or 1301 cc liquid-cooled LC8 V-twin, fuel injected",
+ "intro": "KTM's big V-twin adventure bikes. Lots of electronics, lots of power and a heavy service at the valve interval.",
+ "focus": [
+  [
+   "LC8 V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Electronics",
+   "Ride modes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fans"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "KTM has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "silhouette": "ktm-1190-1290-super-adventure-2013",
+ "areas": [],
+ "heroName": "1290 ADVENTURE"
+}

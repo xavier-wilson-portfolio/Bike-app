@@ -1,0 +1,60 @@
+{
+ "id": "husqvarna-701-enduro-supermoto-2016",
+ "make": "Husqvarna",
+ "model": "701 Enduro / 701 Supermoto",
+ "name": "Husqvarna 701 Enduro / Supermoto",
+ "years": [
+  2016,
+  2026
+ ],
+ "match": [
+  "701 enduro",
+  "701 supermoto",
+  "husqvarna 701",
+  "701 lr",
+  "701"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "692 cc liquid-cooled LC4 single, fuel injected",
+ "intro": "Husqvarna's big single, shared with the KTM 690. Fuel in the subframe and a valve check that matters.",
+ "focus": [
+  [
+   "692 cc single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Fuel tank",
+   "In subframe"
+  ],
+  [
+   "Valves",
+   "Check interval"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Husqvarna (KTM group) has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Husqvarna forum",
+   "url": "https://www.huskyforum.com/",
+   "what": "Owner forum for Husqvarna street and dirt bikes."
+  }
+ ],
+ "heroName": "701"
+}

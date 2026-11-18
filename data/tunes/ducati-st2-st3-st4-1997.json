@@ -1,0 +1,76 @@
+{
+ "id": "ducati-st2-st3-st4-1997",
+ "make": "Ducati",
+ "model": "ST2 / ST3 / ST4",
+ "name": "Ducati ST2 / ST3 / ST4",
+ "years": [
+  1997,
+  2007
+ ],
+ "match": [
+  "st2",
+  "st3",
+  "st4",
+  "st4s",
+  "ducati st2",
+  "ducati st4",
+  "st3s"
+ ],
+ "style": "touring",
+ "drive": "chain",
+ "engine": "944 to 996 cc L-twin, air/liquid cooled, fuel injected",
+ "intro": "Ducati's sport tourers. Fuel injected, desmo valves, timing belts and hard bags.",
+ "focus": [
+  [
+   "L-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Desmo valves",
+   "On schedule"
+  ],
+  [
+   "Timing belts",
+   "Change on time"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Desmo valve service needs both opening and closing shims checked. Follow the interval in the manual; it is not a job to skip.",
+   "Ducati timing belts are changed by time as well as miles. If you can't prove when they were done, do them before riding."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Ducati has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "silhouette": "ducati-st2-st3-st4-1997",
+ "areas": [],
+ "heroName": "ST4",
+ "hero": {
+  "src": "img/hero/ducati-st2-st3-st4-1997.jpg",
+  "artist": "St4seditor",
+  "page": "https://commons.wikimedia.org/wiki/File:Ducati_ST4s_2002.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

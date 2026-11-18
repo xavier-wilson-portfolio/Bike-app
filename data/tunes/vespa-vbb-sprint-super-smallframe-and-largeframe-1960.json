@@ -1,0 +1,71 @@
+{
+ "id": "vespa-vbb-sprint-super-smallframe-and-largeframe-1960",
+ "make": "Vespa",
+ "model": "VBB / Sprint / Super (classic)",
+ "name": "Vespa classic largeframe and smallframe (VBB, Sprint, Super)",
+ "years": [
+  1960,
+  1979
+ ],
+ "match": [
+  "vbb",
+  "vba",
+  "vespa sprint 150",
+  "vespa super",
+  "vespa rally",
+  "vespa 50",
+  "vespa 90",
+  "smallframe",
+  "largeframe",
+  "vespa gl"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "50 to 200 cc air-cooled two-stroke single, carb, four-speed hand shift",
+ "intro": "Classic Vespas with hand shift, premix and a lot of steel. Rust and wiring are the usual jobs.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Hand shift",
+   "Cables"
+  ],
+  [
+   "Steel body",
+   "Check rust"
+  ],
+  [
+   "Six-volt",
+   "On many"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Vintage Vespas mix oil into the fuel. Check the ratio for your model before you fill up."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "VESPA"
+}

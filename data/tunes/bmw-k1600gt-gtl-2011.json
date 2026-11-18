@@ -1,0 +1,71 @@
+{
+ "id": "bmw-k1600gt-gtl-2011",
+ "make": "BMW",
+ "model": "K1600GT / GTL / B",
+ "name": "BMW K1600GT / GTL / B",
+ "years": [
+  2011,
+  2026
+ ],
+ "match": [
+  "k1600gt",
+  "k1600gtl",
+  "k1600b",
+  "k 1600",
+  "k1600",
+  "grand america",
+  "k1600 grand america"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "engine": "1649 cc liquid-cooled inline six, fuel injected, shaft drive",
+ "intro": "BMW's six-cylinder tourers. Lots of electronics, shaft drive and several recalls over the years.",
+ "focus": [
+  [
+   "Inline six",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Electronics",
+   "CANbus"
+  ],
+  [
+   "Final drive",
+   "Check oil and play"
+  ],
+  [
+   "Bodywork",
+   "Many panels"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "BMW has issued several recalls across these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BMW MOA forum",
+   "url": "https://forums.bmwmoa.org/",
+   "what": "BMW Motorcycle Owners of America forum."
+  }
+ ],
+ "silhouette": "bmw-k1600gt-gtl-2011",
+ "areas": [],
+ "heroName": "K1600",
+ "hero": {
+  "src": "img/hero/bmw-k1600gt-gtl-2011.jpg",
+  "artist": "Ominae",
+  "page": "https://commons.wikimedia.org/wiki/File:BMW_K1600GTL_showroom_display.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

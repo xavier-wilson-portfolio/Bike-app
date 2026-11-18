@@ -1,0 +1,67 @@
+{
+ "id": "harley-davidson-sportster-883-solid-mount-evo-1986",
+ "make": "Harley-Davidson",
+ "model": "Sportster 883 (solid mount Evo)",
+ "name": "Harley-Davidson Sportster 883 (1986-2003)",
+ "years": [
+  1986,
+  2003
+ ],
+ "match": [
+  "xlh883",
+  "xlh 883",
+  "sportster 883",
+  "883 hugger",
+  "xlh883 hugger",
+  "xl883 evo",
+  "883 sportster"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "883 cc air-cooled Evolution V-twin, one carb, rigid-mounted engine",
+ "intro": "The solid-mount Evo Sportster. One carb, lots of vibration and a simple bike to learn on.",
+ "focus": [
+  [
+   "883 cc Evo",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "CV or Bendix"
+  ],
+  [
+   "Rigid mount",
+   "Check fasteners"
+  ],
+  [
+   "Primary",
+   "Chain and oil"
+  ],
+  [
+   "Belt drive",
+   "Check wear"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "A rigid-mounted engine shakes things loose. Check every fastener, mount and light bracket."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Harley-Davidson has issued several recalls that touch these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XLForum",
+   "url": "https://www.xlforum.net/",
+   "what": "Owner forum for Harley Sportsters."
+  }
+ ],
+ "heroName": "883"
+}

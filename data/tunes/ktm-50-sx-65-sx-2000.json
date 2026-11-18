@@ -1,0 +1,68 @@
+{
+ "id": "ktm-50-sx-65-sx-2000",
+ "make": "KTM",
+ "model": "50 SX / 65 SX",
+ "name": "KTM 50 SX / 65 SX",
+ "years": [
+  2000,
+  2026
+ ],
+ "match": [
+  "50 sx",
+  "65 sx",
+  "ktm 50",
+  "ktm 65",
+  "50sx",
+  "65sx",
+  "50 sx mini"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "49 or 65 cc liquid-cooled two-stroke single, carb, premix",
+ "intro": "KTM's kids' motocross bikes. Premix two-strokes that get ridden hard.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Top end",
+   "Check compression"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Air filter",
+   "Foam, oiled"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "KTM has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KTM Forums",
+   "url": "https://www.ktmforums.com/",
+   "what": "Owner forum for KTM street and adventure bikes."
+  }
+ ],
+ "heroName": "50 SX"
+}

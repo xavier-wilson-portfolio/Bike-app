@@ -1,0 +1,64 @@
+{
+ "id": "norton-atlas-dominator-650-1956",
+ "make": "Norton",
+ "model": "Dominator / Atlas / 650SS",
+ "name": "Norton Dominator, 650SS and Atlas",
+ "years": [
+  1956,
+  1968
+ ],
+ "match": [
+  "dominator",
+  "atlas",
+  "650ss",
+  "norton atlas",
+  "norton dominator",
+  "dominator 99",
+  "88ss",
+  "featherbed"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "497 to 745 cc air-cooled parallel twin, Amal carbs, magneto or points",
+ "intro": "Featherbed-frame Norton twins. Amal carbs, magneto on most, and a lot of vibration on the Atlas.",
+ "focus": [
+  [
+   "Parallel twin",
+   "Air-cooled"
+  ],
+  [
+   "Amal carbs",
+   "Clean and sync"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Featherbed frame",
+   "Check welds"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "ATLAS"
+}

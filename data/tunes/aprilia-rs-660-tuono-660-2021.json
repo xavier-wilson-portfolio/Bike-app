@@ -1,0 +1,60 @@
+{
+ "id": "aprilia-rs-660-tuono-660-2021",
+ "make": "Aprilia",
+ "model": "RS 660 / Tuono 660",
+ "name": "Aprilia RS 660 / Tuono 660",
+ "years": [
+  2021,
+  2026
+ ],
+ "match": [
+  "rs 660",
+  "rs660",
+  "tuono 660",
+  "tuono660",
+  "rs 660 extrema"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "659 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "Aprilia's middleweight twins. Light, quick and full of electronics.",
+ "focus": [
+  [
+   "659 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Electronics",
+   "Ride modes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Aprilia has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ApriliaForum",
+   "url": "https://www.apriliaforum.com/",
+   "what": "Owner forum for Aprilia motorcycles."
+  }
+ ],
+ "heroName": "RS 660"
+}

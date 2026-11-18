@@ -1,0 +1,62 @@
+{
+ "id": "ktm-1290-super-duke-gt-2016",
+ "make": "KTM",
+ "model": "1290 Super Duke GT",
+ "name": "KTM 1290 Super Duke GT",
+ "years": [
+  2016,
+  2026
+ ],
+ "match": [
+  "super duke gt",
+  "1290 super duke gt",
+  "1290 gt",
+  "sd gt",
+  "superduke gt"
+ ],
+ "style": "touring",
+ "drive": "chain",
+ "engine": "1301 cc liquid-cooled LC8 V-twin, fuel injected",
+ "intro": "The sport-touring Super Duke. Semi-active suspension on most, lots of electronics.",
+ "focus": [
+  [
+   "LC8 V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Semi-active",
+   "Suspension"
+  ],
+  [
+   "Electronics",
+   "Ride modes"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "KTM has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KTM Forums",
+   "url": "https://www.ktmforums.com/",
+   "what": "Owner forum for KTM street and adventure bikes."
+  }
+ ],
+ "silhouette": "ktm-1290-super-duke-gt-2016",
+ "areas": [],
+ "heroName": "SUPER DUKE GT"
+}

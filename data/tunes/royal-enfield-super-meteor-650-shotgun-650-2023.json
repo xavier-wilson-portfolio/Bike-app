@@ -1,0 +1,68 @@
+{
+ "id": "royal-enfield-super-meteor-650-shotgun-650-2023",
+ "make": "Royal Enfield",
+ "model": "Super Meteor 650 / Shotgun 650",
+ "name": "Royal Enfield Super Meteor 650 / Shotgun 650",
+ "years": [
+  2023,
+  2026
+ ],
+ "match": [
+  "super meteor",
+  "super meteor 650",
+  "shotgun 650",
+  "shotgun"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "648 cc air/oil-cooled parallel twin, fuel injected",
+ "intro": "Royal Enfield's 650 twin cruisers. The same twin as the Interceptor in a low, long frame.",
+ "focus": [
+  [
+   "648 cc twin",
+   "Air/oil cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Fasteners",
+   "Check them"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Royal Enfield has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Royal Enfield community",
+   "url": "https://www.royalenfield.com/us/en/",
+   "what": "Royal Enfield USA, with dealer and owner resources."
+  }
+ ],
+ "silhouette": "royal-enfield-super-meteor-650-shotgun-650-2023",
+ "areas": [],
+ "heroName": "SUPER METEOR",
+ "hero": {
+  "src": "img/hero/royal-enfield-super-meteor-650-shotgun-650-2023.jpg",
+  "artist": "iMahesh",
+  "page": "https://commons.wikimedia.org/wiki/File:Royal_Enfield_Super_Meteor_650_(02).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

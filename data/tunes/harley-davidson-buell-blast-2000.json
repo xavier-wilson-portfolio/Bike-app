@@ -1,0 +1,60 @@
+{
+ "id": "harley-davidson-buell-blast-2000",
+ "make": "Buell",
+ "model": "Blast",
+ "name": "Buell Blast",
+ "years": [
+  2000,
+  2009
+ ],
+ "match": [
+  "blast",
+  "buell blast",
+  "p3",
+  "blast 500"
+ ],
+ "style": "standard",
+ "drive": "belt",
+ "engine": "492 cc air-cooled single, one carb, belt drive",
+ "intro": "Buell's 500 single, used in a lot of rider courses. One carb and a belt.",
+ "focus": [
+  [
+   "492 cc single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Belt drive",
+   "Check wear"
+  ],
+  [
+   "Valves",
+   "Hydraulic lifters"
+  ],
+  [
+   "Bodywork",
+   "Plastic panels"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Buell and Harley-Davidson issued several recalls on these bikes. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BadWeB",
+   "url": "https://www.badweatherbikers.com/buell/",
+   "what": "Long-running Buell owner forum."
+  }
+ ],
+ "heroName": "BLAST"
+}

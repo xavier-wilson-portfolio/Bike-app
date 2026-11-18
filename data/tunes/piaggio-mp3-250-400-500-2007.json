@@ -1,0 +1,66 @@
+{
+ "id": "piaggio-mp3-250-400-500-2007",
+ "make": "Piaggio",
+ "model": "MP3 250 / 400 / 500",
+ "name": "Piaggio MP3",
+ "years": [
+  2007,
+  2026
+ ],
+ "match": [
+  "mp3",
+  "mp3 500",
+  "mp3 400",
+  "mp3 250",
+  "piaggio mp3",
+  "mp3 530",
+  "yourban"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "244 to 530 cc liquid-cooled single, fuel injected, CVT, two front wheels",
+ "intro": "Piaggio's tilting three-wheeler. Two front wheels on a parallelogram, with a tilt lock to service.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Tilt lock",
+   "Check it works"
+  ],
+  [
+   "Front linkage",
+   "Check play"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "L": [
+   "The front tilting linkage has bushings and bearings of its own. Check for play before you trust the steering."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "MP3"
+}

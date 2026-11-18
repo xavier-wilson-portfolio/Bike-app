@@ -1,0 +1,68 @@
+{
+ "id": "royal-enfield-hunter-350-meteor-350-2021",
+ "make": "Royal Enfield",
+ "model": "Hunter 350 / Meteor 350",
+ "name": "Royal Enfield Hunter 350 / Meteor 350",
+ "years": [
+  2021,
+  2026
+ ],
+ "match": [
+  "hunter 350",
+  "meteor 350",
+  "hunter",
+  "meteor"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "349 cc air/oil-cooled J-series single, fuel injected",
+ "intro": "Royal Enfield's J-platform 350s. Simple, slow and easy to keep running.",
+ "focus": [
+  [
+   "349 cc single",
+   "Air/oil cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Fasteners",
+   "Check them"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Royal Enfield has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Royal Enfield community",
+   "url": "https://www.royalenfield.com/us/en/",
+   "what": "Royal Enfield USA, with dealer and owner resources."
+  }
+ ],
+ "silhouette": "royal-enfield-hunter-350-meteor-350-2021",
+ "areas": [],
+ "heroName": "HUNTER 350",
+ "hero": {
+  "src": "img/hero/royal-enfield-hunter-350-meteor-350-2021.jpg",
+  "artist": "UliBe43",
+  "page": "https://commons.wikimedia.org/wiki/File:Royal_Enfield_Meteor_2021-3.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
+}

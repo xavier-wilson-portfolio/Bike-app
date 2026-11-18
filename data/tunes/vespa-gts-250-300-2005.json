@@ -1,0 +1,71 @@
+{
+ "id": "vespa-gts-250-300-2005",
+ "make": "Vespa",
+ "model": "GTS 250 / 300",
+ "name": "Vespa GTS 250 / 300",
+ "years": [
+  2005,
+  2026
+ ],
+ "match": [
+  "gts",
+  "gts 300",
+  "gts 250",
+  "gts super",
+  "gtv",
+  "gts 300 super",
+  "gts 310"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "244 to 310 cc liquid-cooled single, fuel injected, CVT",
+ "intro": "The big modern Vespa. Steel body, fuel injected, CVT belt to change on time.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "CVT belt",
+   "Change on time"
+  ],
+  [
+   "Steel body",
+   "Check rust"
+  ],
+  [
+   "Cooling",
+   "Coolant"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Piaggio has issued recalls on some Vespas in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "silhouette": "vespa-gts-250-300-2005",
+ "areas": [],
+ "heroName": "GTS",
+ "hero": {
+  "src": "img/hero/vespa-gts-250-300-2005.jpg",
+  "artist": "Ottili from www.vespaforum.de",
+  "page": "https://commons.wikimedia.org/wiki/File:Vespa_GTS_300_Super_6.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
+}

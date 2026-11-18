@@ -1,0 +1,69 @@
+{
+ "id": "aprilia-rs-250-rs-50-1995",
+ "make": "Aprilia",
+ "model": "RS 250 / RS 50",
+ "name": "Aprilia RS 250 / RS 50",
+ "years": [
+  1995,
+  2005
+ ],
+ "match": [
+  "rs 250",
+  "rs250",
+  "rs 50",
+  "rs50",
+  "rs 125",
+  "rs125"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "49 to 249 cc liquid-cooled two-stroke, carbs, oil injection",
+ "intro": "Aprilia's small two-stroke sportbikes. Mostly imports in the US. Top ends and crank seals need care.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and jet"
+  ],
+  [
+   "Oil injection",
+   "Bleed the pump"
+  ],
+  [
+   "Crank seals",
+   "Check them"
+  ],
+  [
+   "Import papers",
+   "Check title"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "A": [
+   "Many of these are imports. Make sure the title and VIN paperwork match before you put money in."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ApriliaForum",
+   "url": "https://www.apriliaforum.com/",
+   "what": "Owner forum for Aprilia motorcycles."
+  }
+ ],
+ "silhouette": "aprilia-rs-250-rs-50-1995",
+ "areas": [],
+ "heroName": "RS 250"
+}

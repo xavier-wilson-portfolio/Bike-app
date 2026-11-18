@@ -1,0 +1,63 @@
+{
+ "id": "harley-davidson-sprint-aermacchi-1961",
+ "make": "Harley-Davidson",
+ "model": "Sprint (Aermacchi)",
+ "name": "Harley-Davidson Sprint (Aermacchi)",
+ "years": [
+  1961,
+  1974
+ ],
+ "match": [
+  "sprint",
+  "aermacchi",
+  "sprint 250",
+  "sprint 350",
+  "ss350",
+  "sx350",
+  "h sprint"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "246 or 344 cc air-cooled horizontal single, one carb, points",
+ "intro": "The Italian-built Harley single. Horizontal cylinder, points ignition and parts that take some hunting.",
+ "focus": [
+  [
+   "Single",
+   "Horizontal"
+  ],
+  [
+   "Carb",
+   "Dell'Orto"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Parts",
+   "Hunt for them"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "HDForums",
+   "url": "https://www.hdforums.com/",
+   "what": "Large owner forum for all Harley-Davidson models."
+  }
+ ],
+ "heroName": "SPRINT"
+}

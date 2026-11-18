@@ -1,0 +1,76 @@
+{
+ "id": "moto-guzzi-eldorado-ambassador-v7-special-loop-frame-1967",
+ "make": "Moto Guzzi",
+ "model": "Eldorado / Ambassador / V7 Special (loop frame)",
+ "name": "Moto Guzzi loop-frame (V7, Ambassador, Eldorado)",
+ "years": [
+  1967,
+  1974
+ ],
+ "match": [
+  "eldorado",
+  "ambassador",
+  "v7 special",
+  "v750",
+  "v850 eldorado",
+  "loop frame",
+  "guzzi police"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "703 to 844 cc air-cooled transverse V-twin, two carbs, points, shaft drive",
+ "intro": "The first Guzzi V-twins. Many were police bikes. Big, heavy and simple, with points and a generator.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Dell'Orto"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Generator",
+   "Check output"
+  ],
+  [
+   "Shaft drive",
+   "Check oil"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Guzzi V-twins need the valves set and the throttle bodies or carbs balanced together. Do both at the same service."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moto Guzzi National Owners Club",
+   "url": "https://www.mgnoc.org/",
+   "what": "US owner club for Moto Guzzi."
+  }
+ ],
+ "silhouette": "moto-guzzi-eldorado-ambassador-v7-special-loop-frame-1967",
+ "areas": [],
+ "heroName": "ELDORADO",
+ "hero": {
+  "src": "img/hero/moto-guzzi-eldorado-ambassador-v7-special-loop-frame-1967.jpg",
+  "artist": "Mr.choppers",
+  "page": "https://commons.wikimedia.org/wiki/File:Moto_Guzzi_Eldorado_850.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

@@ -1,0 +1,77 @@
+{
+ "id": "ducati-1098-1198-848-2007",
+ "make": "Ducati",
+ "model": "1098 / 1198 / 848",
+ "name": "Ducati 1098 / 1198 / 848",
+ "years": [
+  2007,
+  2013
+ ],
+ "match": [
+  "1098",
+  "1198",
+  "848",
+  "ducati 1098",
+  "ducati 1198",
+  "848 evo",
+  "1198s",
+  "1098s"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "849 to 1198 cc liquid-cooled Testastretta L-twin, fuel injected",
+ "intro": "The last trellis-frame Ducati superbikes. Desmo valves, timing belts and a dry clutch on the big ones.",
+ "focus": [
+  [
+   "L-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Desmo valves",
+   "On schedule"
+  ],
+  [
+   "Timing belts",
+   "Change on time"
+  ],
+  [
+   "Dry clutch",
+   "1098/1198"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Desmo valve service needs both opening and closing shims checked. Follow the interval in the manual; it is not a job to skip.",
+   "Ducati timing belts are changed by time as well as miles. If you can't prove when they were done, do them before riding."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Ducati has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "silhouette": "ducati-1098-1198-848-2007",
+ "areas": [],
+ "heroName": "1098",
+ "hero": {
+  "src": "img/hero/ducati-1098-1198-848-2007.jpg",
+  "artist": "Fletcher6",
+  "page": "https://commons.wikimedia.org/wiki/File:Ducati_1098.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

@@ -1,0 +1,68 @@
+{
+ "id": "kawasaki-klr250-1985",
+ "make": "Kawasaki",
+ "model": "KLR250",
+ "name": "Kawasaki KLR250",
+ "years": [
+  1985,
+  2005
+ ],
+ "match": [
+  "klr250",
+  "klr 250",
+  "klr250 dual sport",
+  "kl250"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 cc liquid-cooled four-valve single, carb",
+ "intro": "The smaller KLR. One carb, liquid cooled, and a balancer chain to check.",
+ "focus": [
+  [
+   "249 cc single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Balancer",
+   "Adjust chain"
+  ],
+  [
+   "Valves",
+   "Check often"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KawiForums",
+   "url": "https://www.kawiforums.com/",
+   "what": "Owner forum for Kawasaki motorcycles."
+  }
+ ],
+ "silhouette": "kawasaki-klr250-1985",
+ "areas": [],
+ "heroName": "KLR250",
+ "hero": {
+  "src": "img/hero/kawasaki-klr250-1985.jpg",
+  "artist": "Alex Couture-Beil",
+  "page": "https://commons.wikimedia.org/wiki/File:KLR250.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
+}

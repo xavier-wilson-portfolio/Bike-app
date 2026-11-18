@@ -1,0 +1,77 @@
+{
+ "id": "ducati-748-749-999-1995",
+ "make": "Ducati",
+ "model": "748 / 749 / 999",
+ "name": "Ducati 748 / 749 / 999",
+ "years": [
+  1995,
+  2006
+ ],
+ "match": [
+  "748",
+  "749",
+  "999",
+  "ducati 748",
+  "ducati 749",
+  "ducati 999",
+  "749s",
+  "999s"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "748 to 998 cc liquid-cooled Testastretta or Desmoquattro L-twin, fuel injected",
+ "intro": "The 748 and the Terblanche-era 749 and 999 superbikes. Desmo valves and timing belts that must be kept on schedule.",
+ "focus": [
+  [
+   "L-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Desmo valves",
+   "On schedule"
+  ],
+  [
+   "Timing belts",
+   "Change on time"
+  ],
+  [
+   "Dry clutch",
+   "Check basket"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Desmo valve service needs both opening and closing shims checked. Follow the interval in the manual; it is not a job to skip.",
+   "Ducati timing belts are changed by time as well as miles. If you can't prove when they were done, do them before riding."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Ducati has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "silhouette": "ducati-748-749-999-1995",
+ "areas": [],
+ "heroName": "999",
+ "hero": {
+  "src": "img/hero/ducati-748-749-999-1995.jpg",
+  "artist": "A1AA1A",
+  "page": "https://commons.wikimedia.org/wiki/File:Ducati_999_Corse.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

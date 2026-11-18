@@ -1,0 +1,72 @@
+{
+ "id": "moto-guzzi-v85-tt-2019",
+ "make": "Moto Guzzi",
+ "model": "V85 TT",
+ "name": "Moto Guzzi V85 TT",
+ "years": [
+  2019,
+  2026
+ ],
+ "match": [
+  "v85",
+  "v85 tt",
+  "v85tt",
+  "v85 tt travel"
+ ],
+ "style": "adventure",
+ "drive": "shaft",
+ "engine": "853 cc air-cooled transverse V-twin, fuel injected, shaft drive",
+ "intro": "Guzzi's retro adventure bike. Air-cooled V-twin, shaft drive and spoked wheels.",
+ "focus": [
+  [
+   "853 cc V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Shaft drive",
+   "Check oil"
+  ],
+  [
+   "Spoked wheels",
+   "Tubeless"
+  ],
+  [
+   "Electronics",
+   "Ride modes"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Guzzi V-twins need the valves set and the throttle bodies or carbs balanced together. Do both at the same service."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Moto Guzzi has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moto Guzzi National Owners Club",
+   "url": "https://www.mgnoc.org/",
+   "what": "US owner club for Moto Guzzi."
+  }
+ ],
+ "silhouette": "moto-guzzi-v85-tt-2019",
+ "areas": [],
+ "heroName": "V85 TT",
+ "hero": {
+  "src": "img/hero/moto-guzzi-v85-tt-2019.jpg",
+  "artist": "Cjp24",
+  "page": "https://commons.wikimedia.org/wiki/File:Moto_Guzzi_V85_TT,_2020_(2).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

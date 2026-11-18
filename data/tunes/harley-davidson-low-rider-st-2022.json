@@ -1,0 +1,59 @@
+{
+ "id": "harley-davidson-low-rider-st-2022",
+ "make": "Harley-Davidson",
+ "model": "Low Rider ST",
+ "name": "Harley-Davidson Low Rider ST",
+ "years": [
+  2022,
+  2026
+ ],
+ "match": [
+  "low rider st",
+  "fxlrst",
+  "lowrider st",
+  "low rider st 117"
+ ],
+ "style": "touring",
+ "drive": "belt",
+ "engine": "1923 cc Milwaukee-Eight 117 V-twin, fuel injected, belt drive",
+ "intro": "The frame-mounted fairing Softail. Big 117 engine, bags and belt drive.",
+ "focus": [
+  [
+   "M8 117",
+   "Fuel injected"
+  ],
+  [
+   "Fairing",
+   "Frame mounted"
+  ],
+  [
+   "Primary",
+   "Chain and oil"
+  ],
+  [
+   "Belt drive",
+   "Check wear"
+  ],
+  [
+   "Cooling",
+   "Oil cooler"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Harley-Davidson has issued several recalls that touch these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "HDForums",
+   "url": "https://www.hdforums.com/",
+   "what": "Large owner forum for all Harley-Davidson models."
+  }
+ ],
+ "heroName": "LOW RIDER ST"
+}

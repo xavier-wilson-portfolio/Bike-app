@@ -1,0 +1,65 @@
+{
+ "id": "victory-vegas-hammer-kingpin-2003",
+ "make": "Victory",
+ "model": "Vegas / Hammer / Kingpin",
+ "name": "Victory Vegas, Hammer, Kingpin",
+ "years": [
+  2003,
+  2017
+ ],
+ "match": [
+  "vegas",
+  "vegas 8 ball",
+  "hammer",
+  "kingpin",
+  "high-ball",
+  "highball",
+  "gunner",
+  "judge",
+  "boardwalk",
+  "jackpot"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "1634 or 1731 cc air/oil-cooled Freedom V-twin, fuel injected, belt drive",
+ "intro": "Victory's cruisers. Freedom V-twin, belt drive, and a brand that ended in 2017, so some parts need hunting.",
+ "focus": [
+  [
+   "Freedom V-twin",
+   "Air/oil cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Cam tensioners",
+   "Check them"
+  ],
+  [
+   "Belt drive",
+   "Check wear"
+  ],
+  [
+   "Parts",
+   "Brand ended 2017"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Polaris (Indian and Victory) issued several recalls on these bikes. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Victory Motorcycle Club forums",
+   "url": "https://www.victorymotorcycleclub.com/",
+   "what": "Owner club for Victory motorcycles."
+  }
+ ],
+ "heroName": "VEGAS"
+}

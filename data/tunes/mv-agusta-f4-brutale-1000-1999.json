@@ -1,0 +1,72 @@
+{
+ "id": "mv-agusta-f4-brutale-1000-1999",
+ "make": "MV Agusta",
+ "model": "F4 / Brutale 750-1090",
+ "name": "MV Agusta F4 / Brutale (four)",
+ "years": [
+  1999,
+  2019
+ ],
+ "match": [
+  "f4",
+  "f4 750",
+  "f4 1000",
+  "brutale 1090",
+  "brutale 910",
+  "brutale 989",
+  "brutale 750",
+  "f4 rr"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "749 to 1078 cc liquid-cooled inline four with radial valves, fuel injected",
+ "intro": "MV's four-cylinder bikes. Beautiful, expensive parts and a lot of fasteners under the bodywork.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Radial valves",
+   "Shim type"
+  ],
+  [
+   "Cooling",
+   "Coolant and fans"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "MV Agusta has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "MV Agusta forum",
+   "url": "https://www.mvagusta.net/",
+   "what": "Owner forum for MV Agusta motorcycles."
+  }
+ ],
+ "silhouette": "mv-agusta-f4-brutale-1000-1999",
+ "areas": [],
+ "heroName": "F4",
+ "hero": {
+  "src": "img/hero/mv-agusta-f4-brutale-1000-1999.jpg",
+  "artist": "Darz Mol",
+  "page": "https://commons.wikimedia.org/wiki/File:MV_Agusta_F4_Serie_Oro.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
+}

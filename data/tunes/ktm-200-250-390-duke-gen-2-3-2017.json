@@ -1,0 +1,63 @@
+{
+ "id": "ktm-200-250-390-duke-gen-2-3-2017",
+ "make": "KTM",
+ "model": "125 / 200 / 250 Duke",
+ "name": "KTM 125 / 200 / 250 Duke",
+ "years": [
+  2017,
+  2026
+ ],
+ "match": [
+  "200 duke",
+  "250 duke",
+  "125 duke",
+  "duke 200",
+  "duke 250",
+  "duke 125"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "125 to 249 cc liquid-cooled single, fuel injected",
+ "intro": "KTM's small Dukes. Fuel injected singles on a trellis frame.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check interval"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "KTM has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KTM Forums",
+   "url": "https://www.ktmforums.com/",
+   "what": "Owner forum for KTM street and adventure bikes."
+  }
+ ],
+ "silhouette": "ktm-200-250-390-duke-gen-2-3-2017",
+ "areas": [],
+ "heroName": "DUKE"
+}

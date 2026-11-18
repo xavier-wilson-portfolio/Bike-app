@@ -1,0 +1,63 @@
+{
+ "id": "bmw-r90s-1973",
+ "make": "BMW",
+ "model": "R90S",
+ "name": "BMW R90S",
+ "years": [
+  1973,
+  1976
+ ],
+ "match": [
+  "r90s",
+  "r 90 s",
+  "r90 s"
+ ],
+ "style": "sport",
+ "drive": "shaft",
+ "engine": "898 cc air-cooled boxer twin, Dell'Orto carbs, points",
+ "intro": "BMW's first superbike. Dell'Orto carbs, a bikini fairing and smoke paint that's hard to match.",
+ "focus": [
+  [
+   "Boxer twin",
+   "Air-cooled"
+  ],
+  [
+   "Dell'Orto carbs",
+   "Accelerator pumps"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Shaft drive",
+   "Check oil"
+  ],
+  [
+   "Paint",
+   "Smoke finish"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Boxer twins need the valve clearance checked on both sides and the throttle bodies synced. Do both at the same service."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Airheads Beemer Club",
+   "url": "https://airheads.org/",
+   "what": "Club and forum for air-cooled BMW twins."
+  }
+ ],
+ "heroName": "R90S"
+}

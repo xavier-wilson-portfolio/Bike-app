@@ -1,0 +1,60 @@
+{
+ "id": "aprilia-tuareg-660-2022",
+ "make": "Aprilia",
+ "model": "Tuareg 660",
+ "name": "Aprilia Tuareg 660",
+ "years": [
+  2022,
+  2026
+ ],
+ "match": [
+  "tuareg",
+  "tuareg 660",
+  "tuareg660"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "659 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "Aprilia's off-road adventure twin. 21-inch front, long-travel suspension.",
+ "focus": [
+  [
+   "659 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Spoked wheels",
+   "Check spokes"
+  ],
+  [
+   "Electronics",
+   "Ride modes"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Aprilia has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ApriliaForum",
+   "url": "https://www.apriliaforum.com/",
+   "what": "Owner forum for Aprilia motorcycles."
+  }
+ ],
+ "silhouette": "aprilia-tuareg-660-2022",
+ "areas": [],
+ "heroName": "TUAREG"
+}

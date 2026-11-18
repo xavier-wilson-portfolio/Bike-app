@@ -1,0 +1,74 @@
+{
+ "id": "ducati-panigale-v4-2018",
+ "make": "Ducati",
+ "model": "Panigale V4",
+ "name": "Ducati Panigale V4",
+ "years": [
+  2018,
+  2026
+ ],
+ "match": [
+  "panigale v4",
+  "panigale v4 s",
+  "panigale v4 r",
+  "v4 panigale",
+  "streetfighter v4",
+  "panigale v4s"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "1103 cc liquid-cooled Desmosedici Stradale V4, fuel injected",
+ "intro": "Ducati's V4 superbike. Cam chains instead of belts, lots of electronics and tight packaging.",
+ "focus": [
+  [
+   "1103 cc V4",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Desmo valves",
+   "Long interval"
+  ],
+  [
+   "Electronics",
+   "Ride modes"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Desmo valve service needs both opening and closing shims checked. Follow the interval in the manual; it is not a job to skip."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Ducati has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "silhouette": "ducati-panigale-v4-2018",
+ "areas": [],
+ "heroName": "PANIGALE V4",
+ "hero": {
+  "src": "img/hero/ducati-panigale-v4-2018.jpg",
+  "artist": "TaurusEmerald",
+  "page": "https://commons.wikimedia.org/wiki/File:Ducati_Panigale_V4_Las_Vegas.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

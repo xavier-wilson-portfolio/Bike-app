@@ -1,0 +1,64 @@
+{
+ "id": "ducati-monster-937-2021",
+ "make": "Ducati",
+ "model": "Monster (937)",
+ "name": "Ducati Monster 937",
+ "years": [
+  2021,
+  2026
+ ],
+ "match": [
+  "monster 937",
+  "monster plus",
+  "monster sp",
+  "monster 2021",
+  "monster+"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "937 cc liquid-cooled Testastretta L-twin, fuel injected, aluminum front frame",
+ "intro": "The newest Monster. Lighter than the old ones, with no trellis frame and lots of electronics.",
+ "focus": [
+  [
+   "937 cc L-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Desmo valves",
+   "Long interval"
+  ],
+  [
+   "Electronics",
+   "Ride modes"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Desmo valve service needs both opening and closing shims checked. Follow the interval in the manual; it is not a job to skip."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Ducati has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "heroName": "MONSTER"
+}

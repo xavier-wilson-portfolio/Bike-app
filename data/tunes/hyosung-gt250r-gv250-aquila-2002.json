@@ -1,0 +1,56 @@
+{
+ "id": "hyosung-gt250r-gv250-aquila-2002",
+ "make": "Hyosung",
+ "model": "GT250R / GV250 Aquila",
+ "name": "Hyosung GT250R / GV250 Aquila",
+ "years": [
+  2002,
+  2018
+ ],
+ "match": [
+  "gt250r",
+  "gt250",
+  "gv250",
+  "aquila",
+  "gt650r",
+  "gv650",
+  "comet 250"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "249 or 647 cc V-twin, carbs then fuel injection",
+ "intro": "Hyosung's small V-twins. Cheap and simple, with electrical connectors and parts supply to check.",
+ "focus": [
+  [
+   "V-twin",
+   "Air/oil or liquid"
+  ],
+  [
+   "Fuel",
+   "Carbs or EFI"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Parts",
+   "Check supply"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [],
+ "silhouette": "hyosung-gt250r-gv250-aquila-2002",
+ "areas": [],
+ "heroName": "AQUILA"
+}

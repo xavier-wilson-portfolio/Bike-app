@@ -1,0 +1,64 @@
+{
+ "id": "cfmoto-300nk-650nk-700cl-x-2017",
+ "make": "CFMoto",
+ "model": "300NK / 650NK / 700CL-X",
+ "name": "CFMoto 300NK / 650NK / 700CL-X",
+ "years": [
+  2017,
+  2026
+ ],
+ "match": [
+  "300nk",
+  "650nk",
+  "700cl-x",
+  "700 cl-x",
+  "300ss",
+  "650gt",
+  "ibex 800",
+  "450ss",
+  "800nk"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "292 to 799 cc liquid-cooled single or twin, fuel injected",
+ "intro": "CFMoto's road bikes. Fuel injected, with parts and dealer support that vary by area.",
+ "focus": [
+  [
+   "Engine",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Parts",
+   "Check supply"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "CFMoto forum",
+   "url": "https://www.cfmotoforum.com/",
+   "what": "Owner forum for CFMoto motorcycles."
+  }
+ ],
+ "heroName": "CFMOTO"
+}

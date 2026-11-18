@@ -1,0 +1,72 @@
+{
+ "id": "ducati-desertx-2022",
+ "make": "Ducati",
+ "model": "DesertX",
+ "name": "Ducati DesertX",
+ "years": [
+  2022,
+  2026
+ ],
+ "match": [
+  "desertx",
+  "desert x",
+  "desertx rally",
+  "desertx discovery"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "937 cc liquid-cooled Testastretta L-twin, fuel injected, 21-inch front wheel",
+ "intro": "Ducati's off-road focused adventure bike. Tall, with a 21-inch front and the 937 twin.",
+ "focus": [
+  [
+   "937 cc L-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Desmo valves",
+   "Long interval"
+  ],
+  [
+   "Spoked wheels",
+   "Check spokes"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Desmo valve service needs both opening and closing shims checked. Follow the interval in the manual; it is not a job to skip."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Ducati has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "silhouette": "ducati-desertx-2022",
+ "areas": [],
+ "heroName": "DESERTX",
+ "hero": {
+  "src": "img/hero/ducati-desertx-2022.jpg",
+  "artist": "Artem Lepesin",
+  "page": "https://commons.wikimedia.org/wiki/File:Ducati_DesertX_in_Barcelona.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

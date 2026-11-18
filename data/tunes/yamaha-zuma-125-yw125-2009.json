@@ -69,5 +69,14 @@
    "what": "Big general scooter forum with sections for Yamaha scooters."
   }
  ],
- "heroName": "ZUMA 125"
+ "silhouette": "yamaha-zuma-125-yw125-2009",
+ "areas": [],
+ "heroName": "ZUMA 125",
+ "hero": {
+  "src": "img/hero/yamaha-zuma-125-yw125-2009.jpg",
+  "artist": "Navian",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_bws_fi_125.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

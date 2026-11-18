@@ -1,0 +1,63 @@
+{
+ "id": "ktm-690-duke-690-smc-r-2008",
+ "make": "KTM",
+ "model": "690 Duke / 690 SMC R",
+ "name": "KTM 690 Duke / 690 SMC R",
+ "years": [
+  2008,
+  2024
+ ],
+ "match": [
+  "690 duke",
+  "duke 690",
+  "690 smc",
+  "690 smc r",
+  "690 duke r",
+  "smc r 690"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "690 cc liquid-cooled LC4 single, fuel injected",
+ "intro": "KTM's big single street bikes. Strong engine, light chassis, and valve checks that matter.",
+ "focus": [
+  [
+   "690 cc single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check interval"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "KTM has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KTM Forums",
+   "url": "https://www.ktmforums.com/",
+   "what": "Owner forum for KTM street and adventure bikes."
+  }
+ ],
+ "silhouette": "ktm-690-duke-690-smc-r-2008",
+ "areas": [],
+ "heroName": "690 DUKE"
+}

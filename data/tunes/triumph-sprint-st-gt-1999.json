@@ -1,0 +1,70 @@
+{
+ "id": "triumph-sprint-st-gt-1999",
+ "make": "Triumph",
+ "model": "Sprint ST / GT",
+ "name": "Triumph Sprint ST / Sprint GT",
+ "years": [
+  1999,
+  2016
+ ],
+ "match": [
+  "sprint st",
+  "sprint gt",
+  "sprint st 955",
+  "sprint st 1050",
+  "sprint 1050",
+  "sprint rs"
+ ],
+ "style": "touring",
+ "drive": "chain",
+ "engine": "955 or 1050 cc liquid-cooled inline triple, fuel injected",
+ "intro": "Triumph's triple sport tourers. Fuel injected, with a regulator/rectifier and connectors worth checking.",
+ "focus": [
+  [
+   "Inline triple",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Charging",
+   "R/R and plug"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Triumph has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "silhouette": "triumph-sprint-st-gt-1999",
+ "areas": [],
+ "heroName": "SPRINT ST",
+ "hero": {
+  "src": "img/hero/triumph-sprint-st-gt-1999.jpg",
+  "artist": "Fotograf  Rüdiger Koch",
+  "page": "https://commons.wikimedia.org/wiki/File:Triumph_Sprint_ST_1050_Baujahr_2007.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

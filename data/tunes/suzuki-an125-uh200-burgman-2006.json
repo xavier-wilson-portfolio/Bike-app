@@ -1,0 +1,90 @@
+{
+ "id": "suzuki-an125-uh200-burgman-2006",
+ "make": "Suzuki",
+ "model": "Burgman 125 / 200",
+ "name": "Suzuki Burgman 125 / 200",
+ "years": [
+  2006,
+  2026
+ ],
+ "match": [
+  "burgman 200",
+  "uh200",
+  "burgman 125",
+  "an125",
+  "uh125",
+  "burgman street"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "124 or 199 cc liquid-cooled single, fuel injected, CVT",
+ "intro": "The small Burgmans. 2018-2020 Burgman 200s had a CVT drive plate recall and a fuel hose recall.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "CVT",
+   "Drive plate recall"
+  ],
+  [
+   "Fuel hose",
+   "2019-20 recall"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2018-2019 Burgman 200s are in recall 19V377 (CVT drive plate), and some 2019-2020 bikes in 21V558 (fuel hose).",
+   "reason": "A leaking fuel hose is a fire risk. Both fixes are free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "19V377",
+   "years": "2018-2019 Burgman 200 (some)",
+   "what": "Rivets in the CVT driven face can fail and the drive plate can break.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehiclesafetyrecalls.com/recall/19V377000"
+  },
+  {
+   "id": "21V558",
+   "years": "2019-2020 Burgman 200 (some)",
+   "what": "Fuel hose assembly may leak fuel.",
+   "fix": "Dealer replaces the fuel hose assembly free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/21V558000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "silhouette": "suzuki-an125-uh200-burgman-2006",
+ "areas": [],
+ "heroName": "BURGMAN 200",
+ "hero": {
+  "src": "img/hero/suzuki-an125-uh200-burgman-2006.jpg",
+  "artist": "Ashley Pomeroy",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_Burgman_U200_0522.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

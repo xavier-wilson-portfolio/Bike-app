@@ -1,0 +1,76 @@
+{
+ "id": "moto-guzzi-california-1100-1400-1994",
+ "make": "Moto Guzzi",
+ "model": "California 1100 / 1400",
+ "name": "Moto Guzzi California 1100 / 1400",
+ "years": [
+  1994,
+  2020
+ ],
+ "match": [
+  "california",
+  "california 1100",
+  "california 1400",
+  "california ev",
+  "california vintage",
+  "eldorado 1400",
+  "audace",
+  "california touring"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "1064 or 1380 cc air-cooled transverse V-twin, fuel injected, shaft drive",
+ "intro": "Guzzi's big cruiser. Fuel injected transverse V-twin and shaft drive, with linked brakes on many.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Balance bodies"
+  ],
+  [
+   "Shaft drive",
+   "Check oil"
+  ],
+  [
+   "Linked brakes",
+   "On many"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Guzzi V-twins need the valves set and the throttle bodies or carbs balanced together. Do both at the same service."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Moto Guzzi has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moto Guzzi National Owners Club",
+   "url": "https://www.mgnoc.org/",
+   "what": "US owner club for Moto Guzzi."
+  }
+ ],
+ "silhouette": "moto-guzzi-california-1100-1400-1994",
+ "areas": [],
+ "heroName": "CALIFORNIA",
+ "hero": {
+  "src": "img/hero/moto-guzzi-california-1100-1400-1994.jpg",
+  "artist": "Livioandronico2013",
+  "page": "https://commons.wikimedia.org/wiki/File:Moto_Guzzi_-_California.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

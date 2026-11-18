@@ -62,5 +62,14 @@
    "what": "Forum for vintage Kawasaki KZ and Z bikes."
   }
  ],
- "heroName": "KZ900"
+ "silhouette": "kawasaki-kz900-1976",
+ "areas": [],
+ "heroName": "KZ900",
+ "hero": {
+  "src": "img/hero/kawasaki-kz900-1976.jpg",
+  "artist": "Mick from Northamptonshire, England",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_Z900_1976_-_Flickr_-_mick_-_Lumix.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

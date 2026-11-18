@@ -1,0 +1,67 @@
+{
+ "id": "ural-gear-up-ct-sidecar-2001",
+ "make": "Ural",
+ "model": "Gear Up / CT / Patrol (sidecar)",
+ "name": "Ural sidecar rigs (Gear Up, CT, Patrol)",
+ "years": [
+  2001,
+  2026
+ ],
+ "match": [
+  "ural",
+  "gear up",
+  "gear-up",
+  "ural ct",
+  "ural patrol",
+  "ural tourist",
+  "ural retro",
+  "ural sidecar"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "749 cc air-cooled boxer twin, carbs then fuel injection, shaft drive, sidecar",
+ "intro": "Ural's sidecar rigs. Old-school boxer, shaft drive and two-wheel drive on many. Lots of hands-on service.",
+ "focus": [
+  [
+   "Boxer twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel",
+   "Carbs or EFI"
+  ],
+  [
+   "Sidecar",
+   "Toe-in and lean"
+  ],
+  [
+   "2WD",
+   "On many"
+  ],
+  [
+   "Shaft drive",
+   "Check oil"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "K": [
+   "A sidecar rig has three brakes and needs toe-in and lean-out set. Use the Ural manual for alignment."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Soviet Steeds",
+   "url": "https://www.sovietsteeds.com/",
+   "what": "Owner forum for Ural and other sidecar rigs."
+  }
+ ],
+ "silhouette": "ural-gear-up-ct-sidecar-2001",
+ "areas": [],
+ "heroName": "URAL"
+}

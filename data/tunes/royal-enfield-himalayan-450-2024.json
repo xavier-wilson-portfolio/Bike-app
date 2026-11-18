@@ -1,0 +1,59 @@
+{
+ "id": "royal-enfield-himalayan-450-2024",
+ "make": "Royal Enfield",
+ "model": "Himalayan 450",
+ "name": "Royal Enfield Himalayan 450",
+ "years": [
+  2024,
+  2026
+ ],
+ "match": [
+  "himalayan 450",
+  "himalayan 452",
+  "guerrilla 450",
+  "himalayan 2024"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "452 cc liquid-cooled Sherpa single, ride-by-wire fuel injection",
+ "intro": "The liquid-cooled Himalayan. Much more power than the 411, with a round TFT dash.",
+ "focus": [
+  [
+   "452 cc single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Ride-by-wire"
+  ],
+  [
+   "Valves",
+   "Check interval"
+  ],
+  [
+   "Spoked wheels",
+   "Check spokes"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Royal Enfield has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Royal Enfield community",
+   "url": "https://www.royalenfield.com/us/en/",
+   "what": "Royal Enfield USA, with dealer and owner resources."
+  }
+ ],
+ "heroName": "HIMALAYAN 450"
+}

@@ -1,0 +1,71 @@
+{
+ "id": "harley-davidson-buell-xb9-xb12-2003",
+ "make": "Buell",
+ "model": "XB9 / XB12 (Firebolt, Lightning, Ulysses)",
+ "name": "Buell XB9 / XB12",
+ "years": [
+  2003,
+  2010
+ ],
+ "match": [
+  "xb9",
+  "xb12",
+  "firebolt",
+  "lightning",
+  "ulysses",
+  "xb12r",
+  "xb12s",
+  "xb9sx",
+  "city x",
+  "xb12x"
+ ],
+ "style": "sport",
+ "drive": "belt",
+ "engine": "984 or 1203 cc air/oil-cooled V-twin (Sportster based), fuel injected, belt drive",
+ "intro": "The XB Buells. Fuel in the frame, oil in the swingarm, belt drive and a rim-mounted front brake.",
+ "focus": [
+  [
+   "V-twin",
+   "Air/oil cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Oil in swingarm",
+   "Check level"
+  ],
+  [
+   "Belt drive",
+   "Check wear"
+  ],
+  [
+   "Rim brake",
+   "Front"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "E": [
+   "The oil lives in the swingarm and the fuel in the frame. Check the oil with the bike upright and warm, as the manual says."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Buell and Harley-Davidson issued several recalls on these bikes. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BadWeB",
+   "url": "https://www.badweatherbikers.com/buell/",
+   "what": "Long-running Buell owner forum."
+  }
+ ],
+ "silhouette": "harley-davidson-buell-xb9-xb12-2003",
+ "areas": [],
+ "heroName": "BUELL XB"
+}

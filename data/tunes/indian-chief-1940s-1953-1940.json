@@ -1,0 +1,63 @@
+{
+ "id": "indian-chief-1940s-1953-1940",
+ "make": "Indian",
+ "model": "Chief (1940-1953)",
+ "name": "Indian Chief (1940-1953)",
+ "years": [
+  1940,
+  1953
+ ],
+ "match": [
+  "chief 1940s",
+  "1947 chief",
+  "1948 chief",
+  "roadmaster chief",
+  "indian chief 74",
+  "chief 80",
+  "blackhawk chief"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "1200 or 1300 cc air-cooled side-valve V-twin, one carb, six-volt",
+ "intro": "The skirted-fender Indian Chief. Side valves, a hand shift on many, and a lot of specialist parts.",
+ "focus": [
+  [
+   "Flathead V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Linkert"
+  ],
+  [
+   "Six-volt",
+   "Generator"
+  ],
+  [
+   "Hand shift",
+   "On many"
+  ],
+  [
+   "Parts",
+   "Specialist"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "CHIEF"
+}

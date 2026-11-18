@@ -1,0 +1,66 @@
+{
+ "id": "ktm-500-exc-f-350-exc-f-2012",
+ "make": "KTM",
+ "model": "500 / 350 EXC-F",
+ "name": "KTM 500 EXC-F / 350 EXC-F",
+ "years": [
+  2012,
+  2026
+ ],
+ "match": [
+  "500 exc-f",
+  "350 exc-f",
+  "500 exc",
+  "350 exc",
+  "500 excf",
+  "350 excf",
+  "exc-f"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "350 or 510 cc liquid-cooled four-stroke single, fuel injected",
+ "intro": "KTM's plated enduro four-strokes. Light, fast, and on an hour-based service schedule.",
+ "focus": [
+  [
+   "Single",
+   "Four-stroke"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check by hours"
+  ],
+  [
+   "Air filter",
+   "Foam, oiled"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Four-stroke motocross engines need frequent valve checks and oil changes. Follow the hour-based schedule in the manual, not the calendar."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "KTM has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KTM Forums",
+   "url": "https://www.ktmforums.com/",
+   "what": "Owner forum for KTM street and adventure bikes."
+  }
+ ],
+ "heroName": "500 EXC-F"
+}

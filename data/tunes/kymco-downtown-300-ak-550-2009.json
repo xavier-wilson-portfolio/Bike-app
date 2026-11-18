@@ -1,0 +1,62 @@
+{
+ "id": "kymco-downtown-300-ak-550-2009",
+ "make": "Kymco",
+ "model": "Downtown 300i / AK 550",
+ "name": "Kymco Downtown 300i / AK 550",
+ "years": [
+  2009,
+  2026
+ ],
+ "match": [
+  "downtown 300",
+  "downtown 300i",
+  "downtown 350",
+  "ak 550",
+  "ak550",
+  "xciting",
+  "xciting 400"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "299 cc single or 550 cc twin, liquid-cooled, fuel injected, CVT or belt",
+ "intro": "Kymco's maxi-scooters. Fuel injected, lots of storage and lots of plastic.",
+ "focus": [
+  [
+   "Engine",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Bodywork",
+   "Many panels"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "DOWNTOWN"
+}

@@ -1,0 +1,60 @@
+{
+ "id": "ktm-990-super-duke-2005",
+ "make": "KTM",
+ "model": "990 Super Duke",
+ "name": "KTM 990 Super Duke",
+ "years": [
+  2005,
+  2013
+ ],
+ "match": [
+  "990 super duke",
+  "super duke 990",
+  "990 sd",
+  "990 super duke r",
+  "superduke 990"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "999 cc liquid-cooled LC8 V-twin, fuel injected",
+ "intro": "The first LC8 Super Duke. Fuel injected V-twin in a trellis frame.",
+ "focus": [
+  [
+   "LC8 V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim type"
+  ],
+  [
+   "Cooling",
+   "Coolant and fans"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "KTM has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KTM Forums",
+   "url": "https://www.ktmforums.com/",
+   "what": "Owner forum for KTM street and adventure bikes."
+  }
+ ],
+ "heroName": "990 SUPER DUKE"
+}

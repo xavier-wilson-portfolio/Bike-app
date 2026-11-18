@@ -1,0 +1,62 @@
+{
+ "id": "aprilia-rsv-mille-tuono-1000-1998",
+ "make": "Aprilia",
+ "model": "RSV Mille / Tuono 1000",
+ "name": "Aprilia RSV Mille / Tuono 1000",
+ "years": [
+  1998,
+  2010
+ ],
+ "match": [
+  "rsv mille",
+  "mille",
+  "rsv 1000",
+  "tuono 1000",
+  "rsv1000r",
+  "tuono r",
+  "rsv mille r"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "998 cc liquid-cooled Rotax 60-degree V-twin, fuel injected",
+ "intro": "Aprilia's Rotax V-twin superbike and its naked twin. Fuel injected, with a clutch slave and starter sprag worth checking.",
+ "focus": [
+  [
+   "998 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Starter sprag",
+   "Known issue"
+  ],
+  [
+   "Cooling",
+   "Coolant and fans"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Aprilia has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ApriliaForum",
+   "url": "https://www.apriliaforum.com/",
+   "what": "Owner forum for Aprilia motorcycles."
+  }
+ ],
+ "heroName": "MILLE"
+}

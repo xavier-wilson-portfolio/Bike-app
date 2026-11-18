@@ -35,7 +35,7 @@ B29.append(dict(id="ducati-monster-1993", make="Ducati", model="Monster (air-coo
   known=[], forums=[DMS]))
 
 B29.append(dict(id="ducati-916-996-998-1994", make="Ducati", model="916 / 996 / 998", name="Ducati 916 / 996 / 998", years=[1994, 2004],
-  match=["916", "996", "998", "ducati 916", "ducati 996", "ducati 998", "916 sps", "996s", "748", "ducati 748"], style="sport", drive="chain",
+  match=["916", "996", "998", "ducati 916", "ducati 996", "ducati 998", "916 sps", "996s"], style="sport", drive="chain",
   engine="748-998 cc liquid-cooled 90-degree L-twin, desmo 4-valve, fuel injected",
   intro="Tamburini's superbike. Belt-driven desmo four-valve heads, a single-sided swingarm and a dry clutch.",
   focus=[["Desmoquattro L-twin", "Liquid-cooled"], ["Fuel injected", "Weber-Marelli"], ["Timing belts", "Change by age"], ["Dry clutch", "Rattle is normal"], ["Single-sided swingarm", "Eccentric adjuster"]],

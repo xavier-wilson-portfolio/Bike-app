@@ -1,0 +1,71 @@
+{
+ "id": "triumph-america-speedmaster-865-2002",
+ "make": "Triumph",
+ "model": "America / Speedmaster (865)",
+ "name": "Triumph America / Speedmaster",
+ "years": [
+  2002,
+  2017
+ ],
+ "match": [
+  "triumph america",
+  "america 865",
+  "speedmaster",
+  "speedmaster 865",
+  "america lt"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "790 or 865 cc air-cooled parallel twin, carbs then fuel injection",
+ "intro": "The cruiser versions of the modern Bonneville. Carbs on early bikes, fuel injection from about 2008.",
+ "focus": [
+  [
+   "Parallel twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel",
+   "Carbs or EFI"
+  ],
+  [
+   "Valves",
+   "Shim type"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check which you have. Carbureted bikes get the carb steps; fuel-injected bikes skip them."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Triumph has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "silhouette": "triumph-america-speedmaster-865-2002",
+ "areas": [],
+ "heroName": "SPEEDMASTER",
+ "hero": {
+  "src": "img/hero/triumph-america-speedmaster-865-2002.jpg",
+  "artist": "Ronald Saunders from Warrington, UK",
+  "page": "https://commons.wikimedia.org/wiki/File:Flickr_-_ronsaunders47_-_THE_NEW_BREED_OF_TRIUMPH._BONNEVILLE_SE.865_cc_TWIN._2010..jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
+}

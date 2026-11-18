@@ -1,0 +1,63 @@
+{
+ "id": "harley-davidson-evolution-electra-glide-tour-glide-1984",
+ "make": "Harley-Davidson",
+ "model": "Evo Electra Glide / Tour Glide",
+ "name": "Harley-Davidson Electra Glide / Tour Glide (Evo)",
+ "years": [
+  1985,
+  1998
+ ],
+ "match": [
+  "tour glide",
+  "fltc",
+  "fltcu",
+  "evo electra glide",
+  "flhtc evo",
+  "flhtcu evo",
+  "electra glide classic"
+ ],
+ "style": "touring",
+ "drive": "belt",
+ "engine": "1340 cc air-cooled Evolution V-twin, carb (EFI on some late bikes), belt drive",
+ "intro": "The Evo-era baggers. One carb on most, belt drive and a lot of old wiring behind the fairing.",
+ "focus": [
+  [
+   "Evo V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Fairing",
+   "Lots of wiring"
+  ],
+  [
+   "Primary",
+   "Chain and oil"
+  ],
+  [
+   "Belt drive",
+   "Check wear"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Harley-Davidson has issued several recalls that touch these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "HDForums",
+   "url": "https://www.hdforums.com/",
+   "what": "Large owner forum for all Harley-Davidson models."
+  }
+ ],
+ "heroName": "TOUR GLIDE"
+}
