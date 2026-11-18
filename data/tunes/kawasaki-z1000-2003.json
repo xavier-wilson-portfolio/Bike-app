@@ -1,0 +1,64 @@
+{
+ "id": "kawasaki-z1000-2003",
+ "make": "Kawasaki",
+ "model": "Z1000",
+ "name": "Kawasaki Z1000",
+ "years": [
+  2003,
+  2016
+ ],
+ "match": [
+  "z1000",
+  "z 1000",
+  "zr1000",
+  "z1000 abs",
+  "z1000sx",
+  "ninja 1000"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "953 or 1043 cc liquid-cooled inline four, fuel injected",
+ "intro": "Kawasaki's big naked four. Mostly normal upkeep on a fast road bike.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Cooling",
+   "Hoses and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Brakes",
+   "Fluid and pads"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [],
+ "silhouette": "kawasaki-z1000-2003",
+ "areas": [],
+ "heroName": "Z1000",
+ "hero": {
+  "src": "img/hero/kawasaki-z1000-2003.jpg",
+  "artist": "DSchueller",
+  "page": "https://commons.wikimedia.org/wiki/File:Z10002010.JPG",
+  "lic": "CC BY-SA 3.0 de",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en"
+ }
+}

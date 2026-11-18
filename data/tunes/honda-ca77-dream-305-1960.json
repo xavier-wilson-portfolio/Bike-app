@@ -1,0 +1,85 @@
+{
+ "id": "honda-ca77-dream-305-1960",
+ "make": "Honda",
+ "model": "CA77 Dream 305",
+ "name": "Honda CA77 Dream 305",
+ "years": [
+  1960,
+  1969
+ ],
+ "match": [
+  "ca77",
+  "dream 305",
+  "ca 77",
+  "ca72",
+  "dream 250",
+  "honda dream"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "305 cc air-cooled SOHC parallel twin, single carb, points ignition, enclosed chain",
+ "intro": "The pressed-steel Dream. One carb, a fully enclosed chain and a lot of sheet metal to restore.",
+ "focus": [
+  [
+   "305 cc twin",
+   "Air-cooled"
+  ],
+  [
+   "Single carb",
+   "Clean it out"
+  ],
+  [
+   "Points ignition",
+   "Gap and timing"
+  ],
+  [
+   "Enclosed chain",
+   "Check it"
+  ],
+  [
+   "Pressed-steel frame",
+   "Rust"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-CA7-01",
+   "phase": "E",
+   "after": "E-002",
+   "title": "Check the frame and chain case for rust",
+   "instructions": "Look over the pressed-steel frame and the chain enclosure for rust-through, especially at the seams and underneath.",
+   "reason": "The Dream uses a pressed-steel frame and enclosed chain case, which trap water.",
+   "src": "Owner experience",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "silhouette": "honda-ca77-dream-305-1960",
+ "areas": [],
+ "heroName": "DREAM 305",
+ "hero": {
+  "src": "img/hero/honda-ca77-dream-305-1960.jpg",
+  "artist": "Callmeace",
+  "page": "https://commons.wikimedia.org/wiki/File:1963_Honda_CA77_305_Dream_%22early%22_version.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
+}

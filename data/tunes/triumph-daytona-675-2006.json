@@ -1,0 +1,109 @@
+{
+ "id": "triumph-daytona-675-2006",
+ "make": "Triumph",
+ "model": "Daytona 675",
+ "name": "Triumph Daytona 675",
+ "years": [
+  2006,
+  2017
+ ],
+ "match": [
+  "daytona 675",
+  "daytona 675r",
+  "675r",
+  "d675"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "675 cc liquid-cooled inline triple, fuel injected",
+ "intro": "Triumph's triple-cylinder sport bike. The 2006-2009 regulator/rectifier recall is the one to check first.",
+ "focus": [
+  [
+   "675 cc triple",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "R/R recall",
+   "2006-2009"
+  ],
+  [
+   "Recalls",
+   "Several years"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls first",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2006-2009 bikes are in recall 12V445 (regulator/rectifier). Some 2011-2012 bikes are in recall 13V032 (wheel bearings). 2012-2013 bikes are in recalls 13V104 (turn signal stems), 13V215 (throttle cables, 2012) and 13V319 (ABS). Some 2014-2015 675Rs are in recall 15V255 (rear shock).",
+   "reason": "Every fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "12V445",
+   "years": "2006-2009",
+   "what": "Regulator/rectifier can overheat and stop charging.",
+   "fix": "Dealer fits a Shindengen regulator/rectifier free.",
+   "src": "https://recallcheck.net/recall/12V445000"
+  },
+  {
+   "id": "13V032",
+   "years": "2011-2012 (some)",
+   "what": "Wheel bearings of unknown quality may fail early.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehiclesafetyrecalls.com/recall/13V032000"
+  },
+  {
+   "id": "13V104",
+   "years": "2012-2013",
+   "what": "Turn signal stems may break.",
+   "fix": "Dealer replaces the stems free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/13V104000"
+  },
+  {
+   "id": "13V215",
+   "years": "2012 (Jul-Oct build)",
+   "what": "Throttle cables may be routed so they hinder the throttle.",
+   "fix": "Dealer fits a throttle cable guide free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/13V215000"
+  },
+  {
+   "id": "13V319",
+   "years": "2012-2013 with ABS",
+   "what": "ABS may malfunction and let the wheels lock.",
+   "fix": "Dealer replaces the ABS modulator free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/13V319000"
+  },
+  {
+   "id": "15V255",
+   "years": "2014-2015 Daytona 675R",
+   "what": "Rear shock damping rod nut may loosen.",
+   "fix": "Dealer replaces the rear shock free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/15V255000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "Triumph675.net",
+   "url": "https://www.triumph675.net/",
+   "what": "Owner forum for the Daytona 675 and Street Triple."
+  }
+ ],
+ "silhouette": "triumph-daytona-675-2006",
+ "areas": [],
+ "heroName": "DAYTONA 675"
+}

@@ -1,0 +1,72 @@
+{
+ "id": "suzuki-sv1000-2003",
+ "make": "Suzuki",
+ "model": "SV1000 / SV1000S",
+ "name": "Suzuki SV1000",
+ "years": [
+  2003,
+  2008
+ ],
+ "match": [
+  "sv1000",
+  "sv1000s",
+  "sv 1000",
+  "sv1000n"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "996 cc liquid-cooled 90-degree V-twin, fuel injected",
+ "intro": "The big brother to the SV650. Some 2003-2006 bikes are in a fuel tank recall.",
+ "focus": [
+  [
+   "996 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Fuel tank recall",
+   "2003-2006"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2003 SV1000 and 2003-2006 SV1000S bikes are in recall 06V013 for the fuel tank.",
+   "reason": "A fuel tank fault can leak fuel. The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "06V013",
+   "years": "2003 SV1000, 2003-2006 SV1000S",
+   "what": "Fuel tank assembly problem.",
+   "fix": "Free dealer repair.",
+   "src": "https://www.motorcycle.com/news/news2867.html"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "SVRider",
+   "url": "https://www.svrider.com/",
+   "what": "Owner forum for the SV650 and SV1000."
+  }
+ ],
+ "heroName": "SV1000"
+}

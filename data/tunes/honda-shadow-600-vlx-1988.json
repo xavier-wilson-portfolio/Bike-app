@@ -1,0 +1,63 @@
+{
+ "id": "honda-shadow-600-vlx-1988",
+ "make": "Honda",
+ "model": "Shadow 600 VLX",
+ "name": "Honda Shadow VLX 600",
+ "years": [
+  1988,
+  2007
+ ],
+ "match": [
+  "vlx",
+  "vlx600",
+  "shadow 600",
+  "vt600",
+  "vt600c",
+  "vt600cd",
+  "shadow vlx",
+  "shadow vlx deluxe"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "583 cc liquid-cooled V-twin, single carb",
+ "intro": "A small, simple Shadow. One carb, chain drive, and a lot of them sat for years before resale.",
+ "focus": [
+  [
+   "583 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Single carb",
+   "Clean it out"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Cooling",
+   "Hoses and fan"
+  ],
+  [
+   "Fuel petcock",
+   "Vacuum type"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Shadow Riders",
+   "url": "https://www.shadowriders.com/",
+   "what": "Owner forum for Honda Shadows."
+  }
+ ],
+ "heroName": "SHADOW VLX"
+}

@@ -1,0 +1,91 @@
+{
+ "id": "yamaha-yzf-r1-1998",
+ "make": "Yamaha",
+ "model": "YZF-R1",
+ "name": "Yamaha YZF-R1",
+ "years": [
+  1998,
+  2026
+ ],
+ "match": [
+  "yzf-r1",
+  "r1",
+  "yzf r1",
+  "yzfr1",
+  "r1m",
+  "yzf-r1m",
+  "r1s"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "998 cc liquid-cooled inline four, carbs (1998-2001) or fuel injected",
+ "intro": "Yamaha's superbike. Early bikes have carbs. 2015 bikes had a gearbox recall.",
+ "focus": [
+  [
+   "998 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Depends on year"
+  ],
+  [
+   "2015 gearbox",
+   "Recall"
+  ],
+  [
+   "Cooling",
+   "Hoses and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2015 R1 and R1M bikes are in recall 15V802 (transmission gears). Some 2015 R1M bikes are in recall 15V221 (rear shock nut). Some 2012 R1s are in recall 14V044 (headlight socket).",
+   "reason": "A gearbox lock-up can throw you off. The fixes are free."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "G": [
+   "1998-2001 bikes have carbs. Later bikes are fuel injected. Skip the steps that don't match."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "15V802",
+   "years": "2015",
+   "what": "Transmission gears may fail and lock up.",
+   "fix": "Dealer fits a new transmission kit free.",
+   "src": "https://auto-recalls.justia.com/yamaha/yzf-r1/2015/15v802000"
+  },
+  {
+   "id": "15V221",
+   "years": "2015 R1M (some)",
+   "what": "Rear shock piston rod nut may loosen.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehicleflaws.com/vehicle/yamaha/yzfr1m/2015"
+  },
+  {
+   "id": "14V044",
+   "years": "2012 (some)",
+   "what": "Headlight socket problem.",
+   "fix": "Dealer replaces the headlight socket free.",
+   "src": "https://vehicleflaws.com/vehicle/yamaha/yzfr1/2012"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "R1-Forum",
+   "url": "https://www.r1-forum.com/",
+   "what": "Owner forum for the YZF-R1."
+  }
+ ],
+ "heroName": "R1"
+}

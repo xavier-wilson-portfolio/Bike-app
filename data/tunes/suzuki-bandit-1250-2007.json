@@ -1,0 +1,67 @@
+{
+ "id": "suzuki-bandit-1250-2007",
+ "make": "Suzuki",
+ "model": "Bandit 1250 (GSF1250)",
+ "name": "Suzuki Bandit 1250",
+ "years": [
+  2007,
+  2016
+ ],
+ "match": [
+  "bandit 1250",
+  "gsf1250",
+  "gsf1250s",
+  "bandit 1250s",
+  "bandit"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "1255 cc liquid-cooled inline four, fuel injected",
+ "intro": "The liquid-cooled Bandit. Some 2008-2009 bikes are in a regulator/rectifier recall.",
+ "focus": [
+  [
+   "1255 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "R/R recall",
+   "2008-2009"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Cooling",
+   "Hoses and fan"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2008-2009 GSF1250S bikes are in recall 16V018 for the regulator/rectifier.",
+   "reason": "A dead regulator can leave you stranded. The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "16V018",
+   "years": "2008-2012 (model list varies)",
+   "what": "Regulator/rectifier circuit board can lift off its case, so the battery stops charging and the engine can stall.",
+   "fix": "Dealer replaces the regulator/rectifier free.",
+   "src": "https://static.nhtsa.gov/odi/rcl/2016/RCMN-16V018-3272.pdf"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "BANDIT 1250"
+}

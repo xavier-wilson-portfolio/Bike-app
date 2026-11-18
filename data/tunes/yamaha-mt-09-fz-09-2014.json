@@ -1,0 +1,98 @@
+{
+ "id": "yamaha-mt-09-fz-09-2014",
+ "make": "Yamaha",
+ "model": "MT-09 / FZ-09",
+ "name": "Yamaha MT-09 / FZ-09",
+ "years": [
+  2014,
+  2026
+ ],
+ "match": [
+  "mt-09",
+  "mt09",
+  "fz-09",
+  "fz09",
+  "mt 09",
+  "fz 09",
+  "mt-09 sp"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "847 or 890 cc liquid-cooled inline triple, fuel injected",
+ "intro": "Yamaha's crossplane triple. Several years have recalls, from headlight wiring to handlebar clamps to ECU software.",
+ "focus": [
+  [
+   "Inline triple",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Ride-by-wire"
+  ],
+  [
+   "Recalls",
+   "Several years"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Valves",
+   "Shim type"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls first",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2014 FZ-09s are in recall 14V550 (headlight harness). Some 2015 bikes are in recall 15V176 (shift cam stopper). 2015-2017 bikes are in recall 17V221 (handlebar holder may loosen). Some 2021-2022 MT-09s are in recall 22V130 (ECU can stall the engine).",
+   "reason": "Loose bars or a stall can cause a crash. The fixes are free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "14V550",
+   "years": "2014",
+   "what": "Headlight harness may be too short and disconnect.",
+   "fix": "Dealer fits an extension harness free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/14V550000"
+  },
+  {
+   "id": "15V176",
+   "years": "2015 (Sep-Nov 2014 build)",
+   "what": "Shift cam segment stopper may crack and cause shifting failure.",
+   "fix": "Free dealer repair.",
+   "src": "https://au7o.io/motorcycle-issues/yamaha-mt-09"
+  },
+  {
+   "id": "17V221",
+   "years": "2015-2017",
+   "what": "Lower handlebar holder may loosen.",
+   "fix": "Free dealer repair.",
+   "src": "https://static.nhtsa.gov/odi/rcl/2017/RCAK-17V221-6477.pdf"
+  },
+  {
+   "id": "22V130",
+   "years": "2021-2022 (some)",
+   "what": "ECU programming may limit throttle response or stall the engine.",
+   "fix": "Dealer reprograms the ECU free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/22V130000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "FZ-09 Forum",
+   "url": "https://www.fz09.org/",
+   "what": "Owner forum for the FZ-09, MT-09 and related triples."
+  }
+ ],
+ "silhouette": "yamaha-mt-09-fz-09-2014",
+ "areas": [],
+ "heroName": "MT-09"
+}

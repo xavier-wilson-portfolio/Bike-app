@@ -1,0 +1,58 @@
+{
+ "id": "honda-hawk-gt-nt650-1988",
+ "make": "Honda",
+ "model": "Hawk GT NT650",
+ "name": "Honda Hawk GT (NT650)",
+ "years": [
+  1988,
+  1991
+ ],
+ "match": [
+  "hawk gt",
+  "nt650",
+  "hawk 650",
+  "bros 650",
+  "brat hawk"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "647 cc liquid-cooled V-twin, two carbs, single-sided swingarm",
+ "intro": "A cult favorite with a single-sided swingarm. Simple to work on, but the bikes are old and parts are getting scarce.",
+ "focus": [
+  [
+   "647 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Single-sided swingarm",
+   "Eccentric adjuster"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Cooling",
+   "Hoses and fan"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "E": [
+   "Chain slack is set with the eccentric hub on the single-sided swingarm, not with axle adjusters."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [],
+ "heroName": "HAWK GT"
+}

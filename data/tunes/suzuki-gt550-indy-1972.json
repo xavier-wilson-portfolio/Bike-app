@@ -1,0 +1,80 @@
+{
+ "id": "suzuki-gt550-indy-1972",
+ "make": "Suzuki",
+ "model": "GT550 Indy",
+ "name": "Suzuki GT550 Indy",
+ "years": [
+  1972,
+  1977
+ ],
+ "match": [
+  "gt550",
+  "gt 550",
+  "indy",
+  "gt550 indy",
+  "ram air 550"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "544 cc air-cooled two-stroke triple, three carbs, Ram Air head",
+ "intro": "Suzuki's two-stroke triple. Three carbs, oil injection and crank seals that need checking on any survivor.",
+ "focus": [
+  [
+   "Two-stroke triple",
+   "Air-cooled"
+  ],
+  [
+   "Three carbs",
+   "Sync them"
+  ],
+  [
+   "Oil injection",
+   "Check the pump"
+  ],
+  [
+   "Crank seals",
+   "Air leaks"
+  ],
+  [
+   "Points ignition",
+   "Three sets"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-GT5-01",
+   "phase": "G",
+   "after": "G-004",
+   "title": "Check the oil injection pump",
+   "instructions": "Make sure the oil tank feeds the pump, bleed the lines, and check the pump cable adjustment so it opens with the throttle.",
+   "reason": "A two-stroke with no oil supply seizes quickly.",
+   "src": "Two-stroke basics",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "B": [
+   "A two-stroke with leaking crank seals runs lean and can seize. Get the seals checked before riding hard."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Suzuki Owners Club",
+   "url": "https://www.suzukiownersclub.co.uk/",
+   "what": "Club for owners of Suzuki bikes, old and new."
+  }
+ ],
+ "heroName": "GT550"
+}

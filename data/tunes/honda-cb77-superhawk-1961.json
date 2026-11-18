@@ -1,0 +1,68 @@
+{
+ "id": "honda-cb77-superhawk-1961",
+ "make": "Honda",
+ "model": "CB77 Super Hawk",
+ "name": "Honda CB77 Super Hawk",
+ "years": [
+  1961,
+  1967
+ ],
+ "match": [
+  "cb77",
+  "super hawk",
+  "superhawk",
+  "cb 77",
+  "cb72",
+  "hawk 250"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "305 cc air-cooled SOHC parallel twin, two carbs, points ignition",
+ "intro": "Honda's early 305 twin. Original parts are scarce, so keep and restore what came with the bike.",
+ "focus": [
+  [
+   "305 cc twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Points ignition",
+   "Gap and timing"
+  ],
+  [
+   "Drum brakes",
+   "Shoes and cables"
+  ],
+  [
+   "Original parts",
+   "Scarce"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "A": [
+   "Photograph everything before you take it apart. Many CB77 parts are hard to find now."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "silhouette": "honda-cb77-superhawk-1961",
+ "areas": [],
+ "heroName": "SUPER HAWK"
+}

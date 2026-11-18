@@ -1,0 +1,76 @@
+{
+ "id": "bmw-f750gs-f850gs-2018",
+ "make": "BMW",
+ "model": "F750GS / F850GS",
+ "name": "BMW F750GS / F850GS",
+ "years": [
+  2018,
+  2026
+ ],
+ "match": [
+  "f750gs",
+  "f850gs",
+  "f 750 gs",
+  "f 850 gs",
+  "f850gs adventure",
+  "f850 gsa"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "853 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "BMW's middleweight parallel-twin GS. Some 2020 bikes are in a brake light recall.",
+ "focus": [
+  [
+   "853 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Brake light",
+   "2020 recall"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Cooling",
+   "Hoses and fan"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2020 F750GS and F850GS bikes are in recall 20V146 (brake light flashes under hard braking).",
+   "reason": "The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "20V146",
+   "years": "2020 (some)",
+   "what": "Emergency stop signal can make the brake light flash instead of staying on.",
+   "fix": "Dealer reprograms the emergency stop signal free.",
+   "src": "https://auto-recalls.justia.com/bmw/f850gs/2020/20v146000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "UKGSer forum",
+   "url": "https://www.ukgser.com/community/",
+   "what": "Owner forum for BMW GS models."
+  }
+ ],
+ "silhouette": "bmw-f750gs-f850gs-2018",
+ "areas": [],
+ "heroName": "F850GS"
+}

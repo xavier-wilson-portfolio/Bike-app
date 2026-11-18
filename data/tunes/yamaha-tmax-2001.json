@@ -1,0 +1,66 @@
+{
+ "id": "yamaha-tmax-2001",
+ "make": "Yamaha",
+ "model": "TMAX",
+ "name": "Yamaha TMAX",
+ "years": [
+  2001,
+  2026
+ ],
+ "match": [
+  "tmax",
+  "t-max",
+  "xp500",
+  "xp530",
+  "xp560",
+  "tmax 500",
+  "tmax 530",
+  "tmax 560"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "499, 530 or 562 cc liquid-cooled parallel twin, fuel injected, CVT",
+ "intro": "Yamaha's sporty maxi-scooter. A twin-cylinder engine, CVT and belt final drive.",
+ "focus": [
+  [
+   "Parallel twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Final drive belt",
+   "Check"
+  ],
+  [
+   "Coolant",
+   "Change it"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [],
+ "silhouette": "yamaha-tmax-2001",
+ "areas": [],
+ "heroName": "TMAX",
+ "hero": {
+  "src": "img/hero/yamaha-tmax-2001.jpg",
+  "artist": "PekePON",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_TMAX_2007TMS.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

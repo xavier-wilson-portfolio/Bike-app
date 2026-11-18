@@ -1,0 +1,84 @@
+{
+ "id": "moto-guzzi-v7-2008",
+ "make": "Moto Guzzi",
+ "model": "V7",
+ "name": "Moto Guzzi V7 (2008-on)",
+ "years": [
+  2008,
+  2026
+ ],
+ "match": [
+  "v7",
+  "v7 classic",
+  "v7 ii",
+  "v7 iii",
+  "v7 racer",
+  "v7 stone",
+  "v7 special",
+  "v7 850",
+  "moto guzzi v7"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "744 or 853 cc air-cooled transverse V-twin, fuel injected, shaft drive",
+ "intro": "Moto Guzzi's modern retro twin. Shaft drive and a simple air-cooled engine. Some 2017 V7 IIIs had a brake hose recall.",
+ "focus": [
+  [
+   "Transverse V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Throttle bodies"
+  ],
+  [
+   "Shaft drive",
+   "Change the oil"
+  ],
+  [
+   "Brake hose recall",
+   "2017 V7 III"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2017 V7 III models are in recall 17V380 (front ABS brake hose can rub and leak).",
+   "reason": "A brake fluid leak cuts front braking. The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "G": [
+   "Balance the two throttle bodies after any work on them."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "17V380",
+   "years": "2017 V7 III (Nov 2015-May 2017 build)",
+   "what": "Front ABS brake hose may rub on the secondary air connection and leak.",
+   "fix": "Dealer fits a hose mount and replaces any damaged hose free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/17V380000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "Moto Guzzi National Owners Club",
+   "url": "https://www.mgnoc.org/",
+   "what": "US owner club for Moto Guzzi."
+  }
+ ],
+ "silhouette": "moto-guzzi-v7-2008",
+ "areas": [],
+ "heroName": "V7"
+}

@@ -1,0 +1,92 @@
+{
+ "id": "ducati-916-996-998-1994",
+ "make": "Ducati",
+ "model": "916 / 996 / 998",
+ "name": "Ducati 916 / 996 / 998",
+ "years": [
+  1994,
+  2004
+ ],
+ "match": [
+  "916",
+  "996",
+  "998",
+  "ducati 916",
+  "ducati 996",
+  "ducati 998",
+  "916 sps",
+  "996s",
+  "748",
+  "ducati 748"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "748-998 cc liquid-cooled 90-degree L-twin, desmo 4-valve, fuel injected",
+ "intro": "Tamburini's superbike. Belt-driven desmo four-valve heads, a single-sided swingarm and a dry clutch.",
+ "focus": [
+  [
+   "Desmoquattro L-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Weber-Marelli"
+  ],
+  [
+   "Timing belts",
+   "Change by age"
+  ],
+  [
+   "Dry clutch",
+   "Rattle is normal"
+  ],
+  [
+   "Single-sided swingarm",
+   "Eccentric adjuster"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-DUC-01",
+   "phase": "H",
+   "after": "H-003",
+   "title": "Check the timing belts and desmo valve clearances",
+   "instructions": "Replace the cam timing belts on schedule, by age as well as miles, and check the desmo opening and closing clearances. Old belts can snap and wreck the engine.",
+   "reason": "Ducati belt-drive twins need belts changed on time even if the bike sat.",
+   "src": "Ducati service practice",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 4.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "E": [
+   "Chain slack is set with the eccentric hub in the single-sided swingarm."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "silhouette": "ducati-916-996-998-1994",
+ "areas": [],
+ "heroName": "916",
+ "hero": {
+  "src": "img/hero/ducati-916-996-998-1994.jpg",
+  "artist": "ScuderiaAssindia",
+  "page": "https://commons.wikimedia.org/wiki/File:Ducati_916_SPS.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

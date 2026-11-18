@@ -1,0 +1,94 @@
+{
+ "id": "harley-davidson-road-glide-1998",
+ "make": "Harley-Davidson",
+ "model": "Road Glide (FLTR)",
+ "name": "Harley-Davidson Road Glide",
+ "years": [
+  1998,
+  2016
+ ],
+ "match": [
+  "road glide",
+  "fltr",
+  "fltrx",
+  "fltru",
+  "road glide special",
+  "road glide ultra",
+  "fltrxs"
+ ],
+ "style": "touring",
+ "drive": "belt",
+ "engine": "Evolution (1998) or Twin Cam 88, 96, 103 or 110 V-twin, carb or fuel injected, belt drive",
+ "intro": "The frame-mounted shark-nose fairing Harley. On 1999-2006 bikes, check the cam chain tensioner shoes first.",
+ "focus": [
+  [
+   "Twin Cam V-twin",
+   "Most years"
+  ],
+  [
+   "Carb or EFI",
+   "Depends on year"
+  ],
+  [
+   "Cam tensioners",
+   "1999-2006"
+  ],
+  [
+   "Belt drive",
+   "Check for cracks"
+  ],
+  [
+   "Fairing wiring",
+   "Frame mounted"
+  ]
+ ],
+ "remove": [
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-TC-01",
+   "phase": "H",
+   "after": "H-003",
+   "title": "Inspect the cam chain tensioner shoes",
+   "instructions": "Pull the cam cover and look at the plastic tensioner shoes. If they are worn deep or cracked, replace them, or fit the later hydraulic tensioners or a gear drive.",
+   "reason": "The spring-loaded shoes on 1999-2006 Twin Cams wear through and can send debris into the oil pump.",
+   "src": "Fix My Hog Twin Cam tensioner notes",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 2.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "G": [
+   "Some Twin Cams have a carb and others are fuel injected. Skip the steps that don't match your bike."
+  ],
+  "H": [
+   "Twin Cams from 2007 on have hydraulic tensioners and don't share the early shoe problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Harley-Davidson has issued several recalls that touch these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [
+  {
+   "title": "Cam chain tensioners",
+   "what": "1999-2006 Twin Cams (except the 2006 Dyna) use spring-loaded plastic tensioner shoes that wear out. Harley moved to hydraulic tensioners in 2006 and 2007.",
+   "src": "https://fixmyhog.com/video/twin-cam-gear-drive-conversion-015478"
+  }
+ ],
+ "forums": [
+  {
+   "name": "Fix My Hog",
+   "url": "https://fixmyhog.com/",
+   "what": "Harley repair videos, including Twin Cam tensioner work."
+  },
+  {
+   "name": "HDForums",
+   "url": "https://www.hdforums.com/",
+   "what": "Large owner forum for all Harley-Davidson models."
+  }
+ ],
+ "heroName": "ROAD GLIDE"
+}

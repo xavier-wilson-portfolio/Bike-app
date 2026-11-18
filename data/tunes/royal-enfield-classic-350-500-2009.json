@@ -1,0 +1,78 @@
+{
+ "id": "royal-enfield-classic-350-500-2009",
+ "make": "Royal Enfield",
+ "model": "Classic 350 / 500",
+ "name": "Royal Enfield Classic 350 / 500",
+ "years": [
+  2009,
+  2026
+ ],
+ "match": [
+  "classic 350",
+  "classic 500",
+  "royal enfield classic",
+  "re classic",
+  "classic chrome",
+  "g5 classic",
+  "reborn classic"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "346 or 499 cc air-cooled single, fuel injected",
+ "intro": "Royal Enfield's retro single. Simple and slow-revving. Some 2023 bikes are in a reflector recall.",
+ "focus": [
+  [
+   "Single cylinder",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carb"
+  ],
+  [
+   "Reflector recall",
+   "2023"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Valves",
+   "Check on time"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2023 Classic 350s are in recall 24V713 (side and rear reflectors).",
+   "reason": "The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "24V713",
+   "years": "2023 (Nov 2022-Mar 2023 build)",
+   "what": "Side and rear reflectors don't meet the lighting standard.",
+   "fix": "Dealer replaces the side and rear reflectors free.",
+   "src": "https://auto-recalls.justia.com/royal-enfield/hunter/2023/24v713000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with Royal Enfield owner threads."
+  }
+ ],
+ "silhouette": "royal-enfield-classic-350-500-2009",
+ "areas": [],
+ "heroName": "CLASSIC 350"
+}

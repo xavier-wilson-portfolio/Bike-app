@@ -1,0 +1,64 @@
+{
+ "id": "honda-vtr1000-super-hawk-1997",
+ "make": "Honda",
+ "model": "VTR1000F Super Hawk",
+ "name": "Honda VTR1000F Super Hawk",
+ "years": [
+  1997,
+  2005
+ ],
+ "match": [
+  "super hawk",
+  "superhawk",
+  "vtr1000",
+  "vtr1000f",
+  "firestorm",
+  "vtr 1000"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "996 cc liquid-cooled 90-degree V-twin, carbs",
+ "intro": "Honda's big V-twin sport bike. Side-mounted radiators and large carbs.",
+ "focus": [
+  [
+   "996 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Side radiators",
+   "Check hoses"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [],
+ "silhouette": "honda-vtr1000-super-hawk-1997",
+ "areas": [],
+ "heroName": "SUPER HAWK",
+ "hero": {
+  "src": "img/hero/honda-vtr1000-super-hawk-1997.jpg",
+  "artist": "Khaosaming",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_Firestorm_VTR_1000_F.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

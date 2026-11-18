@@ -1,0 +1,95 @@
+{
+ "id": "bmw-r80g-s-1980",
+ "make": "BMW",
+ "model": "R80G/S",
+ "name": "BMW R80G/S",
+ "years": [
+  1980,
+  1987
+ ],
+ "match": [
+  "r80g/s",
+  "r80gs",
+  "r 80 g/s",
+  "r80 g/s",
+  "paris dakar",
+  "r80 gs",
+  "g/s"
+ ],
+ "style": "adventure",
+ "drive": "shaft",
+ "engine": "798 cc air-cooled boxer twin, two carbs, Monolever shaft drive",
+ "intro": "The first GS. An airhead boxer with the single-sided Monolever. Check the splines and the final drive.",
+ "focus": [
+  [
+   "798 cc boxer",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Bing CV"
+  ],
+  [
+   "Monolever",
+   "Single-sided"
+  ],
+  [
+   "Shaft drive",
+   "Splines"
+  ],
+  [
+   "Charging",
+   "Diode board"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-BGS-01",
+   "phase": "E",
+   "after": "E-002",
+   "title": "Lube the drive splines",
+   "instructions": "Pull the rear drive and clean and grease the shaft splines with a moly paste. Look for oil in the swingarm.",
+   "reason": "Dry splines wear and fail. Most owners forget to grease them.",
+   "src": "Motoryk R1150GS notes",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 2.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "G": [
+   "The Bing carbs need their diaphragms checked and the two sides balanced after any work."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "UKGSer forum",
+   "url": "https://www.ukgser.com/community/",
+   "what": "Owner forum for BMW GS models."
+  },
+  {
+   "name": "BMW Motorcycle Tech (Snowbum)",
+   "url": "https://bmwmotorcycletech.info/",
+   "what": "Long-running technical notes for classic BMW K and R bikes."
+  }
+ ],
+ "silhouette": "bmw-r80g-s-1980",
+ "areas": [],
+ "heroName": "R80G/S",
+ "hero": {
+  "src": "img/hero/bmw-r80g-s-1980.jpg",
+  "artist": "Gastair",
+  "page": "https://commons.wikimedia.org/wiki/File:BMW_R80GS_1981_B.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

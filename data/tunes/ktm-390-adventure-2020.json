@@ -1,0 +1,87 @@
+{
+ "id": "ktm-390-adventure-2020",
+ "make": "KTM",
+ "model": "390 Adventure",
+ "name": "KTM 390 Adventure",
+ "years": [
+  2020,
+  2026
+ ],
+ "match": [
+  "390 adventure",
+  "390 adv",
+  "adventure 390",
+  "390 adventure r",
+  "390 adventure x"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "373 or 399 cc liquid-cooled single, fuel injected",
+ "intro": "KTM's small adventure bike. Several recalls on 2022-on bikes, including an e-throttle recall.",
+ "focus": [
+  [
+   "Single cylinder",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Ride-by-wire"
+  ],
+  [
+   "E-throttle recall",
+   "2022-2024"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Side stand",
+   "2025 recall"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls first",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2022-2024 bikes are in recall 25V598 (water in the e-throttle can cause loss of drive). 2025 Adventure R and X bikes are in recalls 25V825 (ECU software) and 25V907 (side stand spring can break).",
+   "reason": "Losing drive power in traffic is dangerous. Every fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "25V598",
+   "years": "2022-2024",
+   "what": "Water can get into the e-throttle unit and cause loss of drive power.",
+   "fix": "Dealer replaces the throttle assembly free.",
+   "src": "https://static.nhtsa.gov/odi/rcl/2025/RCAK-25V598-3272.pdf"
+  },
+  {
+   "id": "25V825",
+   "years": "2025 Adventure R and X",
+   "what": "ECU software problem.",
+   "fix": "Free dealer repair.",
+   "src": "https://recallcheck.net/recall/25V825000"
+  },
+  {
+   "id": "25V907",
+   "years": "2025 Adventure R and X",
+   "what": "Side stand spring may break from vibration and let the stand drop.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehiclesafetyrecalls.com/recall/25V907000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "390 ADVENTURE"
+}

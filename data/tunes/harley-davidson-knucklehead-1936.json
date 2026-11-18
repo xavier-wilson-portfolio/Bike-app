@@ -1,0 +1,93 @@
+{
+ "id": "harley-davidson-knucklehead-1936",
+ "make": "Harley-Davidson",
+ "model": "Knucklehead (EL/FL)",
+ "name": "Harley-Davidson Knucklehead",
+ "years": [
+  1936,
+  1947
+ ],
+ "match": [
+  "knucklehead",
+  "knuckle",
+  "el",
+  "fl knucklehead",
+  "61 ohv",
+  "74 ohv",
+  "1936 el"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "61 or 74 cubic inch air-cooled OHV V-twin, single carb, total-loss or early recirculating oiling, magneto or points",
+ "intro": "Harley's first overhead-valve big twin. A collector bike. Originality and correct parts matter as much as getting it running.",
+ "focus": [
+  [
+   "OHV V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Single carb",
+   "Linkert type"
+  ],
+  [
+   "Oiling",
+   "Check the pump"
+  ],
+  [
+   "Hand shift",
+   "Foot clutch"
+  ],
+  [
+   "Originality",
+   "Document it"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-KN-01",
+   "phase": "A",
+   "after": "A-002",
+   "title": "Record the engine and frame numbers",
+   "instructions": "Photograph and write down the engine case number and any frame numbers. Compare them to known numbering before you buy parts or value the bike.",
+   "reason": "Matching, original numbers make a big difference on a Knucklehead.",
+   "src": "AMCA guidance",
+   "safety": "Normal",
+   "skill": "Beginner",
+   "estHours": 0.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "G": [
+   "Most Knuckleheads use a Linkert carb. Get the right rebuild kit for the model number on the carb."
+  ],
+  "F": [
+   "Many early bikes run 6-volt electrics. Check before you buy bulbs or a battery."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "silhouette": "harley-davidson-knucklehead-1936",
+ "areas": [],
+ "heroName": "KNUCKLEHEAD",
+ "hero": {
+  "src": "img/hero/harley-davidson-knucklehead-1936.jpg",
+  "artist": "Chris Phutully from Australia",
+  "page": "https://commons.wikimedia.org/wiki/File:1941_Harley-Davidson_Knucklehead_%22Chopper%22_Custom_(2013_Racv_Motorclassica)_(10491974294).jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

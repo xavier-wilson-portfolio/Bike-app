@@ -1,0 +1,73 @@
+{
+ "id": "kawasaki-zx-9r-1994",
+ "make": "Kawasaki",
+ "model": "Ninja ZX-9R",
+ "name": "Kawasaki Ninja ZX-9R",
+ "years": [
+  1994,
+  2003
+ ],
+ "match": [
+  "zx-9r",
+  "zx9r",
+  "zx 9r",
+  "zx900",
+  "ninja zx-9r"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "899 cc liquid-cooled inline four, four carbs",
+ "intro": "The big-bore Ninja of the 1990s. Four carbs and a fast road bike's worth of wear items.",
+ "focus": [
+  [
+   "899 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "Cooling",
+   "Hoses and fan"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ZX6R.com",
+   "url": "https://www.zx6r.com/",
+   "what": "Owner forum for Kawasaki ZX sport bikes."
+  }
+ ],
+ "silhouette": "kawasaki-zx-9r-1994",
+ "areas": [],
+ "heroName": "ZX-9R",
+ "hero": {
+  "src": "img/hero/kawasaki-zx-9r-1994.jpg",
+  "artist": "Stephen Durham",
+  "page": "https://commons.wikimedia.org/wiki/File:ZX-9R_2003_Crotch_Rocket.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

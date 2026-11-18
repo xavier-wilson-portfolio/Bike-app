@@ -1,0 +1,74 @@
+{
+ "id": "honda-cb650r-2019",
+ "make": "Honda",
+ "model": "CB650R",
+ "name": "Honda CB650R",
+ "years": [
+  2019,
+  2026
+ ],
+ "match": [
+  "cb650r",
+  "cb 650r",
+  "cb650f",
+  "cbr650r",
+  "cbr650f"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "649 cc liquid-cooled inline four, fuel injected",
+ "intro": "Honda's Neo Sports Cafe four. Some 2024 bikes have a gear shift arm recall.",
+ "focus": [
+  [
+   "649 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Shift arm recall",
+   "2024"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Valves",
+   "Shim type"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2024 bikes are in recall 25V107 (gear shift arm can come off). Some 2020-2021 bikes are in recall 21V382 (rear reflector).",
+   "reason": "Losing the shifter means you can't change gear. The fixes are free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "25V107",
+   "years": "2024 (some)",
+   "what": "Gear shift arm fasteners may loosen and the arm may come off, so you can't shift.",
+   "fix": "Dealer replaces the gear shift arm free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/25V107000"
+  },
+  {
+   "id": "21V382",
+   "years": "2020-2021 (some)",
+   "what": "Rear reflector lens may be too dim to meet the lighting standard.",
+   "fix": "Dealer replaces the rear reflector free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/21V382000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "CB650R"
+}

@@ -1,0 +1,103 @@
+{
+ "id": "triumph-scrambler-900-1200-2006",
+ "make": "Triumph",
+ "model": "Scrambler 900 / 1200",
+ "name": "Triumph Scrambler 900 / 1200",
+ "years": [
+  2006,
+  2026
+ ],
+ "match": [
+  "triumph scrambler",
+  "scrambler 900",
+  "scrambler 1200",
+  "street scrambler",
+  "scrambler 1200 xe",
+  "scrambler 1200 xc",
+  "scrambler 865"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "865 cc air/oil-cooled twin (2006-2016), or 900 or 1200 cc liquid-cooled twin (2017-on)",
+ "intro": "Triumph's scrambler line. Early bikes share the air-cooled Bonneville engine, later ones the liquid-cooled 900 and 1200.",
+ "focus": [
+  [
+   "Parallel twin",
+   "Air or liquid"
+  ],
+  [
+   "Carb or EFI",
+   "Early or late"
+  ],
+  [
+   "High pipes",
+   "Heat shields"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Charging",
+   "Alternator recalls"
+  ]
+ ],
+ "remove": [],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2019-2020 Street Scramblers are in recall 20V472 (misrouted harness). 2022 Street Scramblers and 2023-2024 Scrambler 900s are in recalls 24V785 and 26V078 (alternator wiring).",
+   "reason": "Every fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "G": [
+   "2006-2007 bikes have carbs. Later ones are fuel injected. Skip the steps that don't match."
+  ],
+  "H": [
+   "2006-2016 bikes are air/oil-cooled and have no coolant to change."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "20V472",
+   "years": "2019-2020 Street Scrambler",
+   "what": "Wiring harness may be misrouted and get damaged against the headstock.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehiclesafetyrecalls.com/recall/20V472000"
+  },
+  {
+   "id": "24V785",
+   "years": "2022 Street models, 2022-2024 Bonnevilles, 2023-2024 Scrambler 900 and Speed Twin 900 (some)",
+   "what": "Alternator wiring may short and overheat.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehiclesafetyrecalls.com/recall/24V785000"
+  },
+  {
+   "id": "26V078",
+   "years": "2022 Street models, 2022-2024 Bonnevilles, 2023-2024 Scrambler 900 and Speed Twin 900 (some)",
+   "what": "Alternator or regulator problem on the same range of bikes.",
+   "fix": "Free dealer repair.",
+   "src": "https://static.nhtsa.gov/odi/rcl/2026/RCAK-26V078-6564.pdf"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "silhouette": "triumph-scrambler-900-1200-2006",
+ "areas": [],
+ "heroName": "SCRAMBLER",
+ "hero": {
+  "src": "img/hero/triumph-scrambler-900-1200-2006.jpg",
+  "artist": "Rouv1505",
+  "page": "https://commons.wikimedia.org/wiki/File:Triumph-Scrambler-1200XE_(MY24).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

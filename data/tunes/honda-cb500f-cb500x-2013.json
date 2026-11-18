@@ -1,0 +1,91 @@
+{
+ "id": "honda-cb500f-cb500x-2013",
+ "make": "Honda",
+ "model": "CB500F / CB500X",
+ "name": "Honda CB500F / CB500X",
+ "years": [
+  2013,
+  2026
+ ],
+ "match": [
+  "cb500f",
+  "cb500x",
+  "cb 500f",
+  "cb 500x",
+  "cb500",
+  "nx500"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "471 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "Honda's light 500 twin. Several model years have recalls, from rocker arm bolts to the ABS unit.",
+ "focus": [
+  [
+   "471 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Recalls",
+   "Several years"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Valves",
+   "Shim type"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Early 2013 CB500X bikes are in recall 14V056 (rocker arm shaft bolts). 2014-2015 bikes are in recall 15V439 (starter relay). Some 2019-2020 CB500X ABS bikes are in recall 21V690 (ABS modulator leak). Some 2020-2021 bikes are in recall 21V382 (rear reflector).",
+   "reason": "Each fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "14V056",
+   "years": "2013 (Apr-Jul build)",
+   "what": "Rocker arm shaft retaining bolts may loosen.",
+   "fix": "Dealer replaces the bolts free.",
+   "src": "https://auto-recalls.justia.com/honda/cb500x/2013/14v056000"
+  },
+  {
+   "id": "15V439",
+   "years": "2014-2015",
+   "what": "Starter relay switch problem.",
+   "fix": "Dealer replaces the starter relay free.",
+   "src": "https://recallcheck.net/recall/15V439000"
+  },
+  {
+   "id": "21V690",
+   "years": "2019-2020 CB500X ABS (some)",
+   "what": "Excess grease in the ABS modulator can trap debris and leak brake fluid.",
+   "fix": "Free dealer repair.",
+   "src": "https://auto-recalls.justia.com/honda/cb500x/2020/21v690000"
+  },
+  {
+   "id": "21V382",
+   "years": "2020-2021 (some)",
+   "what": "Rear reflector lens may be too dim to meet the lighting standard.",
+   "fix": "Dealer replaces the rear reflector free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/21V382000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "silhouette": "honda-cb500f-cb500x-2013",
+ "areas": [],
+ "heroName": "CB500X"
+}

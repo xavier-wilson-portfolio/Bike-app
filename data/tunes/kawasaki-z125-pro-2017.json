@@ -1,0 +1,74 @@
+{
+ "id": "kawasaki-z125-pro-2017",
+ "make": "Kawasaki",
+ "model": "Z125 Pro",
+ "name": "Kawasaki Z125 Pro",
+ "years": [
+  2017,
+  2022
+ ],
+ "match": [
+  "z125 pro",
+  "z 125",
+  "br125",
+  "z125 pro krt"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "125 cc air-cooled single, fuel injected",
+ "intro": "Kawasaki's mini bike. 2017-2018 bikes have shock and ECU recalls.",
+ "focus": [
+  [
+   "125 cc single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carb"
+  ],
+  [
+   "ECU recall",
+   "2017-2018"
+  ],
+  [
+   "Shock recall",
+   "2017"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2017 bikes are in recall 16V535 (rear shock may leak). 2017-2018 bikes are in recall 17V774 (ECU setting can stall the engine).",
+   "reason": "Both fixes are free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "16V535",
+   "years": "2017 (Feb-Jun 2016 build)",
+   "what": "Rear shock may leak oil and lose damping.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehiclesafetyrecalls.com/recall/16V535000"
+  },
+  {
+   "id": "17V774",
+   "years": "2017-2018",
+   "what": "ECU fuel injection setting can stall the engine at small throttle openings.",
+   "fix": "Dealer fits a new ECU free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/17V774000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "Z125 PRO"
+}

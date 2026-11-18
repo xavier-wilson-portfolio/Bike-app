@@ -1,0 +1,112 @@
+{
+ "id": "indian-scout-2015",
+ "make": "Indian",
+ "model": "Scout (liquid-cooled)",
+ "name": "Indian Scout (2015-on)",
+ "years": [
+  2015,
+  2026
+ ],
+ "match": [
+  "indian scout",
+  "scout",
+  "scout sixty",
+  "scout bobber",
+  "scout rogue",
+  "scout 101",
+  "scout bobber twenty"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "999 or 1133 cc liquid-cooled V-twin, fuel injected, belt drive",
+ "intro": "Indian's liquid-cooled Scout. Several brake and fuel pump recalls across the years.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Brake recalls",
+   "Several years"
+  ],
+  [
+   "Belt drive",
+   "Check for cracks"
+  ],
+  [
+   "Cooling",
+   "Hoses and fan"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls first",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2015 bikes are in recall 15V142 (rear brake master cylinder). 2017-2018 bikes are in recall 18V416 (air in the ABS). 2015-2019 bikes with an accessory brake lever may be in recall 19E007. 2021-2022 bikes are in recall 22V837 (fuel pump). 2025 bikes are in recall 24V970 (false neutral on the display).",
+   "reason": "Brake and fuel pump faults are crash risks. Every fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "15V142",
+   "years": "2015 (some)",
+   "what": "Rear brake master cylinder problem can reduce or remove rear braking.",
+   "fix": "Dealer inspects and replaces the rear master cylinder free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/15V142000"
+  },
+  {
+   "id": "18V416",
+   "years": "2017-2018",
+   "what": "Air may be left in the ABS after assembly, reducing braking.",
+   "fix": "Free dealer repair.",
+   "src": "https://www.motorcyclepowersportsnews.com/indian-motorcycle-to-recall-certain-scout-motorcycles/"
+  },
+  {
+   "id": "19E007",
+   "years": "2015-2019 with accessory brake lever",
+   "what": "Accessory brake lever adjuster set wrong can make the front brake drag.",
+   "fix": "Free dealer repair.",
+   "src": "https://auto-recalls.justia.com/indian/scout/2015/19e007000"
+  },
+  {
+   "id": "22V837",
+   "years": "2021-2022",
+   "what": "Fuel pump can fail and stall the engine.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehicleflaws.com/recall/22V837000"
+  },
+  {
+   "id": "24V970",
+   "years": "2025",
+   "what": "Display may show neutral when the bike is in gear.",
+   "fix": "Free dealer software update.",
+   "src": "https://www.vehiclesafetyrecalls.com/recall/24V970000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "HDForums",
+   "url": "https://www.hdforums.com/",
+   "what": "Large V-twin owner forum."
+  }
+ ],
+ "silhouette": "indian-scout-2015",
+ "areas": [],
+ "heroName": "SCOUT",
+ "hero": {
+  "src": "img/hero/indian-scout-2015.jpg",
+  "artist": "Kawijock",
+  "page": "https://commons.wikimedia.org/wiki/File:2015_Indian_Scout_1.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

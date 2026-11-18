@@ -1,0 +1,95 @@
+{
+ "id": "suzuki-tl1000s-1997",
+ "make": "Suzuki",
+ "model": "TL1000S",
+ "name": "Suzuki TL1000S",
+ "years": [
+  1997,
+  2001
+ ],
+ "match": [
+  "tl1000s",
+  "tl 1000s",
+  "tl1000",
+  "tls"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "996 cc liquid-cooled 90-degree V-twin, fuel injected, rotary rear damper",
+ "intro": "Suzuki's big V-twin sport bike. 1997 bikes had a steering recall. The rotary rear damper is the part to look at.",
+ "focus": [
+  [
+   "996 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Early EFI"
+  ],
+  [
+   "Rotary damper",
+   "Rear suspension"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 1997 TL1000S bikes are in recall 97V093 for a steering and handlebar part.",
+   "reason": "The fix is free if it was never done."
+  }
+ },
+ "add": [
+  {
+   "id": "X-TLS-01",
+   "phase": "L",
+   "after": "L-001",
+   "title": "Check the rear rotary damper",
+   "instructions": "With the bike on a stand, look for oil at the rotary damper beside the shock spring and feel for damping when you push down on the rear. A leaking or dead damper needs rebuilding or replacing.",
+   "reason": "The TL1000S uses a separate rotary damper instead of a normal shock, and old ones leak.",
+   "src": "TL1000S layout",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "97V093",
+   "years": "1997",
+   "what": "Steering and handlebar component problem.",
+   "fix": "Free dealer repair.",
+   "src": "https://auto-recalls.justia.com/suzuki/tl1000sv/1997/97v093000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "TLZone",
+   "url": "https://www.tlzone.net/",
+   "what": "Owner forum for the TL1000S and TL1000R."
+  }
+ ],
+ "silhouette": "suzuki-tl1000s-1997",
+ "areas": [],
+ "heroName": "TL1000S",
+ "hero": {
+  "src": "img/hero/suzuki-tl1000s-1997.jpg",
+  "artist": "Cjp24",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_TL1000S,_red.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

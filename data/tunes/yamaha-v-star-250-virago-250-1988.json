@@ -1,0 +1,69 @@
+{
+ "id": "yamaha-v-star-250-virago-250-1988",
+ "make": "Yamaha",
+ "model": "V Star 250 / Virago 250",
+ "name": "Yamaha V Star 250 / Virago 250",
+ "years": [
+  1988,
+  2021
+ ],
+ "match": [
+  "v star 250",
+  "vstar 250",
+  "virago 250",
+  "xv250",
+  "route 66",
+  "v-star 250"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "249 cc air-cooled V-twin, single carb",
+ "intro": "A small, simple V-twin cruiser. One carb and chain drive. Most problems come from sitting.",
+ "focus": [
+  [
+   "249 cc V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Single carb",
+   "Clean it out"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Fuel petcock",
+   "Vacuum type"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. A small number of 2019 V Star 250s are in recall 20V212 because an oil passage in the engine side cover may not be drilled.",
+   "reason": "Without that passage the engine can starve of oil and seize. The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "20V212",
+   "years": "2019 (17 bikes)",
+   "what": "An oil passage in the right engine cover may not be machined, starving the engine of oil.",
+   "fix": "Dealer inspects and replaces the engine side cover free.",
+   "src": "https://www.clearvin.com/car-recalls/yamaha/xv250/2019/"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "V STAR 250"
+}

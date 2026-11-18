@@ -1,0 +1,75 @@
+{
+ "id": "yamaha-v-star-1300-2007",
+ "make": "Yamaha",
+ "model": "V Star 1300",
+ "name": "Yamaha V Star 1300",
+ "years": [
+  2007,
+  2017
+ ],
+ "match": [
+  "v star 1300",
+  "vstar 1300",
+  "xvs1300",
+  "xvs13",
+  "v star 1300 tourer",
+  "v-star 1300",
+  "v star 1300 deluxe"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "1304 cc liquid-cooled V-twin, fuel injected, belt drive",
+ "intro": "Yamaha's liquid-cooled Star cruiser. Some 2007 bikes are in a fuel pipe recall.",
+ "focus": [
+  [
+   "1304 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Fuel pipe recall",
+   "2007"
+  ],
+  [
+   "Belt drive",
+   "Tension and wear"
+  ],
+  [
+   "Cooling",
+   "Hoses and fan"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls first",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2007 V Star 1300s are in recall 11V533 because the fuel delivery pipe may leak.",
+   "reason": "A fuel leak near a hot engine is a fire risk. The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "11V533",
+   "years": "2007 V Star 1300 and 2009-2012 V Star 950 (some)",
+   "what": "The fuel delivery pipe may not seal and can leak fuel.",
+   "fix": "Dealer replaces the fuel delivery pipe free.",
+   "src": "https://static.nhtsa.gov/odi/rcl/2011/RCAK-11V533-7841.pdf"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "Star Bike Forum",
+   "url": "https://www.starbikeforum.com/",
+   "what": "Owner forum for Yamaha Star cruisers."
+  }
+ ],
+ "heroName": "V STAR 1300"
+}

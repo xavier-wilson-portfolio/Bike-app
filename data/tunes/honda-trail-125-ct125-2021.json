@@ -1,0 +1,78 @@
+{
+ "id": "honda-trail-125-ct125-2021",
+ "make": "Honda",
+ "model": "Trail 125 (CT125)",
+ "name": "Honda Trail 125 (CT125)",
+ "years": [
+  2021,
+  2026
+ ],
+ "match": [
+  "ct125",
+  "trail 125",
+  "ct 125",
+  "ct125a",
+  "hunter cub"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "125 cc air-cooled single, fuel injected, semi-automatic gearbox",
+ "intro": "Honda's modern trail bike. Some 2021 bikes have a gearshift pedal recall.",
+ "focus": [
+  [
+   "125 cc single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Shift pedal recall",
+   "2021"
+  ],
+  [
+   "Semi-auto",
+   "No clutch lever"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004",
+  "H-005"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2021 bikes are in recall 21V804 because the gearshift pedal weld can fail.",
+   "reason": "A broken shift pedal leaves you stuck in gear. The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "21V804",
+   "years": "2021 (some)",
+   "what": "The gearshift pedal arm weld may fail and the pedal may break off.",
+   "fix": "Dealer replaces the gearshift pedal assembly free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/21V804000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "silhouette": "honda-trail-125-ct125-2021",
+ "areas": [],
+ "heroName": "TRAIL 125",
+ "hero": {
+  "src": "img/hero/honda-trail-125-ct125-2021.jpg",
+  "artist": "Brenoleary",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CT125.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

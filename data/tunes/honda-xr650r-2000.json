@@ -1,0 +1,61 @@
+{
+ "id": "honda-xr650r-2000",
+ "make": "Honda",
+ "model": "XR650R",
+ "name": "Honda XR650R",
+ "years": [
+  2000,
+  2007
+ ],
+ "match": [
+  "xr650r",
+  "xr 650r",
+  "big red pig",
+  "brp"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "649 cc liquid-cooled single, carb",
+ "intro": "The Big Red Pig. A liquid-cooled 650 single built for the desert, with a carb and a big appetite for valve checks.",
+ "focus": [
+  [
+   "649 cc single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Check often"
+  ],
+  [
+   "Cooling",
+   "Hoses and radiators"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Owner forum for four-stroke dirt and dual-sport bikes."
+  }
+ ],
+ "silhouette": "honda-xr650r-2000",
+ "areas": [],
+ "heroName": "XR650R"
+}

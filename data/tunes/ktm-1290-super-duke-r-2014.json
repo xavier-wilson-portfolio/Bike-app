@@ -1,0 +1,104 @@
+{
+ "id": "ktm-1290-super-duke-r-2014",
+ "make": "KTM",
+ "model": "1290 Super Duke R",
+ "name": "KTM 1290 Super Duke R",
+ "years": [
+  2014,
+  2026
+ ],
+ "match": [
+  "1290 super duke",
+  "super duke r",
+  "1290 super duke r",
+  "super duke 1290",
+  "sdr",
+  "1290 super duke evo"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "1301 cc liquid-cooled LC8 V-twin, fuel injected",
+ "intro": "KTM's big V-twin naked bike. Several recalls, from a 2014 fuel tank to 2020-2022 wiring.",
+ "focus": [
+  [
+   "1301 cc V-twin",
+   "LC8"
+  ],
+  [
+   "Fuel injected",
+   "Ride-by-wire"
+  ],
+  [
+   "Recalls",
+   "Several years"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Brakes",
+   "Master cylinder recall"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls first",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2014 bikes are in recall 15V441 (fuel tank inserts can leak). 2015-2018 bikes are in recall 18V033 (front brake master cylinder piston can crack). 2020 bikes are in recall 21V122 and 2020-2022 bikes in recall 22V900 (wiring harness can short).",
+   "reason": "Fuel leaks and brake failures are serious. Every fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "15V441",
+   "years": "2014",
+   "what": "Fuel may leak from the threaded inserts at the back of the tank.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehiclesafetyrecalls.com/recall/15V441000"
+  },
+  {
+   "id": "18V033",
+   "years": "2015-2018 (some)",
+   "what": "Front brake master cylinder piston may crack.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehiclesafetyrecalls.com/recall/18V033000"
+  },
+  {
+   "id": "21V122",
+   "years": "2020 (some)",
+   "what": "Rear wiring harness may be routed wrong and short-circuit.",
+   "fix": "Dealer inspects and repairs the harness free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/21V122000"
+  },
+  {
+   "id": "22V900",
+   "years": "2020-2022",
+   "what": "Main wiring harness may be misrouted or missing parts and short, stalling the engine.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehiclesafetyrecalls.com/recall/22V900000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "KTM Forums",
+   "url": "https://www.ktmforums.com/",
+   "what": "Owner forum for KTM street and adventure bikes."
+  }
+ ],
+ "silhouette": "ktm-1290-super-duke-r-2014",
+ "areas": [],
+ "heroName": "SUPER DUKE",
+ "hero": {
+  "src": "img/hero/ktm-1290-super-duke-r-2014.jpg",
+  "artist": "TheRealSlimShadyUK",
+  "page": "https://commons.wikimedia.org/wiki/File:Image_KTM_1290_R.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

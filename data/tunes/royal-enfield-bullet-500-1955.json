@@ -1,0 +1,93 @@
+{
+ "id": "royal-enfield-bullet-500-1955",
+ "make": "Royal Enfield",
+ "model": "Bullet 350 / 500",
+ "name": "Royal Enfield Bullet",
+ "years": [
+  1955,
+  2020
+ ],
+ "match": [
+  "bullet",
+  "bullet 500",
+  "bullet 350",
+  "royal enfield bullet",
+  "bullet electra",
+  "bullet g5",
+  "bullet c5",
+  "bullet military",
+  "enfield bullet"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "346 or 499 cc air-cooled pushrod single, carb (iron barrel and AVL) or fuel injected (UCE, 2009-on)",
+ "intro": "The long-running Indian-built Bullet. Early iron-barrel engines, then the AVL lean-burn engine, then the fuel-injected UCE from 2009.",
+ "focus": [
+  [
+   "Pushrod single",
+   "Air-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Depends on year"
+  ],
+  [
+   "Engine type",
+   "Iron, AVL or UCE"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Electrics",
+   "Old wiring"
+  ]
+ ],
+ "remove": [
+  "H-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2009 Bullet G5 Classic EFI bikes are in recall 09V235 (clutch).",
+   "reason": "The fix is free if it was never done."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "A": [
+   "Work out which engine you have first: iron barrel, AVL or UCE. Parts don't swap between them."
+  ],
+  "G": [
+   "Bikes before 2009 have a carb. UCE bikes are fuel injected. Skip the steps that don't match."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "09V235",
+   "years": "2009 Bullet G5 Classic EFI (some)",
+   "what": "Clutch assembly problem.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehicleflaws.com/recall/24V713000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with Royal Enfield owner threads."
+  }
+ ],
+ "silhouette": "royal-enfield-bullet-500-1955",
+ "areas": [],
+ "heroName": "BULLET",
+ "hero": {
+  "src": "img/hero/royal-enfield-bullet-500-1955.jpg",
+  "artist": "Axxter99",
+  "page": "https://commons.wikimedia.org/wiki/File:Royal_Enfield_Bullet_500,_Cape_Town.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

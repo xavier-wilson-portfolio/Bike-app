@@ -1,0 +1,65 @@
+{
+ "id": "moto-guzzi-850-le-mans-1976",
+ "make": "Moto Guzzi",
+ "model": "850 Le Mans",
+ "name": "Moto Guzzi 850 Le Mans",
+ "years": [
+  1976,
+  1993
+ ],
+ "match": [
+  "850 le mans",
+  "le mans 850",
+  "le mans 1000",
+  "le mans ii",
+  "le mans iii"
+ ],
+ "style": "sport",
+ "drive": "shaft",
+ "engine": "844 or 949 cc air-cooled transverse V-twin, two carbs, shaft drive",
+ "intro": "Guzzi's classic sport twin. Big Dell'Orto carbs, linked brakes and a shaft drive.",
+ "focus": [
+  [
+   "Transverse V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Dell'Orto carbs",
+   "Sync them"
+  ],
+  [
+   "Linked brakes",
+   "Check the valve"
+  ],
+  [
+   "Shaft drive",
+   "Change the oil"
+  ],
+  [
+   "Points ignition",
+   "Gap and timing"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "K": [
+   "The foot pedal works the rear and one front brake together. Bleed and check the system as a whole."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moto Guzzi National Owners Club",
+   "url": "https://www.mgnoc.org/",
+   "what": "US owner club for Moto Guzzi."
+  }
+ ],
+ "heroName": "LE MANS"
+}

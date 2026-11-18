@@ -10,9 +10,7 @@
  "match": [
   "interceptor",
   "interceptor 650",
-  "int 650",
-  "continental gt 650",
-  "continental gt"
+  "int 650"
  ],
  "style": "standard",
  "drive": "chain",

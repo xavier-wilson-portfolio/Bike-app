@@ -1,0 +1,70 @@
+{
+ "id": "yamaha-xt225-serow-1992",
+ "make": "Yamaha",
+ "model": "XT225 / Serow 225",
+ "name": "Yamaha XT225 (Serow)",
+ "years": [
+  1992,
+  2007
+ ],
+ "match": [
+  "xt225",
+  "xt 225",
+  "serow",
+  "serow 225",
+  "xt250 serow"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "223 cc air-cooled single, carb",
+ "intro": "A light, simple trail bike. Air-cooled, one carb, and easy to keep running.",
+ "focus": [
+  [
+   "223 cc single",
+   "Air-cooled"
+  ],
+  [
+   "Single carb",
+   "Clean it out"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Electric start",
+   "Check battery"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Owner forum for four-stroke dirt and dual-sport bikes."
+  }
+ ],
+ "silhouette": "yamaha-xt225-serow-1992",
+ "areas": [],
+ "heroName": "XT225",
+ "hero": {
+  "src": "img/hero/yamaha-xt225-serow-1992.jpg",
+  "artist": "Kuro8124",
+  "page": "https://commons.wikimedia.org/wiki/File:YAMAHA_XT225_SEROW_%2785.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

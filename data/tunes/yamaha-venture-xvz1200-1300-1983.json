@@ -1,0 +1,66 @@
+{
+ "id": "yamaha-venture-xvz1200-1300-1983",
+ "make": "Yamaha",
+ "model": "Venture XVZ1200 / XVZ1300",
+ "name": "Yamaha Venture (XVZ12 / XVZ13)",
+ "years": [
+  1983,
+  1993
+ ],
+ "match": [
+  "venture",
+  "xvz1200",
+  "xvz1300",
+  "venture royale",
+  "xvz12",
+  "xvz13",
+  "yamaha venture"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "engine": "1198 or 1294 cc liquid-cooled V4, four carbs, shaft drive",
+ "intro": "Yamaha's first big V4 tourer. Four carbs in the V, a lot of plastic, and a shaft drive.",
+ "focus": [
+  [
+   "V4",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "In the V"
+  ],
+  [
+   "Shaft drive",
+   "Spline lube"
+  ],
+  [
+   "Cooling",
+   "Hoses and fan"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "The carbs sit in the V of the engine. Plan for the time it takes to get to them, and rebuild them as a set."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Venture Riders International",
+   "url": "https://www.ventureriders.org/",
+   "what": "Owner club for Yamaha Ventures."
+  }
+ ],
+ "heroName": "VENTURE"
+}

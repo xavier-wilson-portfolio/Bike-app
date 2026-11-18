@@ -1,0 +1,56 @@
+{
+ "id": "suzuki-gz250-1999",
+ "make": "Suzuki",
+ "model": "GZ250 Marauder",
+ "name": "Suzuki GZ250",
+ "years": [
+  1999,
+  2011
+ ],
+ "match": [
+  "gz250",
+  "gz 250",
+  "marauder 250",
+  "gz250 marauder"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "249 cc air-cooled single, carb",
+ "intro": "A small, light single-cylinder cruiser. One carb and chain drive. Old fuel is the usual problem.",
+ "focus": [
+  [
+   "249 cc single",
+   "Air-cooled"
+  ],
+  [
+   "Single carb",
+   "Clean it out"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Drum rear brake",
+   "Shoes and cable"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [],
+ "silhouette": "suzuki-gz250-1999",
+ "areas": [],
+ "heroName": "GZ250"
+}

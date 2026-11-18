@@ -1,0 +1,59 @@
+{
+ "id": "kawasaki-vulcan-750-1985",
+ "make": "Kawasaki",
+ "model": "Vulcan 750",
+ "name": "Kawasaki Vulcan 750 (VN750)",
+ "years": [
+  1985,
+  2006
+ ],
+ "match": [
+  "vulcan 750",
+  "vn750",
+  "vn 750",
+  "vulcan750"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "749 cc liquid-cooled DOHC V-twin, two carbs, shaft drive",
+ "intro": "A long-running shaft-drive Vulcan. Two carbs and an engine that mostly needs basic care.",
+ "focus": [
+  [
+   "749 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Shaft drive",
+   "Change the oil"
+  ],
+  [
+   "Cooling",
+   "Hoses and fan"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vulcan Riders Association",
+   "url": "https://www.vulcanriders.org/",
+   "what": "Owner club for Kawasaki Vulcans."
+  }
+ ],
+ "heroName": "VULCAN 750"
+}

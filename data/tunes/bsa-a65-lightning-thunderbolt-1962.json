@@ -1,0 +1,83 @@
+{
+ "id": "bsa-a65-lightning-thunderbolt-1962",
+ "make": "BSA",
+ "model": "A65 Lightning / Thunderbolt",
+ "name": "BSA A65 (Lightning, Thunderbolt, Spitfire)",
+ "years": [
+  1962,
+  1972
+ ],
+ "match": [
+  "a65",
+  "bsa a65",
+  "lightning",
+  "thunderbolt",
+  "spitfire",
+  "firebird scrambler",
+  "bsa lightning",
+  "bsa thunderbolt",
+  "a50"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "654 cc air-cooled OHV unit-construction parallel twin, one or two Amal carbs, points ignition",
+ "intro": "BSA's unit 650 twin. Amal carbs, points, Lucas electrics and a timing-side main bearing that needs checking.",
+ "focus": [
+  [
+   "650 twin",
+   "Air-cooled"
+  ],
+  [
+   "Amal carbs",
+   "Wear in the slides"
+  ],
+  [
+   "Points ignition",
+   "Gap and timing"
+  ],
+  [
+   "Timing-side bush",
+   "Check it"
+  ],
+  [
+   "Electrics",
+   "Lucas"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-A65-01",
+   "phase": "B",
+   "after": "B-004",
+   "title": "Check the bottom end before a full rebuild",
+   "instructions": "Check oil pressure and listen for knocking at the timing side. Ask about the timing-side main bush and whether it has been converted to a bearing.",
+   "reason": "The A65's timing-side plain bush is a known weak point when worn.",
+   "src": "Classic BSA practice",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 1.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "G": [
+   "Lightnings run twin Amals. Thunderbolts run one. Check what you have before buying parts."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BSA Owners Club",
+   "url": "https://www.bsaoc.org/",
+   "what": "Club for BSA owners."
+  }
+ ],
+ "heroName": "A65"
+}

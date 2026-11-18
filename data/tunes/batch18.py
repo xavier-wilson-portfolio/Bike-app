@@ -62,7 +62,7 @@ B18.append(dict(id="suzuki-t500-titan-1968", make="Suzuki", model="T500 Titan", 
   known=[dict(title="Gearbox oil", what="Suzuki raised the oil capacity from 1200cc to 1400cc to stop early 4th and 5th gear failures.", src="https://mail.oldjapanesebikes.com/1968_T500/page-2")],
   forums=[]))
 
-for i, m, n, st, mt, y in [("harley-davidson-electra-glide-1999", "Electra Glide (Twin Cam)", "ELECTRA GLIDE", "touring", ["electra glide", "flht", "flhtc", "flhtcu", "ultra classic", "street glide", "flhx"], [1999, 2016]),
+for i, m, n, st, mt, y in [("harley-davidson-electra-glide-1999", "Electra Glide (Twin Cam)", "ELECTRA GLIDE", "touring", ["electra glide", "flht", "flhtc", "flhtcu", "ultra classic"], [1999, 2016]),
                            ("harley-davidson-road-king-1999", "Road King (Twin Cam)", "ROAD KING", "touring", ["road king", "flhr", "flhrc", "flhrs"], [1999, 2016]),
                            ("harley-davidson-fat-boy-2000", "Fat Boy (Twin Cam)", "FAT BOY", "cruiser", ["fat boy", "flstf", "flstfb", "fat boy lo"], [2000, 2017]),
                            ("harley-davidson-heritage-softail-2000", "Heritage Softail (Twin Cam)", "HERITAGE", "cruiser", ["heritage softail", "heritage classic", "flstc", "flst"], [2000, 2017])]:
@@ -71,7 +71,7 @@ for i, m, n, st, mt, y in [("harley-davidson-electra-glide-1999", "Electra Glide
       intro="A Twin Cam Harley. On 1999-2006 bikes, check the cam chain tensioner shoes before anything else.",
       focus=[["Twin Cam V-twin", "88, 96 or 103"], ["Carb or EFI", "Depends on year"], ["Cam tensioners", "1999-2006"], ["Belt drive", "Check for cracks"], ["Charging", "Stator and R/R"]],
       remove=AIR, patch={}, add=[TC_STEP], lessons=TC_LESSON,
-      recalls=[], recallNote=VIN, known=[TC_KNOWN], forums=[FMH2]))
+      recalls=[], recallNote="Harley-Davidson has issued several recalls that touch these years. Run your VIN at nhtsa.gov/recalls before you start.", known=[TC_KNOWN], forums=[FMH2]))
 
 B18.append(dict(id="harley-davidson-street-750-2015", make="Harley-Davidson", model="Street 750", name="Harley-Davidson Street 750", years=[2015, 2020],
   match=["street 750", "xg750", "street rod", "xg750a", "street 500", "xg500"], style="cruiser", drive="belt",

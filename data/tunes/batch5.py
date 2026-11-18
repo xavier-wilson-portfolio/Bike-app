@@ -5,7 +5,7 @@ KZR = dict(name="KZRider forum", url="https://www.kzrider.com/", what="Owner for
 TRI = dict(name="Kawasaki Triples forum", url="https://www.tapatalk.com/groups/kawasakitriples/", what="Owner forum for Kawasaki two-stroke triples.")
 
 B5.append(dict(id="kawasaki-kz1000-1977", make="Kawasaki", model="KZ1000", name="Kawasaki KZ1000", years=[1977, 1980],
-  match=["kz1000", "kz 1000", "z1000 1977", "kz1000a", "kz1000 ltd"], style="standard", drive="chain",
+  match=["kz1000", "kz 1000", "z1000 1977", "kz1000a"], style="standard", drive="chain",
   engine="1,015 cc air-cooled DOHC inline four, four carbs",
   intro="The Z1's bigger brother. A tough engine; most trouble comes from past owners and tired charging parts.",
   focus=[["1,015 cc DOHC four", "Air-cooled"], ["Four carbs", "Rebuild as a set"], ["Charging", "Separate regulator and rectifier"], ["Past owner work", "Check every fastener"], ["Chain drive", "Sprockets and chain"]],

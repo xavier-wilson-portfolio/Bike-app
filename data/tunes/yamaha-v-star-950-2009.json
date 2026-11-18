@@ -1,0 +1,83 @@
+{
+ "id": "yamaha-v-star-950-2009",
+ "make": "Yamaha",
+ "model": "V Star 950",
+ "name": "Yamaha V Star 950",
+ "years": [
+  2009,
+  2017
+ ],
+ "match": [
+  "v star 950",
+  "vstar 950",
+  "xvs95",
+  "v star 950 tourer",
+  "v-star 950"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "942 cc air-cooled V-twin, fuel injected, belt drive",
+ "intro": "A mid-size fuel-injected Star cruiser. Some 2009-2012 bikes are in a fuel pipe recall.",
+ "focus": [
+  [
+   "942 cc V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Fuel pipe recall",
+   "2009-2012"
+  ],
+  [
+   "Belt drive",
+   "Tension and wear"
+  ],
+  [
+   "Valves",
+   "Check on time"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls first",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2009-2012 V Star 950s are in recall 11V533 because the fuel delivery pipe may leak.",
+   "reason": "A fuel leak near a hot engine is a fire risk. The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "11V533",
+   "years": "2007 V Star 1300 and 2009-2012 V Star 950 (some)",
+   "what": "The fuel delivery pipe may not seal and can leak fuel.",
+   "fix": "Dealer replaces the fuel delivery pipe free.",
+   "src": "https://static.nhtsa.gov/odi/rcl/2011/RCAK-11V533-7841.pdf"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "Star Bike Forum",
+   "url": "https://www.starbikeforum.com/",
+   "what": "Owner forum for Yamaha Star cruisers."
+  }
+ ],
+ "silhouette": "yamaha-v-star-950-2009",
+ "areas": [],
+ "heroName": "V STAR 950",
+ "hero": {
+  "src": "img/hero/yamaha-v-star-950-2009.jpg",
+  "artist": "WherePlochny",
+  "page": "https://commons.wikimedia.org/wiki/File:V-Star_950_1.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

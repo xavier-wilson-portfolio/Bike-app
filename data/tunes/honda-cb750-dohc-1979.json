@@ -1,0 +1,90 @@
+{
+ "id": "honda-cb750-dohc-1979",
+ "make": "Honda",
+ "model": "CB750 DOHC",
+ "name": "Honda CB750 DOHC",
+ "years": [
+  1979,
+  1983
+ ],
+ "match": [
+  "cb750 dohc",
+  "cb750k",
+  "cb750f",
+  "cb750c",
+  "cb750 custom",
+  "cb750 super sport",
+  "cb750k ltd",
+  "cb750 1980",
+  "cb750 1981",
+  "cb750 1982"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "749 cc air-cooled DOHC 16-valve inline four, four carbs",
+ "intro": "The twin-cam CB750 that replaced the SOHC. The primary chain tensioner and the cam chain tensioner are the parts to check.",
+ "focus": [
+  [
+   "749 cc DOHC four",
+   "Air-cooled, 16 valves"
+  ],
+  [
+   "Four carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "Primary tensioner",
+   "Wheels wear"
+  ],
+  [
+   "Cam chain",
+   "Manual tensioner"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-CBD-01",
+   "phase": "B",
+   "after": "B-004",
+   "title": "Listen for a knock low in the engine",
+   "instructions": "Start it cold and listen near the starter motor area. A knock there can be a worn primary chain tensioner. Drop the oil pan and look for pieces of the tensioner wheels.",
+   "reason": "Worn primary chain tensioners are a known DOHC CB750 problem, and the parts are hard to find new.",
+   "src": "cb750.com forum",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Primary chain tensioner",
+   "what": "Owners report knocking near the starter from a worn primary chain tensioner. Parts are no longer sold by Honda.",
+   "src": "https://www.cb750.com/goto/post?id=13801"
+  }
+ ],
+ "forums": [
+  {
+   "name": "CB750.com",
+   "url": "https://www.cb750.com/",
+   "what": "Owner forum for SOHC and DOHC CB750s."
+  }
+ ],
+ "heroName": "CB750"
+}

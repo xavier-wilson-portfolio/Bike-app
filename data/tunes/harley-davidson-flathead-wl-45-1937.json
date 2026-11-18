@@ -1,0 +1,92 @@
+{
+ "id": "harley-davidson-flathead-wl-45-1937",
+ "make": "Harley-Davidson",
+ "model": "WL 45 Flathead",
+ "name": "Harley-Davidson WL 45 Flathead",
+ "years": [
+  1937,
+  1952
+ ],
+ "match": [
+  "wl",
+  "wla",
+  "wl45",
+  "45 flathead",
+  "flathead 45",
+  "wlc",
+  "wr",
+  "liberator"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "45 cubic inch (750 cc) air-cooled side-valve V-twin, single carb",
+ "intro": "The 45 flathead, including the WLA army bike. Simple side-valve engine, hand shift and foot clutch.",
+ "focus": [
+  [
+   "45 ci flathead",
+   "Side valves"
+  ],
+  [
+   "Single carb",
+   "Linkert type"
+  ],
+  [
+   "Hand shift",
+   "Foot clutch"
+  ],
+  [
+   "6-volt",
+   "Check electrics"
+  ],
+  [
+   "Originality",
+   "Document it"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-WL-01",
+   "phase": "A",
+   "after": "A-002",
+   "title": "Record the engine and frame numbers",
+   "instructions": "Photograph and write down the engine case number. Military WLA bikes and civilian WLs have different number formats.",
+   "reason": "Numbers tell you what the bike really is, which matters for parts and value.",
+   "src": "AMCA guidance",
+   "safety": "Normal",
+   "skill": "Beginner",
+   "estHours": 0.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "H": [
+   "A flathead has its valves in the cylinder. Valve work means lifting the heads and cylinders, not a quick shim check."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "silhouette": "harley-davidson-flathead-wl-45-1937",
+ "areas": [],
+ "heroName": "WL 45",
+ "hero": {
+  "src": "img/hero/harley-davidson-flathead-wl-45-1937.jpg",
+  "artist": "User:Bukvoed",
+  "page": "https://commons.wikimedia.org/wiki/File:AWM-Harley-Davidson-42WLA-1.jpg",
+  "lic": "CC BY 2.5",
+  "licUrl": "https://creativecommons.org/licenses/by/2.5"
+ }
+}

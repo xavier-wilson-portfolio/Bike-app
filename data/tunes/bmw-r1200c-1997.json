@@ -1,0 +1,89 @@
+{
+ "id": "bmw-r1200c-1997",
+ "make": "BMW",
+ "model": "R1200C",
+ "name": "BMW R1200C",
+ "years": [
+  1997,
+  2004
+ ],
+ "match": [
+  "r1200c",
+  "r 1200 c",
+  "r1200 c",
+  "r1200cl",
+  "r1200c montauk",
+  "r1200c independent"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "1170 cc air/oil-cooled boxer twin, fuel injected, shaft drive",
+ "intro": "BMW's boxer cruiser. Shaft drive, Telelever front and the usual oilhead jobs.",
+ "focus": [
+  [
+   "1170 cc boxer",
+   "Air/oil-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Throttle bodies"
+  ],
+  [
+   "Shaft drive",
+   "Splines"
+  ],
+  [
+   "Telelever",
+   "Check ball joint"
+  ],
+  [
+   "Charging",
+   "Check alternator belt"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-BGS-01",
+   "phase": "E",
+   "after": "E-002",
+   "title": "Lube the drive splines",
+   "instructions": "Pull the rear drive and clean and grease the shaft splines with a moly paste. Look for oil in the swingarm.",
+   "reason": "Dry splines wear and fail. Most owners forget to grease them.",
+   "src": "Motoryk R1150GS notes",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 2.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "G": [
+   "Balance the two throttle bodies after any work on them."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "BMW has issued several recalls across these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BMW MOA forum",
+   "url": "https://forums.bmwmoa.org/",
+   "what": "BMW Motorcycle Owners of America forum."
+  }
+ ],
+ "silhouette": "bmw-r1200c-1997",
+ "areas": [],
+ "heroName": "R1200C",
+ "hero": {
+  "src": "img/hero/bmw-r1200c-1997.jpg",
+  "artist": "Alberto Grazi from Milan, Italy",
+  "page": "https://commons.wikimedia.org/wiki/File:BMW_R1200C_Phuket.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

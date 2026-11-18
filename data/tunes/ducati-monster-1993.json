@@ -1,0 +1,116 @@
+{
+ "id": "ducati-monster-1993",
+ "make": "Ducati",
+ "model": "Monster (air-cooled)",
+ "name": "Ducati Monster (air-cooled, 1993-2014)",
+ "years": [
+  1993,
+  2014
+ ],
+ "match": [
+  "monster",
+  "monster 600",
+  "monster 620",
+  "monster 695",
+  "monster 696",
+  "monster 750",
+  "monster 796",
+  "monster 900",
+  "monster 1000",
+  "monster 1100",
+  "monster 1100 evo",
+  "m900",
+  "m600"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "583-1078 cc air-cooled 90-degree L-twin, carbs (early) or fuel injected, belt-driven desmo cams",
+ "intro": "The original naked Ducati. Belt-driven desmo valves, a dry clutch on most, and carbs on early ones.",
+ "focus": [
+  [
+   "Air-cooled L-twin",
+   "Desmo valves"
+  ],
+  [
+   "Carb or EFI",
+   "Depends on year"
+  ],
+  [
+   "Timing belts",
+   "Change by age"
+  ],
+  [
+   "Dry clutch",
+   "Rattle is normal"
+  ],
+  [
+   "Recalls",
+   "Some years"
+  ]
+ ],
+ "remove": [
+  "H-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2009 Monster 696s are in recall 09V142 (wiring harness can touch the head and exhaust). Some 2011-2012 Monster 1100 EVOs are in recall 12V073 (rear rims). Some 2012 Monster 1100 EVO and 796 bikes are in recall 12V188 (rear brake pads).",
+   "reason": "Every fix is free."
+  }
+ },
+ "add": [
+  {
+   "id": "X-DUC-01",
+   "phase": "H",
+   "after": "H-003",
+   "title": "Check the timing belts and desmo valve clearances",
+   "instructions": "Replace the cam timing belts on schedule, by age as well as miles, and check the desmo opening and closing clearances. Old belts can snap and wreck the engine.",
+   "reason": "Ducati belt-drive twins need belts changed on time even if the bike sat.",
+   "src": "Ducati service practice",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 4.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "G": [
+   "Early Monsters have carbs. Later ones are fuel injected. Skip the steps that don't match."
+  ],
+  "H": [
+   "Monsters with Desmodue engines use belts. Change them by age even if the bike barely moved."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "09V142",
+   "years": "2009 Monster 696",
+   "what": "Main wiring harness may touch the vertical cylinder head and exhaust.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehiclesafetyrecalls.com/recall/09V142000"
+  },
+  {
+   "id": "12V073",
+   "years": "2011-2012 Monster 1100 EVO (some)",
+   "what": "Rear rims marked DU6-RR may be faulty.",
+   "fix": "Free dealer repair.",
+   "src": "https://www.motorverso.com/recalls/ducati/12V073000/"
+  },
+  {
+   "id": "12V188",
+   "years": "2012 Monster 1100 EVO and 796 (some)",
+   "what": "Rear brake pads problem.",
+   "fix": "Dealer replaces the rear pads free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/12V188000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "heroName": "MONSTER"
+}

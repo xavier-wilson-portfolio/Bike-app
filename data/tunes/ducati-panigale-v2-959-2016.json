@@ -1,0 +1,98 @@
+{
+ "id": "ducati-panigale-v2-959-2016",
+ "make": "Ducati",
+ "model": "Panigale 959 / V2",
+ "name": "Ducati Panigale 959 / V2",
+ "years": [
+  2016,
+  2026
+ ],
+ "match": [
+  "panigale v2",
+  "panigale 959",
+  "959",
+  "959 panigale",
+  "panigale 899",
+  "899",
+  "v2 panigale"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "955 cc liquid-cooled Superquadro L-twin, fuel injected",
+ "intro": "Ducati's middleweight superbike. A few small recalls, mostly lighting and brakes.",
+ "focus": [
+  [
+   "955 cc L-twin",
+   "Superquadro"
+  ],
+  [
+   "Fuel injected",
+   "Ride-by-wire"
+  ],
+  [
+   "Recalls",
+   "Some years"
+  ],
+  [
+   "Valves",
+   "Desmo service"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2018 959s are in recall 18V480 (rear brake pad friction material). 2020-2023 Panigale V2s are in recall 23V377 (headlight can switch to the DRL at night). Some 2025 V2s are in recall 25V838 (wiring fault that can lock a wheel).",
+   "reason": "Every fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "18V480",
+   "years": "2018 Panigale 959 (some)",
+   "what": "Rear brake pad friction material may come off the backing plate.",
+   "fix": "Free dealer repair.",
+   "src": "https://www.motorverso.com/recalls/ducati/18V480000/"
+  },
+  {
+   "id": "23V377",
+   "years": "2020-2023 Panigale V2",
+   "what": "Dashboard software can switch from low beam to the daytime running light at night.",
+   "fix": "Dealer updates the dashboard software free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/23V377000"
+  },
+  {
+   "id": "25V838",
+   "years": "2025 Panigale V2 (some)",
+   "what": "Fuse and wiring fault that can lock the front or rear wheel.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehiclesafetyrecalls.com/recall/25V838000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "silhouette": "ducati-panigale-v2-959-2016",
+ "areas": [],
+ "heroName": "PANIGALE",
+ "hero": {
+  "src": "img/hero/ducati-panigale-v2-959-2016.jpg",
+  "artist": "Terragio67",
+  "page": "https://commons.wikimedia.org/wiki/File:Ducati_955_Panigale_V2_(IMG_9851).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

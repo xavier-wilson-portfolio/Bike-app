@@ -1,0 +1,83 @@
+{
+ "id": "suzuki-gsx-s750-1000-2015",
+ "make": "Suzuki",
+ "model": "GSX-S750 / GSX-S1000",
+ "name": "Suzuki GSX-S750 / GSX-S1000",
+ "years": [
+  2015,
+  2026
+ ],
+ "match": [
+  "gsx-s750",
+  "gsx-s1000",
+  "gsxs750",
+  "gsxs1000",
+  "gsx-s1000f",
+  "gsx-s1000gt",
+  "katana 2020"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "749 or 999 cc liquid-cooled inline four, fuel injected",
+ "intro": "Suzuki's naked GSX-R based fours. A few small recalls on early and late bikes.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Recalls",
+   "Some years"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Cooling",
+   "Hoses and fan"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2016 GSX-S1000s are in recall 15V788 (front brake calipers). 2018 GSX-S750s are in recall 18V694 (fuel pump o-ring). 2020 and 2024 GSX-S1000S Katanas are in recall 25V505 (headlight).",
+   "reason": "Each fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "15V788",
+   "years": "2016 GSX-S1000 (Jul-Aug 2015 build)",
+   "what": "Front brake calipers may leak brake fluid.",
+   "fix": "Dealer replaces the front calipers free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/15V788000"
+  },
+  {
+   "id": "18V694",
+   "years": "2018 GSX-S750",
+   "what": "Fuel pump o-ring may be twisted and leak fuel.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehiclesafetyrecalls.com/recall/18V694000"
+  },
+  {
+   "id": "25V505",
+   "years": "2020 and 2024 GSX-S1000S",
+   "what": "Headlight upper beam is too bright to meet the lighting standard.",
+   "fix": "Dealer replaces the headlight assembly free.",
+   "src": "https://carcomplaintdata.com/recalls/25v505000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "GSX-S"
+}

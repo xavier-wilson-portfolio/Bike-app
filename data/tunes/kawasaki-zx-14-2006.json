@@ -1,0 +1,91 @@
+{
+ "id": "kawasaki-zx-14-2006",
+ "make": "Kawasaki",
+ "model": "Ninja ZX-14 / ZX-14R",
+ "name": "Kawasaki Ninja ZX-14 / ZX-14R",
+ "years": [
+  2006,
+  2020
+ ],
+ "match": [
+  "zx-14",
+  "zx14",
+  "zx-14r",
+  "zx14r",
+  "zx1400",
+  "ninja zx-14",
+  "zzr1400"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "1352 or 1441 cc liquid-cooled inline four, fuel injected",
+ "intro": "Kawasaki's hyperbike. Early 2006-2007 bikes had frame and fuel pump recalls.",
+ "focus": [
+  [
+   "Big inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Frame recall",
+   "2006-2007"
+  ],
+  [
+   "Cooling",
+   "Hoses and fan"
+  ],
+  [
+   "Chain drive",
+   "Heavy wear"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls first",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2006-2007 bikes are in recall 08V222 (frame can crack). Some 2006 bikes are in recall 06V184 (fuel pump).",
+   "reason": "A cracked frame is a crash risk. Both fixes are free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "08V222",
+   "years": "2006-2007",
+   "what": "Frame may fracture.",
+   "fix": "Free dealer inspection and repair.",
+   "src": "https://vehiclesafetyrecalls.com/recall/08V222000"
+  },
+  {
+   "id": "06V184",
+   "years": "2006 (some)",
+   "what": "Fuel pump problem.",
+   "fix": "Free dealer repair.",
+   "src": "https://auto-recalls.justia.com/kawasaki/zx1400a6f/2006/06v184000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "ZX-14 Owners Association",
+   "url": "https://www.zx14oa.com/",
+   "what": "Owner forum for the ZX-14 and ZX-14R."
+  }
+ ],
+ "silhouette": "kawasaki-zx-14-2006",
+ "areas": [],
+ "heroName": "ZX-14",
+ "hero": {
+  "src": "img/hero/kawasaki-zx-14-2006.jpg",
+  "artist": "PekePON",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_ZZR1400_2006.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

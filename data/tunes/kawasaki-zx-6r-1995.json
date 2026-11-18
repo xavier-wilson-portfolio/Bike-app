@@ -1,0 +1,79 @@
+{
+ "id": "kawasaki-zx-6r-1995",
+ "make": "Kawasaki",
+ "model": "Ninja ZX-6R",
+ "name": "Kawasaki Ninja ZX-6R",
+ "years": [
+  1995,
+  2018
+ ],
+ "match": [
+  "zx-6r",
+  "zx6r",
+  "zx 6r",
+  "ninja zx-6r",
+  "zx636",
+  "zx600",
+  "636"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "599 or 636 cc liquid-cooled inline four, carbs (to 2002) or fuel injected",
+ "intro": "Kawasaki's long-running middleweight. Carbs on early bikes, EFI later. 2009-2012 bikes had a regulator/rectifier recall.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Depends on year"
+  ],
+  [
+   "R/R recall",
+   "2009-2012"
+  ],
+  [
+   "Cooling",
+   "Hoses and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2009-2012 ZX-6R bikes are in recall 12V064 because the regulator/rectifier may not charge the battery properly.",
+   "reason": "A flat battery can stall the engine. The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "G": [
+   "Bikes up to 2002 have carbs. Later bikes are fuel injected. Skip the steps that don't match."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "12V064",
+   "years": "2009-2012 (Dec 2007-Jul 2011 build)",
+   "what": "Regulator/rectifier may not charge the battery enough.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehiclesafetyrecalls.com/recall/12V064000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "ZX6R.com",
+   "url": "https://www.zx6r.com/",
+   "what": "Owner forum for Kawasaki ZX sport bikes."
+  }
+ ],
+ "silhouette": "kawasaki-zx-6r-1995",
+ "areas": [],
+ "heroName": "ZX-6R"
+}

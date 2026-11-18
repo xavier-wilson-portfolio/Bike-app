@@ -1,0 +1,62 @@
+{
+ "id": "yamaha-yzf-r7-2022",
+ "make": "Yamaha",
+ "model": "YZF-R7",
+ "name": "Yamaha YZF-R7",
+ "years": [
+  2022,
+  2026
+ ],
+ "match": [
+  "yzf-r7",
+  "r7",
+  "yzf r7",
+  "yzfr7"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "689 cc liquid-cooled parallel twin (CP2), fuel injected",
+ "intro": "A sport bike built on the MT-07 twin. Mostly normal upkeep.",
+ "focus": [
+  [
+   "689 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Cooling",
+   "Hoses and fan"
+  ],
+  [
+   "Valves",
+   "Shim type"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [],
+ "silhouette": "yamaha-yzf-r7-2022",
+ "areas": [],
+ "heroName": "R7",
+ "hero": {
+  "src": "img/hero/yamaha-yzf-r7-2022.jpg",
+  "artist": "Alexandre Prevot from Nancy, France",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_YZF-R7_(55048319395).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

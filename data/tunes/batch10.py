@@ -40,7 +40,7 @@ B10.append(dict(id="bmw-r75-5-and-6-airheads-1970", make="BMW", model="R75/5", n
   forums=[AIRH]))
 
 B10.append(dict(id="royal-enfield-interceptor-650-2019", make="Royal Enfield", model="Interceptor 650", name="Royal Enfield Interceptor 650", years=[2019, 2026],
-  match=["interceptor", "interceptor 650", "int 650", "continental gt 650", "continental gt"], style="standard", drive="chain",
+  match=["interceptor", "interceptor 650", "int 650"], style="standard", drive="chain",
   engine="648 cc air/oil-cooled SOHC parallel twin, fuel injected",
   intro="Royal Enfield's 650 twin. Simple and easy to work on. Check the brake caliper recall.",
   focus=[["648 cc twin", "Air/oil-cooled"], ["Fuel injected", "No carbs"], ["Brake recall", "Caliper corrosion"], ["Chain drive", "Slack and lube"], ["Finish", "Check for rust"]],
@@ -51,7 +51,7 @@ B10.append(dict(id="royal-enfield-interceptor-650-2019", make="Royal Enfield", m
   known=[], forums=[]))
 
 B10.append(dict(id="bmw-r100-airheads-1976", make="BMW", model="R100", name="BMW R100 airheads", years=[1976, 1995],
-  match=["r100", "r100/7", "r100rs", "r100rt", "r100s", "r100gs", "r100r", "r80", "r80g/s", "r65", "airhead"], style="standard", drive="shaft",
+  match=["r100", "r100/7", "r100rs", "r100rt", "r100s", "r100gs", "r100r", "r80", "r65", "airhead"], style="standard", drive="shaft",
   engine="980 cc air-cooled boxer twin, two Bing carbs, shaft drive",
   intro="The big airheads. Charging system care and a timing chain check cover most of the risks.",
   focus=[["980 cc boxer", "Air-cooled"], ["Two Bing carbs", "Sync them"], ["Diode board", "Grounds and mounts"], ["Timing chain", "Tensioner wear"], ["Shaft drive", "Splines"]],

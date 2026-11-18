@@ -1,0 +1,83 @@
+{
+ "id": "yamaha-super-tenere-xt1200z-2012",
+ "make": "Yamaha",
+ "model": "Super Tenere XT1200Z",
+ "name": "Yamaha Super Tenere (XT1200Z)",
+ "years": [
+  2012,
+  2021
+ ],
+ "match": [
+  "super tenere",
+  "xt1200z",
+  "xt1200ze",
+  "super tenere es",
+  "xtz12",
+  "s10"
+ ],
+ "style": "adventure",
+ "drive": "shaft",
+ "engine": "1199 cc liquid-cooled parallel twin, fuel injected, shaft drive",
+ "intro": "Yamaha's big shaft-drive adventure twin. Some 2018-2020 bikes are in a brake light switch recall.",
+ "focus": [
+  [
+   "1199 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Shaft drive",
+   "Change the oil"
+  ],
+  [
+   "Brake switch",
+   "Recall"
+  ],
+  [
+   "Linked brakes",
+   "Bleed order"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2018-2020 Super Teneres are in recall 20V814 (front brake light switch).",
+   "reason": "The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "20V814",
+   "years": "2013-2020 FJR1300, 2018-2020 Super Tenere and others (some)",
+   "what": "Front brake light switch may fail, so the brake light may not come on.",
+   "fix": "Dealer replaces the switch free.",
+   "src": "https://vehicleflaws.com/recall/20V814000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "Super Tenere Forum",
+   "url": "https://www.supertenere.com/",
+   "what": "Owner forum for the Super Tenere."
+  }
+ ],
+ "silhouette": "yamaha-super-tenere-xt1200z-2012",
+ "areas": [],
+ "heroName": "SUPER TENERE",
+ "hero": {
+  "src": "img/hero/yamaha-super-tenere-xt1200z-2012.jpg",
+  "artist": "Witold Grzesiek",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_XT_1200_Z_Super_T%C3%A9n%C3%A9r%C3%A9.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

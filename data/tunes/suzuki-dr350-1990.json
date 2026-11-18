@@ -1,0 +1,60 @@
+{
+ "id": "suzuki-dr350-1990",
+ "make": "Suzuki",
+ "model": "DR350",
+ "name": "Suzuki DR350",
+ "years": [
+  1990,
+  1999
+ ],
+ "match": [
+  "dr350",
+  "dr 350",
+  "dr350s",
+  "dr350se"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "349 cc air/oil-cooled single, carb",
+ "intro": "A tough air-cooled dual-sport single. Simple to keep going, with one carb.",
+ "focus": [
+  [
+   "349 cc single",
+   "Air/oil-cooled"
+  ],
+  [
+   "Single carb",
+   "Clean it out"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Kick or electric",
+   "Depends on model"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Owner forum for four-stroke dirt and dual-sport bikes."
+  }
+ ],
+ "heroName": "DR350"
+}

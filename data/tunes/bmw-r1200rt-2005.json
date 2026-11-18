@@ -1,0 +1,108 @@
+{
+ "id": "bmw-r1200rt-2005",
+ "make": "BMW",
+ "model": "R1200RT",
+ "name": "BMW R1200RT",
+ "years": [
+  2005,
+  2018
+ ],
+ "match": [
+  "r1200rt",
+  "r 1200 rt",
+  "r1200 rt",
+  "rt1200",
+  "r1200rt-p",
+  "r1200rt lc"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "engine": "1170 cc air/oil-cooled boxer twin (to 2013) or liquid-cooled boxer (2014-on), fuel injected, shaft drive",
+ "intro": "BMW's boxer tourer. Several recalls over the years, including the 2014 Dynamic ESA rear shock.",
+ "focus": [
+  [
+   "Boxer twin",
+   "Air/oil or liquid"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Recalls",
+   "Several years"
+  ],
+  [
+   "Shaft drive",
+   "Splines and final drive"
+  ],
+  [
+   "ABS brakes",
+   "Servo on early bikes"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls first",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2007-2009 bikes are in recall 09V256 (brake lines may leak). Some 2005-2010 bikes are in recall 15V141 (rear wheel flange). 2014 bikes with Dynamic ESA are in recall 14V320 (rear shock rod can break, with a do-not-ride warning). Older R1200s also had fuel pump flange recalls (13V617 and 20V471).",
+   "reason": "A broken shock or leaking brake line is a crash risk. Every fix is free."
+  }
+ },
+ "add": [
+  {
+   "id": "X-BGS-01",
+   "phase": "E",
+   "after": "E-002",
+   "title": "Lube the drive splines",
+   "instructions": "Pull the rear drive and clean and grease the shaft splines with a moly paste. Look for oil in the swingarm.",
+   "reason": "Dry splines wear and fail. Most owners forget to grease them.",
+   "src": "Motoryk R1150GS notes",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 2.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "H": [
+   "2014-on RTs are liquid-cooled. Earlier ones are air/oil-cooled and have no coolant to change."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "09V256",
+   "years": "2007-2009",
+   "what": "Brake lines may leak.",
+   "fix": "Free dealer repair.",
+   "src": "https://forums.bmwmoa.org/threads/listing-of-recall-notices.72127/latest"
+  },
+  {
+   "id": "15V141",
+   "years": "2005-2010 (some)",
+   "what": "Aluminum rear wheel flange can let the wheel bolts loosen.",
+   "fix": "Dealer fits a steel rear wheel flange free.",
+   "src": "https://recallcheck.net/recall/15V141000"
+  },
+  {
+   "id": "14V320",
+   "years": "2014 with Dynamic ESA",
+   "what": "Rear shock piston rod can break without warning.",
+   "fix": "Dealer replaces the Dynamic ESA shock free.",
+   "src": "https://auto-recalls.justia.com/bmw/r1200-rt/2014/14v320000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "BMW MOA forum",
+   "url": "https://forums.bmwmoa.org/",
+   "what": "BMW Motorcycle Owners of America forum."
+  }
+ ],
+ "silhouette": "bmw-r1200rt-2005",
+ "areas": [],
+ "heroName": "R1200RT"
+}

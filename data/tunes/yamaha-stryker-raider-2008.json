@@ -1,0 +1,66 @@
+{
+ "id": "yamaha-stryker-raider-2008",
+ "make": "Yamaha",
+ "model": "Raider / Stryker",
+ "name": "Yamaha Raider / Stryker",
+ "years": [
+  2008,
+  2017
+ ],
+ "match": [
+  "raider",
+  "xv1900 raider",
+  "stryker",
+  "xvs1300 stryker",
+  "xv19c",
+  "star raider",
+  "star stryker"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "1854 cc air-cooled V-twin (Raider) or 1304 cc liquid-cooled V-twin (Stryker), fuel injected, belt drive",
+ "intro": "Yamaha's factory choppers. The Raider uses the big 1900 air-cooled twin, the Stryker the liquid-cooled 1300.",
+ "focus": [
+  [
+   "V-twin",
+   "Air or liquid"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Belt drive",
+   "Tension and wear"
+  ],
+  [
+   "Long fork",
+   "Check head bearings"
+  ],
+  [
+   "Valves",
+   "Check on time"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "The Raider is air-cooled and has no radiator. Skip the coolant steps on a Raider."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Star Bike Forum",
+   "url": "https://www.starbikeforum.com/",
+   "what": "Owner forum for Yamaha Star cruisers."
+  }
+ ],
+ "heroName": "RAIDER"
+}

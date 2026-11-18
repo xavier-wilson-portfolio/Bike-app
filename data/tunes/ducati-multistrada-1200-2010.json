@@ -1,0 +1,119 @@
+{
+ "id": "ducati-multistrada-1200-2010",
+ "make": "Ducati",
+ "model": "Multistrada 1200",
+ "name": "Ducati Multistrada 1200",
+ "years": [
+  2010,
+  2017
+ ],
+ "match": [
+  "multistrada 1200",
+  "multistrada",
+  "mts1200",
+  "mts 1200",
+  "multistrada 1200 s",
+  "multistrada 1200 pikes peak",
+  "multistrada dvt"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "1198 cc liquid-cooled Testastretta L-twin (DVT from 2015), fuel injected",
+ "intro": "Ducati's adventure sport tourer. Early bikes had several recalls, including a throttle cable recall on every 2010-2014 bike.",
+ "focus": [
+  [
+   "1198 cc L-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Ride-by-wire"
+  ],
+  [
+   "Throttle recall",
+   "2010-2014"
+  ],
+  [
+   "Timing belts",
+   "Change on time"
+  ],
+  [
+   "Keyless steering lock",
+   "2010-2011"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls first",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2010 bikes are in recalls 10V356 (throttle cable cable tie) and 10V358 (steering head screw). 2010-2011 bikes are in recall 11V253 (electronic steering lock). 2010-2014 bikes are in recall 15V152 (throttle cable sleeve can stop the throttle closing).",
+   "reason": "A throttle that won't close is a crash risk. Every fix is free."
+  }
+ },
+ "add": [
+  {
+   "id": "X-DUC-01",
+   "phase": "H",
+   "after": "H-003",
+   "title": "Check the timing belts and desmo valve clearances",
+   "instructions": "Replace the cam timing belts on schedule, by age as well as miles, and check the desmo opening and closing clearances. Old belts can snap and wreck the engine.",
+   "reason": "Ducati belt-drive twins need belts changed on time even if the bike sat.",
+   "src": "Ducati service practice",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 4.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "10V356",
+   "years": "2010 (some)",
+   "what": "Throttle cables can rub on the radiator edge.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehiclesafetyrecalls.com/recall/10V356000"
+  },
+  {
+   "id": "10V358",
+   "years": "2010 (some)",
+   "what": "Wrong screw may have been fitted in the steering head.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehiclesafetyrecalls.com/recall/10V358000"
+  },
+  {
+   "id": "11V253",
+   "years": "2010-2011",
+   "what": "Electronic steering lock may not release at key-on.",
+   "fix": "Dealer updates the hands-free unit software free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/11V253000"
+  },
+  {
+   "id": "15V152",
+   "years": "2010-2014",
+   "what": "Throttle cable inner sleeve may move and stop the throttle from fully closing.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehiclesafetyrecalls.com/recall/15V152000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "silhouette": "ducati-multistrada-1200-2010",
+ "areas": [],
+ "heroName": "MULTISTRADA",
+ "hero": {
+  "src": "img/hero/ducati-multistrada-1200-2010.jpg",
+  "artist": "Keith",
+  "page": "https://commons.wikimedia.org/wiki/File:Ducati_multistrada_1200_ABS.jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
+}

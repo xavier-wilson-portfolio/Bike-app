@@ -1,0 +1,82 @@
+{
+ "id": "kawasaki-klx250-2009",
+ "make": "Kawasaki",
+ "model": "KLX250",
+ "name": "Kawasaki KLX250 / KLX250S",
+ "years": [
+  2009,
+  2020
+ ],
+ "match": [
+  "klx250",
+  "klx 250",
+  "klx250s",
+  "klx250sf",
+  "klx250t"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 cc liquid-cooled single, carb (to 2017) or fuel injected (2018-on)",
+ "intro": "A light dual-sport. Early bikes had throttle and fuel tank recalls.",
+ "focus": [
+  [
+   "249 cc single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Depends on year"
+  ],
+  [
+   "Fuel tank recall",
+   "2009-2010"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Valves",
+   "Shim type"
+  ]
+ ],
+ "remove": [],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2009 bikes are in recall 08V228 (throttle and handlebar grip). 2009-2010 bikes are in recall 11V316 (fuel tank mount tabs can crack and leak).",
+   "reason": "A stuck throttle or a fuel leak is a real hazard. Both fixes are free."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "G": [
+   "Bikes up to 2017 have a carb. 2018-on bikes are fuel injected. Skip the steps that don't match."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "08V228",
+   "years": "2009 (some)",
+   "what": "Throttle and handlebar grip problem.",
+   "fix": "Free dealer repair.",
+   "src": "https://www.vehiclesafetyrecalls.com/recall/08V228000"
+  },
+  {
+   "id": "11V316",
+   "years": "2009-2010",
+   "what": "The fuel tank may crack at the side mount tabs and leak.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehiclesafetyrecalls.com/recall/11V316000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Owner forum for four-stroke dirt and dual-sport bikes."
+  }
+ ],
+ "heroName": "KLX250"
+}

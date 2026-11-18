@@ -1,0 +1,103 @@
+{
+ "id": "ktm-790-890-adventure-2019",
+ "make": "KTM",
+ "model": "790 / 890 Adventure",
+ "name": "KTM 790 / 890 Adventure",
+ "years": [
+  2019,
+  2026
+ ],
+ "match": [
+  "790 adventure",
+  "890 adventure",
+  "790 adventure r",
+  "890 adventure r",
+  "790 adv",
+  "890 adv",
+  "890 adventure r rally"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "799 or 889 cc liquid-cooled LC8c parallel twin, fuel injected",
+ "intro": "KTM's middleweight adventure twin. Early 790s had front and rear brake recalls.",
+ "focus": [
+  [
+   "Parallel twin",
+   "LC8c"
+  ],
+  [
+   "Fuel injected",
+   "Ride-by-wire"
+  ],
+  [
+   "Brake recalls",
+   "2019-2020"
+  ],
+  [
+   "Low fuel tank",
+   "Check mounts"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls first",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2019-2020 790 Adventures are in recalls 20V198 (rear brake hose can overheat) and 21V304 (front brake master cylinder spring). Some 2019-2023 bikes are in recall 22V588 (tires).",
+   "reason": "Brake failures are a crash risk. Every fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "20V198",
+   "years": "2019-2020 790 Adventure and R",
+   "what": "Rear brake hose may overheat and the rear brake can fail.",
+   "fix": "Dealer fits a new brake line free.",
+   "src": "https://recallcheck.net/recall/20V198000"
+  },
+  {
+   "id": "21V304",
+   "years": "2019-2020 790 Adventure, R and R Rally",
+   "what": "Front brake master cylinder return spring may be too weak, reducing braking.",
+   "fix": "Dealer replaces the return spring free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/21V304000"
+  },
+  {
+   "id": "22V588",
+   "years": "2019-2023 (some)",
+   "what": "Tire tread or belt problem.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehicleflaws.com/recall/22V588000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  },
+  {
+   "name": "KTM Forums",
+   "url": "https://www.ktmforums.com/",
+   "what": "Owner forum for KTM street and adventure bikes."
+  }
+ ],
+ "silhouette": "ktm-790-890-adventure-2019",
+ "areas": [],
+ "heroName": "890 ADVENTURE",
+ "hero": {
+  "src": "img/hero/ktm-790-890-adventure-2019.jpg",
+  "artist": "MDzakovic",
+  "page": "https://commons.wikimedia.org/wiki/File:KTM_790_Adventure.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

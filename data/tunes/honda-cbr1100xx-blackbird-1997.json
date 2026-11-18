@@ -1,0 +1,74 @@
+{
+ "id": "honda-cbr1100xx-blackbird-1997",
+ "make": "Honda",
+ "model": "CBR1100XX Blackbird",
+ "name": "Honda CBR1100XX Blackbird",
+ "years": [
+  1997,
+  2007
+ ],
+ "match": [
+  "cbr1100xx",
+  "blackbird",
+  "cbr 1100xx",
+  "cbr1100",
+  "super blackbird"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "1137 cc liquid-cooled inline four, carbs (1997-98) or fuel injected (1999-2007)",
+ "intro": "Honda's big sport tourer. Early bikes have carbs, later ones are fuel injected. Linked brakes need care when bleeding.",
+ "focus": [
+  [
+   "1137 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Depends on year"
+  ],
+  [
+   "Linked brakes",
+   "Bleed order"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "1997-1998 bikes have carbs. 1999-on bikes are fuel injected. Skip the steps that don't match."
+  ],
+  "K": [
+   "The front and rear brakes are linked. Bleed them in the order the manual gives."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [
+  {
+   "name": "CBR Forum",
+   "url": "https://www.cbrforum.com/",
+   "what": "Owner forum for Honda CBR models."
+  }
+ ],
+ "silhouette": "honda-cbr1100xx-blackbird-1997",
+ "areas": [],
+ "heroName": "BLACKBIRD",
+ "hero": {
+  "src": "img/hero/honda-cbr1100xx-blackbird-1997.jpg",
+  "artist": "KalleXX",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CBR_1100XX_1999.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
+}

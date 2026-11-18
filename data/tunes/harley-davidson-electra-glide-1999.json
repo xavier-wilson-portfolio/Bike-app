@@ -12,9 +12,7 @@
   "flht",
   "flhtc",
   "flhtcu",
-  "ultra classic",
-  "street glide",
-  "flhx"
+  "ultra classic"
  ],
  "style": "touring",
  "drive": "belt",
@@ -70,7 +68,7 @@
   ]
  },
  "recalls": [],
- "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "recallNote": "Harley-Davidson has issued several recalls that touch these years. Run your VIN at nhtsa.gov/recalls before you start.",
  "known": [
   {
    "title": "Cam chain tensioners",

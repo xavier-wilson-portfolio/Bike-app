@@ -1,0 +1,69 @@
+{
+ "id": "kawasaki-vulcan-500-ltd-1990",
+ "make": "Kawasaki",
+ "model": "Vulcan 500 LTD",
+ "name": "Kawasaki Vulcan 500 LTD (EN500)",
+ "years": [
+  1990,
+  2009
+ ],
+ "match": [
+  "vulcan 500",
+  "en500",
+  "vulcan 500 ltd",
+  "en 500",
+  "vulcan500"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "498 cc liquid-cooled parallel twin (EX500 engine), two carbs",
+ "intro": "A small cruiser built around the EX500 engine. Chain drive and two carbs.",
+ "focus": [
+  [
+   "498 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Cooling",
+   "Hoses and fan"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vulcan Riders Association",
+   "url": "https://www.vulcanriders.org/",
+   "what": "Owner club for Kawasaki Vulcans."
+  }
+ ],
+ "silhouette": "kawasaki-vulcan-500-ltd-1990",
+ "areas": [],
+ "heroName": "VULCAN 500",
+ "hero": {
+  "src": "img/hero/kawasaki-vulcan-500-ltd-1990.jpg",
+  "artist": "RL GNZLZ from Chile",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_Vulcan_500_(46138391821).jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
+}

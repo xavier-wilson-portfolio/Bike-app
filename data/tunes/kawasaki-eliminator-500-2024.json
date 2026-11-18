@@ -1,0 +1,64 @@
+{
+ "id": "kawasaki-eliminator-500-2024",
+ "make": "Kawasaki",
+ "model": "Eliminator 500",
+ "name": "Kawasaki Eliminator (2024-on)",
+ "years": [
+  2024,
+  2026
+ ],
+ "match": [
+  "eliminator 500",
+  "eliminator",
+  "eliminator se",
+  "el500",
+  "eliminator 451"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "451 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "Kawasaki's modern small cruiser, built on the Ninja 500 engine.",
+ "focus": [
+  [
+   "451 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Cooling",
+   "Hoses and fan"
+  ],
+  [
+   "Clutch lever",
+   "Check it"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "A": [
+   "In the US the 2024 Ninja 500 and Z500 had a clutch release shaft recall (25V146). The Eliminator was included in Canada. Run your VIN to be sure."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [
+  {
+   "title": "Clutch release shaft",
+   "what": "In Canada, 2024 Eliminator 500 bikes were recalled because the clutch lever could break. The US recall listed the Ninja 500 and Z500.",
+   "src": "https://recalls-rappels.canada.ca/en/alert-recall/transport-canada-recall-2025121-kawasaki"
+  }
+ ],
+ "forums": [],
+ "heroName": "ELIMINATOR"
+}

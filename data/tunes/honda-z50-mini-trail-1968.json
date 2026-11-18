@@ -1,0 +1,70 @@
+{
+ "id": "honda-z50-mini-trail-1968",
+ "make": "Honda",
+ "model": "Z50 Mini Trail",
+ "name": "Honda Z50 Mini Trail",
+ "years": [
+  1968,
+  1999
+ ],
+ "match": [
+  "z50",
+  "mini trail",
+  "z50a",
+  "z50r",
+  "z50j",
+  "monkey bike",
+  "z 50"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "49 cc air-cooled SOHC single, single carb, semi-automatic gearbox",
+ "intro": "The classic kids' mini bike. A tiny carb that clogs if you look at it, and simple everything else.",
+ "focus": [
+  [
+   "49 cc single",
+   "Air-cooled"
+  ],
+  [
+   "Tiny carb",
+   "Clogs easily"
+  ],
+  [
+   "Semi-auto",
+   "No clutch lever"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Points or CDI",
+   "Depends on year"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "The carb jets are tiny. Clean them with a fine wire or carb cleaner, never by drilling."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "silhouette": "honda-z50-mini-trail-1968",
+ "areas": [],
+ "heroName": "Z50"
+}

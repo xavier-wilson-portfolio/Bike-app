@@ -1,0 +1,103 @@
+{
+ "id": "triumph-street-twin-speed-twin-900-2016",
+ "make": "Triumph",
+ "model": "Street Twin / Speed Twin 900",
+ "name": "Triumph Street Twin / Speed Twin 900",
+ "years": [
+  2016,
+  2026
+ ],
+ "match": [
+  "street twin",
+  "speed twin 900",
+  "street cup",
+  "street twin goldline",
+  "speed twin 900 2023"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "900 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "Triumph's modern 900 twin. Several wiring and alternator recalls across the years.",
+ "focus": [
+  [
+   "900 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Ride-by-wire"
+  ],
+  [
+   "Wiring recalls",
+   "Several years"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Charging",
+   "Alternator recalls"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls first",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2016 bikes are in recall 16V163 (wiring). 2016-2018 bikes also had a wider wiring recall. 2019-2020 bikes are in recall 20V472 (misrouted harness). 2022 bikes and 2023-on Speed Twin 900s are in recalls 24V785 and 26V078 (alternator wiring).",
+   "reason": "Wiring faults can stall the engine or cause a fire. Every fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "16V163",
+   "years": "2016 (Sep-Nov 2015 build)",
+   "what": "Wiring problem.",
+   "fix": "Free dealer repair.",
+   "src": "https://auto-recalls.justia.com/triumph/street-twin/2016/16v163000"
+  },
+  {
+   "id": "20V472",
+   "years": "2019-2020",
+   "what": "Wiring harness may be misrouted and get damaged against the headstock.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehiclesafetyrecalls.com/recall/20V472000"
+  },
+  {
+   "id": "24V785",
+   "years": "2022 Street models, 2022-2024 Bonnevilles, 2023-2024 Scrambler 900 and Speed Twin 900 (some)",
+   "what": "Alternator wiring may short and overheat.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehiclesafetyrecalls.com/recall/24V785000"
+  },
+  {
+   "id": "26V078",
+   "years": "2022 Street models, 2022-2024 Bonnevilles, 2023-2024 Scrambler 900 and Speed Twin 900 (some)",
+   "what": "Alternator or regulator problem on the same range of bikes.",
+   "fix": "Free dealer repair.",
+   "src": "https://static.nhtsa.gov/odi/rcl/2026/RCAK-26V078-6564.pdf"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "silhouette": "triumph-street-twin-speed-twin-900-2016",
+ "areas": [],
+ "heroName": "STREET TWIN",
+ "hero": {
+  "src": "img/hero/triumph-street-twin-speed-twin-900-2016.jpg",
+  "artist": "Rundvald",
+  "page": "https://commons.wikimedia.org/wiki/File:Triumph-Street-Twin-900-byRundvald.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

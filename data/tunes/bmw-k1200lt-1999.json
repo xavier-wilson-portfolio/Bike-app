@@ -1,0 +1,99 @@
+{
+ "id": "bmw-k1200lt-1999",
+ "make": "BMW",
+ "model": "K1200LT",
+ "name": "BMW K1200LT",
+ "years": [
+  1999,
+  2009
+ ],
+ "match": [
+  "k1200lt",
+  "k 1200 lt",
+  "k1200 lt",
+  "klt",
+  "k1200ltc"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "engine": "1171 cc liquid-cooled inline four, fuel injected, shaft drive",
+ "intro": "BMW's big four-cylinder tourer. Heavy, comfortable, with servo ABS brakes and a lot of bodywork.",
+ "focus": [
+  [
+   "1171 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Servo ABS",
+   "Bleed procedure"
+  ],
+  [
+   "Shaft drive",
+   "Splines and final drive"
+  ],
+  [
+   "Bodywork",
+   "Many panels"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2005 K1200LTs are in recall 04V438 (anti-theft control unit can cut the fuel pump).",
+   "reason": "BMW has had other recalls in these years too, so check the full VIN list."
+  }
+ },
+ "add": [
+  {
+   "id": "X-BGS-01",
+   "phase": "E",
+   "after": "E-002",
+   "title": "Lube the drive splines",
+   "instructions": "Pull the rear drive and clean and grease the shaft splines with a moly paste. Look for oil in the swingarm.",
+   "reason": "Dry splines wear and fail. Most owners forget to grease them.",
+   "src": "Motoryk R1150GS notes",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 2.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "K": [
+   "Early bikes have the servo-assisted integral ABS. Bleeding it takes the BMW procedure and sometimes a dealer tool."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "04V438",
+   "years": "2005 (some)",
+   "what": "Anti-theft control unit problem that affects the fuel pump.",
+   "fix": "Dealer inspects and replaces the anti-theft control unit free.",
+   "src": "https://auto-recalls.justia.com/bmw/k1200-lt/2005/04v438000"
+  }
+ ],
+ "recallNote": "BMW has issued several recalls across these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BMW Motorcycle Tech (Snowbum)",
+   "url": "https://bmwmotorcycletech.info/",
+   "what": "Long-running technical notes for classic BMW K and R bikes."
+  },
+  {
+   "name": "BMW MOA forum",
+   "url": "https://forums.bmwmoa.org/",
+   "what": "BMW Motorcycle Owners of America forum."
+  }
+ ],
+ "silhouette": "bmw-k1200lt-1999",
+ "areas": [],
+ "heroName": "K1200LT"
+}

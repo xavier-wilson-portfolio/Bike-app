@@ -1,0 +1,83 @@
+{
+ "id": "suzuki-gsx-r600-1997",
+ "make": "Suzuki",
+ "model": "GSX-R600",
+ "name": "Suzuki GSX-R600",
+ "years": [
+  1997,
+  2010
+ ],
+ "match": [
+  "gsx-r600",
+  "gsxr600",
+  "gsxr 600",
+  "gixxer 600",
+  "gsx-r 600",
+  "gsxr"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "599 cc liquid-cooled inline four, carbs (1997-2000) or fuel injected",
+ "intro": "Suzuki's middleweight GSX-R. 2004-2010 bikes are in a big front brake master cylinder recall.",
+ "focus": [
+  [
+   "599 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Depends on year"
+  ],
+  [
+   "Brake recall",
+   "2004-2010"
+  ],
+  [
+   "Charging",
+   "R/R recall"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls first",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2004-2010 bikes are in recall 13V449 (front brake master cylinder). 2008-2010 bikes are in recall 16V018 (regulator/rectifier).",
+   "reason": "A weak front brake is a crash risk. Both fixes are free."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "G": [
+   "1997-2000 bikes have carbs. 2001-on bikes are fuel injected. Skip the steps that don't match."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "13V449",
+   "years": "2004-2010 (in this range)",
+   "what": "Gas can form in the front brake master cylinder and reduce braking.",
+   "fix": "Dealer replaces the front master cylinder free.",
+   "src": "https://auto-recalls.justia.com/suzuki/gsxr600/2006/13v449000"
+  },
+  {
+   "id": "16V018",
+   "years": "2008-2010",
+   "what": "Regulator/rectifier circuit board can lift off its case, causing a stall or no-start.",
+   "fix": "Dealer replaces the regulator/rectifier free.",
+   "src": "https://static.nhtsa.gov/odi/rcl/2016/RCMN-16V018-3272.pdf"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "Gixxer.com",
+   "url": "https://www.gixxer.com/",
+   "what": "Owner forum for Suzuki GSX-R models."
+  }
+ ],
+ "heroName": "GSX-R600"
+}

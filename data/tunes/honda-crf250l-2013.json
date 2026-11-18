@@ -1,0 +1,74 @@
+{
+ "id": "honda-crf250l-2013",
+ "make": "Honda",
+ "model": "CRF250L",
+ "name": "Honda CRF250L",
+ "years": [
+  2013,
+  2020
+ ],
+ "match": [
+  "crf250l",
+  "crf 250l",
+  "crf250 rally",
+  "crf250l rally",
+  "crf250m"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "250 cc liquid-cooled single, fuel injected",
+ "intro": "Honda's small dual-sport. 2014-2015 bikes have a starter relay recall, and some 2020 bikes have a reflector recall.",
+ "focus": [
+  [
+   "250 cc single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carb"
+  ],
+  [
+   "Starter relay",
+   "2014-2015 recall"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Valves",
+   "Shim type"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2014-2015 bikes are in recall 15V439 (starter relay). Some 2020 bikes are in recall 21V382 (rear reflector).",
+   "reason": "Both fixes are free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "15V439",
+   "years": "2014-2015",
+   "what": "Starter relay switch problem.",
+   "fix": "Dealer replaces the starter relay free.",
+   "src": "https://recallcheck.net/recall/15V439000"
+  },
+  {
+   "id": "21V382",
+   "years": "2020-2021 (some)",
+   "what": "Rear reflector lens may be too dim to meet the lighting standard.",
+   "fix": "Dealer replaces the rear reflector free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/21V382000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "heroName": "CRF250L"
+}

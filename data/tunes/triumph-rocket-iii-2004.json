@@ -1,0 +1,104 @@
+{
+ "id": "triumph-rocket-iii-2004",
+ "make": "Triumph",
+ "model": "Rocket III / Rocket 3",
+ "name": "Triumph Rocket III / Rocket 3",
+ "years": [
+  2004,
+  2026
+ ],
+ "match": [
+  "rocket iii",
+  "rocket 3",
+  "rocket iii touring",
+  "rocket 3 r",
+  "rocket 3 gt",
+  "rocket iii roadster"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "2294 or 2458 cc liquid-cooled inline triple, fuel injected, shaft drive",
+ "intro": "The biggest production motorcycle engine. Shaft drive, huge torque and several brake recalls on the new Rocket 3.",
+ "focus": [
+  [
+   "Huge triple",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Rear brake",
+   "Recalls 2020-2024"
+  ],
+  [
+   "Shaft drive",
+   "Final drive oil"
+  ],
+  [
+   "Tires",
+   "Heavy wear"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls first",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2005 bikes are in recall 05V004 (final drive unit). 2006 bikes are in recall 06V063 (handlebar clamp bolts). 2020-2021 Rocket 3s are in recall 20V740 (air in the ABS modulator). 2020-2024 Rocket 3s are in recall 23V730 (rear brake master cylinder).",
+   "reason": "Brake and final drive faults are crash risks. Every fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "05V004",
+   "years": "2005 (some)",
+   "what": "Final drive unit problem.",
+   "fix": "Dealer replaces the final drive unit free.",
+   "src": "https://auto-recalls.justia.com/triumph/rocket-iii/2005/05v004000"
+  },
+  {
+   "id": "06V063",
+   "years": "2006 (some)",
+   "what": "Handlebar clamp bolts may not be tight.",
+   "fix": "Dealer checks and tightens the clamp bolts free.",
+   "src": "https://auto-recalls.justia.com/triumph/rocket-iii/2006/06v063000"
+  },
+  {
+   "id": "20V740",
+   "years": "2020-2021 Rocket 3",
+   "what": "Air in the ABS modulator can reduce rear braking.",
+   "fix": "Dealer flushes and replaces the rear brake fluid free.",
+   "src": "https://auto-recalls.justia.com/triumph/rocket-3-r/2020/20v740000"
+  },
+  {
+   "id": "23V730",
+   "years": "2020-2024 Rocket 3",
+   "what": "Rear brake master cylinder problem can lengthen stopping distance.",
+   "fix": "Free dealer repair.",
+   "src": "https://carcomplaintdata.com/recalls/23V730000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "silhouette": "triumph-rocket-iii-2004",
+ "areas": [],
+ "heroName": "ROCKET III",
+ "hero": {
+  "src": "img/hero/triumph-rocket-iii-2004.jpg",
+  "artist": "Paul Hermans",
+  "page": "https://commons.wikimedia.org/wiki/File:Triumph_Rocket_III_5-04-2020_13-47-05.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

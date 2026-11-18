@@ -1,0 +1,91 @@
+{
+ "id": "honda-cbr600f4i-1999",
+ "make": "Honda",
+ "model": "CBR600F4i",
+ "name": "Honda CBR600F4 / F4i",
+ "years": [
+  1999,
+  2006
+ ],
+ "match": [
+  "cbr600f4i",
+  "cbr600f4",
+  "f4i",
+  "cbr 600 f4i",
+  "cbr600 f4"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "599 cc liquid-cooled inline four, carbs (F4) or fuel injected (F4i)",
+ "intro": "The last of Honda's all-round CBR600F line. The 1999-2000 F4 has carbs, the 2001-2006 F4i is fuel injected.",
+ "focus": [
+  [
+   "599 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "F4 or F4i"
+  ],
+  [
+   "Cam chain tensioner",
+   "Listen for it"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-F4-01",
+   "phase": "B",
+   "after": "B-004",
+   "title": "Listen for cam chain tensioner rattle",
+   "instructions": "Start it cold and listen at the right side of the head. A rattle that fades as it warms can be the cam chain tensioner.",
+   "reason": "Owners have reported repeated cam chain tensioner trouble on these bikes.",
+   "src": "NHTSA owner complaint",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.3,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "G": [
+   "1999-2000 F4 bikes have carbs. 2001-2006 F4i bikes are fuel injected. Skip the steps that don't match."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [
+  {
+   "title": "Cam chain tensioner",
+   "what": "An owner complaint to NHTSA reports ongoing cam chain tensioner trouble on a 2002 F4i.",
+   "src": "https://vehicleflaws.com/vehicle/honda/cbr600f4/2002"
+  }
+ ],
+ "forums": [
+  {
+   "name": "CBR Forum",
+   "url": "https://www.cbrforum.com/",
+   "what": "Owner forum for Honda CBR models."
+  }
+ ],
+ "silhouette": "honda-cbr600f4i-1999",
+ "areas": [],
+ "heroName": "CBR600F4I",
+ "hero": {
+  "src": "img/hero/honda-cbr600f4i-1999.jpg",
+  "artist": "Adam Woodford",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CBR600F4i_-_IMG_7950_-_Flickr_-_Adam_Woodford.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

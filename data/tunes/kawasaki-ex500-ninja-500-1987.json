@@ -1,0 +1,75 @@
+{
+ "id": "kawasaki-ex500-ninja-500-1987",
+ "make": "Kawasaki",
+ "model": "EX500 / Ninja 500R",
+ "name": "Kawasaki EX500 / Ninja 500R",
+ "years": [
+  1987,
+  2009
+ ],
+ "match": [
+  "ex500",
+  "ninja 500",
+  "ninja 500r",
+  "gpz500",
+  "gpz500s",
+  "ex 500",
+  "500r"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "498 cc liquid-cooled DOHC parallel twin, two carbs",
+ "intro": "A long-running starter bike. Two carbs, a liquid-cooled twin, and usually a few owners' worth of wear.",
+ "focus": [
+  [
+   "498 cc twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Cooling",
+   "Hoses and fan"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ninja500.org",
+   "url": "https://ninja500.org/",
+   "what": "Owner forum for the EX500 and Ninja 500R."
+  }
+ ],
+ "silhouette": "kawasaki-ex500-ninja-500-1987",
+ "areas": [],
+ "heroName": "NINJA 500",
+ "hero": {
+  "src": "img/hero/kawasaki-ex500-ninja-500-1987.jpg",
+  "artist": "Eyekanspele",
+  "page": "https://commons.wikimedia.org/wiki/File:2009_Kawasaki_Ninja_500r_EX500.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

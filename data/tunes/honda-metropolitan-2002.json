@@ -1,0 +1,81 @@
+{
+ "id": "honda-metropolitan-2002",
+ "make": "Honda",
+ "model": "Metropolitan (NCH50 / NCW50)",
+ "name": "Honda Metropolitan",
+ "years": [
+  2002,
+  2026
+ ],
+ "match": [
+  "metropolitan",
+  "nch50",
+  "ncw50",
+  "jazz",
+  "met 50",
+  "honda metro"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 cc single, carb (NCH50) or fuel injected (NCW50), CVT",
+ "intro": "Honda's 50 cc retro scooter. 2016-2025 bikes are in a transmission case seal recall.",
+ "focus": [
+  [
+   "49 cc single",
+   "Small and simple"
+  ],
+  [
+   "Carb or EFI",
+   "Depends on year"
+  ],
+  [
+   "Trans case recall",
+   "2016-2025"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Gear oil",
+   "Change it"
+  ]
+ ],
+ "remove": [
+  "H-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2016-2025 Metropolitans are in recall 24V825 because the transmission case may not seal and can leak fluid.",
+   "reason": "Leaking transmission fluid can reach the rear tire. The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "G": [
+   "Older NCH50 scooters have a carb. 2016-on NCW50 scooters are fuel injected. Skip the steps that don't match."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "24V825",
+   "years": "2016-2025",
+   "what": "The transmission case may not seal to the crankcase and can leak transmission fluid.",
+   "fix": "Dealer inspects and repairs the transmission case free.",
+   "src": "https://www.carwhere.com/recalls/campaign/24V825000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "silhouette": "honda-metropolitan-2002",
+ "areas": [],
+ "heroName": "METROPOLITAN",
+ "hero": {
+  "src": "img/hero/honda-metropolitan-2002.jpg",
+  "artist": "Trekphiler",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_Jazz.jpg",
+  "lic": "CC BY 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by/3.0"
+ }
+}

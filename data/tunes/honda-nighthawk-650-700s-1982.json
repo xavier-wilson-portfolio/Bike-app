@@ -1,0 +1,86 @@
+{
+ "id": "honda-nighthawk-650-700s-1982",
+ "make": "Honda",
+ "model": "Nighthawk 650 / 700S",
+ "name": "Honda Nighthawk 650 / 700S",
+ "years": [
+  1982,
+  1986
+ ],
+ "match": [
+  "nighthawk 650",
+  "cb650sc",
+  "nighthawk 700s",
+  "cb700sc",
+  "nighthawk s",
+  "cb650 nighthawk"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "655 or 696 cc air-cooled DOHC inline four, four carbs, shaft drive, hydraulic lifters",
+ "intro": "Early-80s Nighthawk fours with shaft drive and self-adjusting valves. The charging system is the usual weak spot.",
+ "focus": [
+  [
+   "Inline four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "Hydraulic lifters",
+   "No valve shims"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Shaft drive",
+   "Change the oil"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-NH6-01",
+   "phase": "F",
+   "after": "F-002",
+   "title": "Test the charging system",
+   "instructions": "Check battery voltage at idle and at 5,000 rpm. Below about 13 V at speed points at the regulator/rectifier or stator.",
+   "reason": "Regulator/rectifier failure is a common Nighthawk problem.",
+   "src": "motoryk.com Nighthawk problems",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "H": [
+   "The valves use hydraulic lifters. Change the oil on time, because old oil makes them tick."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [
+  {
+   "title": "Regulator/rectifier",
+   "what": "Regulator/rectifier failure kills the charging system and leaves a flat battery.",
+   "src": "https://www.motoryk.com/bikes/honda/cb750-nighthawk/problems"
+  }
+ ],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "NIGHTHAWK"
+}

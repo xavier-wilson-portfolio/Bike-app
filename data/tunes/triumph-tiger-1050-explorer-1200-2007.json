@@ -1,0 +1,97 @@
+{
+ "id": "triumph-tiger-1050-explorer-1200-2007",
+ "make": "Triumph",
+ "model": "Tiger 1050 / Tiger Explorer 1200",
+ "name": "Triumph Tiger 1050 / Tiger Explorer 1200",
+ "years": [
+  2007,
+  2021
+ ],
+ "match": [
+  "tiger 1050",
+  "tiger explorer",
+  "explorer 1200",
+  "tiger 1200",
+  "tiger 1200 xc",
+  "tiger 1200 xr",
+  "tiger sport 1050",
+  "tiger xcx",
+  "tiger xrt"
+ ],
+ "style": "adventure",
+ "drive": "shaft",
+ "engine": "1050 cc triple (Tiger 1050, chain) or 1215 cc triple (Explorer and Tiger 1200, shaft), liquid-cooled, fuel injected",
+ "intro": "Triumph's big triples. The Tiger 1050 is a road bike with a chain, the Explorer and Tiger 1200 have shaft drive.",
+ "focus": [
+  [
+   "Triple",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Ride-by-wire on 1200"
+  ],
+  [
+   "Recalls",
+   "Explorer and 1200"
+  ],
+  [
+   "Chain or shaft",
+   "Depends on model"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2012-2014 Tiger Explorers are in recall 14V009 (throttle signal can shut the engine down). 2018-2020 Tiger 1200s are in recall 20V236 (front brake pads may corrode and lose their friction material).",
+   "reason": "An engine shutdown or failing pads is a crash risk. Both fixes are free."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "E": [
+   "The Tiger 1050 has a chain. The Explorer and Tiger 1200 have shaft drive. Skip the steps that don't match."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "14V009",
+   "years": "2012-2014 Tiger Explorer (some)",
+   "what": "Throttle position signal fault can shut the engine down.",
+   "fix": "Free dealer repair.",
+   "src": "https://www.vehiclesafetyrecalls.com/recall/14V009000"
+  },
+  {
+   "id": "20V236",
+   "years": "2018-2020 Tiger 1200",
+   "what": "Front brake pads may corrode and the friction material can come off the backing plate.",
+   "fix": "Dealer replaces the front pads free.",
+   "src": "https://carcomplaintdata.com/recalls/20v236000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "silhouette": "triumph-tiger-1050-explorer-1200-2007",
+ "areas": [],
+ "heroName": "TIGER",
+ "hero": {
+  "src": "img/hero/triumph-tiger-1050-explorer-1200-2007.jpg",
+  "artist": "San Andreas",
+  "page": "https://commons.wikimedia.org/wiki/File:Triumph_Tiger_Explorer_-_Mod_2015.jpeg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

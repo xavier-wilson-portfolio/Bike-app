@@ -1,0 +1,96 @@
+{
+ "id": "suzuki-v-strom-1000-1050-2002",
+ "make": "Suzuki",
+ "model": "V-Strom 1000 / 1050 (DL1000 / DL1050)",
+ "name": "Suzuki V-Strom 1000 / 1050",
+ "years": [
+  2002,
+  2026
+ ],
+ "match": [
+  "v-strom 1000",
+  "vstrom 1000",
+  "dl1000",
+  "v-strom 1050",
+  "vstrom 1050",
+  "dl1050",
+  "wee strom 1000",
+  "strom 1000"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "996 or 1037 cc liquid-cooled V-twin, fuel injected",
+ "intro": "Suzuki's big V-twin adventure bike. Many years have electrical recalls, mostly the regulator/rectifier and wiring.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Electrical recalls",
+   "Several years"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls first",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2008-2009 bikes are in recall 11V108 and 2008-2012 bikes in recall 16V018 (regulator/rectifier). 2014-2016 bikes have several electrical recalls: the wiring harness can rub through on the fuel tank, the battery ground can corrode, and the ignition switch can corrode. 2020-2025 DL1050s are in recall 25V505 (headlight high beam too bright).",
+   "reason": "A failed regulator or shorted harness can strand you or stall the bike. Every fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "11V108",
+   "years": "2008-2009 (some)",
+   "what": "Weak bond between the regulator/rectifier power board and its case lets heat deform the board.",
+   "fix": "Dealer replaces the regulator/rectifier free.",
+   "src": "https://au7o.io/motorcycle-issues/suzuki-gsx-r600?year=2006"
+  },
+  {
+   "id": "16V018",
+   "years": "2008-2012 (model list varies)",
+   "what": "Regulator/rectifier circuit board can lift off its case, so the battery stops charging and the engine can stall.",
+   "fix": "Dealer replaces the regulator/rectifier free.",
+   "src": "https://static.nhtsa.gov/odi/rcl/2016/RCMN-16V018-3272.pdf"
+  },
+  {
+   "id": "25V505",
+   "years": "2020-2025 DL1050",
+   "what": "Headlight upper beam is too bright to meet the lighting standard.",
+   "fix": "Dealer replaces the headlight assembly free.",
+   "src": "https://carcomplaintdata.com/recalls/25v505000"
+  }
+ ],
+ "known": [
+  {
+   "title": "2014-2016 electrical recalls",
+   "what": "2014-2016 DL1000s have recalls for harness chafing on the fuel tank, the battery ground connection and ignition switch corrosion.",
+   "src": "https://arfc.org/motorcycles/suzuki/dl1000/recalls.aspx"
+  }
+ ],
+ "forums": [
+  {
+   "name": "StromTrooper",
+   "url": "https://stromtrooper.com/",
+   "what": "Owner forum for the V-Strom."
+  }
+ ],
+ "heroName": "V-STROM"
+}

@@ -1,0 +1,77 @@
+{
+ "id": "honda-pcx125-150-2010",
+ "make": "Honda",
+ "model": "PCX125 / PCX150 / PCX160",
+ "name": "Honda PCX",
+ "years": [
+  2010,
+  2026
+ ],
+ "match": [
+  "pcx",
+  "pcx125",
+  "pcx150",
+  "pcx160",
+  "pcx 150",
+  "pcx 125"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "125, 150 or 160 cc liquid-cooled single, fuel injected, CVT",
+ "intro": "Honda's best-selling small scooter. Some accessory top box mounts were recalled.",
+ "focus": [
+  [
+   "Small single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carb"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Coolant",
+   "Change it"
+  ],
+  [
+   "Top box mount",
+   "Accessory recall"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. If the scooter has a Honda accessory rear trunk, check the base against recall 16E023. Those trunk bases can let the box fall off.",
+   "reason": "A top box falling off in traffic is a hazard to you and others. The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "16E023",
+   "years": "Accessory trunk bases sold for 2013-2016 PCX150 (also fitted to PCX125)",
+   "what": "Accessory rear trunk base may let the trunk come off.",
+   "fix": "Honda replaces the trunk base free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/16E023000"
+  }
+ ],
+ "known": [],
+ "forums": [],
+ "silhouette": "honda-pcx125-150-2010",
+ "areas": [],
+ "heroName": "PCX",
+ "hero": {
+  "src": "img/hero/honda-pcx125-150-2010.jpg",
+  "artist": "Khaosaming",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_PCX125_2011_Front.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

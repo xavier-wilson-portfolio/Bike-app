@@ -1,0 +1,100 @@
+{
+ "id": "suzuki-burgman-400-650-1999",
+ "make": "Suzuki",
+ "model": "Burgman 400 / 650",
+ "name": "Suzuki Burgman 400 / 650",
+ "years": [
+  1999,
+  2026
+ ],
+ "match": [
+  "burgman",
+  "burgman 400",
+  "burgman 650",
+  "an400",
+  "an650",
+  "burgman executive",
+  "skywave"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "385-400 cc single (AN400) or 638 cc twin (AN650), liquid-cooled, fuel injected or carb, automatic",
+ "intro": "Suzuki's big touring scooters. The 650 has an electronically controlled automatic. Several years have recalls.",
+ "focus": [
+  [
+   "Single or twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Automatic",
+   "CVT or SECVT"
+  ],
+  [
+   "Recalls",
+   "Several years"
+  ],
+  [
+   "Coolant",
+   "Change it"
+  ],
+  [
+   "Brake light switch",
+   "2012 recall"
+  ]
+ ],
+ "remove": [],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2005 AN650s are in recall 05V497 (fuel pump retainer ring). 2008-2012 AN400s are in recall 16V018 (regulator/rectifier). 2012 AN400 and AN650 scooters are in recall 12V038 (brake light switches). 2013-2014 AN650s are in recall 15V852 (tappet and cam wear).",
+   "reason": "Every fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {
+  "G": [
+   "Early AN400s have a carb. Later Burgmans are fuel injected. Skip the steps that don't match."
+  ]
+ },
+ "recalls": [
+  {
+   "id": "05V497",
+   "years": "2005 AN650",
+   "what": "Fuel pump retainer ring may let fuel leak. Suzuki advised not to ride until fixed.",
+   "fix": "Dealer replaces the retainer ring free.",
+   "src": "https://auto-recalls.justia.com/suzuki/an650/2005/05v497000"
+  },
+  {
+   "id": "12V038",
+   "years": "2012 AN400 and AN650",
+   "what": "Brake light switches may fail, so the brake light may not work and the scooter may not start.",
+   "fix": "Dealer replaces the brake light switches free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/12V038000"
+  },
+  {
+   "id": "15V852",
+   "years": "2013-2014 AN650",
+   "what": "Excessive tappet and camshaft wear.",
+   "fix": "Free dealer repair.",
+   "src": "https://auto-recalls.justia.com/suzuki/an650/2014/15v852000"
+  },
+  {
+   "id": "16V018",
+   "years": "2008-2012 (model list varies)",
+   "what": "Regulator/rectifier circuit board can lift off its case, so the battery stops charging and the engine can stall.",
+   "fix": "Dealer replaces the regulator/rectifier free.",
+   "src": "https://static.nhtsa.gov/odi/rcl/2016/RCMN-16V018-3272.pdf"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "Burgman USA",
+   "url": "https://www.burgmanusa.com/",
+   "what": "Owner forum for Suzuki Burgman scooters."
+  }
+ ],
+ "silhouette": "suzuki-burgman-400-650-1999",
+ "areas": [],
+ "heroName": "BURGMAN"
+}

@@ -1,0 +1,109 @@
+{
+ "id": "bmw-s1000rr-2010",
+ "make": "BMW",
+ "model": "S1000RR",
+ "name": "BMW S1000RR",
+ "years": [
+  2010,
+  2026
+ ],
+ "match": [
+  "s1000rr",
+  "s 1000 rr",
+  "s1000 rr",
+  "m1000rr"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "999 cc liquid-cooled inline four, fuel injected",
+ "intro": "BMW's superbike. Several recalls, from 2012 connecting rod bolts to a 2026 ignition lock recall on 2020-on bikes.",
+ "focus": [
+  [
+   "999 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Ride-by-wire"
+  ],
+  [
+   "Recalls",
+   "Several years"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Valves",
+   "Finger followers"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls first",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2012 bikes are in recall 12V177 (connecting rod bolts). Some 2020 bikes are in recall 20V146 (brake light). 2022 bikes are in recall 22V752 (clutch cover bolts). Some 2023 bikes are in recall 23V123 (brake lever). 2020-2026 bikes are in recall 26V478 (ignition lock can fail and stall the engine).",
+   "reason": "A loose rod bolt or a stall at speed is serious. Every fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "12V177",
+   "years": "2012 (Sep 2011-Apr 2012 build)",
+   "what": "Connecting rod bolts problem.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehiclesafetyrecalls.com/recall/12V177000"
+  },
+  {
+   "id": "20V146",
+   "years": "2020 (some)",
+   "what": "Emergency stop signal can make the brake light flash instead of staying on.",
+   "fix": "Dealer reprograms the emergency stop signal free.",
+   "src": "https://auto-recalls.justia.com/bmw/f850gs/2020/20v146000"
+  },
+  {
+   "id": "22V752",
+   "years": "2022",
+   "what": "Clutch cover bolts were not lubricated, so the cover can loosen and leak oil.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehiclesafetyrecalls.com/recall/22V752000"
+  },
+  {
+   "id": "23V123",
+   "years": "2023 (some)",
+   "what": "Hand brake lever problem can reduce braking.",
+   "fix": "Free dealer repair.",
+   "src": "https://auto-recalls.justia.com/bmw/s-1000-rr/2023/23v123000"
+  },
+  {
+   "id": "26V478",
+   "years": "2020-2026",
+   "what": "Ignition lock may fail and stall the engine.",
+   "fix": "Free dealer repair.",
+   "src": "https://www.carwhere.com/recalls/campaign/26V478000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "BMW MOA forum",
+   "url": "https://forums.bmwmoa.org/",
+   "what": "BMW Motorcycle Owners of America forum."
+  }
+ ],
+ "silhouette": "bmw-s1000rr-2010",
+ "areas": [],
+ "heroName": "S1000RR",
+ "hero": {
+  "src": "img/hero/bmw-s1000rr-2010.jpg",
+  "artist": "Stefan Krause, Germany",
+  "page": "https://commons.wikimedia.org/wiki/File:BMW_S1000_RR_Studio.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

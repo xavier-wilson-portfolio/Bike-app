@@ -1,0 +1,101 @@
+{
+ "id": "harley-davidson-softail-deluxe-breakout-2005",
+ "make": "Harley-Davidson",
+ "model": "Softail Deluxe / Breakout (Twin Cam)",
+ "name": "Harley-Davidson Softail Deluxe / Breakout",
+ "years": [
+  2005,
+  2017
+ ],
+ "match": [
+  "softail deluxe",
+  "flstn",
+  "breakout",
+  "fxsb",
+  "fxsbse",
+  "cvo breakout",
+  "deluxe"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "Twin Cam 88B, 96B, 103B or 110B counterbalanced V-twin, fuel injected, belt drive",
+ "intro": "Twin Cam Softails. 2005-2006 bikes still have the spring tensioner shoes.",
+ "focus": [
+  [
+   "Twin Cam B",
+   "Counterbalanced"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Cam tensioners",
+   "2005-2006"
+  ],
+  [
+   "Belt drive",
+   "Check for cracks"
+  ],
+  [
+   "Hidden shocks",
+   "Under the frame"
+  ]
+ ],
+ "remove": [
+  "H-004",
+  "G-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-TC-01",
+   "phase": "H",
+   "after": "H-003",
+   "title": "Inspect the cam chain tensioner shoes",
+   "instructions": "Pull the cam cover and look at the plastic tensioner shoes. If they are worn deep or cracked, replace them, or fit the later hydraulic tensioners or a gear drive.",
+   "reason": "The spring-loaded shoes on 1999-2006 Twin Cams wear through and can send debris into the oil pump.",
+   "src": "Fix My Hog Twin Cam tensioner notes",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 2.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "H": [
+   "Twin Cams from 2007 on have hydraulic tensioners and don't share the early shoe problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Harley-Davidson has issued several recalls that touch these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [
+  {
+   "title": "Cam chain tensioners",
+   "what": "1999-2006 Twin Cams (except the 2006 Dyna) use spring-loaded plastic tensioner shoes that wear out. Harley moved to hydraulic tensioners in 2006 and 2007.",
+   "src": "https://fixmyhog.com/video/twin-cam-gear-drive-conversion-015478"
+  }
+ ],
+ "forums": [
+  {
+   "name": "Fix My Hog",
+   "url": "https://fixmyhog.com/",
+   "what": "Harley repair videos, including Twin Cam tensioner work."
+  },
+  {
+   "name": "HDForums",
+   "url": "https://www.hdforums.com/",
+   "what": "Large owner forum for all Harley-Davidson models."
+  }
+ ],
+ "silhouette": "harley-davidson-softail-deluxe-breakout-2005",
+ "areas": [],
+ "heroName": "BREAKOUT",
+ "hero": {
+  "src": "img/hero/harley-davidson-softail-deluxe-breakout-2005.jpg",
+  "artist": "Lothar Spurzem",
+  "page": "https://commons.wikimedia.org/wiki/File:Harley-Davidson_Softail_Breakout_FXSB103_(2015-08-25_Sp).jpg",
+  "lic": "CC BY-SA 2.0 de",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0/de/deed.en"
+ }
+}

@@ -1,0 +1,71 @@
+{
+ "id": "harley-davidson-sportster-1200-1988",
+ "make": "Harley-Davidson",
+ "model": "Sportster 1200 (solid-mount Evolution)",
+ "name": "Harley-Davidson Sportster 1200 (1988-2003)",
+ "years": [
+  1988,
+  2003
+ ],
+ "match": [
+  "sportster 1200",
+  "xl1200",
+  "xl1200c",
+  "xl1200s",
+  "sportster custom",
+  "sportster sport",
+  "xlh1200",
+  "xlh 1200"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "1200 cc air-cooled Evolution V-twin, single carb, solid-mounted, chain or belt final drive",
+ "intro": "The solid-mount Evo Sportster 1200. A single carb and a lot of vibration, which shakes bolts and brackets loose.",
+ "focus": [
+  [
+   "1200 Evo V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Single carb",
+   "Keihin CV"
+  ],
+  [
+   "Solid mount",
+   "Check every bolt"
+  ],
+  [
+   "Charging",
+   "Stator and R/R"
+  ],
+  [
+   "Primary",
+   "Separate oil"
+  ]
+ ],
+ "remove": [
+  "H-004",
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "E": [
+   "Early bikes have a chain final drive, later ones a belt. Check which yours has."
+  ],
+  "H": [
+   "The Sportster primary has its own oil. Change engine oil, primary oil and check the transmission oil level."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Harley-Davidson has issued several recalls that touch these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XLForum",
+   "url": "https://www.xlforum.net/",
+   "what": "Owner forum for Harley Sportsters."
+  }
+ ],
+ "heroName": "SPORTSTER 1200"
+}

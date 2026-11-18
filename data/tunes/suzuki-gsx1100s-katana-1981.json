@@ -1,0 +1,79 @@
+{
+ "id": "suzuki-gsx1100s-katana-1981",
+ "make": "Suzuki",
+ "model": "GSX1100S Katana",
+ "name": "Suzuki GSX1100S Katana",
+ "years": [
+  1981,
+  1984
+ ],
+ "match": [
+  "katana 1100",
+  "gsx1100s",
+  "gsx1100sz",
+  "gsx 1100 katana",
+  "katana 1000",
+  "gs1000s katana",
+  "gsx1100 katana"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "1075 cc air-cooled DOHC 16-valve inline four, four carbs",
+ "intro": "The original Katana. A big air-cooled GSX four in a striking body. Four carbs to rebuild and sync.",
+ "focus": [
+  [
+   "1075 cc four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Bodywork",
+   "Rare parts"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ],
+  "A": [
+   "Katana body parts are rare. Store every panel safely before you start."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Suzuki Owners Club",
+   "url": "https://www.suzukiownersclub.co.uk/",
+   "what": "Club for owners of Suzuki bikes, old and new."
+  }
+ ],
+ "silhouette": "suzuki-gsx1100s-katana-1981",
+ "areas": [],
+ "heroName": "KATANA",
+ "hero": {
+  "src": "img/hero/suzuki-gsx1100s-katana-1981.jpg",
+  "artist": "Kernel2705",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_Katana_GSX100_wiki.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
+}

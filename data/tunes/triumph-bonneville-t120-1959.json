@@ -1,0 +1,79 @@
+{
+ "id": "triumph-bonneville-t120-1959",
+ "make": "Triumph",
+ "model": "Bonneville T120 (pre-unit and unit)",
+ "name": "Triumph Bonneville T120 (1959-1975)",
+ "years": [
+  1959,
+  1975
+ ],
+ "match": [
+  "t120",
+  "t120r",
+  "bonneville 650",
+  "t120v",
+  "bonneville 1960s"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "649 cc air-cooled OHV parallel twin, two carbs, points ignition",
+ "intro": "The classic Bonneville. Twin Amal carbs, points, and a lot of oil seeping out of places it shouldn't.",
+ "focus": [
+  [
+   "Parallel twin",
+   "Air-cooled"
+  ],
+  [
+   "Twin Amals",
+   "Wear in the slides"
+  ],
+  [
+   "Points ignition",
+   "Gap and timing"
+  ],
+  [
+   "Oil-in-frame",
+   "1971-on"
+  ],
+  [
+   "Electrics",
+   "Lucas"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-T12-01",
+   "phase": "G",
+   "after": "G-004",
+   "title": "Check the Amal carb slides and bodies for wear",
+   "instructions": "Pull the slides and check for side-to-side play in the bodies. Worn Amals let air past and make the idle hunt. New or resleeved bodies fix it.",
+   "reason": "Amal carbs wear their slides and bores, and a rebuild kit alone won't cure that.",
+   "src": "Classic Triumph practice",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 1.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "H": [
+   "From 1971 the oil lives in the frame. Check the level the way the manual says for your year."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "heroName": "BONNEVILLE"
+}

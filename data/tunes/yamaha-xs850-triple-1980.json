@@ -1,0 +1,68 @@
+{
+ "id": "yamaha-xs850-triple-1980",
+ "make": "Yamaha",
+ "model": "XS850",
+ "name": "Yamaha XS850 Triple",
+ "years": [
+  1980,
+  1981
+ ],
+ "match": [
+  "xs850",
+  "xs 850",
+  "xs850g",
+  "xs850s",
+  "xs850 special"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "826 cc air-cooled DOHC inline triple, three carbs, shaft drive",
+ "intro": "Yamaha's shaft-drive triple. Three carbs to rebuild and sync, and an engine that runs well once they are right.",
+ "focus": [
+  [
+   "826 cc triple",
+   "Air-cooled"
+  ],
+  [
+   "Three carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "Shaft drive",
+   "Change the oil"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Ignition",
+   "Check timing"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [],
+ "silhouette": "yamaha-xs850-triple-1980",
+ "areas": [],
+ "heroName": "XS850",
+ "hero": {
+  "src": "img/hero/yamaha-xs850-triple-1980.jpg",
+  "artist": "The original uploader was Motorbiker at German Wikipedia.",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_XS850_Lside.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
+}

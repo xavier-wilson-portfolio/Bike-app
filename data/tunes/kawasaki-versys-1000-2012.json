@@ -1,0 +1,60 @@
+{
+ "id": "kawasaki-versys-1000-2012",
+ "make": "Kawasaki",
+ "model": "Versys 1000",
+ "name": "Kawasaki Versys 1000",
+ "years": [
+  2012,
+  2026
+ ],
+ "match": [
+  "versys 1000",
+  "versys1000",
+  "kle1000",
+  "versys 1000 lt",
+  "versys 1000 se"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "1043 cc liquid-cooled inline four, fuel injected",
+ "intro": "A tall, road-biased adventure four. Mostly normal sport-touring upkeep.",
+ "focus": [
+  [
+   "1043 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Cooling",
+   "Hoses and fan"
+  ],
+  [
+   "Luggage mounts",
+   "Check bolts"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Kawasaki Versys Forum",
+   "url": "https://www.kawasakiversys.com/",
+   "what": "Owner forum for Versys models."
+  }
+ ],
+ "heroName": "VERSYS 1000"
+}

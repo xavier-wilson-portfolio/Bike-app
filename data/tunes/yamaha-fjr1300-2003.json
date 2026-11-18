@@ -1,0 +1,110 @@
+{
+ "id": "yamaha-fjr1300-2003",
+ "make": "Yamaha",
+ "model": "FJR1300",
+ "name": "Yamaha FJR1300",
+ "years": [
+  2003,
+  2022
+ ],
+ "match": [
+  "fjr1300",
+  "fjr",
+  "fjr 1300",
+  "fjr1300a",
+  "fjr1300ae",
+  "fjr1300es",
+  "fjr13"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "engine": "1298 cc liquid-cooled inline four, fuel injected, shaft drive",
+ "intro": "Yamaha's sport tourer. Several recalls over the years, including a second gear recall on 2016-2020 bikes.",
+ "focus": [
+  [
+   "1298 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Recalls",
+   "Several years"
+  ],
+  [
+   "Shaft drive",
+   "Change the oil"
+  ],
+  [
+   "Wiring",
+   "Ground junction"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls first",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2006-2009 bikes are in recalls 09V002 (ignition switch) and 11V338 (ground wire junction). Some 2011 bikes are in recall 11V340 (brake light switch). 2013-2020 bikes are in recall 20V814 (brake light switch). 2016-2020 bikes are in recall 20V813 (second gear can break). Some 2016-2021 bikes are in recall 21V865 (ECU).",
+   "reason": "Some of these carry a do-not-ride warning until fixed. Every fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "09V002",
+   "years": "2006-2009",
+   "what": "Ignition switch wiring may disconnect.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehiclesafetyrecalls.com/recall/09V002000"
+  },
+  {
+   "id": "11V338",
+   "years": "2006-2009",
+   "what": "Ground wire junction problem.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehiclesafetyrecalls.com/recall/11V338000"
+  },
+  {
+   "id": "11V340",
+   "years": "2011 (Jan-Apr build)",
+   "what": "Front brake light switch problem.",
+   "fix": "Dealer fits a new front brake switch free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/11V340000"
+  },
+  {
+   "id": "20V814",
+   "years": "2013-2020 FJR1300, 2018-2020 Super Tenere and others (some)",
+   "what": "Front brake light switch may fail, so the brake light may not come on.",
+   "fix": "Dealer replaces the switch free.",
+   "src": "https://vehicleflaws.com/recall/20V814000"
+  },
+  {
+   "id": "20V813",
+   "years": "2016-2020",
+   "what": "Second gear may crack and break under high-speed load.",
+   "fix": "Dealer reprograms the ECU and replaces the main and drive axles free.",
+   "src": "https://auto-recalls.justia.com/yamaha/fjr1300/2019/20v813000"
+  },
+  {
+   "id": "21V865",
+   "years": "2016-2021 (some)",
+   "what": "ECU software problem. NHTSA lists a do-not-ride advisory.",
+   "fix": "Free dealer repair.",
+   "src": "https://www.carwhere.com/recalls/campaign/21V865000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "FJR Forum",
+   "url": "https://www.fjrforum.com/",
+   "what": "Owner forum for the FJR1300."
+  }
+ ],
+ "heroName": "FJR1300"
+}

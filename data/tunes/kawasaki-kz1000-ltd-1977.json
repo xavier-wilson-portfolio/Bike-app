@@ -1,0 +1,74 @@
+{
+ "id": "kawasaki-kz1000-ltd-1977",
+ "make": "Kawasaki",
+ "model": "KZ1000 LTD",
+ "name": "Kawasaki KZ1000 LTD",
+ "years": [
+  1977,
+  1980
+ ],
+ "match": [
+  "kz1000 ltd",
+  "kz1000ltd",
+  "kz 1000 ltd",
+  "z1000 ltd",
+  "kz1000b"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "1015 cc air-cooled DOHC inline four, four carbs",
+ "intro": "Kawasaki's early factory custom on the big Z1 engine. Four carbs, points ignition and a stout bottom end.",
+ "focus": [
+  [
+   "1015 cc four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "Points ignition",
+   "Gap and timing"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KZRider",
+   "url": "https://www.kzrider.com/",
+   "what": "Owner forum for vintage Kawasaki KZ and Z bikes."
+  }
+ ],
+ "silhouette": "kawasaki-kz1000-ltd-1977",
+ "areas": [],
+ "heroName": "KZ1000 LTD",
+ "hero": {
+  "src": "img/hero/kawasaki-kz1000-ltd-1977.jpg",
+  "artist": "Mkosharkii",
+  "page": "https://commons.wikimedia.org/wiki/File:1979_KZ1000LTD.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
+}

@@ -1,0 +1,106 @@
+{
+ "id": "vespa-px150-p200e-1977",
+ "make": "Vespa",
+ "model": "PX / P200E",
+ "name": "Vespa PX / P series",
+ "years": [
+  1977,
+  2017
+ ],
+ "match": [
+  "vespa px",
+  "px150",
+  "px200",
+  "p200e",
+  "p125x",
+  "p150x",
+  "vespa p200",
+  "px125",
+  "vespa p series"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "123-198 cc air-cooled two-stroke single, carb, four-speed hand-shift gearbox",
+ "intro": "The classic geared Vespa. A two-stroke with a twist-grip gear change and a steel body that rusts underneath.",
+ "focus": [
+  [
+   "Two-stroke single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Dell'Orto"
+  ],
+  [
+   "Hand shift",
+   "Cables"
+  ],
+  [
+   "Steel body",
+   "Floor rust"
+  ],
+  [
+   "Oil",
+   "Premix or autolube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-VPX-01",
+   "phase": "E",
+   "after": "E-002",
+   "title": "Check the floor and frame for rust",
+   "instructions": "Look under the floor mat, along the runners and under the engine cowls. The steel body is the frame, so rust here is structural.",
+   "reason": "Vespa bodies are monocoque, and floor rust is the classic killer.",
+   "src": "Owner experience",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.5,
+   "tools": ""
+  },
+  {
+   "id": "X-VPX-02",
+   "phase": "G",
+   "after": "G-004",
+   "title": "Check the oil supply",
+   "instructions": "Find out if it is premix or has autolube. On autolube bikes, check the oil tank and pump line. On premix, mix fuel and oil at the ratio for your model.",
+   "reason": "A two-stroke with no oil seizes quickly.",
+   "src": "Two-stroke basics",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "J": [
+   "Gear and clutch cables run from the left grip. Adjust them together so the gears select cleanly."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Owner forum for Vespa scooters, classic and modern."
+  }
+ ],
+ "silhouette": "vespa-px150-p200e-1977",
+ "areas": [],
+ "heroName": "VESPA PX",
+ "hero": {
+  "src": "img/hero/vespa-px150-p200e-1977.jpg",
+  "artist": "Khaosaming",
+  "page": "https://commons.wikimedia.org/wiki/File:Piaggio_Vespa_P200E_1981.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

@@ -1,0 +1,94 @@
+{
+ "id": "honda-valkyrie-1500-1997",
+ "make": "Honda",
+ "model": "Valkyrie 1500",
+ "name": "Honda Valkyrie (GL1500C)",
+ "years": [
+  1997,
+  2003
+ ],
+ "match": [
+  "valkyrie",
+  "gl1500c",
+  "valkyrie 1500",
+  "valkyrie interstate",
+  "gl1500cf",
+  "valkyrie tourer"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "1520 cc liquid-cooled flat six, six carbs, shaft drive",
+ "intro": "A Gold Wing flat six in a cruiser. Six carbs to sync, and a shaft drive to grease.",
+ "focus": [
+  [
+   "1520 cc flat six",
+   "Liquid-cooled"
+  ],
+  [
+   "Six carbs",
+   "Sync them"
+  ],
+  [
+   "Shaft drive",
+   "Spline lube"
+  ],
+  [
+   "Rear wheel bearings",
+   "Check"
+  ],
+  [
+   "Cooling",
+   "Hoses and fan"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-VK-01",
+   "phase": "L",
+   "after": "L-001",
+   "title": "Check the rear wheel bearings",
+   "instructions": "With the rear wheel off the ground, rock it side to side and spin it. Any play or roughness means new bearings.",
+   "reason": "Owners of the Interstate model have reported repeated rear wheel bearing failures.",
+   "src": "NHTSA owner complaint",
+   "safety": "Normal",
+   "skill": "Intermediate",
+   "estHours": 0.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "G": [
+   "Sync all six carbs after a rebuild. It is a long job, so set aside the time."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [
+  {
+   "title": "Rear wheel bearings",
+   "what": "An owner of a 1999 Valkyrie Interstate reported the left rear wheel bearing failing three times.",
+   "src": "https://vehicleflaws.com/vehicle/honda/gl1500cf/1999"
+  }
+ ],
+ "forums": [
+  {
+   "name": "Valkyrie Riders Cruiser Club",
+   "url": "https://www.valkyrieforum.com/",
+   "what": "Owner club and forum for Valkyries."
+  }
+ ],
+ "silhouette": "honda-valkyrie-1500-1997",
+ "areas": [],
+ "heroName": "VALKYRIE",
+ "hero": {
+  "src": "img/hero/honda-valkyrie-1500-1997.jpg",
+  "artist": "Gomera-b",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_F6C_seitlich.JPG",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
+}

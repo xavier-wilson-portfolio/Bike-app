@@ -1,0 +1,74 @@
+{
+ "id": "kawasaki-zx-7r-1996",
+ "make": "Kawasaki",
+ "model": "Ninja ZX-7R",
+ "name": "Kawasaki Ninja ZX-7R",
+ "years": [
+  1996,
+  2003
+ ],
+ "match": [
+  "zx-7r",
+  "zx7r",
+  "zx 7r",
+  "zx-7rr",
+  "zx750",
+  "ninja zx-7r"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "748 cc liquid-cooled inline four, four carbs",
+ "intro": "Kawasaki's 1990s superbike. Big flat-slide carbs and a heavy chassis. Most survivors need their fuel and cooling systems gone through.",
+ "focus": [
+  [
+   "748 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "Cooling",
+   "Hoses and fan"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ZX6R.com",
+   "url": "https://www.zx6r.com/",
+   "what": "Owner forum for Kawasaki ZX sport bikes."
+  }
+ ],
+ "silhouette": "kawasaki-zx-7r-1996",
+ "areas": [],
+ "heroName": "ZX-7R",
+ "hero": {
+  "src": "img/hero/kawasaki-zx-7r-1996.jpg",
+  "artist": "Cjp24",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_Ninja_ZX-7R,_1997.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

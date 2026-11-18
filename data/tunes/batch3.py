@@ -106,7 +106,7 @@ B3.append(dict(id="honda-shadow-750-2004", make="Honda", model="Shadow 750", nam
   known=[], forums=[]))
 
 B3.append(dict(id="honda-cb650-1979", make="Honda", model="CB650", name="Honda CB650", years=[1979, 1982],
-  match=["cb650", "cb 650", "cb650c", "cb650sc", "cb650 custom"], style="standard", drive="chain",
+  match=["cb650", "cb 650", "cb650c", "cb650 custom"], style="standard", drive="chain",
   engine="627 cc air-cooled SOHC inline four, four carbs",
   intro="The last of Honda's single-cam fours. A good runner once the carbs and charging system are sorted.",
   focus=[["SOHC inline four", "Air-cooled"], ["Four carbs", "Rebuild as a set"], ["Charging", "Test before buying parts"], ["Cam chain", "Listen cold"], ["Drive", "Chain on most, check yours"]],

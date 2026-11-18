@@ -1,0 +1,73 @@
+{
+ "id": "harley-davidson-nightster-975-2022",
+ "make": "Harley-Davidson",
+ "model": "Nightster (RH975)",
+ "name": "Harley-Davidson Nightster 975",
+ "years": [
+  2022,
+  2026
+ ],
+ "match": [
+  "nightster 975",
+  "rh975",
+  "nightster",
+  "nightster special",
+  "rh975s"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "975 cc liquid-cooled Revolution Max V-twin, fuel injected, belt drive",
+ "intro": "The liquid-cooled Sportster. Some early 2022 bikes have a handlebar recall.",
+ "focus": [
+  [
+   "975 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Ride-by-wire"
+  ],
+  [
+   "Handlebar recall",
+   "2022"
+  ],
+  [
+   "Belt drive",
+   "Check for cracks"
+  ],
+  [
+   "Cooling",
+   "Hoses and fan"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls first",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. Some 2022 Nightsters built Dec 2021 to Sep 2022 are in recall 22V745 because the handlebar weld can separate.",
+   "reason": "A broken handlebar means losing steering. The fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "22V745",
+   "years": "2022 (Dec 2021-Sep 2022 build)",
+   "what": "Handlebar weld may separate between the inner and outer sections.",
+   "fix": "Dealer replaces the handlebar free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/22V745000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "XLForum",
+   "url": "https://www.xlforum.net/",
+   "what": "Owner forum for Harley Sportsters."
+  }
+ ],
+ "heroName": "NIGHTSTER"
+}

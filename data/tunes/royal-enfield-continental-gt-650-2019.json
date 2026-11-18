@@ -1,0 +1,90 @@
+{
+ "id": "royal-enfield-continental-gt-650-2019",
+ "make": "Royal Enfield",
+ "model": "Continental GT 650",
+ "name": "Royal Enfield Continental GT 650",
+ "years": [
+  2019,
+  2026
+ ],
+ "match": [
+  "continental gt 650",
+  "continental gt",
+  "gt 650",
+  "continental 650",
+  "re gt650"
+ ],
+ "style": "cafe",
+ "drive": "chain",
+ "engine": "648 cc air/oil-cooled parallel twin, fuel injected",
+ "intro": "Royal Enfield's 650 cafe racer. Early bikes had a brake caliper corrosion recall.",
+ "focus": [
+  [
+   "648 cc twin",
+   "Air/oil-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Caliper recall",
+   "2018-2020"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls first",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2018-2020 bikes are in recall 21V045 (road salt can corrode the brake calipers). Some 2023 bikes are in recall 24V713 (reflectors).",
+   "reason": "Corroded calipers can drag or lose braking. Both fixes are free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "21V045",
+   "years": "2018-2020",
+   "what": "Road salt can corrode the brake calipers, making them drag or brake poorly.",
+   "fix": "Dealer replaces the front and rear calipers free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/21V045000"
+  },
+  {
+   "id": "24V713",
+   "years": "2023 (Nov 2022-Mar 2023 build)",
+   "what": "Side and rear reflectors don't meet the lighting standard.",
+   "fix": "Dealer replaces the side and rear reflectors free.",
+   "src": "https://auto-recalls.justia.com/royal-enfield/hunter/2023/24v713000"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with Royal Enfield owner threads."
+  }
+ ],
+ "silhouette": "royal-enfield-continental-gt-650-2019",
+ "areas": [],
+ "heroName": "CONTINENTAL GT",
+ "hero": {
+  "src": "img/hero/royal-enfield-continental-gt-650-2019.jpg",
+  "artist": "Cjp24",
+  "page": "https://commons.wikimedia.org/wiki/File:Royal_Enfield_Continental_GT_650_(1).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

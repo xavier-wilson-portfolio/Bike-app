@@ -1,0 +1,86 @@
+{
+ "id": "triumph-trident-660-2021",
+ "make": "Triumph",
+ "model": "Trident 660",
+ "name": "Triumph Trident 660",
+ "years": [
+  2021,
+  2026
+ ],
+ "match": [
+  "trident 660",
+  "trident660",
+  "tiger sport 660",
+  "triumph trident 2021"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "660 cc liquid-cooled inline triple, fuel injected",
+ "intro": "Triumph's middleweight triple. Every 2022-2024 bike is in a MAP sensor hose recall.",
+ "focus": [
+  [
+   "660 cc triple",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Ride-by-wire"
+  ],
+  [
+   "MAP hose recall",
+   "2022-2024"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Fork caps",
+   "2023 recall"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {
+  "A-002": {
+   "title": "Check for open recalls first",
+   "instructions": "Run your VIN at nhtsa.gov/recalls. 2022-2024 bikes are in recall 23V583 (MAP sensor hose can block and stall the engine). Some 2022 bikes are in recall 22V062 (side stand) and some 2023 bikes in recall 24V109 (fork caps can strip).",
+   "reason": "A stall or a fork cap coming off is a crash risk. Every fix is free."
+  }
+ },
+ "add": [],
+ "lessons": {},
+ "recalls": [
+  {
+   "id": "23V583",
+   "years": "2022-2024",
+   "what": "MAP sensor hose may be blocked, giving bad readings that cause rough idle or a stall.",
+   "fix": "Dealer replaces the hose free.",
+   "src": "https://vehiclesafetyrecalls.com/recall/23V583000"
+  },
+  {
+   "id": "22V062",
+   "years": "2022 (some)",
+   "what": "Side stand (kickstand) problem.",
+   "fix": "Free dealer repair.",
+   "src": "https://vehicleflaws.com/recall/23V583000"
+  },
+  {
+   "id": "24V109",
+   "years": "2023 (some)",
+   "what": "Front fork caps with bad threads may strip and come off the fork tube.",
+   "fix": "Free dealer repair.",
+   "src": "https://www.clearvin.com/car-recalls/triumph/trident-660/2023/"
+  }
+ ],
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "heroName": "TRIDENT 660"
+}

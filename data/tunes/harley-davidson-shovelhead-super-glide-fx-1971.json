@@ -1,0 +1,69 @@
+{
+ "id": "harley-davidson-shovelhead-super-glide-fx-1971",
+ "make": "Harley-Davidson",
+ "model": "Shovelhead Super Glide (FX)",
+ "name": "Harley-Davidson Super Glide (Shovelhead FX)",
+ "years": [
+  1971,
+  1984
+ ],
+ "match": [
+  "super glide",
+  "fx",
+  "fxe",
+  "fxs",
+  "low rider",
+  "fxef",
+  "fxwg",
+  "wide glide",
+  "shovelhead super glide"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "74 or 80 cubic inch air-cooled Shovelhead V-twin, single carb",
+ "intro": "The original factory custom, Shovelhead era. Points ignition, a single carb and a chain final drive on most.",
+ "focus": [
+  [
+   "Shovelhead V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Single carb",
+   "Bendix or Keihin"
+  ],
+  [
+   "Points ignition",
+   "Gap and timing"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ],
+  [
+   "Oil leaks",
+   "Expected"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Early Shovels use a Bendix carb, later ones a Keihin butterfly carb. Check which one you have before buying parts."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "HDForums",
+   "url": "https://www.hdforums.com/",
+   "what": "Large owner forum for all Harley-Davidson models."
+  }
+ ],
+ "heroName": "SUPER GLIDE"
+}

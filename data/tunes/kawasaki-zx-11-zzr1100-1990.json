@@ -1,0 +1,65 @@
+{
+ "id": "kawasaki-zx-11-zzr1100-1990",
+ "make": "Kawasaki",
+ "model": "ZX-11 / ZZR1100",
+ "name": "Kawasaki ZX-11 / ZZR1100",
+ "years": [
+  1990,
+  2001
+ ],
+ "match": [
+  "zx-11",
+  "zx11",
+  "zzr1100",
+  "zzr 1100",
+  "zx1100",
+  "ninja zx-11"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "1052 cc liquid-cooled inline four, four carbs, ram air",
+ "intro": "The 1990s top-speed king. Four carbs, ram air and a lot of weight on the chain and brakes.",
+ "focus": [
+  [
+   "1052 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "Ram air",
+   "Check ducts"
+  ],
+  [
+   "Cooling",
+   "Hoses and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ZX6R.com",
+   "url": "https://www.zx6r.com/",
+   "what": "Owner forum for Kawasaki ZX sport bikes."
+  }
+ ],
+ "heroName": "ZX-11"
+}

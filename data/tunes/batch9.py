@@ -74,7 +74,7 @@ B9.append(dict(id="bmw-r1250gs-2019", make="BMW", model="R1250GS", name="BMW R12
   known=[], forums=[]))
 
 B9.append(dict(id="harley-davidson-shovelhead-flh-1966", make="Harley-Davidson", model="Shovelhead FLH", name="Harley-Davidson Shovelhead FLH", years=[1966, 1984],
-  match=["shovelhead", "shovel", "flh", "electra glide", "flhs", "fx", "super glide", "low rider", "wide glide", "fxwg"], style="touring", drive="chain",
+  match=["shovelhead", "shovel", "flh", "electra glide", "flhs"], style="touring", drive="chain",
   engine="1200 or 1340 cc air-cooled Shovelhead V-twin, one carb, chain drive",
   intro="The Shovelhead big twin. Expect oil leaks and valve guide wear. Later bikes got the better oil pump and guides.",
   focus=[["Shovelhead V-twin", "74 or 80 cu in"], ["Oil leaks", "The Shovelhead drip"], ["Valve guides", "Smoke and oil use"], ["One carb", "Often swapped"], ["Vibration", "Check every bolt"]],

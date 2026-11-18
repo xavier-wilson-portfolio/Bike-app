@@ -1,0 +1,66 @@
+{
+ "id": "honda-cbr900rr-fireblade-1992",
+ "make": "Honda",
+ "model": "CBR900RR Fireblade",
+ "name": "Honda CBR900RR Fireblade",
+ "years": [
+  1992,
+  1999
+ ],
+ "match": [
+  "cbr900rr",
+  "cbr 900rr",
+  "fireblade",
+  "cbr893",
+  "cbr918",
+  "cbr919",
+  "cbr900"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "893 or 918 cc liquid-cooled inline four, carbs",
+ "intro": "The original light superbike. Carbs, a 16-inch front wheel on early bikes, and a lot of 1990s plastic to get off.",
+ "focus": [
+  [
+   "893/918 cc four",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Rebuild as a set"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Cooling",
+   "Hoses and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "CBR Forum",
+   "url": "https://www.cbrforum.com/",
+   "what": "Owner forum for Honda CBR models."
+  }
+ ],
+ "heroName": "FIREBLADE"
+}

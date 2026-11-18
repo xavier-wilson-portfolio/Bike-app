@@ -1,0 +1,83 @@
+{
+ "id": "ducati-900ss-750ss-1991",
+ "make": "Ducati",
+ "model": "900SS / 750SS (Supersport)",
+ "name": "Ducati 900SS / 750SS",
+ "years": [
+  1991,
+  2007
+ ],
+ "match": [
+  "900ss",
+  "750ss",
+  "900 ss",
+  "750 ss",
+  "ducati supersport",
+  "800ss",
+  "1000ss",
+  "1000ds",
+  "ss900",
+  "ss750"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "748-992 cc air-cooled 90-degree L-twin, two-valve desmo, carbs (to 1997) or fuel injected",
+ "intro": "Ducati's air-cooled Supersport. A trellis frame, a two-valve desmo twin and carbs on the early ones.",
+ "focus": [
+  [
+   "Air-cooled L-twin",
+   "Desmodue"
+  ],
+  [
+   "Carb or EFI",
+   "Depends on year"
+  ],
+  [
+   "Timing belts",
+   "Change by age"
+  ],
+  [
+   "Dry clutch",
+   "Rattle is normal"
+  ],
+  [
+   "Plastic tank",
+   "Swells on some"
+  ]
+ ],
+ "remove": [
+  "H-004"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-DUC-01",
+   "phase": "H",
+   "after": "H-003",
+   "title": "Check the timing belts and desmo valve clearances",
+   "instructions": "Replace the cam timing belts on schedule, by age as well as miles, and check the desmo opening and closing clearances. Old belts can snap and wreck the engine.",
+   "reason": "Ducati belt-drive twins need belts changed on time even if the bike sat.",
+   "src": "Ducati service practice",
+   "safety": "Normal",
+   "skill": "Advanced",
+   "estHours": 4.0,
+   "tools": ""
+  }
+ ],
+ "lessons": {
+  "G": [
+   "1991-1997 bikes have carbs. 1998-on bikes are fuel injected. Skip the steps that don't match."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "heroName": "900SS"
+}

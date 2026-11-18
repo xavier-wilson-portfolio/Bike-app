@@ -1,0 +1,76 @@
+{
+ "id": "honda-pacific-coast-pc800-1989",
+ "make": "Honda",
+ "model": "Pacific Coast PC800",
+ "name": "Honda Pacific Coast PC800",
+ "years": [
+  1989,
+  1998
+ ],
+ "match": [
+  "pc800",
+  "pacific coast",
+  "pc 800",
+  "pacific coast 800"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "engine": "800 cc liquid-cooled V-twin, carbs, shaft drive",
+ "intro": "Honda's enclosed commuter tourer. Most of the work is getting the bodywork off without breaking tabs.",
+ "focus": [
+  [
+   "800 cc V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Bodywork",
+   "Old plastic tabs"
+  ],
+  [
+   "Shaft drive",
+   "Spline lube"
+  ],
+  [
+   "Cooling",
+   "Hoses and fan"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [
+  {
+   "id": "X-PC8-01",
+   "phase": "A",
+   "after": "A-002",
+   "title": "Take the bodywork off with care",
+   "instructions": "Follow the panel order in the manual. Bag and label every screw. Old plastic tabs crack, so work slowly and warm the panels if it's cold.",
+   "reason": "Nearly every job on a PC800 starts with removing the body panels.",
+   "src": "Owner experience",
+   "safety": "Normal",
+   "skill": "Beginner",
+   "estHours": 1.5,
+   "tools": ""
+  }
+ ],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [],
+ "silhouette": "honda-pacific-coast-pc800-1989",
+ "areas": [],
+ "heroName": "PC800",
+ "hero": {
+  "src": "img/hero/honda-pacific-coast-pc800-1989.jpg",
+  "artist": "No machine-readable author provided. Bernard bill5~commonswiki assumed (based on copyright claims).",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_PC_800.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
+}
