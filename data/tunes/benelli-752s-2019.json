@@ -54,5 +54,14 @@
    "what": "Large riding forum with threads on most European makes, old and new."
   }
  ],
- "heroName": "752S"
+ "silhouette": "benelli-752s-2019",
+ "areas": [],
+ "heroName": "752S",
+ "hero": {
+  "src": "img/hero/benelli-752s-2019.jpg",
+  "artist": "Darkflag752",
+  "page": "https://commons.wikimedia.org/wiki/File:Benelli_752S.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

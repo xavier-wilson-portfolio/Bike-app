@@ -55,5 +55,14 @@
    "what": "Owner forum for Yamaha Viragos."
   }
  ],
- "heroName": "DRAG STAR"
+ "silhouette": "yamaha-drag-star-400-xvs400-1996",
+ "areas": [],
+ "heroName": "DRAG STAR",
+ "hero": {
+  "src": "img/hero/yamaha-drag-star-400-xvs400-1996.jpg",
+  "artist": "",
+  "page": "https://commons.wikimedia.org/wiki/File:YamahaDragstar.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
 }

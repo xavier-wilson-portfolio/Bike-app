@@ -64,5 +64,14 @@
    "what": "Owner forum for Honda VFR and Interceptor models."
   }
  ],
- "heroName": "CB1100R"
+ "silhouette": "honda-cb1100r-1981",
+ "areas": [],
+ "heroName": "CB1100R",
+ "hero": {
+  "src": "img/hero/honda-cb1100r-1981.jpg",
+  "artist": "This illustration was made by DaiFh.\nPlease credit : DaiFh / Wikimedia Commons\n Feedback welcome on my french Wp account",
+  "page": "https://commons.wikimedia.org/wiki/File:MotoLegende2009_03_honda_cb1100r.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

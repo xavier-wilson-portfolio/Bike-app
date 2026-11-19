@@ -58,5 +58,14 @@
    "what": "Parts and know-how for Honda XR dirt bikes."
   }
  ],
- "heroName": "CRF150R"
+ "silhouette": "honda-crf150r-2007",
+ "areas": [],
+ "heroName": "CRF150R",
+ "hero": {
+  "src": "img/hero/honda-crf150r-2007.jpg",
+  "artist": "Unclevlad7",
+  "page": "https://commons.wikimedia.org/wiki/File:HONDACRF.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

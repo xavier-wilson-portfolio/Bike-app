@@ -60,5 +60,14 @@
    "what": "Large riding forum with threads on most European makes, old and new."
   }
  ],
- "heroName": "MITO"
+ "silhouette": "cagiva-mito-125-1989",
+ "areas": [],
+ "heroName": "MITO",
+ "hero": {
+  "src": "img/hero/cagiva-mito-125-1989.jpg",
+  "artist": "Klaus Nahr from Germany",
+  "page": "https://commons.wikimedia.org/wiki/File:Cagiva_Mito_SP525.jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
 }

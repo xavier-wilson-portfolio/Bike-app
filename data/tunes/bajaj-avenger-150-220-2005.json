@@ -56,5 +56,14 @@
    "what": "Large adventure riding forum with model-specific threads."
   }
  ],
- "heroName": "AVENGER"
+ "silhouette": "bajaj-avenger-150-220-2005",
+ "areas": [],
+ "heroName": "AVENGER",
+ "hero": {
+  "src": "img/hero/bajaj-avenger-150-220-2005.jpg",
+  "artist": "Anderson Whale",
+  "page": "https://commons.wikimedia.org/wiki/File:Bajaj_Avenger_220.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

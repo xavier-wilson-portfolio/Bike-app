@@ -55,5 +55,14 @@
    "what": "Antique Motorcycle Club of America forum, with a Panhead section."
   }
  ],
- "heroName": "CONDOR"
+ "silhouette": "condor-a580-military-1973",
+ "areas": [],
+ "heroName": "CONDOR",
+ "hero": {
+  "src": "img/hero/condor-a580-military-1973.jpg",
+  "artist": "Rok4ever",
+  "page": "https://commons.wikimedia.org/wiki/File:Condor_A580_1.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

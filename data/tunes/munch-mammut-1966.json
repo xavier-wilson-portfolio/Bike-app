@@ -55,5 +55,14 @@
    "what": "Antique Motorcycle Club of America forum, with a Panhead section."
   }
  ],
- "heroName": "MAMMUT"
+ "silhouette": "munch-mammut-1966",
+ "areas": [],
+ "heroName": "MAMMUT",
+ "hero": {
+  "src": "img/hero/munch-mammut-1966.jpg",
+  "artist": "David87hercules",
+  "page": "https://commons.wikimedia.org/wiki/File:M%C3%BCnch_Mammut_2000.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

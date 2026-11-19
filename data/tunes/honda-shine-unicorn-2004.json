@@ -57,5 +57,14 @@
    "what": "Club for owners of older Japanese bikes."
   }
  ],
- "heroName": "SHINE"
+ "silhouette": "honda-shine-unicorn-2004",
+ "areas": [],
+ "heroName": "SHINE",
+ "hero": {
+  "src": "img/hero/honda-shine-unicorn-2004.jpg",
+  "artist": "Perumalnadar",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_Shine.JPG",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
 }

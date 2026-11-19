@@ -60,5 +60,14 @@
    "what": "Antique Motorcycle Club of America forum, with a Panhead section."
   }
  ],
- "heroName": "SHL"
+ "silhouette": "shl-m11-1959",
+ "areas": [],
+ "heroName": "SHL",
+ "hero": {
+  "src": "img/hero/shl-m11-1959.jpg",
+  "artist": "Hubert Śmietanka vel Hiuppo",
+  "page": "https://commons.wikimedia.org/wiki/File:Shl_98.jpg",
+  "lic": "CC BY-SA 2.5",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.5"
+ }
 }

@@ -56,5 +56,14 @@
    "what": "Big general scooter forum with sections for Yamaha scooters."
   }
  ],
- "heroName": "GILERA 150"
+ "silhouette": "gilera-150-124-giubileo-1950",
+ "areas": [],
+ "heroName": "GILERA 150",
+ "hero": {
+  "src": "img/hero/gilera-150-124-giubileo-1950.jpg",
+  "artist": "Norkio",
+  "page": "https://commons.wikimedia.org/wiki/File:Gilera-150-sport.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

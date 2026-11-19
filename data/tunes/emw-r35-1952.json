@@ -55,5 +55,14 @@
    "what": "Tech library and owner club for BMW airhead twins."
   }
  ],
- "heroName": "EMW"
+ "silhouette": "emw-r35-1952",
+ "areas": [],
+ "heroName": "EMW",
+ "hero": {
+  "src": "img/hero/emw-r35-1952.jpg",
+  "artist": "Stahlkocher",
+  "page": "https://commons.wikimedia.org/wiki/File:BMW_R32_vl_TCE.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
 }

@@ -60,5 +60,14 @@
    "what": "Club for owners of older Japanese bikes."
   }
  ],
- "heroName": "C200"
+ "silhouette": "honda-c200-touring-90-1963",
+ "areas": [],
+ "heroName": "C200",
+ "hero": {
+  "src": "img/hero/honda-c200-touring-90-1963.jpg",
+  "artist": "Steve Glover from Bolton, Lancs., England",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_C200_%2290%22_(1965).jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

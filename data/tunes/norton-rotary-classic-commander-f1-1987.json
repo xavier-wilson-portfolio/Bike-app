@@ -56,5 +56,14 @@
    "what": "Owner club and forum for Nortons."
   }
  ],
- "heroName": "ROTARY"
+ "silhouette": "norton-rotary-classic-commander-f1-1987",
+ "areas": [],
+ "heroName": "ROTARY",
+ "hero": {
+  "src": "img/hero/norton-rotary-classic-commander-f1-1987.jpg",
+  "artist": "Motacilla",
+  "page": "https://commons.wikimedia.org/wiki/File:Classic_RightProfile.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

@@ -54,5 +54,14 @@
    "what": "Large adventure riding forum with model-specific threads."
   }
  ],
- "heroName": "HPS"
+ "silhouette": "fb-mondial-hps-125-300-2017",
+ "areas": [],
+ "heroName": "HPS",
+ "hero": {
+  "src": "img/hero/fb-mondial-hps-125-300-2017.jpg",
+  "artist": "Franco Vannini",
+  "page": "https://commons.wikimedia.org/wiki/File:FB_Mondial_HPS_125.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

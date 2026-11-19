@@ -59,5 +59,14 @@
    "what": "Forum for trials riders, with sections for most trials makes."
   }
  ],
- "heroName": "JOTAGAS"
+ "silhouette": "jotagas-jt-trials-2014",
+ "areas": [],
+ "heroName": "JOTAGAS",
+ "hero": {
+  "src": "img/hero/jotagas-jt-trials-2014.jpg",
+  "artist": "Josep Tarres",
+  "page": "https://commons.wikimedia.org/wiki/File:Jotagas_trial2018.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

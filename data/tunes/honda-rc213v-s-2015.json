@@ -54,5 +54,14 @@
    "what": "Owner forum for Honda CBR models."
   }
  ],
- "heroName": "RC213V-S"
+ "silhouette": "honda-rc213v-s-2015",
+ "areas": [],
+ "heroName": "RC213V-S",
+ "hero": {
+  "src": "img/hero/honda-rc213v-s-2015.jpg",
+  "artist": "Rikita",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_RC213V-S_2015.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

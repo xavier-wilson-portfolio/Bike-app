@@ -55,5 +55,14 @@
    "what": "Big general scooter forum with sections for Yamaha scooters."
   }
  ],
- "heroName": "TRICITY"
+ "silhouette": "yamaha-tricity-125-155-300-2014",
+ "areas": [],
+ "heroName": "TRICITY",
+ "hero": {
+  "src": "img/hero/yamaha-tricity-125-155-300-2014.jpg",
+  "artist": "Ypy31",
+  "page": "https://commons.wikimedia.org/wiki/File:Kanagawa_Prefectural_Police_Yamaha_Tricity_125.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
 }

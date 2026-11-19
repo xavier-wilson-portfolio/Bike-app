@@ -53,5 +53,14 @@
    "what": "Large adventure riding forum with model-specific threads."
   }
  ],
- "heroName": "ACE"
+ "silhouette": "ariel-ace-2014",
+ "areas": [],
+ "heroName": "ACE",
+ "hero": {
+  "src": "img/hero/ariel-ace-2014.jpg",
+  "artist": "big-ashb",
+  "page": "https://commons.wikimedia.org/wiki/File:Ariel_Ace.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

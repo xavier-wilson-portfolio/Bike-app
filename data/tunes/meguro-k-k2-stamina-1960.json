@@ -56,5 +56,14 @@
    "what": "Club for owners of older Japanese bikes."
   }
  ],
- "heroName": "MEGURO"
+ "silhouette": "meguro-k-k2-stamina-1960",
+ "areas": [],
+ "heroName": "MEGURO",
+ "hero": {
+  "src": "img/hero/meguro-k-k2-stamina-1960.jpg",
+  "artist": "Chuck Schultz",
+  "page": "https://commons.wikimedia.org/wiki/File:1967_Kawasaki_W1SS.jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
 }

@@ -53,5 +53,14 @@
    "what": "Big general scooter forum with sections for Yamaha scooters."
   }
  ],
- "heroName": "X9"
+ "silhouette": "piaggio-x9-125-250-500-2001",
+ "areas": [],
+ "heroName": "X9",
+ "hero": {
+  "src": "img/hero/piaggio-x9-125-250-500-2001.jpg",
+  "artist": "Chris Baird",
+  "page": "https://commons.wikimedia.org/wiki/File:Piaggio_X7_250.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

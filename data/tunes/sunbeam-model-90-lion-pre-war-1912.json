@@ -59,5 +59,14 @@
    "what": "Forum for classic British motorcycles."
   }
  ],
- "heroName": "SUNBEAM"
+ "silhouette": "sunbeam-model-90-lion-pre-war-1912",
+ "areas": [],
+ "heroName": "SUNBEAM",
+ "hero": {
+  "src": "img/hero/sunbeam-model-90-lion-pre-war-1912.jpg",
+  "artist": "SG2012",
+  "page": "https://commons.wikimedia.org/wiki/File:Sunbeam_Model_90_(1931)_-_9136589405.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

@@ -61,5 +61,14 @@
    "what": "Owner community and wiki for mopeds and small two-strokes."
   }
  ],
- "heroName": "MOSQUITO"
+ "silhouette": "garelli-mosquito-tiger-cross-noi-1946",
+ "areas": [],
+ "heroName": "MOSQUITO",
+ "hero": {
+  "src": "img/hero/garelli-mosquito-tiger-cross-noi-1946.jpg",
+  "artist": "Frank Schwichtenberg",
+  "page": "https://commons.wikimedia.org/wiki/File:Garelli_Super_Mosquito_1969_00.jpg",
+  "lic": "CC BY 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by/4.0"
+ }
 }

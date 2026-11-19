@@ -57,5 +57,14 @@
    "what": "Large riding forum with threads on most European makes, old and new."
   }
  ],
- "heroName": "FOX"
+ "silhouette": "nsu-fox-lux-superfox-1949",
+ "areas": [],
+ "heroName": "FOX",
+ "hero": {
+  "src": "img/hero/nsu-fox-lux-superfox-1949.jpg",
+  "artist": "Andreas Mehlhorn (Kettenkrad)",
+  "page": "https://commons.wikimedia.org/wiki/File:Nsufox.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

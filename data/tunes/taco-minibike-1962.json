@@ -55,5 +55,14 @@
    "what": "Antique Motorcycle Club of America forum, with a Panhead section."
   }
  ],
- "heroName": "TACO"
+ "silhouette": "taco-minibike-1962",
+ "areas": [],
+ "heroName": "TACO",
+ "hero": {
+  "src": "img/hero/taco-minibike-1962.jpg",
+  "artist": "Original uploader was Cnaa at fi.wikipedia",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_PV_1997.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
 }

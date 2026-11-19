@@ -57,5 +57,14 @@
    "what": "Big dirt bike forum with model sections for most off-road bikes."
   }
  ],
- "heroName": "EC 450F"
+ "silhouette": "gasgas-ec-450f-fse-four-stroke-2003",
+ "areas": [],
+ "heroName": "EC 450F",
+ "hero": {
+  "src": "img/hero/gasgas-ec-450f-fse-four-stroke-2003.jpg",
+  "artist": "Peprovira",
+  "page": "https://commons.wikimedia.org/wiki/File:Gas_Gas_EC_300_2017_b.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

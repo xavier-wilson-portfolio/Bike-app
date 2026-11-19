@@ -61,5 +61,14 @@
    "what": "Owner forum for Honda VFR and Interceptor models."
   }
  ],
- "heroName": "MB5"
+ "silhouette": "honda-mb5-mbx50-1980",
+ "areas": [],
+ "heroName": "MB5",
+ "hero": {
+  "src": "img/hero/honda-mb5-mbx50-1980.jpg",
+  "artist": "Rikita",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_MB50_1979.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

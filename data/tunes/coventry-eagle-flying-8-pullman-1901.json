@@ -59,5 +59,14 @@
    "what": "Forum for classic British motorcycles."
   }
  ],
- "heroName": "COVENTRY-EAGLE"
+ "silhouette": "coventry-eagle-flying-8-pullman-1901",
+ "areas": [],
+ "heroName": "COVENTRY-EAGLE",
+ "hero": {
+  "src": "img/hero/coventry-eagle-flying-8-pullman-1901.jpg",
+  "artist": "SG2012",
+  "page": "https://commons.wikimedia.org/wiki/File:Coventry_Eagle_Flying_8_(1926).jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

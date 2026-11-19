@@ -56,5 +56,14 @@
    "what": "Large adventure riding forum with model-specific threads."
   }
  ],
- "heroName": "BENDA"
+ "silhouette": "benda-napoleon-darkflag-lfc700-2021",
+ "areas": [],
+ "heroName": "BENDA",
+ "hero": {
+  "src": "img/hero/benda-napoleon-darkflag-lfc700-2021.jpg",
+  "artist": "XDVRACE",
+  "page": "https://commons.wikimedia.org/wiki/File:Benda_Darkflag_500i_V4.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

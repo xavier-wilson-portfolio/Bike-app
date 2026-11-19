@@ -60,5 +60,14 @@
    "what": "Big general scooter forum with sections for Yamaha scooters."
   }
  ],
- "heroName": "T5"
+ "silhouette": "vespa-t5-1985",
+ "areas": [],
+ "heroName": "T5",
+ "hero": {
+  "src": "img/hero/vespa-t5-1985.jpg",
+  "artist": "Samihasib",
+  "page": "https://commons.wikimedia.org/wiki/File:Vespa_T5.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

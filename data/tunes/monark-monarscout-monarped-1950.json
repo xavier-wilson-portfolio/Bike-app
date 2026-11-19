@@ -60,5 +60,14 @@
    "what": "Antique Motorcycle Club of America forum, with a Panhead section."
   }
  ],
- "heroName": "MONARK"
+ "silhouette": "monark-monarscout-monarped-1950",
+ "areas": [],
+ "heroName": "MONARK",
+ "hero": {
+  "src": "img/hero/monark-monarscout-monarped-1950.jpg",
+  "artist": "Bene Riobó",
+  "page": "https://commons.wikimedia.org/wiki/File:Monark_Monarped_M_349.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

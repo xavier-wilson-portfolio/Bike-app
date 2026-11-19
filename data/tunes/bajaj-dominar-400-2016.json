@@ -54,5 +54,14 @@
    "what": "Large adventure riding forum with model-specific threads."
   }
  ],
- "heroName": "DOMINAR"
+ "silhouette": "bajaj-dominar-400-2016",
+ "areas": [],
+ "heroName": "DOMINAR",
+ "hero": {
+  "src": "img/hero/bajaj-dominar-400-2016.jpg",
+  "artist": "HiveMynd",
+  "page": "https://commons.wikimedia.org/wiki/File:Bajaj-NS400Z.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

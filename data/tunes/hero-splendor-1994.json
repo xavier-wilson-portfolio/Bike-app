@@ -55,5 +55,14 @@
    "what": "Large adventure riding forum with model-specific threads."
   }
  ],
- "heroName": "SPLENDOR"
+ "silhouette": "hero-splendor-1994",
+ "areas": [],
+ "heroName": "SPLENDOR",
+ "hero": {
+  "src": "img/hero/hero-splendor-1994.jpg",
+  "artist": "Larry Tomlinson",
+  "page": "https://commons.wikimedia.org/wiki/File:Hero_Honda_Splendor_2007.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

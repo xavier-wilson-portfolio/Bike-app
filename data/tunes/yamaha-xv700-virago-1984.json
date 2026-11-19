@@ -55,5 +55,14 @@
    "what": "Owner forum for Yamaha Viragos."
   }
  ],
- "heroName": "VIRAGO 700"
+ "silhouette": "yamaha-xv700-virago-1984",
+ "areas": [],
+ "heroName": "VIRAGO 700",
+ "hero": {
+  "src": "img/hero/yamaha-xv700-virago-1984.jpg",
+  "artist": "Jamesm113",
+  "page": "https://commons.wikimedia.org/wiki/File:1986_Yamaha_Virago_700.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

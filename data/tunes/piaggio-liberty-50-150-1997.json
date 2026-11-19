@@ -52,5 +52,14 @@
    "what": "Big general scooter forum with sections for Yamaha scooters."
   }
  ],
- "heroName": "LIBERTY"
+ "silhouette": "piaggio-liberty-50-150-1997",
+ "areas": [],
+ "heroName": "LIBERTY",
+ "hero": {
+  "src": "img/hero/piaggio-liberty-50-150-1997.jpg",
+  "artist": "Corvettec6r",
+  "page": "https://commons.wikimedia.org/wiki/File:2023_Piaggio_Liberty_50_3V.jpg",
+  "lic": "CC BY 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by/4.0"
+ }
 }

@@ -61,5 +61,14 @@
    "what": "Big general scooter forum with sections for Yamaha scooters."
   }
  ],
- "heroName": "OSA"
+ "silhouette": "wfm-osa-scooter-1959",
+ "areas": [],
+ "heroName": "OSA",
+ "hero": {
+  "src": "img/hero/wfm-osa-scooter-1959.jpg",
+  "artist": "Pibwl",
+  "page": "https://commons.wikimedia.org/wiki/File:WFM_Osa_PICT0038.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

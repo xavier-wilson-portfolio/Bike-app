@@ -55,5 +55,14 @@
    "what": "Owner forum for Aprilia motorcycles."
   }
  ],
- "heroName": "RS 125"
+ "silhouette": "aprilia-rs4-125-rs-125-four-stroke-2011",
+ "areas": [],
+ "heroName": "RS 125",
+ "hero": {
+  "src": "img/hero/aprilia-rs4-125-rs-125-four-stroke-2011.jpg",
+  "artist": "Thesupermat",
+  "page": "https://commons.wikimedia.org/wiki/File:Paris_-_Salon_de_la_moto_2011_-_Aprilia_-_RS4_125_-_002.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

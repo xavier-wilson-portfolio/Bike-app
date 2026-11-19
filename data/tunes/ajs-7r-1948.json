@@ -62,5 +62,14 @@
    "what": "Forum for classic British motorcycles."
   }
  ],
- "heroName": "7R"
+ "silhouette": "ajs-7r-1948",
+ "areas": [],
+ "heroName": "7R",
+ "hero": {
+  "src": "img/hero/ajs-7r-1948.jpg",
+  "artist": "",
+  "page": "https://commons.wikimedia.org/wiki/File:AJS_7R_motorcycle.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
 }

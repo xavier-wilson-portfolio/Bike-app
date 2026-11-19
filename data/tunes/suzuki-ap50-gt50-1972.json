@@ -61,5 +61,14 @@
    "what": "Club for owners of older Japanese bikes."
   }
  ],
- "heroName": "AP50"
+ "silhouette": "suzuki-ap50-gt50-1972",
+ "areas": [],
+ "heroName": "AP50",
+ "hero": {
+  "src": "img/hero/suzuki-ap50-gt50-1972.jpg",
+  "artist": "Ss50scott",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_SS50.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

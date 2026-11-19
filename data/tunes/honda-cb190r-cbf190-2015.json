@@ -56,5 +56,14 @@
    "what": "Club for owners of older Japanese bikes."
   }
  ],
- "heroName": "CB190R"
+ "silhouette": "honda-cb190r-cbf190-2015",
+ "areas": [],
+ "heroName": "CB190R",
+ "hero": {
+  "src": "img/hero/honda-cb190r-cbf190-2015.jpg",
+  "artist": "RL GNZLZ",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CB_190R_Repsol.jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
 }

@@ -59,5 +59,14 @@
    "what": "Owner forum for Honda Shadows and other Honda cruisers."
   }
  ],
- "heroName": "V30 MAGNA"
+ "silhouette": "honda-v30-magna-vf500c-1984",
+ "areas": [],
+ "heroName": "V30 MAGNA",
+ "hero": {
+  "src": "img/hero/honda-v30-magna-vf500c-1984.jpg",
+  "artist": "Ritzel",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_VF_500_C_(V30_Magna).jpg",
+  "lic": "CC BY 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by/4.0"
+ }
 }

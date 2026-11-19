@@ -54,5 +54,14 @@
    "what": "Large riding forum with threads on most European makes, old and new."
   }
  ],
- "heroName": "SEIEMMEZZO"
+ "silhouette": "moto-morini-seiemmezzo-str-scr-2022",
+ "areas": [],
+ "heroName": "SEIEMMEZZO",
+ "hero": {
+  "src": "img/hero/moto-morini-seiemmezzo-str-scr-2022.jpg",
+  "artist": "Matthb1395",
+  "page": "https://commons.wikimedia.org/wiki/File:Moto_Morini_Seiemmezzo_(2022).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

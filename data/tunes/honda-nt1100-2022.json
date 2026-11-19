@@ -53,5 +53,14 @@
    "what": "Gold Wing repair notes by model."
   }
  ],
- "heroName": "NT1100"
+ "silhouette": "honda-nt1100-2022",
+ "areas": [],
+ "heroName": "NT1100",
+ "hero": {
+  "src": "img/hero/honda-nt1100-2022.jpg",
+  "artist": "CheminduCret",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_NT1100_2022.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

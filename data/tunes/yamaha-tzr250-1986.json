@@ -64,5 +64,14 @@
    "what": "General owner forum for Yamaha motorcycles."
   }
  ],
- "heroName": "TZR250"
+ "silhouette": "yamaha-tzr250-1986",
+ "areas": [],
+ "heroName": "TZR250",
+ "hero": {
+  "src": "img/hero/yamaha-tzr250-1986.jpg",
+  "artist": "Borb",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_TZR250_2MA.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

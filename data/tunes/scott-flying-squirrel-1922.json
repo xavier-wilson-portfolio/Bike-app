@@ -60,5 +60,14 @@
    "what": "Forum for classic British motorcycles."
   }
  ],
- "heroName": "SQUIRREL"
+ "silhouette": "scott-flying-squirrel-1922",
+ "areas": [],
+ "heroName": "SQUIRREL",
+ "hero": {
+  "src": "img/hero/scott-flying-squirrel-1922.jpg",
+  "artist": "Addvisor",
+  "page": "https://commons.wikimedia.org/wiki/File:Scott_Flying_Squirrel_Nr._33.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

@@ -61,5 +61,14 @@
    "what": "Antique Motorcycle Club of America forum, with a Panhead section."
   }
  ],
- "heroName": "TWN"
+ "silhouette": "twn-boss-cornet-contessa-1953",
+ "areas": [],
+ "heroName": "TWN",
+ "hero": {
+  "src": "img/hero/twn-boss-cornet-contessa-1953.jpg",
+  "artist": "No machine-readable author provided. ChiemseeMan assumed (based on copyright claims).",
+  "page": "https://commons.wikimedia.org/wiki/File:Triumph_Boss_(bearb_Sp).jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

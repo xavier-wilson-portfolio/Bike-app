@@ -58,5 +58,14 @@
    "what": "Owner forum for Kawasaki motorcycles."
   }
  ],
- "heroName": "ZZR400"
+ "silhouette": "kawasaki-zzr400-1990",
+ "areas": [],
+ "heroName": "ZZR400",
+ "hero": {
+  "src": "img/hero/kawasaki-zzr400-1990.jpg",
+  "artist": "Orguezzr",
+  "page": "https://commons.wikimedia.org/wiki/File:ZZR400_N7.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

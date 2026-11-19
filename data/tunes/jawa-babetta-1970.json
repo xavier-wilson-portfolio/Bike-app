@@ -60,5 +60,14 @@
    "what": "Owner community and wiki for mopeds and small two-strokes."
   }
  ],
- "heroName": "BABETTA"
+ "silhouette": "jawa-babetta-1970",
+ "areas": [],
+ "heroName": "BABETTA",
+ "hero": {
+  "src": "img/hero/jawa-babetta-1970.jpg",
+  "artist": "Cuni",
+  "page": "https://commons.wikimedia.org/wiki/File:Babetta_2026.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
 }

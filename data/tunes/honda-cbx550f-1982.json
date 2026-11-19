@@ -60,5 +60,14 @@
    "what": "Owner forum for Honda VFR and Interceptor models."
   }
  ],
- "heroName": "CBX550F"
+ "silhouette": "honda-cbx550f-1982",
+ "areas": [],
+ "heroName": "CBX550F",
+ "hero": {
+  "src": "img/hero/honda-cbx550f-1982.jpg",
+  "artist": "NESR at Flickr",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CBX550_cropped.jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
 }

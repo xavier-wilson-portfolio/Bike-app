@@ -60,5 +60,14 @@
    "what": "Owner community and wiki for mopeds and small two-strokes."
   }
  ],
- "heroName": "TUNTURI"
+ "silhouette": "tunturi-mopeds-1971",
+ "areas": [],
+ "heroName": "TUNTURI",
+ "hero": {
+  "src": "img/hero/tunturi-mopeds-1971.jpg",
+  "artist": "Kimmo Lindfors",
+  "page": "https://commons.wikimedia.org/wiki/File:Tunturi-tiger-8547721076fabbaa-large.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

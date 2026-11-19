@@ -53,5 +53,14 @@
    "what": "Large adventure riding forum with model-specific threads."
   }
  ],
- "heroName": "AJP"
+ "silhouette": "ajp-pr4-pr7-2005",
+ "areas": [],
+ "heroName": "AJP",
+ "hero": {
+  "src": "img/hero/ajp-pr4-pr7-2005.jpg",
+  "artist": "Ajp90",
+  "page": "https://commons.wikimedia.org/wiki/File:AJP_PR7_600_Adventure.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

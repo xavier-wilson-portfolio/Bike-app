@@ -63,5 +63,14 @@
    "what": "Forum for classic British motorcycles."
   }
  ],
- "heroName": "ARIEL VB"
+ "silhouette": "ariel-vb-vg-w-ng-1932",
+ "areas": [],
+ "heroName": "ARIEL VB",
+ "hero": {
+  "src": "img/hero/ariel-vb-vg-w-ng-1932.jpg",
+  "artist": "Bevanw58",
+  "page": "https://commons.wikimedia.org/wiki/File:Ariel_VB_Mt_Hutt_Canterbury_NZ.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

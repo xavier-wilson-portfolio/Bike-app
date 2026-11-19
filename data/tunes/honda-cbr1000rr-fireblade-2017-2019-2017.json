@@ -56,5 +56,14 @@
    "what": "Owner forum for Honda CBR models."
   }
  ],
- "heroName": "FIREBLADE"
+ "silhouette": "honda-cbr1000rr-fireblade-2017-2019-2017",
+ "areas": [],
+ "heroName": "FIREBLADE",
+ "hero": {
+  "src": "img/hero/honda-cbr1000rr-fireblade-2017-2019-2017.jpg",
+  "artist": "Rama.",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CBR1000RR_Fireblade.jpg",
+  "lic": "CC BY-SA 2.0 fr",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en"
+ }
 }

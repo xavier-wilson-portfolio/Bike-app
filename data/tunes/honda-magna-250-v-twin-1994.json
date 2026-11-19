@@ -54,5 +54,14 @@
    "what": "Owner forum for Honda Shadows and other Honda cruisers."
   }
  ],
- "heroName": "MAGNA 250"
+ "silhouette": "honda-magna-250-v-twin-1994",
+ "areas": [],
+ "heroName": "MAGNA 250",
+ "hero": {
+  "src": "img/hero/honda-magna-250-v-twin-1994.jpg",
+  "artist": "Shohei ninomiya",
+  "page": "https://commons.wikimedia.org/wiki/File:%E3%83%9E%E3%82%B0%E3%83%8A250.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

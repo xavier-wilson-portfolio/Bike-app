@@ -54,5 +54,14 @@
    "what": "Large adventure riding forum with model-specific threads."
   }
  ],
- "heroName": "ST7"
+ "silhouette": "hyosung-st7-gv700-2006",
+ "areas": [],
+ "heroName": "ST7",
+ "hero": {
+  "src": "img/hero/hyosung-st7-gv700-2006.jpg",
+  "artist": "Jakub \"Flyz1\" Maciejewski",
+  "page": "https://commons.wikimedia.org/wiki/File:Hyosung_ST7_(MSP15).JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

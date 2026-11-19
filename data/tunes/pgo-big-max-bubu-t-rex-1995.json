@@ -58,5 +58,14 @@
    "what": "Big general scooter forum with sections for Yamaha scooters."
   }
  ],
- "heroName": "PGO"
+ "silhouette": "pgo-big-max-bubu-t-rex-1995",
+ "areas": [],
+ "heroName": "PGO",
+ "hero": {
+  "src": "img/hero/pgo-big-max-bubu-t-rex-1995.jpg",
+  "artist": "ReinhardtBikes",
+  "page": "https://commons.wikimedia.org/wiki/File:PGO_Big_Max_SP_2017.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

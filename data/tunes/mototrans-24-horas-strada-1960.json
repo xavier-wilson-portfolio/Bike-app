@@ -60,5 +60,14 @@
    "what": "Antique Motorcycle Club of America forum, with a Panhead section."
   }
  ],
- "heroName": "MOTOTRANS"
+ "silhouette": "mototrans-24-horas-strada-1960",
+ "areas": [],
+ "heroName": "MOTOTRANS",
+ "hero": {
+  "src": "img/hero/mototrans-24-horas-strada-1960.jpg",
+  "artist": "Peprovira",
+  "page": "https://commons.wikimedia.org/wiki/File:Ducati_Mototrans_24H_250cc_1973.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

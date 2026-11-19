@@ -55,5 +55,14 @@
    "what": "Owner forum for Honda VFR and Interceptor models."
   }
  ],
- "heroName": "VT250F"
+ "silhouette": "honda-vt250f-1982",
+ "areas": [],
+ "heroName": "VT250F",
+ "hero": {
+  "src": "img/hero/honda-vt250f-1982.jpg",
+  "artist": "Rikita",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_VT250F_Integra.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

@@ -61,5 +61,14 @@
    "what": "Large riding forum with threads on most European makes, old and new."
   }
  ],
- "heroName": "LOBITO"
+ "silhouette": "bultaco-lobito-astro-1966",
+ "areas": [],
+ "heroName": "LOBITO",
+ "hero": {
+  "src": "img/hero/bultaco-lobito-astro-1966.jpg",
+  "artist": "Peprovira",
+  "page": "https://commons.wikimedia.org/wiki/File:Bultaco_Lobito_MK3_125cc_1969.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

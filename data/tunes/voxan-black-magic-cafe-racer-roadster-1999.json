@@ -55,5 +55,14 @@
    "what": "Large adventure riding forum with model-specific threads."
   }
  ],
- "heroName": "VOXAN"
+ "silhouette": "voxan-black-magic-cafe-racer-roadster-1999",
+ "areas": [],
+ "heroName": "VOXAN",
+ "hero": {
+  "src": "img/hero/voxan-black-magic-cafe-racer-roadster-1999.jpg",
+  "artist": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Voxan_roadster.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
 }

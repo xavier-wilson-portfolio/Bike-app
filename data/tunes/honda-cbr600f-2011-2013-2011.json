@@ -54,5 +54,14 @@
    "what": "Owner forum for Honda CBR models."
   }
  ],
- "heroName": "CBR600F"
+ "silhouette": "honda-cbr600f-2011-2013-2011",
+ "areas": [],
+ "heroName": "CBR600F",
+ "hero": {
+  "src": "img/hero/honda-cbr600f-2011-2013-2011.jpg",
+  "artist": "Ritzel",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CBR_600_F_(PC_31),_Bj._1998_B.jpg",
+  "lic": "CC BY 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by/4.0"
+ }
 }

@@ -60,5 +60,14 @@
    "what": "Antique Motorcycle Club of America forum, with a Panhead section."
   }
  ],
- "heroName": "MX250"
+ "silhouette": "harley-davidson-mx250-1977",
+ "areas": [],
+ "heroName": "MX250",
+ "hero": {
+  "src": "img/hero/harley-davidson-mx250-1977.jpg",
+  "artist": "Insomnia Cured Here",
+  "page": "https://commons.wikimedia.org/wiki/File:Harley-Davidson_MX250.jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
 }

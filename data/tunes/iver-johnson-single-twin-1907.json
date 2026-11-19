@@ -58,5 +58,14 @@
    "what": "Antique Motorcycle Club of America forum, with a Panhead section."
   }
  ],
- "heroName": "IVER JOHNSON"
+ "silhouette": "iver-johnson-single-twin-1907",
+ "areas": [],
+ "heroName": "IVER JOHNSON",
+ "hero": {
+  "src": "img/hero/iver-johnson-single-twin-1907.jpg",
+  "artist": "DrReload",
+  "page": "https://commons.wikimedia.org/wiki/File:1915IverJohnson.jpg",
+  "lic": "CC BY 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by/4.0"
+ }
 }

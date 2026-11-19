@@ -58,5 +58,14 @@
    "what": "Club for owners of older Japanese bikes."
   }
  ],
- "heroName": "JADE"
+ "silhouette": "honda-jade-250-1991",
+ "areas": [],
+ "heroName": "JADE",
+ "hero": {
+  "src": "img/hero/honda-jade-250-1991.jpg",
+  "artist": "masaakif",
+  "page": "https://commons.wikimedia.org/wiki/File:JADE_MC23.JPG",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

@@ -59,5 +59,14 @@
    "what": "Antique Motorcycle Club of America forum, with a Panhead section."
   }
  ],
- "heroName": "POPE"
+ "silhouette": "pope-model-l-single-1911",
+ "areas": [],
+ "heroName": "POPE",
+ "hero": {
+  "src": "img/hero/pope-model-l-single-1911.jpg",
+  "artist": "Alf van Beem",
+  "page": "https://commons.wikimedia.org/wiki/File:1917_Pope_V-twin_1000cc_photo_1.JPG",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

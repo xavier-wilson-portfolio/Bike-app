@@ -60,5 +60,14 @@
    "what": "Big general scooter forum with sections for Yamaha scooters."
   }
  ],
- "heroName": "CEZETA"
+ "silhouette": "cezeta-type-501-502-scooter-1957",
+ "areas": [],
+ "heroName": "CEZETA",
+ "hero": {
+  "src": "img/hero/cezeta-type-501-502-scooter-1957.jpg",
+  "artist": "Addvisor",
+  "page": "https://commons.wikimedia.org/wiki/File:%C4%8CZ_175_type_501_%C4%8Cezeta.JPG",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

@@ -55,5 +55,14 @@
    "what": "Big general scooter forum with sections for Honda scooters."
   }
  ],
- "heroName": "VISION"
+ "silhouette": "honda-vision-110-2011",
+ "areas": [],
+ "heroName": "VISION",
+ "hero": {
+  "src": "img/hero/honda-vision-110-2011.jpg",
+  "artist": "Millermaster",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_Vision_110-002.JPG",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
 }

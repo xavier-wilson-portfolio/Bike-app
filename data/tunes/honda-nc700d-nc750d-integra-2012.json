@@ -55,5 +55,14 @@
    "what": "Big general scooter forum with sections for Honda scooters."
   }
  ],
- "heroName": "INTEGRA"
+ "silhouette": "honda-nc700d-nc750d-integra-2012",
+ "areas": [],
+ "heroName": "INTEGRA",
+ "hero": {
+  "src": "img/hero/honda-nc700d-nc750d-integra-2012.jpg",
+  "artist": "Rainmaker47",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_Tokyo_Motorcycle_Show_2014_concept.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

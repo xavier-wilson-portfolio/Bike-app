@@ -54,5 +54,14 @@
    "what": "Antique Motorcycle Club of America forum, with a Panhead section."
   }
  ],
- "heroName": "AMERICAN EAGLE"
+ "silhouette": "american-eagle-laverda-built-750-1967",
+ "areas": [],
+ "heroName": "AMERICAN EAGLE",
+ "hero": {
+  "src": "img/hero/american-eagle-laverda-built-750-1967.jpg",
+  "artist": "Alf van Beem",
+  "page": "https://commons.wikimedia.org/wiki/File:Orange_Laverda_750_SF.JPG",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
 }

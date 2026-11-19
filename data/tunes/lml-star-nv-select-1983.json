@@ -61,5 +61,14 @@
    "what": "Big general scooter forum with sections for Yamaha scooters."
   }
  ],
- "heroName": "LML"
+ "silhouette": "lml-star-nv-select-1983",
+ "areas": [],
+ "heroName": "LML",
+ "hero": {
+  "src": "img/hero/lml-star-nv-select-1983.jpg",
+  "artist": "JLPC",
+  "page": "https://commons.wikimedia.org/wiki/File:Angoul%C3%AAme_16_Scooter_LML-Star_2014.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

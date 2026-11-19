@@ -55,5 +55,14 @@
    "what": "Forum for classic British motorcycles."
   }
  ],
- "heroName": "S7"
+ "silhouette": "sunbeam-s7-s8-1947",
+ "areas": [],
+ "heroName": "S7",
+ "hero": {
+  "src": "img/hero/sunbeam-s7-s8-1947.jpg",
+  "artist": "Rocknrollmancer",
+  "page": "https://commons.wikimedia.org/wiki/File:Sunbeam_S7_mint_green.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

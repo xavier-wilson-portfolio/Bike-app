@@ -59,5 +59,14 @@
    "what": "Forum for classic British motorcycles."
   }
  ],
- "heroName": "WELBIKE"
+ "silhouette": "excelsior-uk-welbike-1942",
+ "areas": [],
+ "heroName": "WELBIKE",
+ "hero": {
+  "src": "img/hero/excelsior-uk-welbike-1942.jpg",
+  "artist": "Skaarup.HA",
+  "page": "https://commons.wikimedia.org/wiki/File:Welbike_Motorcycle,_Commonwealth_Airborne_Forces,_NBMHM,_5CDSG_Gagetown,_New_Brunswick.JPG",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

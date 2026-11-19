@@ -54,5 +54,14 @@
    "what": "Parts and know-how for Honda XR dirt bikes."
   }
  ],
- "heroName": "XL500R"
+ "silhouette": "honda-xl500r-1982",
+ "areas": [],
+ "heroName": "XL500R",
+ "hero": {
+  "src": "img/hero/honda-xl500r-1982.jpg",
+  "artist": "pxl",
+  "page": "https://commons.wikimedia.org/wiki/File:XL500R_Paris-Dakar.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

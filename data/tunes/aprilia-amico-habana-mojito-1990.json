@@ -56,5 +56,14 @@
    "what": "Big general scooter forum with sections for Yamaha scooters."
   }
  ],
- "heroName": "HABANA"
+ "silhouette": "aprilia-amico-habana-mojito-1990",
+ "areas": [],
+ "heroName": "HABANA",
+ "hero": {
+  "src": "img/hero/aprilia-amico-habana-mojito-1990.jpg",
+  "artist": "Ijet50",
+  "page": "https://commons.wikimedia.org/wiki/File:Aprilia_Amico_Clubman_50.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

@@ -56,5 +56,14 @@
    "what": "Large riding forum with threads on most European makes, old and new."
   }
  ],
- "heroName": "ATLANTIS"
+ "silhouette": "derbi-atlantis-boulevard-1998",
+ "areas": [],
+ "heroName": "ATLANTIS",
+ "hero": {
+  "src": "img/hero/derbi-atlantis-boulevard-1998.jpg",
+  "artist": "Bernd Pachaly",
+  "page": "https://commons.wikimedia.org/wiki/File:Piaggio_Fly_125.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

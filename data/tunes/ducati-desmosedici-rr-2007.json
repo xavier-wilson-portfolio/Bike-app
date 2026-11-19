@@ -54,5 +54,14 @@
    "what": "Large owner forum for Ducati models."
   }
  ],
- "heroName": "DESMOSEDICI"
+ "silhouette": "ducati-desmosedici-rr-2007",
+ "areas": [],
+ "heroName": "DESMOSEDICI",
+ "hero": {
+  "src": "img/hero/ducati-desmosedici-rr-2007.jpg",
+  "artist": "Thesupermat",
+  "page": "https://commons.wikimedia.org/wiki/File:Paris_-_RM_auctions_-_20150204_-_Ducati_Desmosedici_RR_G8_-_2009_-_001.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

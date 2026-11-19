@@ -61,5 +61,14 @@
    "what": "Owner community and wiki for mopeds and small two-strokes."
   }
  ],
- "heroName": "SOLEX"
+ "silhouette": "solex-velosolex-1946",
+ "areas": [],
+ "heroName": "SOLEX",
+ "hero": {
+  "src": "img/hero/solex-velosolex-1946.jpg",
+  "artist": "Luis Miguel Bugallo Sánchez (Lmbuga)",
+  "page": "https://commons.wikimedia.org/wiki/File:Solex_3800._Ano_1966-1.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

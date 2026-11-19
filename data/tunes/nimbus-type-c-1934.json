@@ -56,5 +56,14 @@
    "what": "Antique Motorcycle Club of America forum, with a Panhead section."
   }
  ],
- "heroName": "NIMBUS"
+ "silhouette": "nimbus-type-c-1934",
+ "areas": [],
+ "heroName": "NIMBUS",
+ "hero": {
+  "src": "img/hero/nimbus-type-c-1934.jpg",
+  "artist": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Nimbus.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
 }

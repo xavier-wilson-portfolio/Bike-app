@@ -55,5 +55,14 @@
    "what": "Big general scooter forum with sections for Yamaha scooters."
   }
  ],
- "heroName": "VELOCIFERO"
+ "silhouette": "italjet-velocifero-1994",
+ "areas": [],
+ "heroName": "VELOCIFERO",
+ "hero": {
+  "src": "img/hero/italjet-velocifero-1994.jpg",
+  "artist": "Alessandro Tartarini sent you licence VTR by [Ticket#2023021210006068] to photosubmission@wikimedia.org",
+  "page": "https://commons.wikimedia.org/wiki/File:Italjet_Velocifero_50_Alessandro_Tartarini_design.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

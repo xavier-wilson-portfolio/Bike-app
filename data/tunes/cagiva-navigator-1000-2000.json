@@ -54,5 +54,14 @@
    "what": "Large adventure riding forum with model-specific threads."
   }
  ],
- "heroName": "NAVIGATOR"
+ "silhouette": "cagiva-navigator-1000-2000",
+ "areas": [],
+ "heroName": "NAVIGATOR",
+ "hero": {
+  "src": "img/hero/cagiva-navigator-1000-2000.jpg",
+  "artist": "order_242 from Chile",
+  "page": "https://commons.wikimedia.org/wiki/File:Cagiva_Navigator_1000_2002_(12578124695).jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
 }

@@ -58,5 +58,14 @@
    "what": "Owner forum for Kawasaki motorcycles."
   }
  ],
- "heroName": "ZRX400"
+ "silhouette": "kawasaki-zrx400-1994",
+ "areas": [],
+ "heroName": "ZRX400",
+ "hero": {
+  "src": "img/hero/kawasaki-zrx400-1994.jpg",
+  "artist": "Rikita",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_ZRX400_2007.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

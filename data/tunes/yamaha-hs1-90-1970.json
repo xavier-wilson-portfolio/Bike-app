@@ -61,5 +61,14 @@
    "what": "Club for owners of older Japanese bikes."
   }
  ],
- "heroName": "HS1"
+ "silhouette": "yamaha-hs1-90-1970",
+ "areas": [],
+ "heroName": "HS1",
+ "hero": {
+  "src": "img/hero/yamaha-hs1-90-1970.jpg",
+  "artist": "Supermarno1980",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_L2.jpg",
+  "lic": "CC BY 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by/3.0"
+ }
 }

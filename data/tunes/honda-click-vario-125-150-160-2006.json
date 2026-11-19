@@ -56,5 +56,14 @@
    "what": "Big general scooter forum with sections for Honda scooters."
   }
  ],
- "heroName": "CLICK"
+ "silhouette": "honda-click-vario-125-150-160-2006",
+ "areas": [],
+ "heroName": "CLICK",
+ "hero": {
+  "src": "img/hero/honda-click-vario-125-150-160-2006.jpg",
+  "artist": "Vyacheslav Argenberg",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_Click,_Trang,_Thailand.jpg",
+  "lic": "CC BY 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by/4.0"
+ }
 }

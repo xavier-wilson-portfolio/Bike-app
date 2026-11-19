@@ -57,5 +57,14 @@
    "what": "Big general scooter forum with sections for Yamaha scooters."
   }
  ],
- "heroName": "ZIP"
+ "silhouette": "piaggio-zip-50-1992",
+ "areas": [],
+ "heroName": "ZIP",
+ "hero": {
+  "src": "img/hero/piaggio-zip-50-1992.jpg",
+  "artist": "Corvettec6r",
+  "page": "https://commons.wikimedia.org/wiki/File:Piaggio_Zip_50cc.jpg",
+  "lic": "CC BY 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by/4.0"
+ }
 }

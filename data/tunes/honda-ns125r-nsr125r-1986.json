@@ -57,5 +57,14 @@
    "what": "Owner forum for Honda CBR models."
   }
  ],
- "heroName": "NSR125"
+ "silhouette": "honda-ns125r-nsr125r-1986",
+ "areas": [],
+ "heroName": "NSR125",
+ "hero": {
+  "src": "img/hero/honda-ns125r-nsr125r-1986.jpg",
+  "artist": "Rikita",
+  "page": "https://commons.wikimedia.org/wiki/File:HONDA_NS125R.jpg",
+  "lic": "CC BY 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by/4.0"
+ }
 }

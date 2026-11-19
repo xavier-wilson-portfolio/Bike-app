@@ -55,5 +55,14 @@
    "what": "General owner forum for Yamaha motorcycles."
   }
  ],
- "heroName": "BULLDOG"
+ "silhouette": "yamaha-bt1100-bulldog-2002",
+ "areas": [],
+ "heroName": "BULLDOG",
+ "hero": {
+  "src": "img/hero/yamaha-bt1100-bulldog-2002.jpg",
+  "artist": "Jakkel at Dutch Wikipedia",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_BT1100_Bulldog_motorcycle.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
 }

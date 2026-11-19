@@ -56,5 +56,14 @@
    "what": "Large adventure riding forum with model-specific threads."
   }
  ],
- "heroName": "LANDER"
+ "silhouette": "yamaha-xtz250-lander-tenere-250-2006",
+ "areas": [],
+ "heroName": "LANDER",
+ "hero": {
+  "src": "img/hero/yamaha-xtz250-lander-tenere-250-2006.jpg",
+  "artist": "Ashwalk",
+  "page": "https://commons.wikimedia.org/wiki/File:XTZ250Tenere.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

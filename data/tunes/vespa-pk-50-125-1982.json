@@ -62,5 +62,14 @@
    "what": "Owner forum for Vespa scooters, classic and modern."
   }
  ],
- "heroName": "PK"
+ "silhouette": "vespa-pk-50-125-1982",
+ "areas": [],
+ "heroName": "PK",
+ "hero": {
+  "src": "img/hero/vespa-pk-50-125-1982.jpg",
+  "artist": "Corvettec6r",
+  "page": "https://commons.wikimedia.org/wiki/File:Piaggio_Vespa_PK_50_S.jpg",
+  "lic": "CC BY 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by/4.0"
+ }
 }

@@ -52,5 +52,14 @@
    "what": "Owner community and wiki for mopeds and small two-strokes."
   }
  ],
- "heroName": "DJANGO"
+ "silhouette": "peugeot-django-2014",
+ "areas": [],
+ "heroName": "DJANGO",
+ "hero": {
+  "src": "img/hero/peugeot-django-2014.jpg",
+  "artist": "MotorideSA",
+  "page": "https://commons.wikimedia.org/wiki/File:Peugeot_Django_Classic.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

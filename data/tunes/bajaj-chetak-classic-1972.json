@@ -60,5 +60,14 @@
    "what": "Big general scooter forum with sections for Yamaha scooters."
   }
  ],
- "heroName": "CHETAK"
+ "silhouette": "bajaj-chetak-classic-1972",
+ "areas": [],
+ "heroName": "CHETAK",
+ "hero": {
+  "src": "img/hero/bajaj-chetak-classic-1972.jpg",
+  "artist": "Shakti muralidhar",
+  "page": "https://commons.wikimedia.org/wiki/File:Bajaj_Chetak_1996_2_stroke.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

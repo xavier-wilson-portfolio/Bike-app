@@ -55,5 +55,14 @@
    "what": "Antique Motorcycle Club of America forum, with a Panhead section."
   }
  ],
- "heroName": "SANGLAS"
+ "silhouette": "sanglas-400-500-1962",
+ "areas": [],
+ "heroName": "SANGLAS",
+ "hero": {
+  "src": "img/hero/sanglas-400-500-1962.jpg",
+  "artist": "Peprovira",
+  "page": "https://commons.wikimedia.org/wiki/File:Sanglas_400_1972.JPG",
+  "lic": "CC BY 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by/3.0"
+ }
 }

@@ -59,5 +59,14 @@
    "what": "Antique Motorcycle Club of America forum, with a Panhead section."
   }
  ],
- "heroName": "GILLET"
+ "silhouette": "gillet-herstal-superconfort-tour-du-monde-1919",
+ "areas": [],
+ "heroName": "GILLET",
+ "hero": {
+  "src": "img/hero/gillet-herstal-superconfort-tour-du-monde-1919.jpg",
+  "artist": "Alf van Beem",
+  "page": "https://commons.wikimedia.org/wiki/File:1927_Gillet_Herstal,_Tour_du_monde,_350cm3,_Mus%C3%A9e_de_la_Moto_et_du_V%C3%A9lo,_Amneville,_France.JPG",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
 }

@@ -60,5 +60,14 @@
    "what": "Antique Motorcycle Club of America forum, with a Panhead section."
   }
  ],
- "heroName": "WSK"
+ "silhouette": "wsk-125-1955",
+ "areas": [],
+ "heroName": "WSK",
+ "hero": {
+  "src": "img/hero/wsk-125-1955.jpg",
+  "artist": "Jacek Halicki",
+  "page": "https://commons.wikimedia.org/wiki/File:2016_Motocykl_WSK_125_1.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

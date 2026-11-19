@@ -57,5 +57,14 @@
    "what": "Antique Motorcycle Club of America forum, with a Panhead section."
   }
  ],
- "heroName": "RAJDOOT"
+ "silhouette": "rajdoot-175-350-rd350-1962",
+ "areas": [],
+ "heroName": "RAJDOOT",
+ "hero": {
+  "src": "img/hero/rajdoot-175-350-rd350-1962.jpg",
+  "artist": "Biswarup Ganguly",
+  "page": "https://commons.wikimedia.org/wiki/File:Escorts_-_Rajdoot_GTS-175_-_Bobby_-_Kolkata_2015-01-11_4050.JPG",
+  "lic": "CC BY 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by/3.0"
+ }
 }

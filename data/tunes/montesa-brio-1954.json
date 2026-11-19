@@ -60,5 +60,14 @@
    "what": "Forum for trials riders, with sections for most trials makes."
   }
  ],
- "heroName": "MONTESA BRIO"
+ "silhouette": "montesa-brio-1954",
+ "areas": [],
+ "heroName": "MONTESA BRIO",
+ "hero": {
+  "src": "img/hero/montesa-brio-1954.jpg",
+  "artist": "Peprovira",
+  "page": "https://commons.wikimedia.org/wiki/File:Montesa_A45_98cc_1945_right.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

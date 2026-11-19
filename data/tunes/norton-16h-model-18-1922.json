@@ -63,5 +63,14 @@
    "what": "Owner club and forum for Nortons."
   }
  ],
- "heroName": "16H"
+ "silhouette": "norton-16h-model-18-1922",
+ "areas": [],
+ "heroName": "16H",
+ "hero": {
+  "src": "img/hero/norton-16h-model-18-1922.jpg",
+  "artist": "Yesterdays Antique Motorcycles",
+  "page": "https://commons.wikimedia.org/wiki/File:1929_Norton_Model_16H_right_side.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

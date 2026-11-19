@@ -55,5 +55,14 @@
    "what": "Big dirt bike forum with model sections for most off-road bikes."
   }
  ],
- "heroName": "THUMPSTAR"
+ "silhouette": "thumpstar-tsx-tsr-2004",
+ "areas": [],
+ "heroName": "THUMPSTAR",
+ "hero": {
+  "src": "img/hero/thumpstar-tsx-tsr-2004.jpg",
+  "artist": "Thumpstar22",
+  "page": "https://commons.wikimedia.org/wiki/File:2012_Thumpstar_TSX_88cc.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

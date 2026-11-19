@@ -53,5 +53,14 @@
    "what": "Large adventure riding forum with model-specific threads."
   }
  ],
- "heroName": "RIEJU"
+ "silhouette": "rieju-mr-300-marathon-2010",
+ "areas": [],
+ "heroName": "RIEJU",
+ "hero": {
+  "src": "img/hero/rieju-mr-300-marathon-2010.jpg",
+  "artist": "MotorideSA",
+  "page": "https://commons.wikimedia.org/wiki/File:Rieju_Marathon_R.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

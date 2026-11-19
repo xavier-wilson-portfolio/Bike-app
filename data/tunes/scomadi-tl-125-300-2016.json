@@ -55,5 +55,14 @@
    "what": "Big general scooter forum with sections for Yamaha scooters."
   }
  ],
- "heroName": "SCOMADI"
+ "silhouette": "scomadi-tl-125-300-2016",
+ "areas": [],
+ "heroName": "SCOMADI",
+ "hero": {
+  "src": "img/hero/scomadi-tl-125-300-2016.jpg",
+  "artist": "Deathlibrarian",
+  "page": "https://commons.wikimedia.org/wiki/File:Scomadi1.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

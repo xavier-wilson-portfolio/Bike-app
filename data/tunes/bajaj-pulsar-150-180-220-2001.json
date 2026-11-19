@@ -54,5 +54,14 @@
    "what": "Large adventure riding forum with model-specific threads."
   }
  ],
- "heroName": "PULSAR"
+ "silhouette": "bajaj-pulsar-150-180-220-2001",
+ "areas": [],
+ "heroName": "PULSAR",
+ "hero": {
+  "src": "img/hero/bajaj-pulsar-150-180-220-2001.jpg",
+  "artist": "EEIM",
+  "page": "https://commons.wikimedia.org/wiki/File:Discover_125_STR.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

@@ -60,5 +60,14 @@
    "what": "Antique Motorcycle Club of America forum, with a Panhead section."
   }
  ],
- "heroName": "ARDIE"
+ "silhouette": "ardie-two-strokes-and-singles-1919",
+ "areas": [],
+ "heroName": "ARDIE",
+ "hero": {
+  "src": "img/hero/ardie-two-strokes-and-singles-1919.jpg",
+  "artist": "Fomanu",
+  "page": "https://commons.wikimedia.org/wiki/File:Motorrad_Ardie_Sitzbank.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

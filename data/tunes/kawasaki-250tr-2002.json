@@ -55,5 +55,14 @@
    "what": "Big dirt bike forum with model sections for most off-road bikes."
   }
  ],
- "heroName": "250TR"
+ "silhouette": "kawasaki-250tr-2002",
+ "areas": [],
+ "heroName": "250TR",
+ "hero": {
+  "src": "img/hero/kawasaki-250tr-2002.jpg",
+  "artist": "Oq10pass",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_250TR_%2707_(2).jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
 }

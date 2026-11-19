@@ -61,5 +61,14 @@
    "what": "Big general scooter forum with sections for Yamaha scooters."
   }
  ],
- "heroName": "NRG"
+ "silhouette": "piaggio-skipper-nrg-free-1993",
+ "areas": [],
+ "heroName": "NRG",
+ "hero": {
+  "src": "img/hero/piaggio-skipper-nrg-free-1993.jpg",
+  "artist": "Skr172",
+  "page": "https://commons.wikimedia.org/wiki/File:Piaggio_skr.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
 }
