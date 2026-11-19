@@ -65,5 +65,14 @@
    "what": "Club for owners of older Japanese bikes."
   }
  ],
- "heroName": "A100"
+ "silhouette": "suzuki-a100-1966",
+ "areas": [],
+ "heroName": "A100",
+ "hero": {
+  "src": "img/hero/suzuki-a100-1966.jpg",
+  "artist": "Ignesious Robin",
+  "page": "https://commons.wikimedia.org/wiki/File:Ind-Suzuki_AX100.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

@@ -55,5 +55,14 @@
    "what": "Big dirt bike forum with model sections for most off-road bikes."
   }
  ],
- "heroName": "KLX400"
+ "silhouette": "kawasaki-klx400-2003",
+ "areas": [],
+ "heroName": "KLX400",
+ "hero": {
+  "src": "img/hero/kawasaki-klx400-2003.jpg",
+  "artist": "Yitzachmmeyer",
+  "page": "https://commons.wikimedia.org/wiki/File:2007_Suzuki_DRZ-400SM.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

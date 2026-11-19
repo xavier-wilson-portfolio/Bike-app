@@ -56,5 +56,14 @@
    "what": "Owner forum for Honda VFR and Interceptor models."
   }
  ],
- "heroName": "RC30"
+ "silhouette": "honda-vfr750r-rc30-1990",
+ "areas": [],
+ "heroName": "RC30",
+ "hero": {
+  "src": "img/hero/honda-vfr750r-rc30-1990.jpg",
+  "artist": "HONDA RC30",
+  "page": "https://commons.wikimedia.org/wiki/File:HondaVFR750R.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

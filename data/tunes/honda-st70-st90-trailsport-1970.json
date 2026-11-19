@@ -60,5 +60,14 @@
    "what": "Owner forum for the CT90, CT110 and other Honda trail bikes."
   }
  ],
- "heroName": "DAX"
+ "silhouette": "honda-st70-st90-trailsport-1970",
+ "areas": [],
+ "heroName": "DAX",
+ "hero": {
+  "src": "img/hero/honda-st70-st90-trailsport-1970.jpg",
+  "artist": "Fridolin freudenfett",
+  "page": "https://commons.wikimedia.org/wiki/File:Classic_Days_Berlin_2017_Honda_Dax.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

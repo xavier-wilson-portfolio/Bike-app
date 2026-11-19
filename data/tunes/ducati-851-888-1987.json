@@ -63,5 +63,14 @@
    "what": "Large owner forum for Ducati models."
   }
  ],
- "heroName": "851"
+ "silhouette": "ducati-851-888-1987",
+ "areas": [],
+ "heroName": "851",
+ "hero": {
+  "src": "img/hero/ducati-851-888-1987.jpg",
+  "artist": "Calreyn88",
+  "page": "https://commons.wikimedia.org/wiki/File:1988_Ducati_851_Kit_Racer.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

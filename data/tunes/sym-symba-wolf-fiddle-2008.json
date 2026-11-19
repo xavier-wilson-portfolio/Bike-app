@@ -57,5 +57,14 @@
    "what": "Big general scooter forum with sections for Yamaha scooters."
   }
  ],
- "heroName": "SYM"
+ "silhouette": "sym-symba-wolf-fiddle-2008",
+ "areas": [],
+ "heroName": "SYM",
+ "hero": {
+  "src": "img/hero/sym-symba-wolf-fiddle-2008.jpg",
+  "artist": "Mj-bird",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_super_cub,_1st_Gen._1958,_Left_side.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

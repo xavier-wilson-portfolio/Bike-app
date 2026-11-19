@@ -57,5 +57,14 @@
    "what": "Large adventure riding forum with model-specific threads."
   }
  ],
- "heroName": "CABALLERO"
+ "silhouette": "fantic-caballero-500-700-2018",
+ "areas": [],
+ "heroName": "CABALLERO",
+ "hero": {
+  "src": "img/hero/fantic-caballero-500-700-2018.jpg",
+  "artist": "LauCezka",
+  "page": "https://commons.wikimedia.org/wiki/File:Fantic_Caballero.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

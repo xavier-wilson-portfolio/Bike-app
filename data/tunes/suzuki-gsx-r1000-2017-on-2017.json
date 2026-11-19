@@ -58,5 +58,14 @@
    "what": "Owner forum for Suzuki GSX-R models, including the early oil-cooled bikes."
   }
  ],
- "heroName": "GSX-R1000"
+ "silhouette": "suzuki-gsx-r1000-2017-on-2017",
+ "areas": [],
+ "heroName": "GSX-R1000",
+ "hero": {
+  "src": "img/hero/suzuki-gsx-r1000-2017-on-2017.jpg",
+  "artist": "Gsxr53coopers",
+  "page": "https://commons.wikimedia.org/wiki/File:GSX-R1000R_L7.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

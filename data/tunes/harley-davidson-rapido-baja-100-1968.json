@@ -63,5 +63,14 @@
    "what": "Antique Motorcycle Club of America forum, with a Panhead section."
   }
  ],
- "heroName": "RAPIDO"
+ "silhouette": "harley-davidson-rapido-baja-100-1968",
+ "areas": [],
+ "heroName": "RAPIDO",
+ "hero": {
+  "src": "img/hero/harley-davidson-rapido-baja-100-1968.jpg",
+  "artist": "Flickr user cole24_",
+  "page": "https://commons.wikimedia.org/wiki/File:1972HarleyDavidsonBaja100.jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
 }

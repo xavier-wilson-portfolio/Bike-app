@@ -52,5 +52,14 @@
    "what": "Big dirt bike forum with model sections for most off-road bikes."
   }
  ],
- "heroName": "WR250F"
+ "silhouette": "yamaha-wr250f-2001",
+ "areas": [],
+ "heroName": "WR250F",
+ "hero": {
+  "src": "img/hero/yamaha-wr250f-2001.jpg",
+  "artist": "Cdw1952",
+  "page": "https://commons.wikimedia.org/wiki/File:2002WR250F.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

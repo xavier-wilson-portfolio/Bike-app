@@ -64,5 +64,14 @@
    "what": "Big dirt bike forum with model sections for most off-road bikes."
   }
  ],
- "heroName": "CAPPRA"
+ "silhouette": "montesa-cappra-king-scorpion-1966",
+ "areas": [],
+ "heroName": "CAPPRA",
+ "hero": {
+  "src": "img/hero/montesa-cappra-king-scorpion-1966.jpg",
+  "artist": "Peprovira",
+  "page": "https://commons.wikimedia.org/wiki/File:Montesa_Cappra_GP_250_1968.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

@@ -58,5 +58,14 @@
    "what": "Owner forum and FAQs for BMW F650 and F800 models."
   }
  ],
- "heroName": "F650"
+ "silhouette": "bmw-f650-funduro-st-1994",
+ "areas": [],
+ "heroName": "F650",
+ "hero": {
+  "src": "img/hero/bmw-f650-funduro-st-1994.jpg",
+  "artist": "Frank G. Leuderalbert",
+  "page": "https://commons.wikimedia.org/wiki/File:Motorcycle_BMW_f650_st_02.jpg",
+  "lic": "CC BY 2.5",
+  "licUrl": "https://creativecommons.org/licenses/by/2.5"
+ }
 }

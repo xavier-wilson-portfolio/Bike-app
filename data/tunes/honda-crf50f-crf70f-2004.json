@@ -59,5 +59,14 @@
    "what": "Parts and know-how for Honda XR dirt bikes."
   }
  ],
- "heroName": "CRF50F"
+ "silhouette": "honda-crf50f-crf70f-2004",
+ "areas": [],
+ "heroName": "CRF50F",
+ "hero": {
+  "src": "img/hero/honda-crf50f-crf70f-2004.jpg",
+  "artist": "Christian Eiden",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CRF50_mod.jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
 }

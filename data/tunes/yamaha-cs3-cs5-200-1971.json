@@ -63,5 +63,14 @@
    "what": "Club for owners of older Japanese bikes."
   }
  ],
- "heroName": "CS5"
+ "silhouette": "yamaha-cs3-cs5-200-1971",
+ "areas": [],
+ "heroName": "CS5",
+ "hero": {
+  "src": "img/hero/yamaha-cs3-cs5-200-1971.jpg",
+  "artist": "SG2012",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_CS3_(1971)_-_7586359558.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

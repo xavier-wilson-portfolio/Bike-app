@@ -65,5 +65,14 @@
    "what": "Big dirt bike forum with model sections for most off-road bikes."
   }
  ],
- "heroName": "EC 300"
+ "silhouette": "gasgas-ec-250-300-spanish-2000",
+ "areas": [],
+ "heroName": "EC 300",
+ "hero": {
+  "src": "img/hero/gasgas-ec-250-300-spanish-2000.jpg",
+  "artist": "Peprovira",
+  "page": "https://commons.wikimedia.org/wiki/File:Gas_Gas_EC_300_30th_Anniversary_2015_b.JPG",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

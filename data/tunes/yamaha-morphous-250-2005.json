@@ -54,5 +54,14 @@
    "what": "Big general scooter forum with sections for Yamaha scooters."
   }
  ],
- "heroName": "MORPHOUS"
+ "silhouette": "yamaha-morphous-250-2005",
+ "areas": [],
+ "heroName": "MORPHOUS",
+ "hero": {
+  "src": "img/hero/yamaha-morphous-250-2005.jpg",
+  "artist": "Ari Helminen",
+  "page": "https://commons.wikimedia.org/wiki/File:Windy_day_Yokohama,_%E5%BC%B7%E9%A2%A8%E3%81%AE%E6%A8%AA%E6%B5%9C.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

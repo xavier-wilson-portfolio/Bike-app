@@ -57,5 +57,14 @@
    "what": "Large riding forum with threads on most European makes, old and new."
   }
  ],
- "heroName": "SKORPION"
+ "silhouette": "mz-baghira-skorpion-1994",
+ "areas": [],
+ "heroName": "SKORPION",
+ "hero": {
+  "src": "img/hero/mz-baghira-skorpion-1994.jpg",
+  "artist": "elenchos from Seattle, USA",
+  "page": "https://commons.wikimedia.org/wiki/File:MZ_Skorpion_Sport.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

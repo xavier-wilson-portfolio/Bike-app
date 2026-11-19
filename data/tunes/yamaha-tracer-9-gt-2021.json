@@ -56,5 +56,14 @@
    "what": "General owner forum for Yamaha motorcycles."
   }
  ],
- "heroName": "TRACER 9"
+ "silhouette": "yamaha-tracer-9-gt-2021",
+ "areas": [],
+ "heroName": "TRACER 9",
+ "hero": {
+  "src": "img/hero/yamaha-tracer-9-gt-2021.jpg",
+  "artist": "GT1976",
+  "page": "https://commons.wikimedia.org/wiki/File:2017-06-19_Yamaha_700_Tracer,_Baujahr_2017,_blau_(01).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

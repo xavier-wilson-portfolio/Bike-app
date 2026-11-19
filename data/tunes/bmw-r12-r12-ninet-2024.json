@@ -57,5 +57,14 @@
    "what": "BMW Motorcycle Owners of America forum."
   }
  ],
- "heroName": "R12"
+ "silhouette": "bmw-r12-r12-ninet-2024",
+ "areas": [],
+ "heroName": "R12",
+ "hero": {
+  "src": "img/hero/bmw-r12-r12-ninet-2024.jpg",
+  "artist": "Wikisympathisant",
+  "page": "https://commons.wikimedia.org/wiki/File:2024-06_BMW_R12-A_(bearb_Sp).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

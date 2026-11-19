@@ -55,5 +55,14 @@
    "what": "Parts and know-how for Honda XR dirt bikes."
   }
  ],
- "heroName": "XR75"
+ "silhouette": "honda-xr75-1973",
+ "areas": [],
+ "heroName": "XR75",
+ "hero": {
+  "src": "img/hero/honda-xr75-1973.jpg",
+  "artist": "Ltpreston at English Wikipedia",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_SL70.JPG",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

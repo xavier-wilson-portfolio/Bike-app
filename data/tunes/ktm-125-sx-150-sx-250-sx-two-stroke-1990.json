@@ -65,5 +65,14 @@
    "what": "Big dirt bike forum with model sections for most off-road bikes."
   }
  ],
- "heroName": "250 SX"
+ "silhouette": "ktm-125-sx-150-sx-250-sx-two-stroke-1990",
+ "areas": [],
+ "heroName": "250 SX",
+ "hero": {
+  "src": "img/hero/ktm-125-sx-150-sx-250-sx-two-stroke-1990.jpg",
+  "artist": "Creatorepazzosgravato",
+  "page": "https://commons.wikimedia.org/wiki/File:Ktm_125sx_2019.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

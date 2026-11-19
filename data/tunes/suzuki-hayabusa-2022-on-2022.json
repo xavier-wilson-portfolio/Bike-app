@@ -57,5 +57,14 @@
    "what": "Owner forum for Suzuki GSX-R models, including the early oil-cooled bikes."
   }
  ],
- "heroName": "HAYABUSA"
+ "silhouette": "suzuki-hayabusa-2022-on-2022",
+ "areas": [],
+ "heroName": "HAYABUSA",
+ "hero": {
+  "src": "img/hero/suzuki-hayabusa-2022-on-2022.jpg",
+  "artist": "PekePON",
+  "page": "https://commons.wikimedia.org/wiki/File:SUZUKI_Hayabusa_2007TMS.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

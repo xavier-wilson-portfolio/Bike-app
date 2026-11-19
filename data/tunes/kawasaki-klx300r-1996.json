@@ -55,5 +55,14 @@
    "what": "Big dirt bike forum with model sections for most off-road bikes."
   }
  ],
- "heroName": "KLX300R"
+ "silhouette": "kawasaki-klx300r-1996",
+ "areas": [],
+ "heroName": "KLX300R",
+ "hero": {
+  "src": "img/hero/kawasaki-klx300r-1996.jpg",
+  "artist": "armycopter",
+  "page": "https://commons.wikimedia.org/wiki/File:KLX250S_2009.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

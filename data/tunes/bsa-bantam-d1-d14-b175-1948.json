@@ -66,5 +66,14 @@
    "what": "Owner club for BSA motorcycles, with tech help and parts."
   }
  ],
- "heroName": "BANTAM"
+ "silhouette": "bsa-bantam-d1-d14-b175-1948",
+ "areas": [],
+ "heroName": "BANTAM",
+ "hero": {
+  "src": "img/hero/bsa-bantam-d1-d14-b175-1948.jpg",
+  "artist": "Ch vik",
+  "page": "https://commons.wikimedia.org/wiki/File:BSA_Bantam.JPG",
+  "lic": "CC BY 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by/3.0"
+ }
 }

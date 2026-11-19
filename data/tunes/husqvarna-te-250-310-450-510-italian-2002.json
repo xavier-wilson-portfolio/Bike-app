@@ -60,5 +60,14 @@
    "what": "Big dirt bike forum with model sections for most off-road bikes."
   }
  ],
- "heroName": "TE 450"
+ "silhouette": "husqvarna-te-250-310-450-510-italian-2002",
+ "areas": [],
+ "heroName": "TE 450",
+ "hero": {
+  "src": "img/hero/husqvarna-te-250-310-450-510-italian-2002.jpg",
+  "artist": "Peprovira",
+  "page": "https://commons.wikimedia.org/wiki/File:Husqvarna_TE_250_2015.JPG",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

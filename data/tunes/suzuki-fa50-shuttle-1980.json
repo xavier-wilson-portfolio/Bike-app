@@ -61,5 +61,14 @@
    "what": "Owner community and wiki for mopeds and small two-strokes."
   }
  ],
- "heroName": "SHUTTLE"
+ "silhouette": "suzuki-fa50-shuttle-1980",
+ "areas": [],
+ "heroName": "SHUTTLE",
+ "hero": {
+  "src": "img/hero/suzuki-fa50-shuttle-1980.jpg",
+  "artist": "Meghan",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_FA50_1986.jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
 }

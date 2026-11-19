@@ -57,5 +57,14 @@
    "what": "Owner forum for Suzuki GS fours and twins."
   }
  ],
- "heroName": "GS750ES"
+ "silhouette": "suzuki-gs700e-gs750es-1983",
+ "areas": [],
+ "heroName": "GS750ES",
+ "hero": {
+  "src": "img/hero/suzuki-gs700e-gs750es-1983.jpg",
+  "artist": "Rikita",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_XN85_Turbo.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

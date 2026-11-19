@@ -58,5 +58,14 @@
    "what": "Large riding forum with threads on most European makes, old and new."
   }
  ],
- "heroName": "RAPTOR"
+ "silhouette": "cagiva-raptor-650-1000-v-raptor-1999",
+ "areas": [],
+ "heroName": "RAPTOR",
+ "hero": {
+  "src": "img/hero/cagiva-raptor-650-1000-v-raptor-1999.jpg",
+  "artist": "Addvisor",
+  "page": "https://commons.wikimedia.org/wiki/File:Cagiva_Raptor_right_01.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

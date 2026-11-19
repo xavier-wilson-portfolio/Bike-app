@@ -55,5 +55,14 @@
    "what": "US owner club for Moto Guzzi."
   }
  ],
- "heroName": "BELLAGIO"
+ "silhouette": "moto-guzzi-bellagio-2007",
+ "areas": [],
+ "heroName": "BELLAGIO",
+ "hero": {
+  "src": "img/hero/moto-guzzi-bellagio-2007.jpg",
+  "artist": "Thesupermat",
+  "page": "https://commons.wikimedia.org/wiki/File:Paris_-_Salon_de_la_moto_2011_-_Moto_Guzzi_-_Bellagio_Aquila_Nera_-_001.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

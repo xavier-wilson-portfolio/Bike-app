@@ -58,5 +58,14 @@
    "what": "Owner forum for Yamaha XJ, Seca, Maxim and Radian fours."
   }
  ],
- "heroName": "VISION"
+ "silhouette": "yamaha-xz550-vision-1982",
+ "areas": [],
+ "heroName": "VISION",
+ "hero": {
+  "src": "img/hero/yamaha-xz550-vision-1982.jpg",
+  "artist": "Carchaias",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_XZ550.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

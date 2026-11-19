@@ -57,5 +57,14 @@
    "what": "Forum for classic British motorcycles."
   }
  ],
- "heroName": "SQUARE FOUR"
+ "silhouette": "ariel-square-four-1931",
+ "areas": [],
+ "heroName": "SQUARE FOUR",
+ "hero": {
+  "src": "img/hero/ariel-square-four-1931.jpg",
+  "artist": "Gadfium",
+  "page": "https://commons.wikimedia.org/wiki/File:1935_Ariel_Square_Four_01.JPG",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
 }

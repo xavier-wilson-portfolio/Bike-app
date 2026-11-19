@@ -60,5 +60,14 @@
    "what": "Owner forum for modern and classic Triumphs."
   }
  ],
- "heroName": "SPEED TWIN"
+ "silhouette": "triumph-speed-twin-5t-1938",
+ "areas": [],
+ "heroName": "SPEED TWIN",
+ "hero": {
+  "src": "img/hero/triumph-speed-twin-5t-1938.jpg",
+  "artist": "London Motorcycle Museum",
+  "page": "https://commons.wikimedia.org/wiki/File:Triumph_Speed_Twin.jpg",
+  "lic": "CC BY 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by/3.0"
+ }
 }

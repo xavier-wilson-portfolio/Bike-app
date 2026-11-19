@@ -67,5 +67,14 @@
    "what": "Club for owners of older Japanese bikes."
   }
  ],
- "heroName": "HUSTLER"
+ "silhouette": "suzuki-x6-hustler-t250-t350-1966",
+ "areas": [],
+ "heroName": "HUSTLER",
+ "hero": {
+  "src": "img/hero/suzuki-x6-hustler-t250-t350-1966.jpg",
+  "artist": "Ronald Saunders from Warrington, UK",
+  "page": "https://commons.wikimedia.org/wiki/File:Flickr_-_ronsaunders47_-_SUZUKI_GT250._250cc_TWO_STROKE_TWIN.UK.jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
 }

@@ -54,5 +54,14 @@
    "what": "Big dirt bike forum with model sections for most off-road bikes."
   }
  ],
- "heroName": "CRF450R"
+ "silhouette": "honda-crf450r-2002",
+ "areas": [],
+ "heroName": "CRF450R",
+ "hero": {
+  "src": "img/hero/honda-crf450r-2002.jpg",
+  "artist": "Rainmaker47",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_2000_CRF450R_in_the_Honda_Collection_Hall.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

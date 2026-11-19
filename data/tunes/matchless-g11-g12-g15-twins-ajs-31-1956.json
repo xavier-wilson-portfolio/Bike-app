@@ -67,5 +67,14 @@
    "what": "Forum for classic British motorcycles."
   }
  ],
- "heroName": "G12"
+ "silhouette": "matchless-g11-g12-g15-twins-ajs-31-1956",
+ "areas": [],
+ "heroName": "G12",
+ "hero": {
+  "src": "img/hero/matchless-g11-g12-g15-twins-ajs-31-1956.jpg",
+  "artist": "Yesterdays Antique Motorcycles",
+  "page": "https://commons.wikimedia.org/wiki/File:1961_Matchless_Model_G12_650_cc_right_side.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

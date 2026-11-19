@@ -61,5 +61,14 @@
    "what": "Big dirt bike forum with model sections for most off-road bikes."
   }
  ],
- "heroName": "YZ125"
+ "silhouette": "yamaha-yz125-1974",
+ "areas": [],
+ "heroName": "YZ125",
+ "hero": {
+  "src": "img/hero/yamaha-yz125-1974.jpg",
+  "artist": "Antramir",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_YZ_490_2012_570.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

@@ -53,5 +53,14 @@
    "what": "Big dirt bike forum with model sections for most off-road bikes."
   }
  ],
- "heroName": "CRF250R"
+ "silhouette": "honda-crf250r-2004",
+ "areas": [],
+ "heroName": "CRF250R",
+ "hero": {
+  "src": "img/hero/honda-crf250r-2004.jpg",
+  "artist": "Hba1c8.6",
+  "page": "https://commons.wikimedia.org/wiki/File:Crf250rally.ld.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

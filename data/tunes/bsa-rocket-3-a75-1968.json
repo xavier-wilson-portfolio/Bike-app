@@ -62,5 +62,14 @@
    "what": "Owner club for BSA motorcycles, with tech help and parts."
   }
  ],
- "heroName": "ROCKET 3"
+ "silhouette": "bsa-rocket-3-a75-1968",
+ "areas": [],
+ "heroName": "ROCKET 3",
+ "hero": {
+  "src": "img/hero/bsa-rocket-3-a75-1968.jpg",
+  "artist": "MikeSchinkel on Flickr.com, MikeSchinkel.com",
+  "page": "https://commons.wikimedia.org/wiki/File:BSA_Rocket_3.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

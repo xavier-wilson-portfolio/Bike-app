@@ -53,5 +53,14 @@
    "what": "Big general scooter forum with sections for Yamaha scooters."
   }
  ],
- "heroName": "C3"
+ "silhouette": "yamaha-c3-2005",
+ "areas": [],
+ "heroName": "C3",
+ "hero": {
+  "src": "img/hero/yamaha-c3-2005.jpg",
+  "artist": "Jrosmannj",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_red_C3.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

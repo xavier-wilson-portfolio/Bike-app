@@ -59,5 +59,14 @@
    "what": "Large riding forum with threads on most European makes, old and new."
   }
  ],
- "heroName": "BIMOTA"
+ "silhouette": "bimota-db-sb-tesi-1980",
+ "areas": [],
+ "heroName": "BIMOTA",
+ "hero": {
+  "src": "img/hero/bimota-db-sb-tesi-1980.jpg",
+  "artist": "Matthb13195",
+  "page": "https://commons.wikimedia.org/wiki/File:BIMOTA_KB998_Rimini_SBK_(2025)_(2).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

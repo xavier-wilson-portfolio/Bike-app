@@ -57,5 +57,14 @@
    "what": "Forum for classic British motorcycles."
   }
  ],
- "heroName": "METISSE"
+ "silhouette": "rickman-metisse-1960",
+ "areas": [],
+ "heroName": "METISSE",
+ "hero": {
+  "src": "img/hero/rickman-metisse-1960.jpg",
+  "artist": "Jamie@jamiejamie.com",
+  "page": "https://commons.wikimedia.org/wiki/File:Rickman_Honda.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
 }

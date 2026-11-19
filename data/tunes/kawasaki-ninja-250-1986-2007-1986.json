@@ -59,5 +59,14 @@
    "what": "Owner forum for Kawasaki motorcycles."
   }
  ],
- "heroName": "NINJA 250"
+ "silhouette": "kawasaki-ninja-250-1986-2007-1986",
+ "areas": [],
+ "heroName": "NINJA 250",
+ "hero": {
+  "src": "img/hero/kawasaki-ninja-250-1986-2007-1986.jpg",
+  "artist": "Biology9",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_ninja_250_perfil.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

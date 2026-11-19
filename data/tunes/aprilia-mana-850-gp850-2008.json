@@ -57,5 +57,14 @@
    "what": "Owner forum for Aprilia motorcycles."
   }
  ],
- "heroName": "MANA"
+ "silhouette": "aprilia-mana-850-gp850-2008",
+ "areas": [],
+ "heroName": "MANA",
+ "hero": {
+  "src": "img/hero/aprilia-mana-850-gp850-2008.jpg",
+  "artist": "David290",
+  "page": "https://commons.wikimedia.org/wiki/File:Red_motorcycle_in_taihu_midi.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

@@ -62,5 +62,14 @@
    "what": "Owner community and wiki for mopeds and small two-strokes."
   }
  ],
- "heroName": "SPREE"
+ "silhouette": "honda-spree-nq50-1984",
+ "areas": [],
+ "heroName": "SPREE",
+ "hero": {
+  "src": "img/hero/honda-spree-nq50-1984.jpg",
+  "artist": "Cbwallace at English Wikipedia",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_Spree.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

@@ -59,5 +59,14 @@
    "what": "Big general scooter forum with sections for Yamaha scooters."
   }
  ],
- "heroName": "C400X"
+ "silhouette": "bmw-c400x-c650-scooters-2016",
+ "areas": [],
+ "heroName": "C400X",
+ "hero": {
+  "src": "img/hero/bmw-c400x-c650-scooters-2016.jpg",
+  "artist": "Bayahusa",
+  "page": "https://commons.wikimedia.org/wiki/File:Bmw_c400x_grey.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

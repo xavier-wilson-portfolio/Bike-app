@@ -57,5 +57,14 @@
    "what": "Large riding forum with threads on most European makes, old and new."
   }
  ],
- "heroName": "TORNADO"
+ "silhouette": "benelli-tornado-tre-900-2002",
+ "areas": [],
+ "heroName": "TORNADO",
+ "hero": {
+  "src": "img/hero/benelli-tornado-tre-900-2002.jpg",
+  "artist": "Il cacciatore",
+  "page": "https://commons.wikimedia.org/wiki/File:Benelli_Tornado_Tre_Novecento_(Rear_nearside).jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

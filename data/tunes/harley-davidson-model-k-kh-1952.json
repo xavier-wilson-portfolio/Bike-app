@@ -62,5 +62,14 @@
    "what": "Antique Motorcycle Club of America forum, with a Panhead section."
   }
  ],
- "heroName": "MODEL K"
+ "silhouette": "harley-davidson-model-k-kh-1952",
+ "areas": [],
+ "heroName": "MODEL K",
+ "hero": {
+  "src": "img/hero/harley-davidson-model-k-kh-1952.jpg",
+  "artist": "Michael Barera",
+  "page": "https://commons.wikimedia.org/wiki/File:Harley-Davidson_Museum_May_2024_03_(Challenge_and_Opportunity--1954_KH--Side-Valve_V-Twin).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }
