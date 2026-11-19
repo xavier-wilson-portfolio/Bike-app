@@ -1,0 +1,68 @@
+{
+ "id": "honda-cb500t-1975",
+ "make": "Honda",
+ "model": "CB500T",
+ "name": "Honda CB500T",
+ "years": [
+  1975,
+  1976
+ ],
+ "match": [
+  "cb500t",
+  "cb 500t",
+  "cb500 twin",
+  "cb500t twin"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "498 cc air-cooled DOHC parallel twin, two carbs, five-speed",
+ "intro": "Honda's DOHC twin of the mid 70s, grown from the CB450. Two carbs, points and a torsion-bar valve setup.",
+ "focus": [
+  [
+   "DOHC twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Sync them"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Cam chain",
+   "Adjust it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "silhouette": "honda-cb500t-1975",
+ "areas": [],
+ "heroName": "CB500T",
+ "hero": {
+  "src": "img/hero/honda-cb500t-1975.jpg",
+  "artist": "Tommydenham",
+  "page": "https://commons.wikimedia.org/wiki/File:Bike_pear_tree.JPG",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
+}

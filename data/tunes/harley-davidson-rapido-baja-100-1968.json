@@ -1,0 +1,67 @@
+{
+ "id": "harley-davidson-rapido-baja-100-1968",
+ "make": "Harley-Davidson",
+ "model": "Rapido / Baja 100",
+ "name": "Harley-Davidson Rapido / Baja 100",
+ "years": [
+  1968,
+  1972
+ ],
+ "match": [
+  "rapido",
+  "baja",
+  "baja 100",
+  "ml125",
+  "msr100",
+  "harley rapido"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "98 or 123 cc air-cooled Aermacchi two-stroke single, premix",
+ "intro": "Harley's small Italian-built trail two-strokes. Premix and parts that are hard to find.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Ignition",
+   "Check spark"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "RAPIDO"
+}

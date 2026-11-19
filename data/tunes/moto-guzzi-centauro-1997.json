@@ -1,0 +1,64 @@
+{
+ "id": "moto-guzzi-centauro-1997",
+ "make": "Moto Guzzi",
+ "model": "Centauro",
+ "name": "Moto Guzzi Centauro",
+ "years": [
+  1997,
+  1999
+ ],
+ "match": [
+  "centauro",
+  "centauro 1000",
+  "guzzi centauro",
+  "centauro gt",
+  "centauro sport"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "992 cc air-cooled four-valve V-twin, fuel injected, shaft drive",
+ "intro": "Guzzi's odd-looking roadster with the Daytona four-valve engine. Rare, with unique bodywork.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Three oils",
+   "Change all"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "K": [
+   "Guzzi big twins use a car-type dry clutch and a separate gearbox and final drive. Change all three oils, not just the engine oil."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moto Guzzi National Owners Club",
+   "url": "https://www.mgnoc.org/",
+   "what": "US owner club for Moto Guzzi."
+  }
+ ],
+ "heroName": "CENTAURO"
+}

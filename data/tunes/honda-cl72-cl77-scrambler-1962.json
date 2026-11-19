@@ -1,0 +1,73 @@
+{
+ "id": "honda-cl72-cl77-scrambler-1962",
+ "make": "Honda",
+ "model": "CL72 / CL77 Scrambler",
+ "name": "Honda CL72 / CL77 Scrambler",
+ "years": [
+  1962,
+  1967
+ ],
+ "match": [
+  "cl72",
+  "cl77",
+  "cl 72",
+  "cl 77",
+  "scrambler 250",
+  "scrambler 305",
+  "cl77 scrambler"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "247 or 305 cc air-cooled overhead-cam twin, two carbs, four-speed",
+ "intro": "The early Honda scramblers. High pipes, a tube frame and the same twin as the Hawks.",
+ "focus": [
+  [
+   "Twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Sync them"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "High pipes",
+   "Check mounts"
+  ],
+  [
+   "Six-volt",
+   "Check charging"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Honda Twins forum",
+   "url": "https://www.vintagehondatwins.com/",
+   "what": "Owner forum for Honda twins of the 60s and 70s."
+  }
+ ],
+ "silhouette": "honda-cl72-cl77-scrambler-1962",
+ "areas": [],
+ "heroName": "CL77",
+ "hero": {
+  "src": "img/hero/honda-cl72-cl77-scrambler-1962.jpg",
+  "artist": "Rikita",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CL72.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

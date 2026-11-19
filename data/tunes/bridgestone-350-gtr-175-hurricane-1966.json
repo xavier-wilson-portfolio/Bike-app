@@ -1,0 +1,69 @@
+{
+ "id": "bridgestone-350-gtr-175-hurricane-1966",
+ "make": "Bridgestone",
+ "model": "350 GTR / 175 Hurricane",
+ "name": "Bridgestone 350 GTR / 175 Hurricane",
+ "years": [
+  1966,
+  1971
+ ],
+ "match": [
+  "350 gtr",
+  "gtr",
+  "hurricane",
+  "bridgestone 350",
+  "bridgestone 175",
+  "350 gto",
+  "dual twin",
+  "bridgestone"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "177 or 345 cc air-cooled rotary-valve two-stroke twin, oil injection",
+ "intro": "Bridgestone's high-quality two-stroke twins. Rotary valves, oil injection and parts that are now very hard to find.",
+ "focus": [
+  [
+   "Two-stroke twin",
+   "Oil injection"
+  ],
+  [
+   "Two carbs",
+   "Sync them"
+  ],
+  [
+   "Rotary valves",
+   "Check covers"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It has oil injection, not premix. Keep the oil tank filled and check the pump before you start it."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "BRIDGESTONE"
+}

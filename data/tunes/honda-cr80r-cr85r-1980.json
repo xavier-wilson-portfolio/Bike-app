@@ -1,0 +1,69 @@
+{
+ "id": "honda-cr80r-cr85r-1980",
+ "make": "Honda",
+ "model": "CR80R / CR85R",
+ "name": "Honda CR80R / CR85R",
+ "years": [
+  1980,
+  2007
+ ],
+ "match": [
+  "cr80r",
+  "cr85r",
+  "cr80",
+  "cr85",
+  "cr 80",
+  "cr 85",
+  "cr85rb",
+  "cr80rb"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "80 or 85 cc two-stroke single, liquid-cooled on most years, carb, premix",
+ "intro": "Honda's mini motocross two-strokes. Premix, a top end that wears fast and small parts that are easy to lose.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Honda dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "CR85R"
+}

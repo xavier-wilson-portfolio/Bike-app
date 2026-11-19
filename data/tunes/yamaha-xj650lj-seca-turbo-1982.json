@@ -1,0 +1,65 @@
+{
+ "id": "yamaha-xj650lj-seca-turbo-1982",
+ "make": "Yamaha",
+ "model": "XJ650LJ Seca Turbo",
+ "name": "Yamaha XJ650 Seca Turbo",
+ "years": [
+  1982,
+  1983
+ ],
+ "match": [
+  "seca turbo",
+  "xj650lj",
+  "xj650 turbo",
+  "xj650t",
+  "xj 650 turbo",
+  "yamaha turbo"
+ ],
+ "style": "sport",
+ "drive": "shaft",
+ "engine": "653 cc air-cooled DOHC inline four, turbocharged, carbs, shaft drive",
+ "intro": "Yamaha's early-80s turbo bike. A blow-through carb setup, a turbo to inspect and shaft drive.",
+ "focus": [
+  [
+   "Inline four",
+   "Air-cooled"
+  ],
+  [
+   "Turbo",
+   "Check bearings"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Oil lines",
+   "Check turbo feed"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "The turbo is oiled by the engine. Check the feed and return lines and change the oil before the first start."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XJBikes forum",
+   "url": "https://www.xjbikes.com/forums/",
+   "what": "Owner forum for Yamaha XJ, Seca, Maxim and Radian fours."
+  }
+ ],
+ "heroName": "SECA TURBO"
+}

@@ -1,0 +1,72 @@
+{
+ "id": "yamaha-gts1000-1993",
+ "make": "Yamaha",
+ "model": "GTS1000",
+ "name": "Yamaha GTS1000",
+ "years": [
+  1993,
+  1994
+ ],
+ "match": [
+  "gts1000",
+  "gts 1000",
+  "gts1000a",
+  "gts"
+ ],
+ "style": "touring",
+ "drive": "chain",
+ "engine": "1002 cc liquid-cooled inline four, fuel injected, hub-center steering",
+ "intro": "Yamaha's odd sport tourer with a swingarm front end instead of forks. Rare, with unique steering parts.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Front swingarm",
+   "Check bearings"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "L": [
+   "The front end is a swingarm with a hub-center steering linkage. Check every pivot for play before you ride it."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "silhouette": "yamaha-gts1000-1993",
+ "areas": [],
+ "heroName": "GTS1000",
+ "hero": {
+  "src": "img/hero/yamaha-gts1000-1993.jpg",
+  "artist": "Nameri",
+  "page": "https://commons.wikimedia.org/wiki/File:GTS1000_image.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
+}

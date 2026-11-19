@@ -1,0 +1,63 @@
+{
+ "id": "bmw-c400x-c650-scooters-2016",
+ "make": "BMW",
+ "model": "C400X / C650 scooters",
+ "name": "BMW C400X / C650 scooters",
+ "years": [
+  2016,
+  2026
+ ],
+ "match": [
+  "c400x",
+  "c400gt",
+  "c650gt",
+  "c650 sport",
+  "c 400 x",
+  "c 400 gt",
+  "c650",
+  "c600 sport"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "350 cc single or 647 cc twin, liquid-cooled, fuel injected, CVT",
+ "intro": "BMW's maxi-scooters. Fuel injected, a CVT and a lot of bodywork between you and the engine.",
+ "focus": [
+  [
+   "Engine",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Bodywork",
+   "Many panels"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "BMW has issued several recalls across these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "C400X"
+}

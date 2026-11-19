@@ -1,0 +1,70 @@
+{
+ "id": "triumph-tt600-daytona-600-650-2000",
+ "make": "Triumph",
+ "model": "TT600 / Daytona 600 / 650",
+ "name": "Triumph TT600 / Daytona 600 / 650",
+ "years": [
+  2000,
+  2005
+ ],
+ "match": [
+  "tt600",
+  "daytona 600",
+  "daytona 650",
+  "tt 600",
+  "triumph tt600",
+  "speed four"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "599 or 646 cc liquid-cooled inline four, fuel injected",
+ "intro": "Triumph's four-cylinder 600s. Fuel injected, with an aluminum frame and the naked Speed Four sibling.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Triumph has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "silhouette": "triumph-tt600-daytona-600-650-2000",
+ "areas": [],
+ "heroName": "TT600",
+ "hero": {
+  "src": "img/hero/triumph-tt600-daytona-600-650-2000.jpg",
+  "artist": "Robert Ennals from Cambridge, England",
+  "page": "https://commons.wikimedia.org/wiki/File:Triumph_600_Daytona.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

@@ -1,0 +1,61 @@
+{
+ "id": "ktm-125-200-duke-2011-2016-2011",
+ "make": "KTM",
+ "model": "125 / 200 Duke (2011-2016)",
+ "name": "KTM 125 / 200 Duke (2011-2016)",
+ "years": [
+  2011,
+  2016
+ ],
+ "match": [
+  "125 duke",
+  "200 duke",
+  "duke 125",
+  "duke 200",
+  "ktm 200 duke",
+  "ktm 125 duke"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "124 or 199 cc liquid-cooled single, fuel injected",
+ "intro": "The first small Dukes. Fuel injected, light and built in India by Bajaj.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "KTM has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KTM Forums",
+   "url": "https://www.ktmforums.com/",
+   "what": "Owner forum for KTM street and adventure bikes."
+  }
+ ],
+ "heroName": "200 DUKE"
+}

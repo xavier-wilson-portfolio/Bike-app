@@ -1,0 +1,70 @@
+{
+ "id": "yamaha-fz6r-2009",
+ "make": "Yamaha",
+ "model": "FZ6R",
+ "name": "Yamaha FZ6R",
+ "years": [
+  2009,
+  2017
+ ],
+ "match": [
+  "fz6r",
+  "fz6-r",
+  "fz 6r",
+  "xj6",
+  "xj6 diversion",
+  "xj6f"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "600 cc liquid-cooled inline four, fuel injected, steel frame",
+ "intro": "Yamaha's friendly 600 four. A steel frame, an adjustable seat and an engine tuned for the midrange.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "silhouette": "yamaha-fz6r-2009",
+ "areas": [],
+ "heroName": "FZ6R",
+ "hero": {
+  "src": "img/hero/yamaha-fz6r-2009.jpg",
+  "artist": "AlfvanBeem",
+  "page": "https://commons.wikimedia.org/wiki/File:Gendarmerie_Yamaha_Diversion_photo-2.JPG",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
+}

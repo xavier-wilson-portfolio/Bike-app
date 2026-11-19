@@ -1,0 +1,71 @@
+{
+ "id": "yamaha-yds-3-big-bear-250-1964",
+ "make": "Yamaha",
+ "model": "YDS-3 / Big Bear 250",
+ "name": "Yamaha YDS-3 / Big Bear",
+ "years": [
+  1964,
+  1967
+ ],
+ "match": [
+  "yds-3",
+  "yds3",
+  "big bear",
+  "yds-5",
+  "yds5",
+  "catalina",
+  "yds2",
+  "yds 3"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "246 cc air-cooled two-stroke twin, two carbs, Autolube on later models",
+ "intro": "Yamaha's 60s 250 twins, including the Big Bear scrambler. Rare now, with parts to hunt down.",
+ "focus": [
+  [
+   "Two-stroke twin",
+   "Check oiling"
+  ],
+  [
+   "Two carbs",
+   "Sync them"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Six-volt",
+   "Check charging"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Early ones run premix, later ones have Autolube. Check which yours has before you fill the tank."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "silhouette": "yamaha-yds-3-big-bear-250-1964",
+ "areas": [],
+ "heroName": "BIG BEAR"
+}

@@ -1,0 +1,61 @@
+{
+ "id": "suzuki-boulevard-c109r-2008",
+ "make": "Suzuki",
+ "model": "Boulevard C109R",
+ "name": "Suzuki Boulevard C109R",
+ "years": [
+  2008,
+  2011
+ ],
+ "match": [
+  "c109r",
+  "c109",
+  "boulevard c109r",
+  "vlr1800",
+  "c109rt",
+  "c109r touring"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "1783 cc liquid-cooled V-twin, fuel injected, shaft drive",
+ "intro": "Suzuki's big classic-style cruiser. The M109R engine in a full-fender bike with shaft drive.",
+ "focus": [
+  [
+   "Big V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Suzuki Forums",
+   "url": "https://www.suzuki-forums.com/forums/",
+   "what": "General owner forum for Suzuki motorcycles."
+  }
+ ],
+ "heroName": "C109R"
+}

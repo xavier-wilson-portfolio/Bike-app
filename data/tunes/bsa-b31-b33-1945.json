@@ -1,0 +1,68 @@
+{
+ "id": "bsa-b31-b33-1945",
+ "make": "BSA",
+ "model": "B31 / B33",
+ "name": "BSA B31 / B33",
+ "years": [
+  1945,
+  1960
+ ],
+ "match": [
+  "b31",
+  "b33",
+  "bsa b31",
+  "bsa b33",
+  "b32",
+  "b34"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "348 or 499 cc air-cooled OHV single, magneto",
+ "intro": "BSA's everyday singles. Simple, tough and close cousins of the Gold Star.",
+ "focus": [
+  [
+   "OHV single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Magneto",
+   "Check spark"
+  ],
+  [
+   "Gearbox",
+   "Separate oil"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ],
+  "K": [
+   "The gearbox is separate from the engine and has its own oil. Check and change both, and set the primary chain."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BSA Owners Club",
+   "url": "https://www.bsaoc.org/",
+   "what": "Owner club for BSA motorcycles, with tech help and parts."
+  }
+ ],
+ "heroName": "B33"
+}

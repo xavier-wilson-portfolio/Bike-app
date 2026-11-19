@@ -1,0 +1,72 @@
+{
+ "id": "beta-rr-250-300-two-stroke-2013",
+ "make": "Beta",
+ "model": "RR 250 / 300 two-stroke",
+ "name": "Beta RR 250 / 300 two-stroke",
+ "years": [
+  2013,
+  2026
+ ],
+ "match": [
+  "300 rr",
+  "250 rr",
+  "rr 300",
+  "rr 250",
+  "300 rr race",
+  "beta 300",
+  "xtrainer",
+  "x-trainer",
+  "200 rr"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 or 293 cc liquid-cooled two-stroke single, oil injection or premix, carb or injection",
+ "intro": "Beta's two-stroke enduros. Many have oil injection, so check the system before you mix fuel.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Check oiling"
+  ],
+  [
+   "Fuel",
+   "Carb or TBI"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Power valve",
+   "Clean it"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Many Beta RRs have oil injection. Check for an oil tank and pump; if it has been removed, it needs premix."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road and trials models are often not in the NHTSA recall search. Ask a dealer for the make to run the frame number.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "silhouette": "beta-rr-250-300-two-stroke-2013",
+ "areas": [],
+ "heroName": "300 RR"
+}

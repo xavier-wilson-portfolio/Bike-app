@@ -1,0 +1,69 @@
+{
+ "id": "kawasaki-super-sherpa-kl250g-2000",
+ "make": "Kawasaki",
+ "model": "Super Sherpa (KL250G)",
+ "name": "Kawasaki Super Sherpa",
+ "years": [
+  2000,
+  2009
+ ],
+ "match": [
+  "super sherpa",
+  "kl250g",
+  "kl250 super sherpa",
+  "sherpa 250",
+  "kl 250g"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 cc air-cooled DOHC single, carb, electric start",
+ "intro": "Kawasaki's light, low dual-sport. Air cooled, electric start and a carb that needs clean fuel.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Air filter",
+   "Clean and oil"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KawiForums",
+   "url": "https://www.kawiforums.com/",
+   "what": "Owner forum for Kawasaki motorcycles."
+  }
+ ],
+ "silhouette": "kawasaki-super-sherpa-kl250g-2000",
+ "areas": [],
+ "heroName": "SHERPA",
+ "hero": {
+  "src": "img/hero/kawasaki-super-sherpa-kl250g-2000.jpg",
+  "artist": "Fcwatcher",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_super-sherpa_2006.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

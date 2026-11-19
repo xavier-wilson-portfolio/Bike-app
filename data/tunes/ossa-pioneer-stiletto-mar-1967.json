@@ -1,0 +1,78 @@
+{
+ "id": "ossa-pioneer-stiletto-mar-1967",
+ "make": "Ossa",
+ "model": "Pioneer / Stiletto / MAR",
+ "name": "Ossa Pioneer / Stiletto / MAR",
+ "years": [
+  1967,
+  1982
+ ],
+ "match": [
+  "pioneer",
+  "stiletto",
+  "mar",
+  "ossa mar",
+  "ossa pioneer",
+  "phantom",
+  "super pioneer",
+  "ossa 250"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "174 to 244 cc air-cooled two-stroke single, premix",
+ "intro": "The Spanish Ossas for trials, enduro and motocross. Premix two-strokes with flywheel magnetos.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Ignition",
+   "Check flywheel"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "TrialsCentral",
+   "url": "https://www.trialscentral.com/",
+   "what": "Forum for trials riders, with sections for most trials makes."
+  }
+ ],
+ "silhouette": "ossa-pioneer-stiletto-mar-1967",
+ "areas": [],
+ "heroName": "OSSA",
+ "hero": {
+  "src": "img/hero/ossa-pioneer-stiletto-mar-1967.jpg",
+  "artist": "David Perez",
+  "page": "https://commons.wikimedia.org/wiki/File:OSSA_Super_Pioneer_250_by-dpc.jpg",
+  "lic": "CC BY 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by/4.0"
+ }
+}

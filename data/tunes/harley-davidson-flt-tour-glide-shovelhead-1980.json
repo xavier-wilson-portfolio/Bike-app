@@ -1,0 +1,61 @@
+{
+ "id": "harley-davidson-flt-tour-glide-shovelhead-1980",
+ "make": "Harley-Davidson",
+ "model": "FLT Tour Glide (Shovelhead)",
+ "name": "Harley-Davidson FLT Tour Glide (Shovelhead)",
+ "years": [
+  1980,
+  1984
+ ],
+ "match": [
+  "flt",
+  "flt tour glide",
+  "tour glide shovelhead",
+  "fltc shovelhead",
+  "flt 80",
+  "shovelhead tour glide"
+ ],
+ "style": "touring",
+ "drive": "chain",
+ "engine": "80 cubic inch Shovelhead V-twin, carb, rubber-mounted, five-speed",
+ "intro": "The first rubber-mounted Harley tourer. A Shovelhead in the FLT frame, with a frame-mounted fairing and enclosed chain.",
+ "focus": [
+  [
+   "Shovelhead",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Rubber mounts",
+   "Check them"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Enclosed chain",
+   "Oil and adjust"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "HDForums",
+   "url": "https://www.hdforums.com/",
+   "what": "Large owner forum for all Harley-Davidson models."
+  }
+ ],
+ "heroName": "TOUR GLIDE"
+}

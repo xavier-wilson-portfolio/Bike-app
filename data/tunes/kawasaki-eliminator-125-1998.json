@@ -1,0 +1,68 @@
+{
+ "id": "kawasaki-eliminator-125-1998",
+ "make": "Kawasaki",
+ "model": "Eliminator 125",
+ "name": "Kawasaki Eliminator 125",
+ "years": [
+  1998,
+  2009
+ ],
+ "match": [
+  "eliminator 125",
+  "bn125",
+  "bn 125",
+  "eliminator125"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "124 cc air-cooled single, carb, five-speed",
+ "intro": "Kawasaki's small cruiser for new riders. One cylinder, one carb and very little to go wrong.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vulcan Riders Association",
+   "url": "https://www.vulcanriders.org/",
+   "what": "Owner club and forum for Kawasaki Vulcans."
+  }
+ ],
+ "silhouette": "kawasaki-eliminator-125-1998",
+ "areas": [],
+ "heroName": "ELIMINATOR",
+ "hero": {
+  "src": "img/hero/kawasaki-eliminator-125-1998.jpg",
+  "artist": "Museo8bits",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_Eliminator_125_DSC00126.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

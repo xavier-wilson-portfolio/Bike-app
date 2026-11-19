@@ -1,0 +1,74 @@
+{
+ "id": "norton-jubilee-navigator-1958",
+ "make": "Norton",
+ "model": "Jubilee / Navigator",
+ "name": "Norton Jubilee / Navigator",
+ "years": [
+  1958,
+  1965
+ ],
+ "match": [
+  "jubilee",
+  "navigator",
+  "electra",
+  "norton jubilee",
+  "norton navigator",
+  "es400"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "249 to 384 cc air-cooled OHV parallel twin, points",
+ "intro": "Norton's lightweight twins. Unit-ish construction with a separate gearbox and a reputation for needing care.",
+ "focus": [
+  [
+   "OHV twin",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Bottom end",
+   "Check it"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Norton Owners Club",
+   "url": "https://www.nortonownersclub.org/",
+   "what": "Owner club and forum for Nortons."
+  }
+ ],
+ "silhouette": "norton-jubilee-navigator-1958",
+ "areas": [],
+ "heroName": "NAVIGATOR",
+ "hero": {
+  "src": "img/hero/norton-jubilee-navigator-1958.jpg",
+  "artist": "Andy Dingley",
+  "page": "https://commons.wikimedia.org/wiki/File:Norton,_Cophill_Farm_vintage_rally_2012.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

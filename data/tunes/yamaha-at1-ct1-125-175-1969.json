@@ -1,0 +1,72 @@
+{
+ "id": "yamaha-at1-ct1-125-175-1969",
+ "make": "Yamaha",
+ "model": "AT1 / CT1 125-175",
+ "name": "Yamaha AT1 / CT1 Enduro",
+ "years": [
+  1969,
+  1972
+ ],
+ "match": [
+  "at1",
+  "ct1",
+  "at 1",
+  "ct 1",
+  "at2",
+  "ct2",
+  "at3",
+  "ct3",
+  "at1b",
+  "ct1b"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "123 or 171 cc air-cooled two-stroke single, Autolube oil injection, points",
+ "intro": "Yamaha's small enduros from the start of the trail-bike boom. Autolube oil injection and points ignition.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Oil injection"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Autolube",
+   "Check pump"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It has oil injection, not premix. Keep the oil tank filled with two-stroke oil and check the pump line for cracks.",
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Enduros forum",
+   "url": "https://www.yamaha-enduros.com/",
+   "what": "Owner forum for vintage Yamaha two-stroke enduros."
+  }
+ ],
+ "heroName": "ENDURO"
+}

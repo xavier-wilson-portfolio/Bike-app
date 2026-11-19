@@ -1,0 +1,63 @@
+{
+ "id": "honda-crf50f-crf70f-2004",
+ "make": "Honda",
+ "model": "CRF50F / CRF70F",
+ "name": "Honda CRF50F / CRF70F",
+ "years": [
+  2004,
+  2026
+ ],
+ "match": [
+  "crf50f",
+  "crf70f",
+  "crf50",
+  "crf70",
+  "crf 50",
+  "crf 70",
+  "crf 50f",
+  "crf 70f"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "49 or 72 cc air-cooled four-stroke single, carb, automatic clutch",
+ "intro": "The XR50 and XR70 under a new name. Same simple engines with an automatic clutch.",
+ "focus": [
+  [
+   "Small single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Auto clutch",
+   "Adjust it"
+  ],
+  [
+   "Air filter",
+   "Clean and oil"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Honda dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XR's Only",
+   "url": "https://www.xrsonly.com/",
+   "what": "Parts and know-how for Honda XR dirt bikes."
+  }
+ ],
+ "heroName": "CRF50F"
+}

@@ -1,0 +1,76 @@
+{
+ "id": "harley-davidson-jd-j-f-head-1915",
+ "make": "Harley-Davidson",
+ "model": "JD / J (F-head)",
+ "name": "Harley-Davidson J / JD (F-head)",
+ "years": [
+  1915,
+  1929
+ ],
+ "match": [
+  "jd",
+  "j",
+  "jdh",
+  "f-head",
+  "jd 74",
+  "j 61",
+  "jdh two cam",
+  "harley f-head"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "61 or 74 cubic inch air-cooled F-head V-twin, total-loss oiling, atmospheric or pushrod inlet",
+ "intro": "Harley's early big twins. Inlet over exhaust, total-loss oiling and parts that are mostly reproduction now.",
+ "focus": [
+  [
+   "F-head twin",
+   "Air-cooled"
+  ],
+  [
+   "Oiling",
+   "Total loss"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Magneto",
+   "Check spark"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Check whether yours has a total-loss or a recirculating oil system before you fill it, and know which one you are running."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "silhouette": "harley-davidson-jd-j-f-head-1915",
+ "areas": [],
+ "heroName": "JD",
+ "hero": {
+  "src": "img/hero/harley-davidson-jd-j-f-head-1915.jpg",
+  "artist": "AlfvanBeem",
+  "page": "https://commons.wikimedia.org/wiki/File:1929_Harley_Davidson_JD_1000_24hp_1000cc_pic2.JPG",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
+}

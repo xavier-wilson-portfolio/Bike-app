@@ -1,0 +1,69 @@
+{
+ "id": "gasgas-ec-250-300-spanish-2000",
+ "make": "GasGas",
+ "model": "EC 250 / 300 (Spanish)",
+ "name": "GasGas EC 250 / 300 (Spanish era)",
+ "years": [
+  2000,
+  2019
+ ],
+ "match": [
+  "ec 300",
+  "ec 250",
+  "ec300",
+  "ec250",
+  "ec 200",
+  "xc 300",
+  "gas gas ec",
+  "ec racing"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 or 299 cc liquid-cooled two-stroke single, carb, premix",
+ "intro": "The Spanish-built GasGas enduros. Premix two-strokes known for strong low-end power and simple maintenance.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Power valve",
+   "Clean it"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road and trials models are often not in the NHTSA recall search. Ask a dealer for the make to run the frame number.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "EC 300"
+}

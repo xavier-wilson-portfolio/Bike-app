@@ -1,0 +1,58 @@
+{
+ "id": "honda-crf450r-2002",
+ "make": "Honda",
+ "model": "CRF450R",
+ "name": "Honda CRF450R",
+ "years": [
+  2002,
+  2026
+ ],
+ "match": [
+  "crf450r",
+  "crf 450r",
+  "crf450rx",
+  "crf 450rx",
+  "crf450"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "449 cc liquid-cooled four-stroke single, carb then fuel injection",
+ "intro": "Honda's open-class motocross bike. Strong, but the valves and piston have service intervals in hours.",
+ "focus": [
+  [
+   "Race single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "Valves",
+   "Check often"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Hours",
+   "Log them"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Honda dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "CRF450R"
+}

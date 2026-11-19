@@ -1,0 +1,68 @@
+{
+ "id": "montesa-cappra-king-scorpion-1966",
+ "make": "Montesa",
+ "model": "Cappra / King Scorpion",
+ "name": "Montesa Cappra / King Scorpion",
+ "years": [
+  1966,
+  1980
+ ],
+ "match": [
+  "cappra",
+  "king scorpion",
+  "scorpion",
+  "cappra 250",
+  "cappra 360",
+  "enduro 250 montesa",
+  "vr cappra"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "247 to 360 cc air-cooled two-stroke single, premix",
+ "intro": "Montesa's motocross and enduro bikes of the 60s and 70s. Premix two-strokes with magneto ignition.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Ignition",
+   "Check flywheel"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "CAPPRA"
+}

@@ -1,0 +1,72 @@
+{
+ "id": "honda-cb100-cl100-1970",
+ "make": "Honda",
+ "model": "CB100 / CL100",
+ "name": "Honda CB100 / CL100",
+ "years": [
+  1970,
+  1973
+ ],
+ "match": [
+  "cb100",
+  "cl100",
+  "cb 100",
+  "cl 100",
+  "cb100k",
+  "cl100s"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "99 cc air-cooled overhead-cam single, one carb, five-speed",
+ "intro": "Honda's 100 cc street and scrambler singles. Same engine, different pipes and bars.",
+ "focus": [
+  [
+   "99 cc single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Cam chain",
+   "Adjust it"
+  ],
+  [
+   "Six-volt",
+   "Check charging"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "silhouette": "honda-cb100-cl100-1970",
+ "areas": [],
+ "heroName": "CB100",
+ "hero": {
+  "src": "img/hero/honda-cb100-cl100-1970.jpg",
+  "artist": "Xl-ossi",
+  "page": "https://commons.wikimedia.org/wiki/File:1970_Honda_CB_100,_right_side.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

@@ -1,0 +1,70 @@
+{
+ "id": "triumph-legend-tt-thunderbird-900-adventurer-1995",
+ "make": "Triumph",
+ "model": "Legend TT / Thunderbird 900 / Adventurer",
+ "name": "Triumph Thunderbird 900 / Legend TT / Adventurer",
+ "years": [
+  1995,
+  2003
+ ],
+ "match": [
+  "thunderbird 900",
+  "legend tt",
+  "adventurer",
+  "thunderbird sport",
+  "legend",
+  "thunderbird 885"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "885 cc liquid-cooled triple, three carbs",
+ "intro": "Triumph's retro triples of the late 90s. Three carbs and classic styling on the modular frame.",
+ "focus": [
+  [
+   "Triple",
+   "Liquid-cooled"
+  ],
+  [
+   "Three carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Triumph has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "silhouette": "triumph-legend-tt-thunderbird-900-adventurer-1995",
+ "areas": [],
+ "heroName": "THUNDERBIRD",
+ "hero": {
+  "src": "img/hero/triumph-legend-tt-thunderbird-900-adventurer-1995.jpg",
+  "artist": "Bugsybanana",
+  "page": "https://commons.wikimedia.org/wiki/File:Triumph_Thunderbird_900_2.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

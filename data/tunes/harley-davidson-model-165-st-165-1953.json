@@ -1,0 +1,66 @@
+{
+ "id": "harley-davidson-model-165-st-165-1953",
+ "make": "Harley-Davidson",
+ "model": "Model 165 / ST 165",
+ "name": "Harley-Davidson Model 165 / ST 165",
+ "years": [
+  1953,
+  1959
+ ],
+ "match": [
+  "model 165",
+  "st 165",
+  "st165",
+  "st-165",
+  "harley 165"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "165 cc air-cooled two-stroke single, premix",
+ "intro": "The bigger version of Harley's DKW-based two-stroke. Premix, a magneto and simple running gear.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Magneto",
+   "Check spark"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "MODEL 165"
+}

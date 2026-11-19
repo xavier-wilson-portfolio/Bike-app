@@ -1,0 +1,69 @@
+{
+ "id": "honda-rebel-450-cmx450-1986",
+ "make": "Honda",
+ "model": "Rebel 450 (CMX450)",
+ "name": "Honda Rebel 450 (CMX450)",
+ "years": [
+  1986,
+  1987
+ ],
+ "match": [
+  "rebel 450",
+  "cmx450",
+  "cmx450c",
+  "cmx 450",
+  "rebel450"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "447 cc air-cooled parallel twin, two carbs, six-speed",
+ "intro": "The bigger Rebel of the 80s. The Nighthawk 450 twin in a low cruiser frame.",
+ "focus": [
+  [
+   "447 cc twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Sync them"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Shadow Riders",
+   "url": "https://www.shadowriders.com/",
+   "what": "Owner forum for Honda Shadows and other Honda cruisers."
+  }
+ ],
+ "silhouette": "honda-rebel-450-cmx450-1986",
+ "areas": [],
+ "heroName": "REBEL 450",
+ "hero": {
+  "src": "img/hero/honda-rebel-450-cmx450-1986.jpg",
+  "artist": "The original uploader was Cdamian at English Wikipedia.",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda-cmx450rebel.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
+}

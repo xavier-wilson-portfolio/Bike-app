@@ -1,0 +1,69 @@
+{
+ "id": "harley-davidson-m-50-m-65-leggero-1965",
+ "make": "Harley-Davidson",
+ "model": "M-50 / M-65 / Leggero",
+ "name": "Harley-Davidson M-50 / M-65 / Leggero",
+ "years": [
+  1965,
+  1972
+ ],
+ "match": [
+  "m-50",
+  "m-65",
+  "leggero",
+  "m50",
+  "m65",
+  "shortster",
+  "x90",
+  "m-65s"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "49 to 90 cc air-cooled Aermacchi two-stroke single, premix",
+ "intro": "Harley's tiny Italian two-strokes. Premix, small parts and a lot of rust on most survivors.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Ignition",
+   "Check spark"
+  ],
+  [
+   "Frame",
+   "Check rust"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "LEGGERO"
+}

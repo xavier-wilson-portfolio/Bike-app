@@ -1,0 +1,68 @@
+{
+ "id": "bmw-s1000r-2014",
+ "make": "BMW",
+ "model": "S1000R",
+ "name": "BMW S1000R",
+ "years": [
+  2014,
+  2026
+ ],
+ "match": [
+  "s1000r",
+  "s 1000 r",
+  "s1000 r",
+  "m1000r"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "999 cc liquid-cooled inline four, fuel injected",
+ "intro": "The naked S1000RR. A superbike engine, a full electronics package and semi-active suspension on many.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Electronics",
+   "Scan for codes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "BMW has issued several recalls across these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BMW MOA forum",
+   "url": "https://forums.bmwmoa.org/",
+   "what": "BMW Motorcycle Owners of America forum."
+  }
+ ],
+ "silhouette": "bmw-s1000r-2014",
+ "areas": [],
+ "heroName": "S1000R",
+ "hero": {
+  "src": "img/hero/bmw-s1000r-2014.jpg",
+  "artist": "dzejdzej",
+  "page": "https://commons.wikimedia.org/wiki/File:2014_BMW_S1000R_(K47).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

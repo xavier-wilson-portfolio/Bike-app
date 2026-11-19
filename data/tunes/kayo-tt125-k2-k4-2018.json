@@ -1,0 +1,63 @@
+{
+ "id": "kayo-tt125-k2-k4-2018",
+ "make": "Kayo",
+ "model": "TT125 / K2 / K4",
+ "name": "Kayo TT125 / K2 / K4",
+ "years": [
+  2018,
+  2026
+ ],
+ "match": [
+  "tt125",
+  "k2",
+  "k4",
+  "kayo tt125",
+  "kayo k2",
+  "kayo k4",
+  "tsd 110",
+  "kayo 250"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "107 to 249 cc air-cooled four-stroke single, carb",
+ "intro": "Kayo's budget dirt and pit bikes. Simple Chinese-built singles with parts that interchange with many brands.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Wiring",
+   "Check connectors"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Many of these were sold under several brand names and may not show up in the NHTSA search. Check with the seller or importer for open recalls.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "KAYO"
+}

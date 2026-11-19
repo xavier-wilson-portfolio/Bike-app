@@ -1,0 +1,61 @@
+{
+ "id": "suzuki-gsx-8t-gsx-8tt-2025",
+ "make": "Suzuki",
+ "model": "GSX-8T / GSX-8TT",
+ "name": "Suzuki GSX-8T / GSX-8TT",
+ "years": [
+  2025,
+  2026
+ ],
+ "match": [
+  "gsx-8t",
+  "gsx8t",
+  "gsx-8tt",
+  "gsx8tt",
+  "gsx 8t",
+  "gsx 8tt"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "776 cc liquid-cooled parallel twin, fuel injected, ride-by-wire",
+ "intro": "Suzuki's retro-styled 800 twins. The GSX-8S engine with round-light bodywork and rider aids.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Electronics",
+   "Scan for codes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Suzuki Forums",
+   "url": "https://www.suzuki-forums.com/forums/",
+   "what": "General owner forum for Suzuki motorcycles."
+  }
+ ],
+ "heroName": "GSX-8T"
+}

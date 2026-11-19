@@ -1,0 +1,70 @@
+{
+ "id": "can-am-qualifier-mx-sonic-two-stroke-1973",
+ "make": "Can-Am",
+ "model": "Qualifier / MX / Sonic (two-stroke)",
+ "name": "Can-Am Qualifier / MX / Sonic",
+ "years": [
+  1973,
+  1987
+ ],
+ "match": [
+  "qualifier",
+  "can-am mx",
+  "sonic",
+  "tnt",
+  "can-am 250",
+  "can-am 175",
+  "asp",
+  "can-am 500",
+  "mx-6"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "125 to 500 cc air-cooled Rotax two-stroke single, rotary valve, premix",
+ "intro": "Can-Am's Bombardier-built motocross and enduro bikes. Rotax rotary-valve two-strokes and premix.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Rotary valve",
+   "Check it"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "CAN-AM"
+}

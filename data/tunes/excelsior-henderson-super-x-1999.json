@@ -1,0 +1,60 @@
+{
+ "id": "excelsior-henderson-super-x-1999",
+ "make": "Excelsior-Henderson",
+ "model": "Super X",
+ "name": "Excelsior-Henderson Super X",
+ "years": [
+  1999,
+  2000
+ ],
+ "match": [
+  "super x",
+  "excelsior henderson",
+  "eh super x",
+  "super x 1999",
+  "excelsior-henderson"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "1386 cc air/oil-cooled DOHC V-twin, fuel injected, belt drive",
+ "intro": "The short-lived revival from Minnesota. About 2,000 built, and parts now come from owners and salvage.",
+ "focus": [
+  [
+   "V-twin",
+   "Air/oil-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Front end",
+   "Check play"
+  ],
+  [
+   "Belt",
+   "Check tension"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Victory Motorcycle Club forums",
+   "url": "https://www.victorymotorcycleclub.com/",
+   "what": "Owner club for Victory motorcycles."
+  }
+ ],
+ "heroName": "SUPER X"
+}

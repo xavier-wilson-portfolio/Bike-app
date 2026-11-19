@@ -1,0 +1,67 @@
+{
+ "id": "yamaha-yz465-yz490-1980",
+ "make": "Yamaha",
+ "model": "YZ465 / YZ490",
+ "name": "Yamaha YZ465 / YZ490",
+ "years": [
+  1980,
+  1990
+ ],
+ "match": [
+  "yz465",
+  "yz490",
+  "yz 465",
+  "yz 490",
+  "it465",
+  "it490"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "465 or 487 cc two-stroke single, air- then liquid-cooled, carb, premix",
+ "intro": "Yamaha's open-class two-strokes of the 80s. Big power, premix and a hard kick.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Suspension",
+   "Rebuild it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Enduros forum",
+   "url": "https://www.yamaha-enduros.com/",
+   "what": "Owner forum for vintage Yamaha two-stroke enduros."
+  }
+ ],
+ "heroName": "YZ490"
+}

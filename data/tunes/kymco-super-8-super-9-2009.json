@@ -1,0 +1,68 @@
+{
+ "id": "kymco-super-8-super-9-2009",
+ "make": "Kymco",
+ "model": "Super 8 / Super 9",
+ "name": "Kymco Super 8 / Super 9",
+ "years": [
+  2009,
+  2020
+ ],
+ "match": [
+  "super 8",
+  "super 9",
+  "super8",
+  "super9",
+  "super 8 150",
+  "super 8 50",
+  "super 9 lc"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 cc two-stroke or 49 to 150 cc four-stroke, CVT",
+ "intro": "Kymco's sporty small scooters. The Super 9 is a two-stroke; most Super 8s are four-strokes.",
+ "focus": [
+  [
+   "Single",
+   "Check type"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Gear oil",
+   "Change it"
+  ],
+  [
+   "Brakes",
+   "Check them"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Some years are two-strokes and some are four-strokes. Check yours before you buy oil, plugs or carb parts."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "silhouette": "kymco-super-8-super-9-2009",
+ "areas": [],
+ "heroName": "SUPER 8"
+}

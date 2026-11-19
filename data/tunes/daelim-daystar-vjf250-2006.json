@@ -1,0 +1,59 @@
+{
+ "id": "daelim-daystar-vjf250-2006",
+ "make": "Daelim",
+ "model": "Daystar / VJF250",
+ "name": "Daelim Daystar / VJF250",
+ "years": [
+  2006,
+  2013
+ ],
+ "match": [
+  "daystar",
+  "daystar 250",
+  "vjf250",
+  "vjf 250",
+  "roadwin",
+  "vl125"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "249 cc liquid-cooled V-twin, carb or fuel injection",
+ "intro": "Daelim's small V-twin cruiser from Korea. Built with Honda-era know-how, with parts supply now thin.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Parts",
+   "Check supply"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "DAYSTAR"
+}

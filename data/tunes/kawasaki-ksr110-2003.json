@@ -1,0 +1,62 @@
+{
+ "id": "kawasaki-ksr110-2003",
+ "make": "Kawasaki",
+ "model": "KSR110",
+ "name": "Kawasaki KSR110",
+ "years": [
+  2003,
+  2005
+ ],
+ "match": [
+  "ksr110",
+  "ksr 110",
+  "ksr",
+  "ksr80",
+  "ksr 80"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "111 cc air-cooled single, carb, four-speed",
+ "intro": "Kawasaki's small mini-bike before the Z125. Simple, light and easy to work on.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Clutch",
+   "Adjust cable"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KawiForums",
+   "url": "https://www.kawiforums.com/",
+   "what": "Owner forum for Kawasaki motorcycles."
+  }
+ ],
+ "silhouette": "kawasaki-ksr110-2003",
+ "areas": [],
+ "heroName": "KSR110"
+}

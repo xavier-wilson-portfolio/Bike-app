@@ -1,0 +1,69 @@
+{
+ "id": "ktm-125-sx-150-sx-250-sx-two-stroke-1990",
+ "make": "KTM",
+ "model": "125 SX / 150 SX / 250 SX (two-stroke)",
+ "name": "KTM 125 / 150 / 250 SX (two-stroke)",
+ "years": [
+  1990,
+  2026
+ ],
+ "match": [
+  "125 sx",
+  "150 sx",
+  "250 sx",
+  "125sx",
+  "150sx",
+  "250sx",
+  "ktm 125 sx",
+  "ktm 250 sx"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "124 to 249 cc liquid-cooled two-stroke single, carb then injection on newer years, premix",
+ "intro": "KTM's motocross two-strokes. Premix on most years, a power valve, and top ends that need regular rebuilds.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Fuel",
+   "Carb or TBI"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Power valve",
+   "Clean it"
+  ],
+  [
+   "Hours",
+   "Log them"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a KTM dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "250 SX"
+}

@@ -1,0 +1,77 @@
+{
+ "id": "moto-guzzi-850t-t3-convert-1974",
+ "make": "Moto Guzzi",
+ "model": "850T / T3 / Convert",
+ "name": "Moto Guzzi 850T / T3 / Convert",
+ "years": [
+  1974,
+  1985
+ ],
+ "match": [
+  "850t",
+  "t3",
+  "850 t3",
+  "convert",
+  "850t3",
+  "t4",
+  "850 t5",
+  "t5",
+  "850t5"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "engine": "844 cc air-cooled 90-degree V-twin, two carbs, shaft drive, linked brakes",
+ "intro": "Guzzi's 850 tourers. Linked brakes on the T3, a torque-converter automatic on the Convert.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Sync them"
+  ],
+  [
+   "Linked brakes",
+   "Check them"
+  ],
+  [
+   "Three oils",
+   "Change all"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "K": [
+   "Guzzi big twins use a car-type dry clutch and a separate gearbox and final drive. Change all three oils, not just the engine oil."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moto Guzzi National Owners Club",
+   "url": "https://www.mgnoc.org/",
+   "what": "US owner club for Moto Guzzi."
+  }
+ ],
+ "silhouette": "moto-guzzi-850t-t3-convert-1974",
+ "areas": [],
+ "heroName": "T3",
+ "hero": {
+  "src": "img/hero/moto-guzzi-850t-t3-convert-1974.jpg",
+  "artist": "Mr.choppers",
+  "page": "https://commons.wikimedia.org/wiki/File:1975_Moto_Guzzi_850_T-3,_Black_and_Green.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

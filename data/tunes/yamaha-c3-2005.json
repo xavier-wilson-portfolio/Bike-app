@@ -1,0 +1,57 @@
+{
+ "id": "yamaha-c3-2005",
+ "make": "Yamaha",
+ "model": "C3",
+ "name": "Yamaha C3",
+ "years": [
+  2005,
+  2014
+ ],
+ "match": [
+  "c3",
+  "yamaha c3",
+  "xf50",
+  "xf 50"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 cc liquid-cooled four-stroke single, CVT",
+ "intro": "Yamaha's boxy 50 cc scooter. A liquid-cooled four-stroke with a CVT and lots of storage.",
+ "focus": [
+  [
+   "49 cc single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel",
+   "Check system"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Cooling",
+   "Coolant level"
+  ],
+  [
+   "Gear oil",
+   "Change it"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "C3"
+}

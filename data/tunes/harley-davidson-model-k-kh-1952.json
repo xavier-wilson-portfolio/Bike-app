@@ -1,0 +1,66 @@
+{
+ "id": "harley-davidson-model-k-kh-1952",
+ "make": "Harley-Davidson",
+ "model": "Model K / KH",
+ "name": "Harley-Davidson Model K / KH",
+ "years": [
+  1952,
+  1956
+ ],
+ "match": [
+  "model k",
+  "kh",
+  "kk",
+  "khk",
+  "k model",
+  "khrm",
+  "kr"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "45 or 55 cubic inch air-cooled side-valve V-twin, unit construction, foot shift",
+ "intro": "The flathead that came before the Sportster. Unit construction, foot shift and hand-built racing roots.",
+ "focus": [
+  [
+   "Flathead twin",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Set tappets"
+  ],
+  [
+   "Ignition",
+   "Points"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "E": [
+   "It is a flathead. The valves sit beside the cylinder, so set the tappets with the engine cold and check the valve guides for wear."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "MODEL K"
+}

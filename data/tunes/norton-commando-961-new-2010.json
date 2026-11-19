@@ -1,0 +1,64 @@
+{
+ "id": "norton-commando-961-new-2010",
+ "make": "Norton",
+ "model": "Commando 961 (new)",
+ "name": "Norton Commando 961",
+ "years": [
+  2010,
+  2019
+ ],
+ "match": [
+  "commando 961",
+  "961",
+  "commando 961 sport",
+  "commando 961 cafe racer",
+  "961 se",
+  "dominator 961",
+  "norton 961"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "961 cc air/oil-cooled OHV parallel twin, fuel injected",
+ "intro": "The revived Norton twin. Fuel injected, built in small numbers, with parts support that has been uneven.",
+ "focus": [
+  [
+   "OHV twin",
+   "Air/oil-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Oil leaks",
+   "Check them"
+  ],
+  [
+   "Parts",
+   "Check supply"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Norton Owners Club",
+   "url": "https://www.nortonownersclub.org/",
+   "what": "Owner club and forum for Nortons."
+  }
+ ],
+ "silhouette": "norton-commando-961-new-2010",
+ "areas": [],
+ "heroName": "COMMANDO 961"
+}

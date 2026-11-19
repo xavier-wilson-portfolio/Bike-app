@@ -1,0 +1,70 @@
+{
+ "id": "honda-gb500-tt-1989",
+ "make": "Honda",
+ "model": "GB500 TT",
+ "name": "Honda GB500 TT",
+ "years": [
+  1989,
+  1990
+ ],
+ "match": [
+  "gb500",
+  "gb 500",
+  "gb500tt",
+  "gb500 tt",
+  "tourist trophy",
+  "gb400"
+ ],
+ "style": "cafe",
+ "drive": "chain",
+ "engine": "498 cc air-cooled four-valve single, one carb, five-speed",
+ "intro": "Honda's cafe single. Kick and electric start, a single carb and parts that are getting scarce.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Starting",
+   "Decompressor"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "silhouette": "honda-gb500-tt-1989",
+ "areas": [],
+ "heroName": "GB500",
+ "hero": {
+  "src": "img/hero/honda-gb500-tt-1989.jpg",
+  "artist": "Ulf Potschien",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_GB500_Clubman_Rechts.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
+}

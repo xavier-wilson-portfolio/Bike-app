@@ -1,0 +1,65 @@
+{
+ "id": "honda-cr500r-1984",
+ "make": "Honda",
+ "model": "CR500R",
+ "name": "Honda CR500R",
+ "years": [
+  1984,
+  2001
+ ],
+ "match": [
+  "cr500r",
+  "cr500",
+  "cr 500",
+  "cr 500r"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "491 cc liquid-cooled two-stroke single, carb, premix",
+ "intro": "Honda's big open-class two-stroke. Huge power, premix, and a kick start that takes some practice.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Honda dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "CR500R"
+}

@@ -1,0 +1,61 @@
+{
+ "id": "ktm-950-super-enduro-950-sm-990-smt-2006",
+ "make": "KTM",
+ "model": "950 Super Enduro / 950 SM / 990 SMT",
+ "name": "KTM 950 Super Enduro / 950 SM / 990 SMT",
+ "years": [
+  2006,
+  2013
+ ],
+ "match": [
+  "950 super enduro",
+  "950 sm",
+  "990 smt",
+  "990 sm",
+  "990 smr",
+  "super enduro 950",
+  "950 supermoto",
+  "990 supermoto"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "942 or 999 cc liquid-cooled 75-degree V-twin, carbs then fuel injection",
+ "intro": "KTM's LC8 off-road and supermoto twins. The 950s have carbs, the 990s have fuel injection.",
+ "focus": [
+  [
+   "LC8 twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel",
+   "Carbs or EFI"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "KTM has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "950 SE"
+}

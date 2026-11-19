@@ -1,0 +1,68 @@
+{
+ "id": "yamaha-xsr900-2016-2021-2016",
+ "make": "Yamaha",
+ "model": "XSR900 (2016-2021)",
+ "name": "Yamaha XSR900 (2016-2021)",
+ "years": [
+  2016,
+  2021
+ ],
+ "match": [
+  "xsr900",
+  "xsr 900",
+  "xsr-900",
+  "xsr900 abarth"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "847 cc liquid-cooled crossplane triple, fuel injected, ride-by-wire",
+ "intro": "The first XSR900. The MT-09 triple with retro bodywork and a slip-assist clutch.",
+ "focus": [
+  [
+   "Triple",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "silhouette": "yamaha-xsr900-2016-2021-2016",
+ "areas": [],
+ "heroName": "XSR900",
+ "hero": {
+  "src": "img/hero/yamaha-xsr900-2016-2021-2016.jpg",
+  "artist": "AlbertoSossella",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_XSR_900_2018.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

@@ -1,0 +1,71 @@
+{
+ "id": "yamaha-riva-50-jog-razz-1983",
+ "make": "Yamaha",
+ "model": "Riva 50 / Jog / Razz",
+ "name": "Yamaha Riva 50 / Jog / Razz",
+ "years": [
+  1983,
+  2001
+ ],
+ "match": [
+  "riva 50",
+  "jog",
+  "razz",
+  "cy50",
+  "sh50",
+  "ca50",
+  "yamaha jog",
+  "jog 50"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 cc air-cooled two-stroke single, oil injection, CVT",
+ "intro": "Yamaha's small two-stroke scooters. Oil injection, a CVT and simple drum brakes.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Oil injection"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Exhaust",
+   "Check carbon"
+  ],
+  [
+   "Brakes",
+   "Drums"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It has oil injection, not premix. Keep the oil tank filled with two-stroke oil and check the pump line for cracks."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "silhouette": "yamaha-riva-50-jog-razz-1983",
+ "areas": [],
+ "heroName": "JOG"
+}

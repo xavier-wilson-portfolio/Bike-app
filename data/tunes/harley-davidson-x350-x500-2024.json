@@ -1,0 +1,61 @@
+{
+ "id": "harley-davidson-x350-x500-2024",
+ "make": "Harley-Davidson",
+ "model": "X350 / X500",
+ "name": "Harley-Davidson X350 / X500",
+ "years": [
+  2024,
+  2026
+ ],
+ "match": [
+  "x350",
+  "x500",
+  "x 350",
+  "x 500",
+  "harley x350",
+  "harley x500"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "353 or 500 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "Harley's small twins built with Qianjiang. Liquid-cooled parallel twins, nothing like the big V-twins inside.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Harley-Davidson has issued several recalls that touch these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "HDForums",
+   "url": "https://www.hdforums.com/",
+   "what": "Large owner forum for all Harley-Davidson models."
+  }
+ ],
+ "heroName": "X500"
+}

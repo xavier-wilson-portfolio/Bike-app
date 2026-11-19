@@ -1,0 +1,63 @@
+{
+ "id": "kawasaki-ninja-250-1986-2007-1986",
+ "make": "Kawasaki",
+ "model": "Ninja 250 (1986-2007)",
+ "name": "Kawasaki Ninja 250 (EX250)",
+ "years": [
+  1986,
+  2007
+ ],
+ "match": [
+  "ninja 250",
+  "ninja 250r",
+  "ex250",
+  "gpx250",
+  "ex250f",
+  "ex250e",
+  "gpx 250",
+  "ex 250"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "248 cc liquid-cooled DOHC parallel twin, two carbs",
+ "intro": "The long-running little Ninja. Two small carbs, a high-revving twin and a lot of owner know-how online.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KawiForums",
+   "url": "https://www.kawiforums.com/",
+   "what": "Owner forum for Kawasaki motorcycles."
+  }
+ ],
+ "heroName": "NINJA 250"
+}

@@ -1,0 +1,63 @@
+{
+ "id": "bimota-db-sb-tesi-1980",
+ "make": "Bimota",
+ "model": "DB / SB / Tesi",
+ "name": "Bimota DB / SB / Tesi",
+ "years": [
+  1980,
+  2010
+ ],
+ "match": [
+  "bimota",
+  "db1",
+  "db2",
+  "db5",
+  "sb6",
+  "sb8",
+  "tesi",
+  "db4",
+  "kb2",
+  "yb11"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "Engines from Ducati, Suzuki, Kawasaki or Yamaha in a Bimota frame",
+ "intro": "Bimota's hand-built sport bikes with engines from other makers. Parts for the engine are easy; frame and bodywork parts are not.",
+ "focus": [
+  [
+   "Engine",
+   "Check donor"
+  ],
+  [
+   "Fuel",
+   "Carbs or EFI"
+  ],
+  [
+   "Frame",
+   "Check welds"
+  ],
+  [
+   "Bodywork",
+   "Hard to replace"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "BIMOTA"
+}

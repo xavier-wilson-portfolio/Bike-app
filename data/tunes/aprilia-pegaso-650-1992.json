@@ -1,0 +1,61 @@
+{
+ "id": "aprilia-pegaso-650-1992",
+ "make": "Aprilia",
+ "model": "Pegaso 650",
+ "name": "Aprilia Pegaso 650",
+ "years": [
+  1992,
+  2009
+ ],
+ "match": [
+  "pegaso",
+  "pegaso 650",
+  "pegaso strada",
+  "pegaso trail",
+  "pegaso factory",
+  "pegaso cube"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "652 cc liquid-cooled Rotax single, carbs then fuel injection",
+ "intro": "Aprilia's road-leaning single. A Rotax engine shared with the BMW F650 on early ones, then a Minarelli-built Yamaha engine.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel",
+   "Carbs or EFI"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Oil",
+   "Check system"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Aprilia has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ApriliaForum",
+   "url": "https://www.apriliaforum.com/",
+   "what": "Owner forum for Aprilia motorcycles."
+  }
+ ],
+ "silhouette": "aprilia-pegaso-650-1992",
+ "areas": [],
+ "heroName": "PEGASO"
+}

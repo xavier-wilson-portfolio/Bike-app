@@ -1,0 +1,71 @@
+{
+ "id": "suzuki-x6-hustler-t250-t350-1966",
+ "make": "Suzuki",
+ "model": "X6 Hustler / T250 / T350",
+ "name": "Suzuki X6 Hustler / T250 / T350",
+ "years": [
+  1966,
+  1972
+ ],
+ "match": [
+  "x6",
+  "x-6",
+  "hustler",
+  "x6 hustler",
+  "t250",
+  "t350",
+  "t20",
+  "t 250",
+  "t 350"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "247 or 315 cc air-cooled two-stroke twin, two carbs, Posi-Force oil injection, six-speed",
+ "intro": "Suzuki's fast 60s two-stroke twins. Oil injection, a six-speed box and points ignition.",
+ "focus": [
+  [
+   "Two-stroke twin",
+   "Oil injection"
+  ],
+  [
+   "Two carbs",
+   "Sync them"
+  ],
+  [
+   "Oil pump",
+   "Check lines"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Suzuki's CCI system pumps oil into the engine, so it does not need premix. Check the oil tank, pump and lines. If the pump was removed, it runs premix.",
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "HUSTLER"
+}

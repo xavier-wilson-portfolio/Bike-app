@@ -1,0 +1,67 @@
+{
+ "id": "kymco-venox-250-2003",
+ "make": "Kymco",
+ "model": "Venox 250",
+ "name": "Kymco Venox 250",
+ "years": [
+  2003,
+  2009
+ ],
+ "match": [
+  "venox",
+  "venox 250",
+  "kymco venox"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "249 cc liquid-cooled V-twin, carb",
+ "intro": "Kymco's small V-twin cruiser. Liquid cooled, simple and short on parts support now.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Parts",
+   "Check supply"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "silhouette": "kymco-venox-250-2003",
+ "areas": [],
+ "heroName": "VENOX",
+ "hero": {
+  "src": "img/hero/kymco-venox-250-2003.jpg",
+  "artist": "order_242 from Chile",
+  "page": "https://commons.wikimedia.org/wiki/File:Kymco_Venox_250_2008_(12213732786).jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
+}

@@ -1,0 +1,66 @@
+{
+ "id": "suzuki-t125-stinger-1969",
+ "make": "Suzuki",
+ "model": "T125 Stinger",
+ "name": "Suzuki T125 Stinger",
+ "years": [
+  1969,
+  1972
+ ],
+ "match": [
+  "t125",
+  "stinger",
+  "t125 stinger",
+  "t 125"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "124 cc air-cooled two-stroke twin, cylinders nearly horizontal, oil injection",
+ "intro": "Suzuki's little twin with almost flat cylinders. Oil injection, two carbs and parts that are hard to find.",
+ "focus": [
+  [
+   "Two-stroke twin",
+   "Oil injection"
+  ],
+  [
+   "Two carbs",
+   "Sync them"
+  ],
+  [
+   "Oil pump",
+   "Check lines"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Suzuki's CCI system pumps oil into the engine, so it does not need premix. Check the oil tank, pump and lines. If the pump was removed, it runs premix.",
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "STINGER"
+}

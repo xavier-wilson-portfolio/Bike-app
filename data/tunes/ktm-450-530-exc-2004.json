@@ -1,0 +1,63 @@
+{
+ "id": "ktm-450-530-exc-2004",
+ "make": "KTM",
+ "model": "450 / 530 EXC",
+ "name": "KTM 450 / 530 EXC",
+ "years": [
+  2004,
+  2011
+ ],
+ "match": [
+  "450 exc",
+  "530 exc",
+  "450 xc-w",
+  "530 xc-w",
+  "450 exc-r",
+  "530 exc-r",
+  "450 xcw",
+  "530 xcw"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "449 or 510 cc liquid-cooled four-stroke single, carb, electric start",
+ "intro": "KTM's big enduros before the EXC-F. Carbs, electric start and a dry-sump oil system.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Check jetting"
+  ],
+  [
+   "Valves",
+   "Check often"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a KTM dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KTM Forums",
+   "url": "https://www.ktmforums.com/",
+   "what": "Owner forum for KTM street and adventure bikes."
+  }
+ ],
+ "heroName": "530 EXC"
+}

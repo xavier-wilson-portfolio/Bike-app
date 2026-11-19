@@ -1,0 +1,66 @@
+{
+ "id": "simplex-servi-cycle-1935",
+ "make": "Simplex",
+ "model": "Servi-Cycle",
+ "name": "Simplex Servi-Cycle",
+ "years": [
+  1935,
+  1960
+ ],
+ "match": [
+  "servi-cycle",
+  "simplex",
+  "servicycle",
+  "simplex automatic",
+  "simplex servi-cycle"
+ ],
+ "style": "standard",
+ "drive": "belt",
+ "engine": "125 cc air-cooled two-stroke single, belt drive, automatic clutch on later models",
+ "intro": "The New Orleans-built light motorcycle. A small two-stroke, belt drive and very simple controls.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Check oiling"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Belt",
+   "Check tension"
+  ],
+  [
+   "Magneto",
+   "Check spark"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Most of these run premix. Check the owner's guide or the club before you mix fuel."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "SERVI-CYCLE"
+}

@@ -1,0 +1,59 @@
+{
+ "id": "husqvarna-svartpilen-801-vitpilen-801-2024",
+ "make": "Husqvarna",
+ "model": "Svartpilen 801 / Vitpilen 801",
+ "name": "Husqvarna Svartpilen 801 / Vitpilen 801",
+ "years": [
+  2024,
+  2026
+ ],
+ "match": [
+  "svartpilen 801",
+  "vitpilen 801",
+  "svartpilen801",
+  "vitpilen801"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "799 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "Husqvarna's bigger Pilen models on the KTM 790 Duke platform. Fuel injected, with rider modes.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Electronics",
+   "Scan for codes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KTM Forums",
+   "url": "https://www.ktmforums.com/",
+   "what": "Owner forum for KTM street and adventure bikes."
+  }
+ ],
+ "heroName": "SVARTPILEN"
+}

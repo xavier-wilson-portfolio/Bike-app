@@ -1,0 +1,65 @@
+{
+ "id": "triumph-tiger-100-tr5-trophy-pre-unit-500-1946",
+ "make": "Triumph",
+ "model": "Tiger 100 / TR5 Trophy (pre-unit 500)",
+ "name": "Triumph Tiger 100 / TR5 Trophy (pre-unit)",
+ "years": [
+  1946,
+  1958
+ ],
+ "match": [
+  "tr5",
+  "tr5 trophy",
+  "tiger 100",
+  "t100 pre-unit",
+  "trophy 500",
+  "tiger 100 1950"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "498 cc air-cooled OHV pre-unit parallel twin, magneto",
+ "intro": "Triumph's sporty pre-unit 500s. The TR5 Trophy is the trials and enduro version.",
+ "focus": [
+  [
+   "Pre-unit twin",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Magneto",
+   "Check spark"
+  ],
+  [
+   "Gearbox",
+   "Separate oil"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "K": [
+   "The gearbox is separate from the engine and has its own oil. Check and change both, and set the primary chain."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "heroName": "TIGER 100"
+}

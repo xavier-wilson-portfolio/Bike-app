@@ -1,0 +1,62 @@
+{
+ "id": "yamaha-xv500-virago-500-1983",
+ "make": "Yamaha",
+ "model": "XV500 Virago 500",
+ "name": "Yamaha XV500 Virago",
+ "years": [
+  1983,
+  1984
+ ],
+ "match": [
+  "xv500",
+  "xv 500",
+  "virago 500",
+  "xv500k",
+  "xv500l"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "494 cc air-cooled V-twin, two carbs, shaft drive",
+ "intro": "The early small Virago. An air-cooled V-twin with shaft drive and a starter clutch to check.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Starter",
+   "Check clutch"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Virago Tech forum",
+   "url": "http://viragotechforum.com/",
+   "what": "Owner forum for Yamaha Viragos."
+  }
+ ],
+ "silhouette": "yamaha-xv500-virago-500-1983",
+ "areas": [],
+ "heroName": "VIRAGO"
+}

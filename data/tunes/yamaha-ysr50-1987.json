@@ -1,0 +1,74 @@
+{
+ "id": "yamaha-ysr50-1987",
+ "make": "Yamaha",
+ "model": "YSR50",
+ "name": "Yamaha YSR50",
+ "years": [
+  1987,
+  1992
+ ],
+ "match": [
+  "ysr50",
+  "ysr 50",
+  "ysr80",
+  "ysr 80"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "49 cc air-cooled two-stroke single, Autolube oil injection, five-speed",
+ "intro": "Yamaha's tiny sport bike. A two-stroke with Autolube and a frame that racers love to modify.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Oil injection"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Autolube",
+   "Check pump"
+  ],
+  [
+   "Exhaust",
+   "Check carbon"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It has oil injection, not premix. Keep the oil tank filled with two-stroke oil and check the pump line for cracks."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "silhouette": "yamaha-ysr50-1987",
+ "areas": [],
+ "heroName": "YSR50",
+ "hero": {
+  "src": "img/hero/yamaha-ysr50-1987.jpg",
+  "artist": "PekePON",
+  "page": "https://commons.wikimedia.org/wiki/File:YAMAHA_YSR50_1986_Yamaha_Communication_Plaza.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

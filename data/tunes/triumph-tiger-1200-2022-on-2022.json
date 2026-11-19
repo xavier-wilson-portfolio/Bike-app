@@ -1,0 +1,63 @@
+{
+ "id": "triumph-tiger-1200-2022-on-2022",
+ "make": "Triumph",
+ "model": "Tiger 1200 (2022 on)",
+ "name": "Triumph Tiger 1200 (2022 on)",
+ "years": [
+  2022,
+  2026
+ ],
+ "match": [
+  "tiger 1200",
+  "tiger 1200 gt",
+  "tiger 1200 rally",
+  "tiger 1200 gt pro",
+  "tiger 1200 rally explorer",
+  "tiger 1200 gt explorer"
+ ],
+ "style": "adventure",
+ "drive": "shaft",
+ "engine": "1160 cc liquid-cooled T-plane triple, fuel injected, shaft drive",
+ "intro": "The 2022 redesign of the big Tiger. A T-plane triple, semi-active suspension and a lighter frame.",
+ "focus": [
+  [
+   "Triple",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Electronics",
+   "Scan for codes"
+  ],
+  [
+   "Suspension",
+   "Semi-active"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Triumph has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "silhouette": "triumph-tiger-1200-2022-on-2022",
+ "areas": [],
+ "heroName": "TIGER 1200"
+}

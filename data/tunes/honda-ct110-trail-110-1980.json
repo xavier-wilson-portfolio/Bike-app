@@ -1,0 +1,68 @@
+{
+ "id": "honda-ct110-trail-110-1980",
+ "make": "Honda",
+ "model": "CT110 Trail 110",
+ "name": "Honda CT110 Trail 110",
+ "years": [
+  1980,
+  1986
+ ],
+ "match": [
+  "ct110",
+  "ct 110",
+  "trail 110",
+  "trail110",
+  "postie",
+  "postie bike"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "105 cc air-cooled overhead-cam single, four-speed with an automatic clutch",
+ "intro": "Honda's Trail 110. A step-through trail bike with an auto clutch, and in some years a dual-range box.",
+ "focus": [
+  [
+   "105 cc single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Auto clutch",
+   "Adjust it"
+  ],
+  [
+   "Dual range",
+   "Check lever"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Honda Trail CT forum",
+   "url": "https://www.tapatalk.com/groups/hondatrailcts/",
+   "what": "Owner forum for the CT90, CT110 and other Honda trail bikes."
+  }
+ ],
+ "silhouette": "honda-ct110-trail-110-1980",
+ "areas": [],
+ "heroName": "CT110",
+ "hero": {
+  "src": "img/hero/honda-ct110-trail-110-1980.jpg",
+  "artist": "Mike Schinkel",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_TRAIL110_CT110_Hunter_Cub.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

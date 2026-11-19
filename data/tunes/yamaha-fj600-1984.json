@@ -1,0 +1,59 @@
+{
+ "id": "yamaha-fj600-1984",
+ "make": "Yamaha",
+ "model": "FJ600",
+ "name": "Yamaha FJ600",
+ "years": [
+  1984,
+  1985
+ ],
+ "match": [
+  "fj600",
+  "fj 600",
+  "xj600 fj",
+  "fj600l"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "598 cc air-cooled DOHC inline four, four carbs",
+ "intro": "Yamaha's small FJ. An air-cooled four with a half fairing, related to the later Seca II.",
+ "focus": [
+  [
+   "Inline four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XJBikes forum",
+   "url": "https://www.xjbikes.com/forums/",
+   "what": "Owner forum for Yamaha XJ, Seca, Maxim and Radian fours."
+  }
+ ],
+ "heroName": "FJ600"
+}

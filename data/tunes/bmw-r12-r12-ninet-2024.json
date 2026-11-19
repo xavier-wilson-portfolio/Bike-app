@@ -1,0 +1,61 @@
+{
+ "id": "bmw-r12-r12-ninet-2024",
+ "make": "BMW",
+ "model": "R12 / R12 nineT",
+ "name": "BMW R12 / R12 nineT",
+ "years": [
+  2024,
+  2026
+ ],
+ "match": [
+  "r12",
+  "r 12",
+  "r12 ninet",
+  "r12 nine t",
+  "r12 s",
+  "r 12 ninet"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "1170 cc air/oil-cooled boxer twin, fuel injected, shaft drive",
+ "intro": "BMW's 2024 heritage boxers. The air/oil-cooled boxer in a new frame, as a cruiser or a roadster.",
+ "focus": [
+  [
+   "Boxer twin",
+   "Air/oil-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Final drive",
+   "Check play"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "BMW has issued several recalls across these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BMW MOA forum",
+   "url": "https://forums.bmwmoa.org/",
+   "what": "BMW Motorcycle Owners of America forum."
+  }
+ ],
+ "heroName": "R12"
+}

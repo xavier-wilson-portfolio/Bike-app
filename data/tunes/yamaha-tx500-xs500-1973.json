@@ -1,0 +1,62 @@
+{
+ "id": "yamaha-tx500-xs500-1973",
+ "make": "Yamaha",
+ "model": "TX500 / XS500",
+ "name": "Yamaha TX500 / XS500",
+ "years": [
+  1973,
+  1978
+ ],
+ "match": [
+  "tx500",
+  "xs500",
+  "xs 500",
+  "tx 500",
+  "xs500c",
+  "xs500e",
+  "xs500d"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "498 cc air-cooled DOHC eight-valve parallel twin, two carbs, balancer",
+ "intro": "Yamaha's DOHC 500 twin. A balancer, two carbs and a head that does not forgive overheating.",
+ "focus": [
+  [
+   "DOHC twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Sync them"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Oil",
+   "Check level often"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "XS500"
+}

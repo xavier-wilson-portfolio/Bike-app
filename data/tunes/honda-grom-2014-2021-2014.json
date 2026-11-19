@@ -1,0 +1,60 @@
+{
+ "id": "honda-grom-2014-2021-2014",
+ "make": "Honda",
+ "model": "Grom (2014-2021)",
+ "name": "Honda Grom (2014-2021)",
+ "years": [
+  2014,
+  2021
+ ],
+ "match": [
+  "grom",
+  "msx125",
+  "msx 125",
+  "grom 125",
+  "grom sf"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "125 cc air-cooled single, fuel injected, four-speed",
+ "intro": "The first Grom. Fuel injected, a four-speed box and a huge aftermarket.",
+ "focus": [
+  [
+   "125 cc single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Mods",
+   "Undo bad ones"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "L": [
+   "Most used Groms have been modified. Check for cut wiring, cheap levers and a bad exhaust seal before you set the base tune."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [],
+ "silhouette": "honda-grom-2014-2021-2014",
+ "areas": [],
+ "heroName": "GROM"
+}

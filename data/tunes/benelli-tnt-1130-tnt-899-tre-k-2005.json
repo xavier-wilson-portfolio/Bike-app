@@ -1,0 +1,63 @@
+{
+ "id": "benelli-tnt-1130-tnt-899-tre-k-2005",
+ "make": "Benelli",
+ "model": "TNT 1130 / TNT 899 / TRE-K",
+ "name": "Benelli TNT 1130 / TNT 899 / TRE-K",
+ "years": [
+  2005,
+  2016
+ ],
+ "match": [
+  "tnt 1130",
+  "tnt 899",
+  "tre-k",
+  "tre k",
+  "tnt",
+  "tnt sport",
+  "tnt cafe racer",
+  "trek 1130"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "899 or 1131 cc liquid-cooled triple, fuel injected, side radiators",
+ "intro": "Benelli's Italian triples before QJ. Strong engines, but electrics and parts supply need checking.",
+ "focus": [
+  [
+   "Triple",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Cooling",
+   "Side radiators"
+  ],
+  [
+   "Electrics",
+   "Check them"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "TNT 1130"
+}

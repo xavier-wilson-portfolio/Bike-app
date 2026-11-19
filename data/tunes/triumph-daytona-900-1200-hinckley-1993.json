@@ -1,0 +1,70 @@
+{
+ "id": "triumph-daytona-900-1200-hinckley-1993",
+ "make": "Triumph",
+ "model": "Daytona 900 / 1200 (Hinckley)",
+ "name": "Triumph Daytona 900 / 1200 (Hinckley)",
+ "years": [
+  1993,
+  1997
+ ],
+ "match": [
+  "daytona 900",
+  "daytona 1200",
+  "daytona super iii",
+  "daytona 750",
+  "daytona 1000",
+  "super iii"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "885 cc triple or 1180 cc four, liquid-cooled, carbs",
+ "intro": "Triumph's early Hinckley sport bikes. A modular triple or four with carbs and a big fairing.",
+ "focus": [
+  [
+   "Triple or four",
+   "Liquid-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "silhouette": "triumph-daytona-900-1200-hinckley-1993",
+ "areas": [],
+ "heroName": "DAYTONA",
+ "hero": {
+  "src": "img/hero/triumph-daytona-900-1200-hinckley-1993.jpg",
+  "artist": "Dédélembrouille",
+  "page": "https://commons.wikimedia.org/wiki/File:Triumph_900_Daytona.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

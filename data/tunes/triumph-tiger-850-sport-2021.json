@@ -1,0 +1,58 @@
+{
+ "id": "triumph-tiger-850-sport-2021",
+ "make": "Triumph",
+ "model": "Tiger 850 Sport",
+ "name": "Triumph Tiger 850 Sport",
+ "years": [
+  2021,
+  2026
+ ],
+ "match": [
+  "tiger 850",
+  "tiger 850 sport",
+  "tiger850"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "888 cc liquid-cooled T-plane triple, fuel injected",
+ "intro": "The road-focused budget Tiger. The Tiger 900 engine tuned for less power, with simpler suspension.",
+ "focus": [
+  [
+   "Triple",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Triumph has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "heroName": "TIGER 850"
+}

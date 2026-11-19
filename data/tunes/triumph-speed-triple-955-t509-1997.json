@@ -1,0 +1,60 @@
+{
+ "id": "triumph-speed-triple-955-t509-1997",
+ "make": "Triumph",
+ "model": "Speed Triple 955 / T509",
+ "name": "Triumph Speed Triple 955 / T509",
+ "years": [
+  1997,
+  2004
+ ],
+ "match": [
+  "speed triple 955",
+  "t509",
+  "speed triple 885",
+  "speed triple",
+  "speedie 955"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "885 or 955 cc liquid-cooled triple, fuel injected",
+ "intro": "The bug-eyed Speed Triples. Fuel injected triples, twin round headlights and an aluminum frame.",
+ "focus": [
+  [
+   "Triple",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Triumph has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "heroName": "SPEED TRIPLE"
+}

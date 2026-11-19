@@ -1,0 +1,69 @@
+{
+ "id": "triumph-street-triple-675-2008",
+ "make": "Triumph",
+ "model": "Street Triple 675",
+ "name": "Triumph Street Triple 675",
+ "years": [
+  2008,
+  2016
+ ],
+ "match": [
+  "street triple 675",
+  "street triple",
+  "street triple r",
+  "675 street triple",
+  "street triple rx"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "675 cc liquid-cooled triple, fuel injected",
+ "intro": "The first Street Triples. The Daytona 675 engine in a naked bike, with a lot of shared parts.",
+ "focus": [
+  [
+   "Triple",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Triumph has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "silhouette": "triumph-street-triple-675-2008",
+ "areas": [],
+ "heroName": "STREET TRIPLE",
+ "hero": {
+  "src": "img/hero/triumph-street-triple-675-2008.jpg",
+  "artist": "Cjp24",
+  "page": "https://commons.wikimedia.org/wiki/File:Triumph_Street_Triple_675,_blue.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

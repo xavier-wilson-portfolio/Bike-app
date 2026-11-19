@@ -1,0 +1,69 @@
+{
+ "id": "honda-nighthawk-250-cb250-1991",
+ "make": "Honda",
+ "model": "Nighthawk 250 (CB250)",
+ "name": "Honda Nighthawk 250",
+ "years": [
+  1991,
+  2008
+ ],
+ "match": [
+  "nighthawk 250",
+  "cb250",
+  "cb 250",
+  "cb250 nighthawk",
+  "nighthawk250"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "234 cc air-cooled parallel twin, one carb, five-speed",
+ "intro": "Honda's long-running beginner twin. Shares its engine with the Rebel 250 and is easy to work on.",
+ "focus": [
+  [
+   "234 cc twin",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Cam chain",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "silhouette": "honda-nighthawk-250-cb250-1991",
+ "areas": [],
+ "heroName": "NIGHTHAWK",
+ "hero": {
+  "src": "img/hero/honda-nighthawk-250-cb250-1991.jpg",
+  "artist": "dave_7 from Canada",
+  "page": "https://commons.wikimedia.org/wiki/File:1991_Honda_Nighthawk_250_(30887998956).jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

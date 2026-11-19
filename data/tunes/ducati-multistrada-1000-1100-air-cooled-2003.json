@@ -1,0 +1,72 @@
+{
+ "id": "ducati-multistrada-1000-1100-air-cooled-2003",
+ "make": "Ducati",
+ "model": "Multistrada 1000 / 1100 (air-cooled)",
+ "name": "Ducati Multistrada 1000 / 1100",
+ "years": [
+  2003,
+  2009
+ ],
+ "match": [
+  "multistrada 1000",
+  "multistrada 1100",
+  "multistrada 620",
+  "mts1000",
+  "mts1100",
+  "multistrada",
+  "mts 1100",
+  "multistrada 1000ds"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "992 or 1078 cc air-cooled two-valve desmo V-twin, fuel injected",
+ "intro": "The first Multistradas. Air-cooled DS engines with a dry clutch and a split fairing.",
+ "focus": [
+  [
+   "Desmo twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Belts",
+   "Change them"
+  ],
+  [
+   "Desmo valves",
+   "Shim check"
+  ],
+  [
+   "Dry clutch",
+   "Check plates"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Desmo valve service needs both opening and closing shims checked. Follow the interval in the manual; it is not a job to skip."
+  ],
+  "K": [
+   "Many of these have a dry clutch. The rattle is normal, but check the plates and the basket for notches."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Ducati has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "silhouette": "ducati-multistrada-1000-1100-air-cooled-2003",
+ "areas": [],
+ "heroName": "MULTISTRADA"
+}

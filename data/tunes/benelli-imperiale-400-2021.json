@@ -1,0 +1,60 @@
+{
+ "id": "benelli-imperiale-400-2021",
+ "make": "Benelli",
+ "model": "Imperiale 400",
+ "name": "Benelli Imperiale 400",
+ "years": [
+  2021,
+  2026
+ ],
+ "match": [
+  "imperiale 400",
+  "imperiale",
+  "benelli imperiale"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "374 cc air-cooled single, fuel injected",
+ "intro": "Benelli's retro single. Simple, heavy and easy to work on.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Wiring",
+   "Check connectors"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "silhouette": "benelli-imperiale-400-2021",
+ "areas": [],
+ "heroName": "IMPERIALE"
+}

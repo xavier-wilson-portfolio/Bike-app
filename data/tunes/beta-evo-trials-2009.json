@@ -1,0 +1,67 @@
+{
+ "id": "beta-evo-trials-2009",
+ "make": "Beta",
+ "model": "Evo trials",
+ "name": "Beta Evo trials",
+ "years": [
+  2009,
+  2026
+ ],
+ "match": [
+  "evo",
+  "beta evo",
+  "evo 300",
+  "evo 250",
+  "evo 125",
+  "rev 3",
+  "rev3",
+  "evo factory"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "125 to 300 cc liquid-cooled two- or four-stroke single",
+ "intro": "Beta's trials bikes. Light, low and hard on clutches; most are premix two-strokes.",
+ "focus": [
+  [
+   "Single",
+   "Check type"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Clutch",
+   "Check plates"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Most Evo trials bikes are two-strokes that run premix. The 300 SS four-stroke uses engine oil instead. Check which one you have."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road and trials models are often not in the NHTSA recall search. Ask a dealer for the make to run the frame number.",
+ "known": [],
+ "forums": [
+  {
+   "name": "TrialsCentral",
+   "url": "https://www.trialscentral.com/",
+   "what": "Forum for trials riders, with sections for most trials makes."
+  }
+ ],
+ "silhouette": "beta-evo-trials-2009",
+ "areas": [],
+ "heroName": "EVO"
+}

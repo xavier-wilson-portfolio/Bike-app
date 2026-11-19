@@ -1,0 +1,62 @@
+{
+ "id": "harley-davidson-xlcr-cafe-racer-1977",
+ "make": "Harley-Davidson",
+ "model": "XLCR Cafe Racer",
+ "name": "Harley-Davidson XLCR",
+ "years": [
+  1977,
+  1978
+ ],
+ "match": [
+  "xlcr",
+  "xlcr cafe racer",
+  "xlcr1000",
+  "xlcr 1000",
+  "harley cafe racer"
+ ],
+ "style": "cafe",
+ "drive": "chain",
+ "engine": "1000 cc Ironhead V-twin, carb, siamese exhaust",
+ "intro": "Harley's black cafe racer from the late 70s. An Ironhead in a unique frame with many one-year parts.",
+ "focus": [
+  [
+   "Ironhead twin",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XLForum",
+   "url": "https://www.xlforum.net/",
+   "what": "Owner forum for Harley Sportsters."
+  }
+ ],
+ "silhouette": "harley-davidson-xlcr-cafe-racer-1977",
+ "areas": [],
+ "heroName": "XLCR"
+}

@@ -1,0 +1,68 @@
+{
+ "id": "yamaha-dt360-dt400-1973",
+ "make": "Yamaha",
+ "model": "DT360 / DT400",
+ "name": "Yamaha DT360 / DT400",
+ "years": [
+  1973,
+  1978
+ ],
+ "match": [
+  "dt360",
+  "dt400",
+  "dt 360",
+  "dt 400",
+  "rt360",
+  "rt3",
+  "dt400b"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "351 or 397 cc air-cooled two-stroke single, Autolube oil injection",
+ "intro": "Yamaha's big 70s enduros. Two-strokes with Autolube oil injection and a lot of torque.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Oil injection"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Autolube",
+   "Check pump"
+  ],
+  [
+   "Points/CDI",
+   "Check spark"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It has oil injection, not premix. Keep the oil tank filled with two-stroke oil and check the pump line for cracks."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Enduros forum",
+   "url": "https://www.yamaha-enduros.com/",
+   "what": "Owner forum for vintage Yamaha two-stroke enduros."
+  }
+ ],
+ "heroName": "DT400"
+}

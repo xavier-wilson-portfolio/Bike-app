@@ -1,0 +1,73 @@
+{
+ "id": "honda-s65-s90-1964",
+ "make": "Honda",
+ "model": "S65 / S90",
+ "name": "Honda S65 / S90",
+ "years": [
+  1964,
+  1969
+ ],
+ "match": [
+  "s90",
+  "s65",
+  "s 90",
+  "s 65",
+  "honda s90",
+  "cl90",
+  "cs90"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "63 or 89 cc air-cooled overhead-cam single, laid nearly flat, four-speed",
+ "intro": "Honda's small sport singles of the 60s. A flat engine, a pressed-steel frame and six-volt electrics.",
+ "focus": [
+  [
+   "Small single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Frame",
+   "Check rust"
+  ],
+  [
+   "Six-volt",
+   "Check charging"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "silhouette": "honda-s65-s90-1964",
+ "areas": [],
+ "heroName": "S90",
+ "hero": {
+  "src": "img/hero/honda-s65-s90-1964.jpg",
+  "artist": "Topsy1golf at English Wikipedia",
+  "page": "https://commons.wikimedia.org/wiki/File:1966_Honda_S90.JPG",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
+}

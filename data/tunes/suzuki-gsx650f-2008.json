@@ -1,0 +1,61 @@
+{
+ "id": "suzuki-gsx650f-2008",
+ "make": "Suzuki",
+ "model": "GSX650F",
+ "name": "Suzuki GSX650F",
+ "years": [
+  2008,
+  2016
+ ],
+ "match": [
+  "gsx650f",
+  "gsx 650f",
+  "gsx650",
+  "gsx 650"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "656 cc liquid-cooled inline four, fuel injected",
+ "intro": "Suzuki's faired Bandit 650. A friendly four with fuel injection and a full fairing.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Suzuki Forums",
+   "url": "https://www.suzuki-forums.com/forums/",
+   "what": "General owner forum for Suzuki motorcycles."
+  }
+ ],
+ "silhouette": "suzuki-gsx650f-2008",
+ "areas": [],
+ "heroName": "GSX650F"
+}

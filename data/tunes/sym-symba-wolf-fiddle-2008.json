@@ -1,0 +1,61 @@
+{
+ "id": "sym-symba-wolf-fiddle-2008",
+ "make": "SYM",
+ "model": "Symba / Wolf / Fiddle",
+ "name": "SYM Symba / Wolf / Fiddle",
+ "years": [
+  2008,
+  2026
+ ],
+ "match": [
+  "symba",
+  "wolf",
+  "wolf 125",
+  "wolf 250",
+  "fiddle",
+  "fiddle ii",
+  "sym symba",
+  "wolf classic"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "101 to 249 cc air-cooled single, carb or fuel injection",
+ "intro": "SYM's small bikes and scooters. The Symba is a Cub-style step-through, the Wolf a small motorcycle, the Fiddle a scooter.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Drive",
+   "Chain or belt"
+  ],
+  [
+   "Brakes",
+   "Check them"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "SYM"
+}

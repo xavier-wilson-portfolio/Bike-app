@@ -1,0 +1,72 @@
+{
+ "id": "mv-agusta-brutale-1000-superveloce-2020-on-2020",
+ "make": "MV Agusta",
+ "model": "Brutale 1000 / Superveloce (2020 on)",
+ "name": "MV Agusta Brutale 1000 / Superveloce",
+ "years": [
+  2020,
+  2026
+ ],
+ "match": [
+  "brutale 1000",
+  "brutale 1000 rr",
+  "superveloce",
+  "superveloce 800",
+  "superveloce 1000",
+  "brutale rr",
+  "rush 1000",
+  "brutale 1000 rs"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "998 cc inline four or 798 cc triple, liquid-cooled, fuel injected",
+ "intro": "MV's current big naked and retro sport bikes. Radial valves, a lot of electronics and expensive bodywork.",
+ "focus": [
+  [
+   "Engine",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Electronics",
+   "Scan for codes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "MV Agusta forum (mvagusta.net)",
+   "url": "https://www.mvagusta.net/",
+   "what": "Owner forum for MV Agusta models, old and new."
+  }
+ ],
+ "silhouette": "mv-agusta-brutale-1000-superveloce-2020-on-2020",
+ "areas": [],
+ "heroName": "BRUTALE",
+ "hero": {
+  "src": "img/hero/mv-agusta-brutale-1000-superveloce-2020-on-2020.jpg",
+  "artist": "Matthb1395",
+  "page": "https://commons.wikimedia.org/wiki/File:Mv_Agusta_Superveloce_Ago_(2021).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

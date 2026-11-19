@@ -1,0 +1,70 @@
+{
+ "id": "moto-guzzi-falcone-1950",
+ "make": "Moto Guzzi",
+ "model": "Falcone",
+ "name": "Moto Guzzi Falcone",
+ "years": [
+  1950,
+  1976
+ ],
+ "match": [
+  "falcone",
+  "falcone sport",
+  "falcone turismo",
+  "nuovo falcone",
+  "falcone 500",
+  "astore"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "499 cc air-cooled horizontal single, exposed flywheel, one carb",
+ "intro": "Guzzi's classic horizontal single with the outside flywheel. Simple, slow-revving and full of character.",
+ "focus": [
+  [
+   "Flat single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Magneto",
+   "Check spark"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moto Guzzi National Owners Club",
+   "url": "https://www.mgnoc.org/",
+   "what": "US owner club for Moto Guzzi."
+  }
+ ],
+ "silhouette": "moto-guzzi-falcone-1950",
+ "areas": [],
+ "heroName": "FALCONE",
+ "hero": {
+  "src": "img/hero/moto-guzzi-falcone-1950.jpg",
+  "artist": "Midnight bird",
+  "page": "https://commons.wikimedia.org/wiki/File:Moto_Guzzi_Falcone_Sport_500.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

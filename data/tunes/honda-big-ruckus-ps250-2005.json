@@ -1,0 +1,59 @@
+{
+ "id": "honda-big-ruckus-ps250-2005",
+ "make": "Honda",
+ "model": "Big Ruckus (PS250)",
+ "name": "Honda Big Ruckus (PS250)",
+ "years": [
+  2005,
+  2009
+ ],
+ "match": [
+  "big ruckus",
+  "ps250",
+  "ps 250",
+  "honda big ruckus"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "249 cc liquid-cooled four-stroke single, carb, CVT",
+ "intro": "The 250 cc Ruckus. Exposed frame, a liquid-cooled single and a CVT.",
+ "focus": [
+  [
+   "249 cc single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Frame",
+   "Check welds"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "BIG RUCKUS"
+}

@@ -1,0 +1,63 @@
+{
+ "id": "kawasaki-kz1100-spectre-1981",
+ "make": "Kawasaki",
+ "model": "KZ1100 / Spectre",
+ "name": "Kawasaki KZ1100 / Spectre",
+ "years": [
+  1981,
+  1983
+ ],
+ "match": [
+  "kz1100",
+  "kz 1100",
+  "spectre",
+  "kz1100 spectre",
+  "kz1100a",
+  "kz1100d",
+  "kz1100 ltd",
+  "z1100"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "1089 cc air-cooled DOHC inline four, four carbs, shaft drive",
+ "intro": "Kawasaki's big shaft-drive four of the early 80s. Four carbs, a strong engine and a shaft to service.",
+ "focus": [
+  [
+   "Inline four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KZRider forum",
+   "url": "https://www.kzrider.com/",
+   "what": "Owner forum for classic Kawasakis."
+  }
+ ],
+ "heroName": "KZ1100"
+}

@@ -1,0 +1,61 @@
+{
+ "id": "ariel-square-four-1931",
+ "make": "Ariel",
+ "model": "Square Four",
+ "name": "Ariel Square Four",
+ "years": [
+  1931,
+  1959
+ ],
+ "match": [
+  "square four",
+  "ariel square four",
+  "squariel",
+  "4g",
+  "mk ii square four",
+  "4g mk2"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "497 to 997 cc air-cooled square four, one carb",
+ "intro": "Ariel's four-cylinder in a square. Two geared crankshafts, cooling trouble at the back and a long club history.",
+ "focus": [
+  [
+   "Square four",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Cooling",
+   "Rear cylinders"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "SQUARE FOUR"
+}

@@ -1,0 +1,63 @@
+{
+ "id": "honda-xl75-xl80s-1977",
+ "make": "Honda",
+ "model": "XL75 / XL80S",
+ "name": "Honda XL75 / XL80S",
+ "years": [
+  1977,
+  1985
+ ],
+ "match": [
+  "xl75",
+  "xl80s",
+  "xl80",
+  "xl 75",
+  "xl 80",
+  "xl 80s"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "72 or 80 cc air-cooled four-stroke single, carb",
+ "intro": "Honda's small dual-sports for young riders. Simple singles with a kick start and lights.",
+ "focus": [
+  [
+   "Small single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XR's Only",
+   "url": "https://www.xrsonly.com/",
+   "what": "Parts and know-how for Honda XR dirt bikes."
+  }
+ ],
+ "silhouette": "honda-xl75-xl80s-1977",
+ "areas": [],
+ "heroName": "XL80S"
+}

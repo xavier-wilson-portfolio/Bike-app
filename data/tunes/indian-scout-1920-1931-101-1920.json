@@ -1,0 +1,71 @@
+{
+ "id": "indian-scout-1920-1931-101-1920",
+ "make": "Indian",
+ "model": "Scout (1920-1931 / 101)",
+ "name": "Indian Scout (1920-1931, 101)",
+ "years": [
+  1920,
+  1931
+ ],
+ "match": [
+  "scout",
+  "indian scout",
+  "101 scout",
+  "scout 101",
+  "scout 45",
+  "scout 37",
+  "indian 101"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "37 or 45 cubic inch air-cooled side-valve V-twin, gear primary, total-loss oiling",
+ "intro": "Indian's early Scouts, including the famous 101. A geared primary drive, a flathead V-twin and total-loss oiling.",
+ "focus": [
+  [
+   "Flathead twin",
+   "Air-cooled"
+  ],
+  [
+   "Oiling",
+   "Total loss"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Magneto",
+   "Check spark"
+  ],
+  [
+   "Gear primary",
+   "Check oil"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "E": [
+   "It is a flathead. The valves sit beside the cylinder, so set the tappets with the engine cold and check the valve guides for wear."
+  ],
+  "H": [
+   "Check whether yours has a total-loss or a recirculating oil system before you fill it, and know which one you are running."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "silhouette": "indian-scout-1920-1931-101-1920",
+ "areas": [],
+ "heroName": "SCOUT"
+}

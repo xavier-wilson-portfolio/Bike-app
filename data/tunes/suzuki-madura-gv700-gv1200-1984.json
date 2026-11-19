@@ -1,0 +1,63 @@
+{
+ "id": "suzuki-madura-gv700-gv1200-1984",
+ "make": "Suzuki",
+ "model": "Madura GV700 / GV1200",
+ "name": "Suzuki Madura GV700 / GV1200",
+ "years": [
+  1984,
+  1986
+ ],
+ "match": [
+  "madura",
+  "gv700",
+  "gv1200",
+  "gv 1200",
+  "gv700gl",
+  "gv1200gl",
+  "madura 1200",
+  "madura 700"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "699 or 1165 cc liquid-cooled V4, four carbs, shaft drive",
+ "intro": "Suzuki's V4 cruisers of the mid 80s. Four carbs in the vee, liquid cooling and shaft drive.",
+ "focus": [
+  [
+   "V4",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The GS Resources forum",
+   "url": "https://www.thegsresources.com/_forum/",
+   "what": "Owner forum for Suzuki GS fours and twins."
+  }
+ ],
+ "heroName": "MADURA"
+}

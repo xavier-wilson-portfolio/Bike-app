@@ -1,0 +1,58 @@
+{
+ "id": "yamaha-morphous-250-2005",
+ "make": "Yamaha",
+ "model": "Morphous 250",
+ "name": "Yamaha Morphous 250",
+ "years": [
+  2005,
+  2008
+ ],
+ "match": [
+  "morphous",
+  "cp250",
+  "cp 250",
+  "morphous 250",
+  "yamaha morphous"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "249 cc liquid-cooled single, CVT, long low frame",
+ "intro": "Yamaha's long, low maxi-scooter. A liquid-cooled single and bodywork that hides everything.",
+ "focus": [
+  [
+   "249 cc single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel",
+   "Check system"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Bodywork",
+   "Many panels"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "MORPHOUS"
+}

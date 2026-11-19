@@ -1,0 +1,60 @@
+{
+ "id": "yamaha-exciter-virago-125-1997",
+ "make": "Yamaha",
+ "model": "Exciter / Virago 125",
+ "name": "Yamaha Virago 125 (XV125)",
+ "years": [
+  1997,
+  2001
+ ],
+ "match": [
+  "xv125",
+  "xv 125",
+  "virago 125",
+  "xv125s",
+  "virago xv125"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "124 cc air-cooled V-twin, carb",
+ "intro": "Yamaha's smallest V-twin cruiser. A little air-cooled twin with chain drive.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Virago Tech forum",
+   "url": "http://viragotechforum.com/",
+   "what": "Owner forum for Yamaha Viragos."
+  }
+ ],
+ "heroName": "VIRAGO 125"
+}

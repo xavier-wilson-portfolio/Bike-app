@@ -1,0 +1,62 @@
+{
+ "id": "mv-agusta-750s-750-america-1971",
+ "make": "MV Agusta",
+ "model": "750S / 750 America",
+ "name": "MV Agusta 750S / 750 America",
+ "years": [
+  1971,
+  1977
+ ],
+ "match": [
+  "750s",
+  "750 america",
+  "750s america",
+  "mv 750s",
+  "mv agusta 750",
+  "800 america",
+  "750 sport"
+ ],
+ "style": "sport",
+ "drive": "shaft",
+ "engine": "743 or 789 cc air-cooled DOHC inline four, four carbs, shaft drive",
+ "intro": "MV's road-going fours. Gear-driven cams, shaft drive and values that make every job worth doing slowly.",
+ "focus": [
+  [
+   "Inline four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "MV Agusta forum (mvagusta.net)",
+   "url": "https://www.mvagusta.net/",
+   "what": "Owner forum for MV Agusta models, old and new."
+  }
+ ],
+ "heroName": "750 AMERICA"
+}

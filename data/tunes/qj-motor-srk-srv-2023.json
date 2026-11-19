@@ -1,0 +1,63 @@
+{
+ "id": "qj-motor-srk-srv-2023",
+ "make": "QJ Motor",
+ "model": "SRK / SRV",
+ "name": "QJ Motor SRK / SRV",
+ "years": [
+  2023,
+  2026
+ ],
+ "match": [
+  "srk",
+  "srv",
+  "srk 600",
+  "srk 700",
+  "srv 550",
+  "qjmotor srk",
+  "srk 400",
+  "srv 300"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "Up to 698 cc liquid-cooled twin or four, fuel injected",
+ "intro": "QJ Motor's own-brand road bikes, from the maker that owns Benelli. Fuel injected, with parts through the importer.",
+ "focus": [
+  [
+   "Engine",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Electronics",
+   "Scan for codes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Many of these were sold under several brand names and may not show up in the NHTSA search. Check with the seller or importer for open recalls.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "QJ MOTOR"
+}

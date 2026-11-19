@@ -1,0 +1,61 @@
+{
+ "id": "royal-enfield-interceptor-750-constellation-1960s-1958",
+ "make": "Royal Enfield",
+ "model": "Interceptor 750 / Constellation (1960s)",
+ "name": "Royal Enfield Interceptor 750 / Constellation",
+ "years": [
+  1958,
+  1970
+ ],
+ "match": [
+  "interceptor 750",
+  "constellation",
+  "interceptor",
+  "constellation 700",
+  "royal enfield constellation",
+  "interceptor series ii"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "692 or 736 cc air-cooled OHV parallel twin, two carbs, wet-sump in the frame",
+ "intro": "The big Redditch-built Enfield twins. Two carbs, a separate gearbox and oiling that needs to be understood before you ride.",
+ "focus": [
+  [
+   "OHV twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Sync them"
+  ],
+  [
+   "Oiling",
+   "Check system"
+  ],
+  [
+   "Gearbox",
+   "Separate oil"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "INTERCEPTOR"
+}

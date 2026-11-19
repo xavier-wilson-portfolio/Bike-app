@@ -1,0 +1,63 @@
+{
+ "id": "yamaha-yz65-2018",
+ "make": "Yamaha",
+ "model": "YZ65",
+ "name": "Yamaha YZ65",
+ "years": [
+  2018,
+  2026
+ ],
+ "match": [
+  "yz65",
+  "yz 65"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "65 cc liquid-cooled two-stroke single, carb, premix, power valve",
+ "intro": "Yamaha's smallest motocross two-stroke. Premix, a power valve and a six-speed box.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Power valve",
+   "Clean it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Yamaha dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "YZ65"
+}

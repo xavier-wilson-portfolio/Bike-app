@@ -1,0 +1,69 @@
+{
+ "id": "honda-nx650-dominator-1988",
+ "make": "Honda",
+ "model": "NX650 Dominator",
+ "name": "Honda NX650 Dominator",
+ "years": [
+  1988,
+  1989
+ ],
+ "match": [
+  "nx650",
+  "nx 650",
+  "dominator",
+  "nx650 dominator",
+  "honda dominator"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "644 cc air-cooled four-valve single, carb, electric start",
+ "intro": "Honda's big street-leaning dual-sport. The XR600 engine family with electric start and a small fairing.",
+ "focus": [
+  [
+   "Big single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Charging",
+   "Check stator"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XR's Only",
+   "url": "https://www.xrsonly.com/",
+   "what": "Parts and know-how for Honda XR dirt bikes."
+  }
+ ],
+ "silhouette": "honda-nx650-dominator-1988",
+ "areas": [],
+ "heroName": "DOMINATOR",
+ "hero": {
+  "src": "img/hero/honda-nx650-dominator-1988.jpg",
+  "artist": "Jwade30",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_NX650_Dominator.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

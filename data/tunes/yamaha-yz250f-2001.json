@@ -1,0 +1,57 @@
+{
+ "id": "yamaha-yz250f-2001",
+ "make": "Yamaha",
+ "model": "YZ250F",
+ "name": "Yamaha YZ250F",
+ "years": [
+  2001,
+  2026
+ ],
+ "match": [
+  "yz250f",
+  "yz 250f",
+  "yz250fx",
+  "yz 250fx"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 cc liquid-cooled four-stroke single, carb then fuel injection",
+ "intro": "Yamaha's 250 motocross four-stroke. Revs high and needs valve checks on a schedule in hours.",
+ "focus": [
+  [
+   "Race single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "Valves",
+   "Check often"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Hours",
+   "Log them"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Yamaha dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "YZ250F"
+}

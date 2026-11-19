@@ -1,0 +1,60 @@
+{
+ "id": "kawasaki-klx650r-1993",
+ "make": "Kawasaki",
+ "model": "KLX650R",
+ "name": "Kawasaki KLX650R",
+ "years": [
+  1993,
+  1996
+ ],
+ "match": [
+  "klx650r",
+  "klx650",
+  "klx 650",
+  "klx 650r",
+  "klx650c"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "651 cc liquid-cooled four-valve single, carb",
+ "intro": "Kawasaki's 90s off-road big single. Lighter and sportier than the KLR, with a carb and kick start.",
+ "focus": [
+  [
+   "Big single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Starting",
+   "Decompressor"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "KLX650R"
+}

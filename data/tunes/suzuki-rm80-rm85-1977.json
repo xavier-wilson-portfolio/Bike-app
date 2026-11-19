@@ -1,0 +1,78 @@
+{
+ "id": "suzuki-rm80-rm85-1977",
+ "make": "Suzuki",
+ "model": "RM80 / RM85",
+ "name": "Suzuki RM80 / RM85",
+ "years": [
+  1977,
+  2026
+ ],
+ "match": [
+  "rm80",
+  "rm85",
+  "rm 85",
+  "rm 80",
+  "rm85l",
+  "rm100",
+  "rm60",
+  "rm65"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "60 to 99 cc two-stroke single, liquid-cooled on most years, carb, premix",
+ "intro": "Suzuki's mini motocross two-strokes. Premix and a top end that wears fast.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Suzuki dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "silhouette": "suzuki-rm80-rm85-1977",
+ "areas": [],
+ "heroName": "RM85",
+ "hero": {
+  "src": "img/hero/suzuki-rm80-rm85-1977.jpg",
+  "artist": "jim simonson",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_RM85_01.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

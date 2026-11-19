@@ -1,0 +1,65 @@
+{
+ "id": "velocette-venom-thruxton-viper-1955",
+ "make": "Velocette",
+ "model": "Venom / Thruxton / Viper",
+ "name": "Velocette Venom / Thruxton / Viper",
+ "years": [
+  1955,
+  1971
+ ],
+ "match": [
+  "venom",
+  "thruxton venom",
+  "viper",
+  "velocette thruxton",
+  "velocette venom",
+  "clubman"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "349 or 499 cc air-cooled high-cam OHV single, magneto",
+ "intro": "Velocette's sporting singles. A high camshaft, a fiddly clutch to adjust and a magneto.",
+ "focus": [
+  [
+   "OHV single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Magneto",
+   "Check spark"
+  ],
+  [
+   "Clutch",
+   "Adjust it"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "VENOM"
+}

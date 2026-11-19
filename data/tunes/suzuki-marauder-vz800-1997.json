@@ -1,0 +1,69 @@
+{
+ "id": "suzuki-marauder-vz800-1997",
+ "make": "Suzuki",
+ "model": "Marauder VZ800",
+ "name": "Suzuki Marauder VZ800",
+ "years": [
+  1997,
+  2004
+ ],
+ "match": [
+  "vz800",
+  "marauder 800",
+  "marauder vz800",
+  "vz 800",
+  "marauder"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "805 cc liquid-cooled V-twin, two carbs",
+ "intro": "Suzuki's low drag-style cruiser before it became the Boulevard M50. Two carbs and a chain final drive.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Suzuki Forums",
+   "url": "https://www.suzuki-forums.com/forums/",
+   "what": "General owner forum for Suzuki motorcycles."
+  }
+ ],
+ "silhouette": "suzuki-marauder-vz800-1997",
+ "areas": [],
+ "heroName": "MARAUDER",
+ "hero": {
+  "src": "img/hero/suzuki-marauder-vz800-1997.jpg",
+  "artist": "Addvisor",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_VZ_800_Marauder.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

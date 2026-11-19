@@ -1,0 +1,66 @@
+{
+ "id": "husaberg-fe-450-570-te-300-1989",
+ "make": "Husaberg",
+ "model": "FE 450 / 570 / TE 300",
+ "name": "Husaberg FE / TE",
+ "years": [
+  1989,
+  2014
+ ],
+ "match": [
+  "husaberg",
+  "fe 450",
+  "fe 570",
+  "te 300",
+  "fe 501",
+  "fe 390",
+  "fe450",
+  "fe570",
+  "te 250"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 to 565 cc liquid-cooled single, four-stroke (FE) or two-stroke (TE)",
+ "intro": "The Swedish-born enduros, later built by KTM. FE models are four-strokes, TE are two-strokes.",
+ "focus": [
+  [
+   "Single",
+   "Check type"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "Valves or top end",
+   "Check"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Hours",
+   "Log them"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "TE models are two-strokes that run premix. FE models are four-strokes. Check which one you have."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "HUSABERG"
+}

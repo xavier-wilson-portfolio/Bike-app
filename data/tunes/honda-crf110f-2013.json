@@ -1,0 +1,57 @@
+{
+ "id": "honda-crf110f-2013",
+ "make": "Honda",
+ "model": "CRF110F",
+ "name": "Honda CRF110F",
+ "years": [
+  2013,
+  2026
+ ],
+ "match": [
+  "crf110f",
+  "crf110",
+  "crf 110",
+  "crf 110f"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "109 cc air-cooled four-stroke single, carb then fuel injection, automatic clutch",
+ "intro": "Honda's bigger kids' bike. Electric start, an automatic clutch and fuel injection on later years.",
+ "focus": [
+  [
+   "Small single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "Auto clutch",
+   "Adjust it"
+  ],
+  [
+   "Air filter",
+   "Clean and oil"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Honda dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "CRF110F"
+}

@@ -1,0 +1,64 @@
+{
+ "id": "harley-davidson-rocker-rocker-c-2008",
+ "make": "Harley-Davidson",
+ "model": "Rocker / Rocker C",
+ "name": "Harley-Davidson Rocker / Rocker C",
+ "years": [
+  2008,
+  2011
+ ],
+ "match": [
+  "rocker",
+  "rocker c",
+  "fxcw",
+  "fxcwc",
+  "softail rocker"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "96 cubic inch Twin Cam B V-twin, fuel injected, belt drive, 240 rear tire",
+ "intro": "Harley's long chopper-style Softail. A wide rear tire, a fender that moves with the swingarm and the 96 engine.",
+ "focus": [
+  [
+   "Twin Cam B",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Cam tensioners",
+   "Check shoes"
+  ],
+  [
+   "Belt",
+   "Check tension"
+  ],
+  [
+   "Rear fender",
+   "Check mounts"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "E": [
+   "Twin Cam engines from these years use spring-loaded cam chain tensioners with plastic shoes. Check the shoes for wear before you trust the engine."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Harley-Davidson has issued several recalls that touch these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "HDForums",
+   "url": "https://www.hdforums.com/",
+   "what": "Large owner forum for all Harley-Davidson models."
+  }
+ ],
+ "heroName": "ROCKER"
+}

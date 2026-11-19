@@ -1,0 +1,67 @@
+{
+ "id": "ktm-200-exc-xc-w-1998",
+ "make": "KTM",
+ "model": "200 EXC / XC-W",
+ "name": "KTM 200 EXC / XC-W",
+ "years": [
+  1998,
+  2016
+ ],
+ "match": [
+  "200 exc",
+  "200 xc-w",
+  "200 xcw",
+  "200 mxc",
+  "200 xc",
+  "ktm 200 exc"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "193 cc liquid-cooled two-stroke single, carb, premix",
+ "intro": "KTM's light 200 two-stroke enduro. Premix, a power valve on some years and a big following on tight trails.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a KTM dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KTM Forums",
+   "url": "https://www.ktmforums.com/",
+   "what": "Owner forum for KTM street and adventure bikes."
+  }
+ ],
+ "heroName": "200 EXC"
+}

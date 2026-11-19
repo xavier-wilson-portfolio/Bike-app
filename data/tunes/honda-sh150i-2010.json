@@ -1,0 +1,62 @@
+{
+ "id": "honda-sh150i-2010",
+ "make": "Honda",
+ "model": "SH150i",
+ "name": "Honda SH150i",
+ "years": [
+  2010,
+  2014
+ ],
+ "match": [
+  "sh150i",
+  "sh150",
+  "sh 150",
+  "sh150i honda",
+  "sh125"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "153 cc liquid-cooled single, fuel injected, CVT",
+ "intro": "Honda's big-wheel commuter scooter. Fuel injected, liquid cooled and a flat floor.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Cooling",
+   "Coolant level"
+  ],
+  [
+   "Gear oil",
+   "Change it"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "silhouette": "honda-sh150i-2010",
+ "areas": [],
+ "heroName": "SH150I"
+}

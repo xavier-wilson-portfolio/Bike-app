@@ -1,0 +1,73 @@
+{
+ "id": "moto-guzzi-daytona-1000-sport-1100-1992",
+ "make": "Moto Guzzi",
+ "model": "Daytona 1000 / Sport 1100",
+ "name": "Moto Guzzi Daytona 1000 / Sport 1100",
+ "years": [
+  1992,
+  1999
+ ],
+ "match": [
+  "daytona 1000",
+  "sport 1100",
+  "guzzi daytona",
+  "daytona rs",
+  "sport 1100i",
+  "1100 sport",
+  "daytona 1000 rs"
+ ],
+ "style": "sport",
+ "drive": "shaft",
+ "engine": "992 or 1064 cc air-cooled V-twin, four-valve heads on the Daytona, carbs or fuel injection",
+ "intro": "Guzzi's 90s sport twins. The Daytona has the high-cam four-valve heads, and both have shaft drive.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel",
+   "Carbs or EFI"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Three oils",
+   "Change all"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "K": [
+   "Guzzi big twins use a car-type dry clutch and a separate gearbox and final drive. Change all three oils, not just the engine oil."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moto Guzzi National Owners Club",
+   "url": "https://www.mgnoc.org/",
+   "what": "US owner club for Moto Guzzi."
+  }
+ ],
+ "silhouette": "moto-guzzi-daytona-1000-sport-1100-1992",
+ "areas": [],
+ "heroName": "DAYTONA",
+ "hero": {
+  "src": "img/hero/moto-guzzi-daytona-1000-sport-1100-1992.jpg",
+  "artist": "Pieroweert",
+  "page": "https://commons.wikimedia.org/wiki/File:Moto_Guzzi_1100_Sport.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

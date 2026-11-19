@@ -1,0 +1,62 @@
+{
+ "id": "kawasaki-klr600-1984",
+ "make": "Kawasaki",
+ "model": "KLR600",
+ "name": "Kawasaki KLR600",
+ "years": [
+  1984,
+  1986
+ ],
+ "match": [
+  "klr600",
+  "klr 600",
+  "kl600",
+  "klr600e",
+  "klr600 b1"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "564 cc liquid-cooled four-valve single, carb, kick or electric start",
+ "intro": "The KLR before the 650. Liquid cooled, with a balancer and an electric start on the later E model.",
+ "focus": [
+  [
+   "Big single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Balancer",
+   "Check chain"
+  ],
+  [
+   "Starting",
+   "Decompressor"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KawiForums",
+   "url": "https://www.kawiforums.com/",
+   "what": "Owner forum for Kawasaki motorcycles."
+  }
+ ],
+ "silhouette": "kawasaki-klr600-1984",
+ "areas": [],
+ "heroName": "KLR600"
+}

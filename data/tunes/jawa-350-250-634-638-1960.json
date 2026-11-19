@@ -1,0 +1,78 @@
+{
+ "id": "jawa-350-250-634-638-1960",
+ "make": "Jawa",
+ "model": "350 / 250 (634 / 638)",
+ "name": "Jawa 350 / 250",
+ "years": [
+  1960,
+  1990
+ ],
+ "match": [
+  "jawa",
+  "jawa 350",
+  "jawa 250",
+  "634",
+  "638",
+  "jawa 353",
+  "jawa 559",
+  "californian"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "246 or 344 cc air-cooled two-stroke, single or twin, premix or oil injection",
+ "intro": "The Czech commuter two-strokes. An automatic clutch on many, and either premix or oil injection depending on year.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Check oiling"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Auto clutch",
+   "Check it"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Chain case",
+   "Check inside"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Check whether yours has oil injection or runs premix before you fill the tank."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "silhouette": "jawa-350-250-634-638-1960",
+ "areas": [],
+ "heroName": "JAWA",
+ "hero": {
+  "src": "img/hero/jawa-350-250-634-638-1960.jpg",
+  "artist": "Addvisor",
+  "page": "https://commons.wikimedia.org/wiki/File:Jawa_350_(1988).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

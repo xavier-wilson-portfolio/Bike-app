@@ -1,0 +1,59 @@
+{
+ "id": "kawasaki-z650rs-2022",
+ "make": "Kawasaki",
+ "model": "Z650RS",
+ "name": "Kawasaki Z650RS",
+ "years": [
+  2022,
+  2026
+ ],
+ "match": [
+  "z650rs",
+  "z650 rs",
+  "z650rs 50th",
+  "z650rs anniversary"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "649 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "Kawasaki's retro middleweight. The Z650 twin with round lights and classic bodywork.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KawiForums",
+   "url": "https://www.kawiforums.com/",
+   "what": "Owner forum for Kawasaki motorcycles."
+  }
+ ],
+ "heroName": "Z650RS"
+}

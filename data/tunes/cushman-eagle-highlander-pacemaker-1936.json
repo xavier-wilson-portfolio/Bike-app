@@ -1,0 +1,65 @@
+{
+ "id": "cushman-eagle-highlander-pacemaker-1936",
+ "make": "Cushman",
+ "model": "Eagle / Highlander / Pacemaker",
+ "name": "Cushman Eagle / Highlander / Pacemaker",
+ "years": [
+  1936,
+  1965
+ ],
+ "match": [
+  "cushman",
+  "eagle",
+  "highlander",
+  "pacemaker",
+  "cushman eagle",
+  "silver eagle"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "Cushman Husky air-cooled side-valve single, one carb, two-speed on many",
+ "intro": "The American scooters with the Husky flathead engine. Simple, rugged and well supported by the Cushman club.",
+ "focus": [
+  [
+   "Flathead single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Magneto",
+   "Check spark"
+  ],
+  [
+   "Clutch",
+   "Adjust it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "E": [
+   "It is a flathead. The valves sit beside the cylinder, so set the tappets with the engine cold and check the valve guides for wear."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "CUSHMAN"
+}

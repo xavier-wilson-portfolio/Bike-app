@@ -1,0 +1,61 @@
+{
+ "id": "yamaha-xj700-maxim-maxim-x-1985",
+ "make": "Yamaha",
+ "model": "XJ700 Maxim / Maxim X",
+ "name": "Yamaha XJ700 Maxim / Maxim X",
+ "years": [
+  1985,
+  1986
+ ],
+ "match": [
+  "xj700",
+  "xj 700",
+  "maxim 700",
+  "maxim x",
+  "xj700x",
+  "xj700 maxim"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "699 cc DOHC inline four (air-cooled Maxim, liquid-cooled Maxim X), four carbs, shaft drive",
+ "intro": "Yamaha's mid-80s 700 Maxims. Shaft drive and four carbs; the X is liquid cooled with a lot more power.",
+ "focus": [
+  [
+   "Inline four",
+   "Air or liquid"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XJBikes forum",
+   "url": "https://www.xjbikes.com/forums/",
+   "what": "Owner forum for Yamaha XJ, Seca, Maxim and Radian fours."
+  }
+ ],
+ "heroName": "MAXIM"
+}

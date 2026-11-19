@@ -1,0 +1,61 @@
+{
+ "id": "yamaha-xjr1200-xjr1300-1995",
+ "make": "Yamaha",
+ "model": "XJR1200 / XJR1300",
+ "name": "Yamaha XJR1200 / XJR1300",
+ "years": [
+  1995,
+  2016
+ ],
+ "match": [
+  "xjr1300",
+  "xjr1200",
+  "xjr 1300",
+  "xjr",
+  "xjr1300 racer",
+  "xjr 1200"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "1188 or 1251 cc air/oil-cooled DOHC inline four, carbs then fuel injection",
+ "intro": "Yamaha's air-cooled muscle bike. Carbs until 2006, fuel injection after, and a big following in Europe.",
+ "focus": [
+  [
+   "Inline four",
+   "Air/oil-cooled"
+  ],
+  [
+   "Fuel",
+   "Carbs or EFI"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "silhouette": "yamaha-xjr1200-xjr1300-1995",
+ "areas": [],
+ "heroName": "XJR1300"
+}

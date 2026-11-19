@@ -1,0 +1,69 @@
+{
+ "id": "honda-nsr250r-1987",
+ "make": "Honda",
+ "model": "NSR250R",
+ "name": "Honda NSR250R",
+ "years": [
+  1987,
+  1999
+ ],
+ "match": [
+  "nsr250r",
+  "nsr250",
+  "nsr 250",
+  "mc18",
+  "mc21",
+  "mc28",
+  "nsr250 se",
+  "nsr250 sp"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "249 cc liquid-cooled two-stroke V-twin, two carbs, oil injection, power valves",
+ "intro": "Honda's two-stroke sport bike, built for Japan. Power valves, oil injection and electronics that are hard to replace.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Oil injection"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Power valves",
+   "Clean them"
+  ],
+  [
+   "Electronics",
+   "Check PGM unit"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It has oil injection, not premix. Keep the oil tank filled with two-stroke oil and check the pump line for cracks."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Most of these were sold new outside the US, so the NHTSA search may not cover them. Ask a Honda dealer to check the frame number.",
+ "known": [],
+ "forums": [
+  {
+   "name": "CBR Forum",
+   "url": "https://www.cbrforum.com/",
+   "what": "Owner forum for Honda CBR models."
+  }
+ ],
+ "heroName": "NSR250R"
+}

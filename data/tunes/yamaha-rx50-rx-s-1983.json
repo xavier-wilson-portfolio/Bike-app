@@ -1,0 +1,71 @@
+{
+ "id": "yamaha-rx50-rx-s-1983",
+ "make": "Yamaha",
+ "model": "RX50 / RX-S",
+ "name": "Yamaha RX50 / RX-S",
+ "years": [
+  1983,
+  1990
+ ],
+ "match": [
+  "rx50",
+  "rx 50",
+  "rx-s",
+  "rxs",
+  "rx100",
+  "rxs100",
+  "rx 100",
+  "rx-k"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "49 to 98 cc air-cooled two-stroke single, Autolube oil injection",
+ "intro": "Yamaha's small two-stroke commuters. Autolube, points or CDI, and a simple chassis.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Oil injection"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Autolube",
+   "Check pump"
+  ],
+  [
+   "Exhaust",
+   "Check carbon"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It has oil injection, not premix. Keep the oil tank filled with two-stroke oil and check the pump line for cracks."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "silhouette": "yamaha-rx50-rx-s-1983",
+ "areas": [],
+ "heroName": "RX50"
+}

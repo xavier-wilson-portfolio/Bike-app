@@ -1,0 +1,62 @@
+{
+ "id": "yamaha-xz550-vision-1982",
+ "make": "Yamaha",
+ "model": "XZ550 Vision",
+ "name": "Yamaha XZ550 Vision",
+ "years": [
+  1982,
+  1983
+ ],
+ "match": [
+  "xz550",
+  "xz 550",
+  "vision",
+  "vision 550",
+  "xz550rj",
+  "xz550rk",
+  "yamaha vision"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "552 cc liquid-cooled V-twin, two downdraft carbs, shaft drive",
+ "intro": "Yamaha's odd early-80s V-twin. Liquid cooled, shaft drive, and carbs that are known for cold-start trouble.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean and set"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XJBikes forum",
+   "url": "https://www.xjbikes.com/forums/",
+   "what": "Owner forum for Yamaha XJ, Seca, Maxim and Radian fours."
+  }
+ ],
+ "heroName": "VISION"
+}

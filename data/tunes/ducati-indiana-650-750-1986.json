@@ -1,0 +1,64 @@
+{
+ "id": "ducati-indiana-650-750-1986",
+ "make": "Ducati",
+ "model": "Indiana 650 / 750",
+ "name": "Ducati Indiana",
+ "years": [
+  1986,
+  1990
+ ],
+ "match": [
+  "indiana",
+  "indiana 650",
+  "indiana 750",
+  "ducati indiana",
+  "indiana 350"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "649 or 748 cc air-cooled belt-driven desmo V-twin, two carbs",
+ "intro": "Ducati's Cagiva-era cruiser. A Pantah-family engine in a custom frame, and rare now.",
+ "focus": [
+  [
+   "Desmo twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Belts",
+   "Change them"
+  ],
+  [
+   "Desmo valves",
+   "Shim check"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Desmo valve service needs both opening and closing shims checked. Follow the interval in the manual; it is not a job to skip."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "heroName": "INDIANA"
+}

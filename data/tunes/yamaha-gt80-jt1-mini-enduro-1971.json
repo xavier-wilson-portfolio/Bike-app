@@ -1,0 +1,69 @@
+{
+ "id": "yamaha-gt80-jt1-mini-enduro-1971",
+ "make": "Yamaha",
+ "model": "GT80 / JT1 Mini Enduro",
+ "name": "Yamaha GT80 / JT1 Mini Enduro",
+ "years": [
+  1971,
+  1980
+ ],
+ "match": [
+  "gt80",
+  "jt1",
+  "jt2",
+  "gt1",
+  "gt mx",
+  "mini enduro",
+  "gt 80",
+  "gtmx"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "58 to 72 cc air-cooled two-stroke single, Autolube oil injection",
+ "intro": "Yamaha's mini enduros for kids. Rotary-valve or piston-port two-strokes with Autolube and lights.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Oil injection"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Autolube",
+   "Check pump"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It has oil injection, not premix. Keep the oil tank filled with two-stroke oil and check the pump line for cracks."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Enduros forum",
+   "url": "https://www.yamaha-enduros.com/",
+   "what": "Owner forum for vintage Yamaha two-stroke enduros."
+  }
+ ],
+ "heroName": "MINI ENDURO"
+}

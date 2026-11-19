@@ -1,0 +1,57 @@
+{
+ "id": "honda-crf250r-2004",
+ "make": "Honda",
+ "model": "CRF250R",
+ "name": "Honda CRF250R",
+ "years": [
+  2004,
+  2026
+ ],
+ "match": [
+  "crf250r",
+  "crf 250r",
+  "crf250rx",
+  "crf 250rx"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 cc liquid-cooled four-stroke single, carb then fuel injection",
+ "intro": "Honda's 250 motocross four-stroke. It revs very high and needs valve checks on a schedule measured in hours.",
+ "focus": [
+  [
+   "Race single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "Valves",
+   "Check often"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Hours",
+   "Log them"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Honda dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "CRF250R"
+}

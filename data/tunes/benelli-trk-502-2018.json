@@ -1,0 +1,70 @@
+{
+ "id": "benelli-trk-502-2018",
+ "make": "Benelli",
+ "model": "TRK 502",
+ "name": "Benelli TRK 502",
+ "years": [
+  2018,
+  2026
+ ],
+ "match": [
+  "trk 502",
+  "trk502",
+  "trk 502x",
+  "trk502x",
+  "trk 251",
+  "trk 702"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "500 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "Benelli's budget adventure bike. Heavy for its size, simple and fuel injected.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Wiring",
+   "Check connectors"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "silhouette": "benelli-trk-502-2018",
+ "areas": [],
+ "heroName": "TRK 502",
+ "hero": {
+  "src": "img/hero/benelli-trk-502-2018.jpg",
+  "artist": "Valter Panaroni (Valterpana at Italian Wikipedia)",
+  "page": "https://commons.wikimedia.org/wiki/File:Benelli_TRK.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
+}

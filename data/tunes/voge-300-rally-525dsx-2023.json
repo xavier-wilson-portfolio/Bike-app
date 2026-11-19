@@ -1,0 +1,71 @@
+{
+ "id": "voge-300-rally-525dsx-2023",
+ "make": "Voge",
+ "model": "300 Rally / 525DSX",
+ "name": "Voge 300 Rally / 525DSX",
+ "years": [
+  2023,
+  2026
+ ],
+ "match": [
+  "300 rally",
+  "525dsx",
+  "525 dsx",
+  "voge 300 rally",
+  "300ds",
+  "500ds",
+  "650dsx"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "292 cc single or 494 cc twin, liquid-cooled, fuel injected",
+ "intro": "Voge's budget adventure bikes from Loncin. Fuel injected, well equipped and new to most dealers.",
+ "focus": [
+  [
+   "Engine",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Wiring",
+   "Check connectors"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Many of these were sold under several brand names and may not show up in the NHTSA search. Check with the seller or importer for open recalls.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "silhouette": "voge-300-rally-525dsx-2023",
+ "areas": [],
+ "heroName": "VOGE",
+ "hero": {
+  "src": "img/hero/voge-300-rally-525dsx-2023.jpg",
+  "artist": "802xr",
+  "page": "https://commons.wikimedia.org/wiki/File:Voge_300_Rally.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

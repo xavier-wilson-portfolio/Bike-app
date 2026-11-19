@@ -1,0 +1,60 @@
+{
+ "id": "honda-elite-110-nhx110-2010",
+ "make": "Honda",
+ "model": "Elite 110 (NHX110)",
+ "name": "Honda Elite 110",
+ "years": [
+  2010,
+  2011
+ ],
+ "match": [
+  "elite 110",
+  "nhx110",
+  "nhx 110",
+  "lead 110",
+  "honda elite 110"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "108 cc liquid-cooled single, fuel injected, CVT",
+ "intro": "Honda's 2010 commuter scooter. Fuel injected, with a lot of under-seat storage.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Cooling",
+   "Coolant level"
+  ],
+  [
+   "Gear oil",
+   "Change it"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "ELITE 110"
+}

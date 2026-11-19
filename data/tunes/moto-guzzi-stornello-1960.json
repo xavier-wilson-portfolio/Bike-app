@@ -1,0 +1,60 @@
+{
+ "id": "moto-guzzi-stornello-1960",
+ "make": "Moto Guzzi",
+ "model": "Stornello",
+ "name": "Moto Guzzi Stornello",
+ "years": [
+  1960,
+  1975
+ ],
+ "match": [
+  "stornello",
+  "stornello 125",
+  "stornello 160",
+  "stornello scrambler",
+  "stornello sport"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "123 or 160 cc air-cooled OHV single",
+ "intro": "Guzzi's small pushrod single of the 60s and 70s. Simple, light and rare outside Italy.",
+ "focus": [
+  [
+   "OHV single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moto Guzzi National Owners Club",
+   "url": "https://www.mgnoc.org/",
+   "what": "US owner club for Moto Guzzi."
+  }
+ ],
+ "heroName": "STORNELLO"
+}

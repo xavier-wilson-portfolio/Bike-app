@@ -1,0 +1,69 @@
+{
+ "id": "yamaha-fz8-2011",
+ "make": "Yamaha",
+ "model": "FZ8",
+ "name": "Yamaha FZ8",
+ "years": [
+  2011,
+  2013
+ ],
+ "match": [
+  "fz8",
+  "fz-8",
+  "fz 8",
+  "fazer 8",
+  "fz8n"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "779 cc liquid-cooled inline four, fuel injected",
+ "intro": "The middle FZ. A detuned FZ1 engine in an aluminum frame, sold in the US for three years.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "silhouette": "yamaha-fz8-2011",
+ "areas": [],
+ "heroName": "FZ8",
+ "hero": {
+  "src": "img/hero/yamaha-fz8-2011.jpg",
+  "artist": "TheMalsa",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_Fz8.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

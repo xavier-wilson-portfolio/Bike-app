@@ -1,0 +1,61 @@
+{
+ "id": "honda-cbr250rr-mc22-1990",
+ "make": "Honda",
+ "model": "CBR250RR (MC22)",
+ "name": "Honda CBR250RR (MC22)",
+ "years": [
+  1990,
+  1994
+ ],
+ "match": [
+  "mc22",
+  "cbr250rr",
+  "cbr 250rr",
+  "cbr250rr mc22",
+  "mc19",
+  "cbr250r mc19"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "249 cc liquid-cooled inline four, four carbs, gear-driven cams",
+ "intro": "Honda's tiny four, built for Japan. Redlines near 19,000 rpm, with four very small carbs.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Most of these were sold new outside the US, so the NHTSA search may not cover them. Ask a Honda dealer to check the frame number.",
+ "known": [],
+ "forums": [
+  {
+   "name": "CBR Forum",
+   "url": "https://www.cbrforum.com/",
+   "what": "Owner forum for Honda CBR models."
+  }
+ ],
+ "heroName": "CBR250RR"
+}

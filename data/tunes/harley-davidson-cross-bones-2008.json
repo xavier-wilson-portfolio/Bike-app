@@ -1,0 +1,63 @@
+{
+ "id": "harley-davidson-cross-bones-2008",
+ "make": "Harley-Davidson",
+ "model": "Cross Bones",
+ "name": "Harley-Davidson Cross Bones",
+ "years": [
+  2008,
+  2011
+ ],
+ "match": [
+  "cross bones",
+  "crossbones",
+  "flstsb",
+  "softail cross bones"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "96 cubic inch Twin Cam B V-twin, fuel injected, belt drive, springer front end",
+ "intro": "A dark bobber-style Softail with a springer fork. The fork has its own bushings and springs to check.",
+ "focus": [
+  [
+   "Twin Cam B",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Springer fork",
+   "Check bushings"
+  ],
+  [
+   "Belt",
+   "Check tension"
+  ],
+  [
+   "Primary",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "L": [
+   "The springer front end pivots on bushings and rockers. Check them for play and grease them before you ride."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Harley-Davidson has issued several recalls that touch these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "HDForums",
+   "url": "https://www.hdforums.com/",
+   "what": "Large owner forum for all Harley-Davidson models."
+  }
+ ],
+ "heroName": "CROSS BONES"
+}

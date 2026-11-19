@@ -1,0 +1,65 @@
+{
+ "id": "triumph-x75-hurricane-1973",
+ "make": "Triumph",
+ "model": "X75 Hurricane",
+ "name": "Triumph X75 Hurricane",
+ "years": [
+  1973,
+  1973
+ ],
+ "match": [
+  "x75",
+  "x-75",
+  "hurricane",
+  "triumph hurricane",
+  "bsa hurricane",
+  "x75 hurricane"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "740 cc air-cooled OHV triple, three carbs, three-pipe exhaust",
+ "intro": "Craig Vetter's one-year triple. A Trident engine, a one-piece fiberglass tank and seat and very collectible.",
+ "focus": [
+  [
+   "OHV triple",
+   "Air-cooled"
+  ],
+  [
+   "Three carbs",
+   "Clean and sync"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Fiberglass",
+   "Check cracks"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "heroName": "HURRICANE"
+}

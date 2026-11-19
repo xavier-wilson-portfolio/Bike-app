@@ -1,0 +1,61 @@
+{
+ "id": "honda-cb500-twin-pc32-1994",
+ "make": "Honda",
+ "model": "CB500 twin (PC32)",
+ "name": "Honda CB500 twin (PC32)",
+ "years": [
+  1994,
+  2003
+ ],
+ "match": [
+  "cb500",
+  "cb 500",
+  "pc32",
+  "cb500s",
+  "cb500 twin",
+  "cb500 1996"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "499 cc liquid-cooled parallel twin, two carbs, six-speed",
+ "intro": "Honda's 90s twin, famous as a tough commuter. Two carbs and a long-lasting engine.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Two carbs",
+   "Sync them"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "CB500"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "harley-davidson-night-train-standard-custom-deuce-twin-cam-2000",
+ "make": "Harley-Davidson",
+ "model": "Night Train / Standard / Custom / Deuce (Twin Cam)",
+ "name": "Harley-Davidson Twin Cam Softail (Night Train, Standard, Custom, Deuce)",
+ "years": [
+  2000,
+  2009
+ ],
+ "match": [
+  "night train",
+  "fxstb",
+  "softail standard",
+  "fxst",
+  "fxstd",
+  "deuce",
+  "softail deuce",
+  "fxstc",
+  "softail custom"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "88 or 96 cubic inch Twin Cam B V-twin, counterbalanced, carb or fuel injection, belt drive",
+ "intro": "The Twin Cam Softails. A counterbalanced engine in a rigid-look frame, with carbs or injection depending on year.",
+ "focus": [
+  [
+   "Twin Cam B",
+   "Air-cooled"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "Cam tensioners",
+   "Check shoes"
+  ],
+  [
+   "Belt",
+   "Check tension"
+  ],
+  [
+   "Primary",
+   "Change oil"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "E": [
+   "Twin Cam engines from these years use spring-loaded cam chain tensioners with plastic shoes. Check the shoes for wear before you trust the engine."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Harley-Davidson has issued several recalls that touch these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "HDForums",
+   "url": "https://www.hdforums.com/",
+   "what": "Large owner forum for all Harley-Davidson models."
+  }
+ ],
+ "silhouette": "harley-davidson-night-train-standard-custom-deuce-twin-cam-2000",
+ "areas": [],
+ "heroName": "NIGHT TRAIN",
+ "hero": {
+  "src": "img/hero/harley-davidson-night-train-standard-custom-deuce-twin-cam-2000.jpg",
+  "artist": "John Schanlaub",
+  "page": "https://commons.wikimedia.org/wiki/File:HD_Night_Train.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

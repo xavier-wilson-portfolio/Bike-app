@@ -1,0 +1,61 @@
+{
+ "id": "velocette-le-noddy-1948",
+ "make": "Velocette",
+ "model": "LE (Noddy)",
+ "name": "Velocette LE",
+ "years": [
+  1948,
+  1970
+ ],
+ "match": [
+  "le",
+  "velocette le",
+  "noddy",
+  "noddy bike",
+  "valiant",
+  "vogue"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "149 or 192 cc water-cooled side-valve flat twin, shaft drive",
+ "intro": "Velocette's quiet little water-cooled twin, used by British police. Shaft drive, leg shields and hand starting on early ones.",
+ "focus": [
+  [
+   "Flat twin",
+   "Water-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Cooling",
+   "Check radiator"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "LE"
+}

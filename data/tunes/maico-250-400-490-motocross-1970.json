@@ -1,0 +1,68 @@
+{
+ "id": "maico-250-400-490-motocross-1970",
+ "make": "Maico",
+ "model": "250 / 400 / 490 motocross",
+ "name": "Maico 250 / 400 / 490 motocross",
+ "years": [
+  1970,
+  1987
+ ],
+ "match": [
+  "maico",
+  "maico 490",
+  "maico 400",
+  "maico 250",
+  "maico 440",
+  "maico 501",
+  "maico mc"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "247 to 488 cc air-cooled two-stroke single, premix",
+ "intro": "The German motocross two-strokes known for great handling. Premix and a big vintage racing scene.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Ignition",
+   "Check flywheel"
+  ],
+  [
+   "Suspension",
+   "Rebuild it"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "MAICO"
+}

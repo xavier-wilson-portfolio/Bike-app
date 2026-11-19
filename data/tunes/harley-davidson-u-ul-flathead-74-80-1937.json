@@ -1,0 +1,67 @@
+{
+ "id": "harley-davidson-u-ul-flathead-74-80-1937",
+ "make": "Harley-Davidson",
+ "model": "U / UL Flathead 74-80",
+ "name": "Harley-Davidson U / UL Flathead",
+ "years": [
+  1937,
+  1948
+ ],
+ "match": [
+  "ul",
+  "uh",
+  "ulh",
+  "u 74",
+  "80 flathead",
+  "ul 74",
+  "u flathead",
+  "ul flathead"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "74 or 80 cubic inch air-cooled side-valve V-twin, recirculating oil",
+ "intro": "The big flathead that ran beside the Knucklehead. Recirculating oil, hand shift and a strong club scene.",
+ "focus": [
+  [
+   "Flathead twin",
+   "Air-cooled"
+  ],
+  [
+   "Oil pump",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Set tappets"
+  ],
+  [
+   "Hand shift",
+   "Check linkage"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "E": [
+   "It is a flathead. The valves sit beside the cylinder, so set the tappets with the engine cold and check the valve guides for wear."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "UL"
+}

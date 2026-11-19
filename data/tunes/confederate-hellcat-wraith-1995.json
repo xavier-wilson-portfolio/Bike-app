@@ -1,0 +1,60 @@
+{
+ "id": "confederate-hellcat-wraith-1995",
+ "make": "Confederate",
+ "model": "Hellcat / Wraith",
+ "name": "Confederate Hellcat / Wraith",
+ "years": [
+  1995,
+  2017
+ ],
+ "match": [
+  "hellcat",
+  "wraith",
+  "confederate",
+  "fighter",
+  "g2 hellcat",
+  "p51",
+  "x132"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "1852 to 2163 cc air-cooled V-twin, carb or fuel injection",
+ "intro": "Confederate's hand-built bikes. Very few made, so treat every part as irreplaceable and work from photos.",
+ "focus": [
+  [
+   "Big twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "Frame",
+   "Check welds"
+  ],
+  [
+   "Belt",
+   "Check tension"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "HDForums",
+   "url": "https://www.hdforums.com/",
+   "what": "Large owner forum for all Harley-Davidson models."
+  }
+ ],
+ "heroName": "HELLCAT"
+}

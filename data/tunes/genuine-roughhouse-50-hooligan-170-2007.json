@@ -1,0 +1,64 @@
+{
+ "id": "genuine-roughhouse-50-hooligan-170-2007",
+ "make": "Genuine",
+ "model": "Roughhouse 50 / Hooligan 170",
+ "name": "Genuine Roughhouse 50 / Hooligan 170",
+ "years": [
+  2007,
+  2026
+ ],
+ "match": [
+  "roughhouse",
+  "roughhouse 50",
+  "hooligan",
+  "hooligan 170",
+  "rough house"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 cc two-stroke or 170 cc four-stroke, air-cooled, CVT",
+ "intro": "Genuine's rugged-looking scooters. Small, simple and built to be knocked around.",
+ "focus": [
+  [
+   "Single",
+   "Check type"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Gear oil",
+   "Change it"
+  ],
+  [
+   "Brakes",
+   "Check them"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Some years are two-strokes and some are four-strokes. Check yours before you buy oil, plugs or carb parts."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "HOOLIGAN"
+}

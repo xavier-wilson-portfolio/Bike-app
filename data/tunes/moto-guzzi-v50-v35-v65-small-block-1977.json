@@ -1,0 +1,74 @@
+{
+ "id": "moto-guzzi-v50-v35-v65-small-block-1977",
+ "make": "Moto Guzzi",
+ "model": "V50 / V35 / V65 small block",
+ "name": "Moto Guzzi V50 / V35 / V65",
+ "years": [
+  1977,
+  1990
+ ],
+ "match": [
+  "v50",
+  "v35",
+  "v65",
+  "v65 lario",
+  "v65 sp",
+  "v50 monza",
+  "v35 imola",
+  "lario",
+  "v65 florida",
+  "v75"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "346 to 743 cc air-cooled 90-degree V-twin, two carbs, shaft drive",
+ "intro": "Guzzi's small-block twins. Lighter than the big ones, with shaft drive and a lot of shared parts.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Sync them"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Clutch",
+   "Check it"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moto Guzzi National Owners Club",
+   "url": "https://www.mgnoc.org/",
+   "what": "US owner club for Moto Guzzi."
+  }
+ ],
+ "silhouette": "moto-guzzi-v50-v35-v65-small-block-1977",
+ "areas": [],
+ "heroName": "V65",
+ "hero": {
+  "src": "img/hero/moto-guzzi-v50-v35-v65-small-block-1977.jpg",
+  "artist": "Eugenio Di Gioia",
+  "page": "https://commons.wikimedia.org/wiki/File:Moto_guzzi_v65_sp.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

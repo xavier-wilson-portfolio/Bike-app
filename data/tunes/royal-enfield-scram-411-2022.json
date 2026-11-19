@@ -1,0 +1,59 @@
+{
+ "id": "royal-enfield-scram-411-2022",
+ "make": "Royal Enfield",
+ "model": "Scram 411",
+ "name": "Royal Enfield Scram 411",
+ "years": [
+  2022,
+  2025
+ ],
+ "match": [
+  "scram 411",
+  "scram",
+  "re scram",
+  "scram 411 royal enfield"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "411 cc air/oil-cooled single, fuel injected",
+ "intro": "The street-scrambler version of the Himalayan. A smaller front wheel and less bodywork on the same simple single.",
+ "focus": [
+  [
+   "Single",
+   "Air/oil-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Wiring",
+   "Check connectors"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with Royal Enfield owner threads."
+  }
+ ],
+ "heroName": "SCRAM 411"
+}

@@ -1,0 +1,70 @@
+{
+ "id": "suzuki-cavalcade-gv1400-1986",
+ "make": "Suzuki",
+ "model": "Cavalcade GV1400",
+ "name": "Suzuki Cavalcade GV1400",
+ "years": [
+  1986,
+  1988
+ ],
+ "match": [
+  "cavalcade",
+  "gv1400",
+  "gv 1400",
+  "gv1400gd",
+  "gv1400gt",
+  "cavalcade lxe"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "engine": "1360 cc liquid-cooled V4, four carbs, shaft drive",
+ "intro": "Suzuki's big 80s full dresser. A V4, air-adjustable suspension and lots of bodywork.",
+ "focus": [
+  [
+   "V4",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Air suspension",
+   "Check leaks"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The GS Resources forum",
+   "url": "https://www.thegsresources.com/_forum/",
+   "what": "Owner forum for Suzuki GS fours and twins."
+  }
+ ],
+ "silhouette": "suzuki-cavalcade-gv1400-1986",
+ "areas": [],
+ "heroName": "CAVALCADE",
+ "hero": {
+  "src": "img/hero/suzuki-cavalcade-gv1400-1986.jpg",
+  "artist": "Dbfruth",
+  "page": "https://commons.wikimedia.org/wiki/File:SuzukiGV1400LXE.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

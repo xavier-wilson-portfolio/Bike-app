@@ -1,0 +1,65 @@
+{
+ "id": "suzuki-re5-rotary-1975",
+ "make": "Suzuki",
+ "model": "RE5 Rotary",
+ "name": "Suzuki RE5 Rotary",
+ "years": [
+  1975,
+  1976
+ ],
+ "match": [
+  "re5",
+  "re-5",
+  "re5m",
+  "re5a",
+  "suzuki rotary",
+  "re 5"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "497 cc liquid-cooled single-rotor Wankel engine, two-stage carb, oil injection for the rotor",
+ "intro": "Suzuki's rotary bike. A Wankel engine with its own oiling, cooling and ignition quirks. Go slow and find a specialist.",
+ "focus": [
+  [
+   "Rotary engine",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Two-stage"
+  ],
+  [
+   "Rotor oiling",
+   "Check pump"
+  ],
+  [
+   "Ignition",
+   "Two plugs"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "The rotor seals get their oil from a pump fed by a separate tank. Check that system works before you run the engine."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "RE5"
+}

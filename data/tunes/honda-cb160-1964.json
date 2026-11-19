@@ -1,0 +1,63 @@
+{
+ "id": "honda-cb160-1964",
+ "make": "Honda",
+ "model": "CB160",
+ "name": "Honda CB160",
+ "years": [
+  1964,
+  1969
+ ],
+ "match": [
+  "cb160",
+  "cb 160",
+  "cl160",
+  "sl160",
+  "ss160",
+  "cb160 sport"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "161 cc air-cooled overhead-cam twin, two carbs, four-speed",
+ "intro": "Honda's little sport twin. Revs high, with two small carbs and points.",
+ "focus": [
+  [
+   "Twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Sync them"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Cam chain",
+   "Adjust it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Honda Twins forum",
+   "url": "https://www.vintagehondatwins.com/",
+   "what": "Owner forum for Honda twins of the 60s and 70s."
+  }
+ ],
+ "heroName": "CB160"
+}

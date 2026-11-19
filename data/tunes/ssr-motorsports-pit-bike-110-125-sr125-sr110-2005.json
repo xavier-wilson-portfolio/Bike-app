@@ -1,0 +1,63 @@
+{
+ "id": "ssr-motorsports-pit-bike-110-125-sr125-sr110-2005",
+ "make": "SSR Motorsports",
+ "model": "Pit bike 110 / 125 (SR125, SR110)",
+ "name": "SSR pit bike (SR110, SR125)",
+ "years": [
+  2005,
+  2026
+ ],
+ "match": [
+  "sr125",
+  "sr110",
+  "ssr 125",
+  "ssr pit bike",
+  "sr150",
+  "sr189",
+  "ssr 110",
+  "pit bike"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "107 to 189 cc air-cooled horizontal single, carb",
+ "intro": "SSR's pit bikes with Honda-style horizontal engines. Simple, cheap and easy to swap parts on.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Clutch",
+   "Adjust it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Many of these were sold under several brand names and may not show up in the NHTSA search. Check with the seller or importer for open recalls.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "SSR"
+}

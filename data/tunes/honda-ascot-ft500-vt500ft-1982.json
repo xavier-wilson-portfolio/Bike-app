@@ -1,0 +1,75 @@
+{
+ "id": "honda-ascot-ft500-vt500ft-1982",
+ "make": "Honda",
+ "model": "Ascot FT500 / VT500FT",
+ "name": "Honda Ascot FT500 / VT500FT",
+ "years": [
+  1982,
+  1984
+ ],
+ "match": [
+  "ascot",
+  "ft500",
+  "ft 500",
+  "vt500ft",
+  "ascot 500",
+  "ft500 ascot",
+  "vt500 ascot"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "498 cc air-cooled single (FT500) or 491 cc liquid-cooled V-twin with shaft drive (VT500FT)",
+ "intro": "Honda's flat-track styled street bikes. The FT500 is a big single; the 1983 VT500FT is a V-twin with shaft drive.",
+ "focus": [
+  [
+   "Engine",
+   "Single or twin"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Starting",
+   "Check starter"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Final drive",
+   "Chain or shaft"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "K": [
+   "The FT500 uses a chain. The VT500FT uses a shaft, so check the final drive oil and splines instead."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "silhouette": "honda-ascot-ft500-vt500ft-1982",
+ "areas": [],
+ "heroName": "ASCOT",
+ "hero": {
+  "src": "img/hero/honda-ascot-ft500-vt500ft-1982.jpg",
+  "artist": "NESR",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_Ascot_FT500_(24968024400).jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
+}

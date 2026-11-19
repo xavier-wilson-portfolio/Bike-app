@@ -1,0 +1,64 @@
+{
+ "id": "ktm-400-520-525-exc-rfs-2000",
+ "make": "KTM",
+ "model": "400 / 520 / 525 EXC (RFS)",
+ "name": "KTM 400 / 520 / 525 EXC (RFS)",
+ "years": [
+  2000,
+  2007
+ ],
+ "match": [
+  "525 exc",
+  "520 exc",
+  "400 exc",
+  "525 mxc",
+  "520 sx",
+  "525 sx",
+  "rfs",
+  "525 xc",
+  "400 exc racing"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "398 to 510 cc liquid-cooled four-stroke single, carb, electric start",
+ "intro": "KTM's first RFS four-strokes. Electric start on most, carbs and a lot of hours on many examples.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Check jetting"
+  ],
+  [
+   "Valves",
+   "Check often"
+  ],
+  [
+   "Starter",
+   "Check clutch"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a KTM dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KTM Forums",
+   "url": "https://www.ktmforums.com/",
+   "what": "Owner forum for KTM street and adventure bikes."
+  }
+ ],
+ "heroName": "525 EXC"
+}

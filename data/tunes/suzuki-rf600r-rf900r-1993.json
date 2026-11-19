@@ -1,0 +1,71 @@
+{
+ "id": "suzuki-rf600r-rf900r-1993",
+ "make": "Suzuki",
+ "model": "RF600R / RF900R",
+ "name": "Suzuki RF600R / RF900R",
+ "years": [
+  1993,
+  1997
+ ],
+ "match": [
+  "rf900r",
+  "rf600r",
+  "rf900",
+  "rf600",
+  "rf 900",
+  "rf 600",
+  "rf400"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "599 or 937 cc liquid-cooled DOHC inline four, four carbs",
+ "intro": "Suzuki's 90s sport tourers. Four carbs, a full fairing and a comfortable riding position.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Suzuki Forums",
+   "url": "https://www.suzuki-forums.com/forums/",
+   "what": "General owner forum for Suzuki motorcycles."
+  }
+ ],
+ "silhouette": "suzuki-rf600r-rf900r-1993",
+ "areas": [],
+ "heroName": "RF900R",
+ "hero": {
+  "src": "img/hero/suzuki-rf600r-rf900r-1993.jpg",
+  "artist": "Fletcher6",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_RF_900R.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

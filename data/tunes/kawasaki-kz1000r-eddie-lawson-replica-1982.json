@@ -1,0 +1,62 @@
+{
+ "id": "kawasaki-kz1000r-eddie-lawson-replica-1982",
+ "make": "Kawasaki",
+ "model": "KZ1000R Eddie Lawson Replica",
+ "name": "Kawasaki KZ1000R Eddie Lawson Replica",
+ "years": [
+  1982,
+  1983
+ ],
+ "match": [
+  "kz1000r",
+  "eddie lawson replica",
+  "elr",
+  "kz1000r1",
+  "kz1000r2",
+  "lawson replica",
+  "kz1000 elr"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "998 cc air-cooled DOHC inline four, four carbs",
+ "intro": "Kawasaki's superbike replica in lime green. A KZ1000J engine with race styling and very collectible now.",
+ "focus": [
+  [
+   "Inline four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KZRider forum",
+   "url": "https://www.kzrider.com/",
+   "what": "Owner forum for classic Kawasakis."
+  }
+ ],
+ "heroName": "KZ1000R"
+}

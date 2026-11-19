@@ -1,0 +1,78 @@
+{
+ "id": "peugeot-103-moped-1971",
+ "make": "Peugeot",
+ "model": "103 moped",
+ "name": "Peugeot 103",
+ "years": [
+  1971,
+  1990
+ ],
+ "match": [
+  "103",
+  "peugeot 103",
+  "103 sp",
+  "103 vogue",
+  "102",
+  "104",
+  "105",
+  "103 mvl"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "49 cc air-cooled two-stroke single, premix, variator on some",
+ "intro": "Peugeot's long-running moped. Simple two-stroke, premix and a lot of tuning parts in Europe.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Variator",
+   "Inspect"
+  ],
+  [
+   "Pedals",
+   "Lube chain"
+  ],
+  [
+   "Brakes",
+   "Drums"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Moped two-strokes run premix. Mix the oil into the fuel at the ratio in the manual, usually around 50 to 1 with modern oil."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "silhouette": "peugeot-103-moped-1971",
+ "areas": [],
+ "heroName": "PEUGEOT 103",
+ "hero": {
+  "src": "img/hero/peugeot-103-moped-1971.jpg",
+  "artist": "joepyrek",
+  "page": "https://commons.wikimedia.org/wiki/File:Peugeot_103_moped.jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
+}

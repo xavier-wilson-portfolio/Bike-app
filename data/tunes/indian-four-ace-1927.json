@@ -1,0 +1,65 @@
+{
+ "id": "indian-four-ace-1927",
+ "make": "Indian",
+ "model": "Four (Ace)",
+ "name": "Indian Four (Ace)",
+ "years": [
+  1927,
+  1942
+ ],
+ "match": [
+  "indian four",
+  "ace",
+  "indian ace",
+  "model 401",
+  "model 402",
+  "model 440",
+  "four 1940",
+  "ace four"
+ ],
+ "style": "touring",
+ "drive": "chain",
+ "engine": "1265 cc air-cooled inline four, F-head or reversed valves, one carb",
+ "intro": "Indian's inline four, grown from the Ace. Rare, complex and best restored with club help.",
+ "focus": [
+  [
+   "Inline four",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Oiling",
+   "Check pump"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "silhouette": "indian-four-ace-1927",
+ "areas": [],
+ "heroName": "INDIAN FOUR"
+}

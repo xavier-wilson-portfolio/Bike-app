@@ -1,0 +1,71 @@
+{
+ "id": "motobecane-mobylette-50v-moped-1960",
+ "make": "Motobecane",
+ "model": "Mobylette / 50V moped",
+ "name": "Motobecane Mobylette / 50V",
+ "years": [
+  1960,
+  1990
+ ],
+ "match": [
+  "mobylette",
+  "50v",
+  "motobecane",
+  "moby",
+  "40v",
+  "av88",
+  "mobylette 50v",
+  "motobecane 50v"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "49 cc air-cooled two-stroke single, variator, premix, pedals",
+ "intro": "The French mopeds. A belt variator, premix and a pressed-steel or tube frame depending on model.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Variator",
+   "Inspect"
+  ],
+  [
+   "Pedals",
+   "Lube chain"
+  ],
+  [
+   "Brakes",
+   "Drums"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Moped two-strokes run premix. Mix the oil into the fuel at the ratio in the manual, usually around 50 to 1 with modern oil."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "silhouette": "motobecane-mobylette-50v-moped-1960",
+ "areas": [],
+ "heroName": "MOBYLETTE"
+}

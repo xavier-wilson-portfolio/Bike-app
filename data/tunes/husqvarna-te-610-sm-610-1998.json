@@ -1,0 +1,61 @@
+{
+ "id": "husqvarna-te-610-sm-610-1998",
+ "make": "Husqvarna",
+ "model": "TE 610 / SM 610",
+ "name": "Husqvarna TE 610 / SM 610",
+ "years": [
+  1998,
+  2010
+ ],
+ "match": [
+  "te 610",
+  "sm 610",
+  "te610",
+  "sm610",
+  "te 610e",
+  "sm 610s",
+  "te 570",
+  "sm 570"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "576 cc liquid-cooled four-valve single, carb or fuel injection, electric start",
+ "intro": "The Cagiva-era big Husky singles. Tough, with electric start and a lot of shared parts across years.",
+ "focus": [
+  [
+   "Big single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Starter",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Husqvarna dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "TE 610"
+}

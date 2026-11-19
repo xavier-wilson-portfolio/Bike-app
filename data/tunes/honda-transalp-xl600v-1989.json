@@ -1,0 +1,63 @@
+{
+ "id": "honda-transalp-xl600v-1989",
+ "make": "Honda",
+ "model": "Transalp XL600V",
+ "name": "Honda Transalp XL600V",
+ "years": [
+  1989,
+  1990
+ ],
+ "match": [
+  "xl600v",
+  "transalp",
+  "transalp 600",
+  "xl 600v",
+  "xl650v",
+  "transalp 650"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "583 cc liquid-cooled 52-degree V-twin, two carbs",
+ "intro": "The first Transalp, sold in the US for two years. A tough V-twin with two carbs and a half fairing.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "silhouette": "honda-transalp-xl600v-1989",
+ "areas": [],
+ "heroName": "TRANSALP"
+}

@@ -1,0 +1,79 @@
+{
+ "id": "mz-etz-250-ts-250-1973",
+ "make": "MZ",
+ "model": "ETZ 250 / TS 250",
+ "name": "MZ ETZ 250 / TS 250",
+ "years": [
+  1973,
+  1990
+ ],
+ "match": [
+  "etz 250",
+  "ts 250",
+  "etz251",
+  "etz 251",
+  "ts250",
+  "etz250",
+  "mz 250",
+  "etz 150",
+  "ts 150"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "143 or 243 cc air-cooled two-stroke single, premix or oil injection, enclosed chain",
+ "intro": "The East German MZ two-strokes. Simple, tough, with fully enclosed chains and oil injection on some ETZs.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Check oiling"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Chain cases",
+   "Check rubber"
+  ],
+  [
+   "Parts",
+   "Check supply"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Some ETZs have oil injection and others run premix. Check yours before you fill it."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "silhouette": "mz-etz-250-ts-250-1973",
+ "areas": [],
+ "heroName": "MZ",
+ "hero": {
+  "src": "img/hero/mz-etz-250-ts-250-1973.jpg",
+  "artist": "Tomaszwaszak",
+  "page": "https://commons.wikimedia.org/wiki/File:MZ_ETZ_150_captured_in_1993.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

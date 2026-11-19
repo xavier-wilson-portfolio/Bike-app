@@ -1,0 +1,70 @@
+{
+ "id": "ariel-red-hunter-nh-1932",
+ "make": "Ariel",
+ "model": "Red Hunter / NH",
+ "name": "Ariel Red Hunter",
+ "years": [
+  1932,
+  1959
+ ],
+ "match": [
+  "red hunter",
+  "nh",
+  "vh",
+  "ariel red hunter",
+  "nh350",
+  "vh500",
+  "vb",
+  "kh"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "347 or 497 cc air-cooled OHV single or twin, magneto",
+ "intro": "Ariel's sporting singles and twins. Magneto ignition, a separate gearbox and a big club following.",
+ "focus": [
+  [
+   "OHV engine",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Magneto",
+   "Check spark"
+  ],
+  [
+   "Gearbox",
+   "Separate oil"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ],
+  "K": [
+   "The gearbox is separate from the engine and has its own oil. Check and change both, and set the primary chain."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "RED HUNTER"
+}

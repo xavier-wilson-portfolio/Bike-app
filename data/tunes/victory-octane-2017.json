@@ -1,0 +1,60 @@
+{
+ "id": "victory-octane-2017",
+ "make": "Victory",
+ "model": "Octane",
+ "name": "Victory Octane",
+ "years": [
+  2017,
+  2017
+ ],
+ "match": [
+  "octane",
+  "victory octane",
+  "octane 1200"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "1179 cc liquid-cooled 60-degree V-twin, fuel injected, belt drive",
+ "intro": "Victory's last model, built on the Indian Scout platform. Most engine parts are shared with the Scout.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Belt",
+   "Check tension"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Victory Motorcycle Club forums",
+   "url": "https://www.victorymotorcycleclub.com/",
+   "what": "Owner club for Victory motorcycles."
+  }
+ ],
+ "silhouette": "victory-octane-2017",
+ "areas": [],
+ "heroName": "OCTANE"
+}

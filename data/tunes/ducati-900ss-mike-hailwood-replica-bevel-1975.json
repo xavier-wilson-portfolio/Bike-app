@@ -1,0 +1,67 @@
+{
+ "id": "ducati-900ss-mike-hailwood-replica-bevel-1975",
+ "make": "Ducati",
+ "model": "900SS / Mike Hailwood Replica (bevel)",
+ "name": "Ducati 900SS / MHR (bevel)",
+ "years": [
+  1975,
+  1985
+ ],
+ "match": [
+  "mhr",
+  "mike hailwood replica",
+  "hailwood replica",
+  "900ss bevel",
+  "900 ss bevel",
+  "mhr 900",
+  "mille mhr",
+  "square case"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "864 or 973 cc air-cooled bevel-drive desmo V-twin, two carbs",
+ "intro": "The square-case bevel 900s. Desmo heads, big carbs and the race replica bodywork on the MHR.",
+ "focus": [
+  [
+   "Bevel twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Bevel drive",
+   "Check backlash"
+  ],
+  [
+   "Desmo valves",
+   "Shim check"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "The bevel-drive cams are set with shims and need patience. Check the bevel gear backlash and the desmo shims before you run it hard."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "heroName": "MHR"
+}

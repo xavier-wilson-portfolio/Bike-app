@@ -1,0 +1,62 @@
+{
+ "id": "yamaha-tx750-1972",
+ "make": "Yamaha",
+ "model": "TX750",
+ "name": "Yamaha TX750",
+ "years": [
+  1972,
+  1973
+ ],
+ "match": [
+  "tx750",
+  "tx 750",
+  "tx750a"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "743 cc air-cooled parallel twin, two carbs, balancer shafts",
+ "intro": "Yamaha's early 750 twin with balancer shafts. Oil supply and the balancer chain are the known weak spots.",
+ "focus": [
+  [
+   "Big twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Sync them"
+  ],
+  [
+   "Oiling",
+   "Check supply"
+  ],
+  [
+   "Balancer",
+   "Check chain"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Oil starvation hurt many TX750s. Check the oil level often and look for updated oil-system parts before you ride it hard."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "TX750"
+}

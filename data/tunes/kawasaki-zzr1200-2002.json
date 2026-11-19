@@ -1,0 +1,68 @@
+{
+ "id": "kawasaki-zzr1200-2002",
+ "make": "Kawasaki",
+ "model": "ZZR1200",
+ "name": "Kawasaki ZZR1200",
+ "years": [
+  2002,
+  2005
+ ],
+ "match": [
+  "zzr1200",
+  "zzr 1200",
+  "zx1200c",
+  "zzr-1200"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "1164 cc liquid-cooled DOHC inline four, four carbs",
+ "intro": "Kawasaki's big sport tourer between the ZX-11 and ZX-14. Four carbs and a comfortable riding position.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KawiForums",
+   "url": "https://www.kawiforums.com/",
+   "what": "Owner forum for Kawasaki motorcycles."
+  }
+ ],
+ "silhouette": "kawasaki-zzr1200-2002",
+ "areas": [],
+ "heroName": "ZZR1200",
+ "hero": {
+  "src": "img/hero/kawasaki-zzr1200-2002.jpg",
+  "artist": "Atsushi Ueda",
+  "page": "https://commons.wikimedia.org/wiki/File:ZZR1200_2004.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

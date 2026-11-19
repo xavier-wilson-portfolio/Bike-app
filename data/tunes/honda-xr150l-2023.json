@@ -1,0 +1,59 @@
+{
+ "id": "honda-xr150l-2023",
+ "make": "Honda",
+ "model": "XR150L",
+ "name": "Honda XR150L",
+ "years": [
+  2023,
+  2026
+ ],
+ "match": [
+  "xr150l",
+  "xr150",
+  "xr 150l",
+  "xr 150"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "149 cc air-cooled single, carb, electric start",
+ "intro": "Honda's simple small dual-sport. A carb, drum rear brake and very low running costs.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Air filter",
+   "Clean it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XR's Only",
+   "url": "https://www.xrsonly.com/",
+   "what": "Parts and know-how for Honda XR dirt bikes."
+  }
+ ],
+ "heroName": "XR150L"
+}

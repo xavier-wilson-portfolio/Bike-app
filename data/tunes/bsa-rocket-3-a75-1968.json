@@ -1,0 +1,66 @@
+{
+ "id": "bsa-rocket-3-a75-1968",
+ "make": "BSA",
+ "model": "Rocket 3 (A75)",
+ "name": "BSA Rocket 3 (A75)",
+ "years": [
+  1968,
+  1972
+ ],
+ "match": [
+  "rocket 3",
+  "a75",
+  "rocket three",
+  "bsa rocket 3",
+  "a75r",
+  "a75v",
+  "rocket 3 1971"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "740 cc air-cooled OHV triple, three carbs, points",
+ "intro": "BSA's triple, sister to the Triumph Trident. Three carbs, three sets of points and an inclined engine.",
+ "focus": [
+  [
+   "OHV triple",
+   "Air-cooled"
+  ],
+  [
+   "Three carbs",
+   "Clean and sync"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Clutch",
+   "Diaphragm type"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BSA Owners Club",
+   "url": "https://www.bsaoc.org/",
+   "what": "Owner club for BSA motorcycles, with tech help and parts."
+  }
+ ],
+ "heroName": "ROCKET 3"
+}

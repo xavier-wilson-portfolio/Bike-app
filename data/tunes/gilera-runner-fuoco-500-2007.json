@@ -1,0 +1,69 @@
+{
+ "id": "gilera-runner-fuoco-500-2007",
+ "make": "Gilera",
+ "model": "Runner / Fuoco 500",
+ "name": "Gilera Runner / Fuoco 500",
+ "years": [
+  2007,
+  2012
+ ],
+ "match": [
+  "runner",
+  "fuoco",
+  "fuoco 500",
+  "runner 50",
+  "runner 200",
+  "runner vxr",
+  "gilera runner"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 to 493 cc single, CVT; the Fuoco has two leaning front wheels",
+ "intro": "Gilera's sporty scooters. The Runner is a small sport scooter; the Fuoco is the three-wheel MP3 relative.",
+ "focus": [
+  [
+   "Single",
+   "Check type"
+  ],
+  [
+   "Fuel",
+   "Check system"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Front end",
+   "Check linkage"
+  ],
+  [
+   "Bodywork",
+   "Many panels"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "silhouette": "gilera-runner-fuoco-500-2007",
+ "areas": [],
+ "heroName": "FUOCO",
+ "hero": {
+  "src": "img/hero/gilera-runner-fuoco-500-2007.jpg",
+  "artist": "aivo2010",
+  "page": "https://commons.wikimedia.org/wiki/File:Gilera_Fuoco_500.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

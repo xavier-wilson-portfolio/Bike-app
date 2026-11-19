@@ -1,0 +1,71 @@
+{
+ "id": "henderson-four-kj-de-luxe-1920",
+ "make": "Henderson",
+ "model": "Four (KJ / De Luxe)",
+ "name": "Henderson Four (KJ / De Luxe)",
+ "years": [
+  1920,
+  1931
+ ],
+ "match": [
+  "henderson",
+  "henderson four",
+  "kj",
+  "de luxe",
+  "deluxe",
+  "kj henderson",
+  "henderson kj"
+ ],
+ "style": "touring",
+ "drive": "chain",
+ "engine": "1301 cc air-cooled inline four, F-head or side-valve, one carb",
+ "intro": "The American inline four built by Excelsior. Very rare, very valuable and best restored with club help.",
+ "focus": [
+  [
+   "Inline four",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Oiling",
+   "Check system"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "silhouette": "henderson-four-kj-de-luxe-1920",
+ "areas": [],
+ "heroName": "HENDERSON",
+ "hero": {
+  "src": "img/hero/henderson-four-kj-de-luxe-1920.jpg",
+  "artist": "Rikita",
+  "page": "https://commons.wikimedia.org/wiki/File:Henderson_Four_1926.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

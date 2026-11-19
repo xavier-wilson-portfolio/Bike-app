@@ -1,0 +1,70 @@
+{
+ "id": "ducati-multistrada-v4-2021",
+ "make": "Ducati",
+ "model": "Multistrada V4",
+ "name": "Ducati Multistrada V4",
+ "years": [
+  2021,
+  2026
+ ],
+ "match": [
+  "multistrada v4",
+  "mts v4",
+  "multistrada v4s",
+  "multistrada v4 rally",
+  "multistrada v4 pikes peak",
+  "multistrada v4 s"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "1158 cc liquid-cooled V4 with valve springs, fuel injected",
+ "intro": "Ducati's V4 adventure bike. Spring valves instead of desmo, long service intervals and lots of electronics.",
+ "focus": [
+  [
+   "V4",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Electronics",
+   "Scan for codes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Ducati has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "silhouette": "ducati-multistrada-v4-2021",
+ "areas": [],
+ "heroName": "MULTISTRADA V4",
+ "hero": {
+  "src": "img/hero/ducati-multistrada-v4-2021.jpg",
+  "artist": "Oq10pass",
+  "page": "https://commons.wikimedia.org/wiki/File:Ducati_Multistrada_V4_S_%2725.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
+}

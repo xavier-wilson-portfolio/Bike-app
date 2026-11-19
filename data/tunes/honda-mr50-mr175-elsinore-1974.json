@@ -1,0 +1,68 @@
+{
+ "id": "honda-mr50-mr175-elsinore-1974",
+ "make": "Honda",
+ "model": "MR50 / MR175 Elsinore",
+ "name": "Honda MR50 / MR175 Elsinore",
+ "years": [
+  1974,
+  1977
+ ],
+ "match": [
+  "mr50",
+  "mr175",
+  "mr 175",
+  "mr250",
+  "mr 50",
+  "elsinore mr",
+  "mr175 elsinore"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "49 to 248 cc air-cooled two-stroke single, premix",
+ "intro": "Honda's small two-stroke Elsinore trail bikes. Premix and simple, with parts that are getting rare.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Ignition",
+   "Check spark"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "MR175"
+}

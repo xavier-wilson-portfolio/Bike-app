@@ -1,0 +1,69 @@
+{
+ "id": "janus-halcyon-250-gryphon-2016",
+ "make": "Janus",
+ "model": "Halcyon 250 / Gryphon",
+ "name": "Janus Halcyon 250 / Gryphon",
+ "years": [
+  2016,
+  2026
+ ],
+ "match": [
+  "halcyon",
+  "halcyon 250",
+  "gryphon",
+  "gryphon 450",
+  "phoenix",
+  "janus halcyon",
+  "halcyon 450"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "229 or 449 cc air-cooled single, carb or fuel injection",
+ "intro": "Janus's small hand-built bikes from Indiana. Simple singles and a strong support line from the factory.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Wiring",
+   "Check connectors"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "silhouette": "janus-halcyon-250-gryphon-2016",
+ "areas": [],
+ "heroName": "HALCYON",
+ "hero": {
+  "src": "img/hero/janus-halcyon-250-gryphon-2016.jpg",
+  "artist": "NTrimbach",
+  "page": "https://commons.wikimedia.org/wiki/File:2021_Model_Year_Janus_Halcyon_250_Motorcycle.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

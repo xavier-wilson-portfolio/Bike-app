@@ -1,0 +1,69 @@
+{
+ "id": "yamaha-yzf-r6-1999-2005-1999",
+ "make": "Yamaha",
+ "model": "YZF-R6 (1999-2005)",
+ "name": "Yamaha YZF-R6 (1999-2005)",
+ "years": [
+  1999,
+  2005
+ ],
+ "match": [
+  "yzf-r6",
+  "r6",
+  "yzf r6",
+  "yzfr6",
+  "r6 2003",
+  "r6s",
+  "yzf-r6s"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "599 cc liquid-cooled inline four, carbs until 2002 then fuel injection",
+ "intro": "The early R6. Carbs on the first ones, fuel injection from 2003, and a high-revving four either way.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel",
+   "Carbs or EFI"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "silhouette": "yamaha-yzf-r6-1999-2005-1999",
+ "areas": [],
+ "heroName": "R6",
+ "hero": {
+  "src": "img/hero/yamaha-yzf-r6-1999-2005-1999.jpg",
+  "artist": "Lothar Spurzem (Diskussion) 23:14, 1. Apr. 2017 (CEST)",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_R6_K265_(2017-03-31_ht).jpg",
+  "lic": "CC BY-SA 3.0 de",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en"
+ }
+}

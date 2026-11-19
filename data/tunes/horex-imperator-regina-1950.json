@@ -1,0 +1,71 @@
+{
+ "id": "horex-imperator-regina-1950",
+ "make": "Horex",
+ "model": "Imperator / Regina",
+ "name": "Horex Imperator / Regina",
+ "years": [
+  1950,
+  1960
+ ],
+ "match": [
+  "regina",
+  "imperator",
+  "horex regina",
+  "horex imperator",
+  "resident",
+  "regina 350",
+  "imperator 500"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "342 or 392 cc OHV single (Regina) or 392 to 497 cc OHC twin (Imperator), air-cooled",
+ "intro": "The postwar Horex road bikes. The Regina single and the Imperator twin, both rare outside Germany.",
+ "focus": [
+  [
+   "Engine",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "silhouette": "horex-imperator-regina-1950",
+ "areas": [],
+ "heroName": "REGINA",
+ "hero": {
+  "src": "img/hero/horex-imperator-regina-1950.jpg",
+  "artist": "Lothar Spurzem",
+  "page": "https://commons.wikimedia.org/wiki/File:Horex_Regina_400_(2014-09-13_7005_Sp).JPG",
+  "lic": "CC BY-SA 2.0 de",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0/de/deed.en"
+ }
+}

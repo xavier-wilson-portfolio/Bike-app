@@ -1,0 +1,62 @@
+{
+ "id": "kawasaki-ltd-450-en450-1985",
+ "make": "Kawasaki",
+ "model": "LTD 450 / EN450",
+ "name": "Kawasaki 454 LTD (EN450)",
+ "years": [
+  1985,
+  1990
+ ],
+ "match": [
+  "en450",
+  "ltd 450",
+  "454 ltd",
+  "en450a",
+  "kz454",
+  "454ltd",
+  "en 450"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "454 cc liquid-cooled DOHC parallel twin, two carbs, belt drive",
+ "intro": "Kawasaki's small cruiser of the 80s. Half a ZX900 engine, belt drive and two carbs.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Belt",
+   "Check tension"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vulcan Riders Association",
+   "url": "https://www.vulcanriders.org/",
+   "what": "Owner club and forum for Kawasaki Vulcans."
+  }
+ ],
+ "heroName": "454 LTD"
+}

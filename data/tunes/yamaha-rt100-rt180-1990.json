@@ -1,0 +1,65 @@
+{
+ "id": "yamaha-rt100-rt180-1990",
+ "make": "Yamaha",
+ "model": "RT100 / RT180",
+ "name": "Yamaha RT100 / RT180",
+ "years": [
+  1990,
+  2000
+ ],
+ "match": [
+  "rt100",
+  "rt180",
+  "rt 100",
+  "rt 180"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "98 or 171 cc air-cooled two-stroke single, Autolube oil injection",
+ "intro": "Yamaha's simple trail two-strokes of the 90s. Oil injection, a kick start and very few parts to fail.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Oil injection"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Autolube",
+   "Check pump"
+  ],
+  [
+   "Exhaust",
+   "Check carbon"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It has oil injection, not premix. Keep the oil tank filled with two-stroke oil and check the pump line for cracks."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Yamaha dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Enduros forum",
+   "url": "https://www.yamaha-enduros.com/",
+   "what": "Owner forum for vintage Yamaha two-stroke enduros."
+  }
+ ],
+ "heroName": "RT180"
+}

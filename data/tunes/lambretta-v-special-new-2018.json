@@ -1,0 +1,65 @@
+{
+ "id": "lambretta-v-special-new-2018",
+ "make": "Lambretta",
+ "model": "V-Special (new)",
+ "name": "Lambretta V-Special",
+ "years": [
+  2018,
+  2026
+ ],
+ "match": [
+  "v-special",
+  "v special",
+  "v125",
+  "v200",
+  "lambretta v200",
+  "lambretta v125",
+  "x300",
+  "g350"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 to 330 cc single, fuel injected on most, CVT",
+ "intro": "The modern Lambrettas. A steel body, fuel injection and a CVT; nothing in common with the old ones under the panels.",
+ "focus": [
+  [
+   "Single",
+   "Air or liquid"
+  ],
+  [
+   "Fuel injected",
+   "Check system"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Gear oil",
+   "Change it"
+  ],
+  [
+   "Body",
+   "Steel panels"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "silhouette": "lambretta-v-special-new-2018",
+ "areas": [],
+ "heroName": "V-SPECIAL"
+}

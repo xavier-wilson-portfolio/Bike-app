@@ -1,0 +1,61 @@
+{
+ "id": "honda-vfr800x-crossrunner-2016",
+ "make": "Honda",
+ "model": "VFR800X Crossrunner",
+ "name": "Honda VFR800X Crossrunner",
+ "years": [
+  2016,
+  2017
+ ],
+ "match": [
+  "vfr800x",
+  "crossrunner",
+  "vfr 800x",
+  "vfr800x crossrunner"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "782 cc liquid-cooled V4, fuel injected, VTEC",
+ "intro": "The tall-bars VFR. The same V4 with VTEC, on a frame with more suspension travel.",
+ "focus": [
+  [
+   "V4",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "VFRDiscussion",
+   "url": "https://www.vfrdiscussion.com/",
+   "what": "Owner forum for Honda VFR and Interceptor models."
+  }
+ ],
+ "silhouette": "honda-vfr800x-crossrunner-2016",
+ "areas": [],
+ "heroName": "CROSSRUNNER"
+}

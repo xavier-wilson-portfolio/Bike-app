@@ -1,0 +1,59 @@
+{
+ "id": "yamaha-scr950-2017",
+ "make": "Yamaha",
+ "model": "SCR950",
+ "name": "Yamaha SCR950",
+ "years": [
+  2017,
+  2018
+ ],
+ "match": [
+  "scr950",
+  "scr 950",
+  "scr-950",
+  "yamaha scr950"
+ ],
+ "style": "standard",
+ "drive": "belt",
+ "engine": "942 cc air-cooled V-twin, fuel injected, belt drive",
+ "intro": "The Bolt engine in a scrambler setup. Fuel injected, air-cooled and belt drive.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Belt",
+   "Check tension"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Wheels",
+   "Spokes"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "heroName": "SCR950"
+}

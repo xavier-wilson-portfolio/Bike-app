@@ -1,0 +1,68 @@
+{
+ "id": "royal-enfield-classic-650-2025",
+ "make": "Royal Enfield",
+ "model": "Classic 650",
+ "name": "Royal Enfield Classic 650",
+ "years": [
+  2025,
+  2026
+ ],
+ "match": [
+  "classic 650",
+  "royal enfield classic 650",
+  "re classic 650",
+  "classic 650 twin"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "648 cc air/oil-cooled parallel twin, fuel injected",
+ "intro": "The Classic styling on the 650 twin. Heavy, simple and easy to work on.",
+ "focus": [
+  [
+   "Twin",
+   "Air/oil-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Wiring",
+   "Check connectors"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with Royal Enfield owner threads."
+  }
+ ],
+ "silhouette": "royal-enfield-classic-650-2025",
+ "areas": [],
+ "heroName": "CLASSIC 650",
+ "hero": {
+  "src": "img/hero/royal-enfield-classic-650-2025.jpg",
+  "artist": "Al*from*Lig",
+  "page": "https://commons.wikimedia.org/wiki/File:Royal_Enfield_(39759).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

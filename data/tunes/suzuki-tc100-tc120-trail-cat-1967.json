@@ -1,0 +1,69 @@
+{
+ "id": "suzuki-tc100-tc120-trail-cat-1967",
+ "make": "Suzuki",
+ "model": "TC100 / TC120 Trail Cat",
+ "name": "Suzuki TC100 / TC120 Trail Cat",
+ "years": [
+  1967,
+  1977
+ ],
+ "match": [
+  "tc100",
+  "tc120",
+  "trail cat",
+  "tc 120",
+  "tc 100",
+  "tc185",
+  "tc90"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "97 to 183 cc air-cooled two-stroke single, oil injection, dual-range gearbox",
+ "intro": "Suzuki's small trail bikes with a high and low range. Oil injection, points and a simple frame.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Oil injection"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Dual range",
+   "Check lever"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Suzuki's CCI system pumps oil into the engine, so it does not need premix. Check the oil tank, pump and lines. If the pump was removed, it runs premix.",
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "TRAIL CAT"
+}

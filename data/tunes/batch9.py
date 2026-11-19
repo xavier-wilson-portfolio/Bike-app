@@ -17,7 +17,7 @@ B9.append(dict(id="suzuki-gt380-1972", make="Suzuki", model="GT380", name="Suzuk
   forums=[OJB]))
 
 B9.append(dict(id="harley-davidson-softail-2018", make="Harley-Davidson", model="Softail (M8)", name="Harley-Davidson Softail (Milwaukee-Eight)", years=[2018, 2026],
-  match=["softail", "fat boy", "heritage classic", "street bob", "low rider", "low rider s", "breakout", "fat bob", "sport glide", "deluxe", "flhc", "flhcs", "fxlrs", "fxbb"], style="cruiser", drive="belt",
+  match=["softail", "fat boy", "heritage classic", "street bob", "low rider", "low rider s", "breakout", "fat bob", "deluxe", "flhc", "flhcs", "fxlrs", "fxbb"], style="cruiser", drive="belt",
   engine="Milwaukee-Eight 107 or 114 V-twin, fuel injected, belt drive",
   intro="The 2018-on Softail frame with the Milwaukee-Eight. Check the rear shock adjuster recall first.",
   focus=[["Milwaukee-Eight", "107 or 114 cu in"], ["Fuel injected", "No carbs"], ["Shock adjuster recall", "Can puncture the tire"], ["Belt drive", "Check for cracks"], ["Oil sumping", "Early bikes"]],

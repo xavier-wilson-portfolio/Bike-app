@@ -1,0 +1,65 @@
+{
+ "id": "kawasaki-kx65-kx60-1985",
+ "make": "Kawasaki",
+ "model": "KX65 / KX60",
+ "name": "Kawasaki KX65 / KX60",
+ "years": [
+  1985,
+  2026
+ ],
+ "match": [
+  "kx65",
+  "kx60",
+  "kx 65",
+  "kx 60"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "60 or 65 cc liquid-cooled two-stroke single, carb, premix",
+ "intro": "Kawasaki's small kids' motocross two-strokes. Premix, a six-speed box and parts that wear fast.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Kawasaki dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "KX65"
+}

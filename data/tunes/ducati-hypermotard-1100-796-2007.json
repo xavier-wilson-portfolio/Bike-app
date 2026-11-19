@@ -1,0 +1,70 @@
+{
+ "id": "ducati-hypermotard-1100-796-2007",
+ "make": "Ducati",
+ "model": "Hypermotard 1100 / 796",
+ "name": "Ducati Hypermotard 1100 / 796",
+ "years": [
+  2007,
+  2012
+ ],
+ "match": [
+  "hypermotard 1100",
+  "hypermotard 796",
+  "hypermotard 1100 evo",
+  "hypermotard",
+  "hyper 1100",
+  "hypermotard 1100s"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "803 or 1078 cc air-cooled two-valve desmo V-twin, fuel injected",
+ "intro": "The first Hypermotards. Air-cooled DS engines, a tall supermoto stance and a dry clutch on the 1100.",
+ "focus": [
+  [
+   "Desmo twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Belts",
+   "Change them"
+  ],
+  [
+   "Desmo valves",
+   "Shim check"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Desmo valve service needs both opening and closing shims checked. Follow the interval in the manual; it is not a job to skip."
+  ],
+  "K": [
+   "Many of these have a dry clutch. The rattle is normal, but check the plates and the basket for notches."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Ducati has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "silhouette": "ducati-hypermotard-1100-796-2007",
+ "areas": [],
+ "heroName": "HYPERMOTARD"
+}

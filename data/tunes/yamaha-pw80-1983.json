@@ -1,0 +1,66 @@
+{
+ "id": "yamaha-pw80-1983",
+ "make": "Yamaha",
+ "model": "PW80",
+ "name": "Yamaha PW80",
+ "years": [
+  1983,
+  2006
+ ],
+ "match": [
+  "pw80",
+  "pw 80",
+  "peewee 80",
+  "pee wee 80",
+  "y-zinger 80"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "79 cc air-cooled two-stroke single, oil injection, automatic clutch",
+ "intro": "Yamaha's step-up kids' bike. A two-stroke with oil injection and a three-speed with an automatic clutch.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Oil injection"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Auto clutch",
+   "Inspect"
+  ],
+  [
+   "Exhaust",
+   "Check carbon"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It has oil injection, not premix. Keep the oil tank filled with two-stroke oil and check the pump line for cracks."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Yamaha dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "PW80"
+}

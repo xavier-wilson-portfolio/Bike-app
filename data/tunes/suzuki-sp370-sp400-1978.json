@@ -1,0 +1,61 @@
+{
+ "id": "suzuki-sp370-sp400-1978",
+ "make": "Suzuki",
+ "model": "SP370 / SP400",
+ "name": "Suzuki SP370 / SP400",
+ "years": [
+  1978,
+  1980
+ ],
+ "match": [
+  "sp370",
+  "sp400",
+  "sp 370",
+  "sp 400",
+  "dr370",
+  "dr400"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "369 or 396 cc air-cooled overhead-cam single, carb, kick start",
+ "intro": "Suzuki's first four-stroke dual-sports. A big single, a kick start and a decompressor.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Starting",
+   "Decompressor"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "SP400"
+}

@@ -1,0 +1,60 @@
+{
+ "id": "suzuki-gsx1250fa-2011",
+ "make": "Suzuki",
+ "model": "GSX1250FA",
+ "name": "Suzuki GSX1250FA",
+ "years": [
+  2011,
+  2012
+ ],
+ "match": [
+  "gsx1250fa",
+  "gsx1250",
+  "gsx 1250",
+  "gsx1250f",
+  "gsx 1250fa"
+ ],
+ "style": "touring",
+ "drive": "chain",
+ "engine": "1255 cc liquid-cooled inline four, fuel injected, ABS",
+ "intro": "Suzuki's faired Bandit 1250. Fuel injected, liquid cooled, with ABS and a lot of low-end pull.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Suzuki Forums",
+   "url": "https://www.suzuki-forums.com/forums/",
+   "what": "General owner forum for Suzuki motorcycles."
+  }
+ ],
+ "heroName": "GSX1250FA"
+}

@@ -1,0 +1,62 @@
+{
+ "id": "italjet-dragster-125-200-2022",
+ "make": "Italjet",
+ "model": "Dragster 125 / 200",
+ "name": "Italjet Dragster 125 / 200",
+ "years": [
+  2022,
+  2026
+ ],
+ "match": [
+  "dragster",
+  "dragster 125",
+  "dragster 200",
+  "italjet dragster",
+  "dragster 300"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "125 or 181 cc liquid-cooled single, fuel injected, CVT",
+ "intro": "Italjet's exposed-frame sport scooter. Hub-center steering, liquid cooling and a lot of unique parts.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Hub steering",
+   "Check play"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Parts",
+   "Check supply"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "silhouette": "italjet-dragster-125-200-2022",
+ "areas": [],
+ "heroName": "DRAGSTER"
+}

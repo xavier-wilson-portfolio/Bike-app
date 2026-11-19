@@ -1,0 +1,63 @@
+{
+ "id": "kawasaki-z750-z750s-2005",
+ "make": "Kawasaki",
+ "model": "Z750 / Z750S",
+ "name": "Kawasaki Z750 / Z750S",
+ "years": [
+  2005,
+  2012
+ ],
+ "match": [
+  "z750",
+  "z750s",
+  "z 750",
+  "z750r",
+  "zr750j",
+  "z750 2005"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "748 cc liquid-cooled inline four, fuel injected",
+ "intro": "Kawasaki's middle Z. Fuel injected, a steel frame and a strong midrange.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KawiForums",
+   "url": "https://www.kawiforums.com/",
+   "what": "Owner forum for Kawasaki motorcycles."
+  }
+ ],
+ "silhouette": "kawasaki-z750-z750s-2005",
+ "areas": [],
+ "heroName": "Z750"
+}

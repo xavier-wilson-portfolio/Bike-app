@@ -1,0 +1,62 @@
+{
+ "id": "yamaha-xj400-seca-maxim-1980",
+ "make": "Yamaha",
+ "model": "XJ400 Seca / Maxim",
+ "name": "Yamaha XJ400 Seca / Maxim",
+ "years": [
+  1980,
+  1983
+ ],
+ "match": [
+  "xj400",
+  "xj 400",
+  "seca 400",
+  "maxim 400",
+  "xj400 seca",
+  "xj400 maxim",
+  "xj400g"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "398 cc air-cooled DOHC inline four, four carbs",
+ "intro": "Yamaha's small four of the early 80s. Four little carbs and a chain final drive.",
+ "focus": [
+  [
+   "Inline four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XJBikes forum",
+   "url": "https://www.xjbikes.com/forums/",
+   "what": "Owner forum for Yamaha XJ, Seca, Maxim and Radian fours."
+  }
+ ],
+ "heroName": "XJ400"
+}

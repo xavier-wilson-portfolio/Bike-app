@@ -1,0 +1,67 @@
+{
+ "id": "harley-davidson-sport-glide-flsb-2018",
+ "make": "Harley-Davidson",
+ "model": "Sport Glide (FLSB)",
+ "name": "Harley-Davidson Sport Glide",
+ "years": [
+  2018,
+  2021
+ ],
+ "match": [
+  "sport glide",
+  "flsb",
+  "softail sport glide"
+ ],
+ "style": "touring",
+ "drive": "belt",
+ "engine": "107 cubic inch Milwaukee-Eight V-twin, fuel injected, belt drive",
+ "intro": "A light Softail tourer with a small fairing and quick-release bags. The Milwaukee-Eight 107 in the newer Softail frame.",
+ "focus": [
+  [
+   "Milwaukee-Eight",
+   "Oil and air cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Electronics",
+   "Scan for codes"
+  ],
+  [
+   "Belt",
+   "Check tension"
+  ],
+  [
+   "Primary",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Harley-Davidson has issued several recalls that touch these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "HDForums",
+   "url": "https://www.hdforums.com/",
+   "what": "Large owner forum for all Harley-Davidson models."
+  }
+ ],
+ "silhouette": "harley-davidson-sport-glide-flsb-2018",
+ "areas": [],
+ "heroName": "SPORT GLIDE",
+ "hero": {
+  "src": "img/hero/harley-davidson-sport-glide-flsb-2018.jpg",
+  "artist": "Olinone",
+  "page": "https://commons.wikimedia.org/wiki/File:Harley_Sport_Glide_2022.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

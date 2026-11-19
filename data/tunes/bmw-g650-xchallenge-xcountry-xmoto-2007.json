@@ -1,0 +1,63 @@
+{
+ "id": "bmw-g650-xchallenge-xcountry-xmoto-2007",
+ "make": "BMW",
+ "model": "G650 Xchallenge / Xcountry / Xmoto",
+ "name": "BMW G650X (Xchallenge, Xcountry, Xmoto)",
+ "years": [
+  2007,
+  2009
+ ],
+ "match": [
+  "g650x",
+  "xchallenge",
+  "xcountry",
+  "xmoto",
+  "g650 xchallenge",
+  "g650 xcountry",
+  "g650 xmoto",
+  "g 650 x"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "652 cc liquid-cooled Rotax single, fuel injected",
+ "intro": "BMW's light 650 singles of the late 2000s. Fuel injected, with an air shock on the Xchallenge.",
+ "focus": [
+  [
+   "Rotax single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Air shock",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "BMW has issued several recalls across these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "F650.com",
+   "url": "https://f650.com/",
+   "what": "Owner forum and FAQs for BMW F650 and F800 models."
+  }
+ ],
+ "heroName": "G650X"
+}

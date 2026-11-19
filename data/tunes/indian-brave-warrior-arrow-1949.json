@@ -1,0 +1,63 @@
+{
+ "id": "indian-brave-warrior-arrow-1949",
+ "make": "Indian",
+ "model": "Brave / Warrior / Arrow",
+ "name": "Indian Brave / Warrior / Arrow",
+ "years": [
+  1949,
+  1953
+ ],
+ "match": [
+  "warrior",
+  "brave",
+  "arrow",
+  "indian warrior",
+  "indian brave",
+  "indian arrow",
+  "warrior tt",
+  "scout 1949"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "220 cc single (Arrow, Brave) or 436 cc OHV twin (Scout, Warrior), air-cooled",
+ "intro": "Indian's postwar lightweights. Modern ideas, rushed into production, with reliability problems to watch for.",
+ "focus": [
+  [
+   "Engine",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "WARRIOR"
+}

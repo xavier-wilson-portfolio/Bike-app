@@ -1,0 +1,62 @@
+{
+ "id": "honda-vfr400r-nc30-1989",
+ "make": "Honda",
+ "model": "VFR400R NC30",
+ "name": "Honda VFR400R NC30",
+ "years": [
+  1989,
+  1992
+ ],
+ "match": [
+  "nc30",
+  "vfr400r",
+  "vfr400",
+  "vfr 400",
+  "nc24",
+  "rvf400",
+  "nc35"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "399 cc liquid-cooled V4, gear-driven cams, four carbs, single-sided swingarm",
+ "intro": "The small RC30. A gray-import V4 with gear-driven cams that revs past 14,000 rpm.",
+ "focus": [
+  [
+   "V4",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Most of these were sold new outside the US, so the NHTSA search may not cover them. Ask a Honda dealer to check the frame number.",
+ "known": [],
+ "forums": [
+  {
+   "name": "VFRDiscussion",
+   "url": "https://www.vfrdiscussion.com/",
+   "what": "Owner forum for Honda VFR and Interceptor models."
+  }
+ ],
+ "heroName": "NC30"
+}

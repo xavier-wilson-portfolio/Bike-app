@@ -1,0 +1,77 @@
+{
+ "id": "honda-rc51-rvt1000r-2000",
+ "make": "Honda",
+ "model": "RC51 (RVT1000R)",
+ "name": "Honda RC51 (RVT1000R)",
+ "years": [
+  2000,
+  2006
+ ],
+ "match": [
+  "rc51",
+  "rc 51",
+  "rvt1000r",
+  "rvt 1000r",
+  "rvt1000",
+  "sp-1",
+  "sp-2",
+  "sp1",
+  "sp2"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "999 cc liquid-cooled 90-degree V-twin, fuel injected, gear-driven cams",
+ "intro": "Honda's V-twin superbike. Gear-driven cams, a big fuel injection system and a rear shock worth checking.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "F": [
+   "Check the regulator/rectifier and its connector. Heat damage there is a common cause of charging problems on these."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "CBR Forum",
+   "url": "https://www.cbrforum.com/",
+   "what": "Owner forum for Honda CBR models."
+  }
+ ],
+ "silhouette": "honda-rc51-rvt1000r-2000",
+ "areas": [],
+ "heroName": "RC51",
+ "hero": {
+  "src": "img/hero/honda-rc51-rvt1000r-2000.jpg",
+  "artist": "Aaron Brownlee(Ixab)",
+  "page": "https://commons.wikimedia.org/wiki/File:2001_Honda_RC51_SP1.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
+}

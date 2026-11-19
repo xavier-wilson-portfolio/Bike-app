@@ -1,0 +1,70 @@
+{
+ "id": "triumph-daytona-955i-t595-1997",
+ "make": "Triumph",
+ "model": "Daytona 955i / T595",
+ "name": "Triumph Daytona 955i / T595",
+ "years": [
+  1997,
+  2006
+ ],
+ "match": [
+  "daytona 955i",
+  "t595",
+  "daytona 955",
+  "955i",
+  "daytona t595",
+  "daytona 955i centennial"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "955 cc liquid-cooled triple, fuel injected, single-sided swingarm",
+ "intro": "Triumph's big triple sport bike. Fuel injected, with an aluminum perimeter frame.",
+ "focus": [
+  [
+   "Triple",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Triumph has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "silhouette": "triumph-daytona-955i-t595-1997",
+ "areas": [],
+ "heroName": "DAYTONA",
+ "hero": {
+  "src": "img/hero/triumph-daytona-955i-t595-1997.jpg",
+  "artist": "Dédélembrouille",
+  "page": "https://commons.wikimedia.org/wiki/File:Triumph_Daytona_955i_Mod%C3%A8le_2002.JPG",
+  "lic": "CC BY-SA 2.5",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.5"
+ }
+}

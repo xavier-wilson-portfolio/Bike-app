@@ -1,0 +1,71 @@
+{
+ "id": "suzuki-hayabusa-2008-2020-2008",
+ "make": "Suzuki",
+ "model": "Hayabusa (2008-2020)",
+ "name": "Suzuki Hayabusa (2008-2020)",
+ "years": [
+  2008,
+  2020
+ ],
+ "match": [
+  "hayabusa",
+  "busa",
+  "gsx1300r",
+  "gsx 1300 r",
+  "hayabusa gen 2",
+  "gen 2 busa",
+  "gsx1300r k8"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "1340 cc liquid-cooled inline four, fuel injected",
+ "intro": "The second-generation Hayabusa. A bigger engine than the first, Brembo brakes from 2013 and ABS on later ones.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cam chain",
+   "Check tensioner"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "GSXR.com",
+   "url": "https://www.gsxr.com/",
+   "what": "Owner forum for Suzuki GSX-R models, including the early oil-cooled bikes."
+  }
+ ],
+ "silhouette": "suzuki-hayabusa-2008-2020-2008",
+ "areas": [],
+ "heroName": "HAYABUSA",
+ "hero": {
+  "src": "img/hero/suzuki-hayabusa-2008-2020-2008.jpg",
+  "artist": "AVMOTO",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_Hayabusa_2025.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

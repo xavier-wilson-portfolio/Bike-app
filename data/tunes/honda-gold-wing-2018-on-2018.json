@@ -1,0 +1,63 @@
+{
+ "id": "honda-gold-wing-2018-on-2018",
+ "make": "Honda",
+ "model": "Gold Wing (2018 on)",
+ "name": "Honda Gold Wing (2018 on)",
+ "years": [
+  2018,
+  2026
+ ],
+ "match": [
+  "gold wing",
+  "goldwing",
+  "gl1800",
+  "gold wing tour",
+  "gl1800b",
+  "gl1800d",
+  "gold wing dct",
+  "gold wing 2018"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "engine": "1833 cc liquid-cooled flat six, fuel injected, manual or DCT, shaft drive",
+ "intro": "The redesigned Gold Wing. A double-wishbone front end, a DCT on many and a lot of electronics.",
+ "focus": [
+  [
+   "Flat six",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "DCT",
+   "Check fluid"
+  ],
+  [
+   "Electronics",
+   "Scan for codes"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Goldwingparts.com rider blog",
+   "url": "https://www.goldwingparts.com/blogs/goldwing-rider-blog",
+   "what": "Gold Wing repair notes by model."
+  }
+ ],
+ "heroName": "GOLD WING"
+}

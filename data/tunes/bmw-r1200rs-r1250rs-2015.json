@@ -1,0 +1,61 @@
+{
+ "id": "bmw-r1200rs-r1250rs-2015",
+ "make": "BMW",
+ "model": "R1200RS / R1250RS",
+ "name": "BMW R1200RS / R1250RS",
+ "years": [
+  2015,
+  2026
+ ],
+ "match": [
+  "r1200rs",
+  "r1250rs",
+  "r 1250 rs",
+  "r 1200 rs",
+  "r1200 rs",
+  "r1250 rs"
+ ],
+ "style": "sport",
+ "drive": "shaft",
+ "engine": "1170 or 1254 cc liquid/air-cooled boxer twin, fuel injected, shaft drive",
+ "intro": "BMW's sport-touring boxer with conventional forks. The water-cooled engine and a lot of electronics.",
+ "focus": [
+  [
+   "Boxer twin",
+   "Liquid/air"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Electronics",
+   "Scan for codes"
+  ],
+  [
+   "Final drive",
+   "Check play"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "BMW has issued several recalls across these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BMW MOA forum",
+   "url": "https://forums.bmwmoa.org/",
+   "what": "BMW Motorcycle Owners of America forum."
+  }
+ ],
+ "heroName": "R1250RS"
+}

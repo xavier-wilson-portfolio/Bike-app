@@ -1,0 +1,69 @@
+{
+ "id": "triumph-trophy-se-1200-2013",
+ "make": "Triumph",
+ "model": "Trophy SE 1200",
+ "name": "Triumph Trophy SE 1200",
+ "years": [
+  2013,
+  2017
+ ],
+ "match": [
+  "trophy se",
+  "trophy 1200 se",
+  "trophy se 1200",
+  "trophy 2013",
+  "triumph trophy se"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "engine": "1215 cc liquid-cooled triple, fuel injected, shaft drive, electronic suspension",
+ "intro": "Triumph's big shaft-drive tourer. The Explorer triple, electronic suspension and a lot of bodywork.",
+ "focus": [
+  [
+   "Triple",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Electronics",
+   "Scan for codes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Triumph has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "silhouette": "triumph-trophy-se-1200-2013",
+ "areas": [],
+ "heroName": "TROPHY SE",
+ "hero": {
+  "src": "img/hero/triumph-trophy-se-1200-2013.jpg",
+  "artist": "Uberchuckie",
+  "page": "https://commons.wikimedia.org/wiki/File:2013_Pacific_Blue_Triumph_Trophy_SE.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

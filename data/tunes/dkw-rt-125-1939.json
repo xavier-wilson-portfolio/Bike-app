@@ -1,0 +1,77 @@
+{
+ "id": "dkw-rt-125-1939",
+ "make": "DKW",
+ "model": "RT 125",
+ "name": "DKW RT 125",
+ "years": [
+  1939,
+  1965
+ ],
+ "match": [
+  "rt 125",
+  "rt125",
+  "dkw rt",
+  "dkw 125",
+  "rt 175",
+  "rt 200",
+  "rt 250"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "123 cc air-cooled two-stroke single, premix",
+ "intro": "The German two-stroke copied around the world, from the BSA Bantam to the Harley Hummer. Premix and a flywheel magneto.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Flywheel mag",
+   "Check spark"
+  ],
+  [
+   "Crank seals",
+   "Check them"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "silhouette": "dkw-rt-125-1939",
+ "areas": [],
+ "heroName": "DKW RT 125",
+ "hero": {
+  "src": "img/hero/dkw-rt-125-1939.jpg",
+  "artist": "User:Ch vik   / Freisteller, Bildbearbeitung &amp; Retusche von Auge=mit",
+  "page": "https://commons.wikimedia.org/wiki/File:DKW_RT_125_(1940%E2%80%931941)_noBG.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

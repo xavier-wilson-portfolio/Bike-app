@@ -1,0 +1,60 @@
+{
+ "id": "honda-vfr750r-rc30-1990",
+ "make": "Honda",
+ "model": "VFR750R RC30",
+ "name": "Honda VFR750R RC30",
+ "years": [
+  1990,
+  1991
+ ],
+ "match": [
+  "rc30",
+  "rc 30",
+  "vfr750r",
+  "vfr 750r",
+  "vfr750r rc30"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "748 cc liquid-cooled V4, gear-driven cams, four carbs, single-sided swingarm",
+ "intro": "Honda's homologation V4. Gear-driven cams, titanium rods and parts that cost a lot, so work slowly.",
+ "focus": [
+  [
+   "V4",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "VFRDiscussion",
+   "url": "https://www.vfrdiscussion.com/",
+   "what": "Owner forum for Honda VFR and Interceptor models."
+  }
+ ],
+ "heroName": "RC30"
+}

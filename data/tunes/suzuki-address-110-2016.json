@@ -1,0 +1,60 @@
+{
+ "id": "suzuki-address-110-2016",
+ "make": "Suzuki",
+ "model": "Address 110",
+ "name": "Suzuki Address 110",
+ "years": [
+  2016,
+  2020
+ ],
+ "match": [
+  "address 110",
+  "address",
+  "uk110",
+  "uk 110",
+  "suzuki address"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "113 cc air-cooled single, fuel injected, CVT",
+ "intro": "Suzuki's small commuter scooter. Fuel injected, light and cheap to run.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Gear oil",
+   "Change it"
+  ],
+  [
+   "Brakes",
+   "Check them"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "ADDRESS"
+}

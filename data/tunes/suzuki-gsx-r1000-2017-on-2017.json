@@ -1,0 +1,62 @@
+{
+ "id": "suzuki-gsx-r1000-2017-on-2017",
+ "make": "Suzuki",
+ "model": "GSX-R1000 (2017 on)",
+ "name": "Suzuki GSX-R1000 (2017 on)",
+ "years": [
+  2017,
+  2026
+ ],
+ "match": [
+  "gsx-r1000",
+  "gsxr1000",
+  "gsxr 1000",
+  "gixxer 1000",
+  "gsx-r1000r",
+  "gsxr1000r",
+  "l7"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "999 cc liquid-cooled inline four, fuel injected, variable valve timing",
+ "intro": "The L7-on GSX-R1000. Variable valve timing, a full electronics suite and an IMU on the R.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Electronics",
+   "Scan for codes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "GSXR.com",
+   "url": "https://www.gsxr.com/",
+   "what": "Owner forum for Suzuki GSX-R models, including the early oil-cooled bikes."
+  }
+ ],
+ "heroName": "GSX-R1000"
+}

@@ -1,0 +1,71 @@
+{
+ "id": "matchless-g11-g12-g15-twins-ajs-31-1956",
+ "make": "Matchless",
+ "model": "G11 / G12 / G15 twins (AJS 31)",
+ "name": "Matchless G11 / G12 / G15 (AJS 31)",
+ "years": [
+  1956,
+  1969
+ ],
+ "match": [
+  "g12",
+  "g11",
+  "g15",
+  "g12csr",
+  "ajs 31",
+  "ajs 30",
+  "g9",
+  "matchless g12",
+  "g15 csr"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "498 to 745 cc air-cooled OHV parallel twin, magneto or coil",
+ "intro": "The AMC twins. A three-bearing crank on the bigger ones, a separate gearbox and Norton engines on the G15.",
+ "focus": [
+  [
+   "OHV twin",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Ignition",
+   "Mag or points"
+  ],
+  [
+   "Gearbox",
+   "Separate oil"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ],
+  "K": [
+   "The gearbox is separate from the engine and has its own oil. Check and change both, and set the primary chain."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "G12"
+}

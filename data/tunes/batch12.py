@@ -7,7 +7,7 @@ GWP = dict(name="Goldwingparts.com rider blog", url="https://www.goldwingparts.c
 BELTS = step("X-GW-BELT", "H", "H-003", "Replace the timing belts", "If you can't prove the timing belts were changed in the last 10 years, replace them and the tensioners. Look at the water pump while the front cover is off.", "A snapped timing belt on these engines can bend valves.", "The GS Resources Gold Wing thread", skill="Advanced", hours=3.0)
 
 B12.append(dict(id="honda-cb900f-1979", make="Honda", model="CB900F", name="Honda CB900F", years=[1979, 1983],
-  match=["cb900f", "cb 900f", "cb900 super sport", "cb900c", "cb900"], style="standard", drive="chain",
+  match=["cb900f", "cb 900f", "cb900 super sport", "cb900"], style="standard", drive="chain",
   engine="902 cc air-cooled DOHC 16-valve inline four, four carbs",
   intro="Honda's early-80s 900 four. Cam chain tensioners and charging parts need attention on old ones.",
   focus=[["902 cc DOHC four", "Air-cooled"], ["Four carbs", "Clean and sync"], ["Cam chain tensioner", "Listen at cold start"], ["Charging", "Test the R/R"], ["Chain drive", "Sprockets and chain"]],

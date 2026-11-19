@@ -1,0 +1,61 @@
+{
+ "id": "nsu-max-supermax-1952",
+ "make": "NSU",
+ "model": "Max / Supermax",
+ "name": "NSU Max / Supermax",
+ "years": [
+  1952,
+  1963
+ ],
+ "match": [
+  "max",
+  "supermax",
+  "nsu max",
+  "special max",
+  "nsu supermax",
+  "nsu 250"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "247 cc air-cooled overhead-cam single, Ultramax cam drive by eccentric rods",
+ "intro": "NSU's clever 250 single. The cam is driven by eccentric rods instead of a chain, and the club knows it well.",
+ "focus": [
+  [
+   "OHC single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Cam drive",
+   "Check rods"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "NSU MAX"
+}

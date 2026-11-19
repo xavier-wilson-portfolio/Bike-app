@@ -1,0 +1,61 @@
+{
+ "id": "mz-baghira-skorpion-1994",
+ "make": "MZ",
+ "model": "Baghira / Skorpion",
+ "name": "MZ Baghira / Skorpion",
+ "years": [
+  1994,
+  2002
+ ],
+ "match": [
+  "baghira",
+  "skorpion",
+  "mz skorpion",
+  "mz baghira",
+  "skorpion tour",
+  "skorpion sport"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "660 cc Yamaha-built single, liquid-cooled, carb",
+ "intro": "The post-reunification MZs. Yamaha 660 singles in new frames, with engine parts easy and chassis parts hard.",
+ "focus": [
+  [
+   "Yamaha single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Electrics",
+   "Check them"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "SKORPION"
+}

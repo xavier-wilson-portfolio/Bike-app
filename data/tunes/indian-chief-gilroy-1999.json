@@ -1,0 +1,63 @@
+{
+ "id": "indian-chief-gilroy-1999",
+ "make": "Indian",
+ "model": "Chief (Gilroy)",
+ "name": "Indian Chief (Gilroy era)",
+ "years": [
+  1999,
+  2003
+ ],
+ "match": [
+  "chief",
+  "indian chief",
+  "gilroy chief",
+  "gilroy",
+  "spirit",
+  "gilroy scout",
+  "chief gilroy",
+  "powerplus 100"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "1442 or 1638 cc air-cooled V-twin, S&S-based then Powerplus, carb or fuel injection",
+ "intro": "The Gilroy-built Indians. S&S-based engines, then the Powerplus 100, in a big valanced-fender cruiser.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Belt",
+   "Check tension"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "HDForums",
+   "url": "https://www.hdforums.com/",
+   "what": "Large V-twin owner forum."
+  }
+ ],
+ "silhouette": "indian-chief-gilroy-1999",
+ "areas": [],
+ "heroName": "CHIEF"
+}

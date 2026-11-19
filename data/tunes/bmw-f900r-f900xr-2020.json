@@ -1,0 +1,61 @@
+{
+ "id": "bmw-f900r-f900xr-2020",
+ "make": "BMW",
+ "model": "F900R / F900XR",
+ "name": "BMW F900R / F900XR",
+ "years": [
+  2020,
+  2026
+ ],
+ "match": [
+  "f900r",
+  "f900xr",
+  "f 900 r",
+  "f 900 xr",
+  "f900 r",
+  "f900 xr"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "895 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "BMW's middleweight road twins. The F850GS engine bored out, with rider modes and a chain drive.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Electronics",
+   "Scan for codes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "BMW has issued several recalls across these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BMW MOA forum",
+   "url": "https://forums.bmwmoa.org/",
+   "what": "BMW Motorcycle Owners of America forum."
+  }
+ ],
+ "heroName": "F900R"
+}

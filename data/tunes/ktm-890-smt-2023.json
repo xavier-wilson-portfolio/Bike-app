@@ -1,0 +1,58 @@
+{
+ "id": "ktm-890-smt-2023",
+ "make": "KTM",
+ "model": "890 SMT",
+ "name": "KTM 890 SMT",
+ "years": [
+  2023,
+  2026
+ ],
+ "match": [
+  "890 smt",
+  "smt 890",
+  "ktm 890 smt"
+ ],
+ "style": "touring",
+ "drive": "chain",
+ "engine": "889 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "KTM's supermoto tourer. The 890 twin with long-travel suspension, a small fairing and road tires.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Electronics",
+   "Scan for codes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "KTM has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KTM Forums",
+   "url": "https://www.ktmforums.com/",
+   "what": "Owner forum for KTM street and adventure bikes."
+  }
+ ],
+ "heroName": "890 SMT"
+}

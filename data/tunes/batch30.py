@@ -8,7 +8,7 @@ GUZ = dict(name="Moto Guzzi National Owners Club", url="https://www.mgnoc.org/",
 INDF = dict(name="HDForums", url="https://www.hdforums.com/", what="Large V-twin owner forum.")
 
 B30.append(dict(id="ktm-950-990-adventure-2003", make="KTM", model="950 / 990 Adventure", name="KTM 950 / 990 Adventure", years=[2003, 2013],
-  match=["990 adventure", "950 adventure", "990 adv", "950 adv", "990 adventure r", "990 adventure s", "950 super enduro"], style="adventure", drive="chain",
+  match=["990 adventure", "950 adventure", "990 adv", "950 adv", "990 adventure r", "990 adventure s"], style="adventure", drive="chain",
   engine="942 or 999 cc liquid-cooled LC8 V-twin, carbs (950) or fuel injected (990)",
   intro="KTM's first big LC8 adventure bikes. The 950 has carbs, the 990 is fuel injected. Twin fuel tanks and a lot of desert miles on most.",
   focus=[["LC8 V-twin", "Liquid-cooled"], ["Carb or EFI", "950 or 990"], ["Twin tanks", "Check the crossover"], ["Water pump", "Seal weeps"], ["Chain drive", "Slack and lube"]],

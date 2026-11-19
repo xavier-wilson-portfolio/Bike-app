@@ -1,0 +1,60 @@
+{
+ "id": "suzuki-dr250-dr250s-1982",
+ "make": "Suzuki",
+ "model": "DR250 / DR250S",
+ "name": "Suzuki DR250 / DR250S",
+ "years": [
+  1982,
+  1990
+ ],
+ "match": [
+  "dr250",
+  "dr250s",
+  "dr 250",
+  "dr 250s",
+  "sp250"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 cc air-cooled overhead-cam single, carb, kick start",
+ "intro": "Suzuki's 80s 250 trail four-stroke. Air cooled and simple, with a kick start.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Cam chain",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "DR250"
+}

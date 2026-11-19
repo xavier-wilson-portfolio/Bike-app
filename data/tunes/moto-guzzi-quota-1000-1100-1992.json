@@ -1,0 +1,74 @@
+{
+ "id": "moto-guzzi-quota-1000-1100-1992",
+ "make": "Moto Guzzi",
+ "model": "Quota 1000 / 1100",
+ "name": "Moto Guzzi Quota 1000 / 1100",
+ "years": [
+  1992,
+  2001
+ ],
+ "match": [
+  "quota",
+  "quota 1000",
+  "quota 1100",
+  "quota es",
+  "1100 es",
+  "guzzi quota"
+ ],
+ "style": "adventure",
+ "drive": "shaft",
+ "engine": "949 or 1064 cc air-cooled V-twin, fuel injected, shaft drive",
+ "intro": "Guzzi's tall adventure twin of the 90s. Fuel injection, shaft drive and a lot of weight up high.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Three oils",
+   "Change all"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "K": [
+   "Guzzi big twins use a car-type dry clutch and a separate gearbox and final drive. Change all three oils, not just the engine oil."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moto Guzzi National Owners Club",
+   "url": "https://www.mgnoc.org/",
+   "what": "US owner club for Moto Guzzi."
+  }
+ ],
+ "silhouette": "moto-guzzi-quota-1000-1100-1992",
+ "areas": [],
+ "heroName": "QUOTA",
+ "hero": {
+  "src": "img/hero/moto-guzzi-quota-1000-1100-1992.jpg",
+  "artist": "Befrac",
+  "page": "https://commons.wikimedia.org/wiki/File:Moto_Guzzi_Quota_1100_ES.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

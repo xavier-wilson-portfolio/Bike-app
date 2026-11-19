@@ -1,0 +1,59 @@
+{
+ "id": "kawasaki-klx400-2003",
+ "make": "Kawasaki",
+ "model": "KLX400",
+ "name": "Kawasaki KLX400",
+ "years": [
+  2003,
+  2004
+ ],
+ "match": [
+  "klx400",
+  "klx 400",
+  "klx400sr",
+  "klx400r"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "398 cc liquid-cooled four-valve single, carb",
+ "intro": "Kawasaki's version of the Suzuki DR-Z400, built by Suzuki. Most DR-Z parts fit.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "KLX400"
+}

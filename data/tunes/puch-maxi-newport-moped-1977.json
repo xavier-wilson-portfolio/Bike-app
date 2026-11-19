@@ -1,0 +1,78 @@
+{
+ "id": "puch-maxi-newport-moped-1977",
+ "make": "Puch",
+ "model": "Maxi / Newport moped",
+ "name": "Puch Maxi / Newport",
+ "years": [
+  1977,
+  1990
+ ],
+ "match": [
+  "maxi",
+  "puch maxi",
+  "newport",
+  "maxi s",
+  "maxi luxe",
+  "magnum",
+  "puch newport",
+  "e50"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "49 cc air-cooled two-stroke single, E50 engine, premix, pedals",
+ "intro": "The classic Austrian moped. The E50 engine, premix and a huge tuning and parts scene.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Clutch",
+   "Check pads"
+  ],
+  [
+   "Pedals",
+   "Lube chain"
+  ],
+  [
+   "Brakes",
+   "Drums"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Moped two-strokes run premix. Mix the oil into the fuel at the ratio in the manual, usually around 50 to 1 with modern oil."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "silhouette": "puch-maxi-newport-moped-1977",
+ "areas": [],
+ "heroName": "MAXI",
+ "hero": {
+  "src": "img/hero/puch-maxi-newport-moped-1977.jpg",
+  "artist": "GT1976",
+  "page": "https://commons.wikimedia.org/wiki/File:2018-07-17_(252)_Puch_Maxi_S_at_Bahnhof_Stadt_Haag.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

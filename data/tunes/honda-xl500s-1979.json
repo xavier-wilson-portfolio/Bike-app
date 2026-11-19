@@ -1,0 +1,60 @@
+{
+ "id": "honda-xl500s-1979",
+ "make": "Honda",
+ "model": "XL500S",
+ "name": "Honda XL500S",
+ "years": [
+  1979,
+  1981
+ ],
+ "match": [
+  "xl500s",
+  "xl500",
+  "xl 500",
+  "xl 500s",
+  "xl500r"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "498 cc air-cooled four-valve single, carb, kick start, decompressor",
+ "intro": "Honda's big four-valve dual-sport. A 23-inch front wheel, a kick start and a decompressor to get right.",
+ "focus": [
+  [
+   "Big single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Starting",
+   "Decompressor"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XR's Only",
+   "url": "https://www.xrsonly.com/",
+   "what": "Parts and know-how for Honda XR dirt bikes."
+  }
+ ],
+ "heroName": "XL500S"
+}

@@ -1,0 +1,73 @@
+{
+ "id": "suzuki-rm125-1975",
+ "make": "Suzuki",
+ "model": "RM125",
+ "name": "Suzuki RM125",
+ "years": [
+  1975,
+  2012
+ ],
+ "match": [
+  "rm125",
+  "rm 125",
+  "rm125 two stroke"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "124 cc two-stroke single, air- then liquid-cooled, carb, premix",
+ "intro": "Suzuki's 125 motocross two-stroke. Premix, a power valve on later years and regular top-end rebuilds.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Power valve",
+   "Clean it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Suzuki dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "silhouette": "suzuki-rm125-1975",
+ "areas": [],
+ "heroName": "RM125",
+ "hero": {
+  "src": "img/hero/suzuki-rm125-1975.jpg",
+  "artist": "photo Momcilo Stokanovic",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_rm_125.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

@@ -1,0 +1,69 @@
+{
+ "id": "moto-guzzi-california-ii-iii-1982",
+ "make": "Moto Guzzi",
+ "model": "California II / III",
+ "name": "Moto Guzzi California II / III",
+ "years": [
+  1982,
+  1993
+ ],
+ "match": [
+  "california ii",
+  "california iii",
+  "california 1000",
+  "california",
+  "cal ii",
+  "cal iii",
+  "california 2",
+  "california 3"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "949 cc air-cooled 90-degree V-twin, two carbs, shaft drive, linked brakes",
+ "intro": "Guzzi's big cruisers of the 80s. Linked brakes, two big carbs and a frame-mounted windscreen on many.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Sync them"
+  ],
+  [
+   "Linked brakes",
+   "Check them"
+  ],
+  [
+   "Three oils",
+   "Change all"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "K": [
+   "Guzzi big twins use a car-type dry clutch and a separate gearbox and final drive. Change all three oils, not just the engine oil."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moto Guzzi National Owners Club",
+   "url": "https://www.mgnoc.org/",
+   "what": "US owner club for Moto Guzzi."
+  }
+ ],
+ "silhouette": "moto-guzzi-california-ii-iii-1982",
+ "areas": [],
+ "heroName": "CALIFORNIA"
+}

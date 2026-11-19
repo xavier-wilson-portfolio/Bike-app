@@ -1,0 +1,67 @@
+{
+ "id": "ducati-sport-classic-gt1000-paul-smart-2006",
+ "make": "Ducati",
+ "model": "Sport Classic / GT1000 / Paul Smart",
+ "name": "Ducati Sport Classic / GT1000 / Paul Smart",
+ "years": [
+  2006,
+  2010
+ ],
+ "match": [
+  "sport classic",
+  "sportclassic",
+  "gt1000",
+  "paul smart",
+  "sport 1000",
+  "paul smart 1000",
+  "sport 1000s",
+  "gt 1000"
+ ],
+ "style": "cafe",
+ "drive": "chain",
+ "engine": "992 cc air-cooled two-valve desmo V-twin, fuel injected",
+ "intro": "Ducati's retro range on the DS1000 engine. Fuel injected, air cooled and belt-driven cams.",
+ "focus": [
+  [
+   "Desmo twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Belts",
+   "Change them"
+  ],
+  [
+   "Desmo valves",
+   "Shim check"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Desmo valve service needs both opening and closing shims checked. Follow the interval in the manual; it is not a job to skip."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Ducati has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "heroName": "SPORT CLASSIC"
+}

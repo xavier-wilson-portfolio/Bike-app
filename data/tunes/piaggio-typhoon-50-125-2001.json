@@ -1,0 +1,66 @@
+{
+ "id": "piaggio-typhoon-50-125-2001",
+ "make": "Piaggio",
+ "model": "Typhoon 50 / 125",
+ "name": "Piaggio Typhoon 50 / 125",
+ "years": [
+  2001,
+  2026
+ ],
+ "match": [
+  "typhoon",
+  "typhoon 50",
+  "typhoon 125",
+  "piaggio typhoon",
+  "typhoon 80"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 cc two-stroke or 125 cc four-stroke, air-cooled, CVT",
+ "intro": "Piaggio's chunky-tire scooter. The 50 is a two-stroke with oil injection on most years; the 125 is a four-stroke.",
+ "focus": [
+  [
+   "Single",
+   "Check type"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Gear oil",
+   "Change it"
+  ],
+  [
+   "Tires",
+   "Check age"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Some years are two-strokes and some are four-strokes. Check yours before you buy oil, plugs or carb parts."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "silhouette": "piaggio-typhoon-50-125-2001",
+ "areas": [],
+ "heroName": "TYPHOON"
+}

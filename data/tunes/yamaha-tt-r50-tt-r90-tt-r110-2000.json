@@ -1,0 +1,63 @@
+{
+ "id": "yamaha-tt-r50-tt-r90-tt-r110-2000",
+ "make": "Yamaha",
+ "model": "TT-R50 / TT-R90 / TT-R110",
+ "name": "Yamaha TT-R50 / TT-R90",
+ "years": [
+  2000,
+  2026
+ ],
+ "match": [
+  "tt-r50",
+  "ttr50",
+  "tt-r90",
+  "ttr90",
+  "ttr 50",
+  "ttr 90",
+  "tt-r50e",
+  "tt-r90e"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "49 or 89 cc air-cooled four-stroke single, carb, automatic clutch, electric start",
+ "intro": "Yamaha's kids' trail bikes. Electric start, an automatic clutch and a carb that hates old fuel.",
+ "focus": [
+  [
+   "Small single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Auto clutch",
+   "Adjust it"
+  ],
+  [
+   "Air filter",
+   "Clean and oil"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Yamaha dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "TT-R90"
+}

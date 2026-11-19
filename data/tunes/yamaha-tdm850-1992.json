@@ -1,0 +1,69 @@
+{
+ "id": "yamaha-tdm850-1992",
+ "make": "Yamaha",
+ "model": "TDM850",
+ "name": "Yamaha TDM850",
+ "years": [
+  1992,
+  1993
+ ],
+ "match": [
+  "tdm850",
+  "tdm 850",
+  "tdm",
+  "tdm900",
+  "tdm 900"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "849 cc liquid-cooled parallel twin, two carbs",
+ "intro": "Yamaha's tall road twin. Sold in the US for two years, with the engine family of the Super Tenere.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "silhouette": "yamaha-tdm850-1992",
+ "areas": [],
+ "heroName": "TDM850",
+ "hero": {
+  "src": "img/hero/yamaha-tdm850-1992.jpg",
+  "artist": "Metalbeast",
+  "page": "https://commons.wikimedia.org/wiki/File:TDM_850_Umbau.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

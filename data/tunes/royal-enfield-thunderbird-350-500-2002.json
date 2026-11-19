@@ -1,0 +1,68 @@
+{
+ "id": "royal-enfield-thunderbird-350-500-2002",
+ "make": "Royal Enfield",
+ "model": "Thunderbird 350 / 500",
+ "name": "Royal Enfield Thunderbird 350 / 500",
+ "years": [
+  2002,
+  2020
+ ],
+ "match": [
+  "thunderbird",
+  "thunderbird 350",
+  "thunderbird 500",
+  "thunderbird x",
+  "tbird 500",
+  "re thunderbird"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "346 or 499 cc air-cooled single, carb then fuel injection",
+ "intro": "Royal Enfield's cruiser single. Twin-spark heads on later ones, fuel injection on the 500.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Wiring",
+   "Check connectors"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with Royal Enfield owner threads."
+  }
+ ],
+ "silhouette": "royal-enfield-thunderbird-350-500-2002",
+ "areas": [],
+ "heroName": "THUNDERBIRD",
+ "hero": {
+  "src": "img/hero/royal-enfield-thunderbird-350-500-2002.jpg",
+  "artist": "Irrigator",
+  "page": "https://commons.wikimedia.org/wiki/File:Thunderbird350.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

@@ -1,0 +1,66 @@
+{
+ "id": "big-dog-k9-pitbull-wolf-1994",
+ "make": "Big Dog",
+ "model": "K9 / Pitbull / Wolf",
+ "name": "Big Dog K9 / Pitbull / Wolf",
+ "years": [
+  1994,
+  2011
+ ],
+ "match": [
+  "big dog",
+  "k9",
+  "pitbull",
+  "wolf",
+  "mastiff",
+  "chopper",
+  "ridgeback",
+  "bulldog",
+  "coyote"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "107 to 117 cubic inch S&S V-twin, carb or fuel injection, belt drive",
+ "intro": "Big Dog's production choppers with S&S engines. Engine parts are easy; frame, wiring and bodywork parts are not.",
+ "focus": [
+  [
+   "S&S twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "Wiring",
+   "Check it"
+  ],
+  [
+   "Belt",
+   "Check tension"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "L": [
+   "Custom builders used S&S or similar engines, so most engine parts are available. Frame, bodywork and wiring parts are another matter; photograph everything before you take it apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "HDForums",
+   "url": "https://www.hdforums.com/",
+   "what": "Large owner forum for all Harley-Davidson models."
+  }
+ ],
+ "heroName": "BIG DOG"
+}

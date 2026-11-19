@@ -1,0 +1,76 @@
+{
+ "id": "honda-africa-twin-xrv650-xrv750-1988",
+ "make": "Honda",
+ "model": "Africa Twin XRV650 / XRV750",
+ "name": "Honda Africa Twin XRV650 / XRV750",
+ "years": [
+  1988,
+  2003
+ ],
+ "match": [
+  "xrv750",
+  "xrv650",
+  "xrv 750",
+  "rd07",
+  "rd04",
+  "africa twin 750",
+  "africa twin 650",
+  "africa twin"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "647 or 742 cc liquid-cooled V-twin, two carbs",
+ "intro": "The original Africa Twin. A rally-styled V-twin with two carbs, a big tank and a lot of bodywork to remove for any job.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "F": [
+   "Check the regulator/rectifier and its connector. A failed regulator is a well-known problem on these."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Most of these were sold new outside the US, so the NHTSA search may not cover them. Ask a Honda dealer to check the frame number.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "silhouette": "honda-africa-twin-xrv650-xrv750-1988",
+ "areas": [],
+ "heroName": "AFRICA TWIN",
+ "hero": {
+  "src": "img/hero/honda-africa-twin-xrv650-xrv750-1988.jpg",
+  "artist": "order_242 from Chile",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_XRV_750_Africa_Twin_2000_(14822413942).jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
+}

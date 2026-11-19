@@ -1,0 +1,59 @@
+{
+ "id": "cagiva-elefant-750-900-1985",
+ "make": "Cagiva",
+ "model": "Elefant 750 / 900",
+ "name": "Cagiva Elefant 750 / 900",
+ "years": [
+  1985,
+  1997
+ ],
+ "match": [
+  "elefant",
+  "elefant 750",
+  "elefant 900",
+  "elefant 650",
+  "cagiva elefant",
+  "elefant 900 ie"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "650 to 904 cc air-cooled Ducati desmo V-twin, two carbs or fuel injection",
+ "intro": "Cagiva's Dakar-styled adventure bikes with Ducati engines. Belt cams, desmo valves and parts that need hunting.",
+ "focus": [
+  [
+   "Desmo twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel",
+   "Carbs or EFI"
+  ],
+  [
+   "Belts",
+   "Change them"
+  ],
+  [
+   "Desmo valves",
+   "Shim check"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "ELEFANT"
+}

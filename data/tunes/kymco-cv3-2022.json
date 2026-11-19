@@ -1,0 +1,63 @@
+{
+ "id": "kymco-cv3-2022",
+ "make": "Kymco",
+ "model": "CV3",
+ "name": "Kymco CV3",
+ "years": [
+  2022,
+  2026
+ ],
+ "match": [
+  "cv3",
+  "cv 3",
+  "kymco cv3",
+  "cv3 550"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "550 cc liquid-cooled parallel twin, fuel injected, CVT, two leaning front wheels",
+ "intro": "Kymco's leaning three-wheel maxi-scooter. A 550 cc twin and a front linkage to keep in good shape.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Front linkage",
+   "Check play"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "L": [
+   "The front tilting linkage has its own bearings and bushings. Check for play before you trust the steering."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "CV3"
+}

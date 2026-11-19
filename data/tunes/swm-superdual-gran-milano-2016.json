@@ -1,0 +1,62 @@
+{
+ "id": "swm-superdual-gran-milano-2016",
+ "make": "SWM",
+ "model": "Superdual / Gran Milano",
+ "name": "SWM Superdual / Gran Milano",
+ "years": [
+  2016,
+  2023
+ ],
+ "match": [
+  "superdual",
+  "gran milano",
+  "superdual 600",
+  "superdual t",
+  "gran milano 440",
+  "silver vase",
+  "ace of spades"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "445 or 600 cc liquid-cooled single, fuel injected",
+ "intro": "The revived SWM bikes, with engines based on old Husqvarna designs. Parts supply varies by country.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "SUPERDUAL"
+}

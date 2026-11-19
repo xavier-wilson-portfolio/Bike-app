@@ -1,0 +1,64 @@
+{
+ "id": "triumph-thunderbird-6t-1950",
+ "make": "Triumph",
+ "model": "Thunderbird 6T",
+ "name": "Triumph Thunderbird 6T",
+ "years": [
+  1950,
+  1966
+ ],
+ "match": [
+  "6t",
+  "thunderbird 6t",
+  "thunderbird 650",
+  "tbird 6t",
+  "triumph 6t"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "649 cc air-cooled OHV parallel twin, one carb, pre-unit then unit construction",
+ "intro": "Triumph's touring 650 of the 50s and 60s. One carb, a mild tune and the bathtub rear panel on some years.",
+ "focus": [
+  [
+   "OHV twin",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Ignition",
+   "Mag or points"
+  ],
+  [
+   "Primary",
+   "Set chain"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "K": [
+   "The gearbox is separate from the engine and has its own oil. Check and change both, and set the primary chain."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "heroName": "THUNDERBIRD"
+}

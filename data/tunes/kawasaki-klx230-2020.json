@@ -1,0 +1,61 @@
+{
+ "id": "kawasaki-klx230-2020",
+ "make": "Kawasaki",
+ "model": "KLX230",
+ "name": "Kawasaki KLX230",
+ "years": [
+  2020,
+  2026
+ ],
+ "match": [
+  "klx230",
+  "klx 230",
+  "klx230r",
+  "klx230s",
+  "klx230sm",
+  "klx230 s"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "233 cc air-cooled single, fuel injected",
+ "intro": "Kawasaki's small dual-sport. Fuel injected and air cooled, with road-legal and off-road versions.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Air filter",
+   "Clean and oil"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KawiForums",
+   "url": "https://www.kawiforums.com/",
+   "what": "Owner forum for Kawasaki motorcycles."
+  }
+ ],
+ "heroName": "KLX230"
+}

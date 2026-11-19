@@ -1,0 +1,58 @@
+{
+ "id": "yamaha-yz450f-2003",
+ "make": "Yamaha",
+ "model": "YZ450F",
+ "name": "Yamaha YZ450F",
+ "years": [
+  2003,
+  2026
+ ],
+ "match": [
+  "yz450f",
+  "yz 450f",
+  "yz450fx",
+  "yz 450fx",
+  "yz450"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "449 cc liquid-cooled four-stroke single, carb then fuel injection",
+ "intro": "Yamaha's open-class motocross four-stroke. Later ones have a rearward-slanted engine and an app-tunable ECU.",
+ "focus": [
+  [
+   "Race single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "Valves",
+   "Check often"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Hours",
+   "Log them"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Yamaha dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "YZ450F"
+}

@@ -1,0 +1,72 @@
+{
+ "id": "ktm-freeride-250-350-2012",
+ "make": "KTM",
+ "model": "Freeride 250 / 350",
+ "name": "KTM Freeride 250 / 350",
+ "years": [
+  2012,
+  2017
+ ],
+ "match": [
+  "freeride 250",
+  "freeride 350",
+  "freeride 250 r",
+  "freeride 250 f",
+  "freeride",
+  "ktm freeride"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 cc two-stroke or 349 cc four-stroke single, liquid-cooled",
+ "intro": "KTM's light trail and trials-style bikes. Low seat, light weight, two-stroke or four-stroke depending on the model.",
+ "focus": [
+  [
+   "Single",
+   "Check type"
+  ],
+  [
+   "Fuel",
+   "Check system"
+  ],
+  [
+   "Valves or top end",
+   "Check"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "The Freeride 250 R is a two-stroke that runs premix. The 250 F and 350 are four-strokes. Check which one you have."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a KTM dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KTM Forums",
+   "url": "https://www.ktmforums.com/",
+   "what": "Owner forum for KTM street and adventure bikes."
+  }
+ ],
+ "silhouette": "ktm-freeride-250-350-2012",
+ "areas": [],
+ "heroName": "FREERIDE",
+ "hero": {
+  "src": "img/hero/ktm-freeride-250-350-2012.jpg",
+  "artist": "Peprovira",
+  "page": "https://commons.wikimedia.org/wiki/File:KTM_Freeride_350_2015.JPG",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

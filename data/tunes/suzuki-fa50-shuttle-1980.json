@@ -1,0 +1,65 @@
+{
+ "id": "suzuki-fa50-shuttle-1980",
+ "make": "Suzuki",
+ "model": "FA50 Shuttle",
+ "name": "Suzuki FA50 Shuttle",
+ "years": [
+  1980,
+  1983
+ ],
+ "match": [
+  "fa50",
+  "shuttle",
+  "fa 50",
+  "suzuki shuttle"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "49 cc air-cooled two-stroke single, CCI oil injection, automatic",
+ "intro": "Suzuki's step-through moped of the early 80s. Oil injection and a one-speed automatic.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Oil injection"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Auto clutch",
+   "Inspect"
+  ],
+  [
+   "Exhaust",
+   "Check carbon"
+  ],
+  [
+   "Brakes",
+   "Drums"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Suzuki's CCI system pumps oil into the engine, so it does not need premix. Check the oil tank, pump and lines. If the pump was removed, it runs premix."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "heroName": "SHUTTLE"
+}

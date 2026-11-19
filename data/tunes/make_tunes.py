@@ -216,9 +216,59 @@ from batch47 import B47, HERO_NAME_B47
 from batch48 import B48, HERO_NAME_B48
 from batch49 import B49, HERO_NAME_B49
 from batch50 import B50, HERO_NAME_B50
-T += B2 + B3 + B4 + B5 + B6 + B7 + B8 + B9 + B10 + B11 + B12 + B13 + B14 + B15 + B16 + B17 + B18 + B19 + B20 + B21 + B22 + B23 + B24 + B25 + B26 + B27 + B28 + B29 + B30 + B31 + B32 + B33 + B34 + B35 + B36 + B37 + B38 + B39 + B40 + B41 + B42 + B43 + B44 + B45 + B46 + B47 + B48 + B49 + B50
+from batch51 import B51, HERO_NAME_B51
+from batch52 import B52, HERO_NAME_B52
+from batch53 import B53, HERO_NAME_B53
+from batch54 import B54, HERO_NAME_B54
+from batch55 import B55, HERO_NAME_B55
+from batch56 import B56, HERO_NAME_B56
+from batch57 import B57, HERO_NAME_B57
+from batch58 import B58, HERO_NAME_B58
+from batch59 import B59, HERO_NAME_B59
+from batch60 import B60, HERO_NAME_B60
+from batch61 import B61, HERO_NAME_B61
+from batch62 import B62, HERO_NAME_B62
+from batch63 import B63, HERO_NAME_B63
+from batch64 import B64, HERO_NAME_B64
+from batch65 import B65, HERO_NAME_B65
+from batch66 import B66, HERO_NAME_B66
+from batch67 import B67, HERO_NAME_B67
+from batch68 import B68, HERO_NAME_B68
+from batch69 import B69, HERO_NAME_B69
+from batch70 import B70, HERO_NAME_B70
+from batch71 import B71, HERO_NAME_B71
+from batch72 import B72, HERO_NAME_B72
+from batch73 import B73, HERO_NAME_B73
+from batch74 import B74, HERO_NAME_B74
+from batch75 import B75, HERO_NAME_B75
+from batch76 import B76, HERO_NAME_B76
+from batch77 import B77, HERO_NAME_B77
+from batch78 import B78, HERO_NAME_B78
+from batch79 import B79, HERO_NAME_B79
+from batch80 import B80, HERO_NAME_B80
+from batch81 import B81, HERO_NAME_B81
+from batch82 import B82, HERO_NAME_B82
+from batch83 import B83, HERO_NAME_B83
+from batch84 import B84, HERO_NAME_B84
+from batch85 import B85, HERO_NAME_B85
+from batch86 import B86, HERO_NAME_B86
+from batch87 import B87, HERO_NAME_B87
+from batch88 import B88, HERO_NAME_B88
+from batch89 import B89, HERO_NAME_B89
+from batch90 import B90, HERO_NAME_B90
+from batch91 import B91, HERO_NAME_B91
+from batch92 import B92, HERO_NAME_B92
+from batch93 import B93, HERO_NAME_B93
+from batch94 import B94, HERO_NAME_B94
+from batch95 import B95, HERO_NAME_B95
+from batch96 import B96, HERO_NAME_B96
+from batch97 import B97, HERO_NAME_B97
+from batch98 import B98, HERO_NAME_B98
+from batch99 import B99, HERO_NAME_B99
+from batch100 import B100, HERO_NAME_B100
+T += B2 + B3 + B4 + B5 + B6 + B7 + B8 + B9 + B10 + B11 + B12 + B13 + B14 + B15 + B16 + B17 + B18 + B19 + B20 + B21 + B22 + B23 + B24 + B25 + B26 + B27 + B28 + B29 + B30 + B31 + B32 + B33 + B34 + B35 + B36 + B37 + B38 + B39 + B40 + B41 + B42 + B43 + B44 + B45 + B46 + B47 + B48 + B49 + B50 + B51 + B52 + B53 + B54 + B55 + B56 + B57 + B58 + B59 + B60 + B61 + B62 + B63 + B64 + B65 + B66 + B67 + B68 + B69 + B70 + B71 + B72 + B73 + B74 + B75 + B76 + B77 + B78 + B79 + B80 + B81 + B82 + B83 + B84 + B85 + B86 + B87 + B88 + B89 + B90 + B91 + B92 + B93 + B94 + B95 + B96 + B97 + B98 + B99 + B100
 HERO_NAME = {"honda-cb750-sohc": "CB750", "honda-rebel-500": "REBEL", "kawasaki-kz650": "KZ650", "yamaha-mt07-gen1": "MT-07", "yamaha-xs650": "XS650", "kawasaki-ninja-400": "NINJA", "suzuki-gs550": "GS550", "harley-street-glide-m8": "GLIDE", "honda-cb350-twin": "CB350", "kawasaki-klr650-gen2": "KLR"}
-HERO_NAME.update(HERO_NAME_B2); HERO_NAME.update(HERO_NAME_B3); HERO_NAME.update(HERO_NAME_B4); HERO_NAME.update(HERO_NAME_B5); HERO_NAME.update(HERO_NAME_B6); HERO_NAME.update(HERO_NAME_B7); HERO_NAME.update(HERO_NAME_B8); HERO_NAME.update(HERO_NAME_B9); HERO_NAME.update(HERO_NAME_B10); HERO_NAME.update(HERO_NAME_B11); HERO_NAME.update(HERO_NAME_B12); HERO_NAME.update(HERO_NAME_B13); HERO_NAME.update(HERO_NAME_B14); HERO_NAME.update(HERO_NAME_B15); HERO_NAME.update(HERO_NAME_B16); HERO_NAME.update(HERO_NAME_B17); HERO_NAME.update(HERO_NAME_B18); HERO_NAME.update(HERO_NAME_B19); HERO_NAME.update(HERO_NAME_B20); HERO_NAME.update(HERO_NAME_B21); HERO_NAME.update(HERO_NAME_B22); HERO_NAME.update(HERO_NAME_B23); HERO_NAME.update(HERO_NAME_B24); HERO_NAME.update(HERO_NAME_B25); HERO_NAME.update(HERO_NAME_B26); HERO_NAME.update(HERO_NAME_B27); HERO_NAME.update(HERO_NAME_B28); HERO_NAME.update(HERO_NAME_B29); HERO_NAME.update(HERO_NAME_B30); HERO_NAME.update(HERO_NAME_B31); HERO_NAME.update(HERO_NAME_B32); HERO_NAME.update(HERO_NAME_B33); HERO_NAME.update(HERO_NAME_B34); HERO_NAME.update(HERO_NAME_B35); HERO_NAME.update(HERO_NAME_B36); HERO_NAME.update(HERO_NAME_B37); HERO_NAME.update(HERO_NAME_B38); HERO_NAME.update(HERO_NAME_B39); HERO_NAME.update(HERO_NAME_B40); HERO_NAME.update(HERO_NAME_B41); HERO_NAME.update(HERO_NAME_B42); HERO_NAME.update(HERO_NAME_B43); HERO_NAME.update(HERO_NAME_B44); HERO_NAME.update(HERO_NAME_B45); HERO_NAME.update(HERO_NAME_B46); HERO_NAME.update(HERO_NAME_B47); HERO_NAME.update(HERO_NAME_B48); HERO_NAME.update(HERO_NAME_B49); HERO_NAME.update(HERO_NAME_B50)
+HERO_NAME.update(HERO_NAME_B2); HERO_NAME.update(HERO_NAME_B3); HERO_NAME.update(HERO_NAME_B4); HERO_NAME.update(HERO_NAME_B5); HERO_NAME.update(HERO_NAME_B6); HERO_NAME.update(HERO_NAME_B7); HERO_NAME.update(HERO_NAME_B8); HERO_NAME.update(HERO_NAME_B9); HERO_NAME.update(HERO_NAME_B10); HERO_NAME.update(HERO_NAME_B11); HERO_NAME.update(HERO_NAME_B12); HERO_NAME.update(HERO_NAME_B13); HERO_NAME.update(HERO_NAME_B14); HERO_NAME.update(HERO_NAME_B15); HERO_NAME.update(HERO_NAME_B16); HERO_NAME.update(HERO_NAME_B17); HERO_NAME.update(HERO_NAME_B18); HERO_NAME.update(HERO_NAME_B19); HERO_NAME.update(HERO_NAME_B20); HERO_NAME.update(HERO_NAME_B21); HERO_NAME.update(HERO_NAME_B22); HERO_NAME.update(HERO_NAME_B23); HERO_NAME.update(HERO_NAME_B24); HERO_NAME.update(HERO_NAME_B25); HERO_NAME.update(HERO_NAME_B26); HERO_NAME.update(HERO_NAME_B27); HERO_NAME.update(HERO_NAME_B28); HERO_NAME.update(HERO_NAME_B29); HERO_NAME.update(HERO_NAME_B30); HERO_NAME.update(HERO_NAME_B31); HERO_NAME.update(HERO_NAME_B32); HERO_NAME.update(HERO_NAME_B33); HERO_NAME.update(HERO_NAME_B34); HERO_NAME.update(HERO_NAME_B35); HERO_NAME.update(HERO_NAME_B36); HERO_NAME.update(HERO_NAME_B37); HERO_NAME.update(HERO_NAME_B38); HERO_NAME.update(HERO_NAME_B39); HERO_NAME.update(HERO_NAME_B40); HERO_NAME.update(HERO_NAME_B41); HERO_NAME.update(HERO_NAME_B42); HERO_NAME.update(HERO_NAME_B43); HERO_NAME.update(HERO_NAME_B44); HERO_NAME.update(HERO_NAME_B45); HERO_NAME.update(HERO_NAME_B46); HERO_NAME.update(HERO_NAME_B47); HERO_NAME.update(HERO_NAME_B48); HERO_NAME.update(HERO_NAME_B49); HERO_NAME.update(HERO_NAME_B50); HERO_NAME.update(HERO_NAME_B51); HERO_NAME.update(HERO_NAME_B52); HERO_NAME.update(HERO_NAME_B53); HERO_NAME.update(HERO_NAME_B54); HERO_NAME.update(HERO_NAME_B55); HERO_NAME.update(HERO_NAME_B56); HERO_NAME.update(HERO_NAME_B57); HERO_NAME.update(HERO_NAME_B58); HERO_NAME.update(HERO_NAME_B59); HERO_NAME.update(HERO_NAME_B60); HERO_NAME.update(HERO_NAME_B61); HERO_NAME.update(HERO_NAME_B62); HERO_NAME.update(HERO_NAME_B63); HERO_NAME.update(HERO_NAME_B64); HERO_NAME.update(HERO_NAME_B65); HERO_NAME.update(HERO_NAME_B66); HERO_NAME.update(HERO_NAME_B67); HERO_NAME.update(HERO_NAME_B68); HERO_NAME.update(HERO_NAME_B69); HERO_NAME.update(HERO_NAME_B70); HERO_NAME.update(HERO_NAME_B71); HERO_NAME.update(HERO_NAME_B72); HERO_NAME.update(HERO_NAME_B73); HERO_NAME.update(HERO_NAME_B74); HERO_NAME.update(HERO_NAME_B75); HERO_NAME.update(HERO_NAME_B76); HERO_NAME.update(HERO_NAME_B77); HERO_NAME.update(HERO_NAME_B78); HERO_NAME.update(HERO_NAME_B79); HERO_NAME.update(HERO_NAME_B80); HERO_NAME.update(HERO_NAME_B81); HERO_NAME.update(HERO_NAME_B82); HERO_NAME.update(HERO_NAME_B83); HERO_NAME.update(HERO_NAME_B84); HERO_NAME.update(HERO_NAME_B85); HERO_NAME.update(HERO_NAME_B86); HERO_NAME.update(HERO_NAME_B87); HERO_NAME.update(HERO_NAME_B88); HERO_NAME.update(HERO_NAME_B89); HERO_NAME.update(HERO_NAME_B90); HERO_NAME.update(HERO_NAME_B91); HERO_NAME.update(HERO_NAME_B92); HERO_NAME.update(HERO_NAME_B93); HERO_NAME.update(HERO_NAME_B94); HERO_NAME.update(HERO_NAME_B95); HERO_NAME.update(HERO_NAME_B96); HERO_NAME.update(HERO_NAME_B97); HERO_NAME.update(HERO_NAME_B98); HERO_NAME.update(HERO_NAME_B99); HERO_NAME.update(HERO_NAME_B100)
 CRED = json.loads((HERE.parent.parent / "img" / "sil" / "credits.json").read_text())
 AREAS = ["engine", "fuel", "wheels", "brakes", "suspension", "electrical"]
 SIL = HERE.parent.parent / "img" / "sil"

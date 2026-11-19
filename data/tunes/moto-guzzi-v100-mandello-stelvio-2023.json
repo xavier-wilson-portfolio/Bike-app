@@ -1,0 +1,71 @@
+{
+ "id": "moto-guzzi-v100-mandello-stelvio-2023",
+ "make": "Moto Guzzi",
+ "model": "V100 Mandello / Stelvio",
+ "name": "Moto Guzzi V100 Mandello / Stelvio",
+ "years": [
+  2023,
+  2026
+ ],
+ "match": [
+  "v100",
+  "v100 mandello",
+  "mandello",
+  "v100 stelvio",
+  "stelvio 2024",
+  "mandello s",
+  "v100 s"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "engine": "1042 cc liquid-cooled 90-degree V-twin, fuel injected, shaft drive",
+ "intro": "Guzzi's first liquid-cooled twin. Shaft drive, ride-by-wire and, on the Mandello, active aero flaps.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Electronics",
+   "Scan for codes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moto Guzzi National Owners Club",
+   "url": "https://www.mgnoc.org/",
+   "what": "US owner club for Moto Guzzi."
+  }
+ ],
+ "silhouette": "moto-guzzi-v100-mandello-stelvio-2023",
+ "areas": [],
+ "heroName": "V100",
+ "hero": {
+  "src": "img/hero/moto-guzzi-v100-mandello-stelvio-2023.jpg",
+  "artist": "AVMOTO",
+  "page": "https://commons.wikimedia.org/wiki/File:Moto_Guzzi_V100_Mandello_2025.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

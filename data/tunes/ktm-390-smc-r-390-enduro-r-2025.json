@@ -1,0 +1,61 @@
+{
+ "id": "ktm-390-smc-r-390-enduro-r-2025",
+ "make": "KTM",
+ "model": "390 SMC R / 390 Enduro R",
+ "name": "KTM 390 SMC R / 390 Enduro R",
+ "years": [
+  2025,
+  2026
+ ],
+ "match": [
+  "390 smc r",
+  "390 enduro r",
+  "390 enduro",
+  "390 smc",
+  "smc r 390",
+  "enduro r 390"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "399 cc liquid-cooled single, fuel injected",
+ "intro": "KTM's small supermoto and enduro on the new 390 platform. Fuel injected and light.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "KTM has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KTM Forums",
+   "url": "https://www.ktmforums.com/",
+   "what": "Owner forum for KTM street and adventure bikes."
+  }
+ ],
+ "heroName": "390 SMC R"
+}

@@ -1,0 +1,62 @@
+{
+ "id": "kawasaki-ninja-zx-10r-2021-on-2021",
+ "make": "Kawasaki",
+ "model": "Ninja ZX-10R (2021 on)",
+ "name": "Kawasaki Ninja ZX-10R (2021 on)",
+ "years": [
+  2021,
+  2026
+ ],
+ "match": [
+  "zx-10r",
+  "zx10r",
+  "ninja zx-10r",
+  "zx-10rr",
+  "zx10rr",
+  "zx 10r",
+  "zx-10r krt"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "998 cc liquid-cooled inline four, fuel injected, IMU-based electronics",
+ "intro": "The current ZX-10R. Winglets, a full electronics suite and service intervals worth following closely.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Electronics",
+   "Scan for codes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ZX6R.com",
+   "url": "https://www.zx6r.com/",
+   "what": "Owner forum for Kawasaki ZX sport bikes."
+  }
+ ],
+ "heroName": "ZX-10R"
+}

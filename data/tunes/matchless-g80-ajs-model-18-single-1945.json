@@ -1,0 +1,80 @@
+{
+ "id": "matchless-g80-ajs-model-18-single-1945",
+ "make": "Matchless",
+ "model": "G80 / AJS Model 18 single",
+ "name": "Matchless G80 / AJS Model 18",
+ "years": [
+  1945,
+  1966
+ ],
+ "match": [
+  "g80",
+  "g80s",
+  "model 18",
+  "ajs 18",
+  "g3",
+  "g3l",
+  "ajs 16",
+  "matchless g80",
+  "g80cs"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "348 or 498 cc air-cooled OHV single, magneto",
+ "intro": "The AMC heavyweight singles. A magneto, a separate gearbox and many shared parts between the Matchless and AJS versions.",
+ "focus": [
+  [
+   "OHV single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Magneto",
+   "Check spark"
+  ],
+  [
+   "Gearbox",
+   "Separate oil"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ],
+  "K": [
+   "The gearbox is separate from the engine and has its own oil. Check and change both, and set the primary chain."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "silhouette": "matchless-g80-ajs-model-18-single-1945",
+ "areas": [],
+ "heroName": "G80",
+ "hero": {
+  "src": "img/hero/matchless-g80-ajs-model-18-single-1945.jpg",
+  "artist": "23713748w",
+  "page": "https://commons.wikimedia.org/wiki/File:1965_Matchless_500_cc_G80CS_R_Police_special_2_-_Copy.JPG",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

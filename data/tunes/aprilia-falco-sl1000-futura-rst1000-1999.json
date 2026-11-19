@@ -1,0 +1,72 @@
+{
+ "id": "aprilia-falco-sl1000-futura-rst1000-1999",
+ "make": "Aprilia",
+ "model": "Falco SL1000 / Futura RST1000",
+ "name": "Aprilia Falco SL1000 / Futura RST1000",
+ "years": [
+  1999,
+  2004
+ ],
+ "match": [
+  "falco",
+  "sl1000",
+  "futura",
+  "rst1000",
+  "sl1000 falco",
+  "rst1000 futura",
+  "sl 1000",
+  "rst 1000"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "998 cc liquid-cooled Rotax V60 V-twin, fuel injected",
+ "intro": "Aprilia's road sport bikes on the Mille engine. The Falco is the half-faired one, the Futura the sport tourer.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Aprilia has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ApriliaForum",
+   "url": "https://www.apriliaforum.com/",
+   "what": "Owner forum for Aprilia motorcycles."
+  }
+ ],
+ "silhouette": "aprilia-falco-sl1000-futura-rst1000-1999",
+ "areas": [],
+ "heroName": "FALCO",
+ "hero": {
+  "src": "img/hero/aprilia-falco-sl1000-futura-rst1000-1999.jpg",
+  "artist": "Whereisthemonk at English Wikipedia",
+  "page": "https://commons.wikimedia.org/wiki/File:Aprilia_Falco.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
+}

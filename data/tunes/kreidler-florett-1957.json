@@ -1,0 +1,76 @@
+{
+ "id": "kreidler-florett-1957",
+ "make": "Kreidler",
+ "model": "Florett",
+ "name": "Kreidler Florett",
+ "years": [
+  1957,
+  1982
+ ],
+ "match": [
+  "florett",
+  "kreidler florett",
+  "rs",
+  "rmc",
+  "florett rs",
+  "kreidler"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "49 cc air-cooled two-stroke single, premix",
+ "intro": "The German 50 cc moped and light bike. Premix, a pressed-steel frame and a strong owner club.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Ignition",
+   "Check flywheel"
+  ],
+  [
+   "Clutch",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Moped two-strokes run premix. Mix the oil into the fuel at the ratio in the manual, usually around 50 to 1 with modern oil."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "silhouette": "kreidler-florett-1957",
+ "areas": [],
+ "heroName": "FLORETT",
+ "hero": {
+  "src": "img/hero/kreidler-florett-1957.jpg",
+  "artist": "Beademung → https://de.wikipedia.org/wiki/Benutzer:Beademung",
+  "page": "https://commons.wikimedia.org/wiki/File:Kreidler_Florett_RS_Baujahr_1970.jpeg",
+  "lic": "CC BY-SA 3.0 de",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en"
+ }
+}

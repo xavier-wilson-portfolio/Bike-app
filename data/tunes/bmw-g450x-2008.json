@@ -1,0 +1,59 @@
+{
+ "id": "bmw-g450x-2008",
+ "make": "BMW",
+ "model": "G450X",
+ "name": "BMW G450X",
+ "years": [
+  2008,
+  2010
+ ],
+ "match": [
+  "g450x",
+  "g 450 x",
+  "g450",
+  "bmw g450x"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "449 cc liquid-cooled single, fuel injected, coaxial swingarm pivot",
+ "intro": "BMW's racing enduro. The swingarm pivots on the countershaft, and some parts are now hard to find.",
+ "focus": [
+  [
+   "Race single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check often"
+  ],
+  [
+   "Swingarm",
+   "Check pivot"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "BMW has issued several recalls across these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "UKGSer forum",
+   "url": "https://www.ukgser.com/community/",
+   "what": "Owner forum for BMW GS models."
+  }
+ ],
+ "heroName": "G450X"
+}

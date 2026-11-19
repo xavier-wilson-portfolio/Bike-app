@@ -1,0 +1,59 @@
+{
+ "id": "ktm-450-sx-f-2003",
+ "make": "KTM",
+ "model": "450 SX-F",
+ "name": "KTM 450 SX-F",
+ "years": [
+  2003,
+  2026
+ ],
+ "match": [
+  "450 sx-f",
+  "450 sxf",
+  "450 xc-f",
+  "450 xcf",
+  "450 sx",
+  "ktm 450 sx-f"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "449 cc liquid-cooled four-stroke single, carb then fuel injection",
+ "intro": "KTM's open-class motocross four-stroke. Electric start on later years and a strict service schedule in hours.",
+ "focus": [
+  [
+   "Race single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "Valves",
+   "Check often"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Hours",
+   "Log them"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a KTM dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "450 SX-F"
+}

@@ -1,0 +1,63 @@
+{
+ "id": "aprilia-sxv-rxv-450-550-2006",
+ "make": "Aprilia",
+ "model": "SXV / RXV 450-550",
+ "name": "Aprilia SXV / RXV 450-550",
+ "years": [
+  2006,
+  2011
+ ],
+ "match": [
+  "sxv",
+  "rxv",
+  "sxv 450",
+  "rxv 450",
+  "sxv 550",
+  "rxv 550",
+  "sxv450",
+  "rxv550"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "449 or 549 cc liquid-cooled V-twin, fuel injected",
+ "intro": "Aprilia's twin-cylinder dirt bikes. Very fast, very light and very high-maintenance, with short service intervals.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check often"
+  ],
+  [
+   "Hours",
+   "Log them"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Aprilia has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "SXV"
+}

@@ -1,0 +1,65 @@
+{
+ "id": "american-ironhorse-texas-chopper-lsc-slammer-1995",
+ "make": "American IronHorse",
+ "model": "Texas Chopper / LSC / Slammer",
+ "name": "American IronHorse",
+ "years": [
+  1995,
+  2008
+ ],
+ "match": [
+  "texas chopper",
+  "lsc",
+  "slammer",
+  "legend",
+  "outlaw",
+  "classic",
+  "bandera",
+  "ironhorse"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "107 to 124 cubic inch S&S or TP V-twin, carb or fuel injection, belt drive",
+ "intro": "American IronHorse's production customs. S&S engines and wide rear tires, from a company that closed in 2008.",
+ "focus": [
+  [
+   "Big twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "Wiring",
+   "Check it"
+  ],
+  [
+   "Belt",
+   "Check tension"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "L": [
+   "Custom builders used S&S or similar engines, so most engine parts are available. Frame, bodywork and wiring parts are another matter; photograph everything before you take it apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "HDForums",
+   "url": "https://www.hdforums.com/",
+   "what": "Large owner forum for all Harley-Davidson models."
+  }
+ ],
+ "heroName": "IRONHORSE"
+}

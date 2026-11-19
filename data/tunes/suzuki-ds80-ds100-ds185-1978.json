@@ -1,0 +1,68 @@
+{
+ "id": "suzuki-ds80-ds100-ds185-1978",
+ "make": "Suzuki",
+ "model": "DS80 / DS100 / DS185",
+ "name": "Suzuki DS80 / DS100 / DS185",
+ "years": [
+  1978,
+  1981
+ ],
+ "match": [
+  "ds80",
+  "ds100",
+  "ds185",
+  "ds 80",
+  "ds 100",
+  "ds 185",
+  "ds250"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "79 to 183 cc air-cooled two-stroke single, carb",
+ "intro": "Suzuki's small off-road two-strokes of the late 70s. Simple trail bikes with a kick start.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Check oiling"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Ignition",
+   "Check spark"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Suzuki's CCI system pumps oil into the engine, so it does not need premix. Check the oil tank, pump and lines. If the pump was removed, it runs premix."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "DS185"
+}

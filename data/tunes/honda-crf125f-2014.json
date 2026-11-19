@@ -1,0 +1,58 @@
+{
+ "id": "honda-crf125f-2014",
+ "make": "Honda",
+ "model": "CRF125F",
+ "name": "Honda CRF125F",
+ "years": [
+  2014,
+  2026
+ ],
+ "match": [
+  "crf125f",
+  "crf125",
+  "crf 125",
+  "crf 125f",
+  "crf125fb"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "124 cc air-cooled four-stroke single, carb then fuel injection, four-speed",
+ "intro": "Honda's small trail bike with a real clutch. Easy to work on and hard to kill.",
+ "focus": [
+  [
+   "Small single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "Clutch",
+   "Adjust cable"
+  ],
+  [
+   "Air filter",
+   "Clean and oil"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Honda dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "CRF125F"
+}

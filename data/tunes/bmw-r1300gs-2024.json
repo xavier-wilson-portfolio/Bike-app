@@ -1,0 +1,61 @@
+{
+ "id": "bmw-r1300gs-2024",
+ "make": "BMW",
+ "model": "R1300GS",
+ "name": "BMW R1300GS",
+ "years": [
+  2024,
+  2026
+ ],
+ "match": [
+  "r1300gs",
+  "r 1300 gs",
+  "r1300 gs",
+  "r1300gsa",
+  "1300gs",
+  "r1300gs adventure"
+ ],
+ "style": "adventure",
+ "drive": "shaft",
+ "engine": "1300 cc liquid/air-cooled boxer twin, fuel injected, shaft drive",
+ "intro": "The newest big GS. A new boxer with the gearbox under the engine, radar on some and a lot of electronics.",
+ "focus": [
+  [
+   "Boxer twin",
+   "Liquid/air"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Electronics",
+   "Scan for codes"
+  ],
+  [
+   "Final drive",
+   "Check play"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "BMW has issued several recalls across these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "UKGSer forum",
+   "url": "https://www.ukgser.com/community/",
+   "what": "Owner forum for BMW GS models."
+  }
+ ],
+ "heroName": "R1300GS"
+}

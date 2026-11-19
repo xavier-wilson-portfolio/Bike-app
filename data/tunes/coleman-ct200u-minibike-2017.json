@@ -1,0 +1,61 @@
+{
+ "id": "coleman-ct200u-minibike-2017",
+ "make": "Coleman",
+ "model": "CT200U minibike",
+ "name": "Coleman CT200U minibike",
+ "years": [
+  2017,
+  2026
+ ],
+ "match": [
+  "ct200u",
+  "coleman ct200u",
+  "ct100u",
+  "ct200u-ex",
+  "coleman minibike",
+  "bt200x"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "196 cc air-cooled OHV small-engine single, pull start, torque converter",
+ "intro": "Coleman's mini bike with a lawnmower-type engine and a torque converter. Very simple and easy to modify.",
+ "focus": [
+  [
+   "Small engine",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Torque converter",
+   "Check belt"
+  ],
+  [
+   "Governor",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "heroName": "CT200U"
+}

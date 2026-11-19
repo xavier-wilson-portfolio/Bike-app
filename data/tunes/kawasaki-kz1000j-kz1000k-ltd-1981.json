@@ -1,0 +1,62 @@
+{
+ "id": "kawasaki-kz1000j-kz1000k-ltd-1981",
+ "make": "Kawasaki",
+ "model": "KZ1000J / KZ1000K LTD",
+ "name": "Kawasaki KZ1000J / KZ1000K LTD",
+ "years": [
+  1981,
+  1983
+ ],
+ "match": [
+  "kz1000j",
+  "kz1000k",
+  "kz1000 j",
+  "kz1000k ltd",
+  "z1000j",
+  "kz1000 1982",
+  "kz1000 csr"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "998 cc air-cooled DOHC inline four, four carbs",
+ "intro": "The early-80s KZ1000s. A shorter-stroke engine than the Z1 line, four carbs and a strong frame.",
+ "focus": [
+  [
+   "Inline four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KZRider forum",
+   "url": "https://www.kzrider.com/",
+   "what": "Owner forum for classic Kawasakis."
+  }
+ ],
+ "heroName": "KZ1000J"
+}

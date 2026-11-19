@@ -1,0 +1,69 @@
+{
+ "id": "honda-cb450sc-nighthawk-1982",
+ "make": "Honda",
+ "model": "CB450SC Nighthawk",
+ "name": "Honda CB450SC Nighthawk",
+ "years": [
+  1982,
+  1986
+ ],
+ "match": [
+  "cb450sc",
+  "nighthawk 450",
+  "cb 450sc",
+  "cb450 nighthawk",
+  "cb450t"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "447 cc air-cooled parallel twin, two carbs, six-speed",
+ "intro": "The 450 Nighthawk. A simple twin with two carbs, a six-speed box and electronic ignition.",
+ "focus": [
+  [
+   "447 cc twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Sync them"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "silhouette": "honda-cb450sc-nighthawk-1982",
+ "areas": [],
+ "heroName": "CB450SC",
+ "hero": {
+  "src": "img/hero/honda-cb450sc-nighthawk-1982.jpg",
+  "artist": "Menright63 at English Wikipedia",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CB450SC_1982.JPG",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
+}

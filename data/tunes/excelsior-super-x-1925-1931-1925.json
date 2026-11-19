@@ -1,0 +1,64 @@
+{
+ "id": "excelsior-super-x-1925-1931-1925",
+ "make": "Excelsior",
+ "model": "Super X (1925-1931)",
+ "name": "Excelsior Super X",
+ "years": [
+  1925,
+  1931
+ ],
+ "match": [
+  "super x",
+  "excelsior super x",
+  "super-x",
+  "excelsior 45",
+  "super x 45"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "45 cubic inch air-cooled F-head or pocket-valve V-twin, unit construction",
+ "intro": "Excelsior's 45 twin from Chicago. Unit construction, a geared primary and parts that come from the club.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Set tappets"
+  ],
+  [
+   "Oiling",
+   "Check system"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "E": [
+   "It is a flathead or F-head. Set the tappets with the engine cold and check the valve guides for wear."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "SUPER X"
+}

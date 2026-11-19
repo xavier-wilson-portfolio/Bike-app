@@ -1,0 +1,75 @@
+{
+ "id": "suzuki-jr50-jr80-1978",
+ "make": "Suzuki",
+ "model": "JR50 / JR80",
+ "name": "Suzuki JR50 / JR80",
+ "years": [
+  1978,
+  2006
+ ],
+ "match": [
+  "jr50",
+  "jr80",
+  "jr 50",
+  "jr 80",
+  "suzuki jr50"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "49 or 79 cc air-cooled two-stroke single, CCI oil injection on the JR50",
+ "intro": "Suzuki's kids' dirt bikes. The JR50 has an automatic box and oil injection; the JR80 has a clutch.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Check oiling"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Exhaust",
+   "Check carbon"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Suzuki's CCI system pumps oil into the engine, so it does not need premix. Check the oil tank, pump and lines. If the pump was removed, it runs premix."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Suzuki dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "silhouette": "suzuki-jr50-jr80-1978",
+ "areas": [],
+ "heroName": "JR50",
+ "hero": {
+  "src": "img/hero/suzuki-jr50-jr80-1978.jpg",
+  "artist": "Lukeb1961",
+  "page": "https://commons.wikimedia.org/wiki/File:JR50_1978_1.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

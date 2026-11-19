@@ -1,0 +1,71 @@
+{
+ "id": "gasgas-txt-trials-1995",
+ "make": "GasGas",
+ "model": "TXT trials",
+ "name": "GasGas TXT trials",
+ "years": [
+  1995,
+  2026
+ ],
+ "match": [
+  "txt",
+  "txt pro",
+  "txt 280",
+  "txt 300",
+  "txt 250",
+  "txt racing",
+  "txt gp",
+  "gas gas txt"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "125 to 299 cc liquid-cooled two-stroke single, carb, premix",
+ "intro": "GasGas trials bikes. Very light, no seat, premix and parts that wear from constant clutch use.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Clutch",
+   "Check plates"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road and trials models are often not in the NHTSA recall search. Ask a dealer for the make to run the frame number.",
+ "known": [],
+ "forums": [
+  {
+   "name": "TrialsCentral",
+   "url": "https://www.trialscentral.com/",
+   "what": "Forum for trials riders, with sections for most trials makes."
+  }
+ ],
+ "silhouette": "gasgas-txt-trials-1995",
+ "areas": [],
+ "heroName": "TXT"
+}

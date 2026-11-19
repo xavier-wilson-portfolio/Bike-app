@@ -1,0 +1,66 @@
+{
+ "id": "bsa-starfire-b25-1967",
+ "make": "BSA",
+ "model": "Starfire / B25",
+ "name": "BSA Starfire / B25",
+ "years": [
+  1967,
+  1971
+ ],
+ "match": [
+  "starfire",
+  "b25",
+  "b25ss",
+  "b25t",
+  "b25 starfire",
+  "c25",
+  "barracuda"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "247 cc air-cooled OHV unit single, points",
+ "intro": "BSA's 250 unit single. Light, with points ignition and an engine that wants the oil changed often.",
+ "focus": [
+  [
+   "OHV single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Oil",
+   "Change often"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BSA Owners Club",
+   "url": "https://www.bsaoc.org/",
+   "what": "Owner club for BSA motorcycles, with tech help and parts."
+  }
+ ],
+ "heroName": "STARFIRE"
+}

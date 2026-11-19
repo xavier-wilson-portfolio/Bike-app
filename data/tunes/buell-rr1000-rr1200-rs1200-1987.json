@@ -1,0 +1,62 @@
+{
+ "id": "buell-rr1000-rr1200-rs1200-1987",
+ "make": "Buell",
+ "model": "RR1000 / RR1200 / RS1200",
+ "name": "Buell RR1000 / RR1200 / RS1200",
+ "years": [
+  1987,
+  1993
+ ],
+ "match": [
+  "rr1000",
+  "rr1200",
+  "rs1200",
+  "rss1200",
+  "buell rr1000",
+  "buell rr1200",
+  "battletwin"
+ ],
+ "style": "sport",
+ "drive": "belt",
+ "engine": "998 or 1203 cc air-cooled Harley V-twin, carb, rubber-mounted",
+ "intro": "Erik Buell's early hand-built sport bikes with Harley engines. Very few made, and bodywork parts are rare.",
+ "focus": [
+  [
+   "Harley twin",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Rubber mounts",
+   "Check them"
+  ],
+  [
+   "Belt",
+   "Check tension"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BadWeB",
+   "url": "https://www.badweatherbikers.com/buell/",
+   "what": "Long-running Buell owner forum."
+  }
+ ],
+ "heroName": "RR1200"
+}

@@ -1,0 +1,63 @@
+{
+ "id": "csc-rx3-cyclone-tt250-city-slicker-2014",
+ "make": "CSC",
+ "model": "RX3 Cyclone / TT250 / City Slicker",
+ "name": "CSC RX3 Cyclone / TT250 / City Slicker",
+ "years": [
+  2014,
+  2026
+ ],
+ "match": [
+  "rx3",
+  "rx3 cyclone",
+  "tt250",
+  "city slicker",
+  "rx3s",
+  "rx4",
+  "csc rx3",
+  "cyclone"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "249 or 449 cc single, fuel injected",
+ "intro": "CSC's imported adventure and retro bikes, mostly built by Zongshen. Fuel injected and sold factory-direct.",
+ "focus": [
+  [
+   "Single",
+   "Liquid or air"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Wiring",
+   "Check connectors"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Many of these were sold under several brand names and may not show up in the NHTSA search. Check with the seller or importer for open recalls.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "RX3"
+}

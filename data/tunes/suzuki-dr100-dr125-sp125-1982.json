@@ -1,0 +1,64 @@
+{
+ "id": "suzuki-dr100-dr125-sp125-1982",
+ "make": "Suzuki",
+ "model": "DR100 / DR125 / SP125",
+ "name": "Suzuki DR100 / DR125 / SP125",
+ "years": [
+  1982,
+  1985
+ ],
+ "match": [
+  "dr100",
+  "dr125",
+  "sp125",
+  "dr 125",
+  "dr 100",
+  "sp 125",
+  "dr125s"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "98 or 124 cc air-cooled overhead-cam single, carb",
+ "intro": "Suzuki's small four-stroke trail bikes of the early 80s. Simple and easy to keep running.",
+ "focus": [
+  [
+   "Small single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Cam chain",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "silhouette": "suzuki-dr100-dr125-sp125-1982",
+ "areas": [],
+ "heroName": "DR125"
+}

@@ -1,0 +1,62 @@
+{
+ "id": "bmw-f650-funduro-st-1994",
+ "make": "BMW",
+ "model": "F650 Funduro / ST",
+ "name": "BMW F650 Funduro / ST",
+ "years": [
+  1994,
+  1999
+ ],
+ "match": [
+  "f650",
+  "funduro",
+  "f650st",
+  "f 650",
+  "f650 funduro",
+  "f 650 st",
+  "f650 strada"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "652 cc liquid-cooled four-valve Rotax single, two carbs",
+ "intro": "BMW's first single of the modern era, built with Aprilia and Rotax. Chain drive, two carbs and a dry-sump oil tank in the frame.",
+ "focus": [
+  [
+   "Rotax single",
+   "Liquid-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean them"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Oil",
+   "Dry sump"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "F650.com",
+   "url": "https://f650.com/",
+   "what": "Owner forum and FAQs for BMW F650 and F800 models."
+  }
+ ],
+ "heroName": "F650"
+}

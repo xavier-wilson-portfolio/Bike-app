@@ -1,0 +1,70 @@
+{
+ "id": "ktm-1190-rc8-2008",
+ "make": "KTM",
+ "model": "1190 RC8",
+ "name": "KTM 1190 RC8",
+ "years": [
+  2008,
+  2015
+ ],
+ "match": [
+  "1190 rc8",
+  "rc8",
+  "rc8r",
+  "rc8 r",
+  "1190 rc8 r",
+  "rc 8"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "1148 or 1195 cc liquid-cooled 75-degree V-twin, fuel injected",
+ "intro": "KTM's V-twin superbike. A trellis frame, adjustable ergonomics and an LC8 engine with a dry sump.",
+ "focus": [
+  [
+   "LC8 twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "KTM has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KTM Forums",
+   "url": "https://www.ktmforums.com/",
+   "what": "Owner forum for KTM street and adventure bikes."
+  }
+ ],
+ "silhouette": "ktm-1190-rc8-2008",
+ "areas": [],
+ "heroName": "RC8",
+ "hero": {
+  "src": "img/hero/ktm-1190-rc8-2008.jpg",
+  "artist": "Banan van Dyk",
+  "page": "https://commons.wikimedia.org/wiki/File:KTM_RC8_1190.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

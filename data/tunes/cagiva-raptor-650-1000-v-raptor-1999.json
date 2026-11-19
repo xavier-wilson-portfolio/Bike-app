@@ -1,0 +1,62 @@
+{
+ "id": "cagiva-raptor-650-1000-v-raptor-1999",
+ "make": "Cagiva",
+ "model": "Raptor 650 / 1000 / V-Raptor",
+ "name": "Cagiva Raptor / V-Raptor",
+ "years": [
+  1999,
+  2005
+ ],
+ "match": [
+  "raptor",
+  "v-raptor",
+  "raptor 650",
+  "raptor 1000",
+  "x-raptor",
+  "v raptor",
+  "cagiva raptor"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "645 or 996 cc liquid-cooled Suzuki V-twin, fuel injected",
+ "intro": "Cagiva's naked bikes with Suzuki SV650 and TL1000 engines. Engine parts are easy; chassis parts are not.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "RAPTOR"
+}

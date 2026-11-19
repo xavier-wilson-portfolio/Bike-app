@@ -1,0 +1,68 @@
+{
+ "id": "honda-dn-01-2009",
+ "make": "Honda",
+ "model": "DN-01",
+ "name": "Honda DN-01",
+ "years": [
+  2009,
+  2010
+ ],
+ "match": [
+  "dn-01",
+  "dn01",
+  "dn 01",
+  "honda dn-01"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "680 cc liquid-cooled V-twin, fuel injected, hydraulic automatic transmission, shaft drive",
+ "intro": "Honda's odd automatic cruiser. A hydraulic transmission that needs the right fluid and a dealer tool for some jobs.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "HFT gearbox",
+   "Check fluid"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Shadow Riders",
+   "url": "https://www.shadowriders.com/",
+   "what": "Owner forum for Honda Shadows and other Honda cruisers."
+  }
+ ],
+ "silhouette": "honda-dn-01-2009",
+ "areas": [],
+ "heroName": "DN-01",
+ "hero": {
+  "src": "img/hero/honda-dn-01-2009.jpg",
+  "artist": "Snowdog",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_DN-01.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
+}

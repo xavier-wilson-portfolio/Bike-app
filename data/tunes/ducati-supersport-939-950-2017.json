@@ -1,0 +1,75 @@
+{
+ "id": "ducati-supersport-939-950-2017",
+ "make": "Ducati",
+ "model": "SuperSport 939 / 950",
+ "name": "Ducati SuperSport 939 / 950",
+ "years": [
+  2017,
+  2026
+ ],
+ "match": [
+  "supersport 939",
+  "supersport 950",
+  "ss939",
+  "ss950",
+  "supersport s",
+  "supersport 950s",
+  "supersport 2017"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "937 cc liquid-cooled Testastretta V-twin, fuel injected",
+ "intro": "Ducati's road-focused sport bike. The Hypermotard engine in a comfortable faired chassis.",
+ "focus": [
+  [
+   "Desmo twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Belts",
+   "Change them"
+  ],
+  [
+   "Desmo valves",
+   "Shim check"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Desmo valve service needs both opening and closing shims checked. Follow the interval in the manual; it is not a job to skip."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Ducati has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "silhouette": "ducati-supersport-939-950-2017",
+ "areas": [],
+ "heroName": "SUPERSPORT",
+ "hero": {
+  "src": "img/hero/ducati-supersport-939-950-2017.jpg",
+  "artist": "D4NIELZ",
+  "page": "https://commons.wikimedia.org/wiki/File:Supersport_950_S.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

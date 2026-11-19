@@ -1,0 +1,58 @@
+{
+ "id": "kawasaki-klx140-2008",
+ "make": "Kawasaki",
+ "model": "KLX140",
+ "name": "Kawasaki KLX140",
+ "years": [
+  2008,
+  2026
+ ],
+ "match": [
+  "klx140",
+  "klx 140",
+  "klx140l",
+  "klx140g",
+  "klx140r"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "144 cc air-cooled four-stroke single, electric start",
+ "intro": "Kawasaki's teen and small-adult trail bike. Electric start, a simple air-cooled single and a manual clutch.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel",
+   "Check system"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Air filter",
+   "Clean and oil"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Kawasaki dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "KLX140"
+}

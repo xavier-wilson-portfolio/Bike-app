@@ -1,0 +1,68 @@
+{
+ "id": "yamaha-mx175-mx250-mx360-1973",
+ "make": "Yamaha",
+ "model": "MX175 / MX250 / MX360",
+ "name": "Yamaha MX175 / MX250 / MX360",
+ "years": [
+  1973,
+  1975
+ ],
+ "match": [
+  "mx175",
+  "mx250",
+  "mx360",
+  "mx 250",
+  "mx400",
+  "mx100",
+  "mx125"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "171 to 397 cc air-cooled two-stroke single, Autolube oil injection",
+ "intro": "Yamaha's street-legal motocross bikes of the mid 70s. Autolube, a twin-shock rear and lights.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Oil injection"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Autolube",
+   "Check pump"
+  ],
+  [
+   "Ignition",
+   "Check spark"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It has oil injection, not premix. Keep the oil tank filled with two-stroke oil and check the pump line for cracks."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Enduros forum",
+   "url": "https://www.yamaha-enduros.com/",
+   "what": "Owner forum for vintage Yamaha two-stroke enduros."
+  }
+ ],
+ "heroName": "MX250"
+}

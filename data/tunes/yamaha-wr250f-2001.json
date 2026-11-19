@@ -1,0 +1,56 @@
+{
+ "id": "yamaha-wr250f-2001",
+ "make": "Yamaha",
+ "model": "WR250F",
+ "name": "Yamaha WR250F",
+ "years": [
+  2001,
+  2026
+ ],
+ "match": [
+  "wr250f",
+  "wr 250f",
+  "wr250f enduro"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 cc liquid-cooled four-stroke single, carb then fuel injection, electric start",
+ "intro": "Yamaha's 250 enduro. Electric start, wide gearing and a lot of shared parts with the YZ250F.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "Valves",
+   "Check often"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Yamaha dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "WR250F"
+}

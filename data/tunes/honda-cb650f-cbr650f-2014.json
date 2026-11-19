@@ -1,0 +1,70 @@
+{
+ "id": "honda-cb650f-cbr650f-2014",
+ "make": "Honda",
+ "model": "CB650F / CBR650F",
+ "name": "Honda CB650F / CBR650F",
+ "years": [
+  2014,
+  2018
+ ],
+ "match": [
+  "cb650f",
+  "cbr650f",
+  "cb 650f",
+  "cbr 650f",
+  "cb650fa",
+  "cbr650fa"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "649 cc liquid-cooled inline four, fuel injected",
+ "intro": "Honda's middleweight four before the R models. Smooth and simple, with a long service life.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "CBR Forum",
+   "url": "https://www.cbrforum.com/",
+   "what": "Owner forum for Honda CBR models."
+  }
+ ],
+ "silhouette": "honda-cb650f-cbr650f-2014",
+ "areas": [],
+ "heroName": "CB650F",
+ "hero": {
+  "src": "img/hero/honda-cb650f-cbr650f-2014.jpg",
+  "artist": "ウェルワィ",
+  "page": "https://commons.wikimedia.org/wiki/File:Cbr650f.jpg",
+  "lic": "CC BY 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by/3.0"
+ }
+}

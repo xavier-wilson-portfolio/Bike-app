@@ -1,0 +1,59 @@
+{
+ "id": "kawasaki-klx300r-1996",
+ "make": "Kawasaki",
+ "model": "KLX300R",
+ "name": "Kawasaki KLX300R",
+ "years": [
+  1996,
+  2007
+ ],
+ "match": [
+  "klx300r",
+  "klx 300r",
+  "klx300 1996",
+  "klx300r enduro"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "292 cc liquid-cooled four-valve single, carb, kick start",
+ "intro": "Kawasaki's off-road 300 four-stroke. Kick start only, liquid cooled and easy to keep running.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Kawasaki dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "KLX300R"
+}

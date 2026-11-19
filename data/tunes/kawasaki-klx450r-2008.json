@@ -1,0 +1,57 @@
+{
+ "id": "kawasaki-klx450r-2008",
+ "make": "Kawasaki",
+ "model": "KLX450R",
+ "name": "Kawasaki KLX450R",
+ "years": [
+  2008,
+  2021
+ ],
+ "match": [
+  "klx450r",
+  "klx 450r",
+  "klx450",
+  "klx 450"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "449 cc liquid-cooled four-stroke single, electric start",
+ "intro": "Kawasaki's off-road 450 enduro, built from the KX450F. Electric start and wider gearing.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel",
+   "Check system"
+  ],
+  [
+   "Valves",
+   "Check often"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Kawasaki dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "KLX450R"
+}

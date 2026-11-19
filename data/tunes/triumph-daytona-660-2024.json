@@ -1,0 +1,58 @@
+{
+ "id": "triumph-daytona-660-2024",
+ "make": "Triumph",
+ "model": "Daytona 660",
+ "name": "Triumph Daytona 660",
+ "years": [
+  2024,
+  2026
+ ],
+ "match": [
+  "daytona 660",
+  "daytona660",
+  "triumph daytona 660"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "660 cc liquid-cooled triple, fuel injected",
+ "intro": "Triumph's 2024 sport triple. The Trident engine tuned for more power, with a full fairing.",
+ "focus": [
+  [
+   "Triple",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Triumph has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "heroName": "DAYTONA 660"
+}

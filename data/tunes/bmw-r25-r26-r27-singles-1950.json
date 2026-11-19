@@ -1,0 +1,65 @@
+{
+ "id": "bmw-r25-r26-r27-singles-1950",
+ "make": "BMW",
+ "model": "R25 / R26 / R27 singles",
+ "name": "BMW R25 / R26 / R27",
+ "years": [
+  1950,
+  1966
+ ],
+ "match": [
+  "r25",
+  "r26",
+  "r27",
+  "r25/3",
+  "r25/2",
+  "r 26",
+  "r 27",
+  "bmw single"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "247 cc air-cooled OHV single, carb, shaft drive",
+ "intro": "BMW's 250 singles of the 50s and 60s. Shaft drive, a magneto or coil ignition and a strong parts supply from specialists.",
+ "focus": [
+  [
+   "OHV single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Ignition",
+   "Check spark"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Airheads Beemer Club",
+   "url": "https://www.airheads.org/",
+   "what": "Tech library and owner club for BMW airhead twins."
+  }
+ ],
+ "silhouette": "bmw-r25-r26-r27-singles-1950",
+ "areas": [],
+ "heroName": "R27"
+}

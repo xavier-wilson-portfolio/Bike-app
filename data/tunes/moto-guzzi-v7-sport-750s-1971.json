@@ -1,0 +1,65 @@
+{
+ "id": "moto-guzzi-v7-sport-750s-1971",
+ "make": "Moto Guzzi",
+ "model": "V7 Sport / 750S",
+ "name": "Moto Guzzi V7 Sport / 750S",
+ "years": [
+  1971,
+  1975
+ ],
+ "match": [
+  "v7 sport",
+  "750s",
+  "750 s3",
+  "v7 sport 750",
+  "guzzi 750s",
+  "750 s"
+ ],
+ "style": "sport",
+ "drive": "shaft",
+ "engine": "748 cc air-cooled 90-degree V-twin, two carbs, shaft drive",
+ "intro": "Guzzi's first sport twin, on the Tonti frame. Very collectible now, with shaft drive and a separate gearbox.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Sync them"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Three oils",
+   "Change all"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "K": [
+   "Guzzi big twins use a car-type dry clutch and a separate gearbox and final drive. Change all three oils, not just the engine oil."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moto Guzzi National Owners Club",
+   "url": "https://www.mgnoc.org/",
+   "what": "US owner club for Moto Guzzi."
+  }
+ ],
+ "heroName": "V7 SPORT"
+}

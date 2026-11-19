@@ -1,0 +1,78 @@
+{
+ "id": "bsa-a10-golden-flash-super-rocket-1950",
+ "make": "BSA",
+ "model": "A10 Golden Flash / Super Rocket",
+ "name": "BSA A10 Golden Flash / Super Rocket",
+ "years": [
+  1950,
+  1963
+ ],
+ "match": [
+  "a10",
+  "golden flash",
+  "super rocket",
+  "road rocket",
+  "rocket gold star",
+  "bsa a10",
+  "spitfire scrambler"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "646 cc air-cooled OHV pre-unit parallel twin, magneto",
+ "intro": "BSA's 650 pre-unit twin. A magneto, a separate gearbox and plunger or swingarm frames.",
+ "focus": [
+  [
+   "Pre-unit twin",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Magneto",
+   "Check spark"
+  ],
+  [
+   "Gearbox",
+   "Separate oil"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ],
+  "K": [
+   "The gearbox is separate from the engine and has its own oil. Check and change both, and set the primary chain."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BSA Owners Club",
+   "url": "https://www.bsaoc.org/",
+   "what": "Owner club for BSA motorcycles, with tech help and parts."
+  }
+ ],
+ "silhouette": "bsa-a10-golden-flash-super-rocket-1950",
+ "areas": [],
+ "heroName": "GOLDEN FLASH",
+ "hero": {
+  "src": "img/hero/bsa-a10-golden-flash-super-rocket-1950.jpg",
+  "artist": "SG2012",
+  "page": "https://commons.wikimedia.org/wiki/File:BSA_A10_Golden_Flash_(1960)_-_30405313581.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

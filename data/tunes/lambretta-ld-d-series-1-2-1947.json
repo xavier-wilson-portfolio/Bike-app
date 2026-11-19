@@ -1,0 +1,72 @@
+{
+ "id": "lambretta-ld-d-series-1-2-1947",
+ "make": "Lambretta",
+ "model": "LD / D / Series 1-2",
+ "name": "Lambretta LD / D",
+ "years": [
+  1947,
+  1962
+ ],
+ "match": [
+  "ld",
+  "ld 125",
+  "ld 150",
+  "lambretta ld",
+  "lambretta d",
+  "d 125",
+  "d 150",
+  "lambretta c",
+  "lambretta e"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "123 or 148 cc air-cooled two-stroke single, premix, shaft drive",
+ "intro": "The early Lambrettas. Tube frames, shaft drive to the rear wheel and parts that are getting scarce.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Shaft drive",
+   "Check oil"
+  ],
+  [
+   "Ignition",
+   "Check flywheel"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Lambretta Club USA",
+   "url": "https://www.lambrettaclubusa.org/",
+   "what": "US club for classic Lambretta scooters."
+  }
+ ],
+ "silhouette": "lambretta-ld-d-series-1-2-1947",
+ "areas": [],
+ "heroName": "LAMBRETTA LD"
+}

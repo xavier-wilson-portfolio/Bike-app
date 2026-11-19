@@ -1,0 +1,73 @@
+{
+ "id": "laverda-1000-jota-1200-1973",
+ "make": "Laverda",
+ "model": "1000 / Jota / 1200",
+ "name": "Laverda 1000 / Jota / 1200",
+ "years": [
+  1973,
+  1989
+ ],
+ "match": [
+  "jota",
+  "laverda jota",
+  "3c",
+  "3ce",
+  "laverda 1000",
+  "laverda 1200",
+  "rgs",
+  "rgs 1000",
+  "jota 1000"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "981 or 1116 cc air-cooled DOHC triple, three carbs",
+ "intro": "Laverda's big triples, including the Jota. Three carbs, a loud exhaust and a big following.",
+ "focus": [
+  [
+   "DOHC triple",
+   "Air-cooled"
+  ],
+  [
+   "Three carbs",
+   "Clean and sync"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Cam chain",
+   "Check it"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "silhouette": "laverda-1000-jota-1200-1973",
+ "areas": [],
+ "heroName": "JOTA",
+ "hero": {
+  "src": "img/hero/laverda-1000-jota-1200-1973.jpg",
+  "artist": "Ronald Saunders from Warrington, UK",
+  "page": "https://commons.wikimedia.org/wiki/File:LAVERDA_JOTA_1000cc._ITALY_1976-1982.jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
+}

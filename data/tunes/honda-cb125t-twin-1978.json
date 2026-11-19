@@ -1,0 +1,61 @@
+{
+ "id": "honda-cb125t-twin-1978",
+ "make": "Honda",
+ "model": "CB125T twin",
+ "name": "Honda CB125T",
+ "years": [
+  1978,
+  1982
+ ],
+ "match": [
+  "cb125t",
+  "cb 125t",
+  "cb125tii",
+  "cb125t2"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "124 cc air-cooled SOHC parallel twin, two carbs",
+ "intro": "Honda's tiny twin. Two small carbs, a SOHC head and parts that are shared with the CD125.",
+ "focus": [
+  [
+   "Small twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Sync them"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Cam chain",
+   "Adjust it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "silhouette": "honda-cb125t-twin-1978",
+ "areas": [],
+ "heroName": "CB125T"
+}

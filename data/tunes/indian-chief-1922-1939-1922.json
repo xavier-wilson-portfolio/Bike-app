@@ -1,0 +1,77 @@
+{
+ "id": "indian-chief-1922-1939-1922",
+ "make": "Indian",
+ "model": "Chief (1922-1939)",
+ "name": "Indian Chief (1922-1939)",
+ "years": [
+  1922,
+  1939
+ ],
+ "match": [
+  "chief",
+  "indian chief",
+  "chief 74",
+  "chief 1930s",
+  "big chief",
+  "chief 61"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "61 to 74 cubic inch air-cooled side-valve V-twin, total-loss then recirculating oil",
+ "intro": "The early Chiefs. Flathead V-twins, hand shift and either total-loss or dry-sump oiling depending on year.",
+ "focus": [
+  [
+   "Flathead twin",
+   "Air-cooled"
+  ],
+  [
+   "Oiling",
+   "Check type"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Set tappets"
+  ],
+  [
+   "Hand shift",
+   "Check linkage"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "E": [
+   "It is a flathead. The valves sit beside the cylinder, so set the tappets with the engine cold and check the valve guides for wear."
+  ],
+  "H": [
+   "Check whether yours has a total-loss or a recirculating oil system before you fill it, and know which one you are running."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "silhouette": "indian-chief-1922-1939-1922",
+ "areas": [],
+ "heroName": "CHIEF",
+ "hero": {
+  "src": "img/hero/indian-chief-1922-1939-1922.jpg",
+  "artist": "Thilo Parg",
+  "page": "https://commons.wikimedia.org/wiki/File:Indian_Chief_1935_Barber.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

@@ -1,0 +1,79 @@
+{
+ "id": "norton-es2-model-50-manx-1947",
+ "make": "Norton",
+ "model": "ES2 / Model 50 / Manx",
+ "name": "Norton ES2 / Model 50 / Manx",
+ "years": [
+  1947,
+  1963
+ ],
+ "match": [
+  "es2",
+  "model 50",
+  "manx",
+  "norton manx",
+  "international",
+  "model 30",
+  "model 40",
+  "norton es2"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "348 or 490 cc air-cooled single, pushrod or overhead-cam, magneto",
+ "intro": "Norton's singles, from the ES2 road bike to the Manx racer. Magneto ignition and a separate gearbox.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Magneto",
+   "Check spark"
+  ],
+  [
+   "Gearbox",
+   "Separate oil"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ],
+  "K": [
+   "The gearbox is separate from the engine and has its own oil. Check and change both, and set the primary chain."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Norton Owners Club",
+   "url": "https://www.nortonownersclub.org/",
+   "what": "Owner club and forum for Nortons."
+  }
+ ],
+ "silhouette": "norton-es2-model-50-manx-1947",
+ "areas": [],
+ "heroName": "MANX",
+ "hero": {
+  "src": "img/hero/norton-es2-model-50-manx-1947.jpg",
+  "artist": "Steve Glover from Bolton, Lancs., England",
+  "page": "https://commons.wikimedia.org/wiki/File:Norton_ES2_500cc_(1961)_(21067396499).jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

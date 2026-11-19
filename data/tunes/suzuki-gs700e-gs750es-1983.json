@@ -1,0 +1,61 @@
+{
+ "id": "suzuki-gs700e-gs750es-1983",
+ "make": "Suzuki",
+ "model": "GS700E / GS750ES",
+ "name": "Suzuki GS700E / GS750ES",
+ "years": [
+  1983,
+  1985
+ ],
+ "match": [
+  "gs700e",
+  "gs750es",
+  "gs700es",
+  "gs 750es",
+  "gs 700e",
+  "gs750e 1983"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "694 or 747 cc air-cooled DOHC inline four, four carbs, anti-dive forks",
+ "intro": "Suzuki's mid-80s sport fours. Half fairing, anti-dive forks and four carbs.",
+ "focus": [
+  [
+   "Inline four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Anti-dive",
+   "Check seals"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The GS Resources forum",
+   "url": "https://www.thegsresources.com/_forum/",
+   "what": "Owner forum for Suzuki GS fours and twins."
+  }
+ ],
+ "heroName": "GS750ES"
+}

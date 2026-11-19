@@ -1,0 +1,59 @@
+{
+ "id": "yamaha-xt200-1982",
+ "make": "Yamaha",
+ "model": "XT200",
+ "name": "Yamaha XT200",
+ "years": [
+  1982,
+  1983
+ ],
+ "match": [
+  "xt200",
+  "xt 200",
+  "xt200j",
+  "xt200k"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "196 cc air-cooled overhead-cam single, carb, electric start",
+ "intro": "Yamaha's early-80s 200 dual-sport. Electric start, a monoshock and a simple single.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Cam chain",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Odin XT500 forum",
+   "url": "https://www.tapatalk.com/groups/odinxt500/",
+   "what": "Owner forum for XT500, TT500 and SR500 singles."
+  }
+ ],
+ "heroName": "XT200"
+}

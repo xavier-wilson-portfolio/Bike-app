@@ -1,0 +1,68 @@
+{
+ "id": "suzuki-vx800-1990",
+ "make": "Suzuki",
+ "model": "VX800",
+ "name": "Suzuki VX800",
+ "years": [
+  1990,
+  1993
+ ],
+ "match": [
+  "vx800",
+  "vx 800",
+  "vx800l",
+  "vx800 suzuki"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "805 cc liquid-cooled 45-degree V-twin, two carbs, shaft drive",
+ "intro": "Suzuki's V-twin standard of the early 90s. The Intruder engine in a sporty frame with shaft drive.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Suzuki Forums",
+   "url": "https://www.suzuki-forums.com/forums/",
+   "what": "General owner forum for Suzuki motorcycles."
+  }
+ ],
+ "silhouette": "suzuki-vx800-1990",
+ "areas": [],
+ "heroName": "VX800",
+ "hero": {
+  "src": "img/hero/suzuki-vx800-1990.jpg",
+  "artist": "CadillacJack",
+  "page": "https://commons.wikimedia.org/wiki/File:VX800_1.JPG",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
+}

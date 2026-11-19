@@ -1,0 +1,63 @@
+{
+ "id": "indian-sport-scout-1934",
+ "make": "Indian",
+ "model": "Sport Scout",
+ "name": "Indian Sport Scout",
+ "years": [
+  1934,
+  1942
+ ],
+ "match": [
+  "sport scout",
+  "indian sport scout",
+  "sport scout 45",
+  "scout 1938"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "45 cubic inch air-cooled side-valve V-twin, girder fork, recirculating oil",
+ "intro": "Indian's 30s sport twin, loved by racers. A flathead V-twin with a girder fork and a geared primary.",
+ "focus": [
+  [
+   "Flathead twin",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Oil pump",
+   "Check it"
+  ],
+  [
+   "Valves",
+   "Set tappets"
+  ],
+  [
+   "Girder fork",
+   "Check pivots"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "E": [
+   "It is a flathead. The valves sit beside the cylinder, so set the tappets with the engine cold and check the valve guides for wear."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "SPORT SCOUT"
+}

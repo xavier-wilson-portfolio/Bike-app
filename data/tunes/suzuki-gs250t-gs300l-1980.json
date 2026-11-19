@@ -1,0 +1,62 @@
+{
+ "id": "suzuki-gs250t-gs300l-1980",
+ "make": "Suzuki",
+ "model": "GS250T / GS300L",
+ "name": "Suzuki GS250T / GS300L",
+ "years": [
+  1980,
+  1982
+ ],
+ "match": [
+  "gs250t",
+  "gs300l",
+  "gs 250t",
+  "gs250tx",
+  "gs300",
+  "gs 300",
+  "gs250"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "249 or 299 cc air-cooled SOHC parallel twin, two carbs",
+ "intro": "Suzuki's small GS twins. Simple air-cooled engines with two carbs and electric start.",
+ "focus": [
+  [
+   "Twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Sync them"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The GS Resources forum",
+   "url": "https://www.thegsresources.com/_forum/",
+   "what": "Owner forum for Suzuki GS fours and twins."
+  }
+ ],
+ "heroName": "GS300L"
+}

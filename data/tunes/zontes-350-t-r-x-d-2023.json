@@ -1,0 +1,62 @@
+{
+ "id": "zontes-350-t-r-x-d-2023",
+ "make": "Zontes",
+ "model": "350 (T / R / X / D)",
+ "name": "Zontes 350",
+ "years": [
+  2023,
+  2026
+ ],
+ "match": [
+  "zontes 350",
+  "350t",
+  "350r",
+  "350x",
+  "350d",
+  "zt350",
+  "zontes 350t"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "348 cc liquid-cooled single, fuel injected, keyless",
+ "intro": "Zontes's 350 range. Keyless ignition, electronic features and parts that come through the importer.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Electronics",
+   "Check keyless"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Many of these were sold under several brand names and may not show up in the NHTSA search. Check with the seller or importer for open recalls.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "ZONTES"
+}

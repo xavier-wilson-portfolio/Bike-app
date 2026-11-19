@@ -1,0 +1,72 @@
+{
+ "id": "ktm-lc4-620-duke-620-1994",
+ "make": "KTM",
+ "model": "LC4 620 / Duke 620",
+ "name": "KTM LC4 620 / Duke 620",
+ "years": [
+  1994,
+  1998
+ ],
+ "match": [
+  "lc4 620",
+  "duke 620",
+  "620 duke",
+  "620 egs",
+  "620 sc",
+  "620 rxc",
+  "620 lc4",
+  "duke i"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "609 cc liquid-cooled four-valve single, carb, kick or electric start",
+ "intro": "KTM's 90s big single, as an enduro or the first Duke. A dry-sump engine with a kick start on many.",
+ "focus": [
+  [
+   "Big single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Starting",
+   "Decompressor"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KTM Forums",
+   "url": "https://www.ktmforums.com/",
+   "what": "Owner forum for KTM street and adventure bikes."
+  }
+ ],
+ "silhouette": "ktm-lc4-620-duke-620-1994",
+ "areas": [],
+ "heroName": "LC4 620",
+ "hero": {
+  "src": "img/hero/ktm-lc4-620-duke-620-1994.jpg",
+  "artist": "",
+  "page": "https://commons.wikimedia.org/wiki/File:KTM_Duke620.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
+}

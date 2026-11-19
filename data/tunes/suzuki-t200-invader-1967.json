@@ -1,0 +1,68 @@
+{
+ "id": "suzuki-t200-invader-1967",
+ "make": "Suzuki",
+ "model": "T200 Invader",
+ "name": "Suzuki T200 Invader",
+ "years": [
+  1967,
+  1969
+ ],
+ "match": [
+  "t200",
+  "invader",
+  "t 200",
+  "t200 invader",
+  "x5",
+  "x-5"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "196 cc air-cooled two-stroke twin, Posi-Force oil injection",
+ "intro": "Suzuki's small two-stroke twin of the late 60s. Oil injection, two carbs and points.",
+ "focus": [
+  [
+   "Two-stroke twin",
+   "Oil injection"
+  ],
+  [
+   "Two carbs",
+   "Sync them"
+  ],
+  [
+   "Oil pump",
+   "Check lines"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Suzuki's CCI system pumps oil into the engine, so it does not need premix. Check the oil tank, pump and lines. If the pump was removed, it runs premix.",
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "INVADER"
+}

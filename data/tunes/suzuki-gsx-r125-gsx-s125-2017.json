@@ -1,0 +1,61 @@
+{
+ "id": "suzuki-gsx-r125-gsx-s125-2017",
+ "make": "Suzuki",
+ "model": "GSX-R125 / GSX-S125",
+ "name": "Suzuki GSX-R125 / GSX-S125",
+ "years": [
+  2017,
+  2026
+ ],
+ "match": [
+  "gsx-r125",
+  "gsxr125",
+  "gsx-s125",
+  "gsxs125",
+  "gsx r125",
+  "gsx s125"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "124 cc liquid-cooled DOHC single, fuel injected",
+ "intro": "Suzuki's small sport single. Fuel injected and keyless on some, with a six-speed box.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant level"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Suzuki Forums",
+   "url": "https://www.suzuki-forums.com/forums/",
+   "what": "General owner forum for Suzuki motorcycles."
+  }
+ ],
+ "heroName": "GSX-R125"
+}

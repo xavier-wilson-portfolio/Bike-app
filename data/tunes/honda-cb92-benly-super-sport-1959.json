@@ -1,0 +1,72 @@
+{
+ "id": "honda-cb92-benly-super-sport-1959",
+ "make": "Honda",
+ "model": "CB92 Benly Super Sport",
+ "name": "Honda CB92 Benly Super Sport",
+ "years": [
+  1959,
+  1965
+ ],
+ "match": [
+  "cb92",
+  "cb 92",
+  "benly super sport",
+  "benly ss",
+  "cb92 benly",
+  "c92"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "125 cc air-cooled overhead-cam twin, one carb, four-speed",
+ "intro": "Honda's first sport bike. A pressed-steel frame, a leading-link fork and parts that are hard to find.",
+ "focus": [
+  [
+   "Twin",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Leading link",
+   "Check bushings"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "L": [
+   "The leading-link fork pivots on bushings. Check for play and grease it before you trust the steering."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Honda Twins forum",
+   "url": "https://www.vintagehondatwins.com/",
+   "what": "Owner forum for Honda twins of the 60s and 70s."
+  }
+ ],
+ "silhouette": "honda-cb92-benly-super-sport-1959",
+ "areas": [],
+ "heroName": "CB92",
+ "hero": {
+  "src": "img/hero/honda-cb92-benly-super-sport-1959.jpg",
+  "artist": "Lankyrider",
+  "page": "https://commons.wikimedia.org/wiki/File:1963_Honda_Benly_C92_125cc.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

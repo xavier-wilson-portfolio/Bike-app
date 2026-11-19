@@ -1,0 +1,69 @@
+{
+ "id": "suzuki-a100-1966",
+ "make": "Suzuki",
+ "model": "A100",
+ "name": "Suzuki A100",
+ "years": [
+  1966,
+  1977
+ ],
+ "match": [
+  "a100",
+  "a 100",
+  "suzuki a100",
+  "as100",
+  "ac100",
+  "a50",
+  "a70"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "98 cc air-cooled rotary-valve two-stroke single, oil injection",
+ "intro": "Suzuki's long-running small commuter. A rotary-valve two-stroke with oil injection and points.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Oil injection"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Oil pump",
+   "Check lines"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Chain case",
+   "Check inside"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Suzuki's CCI system pumps oil into the engine, so it does not need premix. Check the oil tank, pump and lines. If the pump was removed, it runs premix.",
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "A100"
+}

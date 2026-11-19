@@ -1,0 +1,63 @@
+{
+ "id": "kawasaki-kx500-1983",
+ "make": "Kawasaki",
+ "model": "KX500",
+ "name": "Kawasaki KX500",
+ "years": [
+  1983,
+  2004
+ ],
+ "match": [
+  "kx500",
+  "kx 500"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "499 cc liquid-cooled two-stroke single, carb, premix",
+ "intro": "Kawasaki's big open-class two-stroke. Lots of power, premix and a long production run.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Kawasaki dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "KX500"
+}

@@ -1,0 +1,61 @@
+{
+ "id": "suzuki-dr800-big-1990",
+ "make": "Suzuki",
+ "model": "DR800 Big",
+ "name": "Suzuki DR800 Big",
+ "years": [
+  1990,
+  1997
+ ],
+ "match": [
+  "dr800",
+  "dr big",
+  "dr 800",
+  "dr750 big",
+  "dr800s",
+  "dr big 800"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "779 cc air/oil-cooled single, two carbs, two balancer shafts",
+ "intro": "Suzuki's huge single with the beak. Oil-cooled, two carbs and a big tank; most were sold outside the US.",
+ "focus": [
+  [
+   "Big single",
+   "Air/oil-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean them"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Starter",
+   "Check clutch"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "DR BIG"
+}

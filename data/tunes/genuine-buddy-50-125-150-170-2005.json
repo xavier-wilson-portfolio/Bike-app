@@ -1,0 +1,74 @@
+{
+ "id": "genuine-buddy-50-125-150-170-2005",
+ "make": "Genuine",
+ "model": "Buddy 50 / 125 / 150 / 170",
+ "name": "Genuine Buddy",
+ "years": [
+  2005,
+  2026
+ ],
+ "match": [
+  "buddy",
+  "buddy 50",
+  "buddy 125",
+  "buddy 150",
+  "buddy 170",
+  "buddy kick",
+  "buddy international",
+  "genuine buddy"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 to 170 cc air-cooled single, carb or fuel injection, CVT",
+ "intro": "Genuine's PGO-built small scooter. Simple and cheap to run, with a CVT and a lot of owner support.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Gear oil",
+   "Change it"
+  ],
+  [
+   "Brakes",
+   "Check them"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Some years are two-strokes and some are four-strokes. Check yours before you buy oil, plugs or carb parts."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "silhouette": "genuine-buddy-50-125-150-170-2005",
+ "areas": [],
+ "heroName": "BUDDY",
+ "hero": {
+  "src": "img/hero/genuine-buddy-50-125-150-170-2005.jpg",
+  "artist": "Travis Rigel Lukas Hornung",
+  "page": "https://commons.wikimedia.org/wiki/File:Genuine_Buddy_01.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

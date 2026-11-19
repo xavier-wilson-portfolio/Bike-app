@@ -1,0 +1,60 @@
+{
+ "id": "kawasaki-kx450f-2006",
+ "make": "Kawasaki",
+ "model": "KX450F",
+ "name": "Kawasaki KX450F",
+ "years": [
+  2006,
+  2026
+ ],
+ "match": [
+  "kx450f",
+  "kx 450f",
+  "kx450",
+  "kx 450",
+  "kx450x"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "449 cc liquid-cooled four-stroke single, carb then fuel injection",
+ "intro": "Kawasaki's open-class motocross bike. Later ones have electric start and a hydraulic clutch.",
+ "focus": [
+  [
+   "Race single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "Valves",
+   "Check often"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Hours",
+   "Log them"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Kawasaki dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "silhouette": "kawasaki-kx450f-2006",
+ "areas": [],
+ "heroName": "KX450F"
+}

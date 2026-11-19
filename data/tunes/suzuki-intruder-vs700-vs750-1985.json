@@ -1,0 +1,71 @@
+{
+ "id": "suzuki-intruder-vs700-vs750-1985",
+ "make": "Suzuki",
+ "model": "Intruder VS700 / VS750",
+ "name": "Suzuki Intruder VS700 / VS750",
+ "years": [
+  1985,
+  1991
+ ],
+ "match": [
+  "vs700",
+  "vs750",
+  "intruder 700",
+  "intruder 750",
+  "vs750glp",
+  "vs700glp",
+  "vs 750"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "694 or 747 cc liquid-cooled 45-degree V-twin, two carbs, shaft drive",
+ "intro": "The first Suzuki Intruders. A liquid-cooled V-twin, shaft drive and the classic chopper look.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Suzuki Forums",
+   "url": "https://www.suzuki-forums.com/forums/",
+   "what": "General owner forum for Suzuki motorcycles."
+  }
+ ],
+ "silhouette": "suzuki-intruder-vs700-vs750-1985",
+ "areas": [],
+ "heroName": "INTRUDER",
+ "hero": {
+  "src": "img/hero/suzuki-intruder-vs700-vs750-1985.jpg",
+  "artist": "Talkrabb",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki-Intruder-VS1400-1.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

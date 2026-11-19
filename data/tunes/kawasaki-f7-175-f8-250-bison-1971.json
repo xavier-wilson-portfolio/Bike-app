@@ -1,0 +1,71 @@
+{
+ "id": "kawasaki-f7-175-f8-250-bison-1971",
+ "make": "Kawasaki",
+ "model": "F7 175 / F8 250 Bison",
+ "name": "Kawasaki F7 / F8 Bison",
+ "years": [
+  1971,
+  1975
+ ],
+ "match": [
+  "f7",
+  "f8",
+  "bison",
+  "f7 175",
+  "f8 250",
+  "f8 bison",
+  "f5 bighorn",
+  "bighorn",
+  "f9"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "174 to 346 cc air-cooled two-stroke single, Superlube oil injection, points",
+ "intro": "Kawasaki's early-70s enduros. Two-strokes with oil injection, points and rotary valves on some models.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Oil injection"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Oil pump",
+   "Check lines"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It has Kawasaki's Superlube oil injection, not premix. Keep the oil tank filled with two-stroke oil and check the pump cable and lines.",
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KZRider forum",
+   "url": "https://www.kzrider.com/",
+   "what": "Owner forum for classic Kawasakis."
+  }
+ ],
+ "heroName": "BISON"
+}

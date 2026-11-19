@@ -1,0 +1,76 @@
+{
+ "id": "honda-hobbit-pa50-1978",
+ "make": "Honda",
+ "model": "Hobbit PA50",
+ "name": "Honda Hobbit PA50",
+ "years": [
+  1978,
+  1983
+ ],
+ "match": [
+  "hobbit",
+  "pa50",
+  "pa50ii",
+  "pa 50",
+  "honda hobbit",
+  "camino"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "49 cc air-cooled two-stroke single, oil injection, automatic, pedals",
+ "intro": "Honda's pedal moped. Two-stroke with oil injection, a variator and pedals to start it.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Oil injection"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Variator",
+   "Inspect"
+  ],
+  [
+   "Pedal chain",
+   "Lube it"
+  ],
+  [
+   "Brakes",
+   "Drums"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It has oil injection, not premix. Keep the oil tank filled with two-stroke oil and check the pump line for cracks."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "silhouette": "honda-hobbit-pa50-1978",
+ "areas": [],
+ "heroName": "HOBBIT",
+ "hero": {
+  "src": "img/hero/honda-hobbit-pa50-1978.jpg",
+  "artist": "Jonas Henn",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_Camino_(0871).JPG",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
+}

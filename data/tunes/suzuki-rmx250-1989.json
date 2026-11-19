@@ -1,0 +1,65 @@
+{
+ "id": "suzuki-rmx250-1989",
+ "make": "Suzuki",
+ "model": "RMX250",
+ "name": "Suzuki RMX250",
+ "years": [
+  1989,
+  1999
+ ],
+ "match": [
+  "rmx250",
+  "rmx 250",
+  "rmx250s",
+  "rmx250r"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 cc liquid-cooled two-stroke single, carb, premix",
+ "intro": "Suzuki's two-stroke enduro of the 90s. Premix, a power valve and wide-ratio gearing.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Power valve",
+   "Clean it"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Suzuki dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "RMX250"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "baja-motorsports-doodle-bug-mb165-minibike-2006",
+ "make": "Baja Motorsports",
+ "model": "Doodle Bug / MB165 minibike",
+ "name": "Baja Doodle Bug / MB165",
+ "years": [
+  2006,
+  2019
+ ],
+ "match": [
+  "doodle bug",
+  "doodlebug",
+  "mb165",
+  "mb200",
+  "baja minibike",
+  "db30",
+  "mini baja"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "97 to 196 cc air-cooled small-engine single, pull start, centrifugal clutch",
+ "intro": "Cheap folding and frame mini bikes. Small lawnmower-type engines and a centrifugal clutch.",
+ "focus": [
+  [
+   "Small engine",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Clutch",
+   "Centrifugal"
+  ],
+  [
+   "Governor",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "L": [
+   "These use a small horizontal-shaft engine like a lawnmower's. Engine parts are cheap and common; check the governor, the clutch or torque converter and the chain guard."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Many of these were sold under several brand names and may not show up in the NHTSA search. Check with the seller or importer for open recalls.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "DOODLE BUG"
+}

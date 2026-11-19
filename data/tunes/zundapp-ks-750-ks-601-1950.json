@@ -1,0 +1,62 @@
+{
+ "id": "zundapp-ks-750-ks-601-1950",
+ "make": "Zundapp",
+ "model": "KS 750 / KS 601",
+ "name": "Zundapp KS 750 / KS 601",
+ "years": [
+  1950,
+  1958
+ ],
+ "match": [
+  "ks 601",
+  "ks601",
+  "ks 750",
+  "ks750",
+  "green elephant",
+  "grune elefant",
+  "zundapp ks"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "597 or 751 cc air-cooled OHV boxer twin, shaft drive, often with a sidecar",
+ "intro": "Zundapp's boxer twins. The KS 601 'Green Elephant' and the wartime KS 750, both with shaft drive and rare parts.",
+ "focus": [
+  [
+   "Boxer twin",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean them"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Gearbox",
+   "Check oil"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "ZUNDAPP"
+}

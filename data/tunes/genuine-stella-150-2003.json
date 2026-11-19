@@ -1,0 +1,65 @@
+{
+ "id": "genuine-stella-150-2003",
+ "make": "Genuine",
+ "model": "Stella 150",
+ "name": "Genuine Stella 150",
+ "years": [
+  2003,
+  2016
+ ],
+ "match": [
+  "stella",
+  "stella 150",
+  "genuine stella",
+  "stella 4t",
+  "stella 2t",
+  "lml star"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "150 cc air-cooled single, two-stroke then four-stroke, four-speed hand shift",
+ "intro": "Genuine's LML-built Vespa-style scooter. A manual hand-shift gearbox and a steel body.",
+ "focus": [
+  [
+   "Single",
+   "Check type"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Hand shift",
+   "Cables"
+  ],
+  [
+   "Body",
+   "Check rust"
+  ],
+  [
+   "Brakes",
+   "Drums"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Some years are two-strokes and some are four-strokes. Check yours before you buy oil, plugs or carb parts."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "STELLA"
+}

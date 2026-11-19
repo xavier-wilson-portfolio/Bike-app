@@ -1,0 +1,67 @@
+{
+ "id": "kawasaki-w1-w2-650-1966",
+ "make": "Kawasaki",
+ "model": "W1 / W2 650",
+ "name": "Kawasaki W1 / W2 650",
+ "years": [
+  1966,
+  1971
+ ],
+ "match": [
+  "w1",
+  "w2",
+  "w1ss",
+  "w2ss",
+  "w2tt",
+  "w1 650",
+  "w2 650",
+  "w1sa"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "624 cc air-cooled OHV parallel twin, one or two carbs, points",
+ "intro": "Kawasaki's British-style 650 twin, grown from the Meguro. Pushrods, points and a lot of vibration.",
+ "focus": [
+  [
+   "OHV twin",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Pushrods",
+   "Set valves"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "W1"
+}

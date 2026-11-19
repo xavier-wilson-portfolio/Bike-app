@@ -1,0 +1,69 @@
+{
+ "id": "honda-nm4-2015",
+ "make": "Honda",
+ "model": "NM4",
+ "name": "Honda NM4",
+ "years": [
+  2015,
+  2016
+ ],
+ "match": [
+  "nm4",
+  "nm4 vultus",
+  "vultus",
+  "nm 4",
+  "honda nm4"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "745 cc liquid-cooled parallel twin, fuel injected, DCT",
+ "intro": "Honda's sci-fi cruiser. The NC700 family engine with a dual-clutch box and a lot of bodywork.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "DCT",
+   "Check filters"
+  ],
+  [
+   "Bodywork",
+   "Many panels"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Shadow Riders",
+   "url": "https://www.shadowriders.com/",
+   "what": "Owner forum for Honda Shadows and other Honda cruisers."
+  }
+ ],
+ "silhouette": "honda-nm4-2015",
+ "areas": [],
+ "heroName": "NM4",
+ "hero": {
+  "src": "img/hero/honda-nm4-2015.jpg",
+  "artist": "Rainmaker47",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_Tokyo_Motorcycle_Show_2014_concept.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

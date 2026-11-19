@@ -1,0 +1,69 @@
+{
+ "id": "francis-barnett-francis-barnett-james-two-strokes-1946",
+ "make": "Francis-Barnett",
+ "model": "Francis-Barnett / James two-strokes",
+ "name": "Francis-Barnett / James two-strokes",
+ "years": [
+  1946,
+  1966
+ ],
+ "match": [
+  "francis-barnett",
+  "francis barnett",
+  "falcon",
+  "plover",
+  "cruiser",
+  "james",
+  "james captain",
+  "villiers"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "98 to 249 cc air-cooled Villiers or AMC two-stroke, premix",
+ "intro": "British lightweights with Villiers or AMC engines. Premix, a flywheel magneto and cheap, simple parts.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Flywheel mag",
+   "Check spark"
+  ],
+  [
+   "Crank seals",
+   "Check them"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "FRANCIS-BARNETT"
+}

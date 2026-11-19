@@ -1,0 +1,59 @@
+{
+ "id": "honda-cb900c-custom-1980",
+ "make": "Honda",
+ "model": "CB900C Custom",
+ "name": "Honda CB900C Custom",
+ "years": [
+  1980,
+  1982
+ ],
+ "match": [
+  "cb900c",
+  "cb 900c",
+  "cb900 custom",
+  "cb900c custom"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "902 cc air-cooled DOHC inline four, four carbs, ten-speed (dual range), shaft drive",
+ "intro": "Honda's shaft-drive custom four. A two-range gearbox gives ten speeds, and the shaft needs its own oil.",
+ "focus": [
+  [
+   "Inline four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Dual range",
+   "Check shifter"
+  ],
+  [
+   "Cam chain",
+   "Check tensioner"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "CB900C"
+}

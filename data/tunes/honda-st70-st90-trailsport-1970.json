@@ -1,0 +1,64 @@
+{
+ "id": "honda-st70-st90-trailsport-1970",
+ "make": "Honda",
+ "model": "ST70 / ST90 Trailsport",
+ "name": "Honda ST70 / ST90 (Dax)",
+ "years": [
+  1970,
+  1980
+ ],
+ "match": [
+  "st70",
+  "st90",
+  "st 70",
+  "st 90",
+  "trailsport",
+  "dax",
+  "honda dax"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "72 or 89 cc air-cooled overhead-cam single, three- or four-speed",
+ "intro": "Honda's Dax. A pressed-steel T-frame, removable bars and a small horizontal single.",
+ "focus": [
+  [
+   "Small single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Frame",
+   "Check rust"
+  ],
+  [
+   "Six-volt",
+   "Check charging"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Honda Trail CT forum",
+   "url": "https://www.tapatalk.com/groups/hondatrailcts/",
+   "what": "Owner forum for the CT90, CT110 and other Honda trail bikes."
+  }
+ ],
+ "heroName": "DAX"
+}

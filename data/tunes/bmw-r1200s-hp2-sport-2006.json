@@ -1,0 +1,62 @@
+{
+ "id": "bmw-r1200s-hp2-sport-2006",
+ "make": "BMW",
+ "model": "R1200S / HP2 Sport",
+ "name": "BMW R1200S / HP2 Sport",
+ "years": [
+  2006,
+  2010
+ ],
+ "match": [
+  "r1200s",
+  "r 1200 s",
+  "hp2 sport",
+  "hp2s",
+  "r1200s sport"
+ ],
+ "style": "sport",
+ "drive": "shaft",
+ "engine": "1170 cc air/oil-cooled boxer twin, fuel injected, shaft drive",
+ "intro": "BMW's sporty boxers. The HP2 Sport has DOHC heads and lots of carbon, so parts are costly.",
+ "focus": [
+  [
+   "Boxer twin",
+   "Air/oil-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Final drive",
+   "Check play"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "BMW has issued several recalls across these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BMW MOA forum",
+   "url": "https://forums.bmwmoa.org/",
+   "what": "BMW Motorcycle Owners of America forum."
+  }
+ ],
+ "silhouette": "bmw-r1200s-hp2-sport-2006",
+ "areas": [],
+ "heroName": "R1200S"
+}

@@ -1,0 +1,62 @@
+{
+ "id": "suzuki-gr650-tempter-1983",
+ "make": "Suzuki",
+ "model": "GR650 Tempter",
+ "name": "Suzuki GR650 Tempter",
+ "years": [
+  1983,
+  1983
+ ],
+ "match": [
+  "gr650",
+  "tempter",
+  "gr 650",
+  "gr650 tempter",
+  "gr650x"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "651 cc air-cooled DOHC parallel twin, two carbs, two-mass flywheel",
+ "intro": "Suzuki's one-year 650 twin for the US. A dual-mass flywheel and two carbs, with some parts hard to find.",
+ "focus": [
+  [
+   "DOHC twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Sync them"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The GS Resources forum",
+   "url": "https://www.thegsresources.com/_forum/",
+   "what": "Owner forum for Suzuki GS fours and twins."
+  }
+ ],
+ "silhouette": "suzuki-gr650-tempter-1983",
+ "areas": [],
+ "heroName": "GR650"
+}

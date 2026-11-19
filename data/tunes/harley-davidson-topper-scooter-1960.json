@@ -1,0 +1,66 @@
+{
+ "id": "harley-davidson-topper-scooter-1960",
+ "make": "Harley-Davidson",
+ "model": "Topper scooter",
+ "name": "Harley-Davidson Topper",
+ "years": [
+  1960,
+  1965
+ ],
+ "match": [
+  "topper",
+  "ah topper",
+  "au topper",
+  "harley topper",
+  "topper scooter"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "165 cc air-cooled two-stroke single, premix, belt automatic, pull start",
+ "intro": "Harley's only scooter. A two-stroke under a fiberglass body, with a belt automatic and a pull starter.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Belt drive",
+   "Inspect"
+  ],
+  [
+   "Pull start",
+   "Check rope"
+  ],
+  [
+   "Body",
+   "Fiberglass"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "TOPPER"
+}

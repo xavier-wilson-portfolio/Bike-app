@@ -1,0 +1,63 @@
+{
+ "id": "kawasaki-eliminator-600-900-zl-1985",
+ "make": "Kawasaki",
+ "model": "Eliminator 600 / 900 (ZL)",
+ "name": "Kawasaki Eliminator 600 / 900 (ZL)",
+ "years": [
+  1985,
+  1997
+ ],
+ "match": [
+  "zl600",
+  "zl900",
+  "zl1000",
+  "eliminator 600",
+  "eliminator 900",
+  "eliminator 1000",
+  "zl 600",
+  "zl 900"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "592 to 997 cc liquid-cooled inline four, four carbs, shaft drive",
+ "intro": "Kawasaki's dragster-styled fours. A sport engine in a cruiser frame, with shaft drive.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KawiForums",
+   "url": "https://www.kawiforums.com/",
+   "what": "Owner forum for Kawasaki motorcycles."
+  }
+ ],
+ "heroName": "ELIMINATOR"
+}

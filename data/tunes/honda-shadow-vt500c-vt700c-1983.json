@@ -1,0 +1,72 @@
+{
+ "id": "honda-shadow-vt500c-vt700c-1983",
+ "make": "Honda",
+ "model": "Shadow VT500C / VT700C",
+ "name": "Honda Shadow VT500C / VT700C",
+ "years": [
+  1983,
+  1987
+ ],
+ "match": [
+  "vt500c",
+  "vt700c",
+  "shadow 500",
+  "shadow 700",
+  "vt 700c",
+  "vt 500c",
+  "shadow vt700",
+  "shadow vt500"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "491 or 694 cc liquid-cooled V-twin, two carbs, shaft drive",
+ "intro": "The first Honda Shadows. Liquid-cooled V-twins with shaft drive and a lot of chrome.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Shadow Riders",
+   "url": "https://www.shadowriders.com/",
+   "what": "Owner forum for Honda Shadows and other Honda cruisers."
+  }
+ ],
+ "silhouette": "honda-shadow-vt500c-vt700c-1983",
+ "areas": [],
+ "heroName": "SHADOW",
+ "hero": {
+  "src": "img/hero/honda-shadow-vt500c-vt700c-1983.jpg",
+  "artist": "Wilfredor",
+  "page": "https://commons.wikimedia.org/wiki/File:Green_Honda_Shadow_parked_at_the_kerb,_Vieux-Qu%C3%A9bec.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

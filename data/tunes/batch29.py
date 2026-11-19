@@ -8,7 +8,7 @@ ADVR = dict(name="ADVrider", url="https://www.advrider.com/f/", what="Large adve
 DESMO = step("X-DUC-01", "H", "H-003", "Check the timing belts and desmo valve clearances", "Replace the cam timing belts on schedule, by age as well as miles, and check the desmo opening and closing clearances. Old belts can snap and wreck the engine.", "Ducati belt-drive twins need belts changed on time even if the bike sat.", "Ducati service practice", skill="Advanced", hours=4.0)
 
 B29.append(dict(id="triumph-trident-660-2021", make="Triumph", model="Trident 660", name="Triumph Trident 660", years=[2021, 2026],
-  match=["trident 660", "trident660", "tiger sport 660", "triumph trident 2021"], style="standard", drive="chain",
+  match=["trident 660", "trident660", "triumph trident 2021"], style="standard", drive="chain",
   engine="660 cc liquid-cooled inline triple, fuel injected",
   intro="Triumph's middleweight triple. Every 2022-2024 bike is in a MAP sensor hose recall.",
   focus=[["660 cc triple", "Liquid-cooled"], ["Fuel injected", "Ride-by-wire"], ["MAP hose recall", "2022-2024"], ["Chain drive", "Slack and lube"], ["Fork caps", "2023 recall"]],
@@ -67,7 +67,7 @@ B29.append(dict(id="ducati-900ss-750ss-1991", make="Ducati", model="900SS / 750S
   recalls=[], recallNote=VIN, known=[], forums=[DMS]))
 
 B29.append(dict(id="ducati-panigale-v2-959-2016", make="Ducati", model="Panigale 959 / V2", name="Ducati Panigale 959 / V2", years=[2016, 2026],
-  match=["panigale v2", "panigale 959", "959", "959 panigale", "panigale 899", "899", "v2 panigale"], style="sport", drive="chain",
+  match=["panigale v2", "panigale 959", "959", "959 panigale", "v2 panigale"], style="sport", drive="chain",
   engine="955 cc liquid-cooled Superquadro L-twin, fuel injected",
   intro="Ducati's middleweight superbike. A few small recalls, mostly lighting and brakes.",
   focus=[["955 cc L-twin", "Superquadro"], ["Fuel injected", "Ride-by-wire"], ["Recalls", "Some years"], ["Valves", "Desmo service"], ["Chain drive", "Slack and lube"]],

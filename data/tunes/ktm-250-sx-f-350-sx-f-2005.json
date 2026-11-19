@@ -1,0 +1,63 @@
+{
+ "id": "ktm-250-sx-f-350-sx-f-2005",
+ "make": "KTM",
+ "model": "250 SX-F / 350 SX-F",
+ "name": "KTM 250 SX-F / 350 SX-F",
+ "years": [
+  2005,
+  2026
+ ],
+ "match": [
+  "250 sx-f",
+  "350 sx-f",
+  "250 sxf",
+  "350 sxf",
+  "250 xc-f",
+  "350 xc-f",
+  "250 xcf",
+  "350 xcf"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 or 349 cc liquid-cooled four-stroke single, carb then fuel injection",
+ "intro": "KTM's small-bore motocross four-strokes. They rev very high and need valve checks measured in hours.",
+ "focus": [
+  [
+   "Race single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "Valves",
+   "Check often"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Hours",
+   "Log them"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a KTM dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "silhouette": "ktm-250-sx-f-350-sx-f-2005",
+ "areas": [],
+ "heroName": "350 SX-F"
+}

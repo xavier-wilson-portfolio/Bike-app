@@ -1,0 +1,77 @@
+{
+ "id": "ducati-panigale-899-1199-1299-2012",
+ "make": "Ducati",
+ "model": "Panigale 899 / 1199 / 1299",
+ "name": "Ducati Panigale 899 / 1199 / 1299",
+ "years": [
+  2012,
+  2018
+ ],
+ "match": [
+  "panigale 1199",
+  "panigale 1299",
+  "1199",
+  "1299",
+  "panigale 899",
+  "899",
+  "1199 panigale",
+  "1299 panigale",
+  "panigale r"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "898 to 1285 cc liquid-cooled Superquadro V-twin, fuel injected",
+ "intro": "The Superquadro Panigales. A frameless design, chain-driven cams and a lot of electronics.",
+ "focus": [
+  [
+   "Superquadro twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Desmo valves",
+   "Shim check"
+  ],
+  [
+   "Electronics",
+   "Scan for codes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Desmo valve service needs both opening and closing shims checked. Follow the interval in the manual; it is not a job to skip."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Ducati has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "silhouette": "ducati-panigale-899-1199-1299-2012",
+ "areas": [],
+ "heroName": "PANIGALE",
+ "hero": {
+  "src": "img/hero/ducati-panigale-899-1199-1299-2012.jpg",
+  "artist": "Klaus Nahr",
+  "page": "https://commons.wikimedia.org/wiki/File:Ducati_1199.jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
+}

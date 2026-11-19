@@ -1,0 +1,72 @@
+{
+ "id": "yamaha-niken-2019",
+ "make": "Yamaha",
+ "model": "Niken",
+ "name": "Yamaha Niken",
+ "years": [
+  2019,
+  2021
+ ],
+ "match": [
+  "niken",
+  "niken gt",
+  "yamaha niken",
+  "mxt850"
+ ],
+ "style": "touring",
+ "drive": "chain",
+ "engine": "847 cc liquid-cooled triple, fuel injected, two leaning front wheels",
+ "intro": "Yamaha's three-wheeler that leans. The MT-09 triple up top, with a double front end that has many bearings to check.",
+ "focus": [
+  [
+   "Triple",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Front end",
+   "Check linkage"
+  ],
+  [
+   "Tires",
+   "Three to check"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "L": [
+   "The leaning front end has its own bearings and bushings. Check the linkage for play before you trust the steering."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "silhouette": "yamaha-niken-2019",
+ "areas": [],
+ "heroName": "NIKEN",
+ "hero": {
+  "src": "img/hero/yamaha-niken-2019.jpg",
+  "artist": "さぱしあ",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_Niken_GT_Tokyo_Motorcycle_Show_2019.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

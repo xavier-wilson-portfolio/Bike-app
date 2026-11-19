@@ -1,0 +1,75 @@
+{
+ "id": "moto-guzzi-v11-sport-v11-le-mans-1999",
+ "make": "Moto Guzzi",
+ "model": "V11 Sport / V11 Le Mans",
+ "name": "Moto Guzzi V11 Sport / V11 Le Mans",
+ "years": [
+  1999,
+  2005
+ ],
+ "match": [
+  "v11 sport",
+  "v11 le mans",
+  "v11",
+  "v11 ballabio",
+  "v11 rosso mandello",
+  "v11 cafe sport",
+  "v11 coppa italia"
+ ],
+ "style": "sport",
+ "drive": "shaft",
+ "engine": "1064 cc air-cooled 90-degree V-twin, fuel injected, six-speed, shaft drive",
+ "intro": "Guzzi's sporty V11 range. Fuel injection, a six-speed box and a shaft that needs regular oil changes.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Three oils",
+   "Change all"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "K": [
+   "Guzzi big twins use a car-type dry clutch and a separate gearbox and final drive. Change all three oils, not just the engine oil."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moto Guzzi National Owners Club",
+   "url": "https://www.mgnoc.org/",
+   "what": "US owner club for Moto Guzzi."
+  }
+ ],
+ "silhouette": "moto-guzzi-v11-sport-v11-le-mans-1999",
+ "areas": [],
+ "heroName": "V11",
+ "hero": {
+  "src": "img/hero/moto-guzzi-v11-sport-v11-le-mans-1999.jpg",
+  "artist": "Franken-Guzzista",
+  "page": "https://commons.wikimedia.org/wiki/File:Moto_Guzzi_V11_Sport_Rosso_Mandello.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

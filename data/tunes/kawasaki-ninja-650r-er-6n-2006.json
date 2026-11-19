@@ -1,0 +1,65 @@
+{
+ "id": "kawasaki-ninja-650r-er-6n-2006",
+ "make": "Kawasaki",
+ "model": "Ninja 650R / ER-6n",
+ "name": "Kawasaki Ninja 650R / ER-6n",
+ "years": [
+  2006,
+  2016
+ ],
+ "match": [
+  "ninja 650r",
+  "er-6n",
+  "er6n",
+  "ex650a",
+  "er-6f",
+  "650r",
+  "ninja 650 2012",
+  "ex650c"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "649 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "Kawasaki's middleweight twin before the 2017 redesign. Fuel injected, simple and very common.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KawiForums",
+   "url": "https://www.kawiforums.com/",
+   "what": "Owner forum for Kawasaki motorcycles."
+  }
+ ],
+ "silhouette": "kawasaki-ninja-650r-er-6n-2006",
+ "areas": [],
+ "heroName": "NINJA 650R"
+}

@@ -1,0 +1,61 @@
+{
+ "id": "rickman-metisse-1960",
+ "make": "Rickman",
+ "model": "Metisse",
+ "name": "Rickman Metisse",
+ "years": [
+  1960,
+  1975
+ ],
+ "match": [
+  "metisse",
+  "rickman",
+  "rickman metisse",
+  "metisse mk3",
+  "rickman cr",
+  "rickman enfield"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "Engines from Triumph, BSA, Matchless, Weslake or Japanese makers in a nickel-plated Rickman frame",
+ "intro": "The Rickman brothers' frame kits. Check what engine yours has, then follow that engine's service notes.",
+ "focus": [
+  [
+   "Engine",
+   "Check donor"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Frame",
+   "Check welds"
+  ],
+  [
+   "Fiberglass",
+   "Check cracks"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "METISSE"
+}

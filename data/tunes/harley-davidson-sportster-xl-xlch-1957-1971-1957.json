@@ -1,0 +1,72 @@
+{
+ "id": "harley-davidson-sportster-xl-xlch-1957-1971-1957",
+ "make": "Harley-Davidson",
+ "model": "Sportster XL / XLCH (1957-1971)",
+ "name": "Harley-Davidson Sportster (1957-1971)",
+ "years": [
+  1957,
+  1971
+ ],
+ "match": [
+  "xlch",
+  "xlh",
+  "xl",
+  "early sportster",
+  "sportster 1957",
+  "xl sportster",
+  "xlch 900",
+  "ironhead 1960s"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "883 cubic centimeter air-cooled OHV V-twin, carb, magneto on many XLCH",
+ "intro": "The first Ironhead Sportsters. Kick start on the XLCH, magneto ignition and a lot of hand-fitting.",
+ "focus": [
+  [
+   "Ironhead twin",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Magneto",
+   "Check spark"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XLForum",
+   "url": "https://www.xlforum.net/",
+   "what": "Owner forum for Harley Sportsters."
+  }
+ ],
+ "silhouette": "harley-davidson-sportster-xl-xlch-1957-1971-1957",
+ "areas": [],
+ "heroName": "SPORTSTER",
+ "hero": {
+  "src": "img/hero/harley-davidson-sportster-xl-xlch-1957-1971-1957.jpg",
+  "artist": "Jeff Bowles",
+  "page": "https://commons.wikimedia.org/wiki/File:1957_Harley-Davidson_XL_Sportster.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

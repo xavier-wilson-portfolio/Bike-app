@@ -1,0 +1,71 @@
+{
+ "id": "harley-davidson-cvo-limited-ultra-2006",
+ "make": "Harley-Davidson",
+ "model": "CVO Limited / Ultra",
+ "name": "Harley-Davidson CVO Limited / Ultra",
+ "years": [
+  2006,
+  2026
+ ],
+ "match": [
+  "cvo limited",
+  "cvo ultra",
+  "flhtkse",
+  "flhtcuse",
+  "cvo ultra classic",
+  "cvo road glide ultra",
+  "cvo electra glide"
+ ],
+ "style": "touring",
+ "drive": "belt",
+ "engine": "103 to 121 cubic inch V-twin, fuel injected, belt drive",
+ "intro": "Harley's factory custom tourers. Bigger engines, lots of electronics and special paint you do not want to scratch.",
+ "focus": [
+  [
+   "Big twin",
+   "Air/oil/liquid"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Electronics",
+   "Scan for codes"
+  ],
+  [
+   "Belt",
+   "Check tension"
+  ],
+  [
+   "Paint",
+   "Protect it"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Harley-Davidson has issued several recalls that touch these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "HDForums",
+   "url": "https://www.hdforums.com/",
+   "what": "Large owner forum for all Harley-Davidson models."
+  }
+ ],
+ "silhouette": "harley-davidson-cvo-limited-ultra-2006",
+ "areas": [],
+ "heroName": "CVO",
+ "hero": {
+  "src": "img/hero/harley-davidson-cvo-limited-ultra-2006.jpg",
+  "artist": "Matti Blume",
+  "page": "https://commons.wikimedia.org/wiki/File:Pfingsttreffen_Puetnitz_2018,_Ribnitz-Damgarten_(1X7A2510).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

@@ -1,0 +1,68 @@
+{
+ "id": "ducati-750-sport-750ss-bevel-1972",
+ "make": "Ducati",
+ "model": "750 Sport / 750SS (bevel)",
+ "name": "Ducati 750 Sport / 750SS (bevel)",
+ "years": [
+  1972,
+  1974
+ ],
+ "match": [
+  "750 sport",
+  "750ss bevel",
+  "750 super sport",
+  "750 gt",
+  "750gt",
+  "round case",
+  "bevel 750"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "748 cc air-cooled bevel-drive V-twin, desmo on the SS, two carbs",
+ "intro": "Ducati's round-case bevel twins. Very valuable now, with bevel-drive cams and parts best sourced from specialists.",
+ "focus": [
+  [
+   "Bevel twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Bevel drive",
+   "Check backlash"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "The bevel-drive cams are set with shims and need patience. Check the bevel gear backlash and the desmo shims before you run it hard."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "silhouette": "ducati-750-sport-750ss-bevel-1972",
+ "areas": [],
+ "heroName": "750 SPORT"
+}

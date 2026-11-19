@@ -1,0 +1,71 @@
+{
+ "id": "honda-xr350r-xr500r-1981",
+ "make": "Honda",
+ "model": "XR350R / XR500R",
+ "name": "Honda XR350R / XR500R",
+ "years": [
+  1981,
+  1985
+ ],
+ "match": [
+  "xr350r",
+  "xr500r",
+  "xr350",
+  "xr500",
+  "xr 350",
+  "xr 500",
+  "xr 500r"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "339 or 497 cc air-cooled four-valve single, carb, kick start",
+ "intro": "Honda's big early-80s XRs. Kick start only, with a decompressor and old suspension worth rebuilding.",
+ "focus": [
+  [
+   "Big single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Starting",
+   "Decompressor"
+  ],
+  [
+   "Suspension",
+   "Rebuild it"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XR's Only",
+   "url": "https://www.xrsonly.com/",
+   "what": "Parts and know-how for Honda XR dirt bikes."
+  }
+ ],
+ "silhouette": "honda-xr350r-xr500r-1981",
+ "areas": [],
+ "heroName": "XR500R",
+ "hero": {
+  "src": "img/hero/honda-xr350r-xr500r-1981.jpg",
+  "artist": "Sssjej",
+  "page": "https://commons.wikimedia.org/wiki/File:Offroad1_Honda_XR500R_1982.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

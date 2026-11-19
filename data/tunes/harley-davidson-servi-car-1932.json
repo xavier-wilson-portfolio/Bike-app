@@ -1,0 +1,67 @@
+{
+ "id": "harley-davidson-servi-car-1932",
+ "make": "Harley-Davidson",
+ "model": "Servi-Car",
+ "name": "Harley-Davidson Servi-Car",
+ "years": [
+  1932,
+  1973
+ ],
+ "match": [
+  "servi-car",
+  "servicar",
+  "servi car",
+  "ge",
+  "gel",
+  "g servi-car"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "45 cubic inch air-cooled side-valve V-twin, three wheels, rear axle",
+ "intro": "Harley's three-wheel utility trike. The 45 flathead, a car-type rear axle and very long production.",
+ "focus": [
+  [
+   "Flathead twin",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Rear axle",
+   "Check diff"
+  ],
+  [
+   "Brakes",
+   "Drums"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "E": [
+   "It is a flathead. The valves sit beside the cylinder, so set the tappets with the engine cold and check the valve guides for wear."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "silhouette": "harley-davidson-servi-car-1932",
+ "areas": [],
+ "heroName": "SERVI-CAR"
+}

@@ -1,0 +1,73 @@
+{
+ "id": "suzuki-xn85-turbo-1983",
+ "make": "Suzuki",
+ "model": "XN85 Turbo",
+ "name": "Suzuki XN85 Turbo",
+ "years": [
+  1983,
+  1983
+ ],
+ "match": [
+  "xn85",
+  "xn 85",
+  "xn85 turbo",
+  "suzuki turbo",
+  "xn85d"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "673 cc air-cooled inline four, turbocharged, fuel injected",
+ "intro": "Suzuki's one-year turbo bike. Fuel injection, a turbo and parts that are now very rare.",
+ "focus": [
+  [
+   "Inline four",
+   "Air-cooled"
+  ],
+  [
+   "Turbo",
+   "Check bearings"
+  ],
+  [
+   "Fuel injected",
+   "Check system"
+  ],
+  [
+   "Oil lines",
+   "Check turbo feed"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "The turbo is oiled by the engine. Check the feed and return lines and change the oil before the first start."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The GS Resources forum",
+   "url": "https://www.thegsresources.com/_forum/",
+   "what": "Owner forum for Suzuki GS fours and twins."
+  }
+ ],
+ "silhouette": "suzuki-xn85-turbo-1983",
+ "areas": [],
+ "heroName": "XN85",
+ "hero": {
+  "src": "img/hero/suzuki-xn85-turbo-1983.jpg",
+  "artist": "Rikita",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_XN85_Turbo.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

@@ -1,0 +1,73 @@
+{
+ "id": "ducati-paso-750-906-907-1986",
+ "make": "Ducati",
+ "model": "Paso 750 / 906 / 907",
+ "name": "Ducati Paso 750 / 906 / 907",
+ "years": [
+  1986,
+  1993
+ ],
+ "match": [
+  "paso",
+  "paso 750",
+  "paso 906",
+  "907 ie",
+  "907ie",
+  "paso 907",
+  "906 paso"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "748 or 904 cc air/oil or liquid-cooled desmo V-twin, carb then fuel injection on the 907",
+ "intro": "Ducati's fully faired Paso. Bodywork hides everything, and the 907 ie brought fuel injection.",
+ "focus": [
+  [
+   "Desmo twin",
+   "Air or liquid"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "Belts",
+   "Change them"
+  ],
+  [
+   "Desmo valves",
+   "Shim check"
+  ],
+  [
+   "Bodywork",
+   "Many panels"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Desmo valve service needs both opening and closing shims checked. Follow the interval in the manual; it is not a job to skip."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "silhouette": "ducati-paso-750-906-907-1986",
+ "areas": [],
+ "heroName": "PASO",
+ "hero": {
+  "src": "img/hero/ducati-paso-750-906-907-1986.jpg",
+  "artist": "LarRan at English Wikipedia",
+  "page": "https://commons.wikimedia.org/wiki/File:Ducati_906_Paso_1989_pic_1.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
+}

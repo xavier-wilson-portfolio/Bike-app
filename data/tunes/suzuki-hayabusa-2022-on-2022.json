@@ -1,0 +1,61 @@
+{
+ "id": "suzuki-hayabusa-2022-on-2022",
+ "make": "Suzuki",
+ "model": "Hayabusa (2022 on)",
+ "name": "Suzuki Hayabusa (2022 on)",
+ "years": [
+  2022,
+  2026
+ ],
+ "match": [
+  "hayabusa",
+  "busa",
+  "gsx1300r",
+  "hayabusa 2022",
+  "gsx 1300 r",
+  "gen 3 busa"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "1340 cc liquid-cooled inline four, fuel injected, ride-by-wire",
+ "intro": "The third-generation Hayabusa. The same big four, updated with an IMU and a full set of rider aids.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Electronics",
+   "Scan for codes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "GSXR.com",
+   "url": "https://www.gsxr.com/",
+   "what": "Owner forum for Suzuki GSX-R models, including the early oil-cooled bikes."
+  }
+ ],
+ "heroName": "HAYABUSA"
+}

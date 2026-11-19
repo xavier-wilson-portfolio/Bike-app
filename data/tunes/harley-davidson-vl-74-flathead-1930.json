@@ -1,0 +1,69 @@
+{
+ "id": "harley-davidson-vl-74-flathead-1930",
+ "make": "Harley-Davidson",
+ "model": "VL 74 Flathead",
+ "name": "Harley-Davidson VL 74 Flathead",
+ "years": [
+  1930,
+  1936
+ ],
+ "match": [
+  "vl",
+  "vlh",
+  "vld",
+  "vl 74",
+  "74 flathead",
+  "v series",
+  "vlh 80"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "74 or 80 cubic inch air-cooled side-valve V-twin, total-loss oiling",
+ "intro": "The big Harley flathead of the early 30s. Total-loss oiling, hand shift and a lot of period parts to source.",
+ "focus": [
+  [
+   "Flathead twin",
+   "Air-cooled"
+  ],
+  [
+   "Oiling",
+   "Total loss"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Set tappets"
+  ],
+  [
+   "Hand shift",
+   "Check linkage"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "E": [
+   "It is a flathead. The valves sit beside the cylinder, so set the tappets with the engine cold and check the valve guides for wear."
+  ],
+  "H": [
+   "Check whether yours has a total-loss or a recirculating oil system before you fill it, and know which one you are running."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "VL 74"
+}

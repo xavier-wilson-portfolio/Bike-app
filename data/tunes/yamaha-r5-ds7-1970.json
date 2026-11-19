@@ -1,0 +1,79 @@
+{
+ "id": "yamaha-r5-ds7-1970",
+ "make": "Yamaha",
+ "model": "R5 / DS7",
+ "name": "Yamaha R5 / DS7",
+ "years": [
+  1970,
+  1972
+ ],
+ "match": [
+  "r5",
+  "ds7",
+  "r5c",
+  "r5b",
+  "r5a",
+  "ds6",
+  "ds6c",
+  "r 5"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "247 or 347 cc air-cooled two-stroke twin, two carbs, Autolube oil injection",
+ "intro": "The two-stroke twins just before the RD. Light and quick, with points and Autolube.",
+ "focus": [
+  [
+   "Two-stroke twin",
+   "Oil injection"
+  ],
+  [
+   "Two carbs",
+   "Sync them"
+  ],
+  [
+   "Autolube",
+   "Check pump"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It has oil injection, not premix. Keep the oil tank filled with two-stroke oil and check the pump line for cracks.",
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "silhouette": "yamaha-r5-ds7-1970",
+ "areas": [],
+ "heroName": "R5",
+ "hero": {
+  "src": "img/hero/yamaha-r5-ds7-1970.jpg",
+  "artist": "SG2012",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_R5_350cc_(1972).jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

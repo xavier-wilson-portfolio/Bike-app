@@ -1,0 +1,67 @@
+{
+ "id": "ducati-streetfighter-848-1098-2009",
+ "make": "Ducati",
+ "model": "Streetfighter 848 / 1098",
+ "name": "Ducati Streetfighter 848 / 1098",
+ "years": [
+  2009,
+  2015
+ ],
+ "match": [
+  "streetfighter 848",
+  "streetfighter 1098",
+  "streetfighter s",
+  "sf848",
+  "sf1098",
+  "streetfighter"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "849 or 1099 cc liquid-cooled Testastretta V-twin, fuel injected",
+ "intro": "The naked superbike Ducatis. Superbike engines, belt cams and a dry clutch on the 1098.",
+ "focus": [
+  [
+   "Desmo twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Belts",
+   "Change them"
+  ],
+  [
+   "Desmo valves",
+   "Shim check"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Desmo valve service needs both opening and closing shims checked. Follow the interval in the manual; it is not a job to skip."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Ducati has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "silhouette": "ducati-streetfighter-848-1098-2009",
+ "areas": [],
+ "heroName": "STREETFIGHTER"
+}

@@ -1,0 +1,70 @@
+{
+ "id": "moto-guzzi-v9-roamer-bobber-2016",
+ "make": "Moto Guzzi",
+ "model": "V9 Roamer / Bobber",
+ "name": "Moto Guzzi V9 Roamer / Bobber",
+ "years": [
+  2016,
+  2026
+ ],
+ "match": [
+  "v9",
+  "v9 roamer",
+  "v9 bobber",
+  "v9 bobber sport",
+  "roamer",
+  "v9 special"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "853 cc air-cooled 90-degree V-twin, fuel injected, shaft drive",
+ "intro": "Guzzi's mid-size cruisers. The 850 small-block twin with fuel injection and shaft drive.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Clutch",
+   "Check it"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moto Guzzi National Owners Club",
+   "url": "https://www.mgnoc.org/",
+   "what": "US owner club for Moto Guzzi."
+  }
+ ],
+ "silhouette": "moto-guzzi-v9-roamer-bobber-2016",
+ "areas": [],
+ "heroName": "V9",
+ "hero": {
+  "src": "img/hero/moto-guzzi-v9-roamer-bobber-2016.jpg",
+  "artist": "Auge=mit",
+  "page": "https://commons.wikimedia.org/wiki/File:Moto_Guzzi_V9_Bobber_left_noBG.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

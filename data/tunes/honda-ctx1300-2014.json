@@ -1,0 +1,61 @@
+{
+ "id": "honda-ctx1300-2014",
+ "make": "Honda",
+ "model": "CTX1300",
+ "name": "Honda CTX1300",
+ "years": [
+  2014,
+  2016
+ ],
+ "match": [
+  "ctx1300",
+  "ctx 1300",
+  "ctx1300d",
+  "ctx1300a"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "engine": "1261 cc liquid-cooled V4, fuel injected, shaft drive",
+ "intro": "Honda's V4 bagger. The ST1300 engine tuned for torque, with linked brakes and a shaft.",
+ "focus": [
+  [
+   "V4",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Brakes",
+   "Linked system"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Shadow Riders",
+   "url": "https://www.shadowriders.com/",
+   "what": "Owner forum for Honda Shadows and other Honda cruisers."
+  }
+ ],
+ "silhouette": "honda-ctx1300-2014",
+ "areas": [],
+ "heroName": "CTX1300"
+}

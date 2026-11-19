@@ -1,0 +1,60 @@
+{
+ "id": "moto-morini-x-cape-650-2023",
+ "make": "Moto Morini",
+ "model": "X-Cape 650",
+ "name": "Moto Morini X-Cape 650",
+ "years": [
+  2023,
+  2026
+ ],
+ "match": [
+  "x-cape",
+  "x cape 650",
+  "xcape",
+  "x-cape 650",
+  "xcape 650"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "649 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "Morini's middleweight adventure bike. A Chinese-built twin, a TFT dash and parts that depend on the importer.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Parts",
+   "Check supply"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "X-CAPE"
+}

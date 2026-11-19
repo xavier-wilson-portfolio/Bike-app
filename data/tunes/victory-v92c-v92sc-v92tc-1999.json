@@ -1,0 +1,63 @@
+{
+ "id": "victory-v92c-v92sc-v92tc-1999",
+ "make": "Victory",
+ "model": "V92C / V92SC / V92TC",
+ "name": "Victory V92C / V92SC / V92TC",
+ "years": [
+  1999,
+  2003
+ ],
+ "match": [
+  "v92c",
+  "v92sc",
+  "v92tc",
+  "v92",
+  "sport cruiser",
+  "touring cruiser",
+  "v92 classic",
+  "v92c deluxe"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "1507 cc air/oil-cooled SOHC V-twin, fuel injected, belt drive",
+ "intro": "The first Victory cruisers. A Freedom-predecessor V-twin with fuel injection and belt drive.",
+ "focus": [
+  [
+   "V-twin",
+   "Air/oil-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Charging",
+   "Check stator"
+  ],
+  [
+   "Belt",
+   "Check tension"
+  ],
+  [
+   "Parts",
+   "Check supply"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Victory Motorcycle Club forums",
+   "url": "https://www.victorymotorcycleclub.com/",
+   "what": "Owner club for Victory motorcycles."
+  }
+ ],
+ "heroName": "V92C"
+}

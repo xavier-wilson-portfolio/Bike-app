@@ -1,0 +1,63 @@
+{
+ "id": "apollo-agb-37-db-x18-dirt-bike-2010",
+ "make": "Apollo",
+ "model": "AGB-37 / DB-X18 dirt bike",
+ "name": "Apollo dirt bikes",
+ "years": [
+  2010,
+  2026
+ ],
+ "match": [
+  "apollo",
+  "agb-37",
+  "db-x18",
+  "dbx18",
+  "agb37",
+  "apollo 125",
+  "db-x19",
+  "rfz"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "107 to 250 cc air-cooled four-stroke single, carb",
+ "intro": "Apollo's budget pit and dirt bikes. Horizontal or upright Chinese singles with very common parts.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Wiring",
+   "Check connectors"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Many of these were sold under several brand names and may not show up in the NHTSA search. Check with the seller or importer for open recalls.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "APOLLO"
+}

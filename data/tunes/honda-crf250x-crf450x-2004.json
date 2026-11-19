@@ -1,0 +1,61 @@
+{
+ "id": "honda-crf250x-crf450x-2004",
+ "make": "Honda",
+ "model": "CRF250X / CRF450X",
+ "name": "Honda CRF250X / CRF450X",
+ "years": [
+  2004,
+  2017
+ ],
+ "match": [
+  "crf250x",
+  "crf450x",
+  "crf 250x",
+  "crf 450x",
+  "crf250 x",
+  "crf450 x"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 or 449 cc liquid-cooled four-stroke single, carb, electric start",
+ "intro": "Honda's enduro versions of the CRF racers. Electric start, wider gearing and a carb that is often re-jetted.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Check jetting"
+  ],
+  [
+   "Valves",
+   "Check often"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Honda dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "CRF450X"
+}

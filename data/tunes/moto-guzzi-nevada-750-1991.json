@@ -1,0 +1,59 @@
+{
+ "id": "moto-guzzi-nevada-750-1991",
+ "make": "Moto Guzzi",
+ "model": "Nevada 750",
+ "name": "Moto Guzzi Nevada 750",
+ "years": [
+  1991,
+  2015
+ ],
+ "match": [
+  "nevada",
+  "nevada 750",
+  "nevada classic",
+  "nevada club",
+  "nevada 350",
+  "nevada aquila nera"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "744 cc air-cooled 90-degree V-twin, carbs then fuel injection, shaft drive",
+ "intro": "Guzzi's small-block cruiser. Simple, light for a cruiser, and shaft drive.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel",
+   "Carbs or EFI"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Clutch",
+   "Check it"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moto Guzzi National Owners Club",
+   "url": "https://www.mgnoc.org/",
+   "what": "US owner club for Moto Guzzi."
+  }
+ ],
+ "heroName": "NEVADA"
+}

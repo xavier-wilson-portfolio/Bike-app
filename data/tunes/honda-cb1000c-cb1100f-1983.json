@@ -1,0 +1,70 @@
+{
+ "id": "honda-cb1000c-cb1100f-1983",
+ "make": "Honda",
+ "model": "CB1000C / CB1100F",
+ "name": "Honda CB1000C / CB1100F",
+ "years": [
+  1983,
+  1983
+ ],
+ "match": [
+  "cb1000c",
+  "cb1100f",
+  "cb 1100f",
+  "cb 1000c",
+  "cb1100f super sport",
+  "cb1000 custom"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "973 or 1062 cc air-cooled DOHC inline four, four carbs",
+ "intro": "Honda's one-year big fours of 1983. The CB1100F is the last of the air-cooled DOHC sport fours; the CB1000C is the custom.",
+ "focus": [
+  [
+   "Inline four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Cam chain",
+   "Check tensioner"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Final drive",
+   "Chain or shaft"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "silhouette": "honda-cb1000c-cb1100f-1983",
+ "areas": [],
+ "heroName": "CB1100F",
+ "hero": {
+  "src": "img/hero/honda-cb1000c-cb1100f-1983.jpg",
+  "artist": "Petkr",
+  "page": "https://commons.wikimedia.org/wiki/File:CB1100F.JPG",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
+}

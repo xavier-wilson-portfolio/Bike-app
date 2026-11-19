@@ -1,0 +1,64 @@
+{
+ "id": "triumph-terrier-t15-1953",
+ "make": "Triumph",
+ "model": "Terrier T15",
+ "name": "Triumph Terrier T15",
+ "years": [
+  1953,
+  1956
+ ],
+ "match": [
+  "terrier",
+  "t15",
+  "t 15",
+  "triumph terrier",
+  "terrier 150"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "149 cc air-cooled OHV unit single",
+ "intro": "Triumph's first unit-construction single, the father of the Tiger Cub. Small, simple and rare now.",
+ "focus": [
+  [
+   "OHV single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Plunger rear",
+   "Check it"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "heroName": "TERRIER"
+}

@@ -1,0 +1,70 @@
+{
+ "id": "honda-nx250-nx125-1988",
+ "make": "Honda",
+ "model": "NX250 / NX125",
+ "name": "Honda NX250 / NX125",
+ "years": [
+  1988,
+  1990
+ ],
+ "match": [
+  "nx250",
+  "nx125",
+  "nx 250",
+  "nx 125",
+  "ax-1",
+  "ax1"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "124 cc air-cooled or 249 cc liquid-cooled single, carb",
+ "intro": "Honda's late-80s small dual-sports. The NX250 has a liquid-cooled four-valve engine; the NX125 is air-cooled.",
+ "focus": [
+  [
+   "Single",
+   "Air or liquid"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Cooling",
+   "Check coolant"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XR's Only",
+   "url": "https://www.xrsonly.com/",
+   "what": "Parts and know-how for Honda XR dirt bikes."
+  }
+ ],
+ "silhouette": "honda-nx250-nx125-1988",
+ "areas": [],
+ "heroName": "NX250",
+ "hero": {
+  "src": "img/hero/honda-nx250-nx125-1988.jpg",
+  "artist": "SG2012",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_AX-1_-_9842524476.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

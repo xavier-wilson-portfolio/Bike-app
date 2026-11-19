@@ -49,7 +49,7 @@ B44.append(dict(id="triumph-tr6-trophy-1956", make="Triumph", model="TR6 Trophy"
   recalls=[], recallNote=OLD, known=[], forums=[CLASSIC]))
 
 B44.append(dict(id="triumph-tiger-cub-t20-1954", make="Triumph", model="Tiger Cub (T20)", name="Triumph Tiger Cub (T20)", years=[1954, 1968],
-  match=["tiger cub", "t20", "terrier", "t20 tiger cub"], style="standard", drive="chain",
+  match=["tiger cub", "t20", "t20 tiger cub"], style="standard", drive="chain",
   engine="199 cc air-cooled single, one carb, points, six-volt",
   intro="Triumph's little 200 single. Points, six-volt electrics and a bottom end that needs care.",
   focus=[["199 cc single", "Air-cooled"], ["Carb", "Amal"], ["Points", "Gap and time"], ["Six-volt", "Weak lights"], ["Chain drive", "Slack and lube"]],

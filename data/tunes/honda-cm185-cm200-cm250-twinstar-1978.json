@@ -1,0 +1,63 @@
+{
+ "id": "honda-cm185-cm200-cm250-twinstar-1978",
+ "make": "Honda",
+ "model": "CM185 / CM200 / CM250 Twinstar",
+ "name": "Honda Twinstar",
+ "years": [
+  1978,
+  1983
+ ],
+ "match": [
+  "twinstar",
+  "cm185",
+  "cm200",
+  "cm200t",
+  "cm185t",
+  "cm250",
+  "cm250c",
+  "cm 200"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "181 to 234 cc air-cooled parallel twin, one carb",
+ "intro": "Honda's small twin of the late 70s. A simple engine with one carb and electric start.",
+ "focus": [
+  [
+   "Small twin",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Cam chain",
+   "Adjust it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "TWINSTAR"
+}

@@ -1,0 +1,68 @@
+{
+ "id": "batavus-va-hs50-moped-1976",
+ "make": "Batavus",
+ "model": "VA / HS50 moped",
+ "name": "Batavus VA / HS50",
+ "years": [
+  1976,
+  1985
+ ],
+ "match": [
+  "batavus",
+  "va",
+  "hs50",
+  "regency",
+  "starflite",
+  "batavus va",
+  "laura"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "49 cc air-cooled two-stroke single, Laura engine, premix, pedals",
+ "intro": "The Dutch mopeds with the Laura engine. Simple two-strokes, premix and a pedal start.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Clutch",
+   "Check it"
+  ],
+  [
+   "Pedals",
+   "Lube chain"
+  ],
+  [
+   "Brakes",
+   "Drums"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Moped two-strokes run premix. Mix the oil into the fuel at the ratio in the manual, usually around 50 to 1 with modern oil."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "heroName": "BATAVUS"
+}

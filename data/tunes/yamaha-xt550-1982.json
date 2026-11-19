@@ -1,0 +1,68 @@
+{
+ "id": "yamaha-xt550-1982",
+ "make": "Yamaha",
+ "model": "XT550",
+ "name": "Yamaha XT550",
+ "years": [
+  1982,
+  1983
+ ],
+ "match": [
+  "xt550",
+  "xt 550",
+  "xt550j",
+  "xt550k"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "558 cc air-cooled four-valve single, two-stage dual carb, kick start",
+ "intro": "Yamaha's early-80s big dual-sport. A two-stage carb setup and a monoshock rear.",
+ "focus": [
+  [
+   "Big single",
+   "Air-cooled"
+  ],
+  [
+   "Two-stage carb",
+   "Clean and set"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Starting",
+   "Decompressor"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Odin XT500 forum",
+   "url": "https://www.tapatalk.com/groups/odinxt500/",
+   "what": "Owner forum for XT500, TT500 and SR500 singles."
+  }
+ ],
+ "silhouette": "yamaha-xt550-1982",
+ "areas": [],
+ "heroName": "XT550",
+ "hero": {
+  "src": "img/hero/yamaha-xt550-1982.jpg",
+  "artist": "Das-tengel",
+  "page": "https://commons.wikimedia.org/wiki/File:XT550.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

@@ -1,0 +1,66 @@
+{
+ "id": "ducati-pantah-500-600-1980",
+ "make": "Ducati",
+ "model": "Pantah 500 / 600",
+ "name": "Ducati Pantah 500 / 600",
+ "years": [
+  1980,
+  1984
+ ],
+ "match": [
+  "pantah",
+  "pantah 500",
+  "pantah 600",
+  "500sl",
+  "600sl",
+  "600tl",
+  "pantah 650"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "499 to 649 cc air-cooled belt-driven desmo V-twin, two carbs",
+ "intro": "The first belt-cam Ducati twin. Two carbs, desmo heads and the engine family behind every later air-cooled Ducati.",
+ "focus": [
+  [
+   "Desmo twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Belts",
+   "Change them"
+  ],
+  [
+   "Desmo valves",
+   "Shim check"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Desmo valve service needs both opening and closing shims checked. Follow the interval in the manual; it is not a job to skip."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "heroName": "PANTAH"
+}

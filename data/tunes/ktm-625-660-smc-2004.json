@@ -1,0 +1,61 @@
+{
+ "id": "ktm-625-660-smc-2004",
+ "make": "KTM",
+ "model": "625 / 660 SMC",
+ "name": "KTM 625 / 660 SMC",
+ "years": [
+  2004,
+  2007
+ ],
+ "match": [
+  "625 smc",
+  "660 smc",
+  "smc 625",
+  "smc 660",
+  "625 sxc",
+  "660 rally"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "609 or 654 cc liquid-cooled LC4 single, carb",
+ "intro": "KTM's LC4 supermotos before the 690. A big single, a carb and a dry-sump oil system.",
+ "focus": [
+  [
+   "LC4 single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Oil",
+   "Dry sump"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "KTM has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KTM Forums",
+   "url": "https://www.ktmforums.com/",
+   "what": "Owner forum for KTM street and adventure bikes."
+  }
+ ],
+ "heroName": "625 SMC"
+}

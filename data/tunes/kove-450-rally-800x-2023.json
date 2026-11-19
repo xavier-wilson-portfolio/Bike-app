@@ -1,0 +1,62 @@
+{
+ "id": "kove-450-rally-800x-2023",
+ "make": "Kove",
+ "model": "450 Rally / 800X",
+ "name": "Kove 450 Rally / 800X",
+ "years": [
+  2023,
+  2026
+ ],
+ "match": [
+  "450 rally",
+  "800x",
+  "kove 450",
+  "kove 800x",
+  "800x pro",
+  "450 rally pro",
+  "kove"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "449 cc single or 799 cc parallel twin, liquid-cooled, fuel injected",
+ "intro": "Kove's light rally and adventure bikes. Short service intervals on the 450 and a young dealer network.",
+ "focus": [
+  [
+   "Engine",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check often"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Many of these were sold under several brand names and may not show up in the NHTSA search. Check with the seller or importer for open recalls.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "KOVE"
+}

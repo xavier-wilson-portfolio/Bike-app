@@ -1,0 +1,65 @@
+{
+ "id": "honda-c100-super-cub-50-1958",
+ "make": "Honda",
+ "model": "C100 Super Cub 50",
+ "name": "Honda C100 Super Cub",
+ "years": [
+  1958,
+  1970
+ ],
+ "match": [
+  "c100",
+  "c102",
+  "ca100",
+  "ca102",
+  "super cub 50",
+  "c 100",
+  "cub 50",
+  "honda 50"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "49 cc air-cooled overhead-valve single, three-speed with an automatic clutch",
+ "intro": "The first Super Cub. No clutch lever, a pressed-steel frame and a step-through layout.",
+ "focus": [
+  [
+   "49 cc single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Auto clutch",
+   "Adjust it"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Chain case",
+   "Check inside"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "SUPER CUB"
+}

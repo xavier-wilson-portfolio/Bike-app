@@ -1,0 +1,65 @@
+{
+ "id": "benelli-tnt-300-302s-leoncino-500-2017",
+ "make": "Benelli",
+ "model": "TNT 300 / 302S / Leoncino 500",
+ "name": "Benelli TNT 300 / 302S / Leoncino 500",
+ "years": [
+  2017,
+  2026
+ ],
+ "match": [
+  "tnt 300",
+  "302s",
+  "302 s",
+  "leoncino",
+  "leoncino 500",
+  "tnt300",
+  "leoncino trail",
+  "tnt 135"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "300 or 500 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "Benelli's small twins, built by QJ. Fuel injected and cheap, with parts supply that depends on the dealer.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Parts",
+   "Check supply"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "silhouette": "benelli-tnt-300-302s-leoncino-500-2017",
+ "areas": [],
+ "heroName": "LEONCINO"
+}

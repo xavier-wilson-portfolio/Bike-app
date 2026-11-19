@@ -1,0 +1,64 @@
+{
+ "id": "rokon-trail-breaker-1960",
+ "make": "Rokon",
+ "model": "Trail-Breaker",
+ "name": "Rokon Trail-Breaker",
+ "years": [
+  1960,
+  2026
+ ],
+ "match": [
+  "trail-breaker",
+  "trailbreaker",
+  "rokon",
+  "ranger",
+  "scout",
+  "rokon trailbreaker",
+  "rokon ranger"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "Small air-cooled single, two- or four-stroke depending on year, two-wheel drive, automatic",
+ "intro": "The two-wheel-drive trail machine. Hollow wheels that hold fuel or water, an automatic drive and chains to both wheels.",
+ "focus": [
+  [
+   "Engine",
+   "Check type"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Drive",
+   "Check clutch"
+  ],
+  [
+   "2WD chains",
+   "Slack and lube"
+  ],
+  [
+   "Wheels",
+   "Check seals"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "silhouette": "rokon-trail-breaker-1960",
+ "areas": [],
+ "heroName": "ROKON"
+}

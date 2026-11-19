@@ -1,0 +1,74 @@
+{
+ "id": "bmw-r1100rs-r1150rs-1993",
+ "make": "BMW",
+ "model": "R1100RS / R1150RS",
+ "name": "BMW R1100RS / R1150RS",
+ "years": [
+  1993,
+  2005
+ ],
+ "match": [
+  "r1100rs",
+  "r1150rs",
+  "r 1100 rs",
+  "r 1150 rs",
+  "r1100 rs",
+  "r1150 rs"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "engine": "1085 or 1130 cc air/oil-cooled boxer twin, fuel injected, shaft drive",
+ "intro": "The first oilhead sport tourers. Telelever, fuel injection and a clutch spline to keep greased.",
+ "focus": [
+  [
+   "Boxer twin",
+   "Air/oil-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Spline",
+   "Check clutch"
+  ],
+  [
+   "Final drive",
+   "Check play"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "K": [
+   "Check and grease the clutch and transmission input splines. Dry splines are a known cause of wear on oilheads."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "BMW has issued several recalls across these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BMW MOA forum",
+   "url": "https://forums.bmwmoa.org/",
+   "what": "BMW Motorcycle Owners of America forum."
+  }
+ ],
+ "silhouette": "bmw-r1100rs-r1150rs-1993",
+ "areas": [],
+ "heroName": "R1100RS",
+ "hero": {
+  "src": "img/hero/bmw-r1100rs-r1150rs-1993.jpg",
+  "artist": "",
+  "page": "https://commons.wikimedia.org/wiki/File:BMW_R_1100_RS,_1085_ccm,_90_PS,_Bj._1993_-_2006-07-22.jpg",
+  "lic": "CC BY-SA 2.0 de",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0/de/deed.en"
+ }
+}

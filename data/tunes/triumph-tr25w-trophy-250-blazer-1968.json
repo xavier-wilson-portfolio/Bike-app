@@ -1,0 +1,74 @@
+{
+ "id": "triumph-tr25w-trophy-250-blazer-1968",
+ "make": "Triumph",
+ "model": "TR25W Trophy 250 / Blazer",
+ "name": "Triumph TR25W Trophy 250",
+ "years": [
+  1968,
+  1970
+ ],
+ "match": [
+  "tr25w",
+  "trophy 250",
+  "blazer",
+  "tr25",
+  "blazer ss",
+  "t25"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "247 cc air-cooled OHV single, one carb, points",
+ "intro": "Triumph's 250 single, built on the BSA B25 design. Simple, with points and a short-stroke engine.",
+ "focus": [
+  [
+   "OHV single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Oil",
+   "Check level"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "silhouette": "triumph-tr25w-trophy-250-blazer-1968",
+ "areas": [],
+ "heroName": "TR25W",
+ "hero": {
+  "src": "img/hero/triumph-tr25w-trophy-250-blazer-1968.jpg",
+  "artist": "Cjp24",
+  "page": "https://commons.wikimedia.org/wiki/File:Triumph_250_Trophy_TR25W.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

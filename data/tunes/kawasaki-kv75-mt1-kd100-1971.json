@@ -1,0 +1,68 @@
+{
+ "id": "kawasaki-kv75-mt1-kd100-1971",
+ "make": "Kawasaki",
+ "model": "KV75 MT1 / KD100",
+ "name": "Kawasaki KV75 MT1 / KD100",
+ "years": [
+  1971,
+  1981
+ ],
+ "match": [
+  "kv75",
+  "mt1",
+  "kd100",
+  "kd 100",
+  "kv 75",
+  "mt-1",
+  "kd80"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "73 to 124 cc air-cooled rotary-valve two-stroke single, Superlube oil injection",
+ "intro": "Kawasaki's mini bikes and small dirt bikes. Fold-down bars on the MT1, rotary valves and oil injection.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Oil injection"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Rotary valve",
+   "Check cover"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It has Kawasaki's Superlube oil injection, not premix. Keep the oil tank filled with two-stroke oil and check the pump cable and lines."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KZRider forum",
+   "url": "https://www.kzrider.com/",
+   "what": "Owner forum for classic Kawasakis."
+  }
+ ],
+ "heroName": "KD100"
+}

@@ -1,0 +1,70 @@
+{
+ "id": "aprilia-sr50-rally-50-1996",
+ "make": "Aprilia",
+ "model": "SR50 / Rally 50",
+ "name": "Aprilia SR50 / Rally 50",
+ "years": [
+  1996,
+  2015
+ ],
+ "match": [
+  "sr50",
+  "sr 50",
+  "rally 50",
+  "sr50 ditech",
+  "sr50r",
+  "sr50 street",
+  "rally 50 lc"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 cc two-stroke single, air- or liquid-cooled, oil injection, CVT",
+ "intro": "Aprilia's sporty 50 scooters. Two-strokes with oil injection, a CVT and lots of tuning parts.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Oil injection"
+  ],
+  [
+   "Carb or Ditech",
+   "Check fuel"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Cooling",
+   "Check type"
+  ],
+  [
+   "Brakes",
+   "Check them"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It has oil injection, not premix. Keep the oil tank filled with two-stroke oil and check the pump line for cracks."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Aprilia has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "silhouette": "aprilia-sr50-rally-50-1996",
+ "areas": [],
+ "heroName": "SR50"
+}

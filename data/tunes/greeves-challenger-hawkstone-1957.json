@@ -1,0 +1,68 @@
+{
+ "id": "greeves-challenger-hawkstone-1957",
+ "make": "Greeves",
+ "model": "Challenger / Hawkstone",
+ "name": "Greeves Challenger / Hawkstone",
+ "years": [
+  1957,
+  1972
+ ],
+ "match": [
+  "greeves",
+  "challenger",
+  "hawkstone",
+  "scottish",
+  "griffon",
+  "anglian",
+  "sports twin"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "197 to 380 cc air-cooled two-stroke single, premix, cast-alloy downtube",
+ "intro": "The British scramblers and trials bikes with the cast-alloy front beam. Premix two-strokes and leading-link forks on many.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Front fork",
+   "Check pivots"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "GREEVES"
+}

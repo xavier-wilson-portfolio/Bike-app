@@ -1,0 +1,70 @@
+{
+ "id": "hodaka-ace-90-100-super-rat-wombat-1964",
+ "make": "Hodaka",
+ "model": "Ace 90 / 100 / Super Rat / Wombat",
+ "name": "Hodaka Ace / Super Rat / Wombat",
+ "years": [
+  1964,
+  1978
+ ],
+ "match": [
+  "hodaka",
+  "ace 90",
+  "ace 100",
+  "super rat",
+  "combat wombat",
+  "wombat",
+  "dirt squirt",
+  "road toad",
+  "thunderdog"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "90 to 250 cc air-cooled two-stroke single, premix",
+ "intro": "The Oregon-designed, Japan-built trail two-strokes. Premix, simple and well supported by a dedicated club.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "HODAKA"
+}

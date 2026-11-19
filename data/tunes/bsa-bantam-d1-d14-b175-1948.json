@@ -1,0 +1,70 @@
+{
+ "id": "bsa-bantam-d1-d14-b175-1948",
+ "make": "BSA",
+ "model": "Bantam D1-D14 / B175",
+ "name": "BSA Bantam",
+ "years": [
+  1948,
+  1971
+ ],
+ "match": [
+  "bantam",
+  "d1",
+  "d7",
+  "d10",
+  "d14",
+  "b175",
+  "bsa bantam",
+  "d3",
+  "d5"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "123 to 172 cc air-cooled two-stroke single, premix, flywheel magneto",
+ "intro": "BSA's little two-stroke, based on the DKW RT125. Premix, a flywheel magneto and a huge production run.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Flywheel mag",
+   "Check spark"
+  ],
+  [
+   "Crank seals",
+   "Check them"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BSA Owners Club",
+   "url": "https://www.bsaoc.org/",
+   "what": "Owner club for BSA motorcycles, with tech help and parts."
+  }
+ ],
+ "heroName": "BANTAM"
+}

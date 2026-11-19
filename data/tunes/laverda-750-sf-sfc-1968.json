@@ -1,0 +1,72 @@
+{
+ "id": "laverda-750-sf-sfc-1968",
+ "make": "Laverda",
+ "model": "750 SF / SFC",
+ "name": "Laverda 750 SF / SFC",
+ "years": [
+  1968,
+  1976
+ ],
+ "match": [
+  "750 sf",
+  "750 sfc",
+  "sf750",
+  "sfc 750",
+  "laverda 750",
+  "750 gt",
+  "sf2",
+  "sf3"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "744 cc air-cooled SOHC parallel twin, two carbs",
+ "intro": "Laverda's tough 750 twins. Heavy-duty bottom ends, two carbs and an SFC endurance-racer version.",
+ "focus": [
+  [
+   "SOHC twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Sync them"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Cam chain",
+   "Check it"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "silhouette": "laverda-750-sf-sfc-1968",
+ "areas": [],
+ "heroName": "LAVERDA",
+ "hero": {
+  "src": "img/hero/laverda-750-sf-sfc-1968.jpg",
+  "artist": "Quelle: \tjockrutherford (Flickr)       /   Freisteller, Bildbearbeitung &amp; Retusche von Auge=mit",
+  "page": "https://commons.wikimedia.org/wiki/File:Laverda_750SF_1971%E2%80%931972_noBG.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

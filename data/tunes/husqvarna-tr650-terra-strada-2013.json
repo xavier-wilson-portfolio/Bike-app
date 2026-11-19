@@ -1,0 +1,63 @@
+{
+ "id": "husqvarna-tr650-terra-strada-2013",
+ "make": "Husqvarna",
+ "model": "TR650 Terra / Strada",
+ "name": "Husqvarna TR650 Terra / Strada",
+ "years": [
+  2013,
+  2014
+ ],
+ "match": [
+  "tr650",
+  "terra",
+  "strada",
+  "tr650 terra",
+  "tr650 strada",
+  "tr 650"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "652 cc liquid-cooled single, fuel injected",
+ "intro": "Husqvarna's BMW-era 650 single. Based on the BMW G650 engine, with a short production run.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "silhouette": "husqvarna-tr650-terra-strada-2013",
+ "areas": [],
+ "heroName": "TR650"
+}

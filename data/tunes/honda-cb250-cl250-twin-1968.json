@@ -1,0 +1,75 @@
+{
+ "id": "honda-cb250-cl250-twin-1968",
+ "make": "Honda",
+ "model": "CB250 / CL250 twin",
+ "name": "Honda CB250 / CL250 twin",
+ "years": [
+  1968,
+  1973
+ ],
+ "match": [
+  "cb250",
+  "cl250",
+  "cb 250",
+  "cl 250",
+  "cb250k",
+  "cl250k",
+  "cb250 1970"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "249 cc air-cooled SOHC parallel twin, two carbs, five-speed",
+ "intro": "The 250 version of the CB350 twin. Two carbs, points and a lot of shared parts with the 350.",
+ "focus": [
+  [
+   "SOHC twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Sync them"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Cam chain",
+   "Adjust it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Honda Twins forum",
+   "url": "https://www.vintagehondatwins.com/",
+   "what": "Owner forum for Honda twins of the 60s and 70s."
+  }
+ ],
+ "silhouette": "honda-cb250-cl250-twin-1968",
+ "areas": [],
+ "heroName": "CB250",
+ "hero": {
+  "src": "img/hero/honda-cb250-cl250-twin-1968.jpg",
+  "artist": "Lankyrider",
+  "page": "https://commons.wikimedia.org/wiki/File:1970_Honda_CB250.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

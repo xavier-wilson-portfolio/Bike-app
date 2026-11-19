@@ -1,0 +1,65 @@
+{
+ "id": "ducati-multistrada-950-v2-2017",
+ "make": "Ducati",
+ "model": "Multistrada 950 / V2",
+ "name": "Ducati Multistrada 950 / V2",
+ "years": [
+  2017,
+  2026
+ ],
+ "match": [
+  "multistrada 950",
+  "multistrada v2",
+  "mts950",
+  "multistrada 950s",
+  "multistrada v2s",
+  "mts 950"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "937 cc liquid-cooled Testastretta V-twin, fuel injected",
+ "intro": "The smaller liquid-cooled Multistrada. A Testastretta twin, belt cams and a wet clutch.",
+ "focus": [
+  [
+   "Desmo twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Belts",
+   "Change them"
+  ],
+  [
+   "Desmo valves",
+   "Shim check"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Desmo valve service needs both opening and closing shims checked. Follow the interval in the manual; it is not a job to skip."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Ducati has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "heroName": "MULTISTRADA 950"
+}

@@ -1,0 +1,70 @@
+{
+ "id": "bmw-hp2-enduro-megamoto-2005",
+ "make": "BMW",
+ "model": "HP2 Enduro / Megamoto",
+ "name": "BMW HP2 Enduro / Megamoto",
+ "years": [
+  2005,
+  2009
+ ],
+ "match": [
+  "hp2 enduro",
+  "hp2 megamoto",
+  "hp2",
+  "megamoto",
+  "hp2e",
+  "hp2 mm"
+ ],
+ "style": "dualsport",
+ "drive": "shaft",
+ "engine": "1170 cc air/oil-cooled boxer twin, fuel injected, shaft drive, air shock",
+ "intro": "BMW's light off-road boxer. Long-travel forks, an air shock on the Enduro and a final drive to check.",
+ "focus": [
+  [
+   "Boxer twin",
+   "Air/oil-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Air shock",
+   "Check pressure"
+  ],
+  [
+   "Final drive",
+   "Check play"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "BMW has issued several recalls across these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "UKGSer forum",
+   "url": "https://www.ukgser.com/community/",
+   "what": "Owner forum for BMW GS models."
+  }
+ ],
+ "silhouette": "bmw-hp2-enduro-megamoto-2005",
+ "areas": [],
+ "heroName": "HP2",
+ "hero": {
+  "src": "img/hero/bmw-hp2-enduro-megamoto-2005.jpg",
+  "artist": "nl:User:Piero",
+  "page": "https://commons.wikimedia.org/wiki/File:BMW_HP_2.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
+}

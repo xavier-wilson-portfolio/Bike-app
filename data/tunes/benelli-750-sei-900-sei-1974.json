@@ -1,0 +1,70 @@
+{
+ "id": "benelli-750-sei-900-sei-1974",
+ "make": "Benelli",
+ "model": "750 Sei / 900 Sei",
+ "name": "Benelli 750 Sei / 900 Sei",
+ "years": [
+  1974,
+  1984
+ ],
+ "match": [
+  "750 sei",
+  "900 sei",
+  "sei",
+  "benelli sei",
+  "benelli six",
+  "sei 750"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "748 or 906 cc air-cooled SOHC inline six, three carbs",
+ "intro": "The first production six-cylinder bike. Three carbs feeding six cylinders and a lot of shared Guzzi-era parts.",
+ "focus": [
+  [
+   "Inline six",
+   "Air-cooled"
+  ],
+  [
+   "Three carbs",
+   "Clean and sync"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Charging",
+   "Check it"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "silhouette": "benelli-750-sei-900-sei-1974",
+ "areas": [],
+ "heroName": "SEI",
+ "hero": {
+  "src": "img/hero/benelli-750-sei-900-sei-1974.jpg",
+  "artist": "XDVRACE",
+  "page": "https://commons.wikimedia.org/wiki/File:Benelli_750_Sei_MBE.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

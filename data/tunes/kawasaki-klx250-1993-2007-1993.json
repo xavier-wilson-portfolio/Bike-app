@@ -1,0 +1,61 @@
+{
+ "id": "kawasaki-klx250-1993-2007-1993",
+ "make": "Kawasaki",
+ "model": "KLX250 (1993-2007)",
+ "name": "Kawasaki KLX250 (1993-2007)",
+ "years": [
+  1993,
+  2007
+ ],
+ "match": [
+  "klx250",
+  "klx 250",
+  "klx250r",
+  "klx250s",
+  "klx250es",
+  "klx250 1995"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 cc liquid-cooled DOHC single, carb",
+ "intro": "The earlier KLX250s. Liquid cooled, with carbs and kick or electric start depending on the year.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "KLX250"
+}

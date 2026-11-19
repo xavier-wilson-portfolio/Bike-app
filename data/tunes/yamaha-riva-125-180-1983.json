@@ -1,0 +1,62 @@
+{
+ "id": "yamaha-riva-125-180-1983",
+ "make": "Yamaha",
+ "model": "Riva 125 / 180",
+ "name": "Yamaha Riva 125 / 180",
+ "years": [
+  1983,
+  1990
+ ],
+ "match": [
+  "riva 125",
+  "riva 180",
+  "xc125",
+  "xc180",
+  "xc 180",
+  "riva 200",
+  "xc200"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "123 to 183 cc air-cooled four-stroke single, carb, CVT",
+ "intro": "Yamaha's 80s scooters. Air-cooled four-strokes with a CVT and a lot of aging plastic.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Gear oil",
+   "Change it"
+  ],
+  [
+   "Bodywork",
+   "Many panels"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "RIVA"
+}

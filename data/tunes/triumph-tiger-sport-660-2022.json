@@ -1,0 +1,68 @@
+{
+ "id": "triumph-tiger-sport-660-2022",
+ "make": "Triumph",
+ "model": "Tiger Sport 660",
+ "name": "Triumph Tiger Sport 660",
+ "years": [
+  2022,
+  2026
+ ],
+ "match": [
+  "tiger sport 660",
+  "tiger 660",
+  "tiger sport 660 2022",
+  "tiger 660 sport"
+ ],
+ "style": "touring",
+ "drive": "chain",
+ "engine": "660 cc liquid-cooled triple, fuel injected",
+ "intro": "Triumph's small sport tourer on the Trident 660 platform. Fuel injected, light and simple to service.",
+ "focus": [
+  [
+   "Triple",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Triumph has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "silhouette": "triumph-tiger-sport-660-2022",
+ "areas": [],
+ "heroName": "TIGER SPORT",
+ "hero": {
+  "src": "img/hero/triumph-tiger-sport-660-2022.jpg",
+  "artist": "Lamb Chop Rides",
+  "page": "https://commons.wikimedia.org/wiki/File:Tiger_sport_660_Triumph.jpg",
+  "lic": "CC BY 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by/3.0"
+ }
+}

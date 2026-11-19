@@ -1,0 +1,66 @@
+{
+ "id": "yamaha-lb80-chappy-1973",
+ "make": "Yamaha",
+ "model": "LB80 Chappy",
+ "name": "Yamaha LB80 Chappy",
+ "years": [
+  1973,
+  1980
+ ],
+ "match": [
+  "chappy",
+  "lb80",
+  "lb 80",
+  "lb50",
+  "yamaha chappy"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "49 or 72 cc air-cooled two-stroke single, Autolube oil injection, automatic",
+ "intro": "Yamaha's fat-tire mini bike. A two-stroke with Autolube and a two-speed automatic.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Oil injection"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Autolube",
+   "Check pump"
+  ],
+  [
+   "Auto clutch",
+   "Inspect"
+  ],
+  [
+   "Tires",
+   "Check age"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It has oil injection, not premix. Keep the oil tank filled with two-stroke oil and check the pump line for cracks."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "CHAPPY"
+}

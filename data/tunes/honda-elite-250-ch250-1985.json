@@ -1,0 +1,60 @@
+{
+ "id": "honda-elite-250-ch250-1985",
+ "make": "Honda",
+ "model": "Elite 250 (CH250)",
+ "name": "Honda Elite 250 (CH250)",
+ "years": [
+  1985,
+  1988
+ ],
+ "match": [
+  "elite 250",
+  "ch250",
+  "ch 250",
+  "elite 250 ch250",
+  "elite250"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "244 cc liquid-cooled four-stroke single, carb, CVT",
+ "intro": "Honda's big Elite of the 80s. Liquid cooled, with a CVT and a lot of 80s plastic.",
+ "focus": [
+  [
+   "244 cc single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Bodywork",
+   "Many panels"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "ELITE 250"
+}

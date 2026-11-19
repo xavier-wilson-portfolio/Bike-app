@@ -1,0 +1,61 @@
+{
+ "id": "lifan-kp150-kpr-kps-200-2017",
+ "make": "Lifan",
+ "model": "KP150 / KPR / KPS 200",
+ "name": "Lifan KP150 / KPR / KPS 200",
+ "years": [
+  2017,
+  2023
+ ],
+ "match": [
+  "kp150",
+  "kpr",
+  "kps 200",
+  "kpr200",
+  "kp200",
+  "lifan kpr",
+  "kpr 200",
+  "kps"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "149 to 198 cc single, carb or fuel injection",
+ "intro": "Lifan's small sport and naked bikes. Cheap, light, with parts supply that depends on the importer.",
+ "focus": [
+  [
+   "Single",
+   "Air or liquid"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Wiring",
+   "Check connectors"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Many of these were sold under several brand names and may not show up in the NHTSA search. Check with the seller or importer for open recalls.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "LIFAN"
+}

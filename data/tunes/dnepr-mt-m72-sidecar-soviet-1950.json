@@ -1,0 +1,64 @@
+{
+ "id": "dnepr-mt-m72-sidecar-soviet-1950",
+ "make": "Dnepr",
+ "model": "MT / M72 sidecar (Soviet)",
+ "name": "Dnepr MT / M72 sidecar",
+ "years": [
+  1950,
+  1995
+ ],
+ "match": [
+  "dnepr",
+  "mt-11",
+  "mt-16",
+  "m72",
+  "k-750",
+  "mt 11",
+  "kmz",
+  "mt-10",
+  "k750"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "650 to 750 cc air-cooled boxer twin, two carbs, shaft drive, sidecar",
+ "intro": "The Kiev-built Soviet boxers. Side-valve or OHV boxers with sidecars, shaft drive and parts quality that varies a lot.",
+ "focus": [
+  [
+   "Boxer twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Sync them"
+  ],
+  [
+   "Ignition",
+   "Check points"
+  ],
+  [
+   "Sidecar",
+   "Check mounts"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "DNEPR"
+}

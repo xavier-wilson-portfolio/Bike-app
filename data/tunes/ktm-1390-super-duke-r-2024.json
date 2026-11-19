@@ -1,0 +1,60 @@
+{
+ "id": "ktm-1390-super-duke-r-2024",
+ "make": "KTM",
+ "model": "1390 Super Duke R",
+ "name": "KTM 1390 Super Duke R",
+ "years": [
+  2024,
+  2026
+ ],
+ "match": [
+  "1390 super duke",
+  "1390 super duke r",
+  "super duke 1390",
+  "1390 sdr",
+  "1390 super duke r evo"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "1350 cc liquid-cooled 75-degree V-twin, fuel injected, variable cam timing",
+ "intro": "KTM's biggest naked bike. A huge V-twin, variable cam timing and a full electronics suite.",
+ "focus": [
+  [
+   "LC8 twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Electronics",
+   "Scan for codes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "KTM has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KTM Forums",
+   "url": "https://www.ktmforums.com/",
+   "what": "Owner forum for KTM street and adventure bikes."
+  }
+ ],
+ "heroName": "1390 SDR"
+}

@@ -1,0 +1,76 @@
+{
+ "id": "vincent-rapide-black-shadow-comet-1946",
+ "make": "Vincent",
+ "model": "Rapide / Black Shadow / Comet",
+ "name": "Vincent Rapide / Black Shadow / Comet",
+ "years": [
+  1946,
+  1955
+ ],
+ "match": [
+  "rapide",
+  "black shadow",
+  "comet",
+  "vincent",
+  "black lightning",
+  "black prince",
+  "vincent rapide",
+  "series c"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "499 cc single or 998 cc 50-degree V-twin, air-cooled, magneto",
+ "intro": "The Vincent twins and singles. Rare and valuable, so source parts from the owners' club and work slowly.",
+ "focus": [
+  [
+   "Engine",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean them"
+  ],
+  [
+   "Magneto",
+   "Check spark"
+  ],
+  [
+   "Clutch",
+   "Servo type"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "silhouette": "vincent-rapide-black-shadow-comet-1946",
+ "areas": [],
+ "heroName": "VINCENT",
+ "hero": {
+  "src": "img/hero/vincent-rapide-black-shadow-comet-1946.jpg",
+  "artist": "tomislav medak",
+  "page": "https://commons.wikimedia.org/wiki/File:New_York_Vincent-HRD_Series_C_Black_Shadow_Motorcycle.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

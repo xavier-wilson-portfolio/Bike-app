@@ -1,0 +1,62 @@
+{
+ "id": "harley-davidson-mt350-mt500-military-1993",
+ "make": "Harley-Davidson",
+ "model": "MT350 / MT500 military",
+ "name": "Harley-Davidson MT350 / MT500",
+ "years": [
+  1993,
+  2000
+ ],
+ "match": [
+  "mt500",
+  "mt350",
+  "mt350e",
+  "mt 500",
+  "mt 350",
+  "harley mt500",
+  "armstrong mt500"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "348 or 482 cc air-cooled Rotax single, carb",
+ "intro": "Harley's military dual-sports, built from the Armstrong design with Rotax engines. Most were sold to armed forces.",
+ "focus": [
+  [
+   "Rotax single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Oil",
+   "Dry sump"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "MT500"
+}

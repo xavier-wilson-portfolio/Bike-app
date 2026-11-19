@@ -1,0 +1,62 @@
+{
+ "id": "ebr-1190rx-1190sx-2014",
+ "make": "EBR",
+ "model": "1190RX / 1190SX",
+ "name": "EBR 1190RX / 1190SX",
+ "years": [
+  2014,
+  2019
+ ],
+ "match": [
+  "1190rx",
+  "1190sx",
+  "ebr 1190",
+  "1190 rx",
+  "1190 sx",
+  "ebr",
+  "1190rs"
+ ],
+ "style": "sport",
+ "drive": "belt",
+ "engine": "1190 cc liquid-cooled 72-degree V-twin, fuel injected, rim-mounted front brake",
+ "intro": "Erik Buell Racing's superbike. A perimeter rotor on the front wheel, fuel in the frame and limited parts support.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Rim brake",
+   "Check rotor"
+  ],
+  [
+   "Fuel frame",
+   "Check leaks"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BadWeB",
+   "url": "https://www.badweatherbikers.com/buell/",
+   "what": "Long-running Buell owner forum."
+  }
+ ],
+ "heroName": "EBR 1190"
+}

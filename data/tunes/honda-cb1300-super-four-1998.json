@@ -1,0 +1,69 @@
+{
+ "id": "honda-cb1300-super-four-1998",
+ "make": "Honda",
+ "model": "CB1300 Super Four",
+ "name": "Honda CB1300 Super Four",
+ "years": [
+  1998,
+  2013
+ ],
+ "match": [
+  "cb1300",
+  "cb1300 super four",
+  "sc40",
+  "sc54",
+  "cb1300s",
+  "cb 1300",
+  "super four 1300"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "1284 cc liquid-cooled DOHC inline four, carbs then fuel injection",
+ "intro": "Honda's big naked four, mostly sold in Japan and Europe. Carbs early, fuel injection from 2003.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel",
+   "Carbs or EFI"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "silhouette": "honda-cb1300-super-four-1998",
+ "areas": [],
+ "heroName": "CB1300",
+ "hero": {
+  "src": "img/hero/honda-cb1300-super-four-1998.jpg",
+  "artist": "Annaa 9",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CB1300_Super_Four.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

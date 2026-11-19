@@ -9,7 +9,7 @@ AIRHEAD = dict(name="Airheads Beemer Club", url="https://airheads.org/", what="C
 SLASH2 = dict(name="BMW Vintage Club", url="https://www.bmwvintageclub.org/", what="Club for pre-1970 BMW motorcycles.")
 
 B43.append(dict(id="bmw-f650cs-g650gs-2002", make="BMW", model="F650CS / G650GS", name="BMW F650CS Scarver / G650GS", years=[2002, 2016],
-  match=["f650cs", "f 650 cs", "scarver", "g650gs sertao", "sertao", "g650x"], style="standard", drive="belt",
+  match=["f650cs", "f 650 cs", "scarver", "g650gs sertao", "sertao"], style="standard", drive="belt",
   engine="652 cc liquid-cooled single (Rotax), fuel injected",
   intro="BMW's 650 singles after the first F650. The CS has belt drive; the G650GS is chain driven.",
   focus=[["652 cc single", "Liquid-cooled"], ["Fuel injected", "No carbs"], ["Final drive", "Belt or chain"], ["Cooling", "Coolant and fan"], ["Fuel tank", "Under seat"]],
@@ -57,7 +57,7 @@ B43.append(dict(id="bmw-r1200r-r1250r-2006", make="BMW", model="R1200R / R1250R"
   recalls=[], recallNote=BMWNOTE, known=[], forums=[MOA]))
 
 B43.append(dict(id="bmw-r60-2-and-r69s-slash-2-1955", make="BMW", model="R50 / R60 / R69S (Earles fork)", name="BMW R50, R60/2 and R69S", years=[1955, 1969],
-  match=["r60/2", "r69s", "r50/2", "r60", "r69", "r50s", "r27", "earles fork"], style="standard", drive="shaft",
+  match=["r60/2", "r69s", "r50/2", "r60", "r69", "r50s", "earles fork"], style="standard", drive="shaft",
   engine="494 to 594 cc air-cooled boxer twin, two carbs, magneto ignition, six-volt",
   intro="The Earles-fork BMW twins. Magneto ignition, six-volt electrics and a lot of careful parts hunting.",
   focus=[["Boxer twin", "Air-cooled"], ["Two carbs", "Bing, sync them"], ["Magneto", "Check it"], ["Six-volt", "Weak lights"], ["Shaft drive", "Check oil"]],

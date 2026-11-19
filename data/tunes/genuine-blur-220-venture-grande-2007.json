@@ -1,0 +1,66 @@
+{
+ "id": "genuine-blur-220-venture-grande-2007",
+ "make": "Genuine",
+ "model": "Blur 220 / Venture / Grande",
+ "name": "Genuine Blur / Venture / Grande",
+ "years": [
+  2007,
+  2020
+ ],
+ "match": [
+  "blur",
+  "blur 220",
+  "venture",
+  "grande",
+  "venture 50",
+  "grande 150",
+  "blur sr"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 to 220 cc single, two- or four-stroke, CVT",
+ "intro": "Genuine's other scooters. The Blur 220 is a sporty four-stroke; the Venture and Grande are retro commuters.",
+ "focus": [
+  [
+   "Single",
+   "Check type"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Gear oil",
+   "Change it"
+  ],
+  [
+   "Brakes",
+   "Check them"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Some years are two-strokes and some are four-strokes. Check yours before you buy oil, plugs or carb parts."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "BLUR"
+}

@@ -1,0 +1,59 @@
+{
+ "id": "ktm-990-duke-2024-2024",
+ "make": "KTM",
+ "model": "990 Duke (2024)",
+ "name": "KTM 990 Duke",
+ "years": [
+  2024,
+  2026
+ ],
+ "match": [
+  "990 duke",
+  "duke 990",
+  "ktm 990 duke",
+  "990 duke 2024"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "947 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "KTM's 2024 middleweight naked. A bigger version of the 890 twin with updated electronics.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Electronics",
+   "Scan for codes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "KTM has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KTM Forums",
+   "url": "https://www.ktmforums.com/",
+   "what": "Owner forum for KTM street and adventure bikes."
+  }
+ ],
+ "heroName": "990 DUKE"
+}

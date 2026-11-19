@@ -1,0 +1,65 @@
+{
+ "id": "kawasaki-gpz750-turbo-1984",
+ "make": "Kawasaki",
+ "model": "GPz750 Turbo",
+ "name": "Kawasaki GPz750 Turbo",
+ "years": [
+  1984,
+  1985
+ ],
+ "match": [
+  "gpz750 turbo",
+  "750 turbo",
+  "zx750e",
+  "ninja turbo",
+  "gpz turbo",
+  "kawasaki turbo"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "738 cc air-cooled DOHC inline four, turbocharged, fuel injected",
+ "intro": "Kawasaki's turbo bike, the fastest of the 80s turbo era. Fuel injection, a turbo and an oil system to check first.",
+ "focus": [
+  [
+   "Inline four",
+   "Air-cooled"
+  ],
+  [
+   "Turbo",
+   "Check bearings"
+  ],
+  [
+   "Fuel injected",
+   "Check system"
+  ],
+  [
+   "Oil lines",
+   "Check turbo feed"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "The turbo is oiled by the engine. Check the feed and return lines and change the oil before the first start."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KZRider forum",
+   "url": "https://www.kzrider.com/",
+   "what": "Owner forum for classic Kawasakis."
+  }
+ ],
+ "heroName": "GPZ750 TURBO"
+}

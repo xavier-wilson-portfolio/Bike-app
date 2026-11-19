@@ -1,0 +1,65 @@
+{
+ "id": "bmw-r51-3-r67-plunger-1951",
+ "make": "BMW",
+ "model": "R51/3 / R67 (plunger)",
+ "name": "BMW R51/3 / R67 (plunger)",
+ "years": [
+  1951,
+  1956
+ ],
+ "match": [
+  "r51/3",
+  "r67",
+  "r67/2",
+  "r67/3",
+  "r51/2",
+  "r68",
+  "bmw plunger",
+  "r 67"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "494 to 594 cc air-cooled OHV boxer twin, two carbs, magneto, plunger rear suspension",
+ "intro": "BMW's postwar plunger twins. Boxer engines with magnetos, plunger rear ends and very little room for guesswork.",
+ "focus": [
+  [
+   "Boxer twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Sync them"
+  ],
+  [
+   "Magneto",
+   "Check spark"
+  ],
+  [
+   "Plungers",
+   "Check them"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Airheads Beemer Club",
+   "url": "https://www.airheads.org/",
+   "what": "Tech library and owner club for BMW airhead twins."
+  }
+ ],
+ "silhouette": "bmw-r51-3-r67-plunger-1951",
+ "areas": [],
+ "heroName": "R67"
+}

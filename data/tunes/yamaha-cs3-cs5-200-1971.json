@@ -1,0 +1,67 @@
+{
+ "id": "yamaha-cs3-cs5-200-1971",
+ "make": "Yamaha",
+ "model": "CS3 / CS5 200",
+ "name": "Yamaha CS3 / CS5 200",
+ "years": [
+  1971,
+  1972
+ ],
+ "match": [
+  "cs3",
+  "cs5",
+  "cs3b",
+  "cs5e",
+  "cs 5",
+  "yamaha 200 twin"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "195 cc air-cooled two-stroke twin, Autolube oil injection, electric start",
+ "intro": "Yamaha's little two-stroke twins with electric start. Autolube, points and a five-speed box.",
+ "focus": [
+  [
+   "Two-stroke twin",
+   "Oil injection"
+  ],
+  [
+   "Two carbs",
+   "Sync them"
+  ],
+  [
+   "Autolube",
+   "Check pump"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It has oil injection, not premix. Keep the oil tank filled with two-stroke oil and check the pump line for cracks."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "CS5"
+}

@@ -1,0 +1,72 @@
+{
+ "id": "moto-morini-3-1-2-500-1973",
+ "make": "Moto Morini",
+ "model": "3 1/2 / 500",
+ "name": "Moto Morini 3 1/2 / 500",
+ "years": [
+  1973,
+  1987
+ ],
+ "match": [
+  "3 1/2",
+  "3½",
+  "morini 350",
+  "morini 500",
+  "350 sport",
+  "500 sport",
+  "camel",
+  "kanguro"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "344 or 479 cc air-cooled 72-degree V-twin, Heron heads, belt-driven cam",
+ "intro": "Morini's small V-twins. Light, with Heron combustion chambers and a toothed-belt cam drive.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Sync them"
+  ],
+  [
+   "Cam belt",
+   "Change it"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "silhouette": "moto-morini-3-1-2-500-1973",
+ "areas": [],
+ "heroName": "MORINI",
+ "hero": {
+  "src": "img/hero/moto-morini-3-1-2-500-1973.jpg",
+  "artist": "Lucarelli",
+  "page": "https://commons.wikimedia.org/wiki/File:Moto_Morini_2.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

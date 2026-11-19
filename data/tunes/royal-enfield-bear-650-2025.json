@@ -1,0 +1,61 @@
+{
+ "id": "royal-enfield-bear-650-2025",
+ "make": "Royal Enfield",
+ "model": "Bear 650",
+ "name": "Royal Enfield Bear 650",
+ "years": [
+  2025,
+  2026
+ ],
+ "match": [
+  "bear 650",
+  "interceptor bear 650",
+  "re bear",
+  "bear"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "648 cc air/oil-cooled parallel twin, fuel injected",
+ "intro": "Royal Enfield's scrambler on the 650 twin platform. Longer suspension and a two-into-one exhaust.",
+ "focus": [
+  [
+   "Twin",
+   "Air/oil-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Wiring",
+   "Check connectors"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with Royal Enfield owner threads."
+  }
+ ],
+ "silhouette": "royal-enfield-bear-650-2025",
+ "areas": [],
+ "heroName": "BEAR 650"
+}

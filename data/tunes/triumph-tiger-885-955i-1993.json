@@ -1,0 +1,68 @@
+{
+ "id": "triumph-tiger-885-955i-1993",
+ "make": "Triumph",
+ "model": "Tiger 885 / 955i",
+ "name": "Triumph Tiger 885 / 955i",
+ "years": [
+  1993,
+  2006
+ ],
+ "match": [
+  "tiger 885",
+  "tiger 955i",
+  "tiger 955",
+  "tiger 900",
+  "tiger 885i",
+  "tiger t709"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "885 or 955 cc liquid-cooled triple, carbs then fuel injection",
+ "intro": "Triumph's early Tigers. A tall triple with carbs on the first ones and fuel injection later.",
+ "focus": [
+  [
+   "Triple",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel",
+   "Carbs or EFI"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Triumph has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "silhouette": "triumph-tiger-885-955i-1993",
+ "areas": [],
+ "heroName": "TIGER",
+ "hero": {
+  "src": "img/hero/triumph-tiger-885-955i-1993.jpg",
+  "artist": "NathanLee at English Wikipedia",
+  "page": "https://commons.wikimedia.org/wiki/File:Triumph_Tiger_955i_2007.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
+}

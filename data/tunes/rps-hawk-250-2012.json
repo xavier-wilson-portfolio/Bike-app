@@ -1,0 +1,60 @@
+{
+ "id": "rps-hawk-250-2012",
+ "make": "RPS",
+ "model": "Hawk 250",
+ "name": "RPS Hawk 250",
+ "years": [
+  2012,
+  2020
+ ],
+ "match": [
+  "hawk 250",
+  "rps hawk",
+  "hawk",
+  "dlx 250",
+  "hawk dlx"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "229 cc air-cooled single, carb, electric start",
+ "intro": "A popular budget dual-sport. A simple Chinese single with a carb and electric start.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Wiring",
+   "Check connectors"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Many of these were sold under several brand names and may not show up in the NHTSA search. Check with the seller or importer for open recalls.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "HAWK 250"
+}

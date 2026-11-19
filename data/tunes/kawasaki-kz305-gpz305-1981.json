@@ -1,0 +1,66 @@
+{
+ "id": "kawasaki-kz305-gpz305-1981",
+ "make": "Kawasaki",
+ "model": "KZ305 / GPz305",
+ "name": "Kawasaki KZ305 / GPz305",
+ "years": [
+  1981,
+  1988
+ ],
+ "match": [
+  "kz305",
+  "kz 305",
+  "gpz305",
+  "csr305",
+  "ex305",
+  "kz305 ltd",
+  "gpz 305"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "306 cc air-cooled SOHC parallel twin, two carbs",
+ "intro": "Kawasaki's small twin of the 80s. Some years used a toothed belt instead of a chain.",
+ "focus": [
+  [
+   "Twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Sync them"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Final drive",
+   "Chain or belt"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "K": [
+   "Check whether yours has a chain or a belt final drive. A belt needs the right tension and no oil on it."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KZRider forum",
+   "url": "https://www.kzrider.com/",
+   "what": "Owner forum for classic Kawasakis."
+  }
+ ],
+ "heroName": "KZ305"
+}

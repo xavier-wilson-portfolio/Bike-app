@@ -1,0 +1,66 @@
+{
+ "id": "yamaha-bw80-bw200-big-wheel-1986",
+ "make": "Yamaha",
+ "model": "BW80 / BW200 Big Wheel",
+ "name": "Yamaha BW80 / BW200 Big Wheel",
+ "years": [
+  1986,
+  1990
+ ],
+ "match": [
+  "bw200",
+  "bw80",
+  "big wheel",
+  "bw350",
+  "bw 200",
+  "bw 80",
+  "yamaha big wheel"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "79 to 348 cc air-cooled single, two- or four-stroke, fat tires",
+ "intro": "Yamaha's fat-tire trail bikes. The BW80 is a two-stroke; the BW200 and BW350 are four-strokes.",
+ "focus": [
+  [
+   "Single",
+   "Check type"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves or top end",
+   "Check"
+  ],
+  [
+   "Tires",
+   "Hard to find"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "The BW80 is a two-stroke with oil injection. The bigger ones are four-strokes. Check which one you have."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "BW200"
+}

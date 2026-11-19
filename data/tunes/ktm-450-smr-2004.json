@@ -1,0 +1,58 @@
+{
+ "id": "ktm-450-smr-2004",
+ "make": "KTM",
+ "model": "450 SMR",
+ "name": "KTM 450 SMR",
+ "years": [
+  2004,
+  2026
+ ],
+ "match": [
+  "450 smr",
+  "smr 450",
+  "450 smr ktm",
+  "560 smr",
+  "450 sms"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "449 cc liquid-cooled four-stroke single, carb then fuel injection",
+ "intro": "KTM's supermoto racer. Based on the SX-F engine, with race-only service intervals.",
+ "focus": [
+  [
+   "Race single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "Valves",
+   "Check often"
+  ],
+  [
+   "Brakes",
+   "Check them"
+  ],
+  [
+   "Hours",
+   "Log them"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a KTM dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KTM Forums",
+   "url": "https://www.ktmforums.com/",
+   "what": "Owner forum for KTM street and adventure bikes."
+  }
+ ],
+ "heroName": "450 SMR"
+}

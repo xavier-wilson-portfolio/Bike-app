@@ -1,0 +1,61 @@
+{
+ "id": "yamaha-tt600-1983",
+ "make": "Yamaha",
+ "model": "TT600",
+ "name": "Yamaha TT600",
+ "years": [
+  1983,
+  1990
+ ],
+ "match": [
+  "tt600",
+  "tt 600",
+  "tt600n",
+  "tt600s"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "595 cc air-cooled four-valve single, carb, kick start",
+ "intro": "Yamaha's big off-road four-stroke of the 80s. Kick start, a decompressor and the XT600 family engine.",
+ "focus": [
+  [
+   "Big single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Starting",
+   "Decompressor"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Odin XT500 forum",
+   "url": "https://www.tapatalk.com/groups/odinxt500/",
+   "what": "Owner forum for XT500, TT500 and SR500 singles."
+  }
+ ],
+ "silhouette": "yamaha-tt600-1983",
+ "areas": [],
+ "heroName": "TT600"
+}

@@ -1,0 +1,62 @@
+{
+ "id": "bsa-gold-star-650-2022-2022",
+ "make": "BSA",
+ "model": "Gold Star 650 (2022)",
+ "name": "BSA Gold Star 650",
+ "years": [
+  2022,
+  2026
+ ],
+ "match": [
+  "gold star",
+  "gold star 650",
+  "bsa gold star 650",
+  "goldstar 650",
+  "goldie 650"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "652 cc liquid-cooled four-valve single, fuel injected",
+ "intro": "The revived BSA single, built by Mahindra's Classic Legends. Fuel injected, with a Rotax-derived engine.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BSA Owners Club",
+   "url": "https://www.bsaoc.org/",
+   "what": "Owner club for BSA motorcycles, with tech help and parts."
+  }
+ ],
+ "silhouette": "bsa-gold-star-650-2022-2022",
+ "areas": [],
+ "heroName": "GOLD STAR"
+}

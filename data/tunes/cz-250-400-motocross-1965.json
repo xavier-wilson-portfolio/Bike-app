@@ -1,0 +1,68 @@
+{
+ "id": "cz-250-400-motocross-1965",
+ "make": "CZ",
+ "model": "250 / 400 motocross",
+ "name": "CZ 250 / 400 motocross",
+ "years": [
+  1965,
+  1980
+ ],
+ "match": [
+  "cz",
+  "cz 250",
+  "cz 400",
+  "cz 125",
+  "cz motocross",
+  "cz twin port",
+  "cz 380"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "123 to 380 cc air-cooled two-stroke single, premix",
+ "intro": "The Czech motocross bikes that won world titles. Premix, a flywheel magneto and a gearshift on the left on some.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Ignition",
+   "Check flywheel"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "CZ"
+}

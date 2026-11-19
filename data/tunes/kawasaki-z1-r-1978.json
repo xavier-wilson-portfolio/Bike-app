@@ -1,0 +1,70 @@
+{
+ "id": "kawasaki-z1-r-1978",
+ "make": "Kawasaki",
+ "model": "Z1-R",
+ "name": "Kawasaki Z1-R",
+ "years": [
+  1978,
+  1980
+ ],
+ "match": [
+  "z1-r",
+  "z1r",
+  "kz1000d",
+  "z1r-tc",
+  "z1-r tc",
+  "kz1000 z1r"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "1015 cc air-cooled DOHC inline four, four carbs",
+ "intro": "Kawasaki's cafe-styled late-70s four. A bikini fairing, four carbs and parts that are getting scarce.",
+ "focus": [
+  [
+   "Inline four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KZRider forum",
+   "url": "https://www.kzrider.com/",
+   "what": "Owner forum for classic Kawasakis."
+  }
+ ],
+ "silhouette": "kawasaki-z1-r-1978",
+ "areas": [],
+ "heroName": "Z1-R",
+ "hero": {
+  "src": "img/hero/kawasaki-z1-r-1978.jpg",
+  "artist": "meriden.triumph",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_Z1-R_motorcycle.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

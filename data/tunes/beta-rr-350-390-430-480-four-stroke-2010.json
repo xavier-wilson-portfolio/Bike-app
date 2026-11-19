@@ -1,0 +1,67 @@
+{
+ "id": "beta-rr-350-390-430-480-four-stroke-2010",
+ "make": "Beta",
+ "model": "RR 350 / 390 / 430 / 480 four-stroke",
+ "name": "Beta RR 350-480 four-stroke",
+ "years": [
+  2010,
+  2026
+ ],
+ "match": [
+  "350 rr",
+  "390 rr",
+  "430 rr",
+  "480 rr",
+  "rr 430",
+  "rr 480",
+  "rr-s",
+  "350 rr-s",
+  "500 rr-s",
+  "400 rr",
+  "450 rr",
+  "520 rr"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "349 to 478 cc liquid-cooled four-stroke single, fuel injected",
+ "intro": "Beta's four-stroke enduros. Fuel injected, electric start and road-legal RR-S versions.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check often"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road and trials models are often not in the NHTSA recall search. Ask a dealer for the make to run the frame number.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "430 RR"
+}

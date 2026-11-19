@@ -1,0 +1,62 @@
+{
+ "id": "whizzer-whizzer-motorbike-h-j-300-1939",
+ "make": "Whizzer",
+ "model": "Whizzer motorbike (H, J, 300)",
+ "name": "Whizzer motorbike",
+ "years": [
+  1939,
+  1965
+ ],
+ "match": [
+  "whizzer",
+  "whizzer h",
+  "whizzer j",
+  "whizzer 300",
+  "pacemaker whizzer",
+  "sportsman",
+  "whizzer motorbike"
+ ],
+ "style": "standard",
+ "drive": "belt",
+ "engine": "138 to 199 cc air-cooled four-stroke single, side-valve, belt drive, bicycle frame",
+ "intro": "The bicycle engine kit that became a motorbike. A small flathead, a belt drive and bicycle-style brakes.",
+ "focus": [
+  [
+   "Flathead single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Magneto",
+   "Check spark"
+  ],
+  [
+   "Belt",
+   "Check tension"
+  ],
+  [
+   "Brakes",
+   "Bicycle type"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "WHIZZER"
+}

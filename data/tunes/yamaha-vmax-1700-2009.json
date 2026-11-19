@@ -1,0 +1,71 @@
+{
+ "id": "yamaha-vmax-1700-2009",
+ "make": "Yamaha",
+ "model": "VMAX 1700",
+ "name": "Yamaha VMAX 1700",
+ "years": [
+  2009,
+  2020
+ ],
+ "match": [
+  "vmax 1700",
+  "vmax",
+  "v-max",
+  "v max",
+  "vmx17",
+  "vmx1700",
+  "vmax 2009"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "1679 cc liquid-cooled V4, fuel injected, shaft drive",
+ "intro": "The second-gen VMAX. A huge V4 with fuel injection, a slipper clutch and shaft drive.",
+ "focus": [
+  [
+   "V4",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Brakes",
+   "Check ABS"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "silhouette": "yamaha-vmax-1700-2009",
+ "areas": [],
+ "heroName": "VMAX",
+ "hero": {
+  "src": "img/hero/yamaha-vmax-1700-2009.jpg",
+  "artist": "Cjp24",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_VMax_(2).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

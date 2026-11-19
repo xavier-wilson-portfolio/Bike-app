@@ -1,0 +1,68 @@
+{
+ "id": "suzuki-rv90-rv125-vanvan-1972",
+ "make": "Suzuki",
+ "model": "RV90 / RV125 VanVan",
+ "name": "Suzuki RV90 / RV125 VanVan",
+ "years": [
+  1972,
+  1977
+ ],
+ "match": [
+  "rv90",
+  "rv125",
+  "rv 125",
+  "rv 90",
+  "vanvan 125",
+  "rv75",
+  "vanvan 90"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "79 to 123 cc air-cooled two-stroke single, oil injection, balloon tires",
+ "intro": "The original fat-tire VanVan. A two-stroke with oil injection and very wide, soft tires.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Oil injection"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Oil pump",
+   "Check lines"
+  ],
+  [
+   "Tires",
+   "Hard to find"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Suzuki's CCI system pumps oil into the engine, so it does not need premix. Check the oil tank, pump and lines. If the pump was removed, it runs premix."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "VANVAN"
+}

@@ -1,0 +1,72 @@
+{
+ "id": "honda-ca95-benly-150-1959",
+ "make": "Honda",
+ "model": "CA95 Benly 150",
+ "name": "Honda CA95 Benly 150",
+ "years": [
+  1959,
+  1966
+ ],
+ "match": [
+  "ca95",
+  "ca 95",
+  "benly 150",
+  "benly touring",
+  "ca95 benly",
+  "c95"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "154 cc air-cooled overhead-cam twin, one carb, four-speed",
+ "intro": "The small Dream. A pressed-steel frame, a leading-link fork and an enclosed chain.",
+ "focus": [
+  [
+   "Twin",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Leading link",
+   "Check bushings"
+  ],
+  [
+   "Chain case",
+   "Check inside"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "L": [
+   "The leading-link fork pivots on bushings. Check for play and grease it before you trust the steering."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Honda Twins forum",
+   "url": "https://www.vintagehondatwins.com/",
+   "what": "Owner forum for Honda twins of the 60s and 70s."
+  }
+ ],
+ "silhouette": "honda-ca95-benly-150-1959",
+ "areas": [],
+ "heroName": "BENLY",
+ "hero": {
+  "src": "img/hero/honda-ca95-benly-150-1959.jpg",
+  "artist": "order_242 from Chile",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_Benly_150_1960_(8982232597).jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
+}

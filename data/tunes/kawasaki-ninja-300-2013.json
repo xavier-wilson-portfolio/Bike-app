@@ -1,0 +1,62 @@
+{
+ "id": "kawasaki-ninja-300-2013",
+ "make": "Kawasaki",
+ "model": "Ninja 300",
+ "name": "Kawasaki Ninja 300",
+ "years": [
+  2013,
+  2017
+ ],
+ "match": [
+  "ninja 300",
+  "ninja300",
+  "ex300",
+  "ex300a",
+  "ex300b",
+  "ninja 300 abs",
+  "z300"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "296 cc liquid-cooled parallel twin, fuel injected, slipper clutch",
+ "intro": "Kawasaki's small sport twin. Fuel injected, with a slipper clutch and many crash-damaged examples out there.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Crash damage",
+   "Check frame"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KawiForums",
+   "url": "https://www.kawiforums.com/",
+   "what": "Owner forum for Kawasaki motorcycles."
+  }
+ ],
+ "heroName": "NINJA 300"
+}

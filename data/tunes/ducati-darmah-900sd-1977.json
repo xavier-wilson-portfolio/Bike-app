@@ -1,0 +1,66 @@
+{
+ "id": "ducati-darmah-900sd-1977",
+ "make": "Ducati",
+ "model": "Darmah 900SD",
+ "name": "Ducati Darmah 900SD",
+ "years": [
+  1977,
+  1982
+ ],
+ "match": [
+  "darmah",
+  "900sd",
+  "sd900",
+  "darmah sd",
+  "900 sd",
+  "darmah ss",
+  "darmah 900"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "864 cc air-cooled bevel-drive desmo V-twin, two carbs, electric start",
+ "intro": "Ducati's bevel-drive sport tourer. Electric start, desmo heads and Bosch electronic ignition.",
+ "focus": [
+  [
+   "Bevel twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Bevel drive",
+   "Check backlash"
+  ],
+  [
+   "Desmo valves",
+   "Shim check"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "The bevel-drive cams are set with shims and need patience. Check the bevel gear backlash and the valve shims before you run it hard."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "heroName": "DARMAH"
+}

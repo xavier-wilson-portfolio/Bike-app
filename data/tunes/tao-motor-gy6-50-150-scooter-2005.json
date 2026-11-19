@@ -1,0 +1,65 @@
+{
+ "id": "tao-motor-gy6-50-150-scooter-2005",
+ "make": "Tao Motor",
+ "model": "GY6 50 / 150 scooter",
+ "name": "Tao Motor GY6 scooters",
+ "years": [
+  2005,
+  2026
+ ],
+ "match": [
+  "gy6",
+  "tao tao",
+  "tao 50",
+  "tao 150",
+  "evo 150",
+  "thunder 50",
+  "lancer",
+  "gy6 150",
+  "139qmb",
+  "157qmj"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 or 150 cc air-cooled GY6 single, carb, CVT",
+ "intro": "The common Chinese GY6 scooters. Cheap, simple and shared with many brands, so parts are everywhere.",
+ "focus": [
+  [
+   "GY6 single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Wiring",
+   "Check connectors"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Many of these were sold under several brand names and may not show up in the NHTSA search. Check with the seller or importer for open recalls.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "GY6"
+}

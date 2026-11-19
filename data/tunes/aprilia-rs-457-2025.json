@@ -1,0 +1,59 @@
+{
+ "id": "aprilia-rs-457-2025",
+ "make": "Aprilia",
+ "model": "RS 457",
+ "name": "Aprilia RS 457",
+ "years": [
+  2025,
+  2026
+ ],
+ "match": [
+  "rs 457",
+  "rs457",
+  "aprilia rs 457",
+  "tuono 457"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "457 cc liquid-cooled parallel twin, fuel injected, ride-by-wire",
+ "intro": "Aprilia's small sport twin. Light, with an aluminum frame and real rider modes for its class.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Aprilia has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ApriliaForum",
+   "url": "https://www.apriliaforum.com/",
+   "what": "Owner forum for Aprilia motorcycles."
+  }
+ ],
+ "heroName": "RS 457"
+}

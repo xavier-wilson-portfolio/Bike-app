@@ -1,0 +1,61 @@
+{
+ "id": "triumph-tiger-110-t110-1954",
+ "make": "Triumph",
+ "model": "Tiger 110 (T110)",
+ "name": "Triumph Tiger 110 (T110)",
+ "years": [
+  1954,
+  1961
+ ],
+ "match": [
+  "t110",
+  "tiger 110",
+  "t 110",
+  "tiger 110 650"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "649 cc air-cooled OHV pre-unit parallel twin, one carb, magneto",
+ "intro": "Triumph's sporty 650 of the 50s. A pre-unit twin with a magneto, separate gearbox and swingarm frame.",
+ "focus": [
+  [
+   "Pre-unit twin",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Magneto",
+   "Check spark"
+  ],
+  [
+   "Gearbox",
+   "Separate oil"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "silhouette": "triumph-tiger-110-t110-1954",
+ "areas": [],
+ "heroName": "TIGER 110"
+}

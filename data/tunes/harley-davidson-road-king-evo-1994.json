@@ -1,0 +1,69 @@
+{
+ "id": "harley-davidson-road-king-evo-1994",
+ "make": "Harley-Davidson",
+ "model": "Road King (Evo)",
+ "name": "Harley-Davidson Road King (Evo)",
+ "years": [
+  1994,
+  1998
+ ],
+ "match": [
+  "road king",
+  "flhr",
+  "road king evo",
+  "flhr evo",
+  "flhri",
+  "flhrci",
+  "road king classic"
+ ],
+ "style": "touring",
+ "drive": "belt",
+ "engine": "80 cubic inch Evolution V-twin, carb or fuel injection, belt drive",
+ "intro": "The first Road Kings. An Evo engine in the FLH frame, with a removable windshield and bags.",
+ "focus": [
+  [
+   "Evo twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Belt",
+   "Check tension"
+  ],
+  [
+   "Primary",
+   "Change oil"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Harley-Davidson has issued several recalls that touch these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "HDForums",
+   "url": "https://www.hdforums.com/",
+   "what": "Large owner forum for all Harley-Davidson models."
+  }
+ ],
+ "silhouette": "harley-davidson-road-king-evo-1994",
+ "areas": [],
+ "heroName": "ROAD KING",
+ "hero": {
+  "src": "img/hero/harley-davidson-road-king-evo-1994.jpg",
+  "artist": "JoachimKohler-HB",
+  "page": "https://commons.wikimedia.org/wiki/File:Harley-Davidson_Road_King_in_Switzerland_(2022).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

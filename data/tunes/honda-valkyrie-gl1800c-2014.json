@@ -1,0 +1,69 @@
+{
+ "id": "honda-valkyrie-gl1800c-2014",
+ "make": "Honda",
+ "model": "Valkyrie (GL1800C)",
+ "name": "Honda Valkyrie (GL1800C)",
+ "years": [
+  2014,
+  2015
+ ],
+ "match": [
+  "valkyrie",
+  "gl1800c",
+  "valkyrie 1800",
+  "gl1800c valkyrie",
+  "valkyrie 2014"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "1832 cc liquid-cooled flat six, fuel injected, shaft drive",
+ "intro": "The stripped-down Gold Wing of 2014. Same six, less bodywork, and a short production run.",
+ "focus": [
+  [
+   "Flat six",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Brakes",
+   "Linked system"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Goldwingparts.com rider blog",
+   "url": "https://www.goldwingparts.com/blogs/goldwing-rider-blog",
+   "what": "Gold Wing repair notes by model."
+  }
+ ],
+ "silhouette": "honda-valkyrie-gl1800c-2014",
+ "areas": [],
+ "heroName": "VALKYRIE",
+ "hero": {
+  "src": "img/hero/honda-valkyrie-gl1800c-2014.jpg",
+  "artist": "Kalabaha1969",
+  "page": "https://commons.wikimedia.org/wiki/File:%D0%9C%D0%BE%D1%82%D0%BE%D1%86%D0%B8%D0%BA%D0%BB_Honda_F6C_Valkyrie.JPG",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

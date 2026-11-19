@@ -1,0 +1,68 @@
+{
+ "id": "allstate-allstate-puch-175-250-1951",
+ "make": "Allstate",
+ "model": "Allstate (Puch) 175 / 250",
+ "name": "Allstate (Puch) 175 / 250",
+ "years": [
+  1951,
+  1970
+ ],
+ "match": [
+  "allstate",
+  "allstate 250",
+  "allstate 175",
+  "puch 250",
+  "sears allstate",
+  "twingle",
+  "sgs 250"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "125 to 248 cc air-cooled split-single two-stroke, premix",
+ "intro": "The Puch bikes sold by Sears. Many have the split-single 'twingle' engine with two pistons and one combustion chamber.",
+ "focus": [
+  [
+   "Split single",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Top end",
+   "Two pistons"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain case",
+   "Check inside"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "ALLSTATE"
+}

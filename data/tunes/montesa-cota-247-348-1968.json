@@ -1,0 +1,70 @@
+{
+ "id": "montesa-cota-247-348-1968",
+ "make": "Montesa",
+ "model": "Cota 247 / 348",
+ "name": "Montesa Cota 247 / 348",
+ "years": [
+  1968,
+  1985
+ ],
+ "match": [
+  "cota",
+  "cota 247",
+  "cota 348",
+  "cota 123",
+  "cota 349",
+  "cota 200",
+  "montesa cota"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "123 to 349 cc air-cooled two-stroke single, premix",
+ "intro": "Montesa's classic trials bikes. Premix two-strokes with a big vintage trials following.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Ignition",
+   "Check flywheel"
+  ],
+  [
+   "Clutch",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "TrialsCentral",
+   "url": "https://www.trialscentral.com/",
+   "what": "Forum for trials riders, with sections for most trials makes."
+  }
+ ],
+ "silhouette": "montesa-cota-247-348-1968",
+ "areas": [],
+ "heroName": "COTA"
+}

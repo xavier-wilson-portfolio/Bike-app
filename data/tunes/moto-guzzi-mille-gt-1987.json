@@ -1,0 +1,64 @@
+{
+ "id": "moto-guzzi-mille-gt-1987",
+ "make": "Moto Guzzi",
+ "model": "Mille GT",
+ "name": "Moto Guzzi Mille GT",
+ "years": [
+  1987,
+  1993
+ ],
+ "match": [
+  "mille gt",
+  "mille",
+  "1000 gt",
+  "guzzi mille gt",
+  "mille gt 1000"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "949 cc air-cooled 90-degree V-twin, two carbs, shaft drive",
+ "intro": "Guzzi's simple big-block standard. Two carbs, round headlight and very little to go wrong.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Sync them"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Three oils",
+   "Change all"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "K": [
+   "Guzzi big twins use a car-type dry clutch and a separate gearbox and final drive. Change all three oils, not just the engine oil."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moto Guzzi National Owners Club",
+   "url": "https://www.mgnoc.org/",
+   "what": "US owner club for Moto Guzzi."
+  }
+ ],
+ "heroName": "MILLE GT"
+}

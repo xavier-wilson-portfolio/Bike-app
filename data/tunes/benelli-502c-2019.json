@@ -1,0 +1,68 @@
+{
+ "id": "benelli-502c-2019",
+ "make": "Benelli",
+ "model": "502C",
+ "name": "Benelli 502C",
+ "years": [
+  2019,
+  2026
+ ],
+ "match": [
+  "502c",
+  "502 c",
+  "benelli 502c",
+  "502"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "500 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "Benelli's sporty cruiser on the 500 twin. Built by QJ, with parts supply that depends on the dealer.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Parts",
+   "Check supply"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "silhouette": "benelli-502c-2019",
+ "areas": [],
+ "heroName": "502C",
+ "hero": {
+  "src": "img/hero/benelli-502c-2019.jpg",
+  "artist": "Matthb1395",
+  "page": "https://commons.wikimedia.org/wiki/File:Benelli_502C.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

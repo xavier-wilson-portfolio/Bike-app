@@ -1,0 +1,69 @@
+{
+ "id": "yamaha-tt-r250-1999",
+ "make": "Yamaha",
+ "model": "TT-R250",
+ "name": "Yamaha TT-R250",
+ "years": [
+  1999,
+  2006
+ ],
+ "match": [
+  "tt-r250",
+  "ttr250",
+  "ttr 250",
+  "tt-r 250",
+  "ttr-250"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 cc air-cooled four-valve single, carb, electric start",
+ "intro": "Yamaha's best-loved trail 250. Electric start, a DOHC single and good suspension for its class.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Air filter",
+   "Clean and oil"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Yamaha dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "silhouette": "yamaha-tt-r250-1999",
+ "areas": [],
+ "heroName": "TT-R250",
+ "hero": {
+  "src": "img/hero/yamaha-tt-r250-1999.jpg",
+  "artist": "Haridimous at English Wikipedia",
+  "page": "https://commons.wikimedia.org/wiki/File:2002ttr250yamahaenduro.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
+}

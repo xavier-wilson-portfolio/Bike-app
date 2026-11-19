@@ -1,0 +1,69 @@
+{
+ "id": "bmw-k1200rs-k1200gt-1997",
+ "make": "BMW",
+ "model": "K1200RS / K1200GT",
+ "name": "BMW K1200RS / K1200GT",
+ "years": [
+  1997,
+  2005
+ ],
+ "match": [
+  "k1200rs",
+  "k 1200 rs",
+  "k1200 rs",
+  "k1200gt 2003",
+  "k1200rs abs"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "engine": "1171 cc liquid-cooled flat inline four, fuel injected, shaft drive",
+ "intro": "BMW's big sport tourers before the K1200S. Rubber-mounted engine, Paralever and Telelever.",
+ "focus": [
+  [
+   "Flat four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Brakes",
+   "Check ABS"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "BMW has issued several recalls across these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BMW MOA forum",
+   "url": "https://forums.bmwmoa.org/",
+   "what": "BMW Motorcycle Owners of America forum."
+  }
+ ],
+ "silhouette": "bmw-k1200rs-k1200gt-1997",
+ "areas": [],
+ "heroName": "K1200RS",
+ "hero": {
+  "src": "img/hero/bmw-k1200rs-k1200gt-1997.jpg",
+  "artist": "Medon",
+  "page": "https://commons.wikimedia.org/wiki/File:BMW_K1200RS_red.JPG",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
+}

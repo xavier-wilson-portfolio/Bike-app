@@ -1,0 +1,70 @@
+{
+ "id": "suzuki-vanvan-200-2003",
+ "make": "Suzuki",
+ "model": "VanVan 200",
+ "name": "Suzuki VanVan 200",
+ "years": [
+  2003,
+  2017
+ ],
+ "match": [
+  "vanvan 200",
+  "van van 200",
+  "rv200",
+  "vanvan",
+  "van van",
+  "rv 200"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "199 cc air-cooled single, carb, fat tires",
+ "intro": "Suzuki's fat-tire fun bike. The DR200 family single with a low seat and balloon tires.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Tires",
+   "Check age"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Suzuki Forums",
+   "url": "https://www.suzuki-forums.com/forums/",
+   "what": "General owner forum for Suzuki motorcycles."
+  }
+ ],
+ "silhouette": "suzuki-vanvan-200-2003",
+ "areas": [],
+ "heroName": "VANVAN",
+ "hero": {
+  "src": "img/hero/suzuki-vanvan-200-2003.jpg",
+  "artist": "Andrew Duthie",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_Van_Van.jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
+}

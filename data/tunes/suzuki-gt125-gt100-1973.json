@@ -1,0 +1,75 @@
+{
+ "id": "suzuki-gt125-gt100-1973",
+ "make": "Suzuki",
+ "model": "GT125 / GT100",
+ "name": "Suzuki GT125 / GT100",
+ "years": [
+  1973,
+  1977
+ ],
+ "match": [
+  "gt125",
+  "gt100",
+  "gt 125",
+  "gt 100",
+  "gt125 twin"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "97 to 124 cc air-cooled two-stroke, CCI oil injection",
+ "intro": "Suzuki's small two-strokes of the 70s. The GT125 is a tiny twin with CCI oil injection.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Oil injection"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "CCI pump",
+   "Check it"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Suzuki's CCI system pumps oil into the engine, so it does not need premix. Check the oil tank, pump and lines. If the pump was removed, it runs premix."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "silhouette": "suzuki-gt125-gt100-1973",
+ "areas": [],
+ "heroName": "GT125",
+ "hero": {
+  "src": "img/hero/suzuki-gt125-gt100-1973.jpg",
+  "artist": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Yesca023.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

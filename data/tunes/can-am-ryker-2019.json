@@ -1,0 +1,74 @@
+{
+ "id": "can-am-ryker-2019",
+ "make": "Can-Am",
+ "model": "Ryker",
+ "name": "Can-Am Ryker",
+ "years": [
+  2019,
+  2026
+ ],
+ "match": [
+  "ryker",
+  "ryker 600",
+  "ryker 900",
+  "ryker rally",
+  "can-am ryker",
+  "ryker sport"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "engine": "600 cc twin or 900 cc triple, Rotax, fuel injected, CVT, shaft drive, two front wheels",
+ "intro": "Can-Am's lighter three-wheeler. A twist-and-go CVT, shaft drive and car-like front suspension.",
+ "focus": [
+  [
+   "Rotax engine",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Front end",
+   "Ball joints"
+  ],
+  [
+   "Shaft",
+   "Check oil"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "L": [
+   "The front end has ball joints and tie rods like a car. Check them for play and torn boots."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Spyder Lovers",
+   "url": "https://www.spyderlovers.com/",
+   "what": "Owner forum for Can-Am Spyder and Ryker."
+  }
+ ],
+ "silhouette": "can-am-ryker-2019",
+ "areas": [],
+ "heroName": "RYKER",
+ "hero": {
+  "src": "img/hero/can-am-ryker-2019.jpg",
+  "artist": "Oleg Yunakov",
+  "page": "https://commons.wikimedia.org/wiki/File:Can-Am_Ryker_Sport_900_ACE_-_4.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

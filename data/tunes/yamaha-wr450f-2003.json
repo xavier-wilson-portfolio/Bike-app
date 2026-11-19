@@ -1,0 +1,66 @@
+{
+ "id": "yamaha-wr450f-2003",
+ "make": "Yamaha",
+ "model": "WR450F",
+ "name": "Yamaha WR450F",
+ "years": [
+  2003,
+  2026
+ ],
+ "match": [
+  "wr450f",
+  "wr 450f",
+  "wr450",
+  "wr 450"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "449 cc liquid-cooled four-stroke single, carb then fuel injection, electric start",
+ "intro": "Yamaha's big enduro. Electric start and a wide-ratio box, often plated for street use.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "Valves",
+   "Check often"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Yamaha dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "silhouette": "yamaha-wr450f-2003",
+ "areas": [],
+ "heroName": "WR450F",
+ "hero": {
+  "src": "img/hero/yamaha-wr450f-2003.jpg",
+  "artist": "Jamesm113",
+  "page": "https://commons.wikimedia.org/wiki/File:2012_Yamaha_WR450f,_Feb_2019.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

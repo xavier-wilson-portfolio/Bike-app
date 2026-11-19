@@ -1,0 +1,61 @@
+{
+ "id": "triumph-trident-750-900-hinckley-1991",
+ "make": "Triumph",
+ "model": "Trident 750 / 900 (Hinckley)",
+ "name": "Triumph Trident 750 / 900 (Hinckley)",
+ "years": [
+  1991,
+  1998
+ ],
+ "match": [
+  "trident 900",
+  "trident 750",
+  "trident",
+  "t300",
+  "trident 900 sprint",
+  "trident sprint"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "749 or 885 cc liquid-cooled DOHC triple, three carbs",
+ "intro": "The first Hinckley Triumphs. A modular triple with three carbs and a spine frame.",
+ "focus": [
+  [
+   "Triple",
+   "Liquid-cooled"
+  ],
+  [
+   "Three carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "heroName": "TRIDENT"
+}

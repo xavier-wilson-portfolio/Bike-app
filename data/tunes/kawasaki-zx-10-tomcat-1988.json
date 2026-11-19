@@ -1,0 +1,61 @@
+{
+ "id": "kawasaki-zx-10-tomcat-1988",
+ "make": "Kawasaki",
+ "model": "ZX-10 Tomcat",
+ "name": "Kawasaki ZX-10 Tomcat",
+ "years": [
+  1988,
+  1990
+ ],
+ "match": [
+  "zx-10",
+  "zx10",
+  "tomcat",
+  "zx1000b",
+  "zx 10",
+  "ninja zx-10"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "997 cc liquid-cooled DOHC inline four, four carbs",
+ "intro": "Kawasaki's late-80s flagship. An aluminum frame, four carbs and a lot of fairing to remove.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KZRider forum",
+   "url": "https://www.kzrider.com/",
+   "what": "Owner forum for classic Kawasakis."
+  }
+ ],
+ "heroName": "ZX-10"
+}

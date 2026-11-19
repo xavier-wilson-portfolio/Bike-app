@@ -1,0 +1,64 @@
+{
+ "id": "husqvarna-te-250-310-450-510-italian-2002",
+ "make": "Husqvarna",
+ "model": "TE 250 / 310 / 450 / 510 (Italian)",
+ "name": "Husqvarna TE 250-510 (Italian era)",
+ "years": [
+  2002,
+  2013
+ ],
+ "match": [
+  "te 250",
+  "te 310",
+  "te 450",
+  "te 510",
+  "te510",
+  "te450",
+  "te310",
+  "tc 450",
+  "sm 450",
+  "smr 510",
+  "txc 310"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 to 501 cc liquid-cooled four-stroke single, carb then fuel injection",
+ "intro": "The Italian-built Husqvarna four-strokes. Light and fast, with short service intervals and parts that are now harder to find.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "Valves",
+   "Check often"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Husqvarna dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "TE 450"
+}

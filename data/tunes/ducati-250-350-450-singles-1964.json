@@ -1,0 +1,80 @@
+{
+ "id": "ducati-250-350-450-singles-1964",
+ "make": "Ducati",
+ "model": "250 / 350 / 450 singles",
+ "name": "Ducati 250 / 350 / 450 singles",
+ "years": [
+  1964,
+  1974
+ ],
+ "match": [
+  "mark 3",
+  "mk3",
+  "desmo 450",
+  "scrambler 450",
+  "scrambler 350",
+  "ducati 450",
+  "ducati 350",
+  "ducati 250",
+  "monza",
+  "mach 1",
+  "narrow case",
+  "wide case"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "248 to 436 cc air-cooled bevel-drive single, one carb, valve springs or desmo",
+ "intro": "Ducati's bevel singles. Narrow-case and wide-case engines, a single carb and parts you will source from specialists.",
+ "focus": [
+  [
+   "Bevel single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Bevel drive",
+   "Check backlash"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "The bevel-drive cams are set with shims and need patience. Check the bevel gear backlash and the valve shims before you run it hard."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "silhouette": "ducati-250-350-450-singles-1964",
+ "areas": [],
+ "heroName": "DUCATI 450",
+ "hero": {
+  "src": "img/hero/ducati-250-350-450-singles-1964.jpg",
+  "artist": "Llop Altés",
+  "page": "https://commons.wikimedia.org/wiki/File:Ducati_Scrambler_250.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}

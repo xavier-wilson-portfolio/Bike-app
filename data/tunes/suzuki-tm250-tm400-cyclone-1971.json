@@ -1,0 +1,69 @@
+{
+ "id": "suzuki-tm250-tm400-cyclone-1971",
+ "make": "Suzuki",
+ "model": "TM250 / TM400 Cyclone",
+ "name": "Suzuki TM250 / TM400 Cyclone",
+ "years": [
+  1971,
+  1975
+ ],
+ "match": [
+  "tm250",
+  "tm400",
+  "cyclone",
+  "tm 400",
+  "tm 250",
+  "tm125",
+  "tm100",
+  "tm400 cyclone"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "123 to 396 cc air-cooled two-stroke single, carb, premix",
+ "intro": "Suzuki's early-70s motocross two-strokes. The TM400 is known for sudden power. Premix and points.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Ignition",
+   "Check spark"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "CYCLONE"
+}

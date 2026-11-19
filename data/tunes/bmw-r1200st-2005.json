@@ -1,0 +1,67 @@
+{
+ "id": "bmw-r1200st-2005",
+ "make": "BMW",
+ "model": "R1200ST",
+ "name": "BMW R1200ST",
+ "years": [
+  2005,
+  2007
+ ],
+ "match": [
+  "r1200st",
+  "r 1200 st",
+  "r1200 st"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "engine": "1170 cc air/oil-cooled boxer twin, fuel injected, shaft drive",
+ "intro": "BMW's short-lived sport tourer with the odd headlight. The hexhead boxer in a lighter bike than the RT.",
+ "focus": [
+  [
+   "Boxer twin",
+   "Air/oil-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Final drive",
+   "Check play"
+  ],
+  [
+   "Brakes",
+   "Check ABS"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "BMW has issued several recalls across these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BMW MOA forum",
+   "url": "https://forums.bmwmoa.org/",
+   "what": "BMW Motorcycle Owners of America forum."
+  }
+ ],
+ "silhouette": "bmw-r1200st-2005",
+ "areas": [],
+ "heroName": "R1200ST",
+ "hero": {
+  "src": "img/hero/bmw-r1200st-2005.jpg",
+  "artist": "MartDK",
+  "page": "https://commons.wikimedia.org/wiki/File:BMW_R1200ST.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

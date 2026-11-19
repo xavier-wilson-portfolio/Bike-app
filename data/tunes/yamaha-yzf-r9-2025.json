@@ -1,0 +1,60 @@
+{
+ "id": "yamaha-yzf-r9-2025",
+ "make": "Yamaha",
+ "model": "YZF-R9",
+ "name": "Yamaha YZF-R9",
+ "years": [
+  2025,
+  2026
+ ],
+ "match": [
+  "yzf-r9",
+  "r9",
+  "yzf r9",
+  "yzfr9",
+  "yamaha r9"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "890 cc liquid-cooled triple, fuel injected, ride-by-wire",
+ "intro": "Yamaha's triple-powered sport bike. The MT-09 engine in a race-styled chassis with lots of rider aids.",
+ "focus": [
+  [
+   "Triple",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Electronics",
+   "Scan for codes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "heroName": "R9"
+}

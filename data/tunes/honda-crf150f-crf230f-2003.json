@@ -1,0 +1,64 @@
+{
+ "id": "honda-crf150f-crf230f-2003",
+ "make": "Honda",
+ "model": "CRF150F / CRF230F",
+ "name": "Honda CRF150F / CRF230F",
+ "years": [
+  2003,
+  2019
+ ],
+ "match": [
+  "crf150f",
+  "crf230f",
+  "crf150",
+  "crf230",
+  "crf 150f",
+  "crf 230f",
+  "crf 230"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "149 or 223 cc air-cooled four-stroke single, carb, electric start",
+ "intro": "Honda's trail bikes. Air-cooled, electric start and a carb that does not like old fuel.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Air filter",
+   "Clean and oil"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Honda dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "silhouette": "honda-crf150f-crf230f-2003",
+ "areas": [],
+ "heroName": "CRF230F"
+}

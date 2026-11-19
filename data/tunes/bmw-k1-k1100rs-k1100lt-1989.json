@@ -1,0 +1,76 @@
+{
+ "id": "bmw-k1-k1100rs-k1100lt-1989",
+ "make": "BMW",
+ "model": "K1 / K1100RS / K1100LT",
+ "name": "BMW K1 / K1100RS / K1100LT",
+ "years": [
+  1989,
+  1999
+ ],
+ "match": [
+  "k1",
+  "k1100rs",
+  "k1100lt",
+  "k 1100",
+  "k1100",
+  "k1 bmw",
+  "k 1100 rs",
+  "k 1100 lt"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "engine": "987 or 1092 cc liquid-cooled flat inline four, fuel injected, shaft drive",
+ "intro": "BMW's flying-brick fours of the 90s. Bosch fuel injection, Paralever on the K1 and a lot of bodywork.",
+ "focus": [
+  [
+   "Flat four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Spline",
+   "Check clutch"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "K": [
+   "Check and grease the clutch and transmission input splines. Dry splines are a known cause of wear on these."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BMW MOA forum",
+   "url": "https://forums.bmwmoa.org/",
+   "what": "BMW Motorcycle Owners of America forum."
+  }
+ ],
+ "silhouette": "bmw-k1-k1100rs-k1100lt-1989",
+ "areas": [],
+ "heroName": "K1100",
+ "hero": {
+  "src": "img/hero/bmw-k1-k1100rs-k1100lt-1989.jpg",
+  "artist": "Michal Osmenda from Brussels, Belgium",
+  "page": "https://commons.wikimedia.org/wiki/File:Red_Button_Factory_(2508900368).jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
+}

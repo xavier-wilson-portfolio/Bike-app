@@ -1,0 +1,61 @@
+{
+ "id": "buell-super-cruiser-hammerhead-1190-2024",
+ "make": "Buell",
+ "model": "Super Cruiser / Hammerhead 1190",
+ "name": "Buell Super Cruiser / Hammerhead 1190",
+ "years": [
+  2024,
+  2026
+ ],
+ "match": [
+  "hammerhead",
+  "hammerhead 1190",
+  "super cruiser",
+  "buell super cruiser",
+  "buell hammerhead",
+  "1190 hammerhead"
+ ],
+ "style": "standard",
+ "drive": "belt",
+ "engine": "1190 cc liquid-cooled V-twin, fuel injected",
+ "intro": "The revived Buell brand's new models on the 1190 engine. Low volume, so check parts support before you start.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Rim brake",
+   "Check rotor"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Parts",
+   "Check supply"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BadWeB",
+   "url": "https://www.badweatherbikers.com/buell/",
+   "what": "Long-running Buell owner forum."
+  }
+ ],
+ "heroName": "HAMMERHEAD"
+}

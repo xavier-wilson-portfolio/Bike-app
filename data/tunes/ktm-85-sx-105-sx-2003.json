@@ -1,0 +1,67 @@
+{
+ "id": "ktm-85-sx-105-sx-2003",
+ "make": "KTM",
+ "model": "85 SX / 105 SX",
+ "name": "KTM 85 SX / 105 SX",
+ "years": [
+  2003,
+  2026
+ ],
+ "match": [
+  "85 sx",
+  "105 sx",
+  "85sx",
+  "105sx",
+  "105 xc",
+  "ktm 85"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "85 or 105 cc liquid-cooled two-stroke single, carb, premix",
+ "intro": "KTM's big-wheel and small-wheel kids' motocross bikes. Premix and a top end that wears fast.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a KTM dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "85 SX"
+}

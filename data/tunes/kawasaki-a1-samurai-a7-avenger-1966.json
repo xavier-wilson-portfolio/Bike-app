@@ -1,0 +1,70 @@
+{
+ "id": "kawasaki-a1-samurai-a7-avenger-1966",
+ "make": "Kawasaki",
+ "model": "A1 Samurai / A7 Avenger",
+ "name": "Kawasaki A1 Samurai / A7 Avenger",
+ "years": [
+  1966,
+  1971
+ ],
+ "match": [
+  "a1",
+  "a7",
+  "samurai",
+  "avenger",
+  "a1 samurai",
+  "a7 avenger",
+  "a1ss",
+  "a7ss"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "247 or 338 cc air-cooled rotary-valve two-stroke twin, two carbs, Superlube oil injection",
+ "intro": "Kawasaki's rotary-valve twins from the 60s. Carbs on the sides of the engine, oil injection and points.",
+ "focus": [
+  [
+   "Two-stroke twin",
+   "Oil injection"
+  ],
+  [
+   "Two carbs",
+   "Sync them"
+  ],
+  [
+   "Rotary valves",
+   "Check covers"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It has Kawasaki's Superlube oil injection, not premix. Keep the oil tank filled with two-stroke oil and check the pump cable and lines.",
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "SAMURAI"
+}

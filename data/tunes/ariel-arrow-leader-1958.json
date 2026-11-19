@@ -1,0 +1,69 @@
+{
+ "id": "ariel-arrow-leader-1958",
+ "make": "Ariel",
+ "model": "Arrow / Leader",
+ "name": "Ariel Arrow / Leader",
+ "years": [
+  1958,
+  1965
+ ],
+ "match": [
+  "arrow",
+  "leader",
+  "ariel arrow",
+  "ariel leader",
+  "golden arrow",
+  "super sports arrow"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "247 cc air-cooled two-stroke twin, premix, pressed-steel beam frame",
+ "intro": "Ariel's 250 two-stroke twins. A pressed-steel frame, a twin-cylinder two-stroke and full bodywork on the Leader.",
+ "focus": [
+  [
+   "Two-stroke twin",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Crank seals",
+   "Check them"
+  ],
+  [
+   "Frame",
+   "Check rust"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "silhouette": "ariel-arrow-leader-1958",
+ "areas": [],
+ "heroName": "ARROW"
+}

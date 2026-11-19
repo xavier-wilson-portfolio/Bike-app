@@ -1,0 +1,61 @@
+{
+ "id": "motus-mst-mstr-2014",
+ "make": "Motus",
+ "model": "MST / MSTR",
+ "name": "Motus MST / MSTR",
+ "years": [
+  2014,
+  2018
+ ],
+ "match": [
+  "mst",
+  "mstr",
+  "motus mst",
+  "motus mstr",
+  "mst-r",
+  "baby block"
+ ],
+ "style": "touring",
+ "drive": "chain",
+ "engine": "1650 cc liquid-cooled V4 (Baby Block), direct injection",
+ "intro": "Motus's American sport tourer with a V4 built from a small-block car engine design. Very few made.",
+ "focus": [
+  [
+   "V4",
+   "Liquid-cooled"
+  ],
+  [
+   "Direct injection",
+   "Check system"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Electronics",
+   "Scan for codes"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "HDForums",
+   "url": "https://www.hdforums.com/",
+   "what": "Large owner forum for all Harley-Davidson models."
+  }
+ ],
+ "heroName": "MOTUS"
+}

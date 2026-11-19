@@ -1,0 +1,67 @@
+{
+ "id": "yamaha-yz80-yz85-1978",
+ "make": "Yamaha",
+ "model": "YZ80 / YZ85",
+ "name": "Yamaha YZ80 / YZ85",
+ "years": [
+  1978,
+  2026
+ ],
+ "match": [
+  "yz80",
+  "yz85",
+  "yz 80",
+  "yz 85",
+  "yz85lw",
+  "yz80lw"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "79 or 85 cc two-stroke single, liquid-cooled on most years, carb, premix",
+ "intro": "Yamaha's mini motocross two-strokes. Premix, a fast-wearing top end and parts kids tend to break.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Yamaha dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "YZ85"
+}

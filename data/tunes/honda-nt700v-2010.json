@@ -1,0 +1,63 @@
+{
+ "id": "honda-nt700v-2010",
+ "make": "Honda",
+ "model": "NT700V",
+ "name": "Honda NT700V Deauville",
+ "years": [
+  2010,
+  2010
+ ],
+ "match": [
+  "nt700v",
+  "deauville",
+  "nt700",
+  "nt 700v",
+  "nt700va"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "engine": "680 cc liquid-cooled V-twin, fuel injected, shaft drive",
+ "intro": "Honda's commuter tourer, sold in the US for one year. Built-in bags, shaft drive and a linked ABS on some.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Fairing",
+   "Many panels"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Shaft",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [],
+ "silhouette": "honda-nt700v-2010",
+ "areas": [],
+ "heroName": "NT700V",
+ "hero": {
+  "src": "img/hero/honda-nt700v-2010.jpg",
+  "artist": "Galant",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_NT700V_Deauville_RC52_2006_0046.jpg",
+  "lic": "CC BY 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by/4.0"
+ }
+}

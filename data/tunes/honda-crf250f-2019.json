@@ -1,0 +1,58 @@
+{
+ "id": "honda-crf250f-2019",
+ "make": "Honda",
+ "model": "CRF250F",
+ "name": "Honda CRF250F",
+ "years": [
+  2019,
+  2026
+ ],
+ "match": [
+  "crf250f",
+  "crf 250f",
+  "crf250 f"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 cc air-cooled single, fuel injected, electric start",
+ "intro": "Honda's trail 250. Fuel injected and air cooled, built for trail riding rather than racing.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Air filter",
+   "Clean and oil"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Honda dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "CRF250F"
+}

@@ -1,0 +1,76 @@
+{
+ "id": "bsa-c15-b40-1959",
+ "make": "BSA",
+ "model": "C15 / B40",
+ "name": "BSA C15 / B40",
+ "years": [
+  1959,
+  1967
+ ],
+ "match": [
+  "c15",
+  "b40",
+  "c15t",
+  "c15s",
+  "b40 ss",
+  "c15 star",
+  "bsa c15",
+  "bsa b40"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "247 or 343 cc air-cooled OHV unit single, points",
+ "intro": "BSA's unit singles of the 60s. Light and simple, with points ignition and a reputation for needing fresh oil often.",
+ "focus": [
+  [
+   "OHV single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Oil",
+   "Change often"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BSA Owners Club",
+   "url": "https://www.bsaoc.org/",
+   "what": "Owner club for BSA motorcycles, with tech help and parts."
+  }
+ ],
+ "silhouette": "bsa-c15-b40-1959",
+ "areas": [],
+ "heroName": "C15",
+ "hero": {
+  "src": "img/hero/bsa-c15-b40-1959.jpg",
+  "artist": "Mick from England",
+  "page": "https://commons.wikimedia.org/wiki/File:BSA_C15_250cc_1960_-_Flickr_-_mick_-_Lumix(1).jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

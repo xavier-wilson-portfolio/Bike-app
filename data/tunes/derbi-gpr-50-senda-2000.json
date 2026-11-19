@@ -1,0 +1,69 @@
+{
+ "id": "derbi-gpr-50-senda-2000",
+ "make": "Derbi",
+ "model": "GPR 50 / Senda",
+ "name": "Derbi GPR 50 / Senda",
+ "years": [
+  2000,
+  2010
+ ],
+ "match": [
+  "gpr 50",
+  "senda",
+  "gpr50",
+  "senda 50",
+  "senda drd",
+  "gpr 125",
+  "senda sm",
+  "derbi senda"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "49 cc liquid-cooled two-stroke single, oil injection, six-speed",
+ "intro": "Derbi's 50 cc sport and supermoto bikes. Liquid-cooled two-strokes with oil injection and six speeds.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Oil injection"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It has oil injection. Keep the oil tank filled with two-stroke oil and check the pump line for cracks."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "SENDA"
+}

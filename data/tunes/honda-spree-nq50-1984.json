@@ -1,0 +1,66 @@
+{
+ "id": "honda-spree-nq50-1984",
+ "make": "Honda",
+ "model": "Spree NQ50",
+ "name": "Honda Spree NQ50",
+ "years": [
+  1984,
+  1987
+ ],
+ "match": [
+  "spree",
+  "nq50",
+  "nq 50",
+  "honda spree",
+  "spree 50"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 cc air-cooled two-stroke single, oil injection, automatic",
+ "intro": "Honda's tiny 80s scooter. Light, simple, and a two-stroke with its own oil tank.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Oil injection"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Drive belt",
+   "Inspect"
+  ],
+  [
+   "Exhaust",
+   "Check carbon"
+  ],
+  [
+   "Brakes",
+   "Drums"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It has oil injection, not premix. Keep the oil tank filled with two-stroke oil and check the pump line for cracks."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "heroName": "SPREE"
+}

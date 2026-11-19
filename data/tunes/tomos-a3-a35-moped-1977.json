@@ -1,0 +1,80 @@
+{
+ "id": "tomos-a3-a35-moped-1977",
+ "make": "Tomos",
+ "model": "A3 / A35 moped",
+ "name": "Tomos A3 / A35",
+ "years": [
+  1977,
+  2014
+ ],
+ "match": [
+  "tomos",
+  "a3",
+  "a35",
+  "a55",
+  "targa",
+  "sprint",
+  "lx",
+  "streetmate",
+  "bullet",
+  "revival"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "49 cc air-cooled two-stroke single, premix, pedals",
+ "intro": "The Slovenian mopeds. Simple two-strokes, premix and a large online owner community.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Clutch",
+   "Check it"
+  ],
+  [
+   "Pedals",
+   "Lube chain"
+  ],
+  [
+   "Brakes",
+   "Drums"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Moped two-strokes run premix. Mix the oil into the fuel at the ratio in the manual, usually around 50 to 1 with modern oil."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "silhouette": "tomos-a3-a35-moped-1977",
+ "areas": [],
+ "heroName": "TOMOS",
+ "hero": {
+  "src": "img/hero/tomos-a3-a35-moped-1977.jpg",
+  "artist": "Shabicht",
+  "page": "https://commons.wikimedia.org/wiki/File:Tomos_A35.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
+}

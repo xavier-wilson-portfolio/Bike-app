@@ -1,0 +1,68 @@
+{
+ "id": "yamaha-fj1100-1984",
+ "make": "Yamaha",
+ "model": "FJ1100",
+ "name": "Yamaha FJ1100",
+ "years": [
+  1984,
+  1985
+ ],
+ "match": [
+  "fj1100",
+  "fj 1100",
+  "fj1100l",
+  "fj1100n"
+ ],
+ "style": "touring",
+ "drive": "chain",
+ "engine": "1097 cc air-cooled DOHC inline four, four carbs",
+ "intro": "The first FJ. A big air-cooled four with a perimeter frame and a 16-inch front wheel.",
+ "focus": [
+  [
+   "Inline four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "FJ Owners forum",
+   "url": "https://fjowners.com/",
+   "what": "Owner forum for the Yamaha FJ1100 and FJ1200."
+  }
+ ],
+ "silhouette": "yamaha-fj1100-1984",
+ "areas": [],
+ "heroName": "FJ1100",
+ "hero": {
+  "src": "img/hero/yamaha-fj1100-1984.jpg",
+  "artist": "Jacqr1",
+  "page": "https://commons.wikimedia.org/wiki/File:Fj1100.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
+}

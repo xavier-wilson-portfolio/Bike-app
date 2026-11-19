@@ -1,0 +1,70 @@
+{
+ "id": "aprilia-caponord-1200-etv1000-2001",
+ "make": "Aprilia",
+ "model": "Caponord 1200 / ETV1000",
+ "name": "Aprilia Caponord 1200 / ETV1000",
+ "years": [
+  2001,
+  2016
+ ],
+ "match": [
+  "caponord",
+  "etv1000",
+  "caponord 1200",
+  "etv 1000",
+  "caponord rally",
+  "etv1000 caponord"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "998 or 1197 cc liquid-cooled V-twin, fuel injected",
+ "intro": "Aprilia's adventure tourers. The Rotax V60 twin in the ETV, the Dorsoduro-based twin in the 1200.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Aprilia has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ApriliaForum",
+   "url": "https://www.apriliaforum.com/",
+   "what": "Owner forum for Aprilia motorcycles."
+  }
+ ],
+ "silhouette": "aprilia-caponord-1200-etv1000-2001",
+ "areas": [],
+ "heroName": "CAPONORD",
+ "hero": {
+  "src": "img/hero/aprilia-caponord-1200-etv1000-2001.jpg",
+  "artist": "Matteo Marcon",
+  "page": "https://commons.wikimedia.org/wiki/File:Aprilia_Caponord.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
+}

@@ -1,0 +1,59 @@
+{
+ "id": "honda-qa50-1970",
+ "make": "Honda",
+ "model": "QA50",
+ "name": "Honda QA50",
+ "years": [
+  1970,
+  1975
+ ],
+ "match": [
+  "qa50",
+  "qa 50",
+  "honda qa50",
+  "qa50k"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "49 cc air-cooled overhead-cam single, two-speed with an automatic clutch",
+ "intro": "Honda's tiny kids' bike from the early 70s. A small OHC engine, an auto clutch and parts that are hard to find.",
+ "focus": [
+  [
+   "49 cc single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Auto clutch",
+   "Adjust it"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "QA50"
+}

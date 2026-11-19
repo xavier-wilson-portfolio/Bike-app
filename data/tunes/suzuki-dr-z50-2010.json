@@ -1,0 +1,59 @@
+{
+ "id": "suzuki-dr-z50-2010",
+ "make": "Suzuki",
+ "model": "DR-Z50",
+ "name": "Suzuki DR-Z50",
+ "years": [
+  2010,
+  2026
+ ],
+ "match": [
+  "dr-z50",
+  "drz50",
+  "drz 50",
+  "dr-z 50"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "49 cc air-cooled four-stroke single, carb, three-speed automatic",
+ "intro": "Suzuki's smallest kids' bike. A four-stroke with an automatic three-speed and electric start.",
+ "focus": [
+  [
+   "Small single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Auto clutch",
+   "Adjust it"
+  ],
+  [
+   "Air filter",
+   "Clean it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Suzuki dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "DR-Z50"
+}

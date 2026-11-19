@@ -1,0 +1,63 @@
+{
+ "id": "honda-cb125s-1971",
+ "make": "Honda",
+ "model": "CB125S",
+ "name": "Honda CB125S",
+ "years": [
+  1971,
+  1985
+ ],
+ "match": [
+  "cb125s",
+  "cb125",
+  "cb 125",
+  "cb125s1",
+  "cb125j",
+  "cl125"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "122 cc air-cooled overhead-cam single, one carb, five-speed",
+ "intro": "Honda's long-running small single. Simple and cheap to run, with points, a cam chain and one carb.",
+ "focus": [
+  [
+   "122 cc single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Cam chain",
+   "Adjust it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "CB125S"
+}

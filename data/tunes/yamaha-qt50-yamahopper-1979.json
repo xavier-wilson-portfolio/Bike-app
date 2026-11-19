@@ -1,0 +1,66 @@
+{
+ "id": "yamaha-qt50-yamahopper-1979",
+ "make": "Yamaha",
+ "model": "QT50 Yamahopper",
+ "name": "Yamaha QT50 Yamahopper",
+ "years": [
+  1979,
+  1987
+ ],
+ "match": [
+  "qt50",
+  "qt 50",
+  "yamahopper",
+  "yamaha hopper",
+  "qt50g"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "49 cc air-cooled two-stroke single, oil injection, automatic",
+ "intro": "Yamaha's little step-through moped. Two-stroke, oil injection and a one-speed automatic.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Oil injection"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Auto clutch",
+   "Inspect"
+  ],
+  [
+   "Exhaust",
+   "Check carbon"
+  ],
+  [
+   "Brakes",
+   "Drums"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It has oil injection, not premix. Keep the oil tank filled with two-stroke oil and check the pump line for cracks."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "heroName": "QT50"
+}

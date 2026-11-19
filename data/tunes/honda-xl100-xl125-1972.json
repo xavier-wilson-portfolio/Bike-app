@@ -1,0 +1,65 @@
+{
+ "id": "honda-xl100-xl125-1972",
+ "make": "Honda",
+ "model": "XL100 / XL125",
+ "name": "Honda XL100 / XL125",
+ "years": [
+  1972,
+  1985
+ ],
+ "match": [
+  "xl100",
+  "xl125",
+  "xl 100",
+  "xl 125",
+  "xl100s",
+  "xl125s"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "99 or 124 cc air-cooled overhead-cam single, carb",
+ "intro": "Honda's small dual-sports of the 70s and early 80s. Simple singles with points and six-volt electrics on many.",
+ "focus": [
+  [
+   "Small single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Cam chain",
+   "Adjust it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XR's Only",
+   "url": "https://www.xrsonly.com/",
+   "what": "Parts and know-how for Honda XR dirt bikes."
+  }
+ ],
+ "heroName": "XL125"
+}

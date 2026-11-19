@@ -1,0 +1,77 @@
+{
+ "id": "suzuki-rgv250-1988",
+ "make": "Suzuki",
+ "model": "RGV250",
+ "name": "Suzuki RGV250 Gamma",
+ "years": [
+  1988,
+  1996
+ ],
+ "match": [
+  "rgv250",
+  "rgv 250",
+  "rgv250 gamma",
+  "vj22",
+  "vj21",
+  "vj23",
+  "rgv"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "249 cc liquid-cooled two-stroke V-twin, two carbs, oil injection, power valves",
+ "intro": "Suzuki's two-stroke V-twin sport bike, mostly sold outside the US. Power valves, oil injection and race-bred parts.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Oil injection"
+  ],
+  [
+   "Two carbs",
+   "Clean and sync"
+  ],
+  [
+   "Power valves",
+   "Clean them"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Suzuki's CCI system pumps oil into the engine, so it does not need premix. Check the oil tank, pump and lines. If the pump was removed, it runs premix."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Most of these were sold new outside the US, so the NHTSA search may not cover them. Ask a Suzuki dealer to check the frame number.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Suzuki Forums",
+   "url": "https://www.suzuki-forums.com/forums/",
+   "what": "General owner forum for Suzuki motorcycles."
+  }
+ ],
+ "silhouette": "suzuki-rgv250-1988",
+ "areas": [],
+ "heroName": "RGV250",
+ "hero": {
+  "src": "img/hero/suzuki-rgv250-1988.jpg",
+  "artist": "Mike Schinkel",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_RGV250%CE%93_01.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
+}

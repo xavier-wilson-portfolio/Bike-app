@@ -1,0 +1,67 @@
+{
+ "id": "triumph-3ta-5ta-unit-350-500-1957",
+ "make": "Triumph",
+ "model": "3TA / 5TA (unit 350 / 500)",
+ "name": "Triumph 3TA Twenty-One / 5TA Speed Twin",
+ "years": [
+  1957,
+  1966
+ ],
+ "match": [
+  "3ta",
+  "5ta",
+  "twenty-one",
+  "twenty one",
+  "tiger 90",
+  "t90",
+  "speed twin 5ta",
+  "3ta twenty-one"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "349 or 490 cc air-cooled OHV unit parallel twin, one carb, points",
+ "intro": "Triumph's first unit twins. The bathtub rear enclosure on many, one carb and points ignition.",
+ "focus": [
+  [
+   "Unit twin",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Primary",
+   "Set chain"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "heroName": "3TA"
+}

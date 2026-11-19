@@ -1,0 +1,69 @@
+{
+ "id": "husqvarna-fc-fe-tc-te-2014-on-2014",
+ "make": "Husqvarna",
+ "model": "FC / FE / TC / TE (2014 on)",
+ "name": "Husqvarna FC / FE / TC / TE (2014 on)",
+ "years": [
+  2014,
+  2026
+ ],
+ "match": [
+  "fc 450",
+  "fc 250",
+  "fc 350",
+  "fe 350",
+  "fe 501",
+  "fe 250",
+  "fe 450",
+  "te 300",
+  "te 250",
+  "tc 250",
+  "tx 300",
+  "te 300i"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "125 to 510 cc liquid-cooled two- or four-stroke single",
+ "intro": "The KTM-era Husqvarnas. Shared engines with KTM, a plastic subframe and service intervals measured in hours.",
+ "focus": [
+  [
+   "Single",
+   "Check type"
+  ],
+  [
+   "Fuel",
+   "Check system"
+  ],
+  [
+   "Valves or top end",
+   "Check"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Hours",
+   "Log them"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "FC and FE models are four-strokes. TC, TE and TX models are two-strokes, and older ones run premix. Check which one you have."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Husqvarna dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "HUSQVARNA"
+}

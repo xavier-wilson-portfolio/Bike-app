@@ -1,0 +1,61 @@
+{
+ "id": "kawasaki-kz750-twin-kz750b-1976",
+ "make": "Kawasaki",
+ "model": "KZ750 twin (KZ750B)",
+ "name": "Kawasaki KZ750 twin",
+ "years": [
+  1976,
+  1979
+ ],
+ "match": [
+  "kz750b",
+  "kz750 twin",
+  "kz 750 twin",
+  "z750 twin",
+  "kz750",
+  "kz 750"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "745 cc air-cooled DOHC parallel twin, two carbs, balancer",
+ "intro": "Kawasaki's big 70s twin. Two carbs, a gear-driven balancer and a simple chassis.",
+ "focus": [
+  [
+   "DOHC twin",
+   "Air-cooled"
+  ],
+  [
+   "Two carbs",
+   "Sync them"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Balancer",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KZRider forum",
+   "url": "https://www.kzrider.com/",
+   "what": "Owner forum for classic Kawasakis."
+  }
+ ],
+ "heroName": "KZ750"
+}

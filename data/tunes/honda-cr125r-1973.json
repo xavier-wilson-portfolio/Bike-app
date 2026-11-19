@@ -1,0 +1,67 @@
+{
+ "id": "honda-cr125r-1973",
+ "make": "Honda",
+ "model": "CR125R",
+ "name": "Honda CR125R",
+ "years": [
+  1973,
+  2007
+ ],
+ "match": [
+  "cr125r",
+  "cr125",
+  "cr 125",
+  "cr 125r",
+  "elsinore 125",
+  "cr125m"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "123 cc two-stroke single, air-cooled then liquid-cooled, carb, premix",
+ "intro": "Honda's 125 motocross two-stroke. Premix, a top end that needs regular rebuilds, and a power valve on later years.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Power valve",
+   "Clean it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Honda dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "CR125R"
+}

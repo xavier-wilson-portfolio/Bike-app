@@ -1,0 +1,63 @@
+{
+ "id": "vespa-946-2013",
+ "make": "Vespa",
+ "model": "946",
+ "name": "Vespa 946",
+ "years": [
+  2013,
+  2026
+ ],
+ "match": [
+  "946",
+  "vespa 946",
+  "946 bellissima",
+  "946 dragon",
+  "946 snake",
+  "946 red"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "125 or 150 cc air-cooled single, fuel injected, CVT, aluminum body",
+ "intro": "Vespa's premium design scooter. An aluminum and steel body, fuel injection and expensive panels.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Body",
+   "Protect paint"
+  ],
+  [
+   "Brakes",
+   "Check ABS"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "silhouette": "vespa-946-2013",
+ "areas": [],
+ "heroName": "946"
+}

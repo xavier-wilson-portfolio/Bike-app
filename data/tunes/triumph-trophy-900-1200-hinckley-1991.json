@@ -1,0 +1,62 @@
+{
+ "id": "triumph-trophy-900-1200-hinckley-1991",
+ "make": "Triumph",
+ "model": "Trophy 900 / 1200 (Hinckley)",
+ "name": "Triumph Trophy 900 / 1200 (Hinckley)",
+ "years": [
+  1991,
+  2003
+ ],
+ "match": [
+  "trophy 900",
+  "trophy 1200",
+  "trophy",
+  "triumph trophy 1200",
+  "trophy 1200 1997"
+ ],
+ "style": "touring",
+ "drive": "chain",
+ "engine": "885 cc triple or 1180 cc four, liquid-cooled, carbs",
+ "intro": "Triumph's 90s sport tourers. Triple or four, a big fairing and carbs that need care.",
+ "focus": [
+  [
+   "Triple or four",
+   "Liquid-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "silhouette": "triumph-trophy-900-1200-hinckley-1991",
+ "areas": [],
+ "heroName": "TROPHY"
+}

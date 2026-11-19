@@ -1,0 +1,65 @@
+{
+ "id": "ducati-streetfighter-v2-2022",
+ "make": "Ducati",
+ "model": "Streetfighter V2",
+ "name": "Ducati Streetfighter V2",
+ "years": [
+  2022,
+  2026
+ ],
+ "match": [
+  "streetfighter v2",
+  "sf v2",
+  "streetfighter 955",
+  "streetfighter v2 s"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "955 cc liquid-cooled Superquadro V-twin, fuel injected",
+ "intro": "The naked Panigale V2. A Superquadro twin with chain cams and a full electronics package.",
+ "focus": [
+  [
+   "Superquadro twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Desmo valves",
+   "Shim check"
+  ],
+  [
+   "Electronics",
+   "Scan for codes"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Desmo valve service needs both opening and closing shims checked. Follow the interval in the manual; it is not a job to skip."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Ducati has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "silhouette": "ducati-streetfighter-v2-2022",
+ "areas": [],
+ "heroName": "STREETFIGHTER V2"
+}

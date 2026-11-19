@@ -1,0 +1,67 @@
+{
+ "id": "penton-125-250-ktm-built-1968",
+ "make": "Penton",
+ "model": "125 / 250 (KTM-built)",
+ "name": "Penton 125 / 250",
+ "years": [
+  1968,
+  1977
+ ],
+ "match": [
+  "penton",
+  "six days",
+  "jackpiner",
+  "hare scrambler",
+  "penton 125",
+  "penton 250"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "100 to 400 cc air-cooled two-stroke single, Sachs or KTM engine, premix",
+ "intro": "John Penton's KTM-built enduros. Sachs or KTM engines, premix and a passionate owner community.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Premix"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Ignition",
+   "Check flywheel"
+  ],
+  [
+   "Parts",
+   "Source early"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "PENTON"
+}

@@ -1,0 +1,61 @@
+{
+ "id": "aprilia-mana-850-gp850-2008",
+ "make": "Aprilia",
+ "model": "Mana 850 / GP850",
+ "name": "Aprilia Mana 850 / GP850",
+ "years": [
+  2008,
+  2016
+ ],
+ "match": [
+  "mana 850",
+  "mana",
+  "gp850",
+  "mana gt",
+  "gp 850",
+  "mana 850 gt"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "839 cc liquid-cooled V-twin, fuel injected, automatic CVT with a manual mode",
+ "intro": "Aprilia's automatic motorcycle. A V-twin with a CVT and a storage space where the tank would be.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Aprilia has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ApriliaForum",
+   "url": "https://www.apriliaforum.com/",
+   "what": "Owner forum for Aprilia motorcycles."
+  }
+ ],
+ "heroName": "MANA"
+}

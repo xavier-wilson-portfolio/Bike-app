@@ -1,0 +1,67 @@
+{
+ "id": "sherco-se-sef-enduro-2014",
+ "make": "Sherco",
+ "model": "SE / SEF enduro",
+ "name": "Sherco SE / SEF enduro",
+ "years": [
+  2014,
+  2026
+ ],
+ "match": [
+  "sef 300",
+  "se 300",
+  "sef 250",
+  "se 250",
+  "sef 450",
+  "sef 500",
+  "sherco 300",
+  "se-r",
+  "sef-r",
+  "st 300"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "125 to 500 cc liquid-cooled two- or four-stroke single",
+ "intro": "Sherco's French enduros. SE models are two-strokes, SEF are four-strokes, both with short service intervals.",
+ "focus": [
+  [
+   "Single",
+   "Check type"
+  ],
+  [
+   "Fuel",
+   "Check system"
+  ],
+  [
+   "Valves or top end",
+   "Check"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Hours",
+   "Log them"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "SE models are two-strokes that run premix. SEF models are four-strokes. Check which one you have."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road and trials models are often not in the NHTSA recall search. Ask a dealer for the make to run the frame number.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "SHERCO"
+}

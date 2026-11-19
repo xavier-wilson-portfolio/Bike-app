@@ -1,0 +1,61 @@
+{
+ "id": "honda-vtr250-1988",
+ "make": "Honda",
+ "model": "VTR250",
+ "name": "Honda VTR250 Interceptor",
+ "years": [
+  1988,
+  1990
+ ],
+ "match": [
+  "vtr250",
+  "vtr 250",
+  "interceptor 250",
+  "vtr250 interceptor"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "249 cc liquid-cooled 90-degree V-twin, two carbs, six-speed",
+ "intro": "Honda's little V-twin from the late 80s. Two small carbs, a liquid-cooled twin and a half fairing.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Two carbs",
+   "Sync them"
+  ],
+  [
+   "Cooling",
+   "Coolant and hoses"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "silhouette": "honda-vtr250-1988",
+ "areas": [],
+ "heroName": "VTR250"
+}

@@ -1,0 +1,59 @@
+{
+ "id": "honda-xr75-1973",
+ "make": "Honda",
+ "model": "XR75",
+ "name": "Honda XR75",
+ "years": [
+  1973,
+  1978
+ ],
+ "match": [
+  "xr75",
+  "xr 75",
+  "xr75k",
+  "xr75 1975"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "72 cc air-cooled four-stroke single, carb, kick start",
+ "intro": "Honda's first small XR. A four-stroke kids' racer that is still easy to keep running.",
+ "focus": [
+  [
+   "Small single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean it out"
+  ],
+  [
+   "Valves",
+   "Check them"
+  ],
+  [
+   "Points",
+   "Gap and time"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XR's Only",
+   "url": "https://www.xrsonly.com/",
+   "what": "Parts and know-how for Honda XR dirt bikes."
+  }
+ ],
+ "heroName": "XR75"
+}
