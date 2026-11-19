@@ -56,5 +56,14 @@
    "what": "Club for owners of older Japanese bikes."
   }
  ],
- "heroName": "CL500"
+ "silhouette": "honda-cl500-cl300-2023",
+ "areas": [],
+ "heroName": "CL500",
+ "hero": {
+  "src": "img/hero/honda-cl500-cl300-2023.jpg",
+  "artist": "HeavY913",
+  "page": "https://commons.wikimedia.org/wiki/File:2023_Honda_CL500_2.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

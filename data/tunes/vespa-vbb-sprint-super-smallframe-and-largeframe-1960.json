@@ -67,5 +67,14 @@
    "what": "Big general scooter forum with sections for Yamaha scooters."
   }
  ],
- "heroName": "VESPA"
+ "silhouette": "vespa-vbb-sprint-super-smallframe-and-largeframe-1960",
+ "areas": [],
+ "heroName": "VESPA",
+ "hero": {
+  "src": "img/hero/vespa-vbb-sprint-super-smallframe-and-largeframe-1960.jpg",
+  "artist": "Samihasib",
+  "page": "https://commons.wikimedia.org/wiki/File:Vespa_sprint_150.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

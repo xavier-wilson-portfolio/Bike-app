@@ -56,5 +56,14 @@
    "what": "Large adventure riding forum with model-specific threads."
   }
  ],
- "heroName": "TENERE"
+ "silhouette": "yamaha-xtz660-tenere-1991",
+ "areas": [],
+ "heroName": "TENERE",
+ "hero": {
+  "src": "img/hero/yamaha-xtz660-tenere-1991.jpg",
+  "artist": "Kazuhiko Maeda",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_XT660Z_Tenere_2007TMS.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

@@ -81,5 +81,14 @@
    "what": "Gold Wing repair notes by model."
   }
  ],
- "heroName": "GL1200"
+ "silhouette": "honda-gold-wing-gl1200-1984",
+ "areas": [],
+ "heroName": "GL1200",
+ "hero": {
+  "src": "img/hero/honda-gold-wing-gl1200-1984.jpg",
+  "artist": "Marek Ślusarczyk (Tupungato) Photo portfolio",
+  "page": "https://commons.wikimedia.org/wiki/File:016_Honda_GoldWing_GL1200_Limited_Edition_1985.jpg",
+  "lic": "CC BY 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by/3.0"
+ }
 }

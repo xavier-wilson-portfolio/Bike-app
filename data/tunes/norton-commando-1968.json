@@ -101,5 +101,14 @@
    "what": "Owner forum for Norton Commandos and other British twins."
   }
  ],
- "heroName": "COMMANDO"
+ "silhouette": "norton-commando-1968",
+ "areas": [],
+ "heroName": "COMMANDO",
+ "hero": {
+  "src": "img/hero/norton-commando-1968.jpg",
+  "artist": "Plismo",
+  "page": "https://commons.wikimedia.org/wiki/File:Norton.Motor.Cycle.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

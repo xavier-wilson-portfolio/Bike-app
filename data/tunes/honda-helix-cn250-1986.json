@@ -61,5 +61,14 @@
    "what": "Big general scooter forum with sections for Honda scooters."
   }
  ],
- "heroName": "HELIX"
+ "silhouette": "honda-helix-cn250-1986",
+ "areas": [],
+ "heroName": "HELIX",
+ "hero": {
+  "src": "img/hero/honda-helix-cn250-1986.jpg",
+  "artist": "Michael Erdmann",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_Helix.jpg",
+  "lic": "CC BY-SA 2.0 de",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0/de/deed.en"
+ }
 }

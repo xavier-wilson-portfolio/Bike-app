@@ -56,5 +56,14 @@
    "what": "Owner forum for Husqvarna street and dirt bikes."
   }
  ],
- "heroName": "701"
+ "silhouette": "husqvarna-701-enduro-supermoto-2016",
+ "areas": [],
+ "heroName": "701",
+ "hero": {
+  "src": "img/hero/husqvarna-701-enduro-supermoto-2016.jpg",
+  "artist": "KTM AG",
+  "page": "https://commons.wikimedia.org/wiki/File:Husqvarna_701_Enduro.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

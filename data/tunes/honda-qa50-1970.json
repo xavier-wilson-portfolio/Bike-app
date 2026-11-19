@@ -55,5 +55,14 @@
    "what": "Club for owners of older Japanese bikes."
   }
  ],
- "heroName": "QA50"
+ "silhouette": "honda-qa50-1970",
+ "areas": [],
+ "heroName": "QA50",
+ "hero": {
+  "src": "img/hero/honda-qa50-1970.jpg",
+  "artist": "TaurusEmerald",
+  "page": "https://commons.wikimedia.org/wiki/File:1970_Honda_QA50_Lane_Motor_Museum.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

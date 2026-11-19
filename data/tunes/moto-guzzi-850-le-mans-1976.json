@@ -61,5 +61,14 @@
    "what": "US owner club for Moto Guzzi."
   }
  ],
- "heroName": "LE MANS"
+ "silhouette": "moto-guzzi-850-le-mans-1976",
+ "areas": [],
+ "heroName": "LE MANS",
+ "hero": {
+  "src": "img/hero/moto-guzzi-850-le-mans-1976.jpg",
+  "artist": "Mr.choppers",
+  "page": "https://commons.wikimedia.org/wiki/File:1978_Moto_Guzzi_850_Le_Mans_Series_1,_front_right.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

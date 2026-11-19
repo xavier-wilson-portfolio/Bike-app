@@ -84,5 +84,14 @@
    "what": "Owner forum for Kawasaki two-stroke triples."
   }
  ],
- "heroName": "H2"
+ "silhouette": "kawasaki-h2-mach-iv-1972",
+ "areas": [],
+ "heroName": "H2",
+ "hero": {
+  "src": "img/hero/kawasaki-h2-mach-iv-1972.jpg",
+  "artist": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_750.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
 }

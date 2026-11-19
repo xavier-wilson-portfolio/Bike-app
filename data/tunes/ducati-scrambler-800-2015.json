@@ -81,5 +81,14 @@
  ],
  "known": [],
  "forums": [],
- "heroName": "SCRAMBLER"
+ "silhouette": "ducati-scrambler-800-2015",
+ "areas": [],
+ "heroName": "SCRAMBLER",
+ "hero": {
+  "src": "img/hero/ducati-scrambler-800-2015.jpg",
+  "artist": "HansFritzvonUmlauts",
+  "page": "https://commons.wikimedia.org/wiki/File:Ducati_Scrambler_Classic_2014.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

@@ -62,5 +62,14 @@
    "what": "Owner club for BSA motorcycles, with tech help and parts."
   }
  ],
- "heroName": "STARFIRE"
+ "silhouette": "bsa-starfire-b25-1967",
+ "areas": [],
+ "heroName": "STARFIRE",
+ "hero": {
+  "src": "img/hero/bsa-starfire-b25-1967.jpg",
+  "artist": "Mick from England",
+  "page": "https://commons.wikimedia.org/wiki/File:BSA_C15_250cc_1960_-_Flickr_-_mick_-_Lumix(1).jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

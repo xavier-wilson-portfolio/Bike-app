@@ -66,5 +66,14 @@
    "what": "Forum for classic British motorcycles."
   }
  ],
- "heroName": "RED HUNTER"
+ "silhouette": "ariel-red-hunter-nh-1932",
+ "areas": [],
+ "heroName": "RED HUNTER",
+ "hero": {
+  "src": "img/hero/ariel-red-hunter-nh-1932.jpg",
+  "artist": "Steve Glover",
+  "page": "https://commons.wikimedia.org/wiki/File:Ariel_W-NG_(1946).jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

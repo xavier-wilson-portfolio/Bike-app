@@ -78,5 +78,14 @@
    "what": "Owner forum for KTM street and adventure bikes."
   }
  ],
- "heroName": "300 XC-W"
+ "silhouette": "ktm-300-xc-w-250-exc-two-stroke-1998",
+ "areas": [],
+ "heroName": "300 XC-W",
+ "hero": {
+  "src": "img/hero/ktm-300-xc-w-250-exc-two-stroke-1998.jpg",
+  "artist": "Peprovira",
+  "page": "https://commons.wikimedia.org/wiki/File:KTM_250_EXC%E2%80%91F_2015.JPG",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

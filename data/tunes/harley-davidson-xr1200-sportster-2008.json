@@ -55,5 +55,14 @@
    "what": "Owner forum for Harley Sportsters."
   }
  ],
- "heroName": "XR1200"
+ "silhouette": "harley-davidson-xr1200-sportster-2008",
+ "areas": [],
+ "heroName": "XR1200",
+ "hero": {
+  "src": "img/hero/harley-davidson-xr1200-sportster-2008.jpg",
+  "artist": "ウェルワィ",
+  "page": "https://commons.wikimedia.org/wiki/File:Xr1200.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
 }

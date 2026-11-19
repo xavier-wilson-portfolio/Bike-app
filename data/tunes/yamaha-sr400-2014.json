@@ -62,5 +62,14 @@
  ],
  "known": [],
  "forums": [],
- "heroName": "SR400"
+ "silhouette": "yamaha-sr400-2014",
+ "areas": [],
+ "heroName": "SR400",
+ "hero": {
+  "src": "img/hero/yamaha-sr400-2014.jpg",
+  "artist": "Thedirtypeach at English Wikipedia",
+  "page": "https://commons.wikimedia.org/wiki/File:1986_Yamaha_SRX_600.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

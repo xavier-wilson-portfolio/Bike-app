@@ -60,5 +60,14 @@
    "what": "US owner club for Moto Guzzi."
   }
  ],
- "heroName": "CENTAURO"
+ "silhouette": "moto-guzzi-centauro-1997",
+ "areas": [],
+ "heroName": "CENTAURO",
+ "hero": {
+  "src": "img/hero/moto-guzzi-centauro-1997.jpg",
+  "artist": "Franken-Guzzista",
+  "page": "https://commons.wikimedia.org/wiki/File:Moto_Guzzi_V10_Centauro.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

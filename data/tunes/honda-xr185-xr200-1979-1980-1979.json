@@ -55,5 +55,14 @@
    "what": "Parts and know-how for Honda XR dirt bikes."
   }
  ],
- "heroName": "XR185"
+ "silhouette": "honda-xr185-xr200-1979-1980-1979",
+ "areas": [],
+ "heroName": "XR185",
+ "hero": {
+  "src": "img/hero/honda-xr185-xr200-1979-1980-1979.jpg",
+  "artist": "Cdw1952",
+  "page": "https://commons.wikimedia.org/wiki/File:83_XR200R.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

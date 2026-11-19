@@ -64,5 +64,14 @@
    "what": "Owner club for BSA motorcycles, with tech help and parts."
   }
  ],
- "heroName": "B33"
+ "silhouette": "bsa-b31-b33-1945",
+ "areas": [],
+ "heroName": "B33",
+ "hero": {
+  "src": "img/hero/bsa-b31-b33-1945.jpg",
+  "artist": "Yesterdays Antique Motorcycles",
+  "page": "https://commons.wikimedia.org/wiki/File:BSA_B31_350cc_OHV_1954.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

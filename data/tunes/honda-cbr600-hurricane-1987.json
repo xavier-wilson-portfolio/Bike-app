@@ -60,5 +60,14 @@
    "what": "Owner forum for Honda CBR models."
   }
  ],
- "heroName": "HURRICANE"
+ "silhouette": "honda-cbr600-hurricane-1987",
+ "areas": [],
+ "heroName": "HURRICANE",
+ "hero": {
+  "src": "img/hero/honda-cbr600-hurricane-1987.jpg",
+  "artist": "Ritzel",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CBR_600_F_(PC_31),_Bj._1998_B.jpg",
+  "lic": "CC BY 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by/4.0"
+ }
 }

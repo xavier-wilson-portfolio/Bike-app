@@ -65,5 +65,14 @@
    "what": "Owner forum for vintage Yamaha two-stroke enduros."
   }
  ],
- "heroName": "MINI ENDURO"
+ "silhouette": "yamaha-gt80-jt1-mini-enduro-1971",
+ "areas": [],
+ "heroName": "MINI ENDURO",
+ "hero": {
+  "src": "img/hero/yamaha-gt80-jt1-mini-enduro-1971.jpg",
+  "artist": "Rainmaker47",
+  "page": "https://commons.wikimedia.org/wiki/File:1972_Yamaha_GT50_in_the_Yamaha_Communication_Plaza.JPG",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

@@ -63,5 +63,14 @@
    "what": "Owner site for vintage Suzuki motorcycles."
   }
  ],
- "heroName": "TS250"
+ "silhouette": "suzuki-ts185-ts250-1971",
+ "areas": [],
+ "heroName": "TS250",
+ "hero": {
+  "src": "img/hero/suzuki-ts185-ts250-1971.jpg",
+  "artist": "Motacilla",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_TS250_Marsh_Baldon.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

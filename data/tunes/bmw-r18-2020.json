@@ -61,5 +61,14 @@
    "what": "BMW Motorcycle Owners of America forum."
   }
  ],
- "heroName": "R 18"
+ "silhouette": "bmw-r18-2020",
+ "areas": [],
+ "heroName": "R 18",
+ "hero": {
+  "src": "img/hero/bmw-r18-2020.jpg",
+  "artist": "Self-photographed by Bullenwächter",
+  "page": "https://commons.wikimedia.org/wiki/File:BMW_R18_First_Edition_front_left_DSC_0272.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

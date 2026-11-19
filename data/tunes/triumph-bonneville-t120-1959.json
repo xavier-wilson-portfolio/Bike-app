@@ -75,5 +75,14 @@
    "what": "Owner forum for modern and classic Triumphs."
   }
  ],
- "heroName": "BONNEVILLE"
+ "silhouette": "triumph-bonneville-t120-1959",
+ "areas": [],
+ "heroName": "BONNEVILLE",
+ "hero": {
+  "src": "img/hero/triumph-bonneville-t120-1959.jpg",
+  "artist": "Joachim Köhler",
+  "page": "https://commons.wikimedia.org/wiki/File:ZweiRadMuseumNSU_Triumph_Bonneville.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
 }

@@ -61,5 +61,14 @@
    "what": "US owner club for Moto Guzzi."
   }
  ],
- "heroName": "V7 SPORT"
+ "silhouette": "moto-guzzi-v7-sport-750s-1971",
+ "areas": [],
+ "heroName": "V7 SPORT",
+ "hero": {
+  "src": "img/hero/moto-guzzi-v7-sport-750s-1971.jpg",
+  "artist": "Serge PIOTIN aka Sergio",
+  "page": "https://commons.wikimedia.org/wiki/File:V7Sport72_01.jpg",
+  "lic": "CC BY-SA 2.5",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.5"
+ }
 }

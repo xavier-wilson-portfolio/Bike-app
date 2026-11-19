@@ -55,5 +55,14 @@
  "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
  "known": [],
  "forums": [],
- "heroName": "REBEL 250"
+ "silhouette": "honda-rebel-250-cmx250-1985",
+ "areas": [],
+ "heroName": "REBEL 250",
+ "hero": {
+  "src": "img/hero/honda-rebel-250-cmx250-1985.jpg",
+  "artist": "The original uploader was Cdamian at English Wikipedia.",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda-cmx450rebel.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

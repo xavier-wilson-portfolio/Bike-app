@@ -59,5 +59,14 @@
    "what": "Owner forum for Yamaha XJ, Seca, Maxim and Radian fours."
   }
  ],
- "heroName": "RZ250"
+ "silhouette": "yamaha-rz250-1980",
+ "areas": [],
+ "heroName": "RZ250",
+ "hero": {
+  "src": "img/hero/yamaha-rz250-1980.jpg",
+  "artist": "Rikita",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_RZ250_2.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

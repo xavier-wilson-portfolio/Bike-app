@@ -56,5 +56,14 @@
    "what": "Big general scooter forum with sections for Yamaha scooters."
   }
  ],
- "heroName": "PRIMAVERA"
+ "silhouette": "vespa-primavera-sprint-50-150-2014",
+ "areas": [],
+ "heroName": "PRIMAVERA",
+ "hero": {
+  "src": "img/hero/vespa-primavera-sprint-50-150-2014.jpg",
+  "artist": "Adrian Michael",
+  "page": "https://commons.wikimedia.org/wiki/File:Vespa_Prima_125b.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

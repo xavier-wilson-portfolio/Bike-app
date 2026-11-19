@@ -81,5 +81,14 @@
  ],
  "known": [],
  "forums": [],
- "heroName": "AFRICA TWIN"
+ "silhouette": "honda-africa-twin-crf1100l-2020",
+ "areas": [],
+ "heroName": "AFRICA TWIN",
+ "hero": {
+  "src": "img/hero/honda-africa-twin-crf1100l-2020.jpg",
+  "artist": "Morio",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CRF1000L_front-left_2016_Auto_China.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

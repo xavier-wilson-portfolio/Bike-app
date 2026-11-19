@@ -63,5 +63,14 @@
  ],
  "known": [],
  "forums": [],
- "heroName": "B-KING"
+ "silhouette": "suzuki-gsx1300bk-b-king-2008",
+ "areas": [],
+ "heroName": "B-KING",
+ "hero": {
+  "src": "img/hero/suzuki-gsx1300bk-b-king-2008.jpg",
+  "artist": "Reg Mckenna",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_B-King_black.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

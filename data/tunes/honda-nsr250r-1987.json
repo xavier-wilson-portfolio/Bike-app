@@ -65,5 +65,14 @@
    "what": "Owner forum for Honda CBR models."
   }
  ],
- "heroName": "NSR250R"
+ "silhouette": "honda-nsr250r-1987",
+ "areas": [],
+ "heroName": "NSR250R",
+ "hero": {
+  "src": "img/hero/honda-nsr250r-1987.jpg",
+  "artist": "Template:Geezagillard",
+  "page": "https://commons.wikimedia.org/wiki/File:NSR_250_MC18_R5_Seed_005.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
 }

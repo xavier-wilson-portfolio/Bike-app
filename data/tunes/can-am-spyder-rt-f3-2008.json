@@ -61,5 +61,14 @@
    "what": "Owner forum for Can-Am Spyder and Ryker."
   }
  ],
- "heroName": "SPYDER"
+ "silhouette": "can-am-spyder-rt-f3-2008",
+ "areas": [],
+ "heroName": "SPYDER",
+ "hero": {
+  "src": "img/hero/can-am-spyder-rt-f3-2008.jpg",
+  "artist": "Thesupermat",
+  "page": "https://commons.wikimedia.org/wiki/File:Paris_-_Salon_de_la_moto_2011_-_Can-Am_-_spyder_RT_-_001.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

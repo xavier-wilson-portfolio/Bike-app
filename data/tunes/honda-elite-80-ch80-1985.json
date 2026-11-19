@@ -52,5 +52,14 @@
  "recallNote": "Any recalls on bikes this old were closed long ago.",
  "known": [],
  "forums": [],
- "heroName": "ELITE 80"
+ "silhouette": "honda-elite-80-ch80-1985",
+ "areas": [],
+ "heroName": "ELITE 80",
+ "hero": {
+  "src": "img/hero/honda-elite-80-ch80-1985.jpg",
+  "artist": "MythicSeabass",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CH80.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

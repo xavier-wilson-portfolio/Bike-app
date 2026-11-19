@@ -60,5 +60,14 @@
    "what": "Owner forum for modern and classic Triumphs."
   }
  ],
- "heroName": "TERRIER"
+ "silhouette": "triumph-terrier-t15-1953",
+ "areas": [],
+ "heroName": "TERRIER",
+ "hero": {
+  "src": "img/hero/triumph-terrier-t15-1953.jpg",
+  "artist": "Alan",
+  "page": "https://commons.wikimedia.org/wiki/File:Triumph_Tiger_Cub_200_T20.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

@@ -62,5 +62,14 @@
    "what": "Club for owners of older Japanese bikes."
   }
  ],
- "heroName": "YDS-2"
+ "silhouette": "yamaha-yds-1-yds-2-250-1959",
+ "areas": [],
+ "heroName": "YDS-2",
+ "hero": {
+  "src": "img/hero/yamaha-yds-1-yds-2-250-1959.jpg",
+  "artist": "Rikita",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_Sports_250S_YDS-1.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

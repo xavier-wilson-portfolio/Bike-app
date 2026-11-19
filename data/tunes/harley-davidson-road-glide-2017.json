@@ -84,5 +84,14 @@
   }
  ],
  "forums": [],
- "heroName": "ROAD GLIDE"
+ "silhouette": "harley-davidson-road-glide-2017",
+ "areas": [],
+ "heroName": "ROAD GLIDE",
+ "hero": {
+  "src": "img/hero/harley-davidson-road-glide-2017.jpg",
+  "artist": "Christopher Page from Indianapolis, USA",
+  "page": "https://commons.wikimedia.org/wiki/File:Harley-Davdison_Road_Glide.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

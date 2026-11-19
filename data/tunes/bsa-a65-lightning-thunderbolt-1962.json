@@ -79,5 +79,14 @@
    "what": "Club for BSA owners."
   }
  ],
- "heroName": "A65"
+ "silhouette": "bsa-a65-lightning-thunderbolt-1962",
+ "areas": [],
+ "heroName": "A65",
+ "hero": {
+  "src": "img/hero/bsa-a65-lightning-thunderbolt-1962.jpg",
+  "artist": "Stavros1",
+  "page": "https://commons.wikimedia.org/wiki/File:BSA_Lightning_cropped.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

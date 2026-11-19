@@ -71,5 +71,14 @@
    "what": "Owner forum for Suzuki V-Strom models."
   }
  ],
- "heroName": "V-STROM 800"
+ "silhouette": "suzuki-v-strom-800de-2023",
+ "areas": [],
+ "heroName": "V-STROM 800",
+ "hero": {
+  "src": "img/hero/suzuki-v-strom-800de-2023.jpg",
+  "artist": "GIM - Giri in Moto",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_V-Strom_800DE_Eicma_22.jpg",
+  "lic": "CC BY 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by/3.0"
+ }
 }

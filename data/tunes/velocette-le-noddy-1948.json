@@ -57,5 +57,14 @@
    "what": "Forum for classic British motorcycles."
   }
  ],
- "heroName": "LE"
+ "silhouette": "velocette-le-noddy-1948",
+ "areas": [],
+ "heroName": "LE",
+ "hero": {
+  "src": "img/hero/velocette-le-noddy-1948.jpg",
+  "artist": "Graham Tiller",
+  "page": "https://commons.wikimedia.org/wiki/File:Velocette_Valiant_1959.jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
 }

@@ -78,5 +78,14 @@
   }
  ],
  "forums": [],
- "heroName": "MAGNA"
+ "silhouette": "honda-magna-v45-v65-1982",
+ "areas": [],
+ "heroName": "MAGNA",
+ "hero": {
+  "src": "img/hero/honda-magna-v45-v65-1982.jpg",
+  "artist": "Tspooncl65",
+  "page": "https://commons.wikimedia.org/wiki/File:1984_Honda_V65_Sabre.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

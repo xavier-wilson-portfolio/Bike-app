@@ -58,5 +58,14 @@
    "what": "Forum for vintage Kawasaki KZ and Z bikes."
   }
  ],
- "heroName": "KZ250"
+ "silhouette": "kawasaki-kz200-kz250-1977",
+ "areas": [],
+ "heroName": "KZ250",
+ "hero": {
+  "src": "img/hero/kawasaki-kz200-kz250-1977.jpg",
+  "artist": "Centovalli",
+  "page": "https://commons.wikimedia.org/wiki/File:FIBAG_IMG_1028.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

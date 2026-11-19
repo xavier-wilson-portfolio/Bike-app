@@ -62,5 +62,14 @@
    "what": "Parts and know-how for Honda XR dirt bikes."
   }
  ],
- "heroName": "XR600R"
+ "silhouette": "honda-xr600r-1985",
+ "areas": [],
+ "heroName": "XR600R",
+ "hero": {
+  "src": "img/hero/honda-xr600r-1985.jpg",
+  "artist": "steve lyon",
+  "page": "https://commons.wikimedia.org/wiki/File:1993_Honda_XR650L_02.jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
 }

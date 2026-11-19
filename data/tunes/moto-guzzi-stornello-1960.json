@@ -56,5 +56,14 @@
    "what": "US owner club for Moto Guzzi."
   }
  ],
- "heroName": "STORNELLO"
+ "silhouette": "moto-guzzi-stornello-1960",
+ "areas": [],
+ "heroName": "STORNELLO",
+ "hero": {
+  "src": "img/hero/moto-guzzi-stornello-1960.jpg",
+  "artist": "Luigi Lago",
+  "page": "https://commons.wikimedia.org/wiki/File:Stornello_Turismo.jpeg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
 }

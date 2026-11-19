@@ -54,5 +54,14 @@
    "what": "General owner forum for Yamaha motorcycles."
   }
  ],
- "heroName": "R125"
+ "silhouette": "yamaha-yzf-r125-2008",
+ "areas": [],
+ "heroName": "R125",
+ "hero": {
+  "src": "img/hero/yamaha-yzf-r125-2008.jpg",
+  "artist": "AVMOTO",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_YZF-R125_2025.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

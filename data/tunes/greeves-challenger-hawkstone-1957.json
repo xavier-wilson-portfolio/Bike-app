@@ -64,5 +64,14 @@
    "what": "Forum for classic British motorcycles."
   }
  ],
- "heroName": "GREEVES"
+ "silhouette": "greeves-challenger-hawkstone-1957",
+ "areas": [],
+ "heroName": "GREEVES",
+ "hero": {
+  "src": "img/hero/greeves-challenger-hawkstone-1957.jpg",
+  "artist": "Alf van Beem",
+  "page": "https://commons.wikimedia.org/wiki/File:Greeves_Sports,_pic-.JPG",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
 }

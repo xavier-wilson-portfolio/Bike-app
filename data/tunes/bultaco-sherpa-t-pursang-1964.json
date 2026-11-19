@@ -58,5 +58,14 @@
  "recallNote": "Any recalls on bikes this old were closed long ago.",
  "known": [],
  "forums": [],
- "heroName": "SHERPA"
+ "silhouette": "bultaco-sherpa-t-pursang-1964",
+ "areas": [],
+ "heroName": "SHERPA",
+ "hero": {
+  "src": "img/hero/bultaco-sherpa-t-pursang-1964.jpg",
+  "artist": "sylvainratton",
+  "page": "https://commons.wikimedia.org/wiki/File:Bultaco_Sherpa_T_250_1973.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

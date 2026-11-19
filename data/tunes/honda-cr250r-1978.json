@@ -70,5 +70,14 @@
  "recallNote": "Any recalls on bikes this old were closed long ago.",
  "known": [],
  "forums": [],
- "heroName": "CR250R"
+ "silhouette": "honda-cr250r-1978",
+ "areas": [],
+ "heroName": "CR250R",
+ "hero": {
+  "src": "img/hero/honda-cr250r-1978.jpg",
+  "artist": "Rainmaker47",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_ELSINORE_CR250M_in_the_honda_collection_hall.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

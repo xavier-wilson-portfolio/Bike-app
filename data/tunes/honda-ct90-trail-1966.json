@@ -81,5 +81,14 @@
    "what": "Owner forum for the CT90, CT110 and other Honda trail bikes."
   }
  ],
- "heroName": "CT90"
+ "silhouette": "honda-ct90-trail-1966",
+ "areas": [],
+ "heroName": "CT90",
+ "hero": {
+  "src": "img/hero/honda-ct90-trail-1966.jpg",
+  "artist": "Brayden Richards",
+  "page": "https://commons.wikimedia.org/wiki/File:1972_Honda_trail_90.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

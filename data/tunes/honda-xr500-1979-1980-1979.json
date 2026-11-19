@@ -58,5 +58,14 @@
    "what": "Parts and know-how for Honda XR dirt bikes."
   }
  ],
- "heroName": "XR500"
+ "silhouette": "honda-xr500-1979-1980-1979",
+ "areas": [],
+ "heroName": "XR500",
+ "hero": {
+  "src": "img/hero/honda-xr500-1979-1980-1979.jpg",
+  "artist": "MadYax",
+  "page": "https://commons.wikimedia.org/wiki/File:1982_Honda_XR_500_RC.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

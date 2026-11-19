@@ -80,5 +80,14 @@
    "what": "Owner tips for Suzuki GT two-stroke triples."
   }
  ],
- "heroName": "GT380"
+ "silhouette": "suzuki-gt380-1972",
+ "areas": [],
+ "heroName": "GT380",
+ "hero": {
+  "src": "img/hero/suzuki-gt380-1972.jpg",
+  "artist": "Thruxton",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_GT_250.JPG",
+  "lic": "CC BY 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by/3.0"
+ }
 }

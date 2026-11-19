@@ -71,5 +71,14 @@
  ],
  "known": [],
  "forums": [],
- "heroName": "BOLT"
+ "silhouette": "yamaha-bolt-2014",
+ "areas": [],
+ "heroName": "BOLT",
+ "hero": {
+  "src": "img/hero/yamaha-bolt-2014.jpg",
+  "artist": "Rainmaker47",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_BOLT_Cafe_Tokyo_Motor_Show_2013.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

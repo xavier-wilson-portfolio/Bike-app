@@ -60,5 +60,14 @@
    "what": "Owner forum for CFMoto motorcycles."
   }
  ],
- "heroName": "CFMOTO"
+ "silhouette": "cfmoto-300nk-650nk-700cl-x-2017",
+ "areas": [],
+ "heroName": "CFMOTO",
+ "hero": {
+  "src": "img/hero/cfmoto-300nk-650nk-700cl-x-2017.jpg",
+  "artist": "Mr.choppers",
+  "page": "https://commons.wikimedia.org/wiki/File:2022_CFMoto_700CL-X,_rear_left.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

@@ -57,5 +57,14 @@
    "what": "Big general scooter forum with sections for Honda scooters."
   }
  ],
- "heroName": "REFLEX"
+ "silhouette": "honda-reflex-nss250-2001",
+ "areas": [],
+ "heroName": "REFLEX",
+ "hero": {
+  "src": "img/hero/honda-reflex-nss250-2001.jpg",
+  "artist": "Takafumik",
+  "page": "https://commons.wikimedia.org/wiki/File:Forzazmf10.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

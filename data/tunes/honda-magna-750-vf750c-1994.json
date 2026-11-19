@@ -60,5 +60,14 @@
    "what": "Owner forum for Honda Shadows and other Honda cruisers."
   }
  ],
- "heroName": "MAGNA"
+ "silhouette": "honda-magna-750-vf750c-1994",
+ "areas": [],
+ "heroName": "MAGNA",
+ "hero": {
+  "src": "img/hero/honda-magna-750-vf750c-1994.jpg",
+  "artist": "Tony Hisgett from Birmingham, UK",
+  "page": "https://commons.wikimedia.org/wiki/File:Magna_Honda_(4691598864).jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

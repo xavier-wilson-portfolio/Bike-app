@@ -57,5 +57,14 @@
    "what": "Large adventure riding forum with model-specific threads."
   }
  ],
- "heroName": "DR BIG"
+ "silhouette": "suzuki-dr800-big-1990",
+ "areas": [],
+ "heroName": "DR BIG",
+ "hero": {
+  "src": "img/hero/suzuki-dr800-big-1990.jpg",
+  "artist": "MotorideSA",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_DR-Z_750_Big.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

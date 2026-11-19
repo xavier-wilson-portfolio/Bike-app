@@ -66,5 +66,14 @@
  ],
  "known": [],
  "forums": [],
- "heroName": "INTERCEPTOR"
+ "silhouette": "royal-enfield-interceptor-650-2019",
+ "areas": [],
+ "heroName": "INTERCEPTOR",
+ "hero": {
+  "src": "img/hero/royal-enfield-interceptor-650-2019.jpg",
+  "artist": "AxelKing",
+  "page": "https://commons.wikimedia.org/wiki/File:Royal_Enfield_650_02.jpeg",
+  "lic": "CC BY-SA 3.0 de",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en"
+ }
 }

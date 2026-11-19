@@ -58,5 +58,14 @@
    "what": "Large adventure riding forum with model-specific threads."
   }
  ],
- "heroName": "MT500"
+ "silhouette": "harley-davidson-mt350-mt500-military-1993",
+ "areas": [],
+ "heroName": "MT500",
+ "hero": {
+  "src": "img/hero/harley-davidson-mt350-mt500-military-1993.jpg",
+  "artist": "Jethro555 (talk) (Uploads)",
+  "page": "https://commons.wikimedia.org/wiki/File:Armstrong_MT500_Motorcycle.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

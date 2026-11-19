@@ -60,5 +60,14 @@
   }
  ],
  "forums": [],
- "heroName": "BANDIT"
+ "silhouette": "suzuki-bandit-1200-1996",
+ "areas": [],
+ "heroName": "BANDIT",
+ "hero": {
+  "src": "img/hero/suzuki-bandit-1200-1996.jpg",
+  "artist": "",
+  "page": "https://commons.wikimedia.org/wiki/File:GV75A-N.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

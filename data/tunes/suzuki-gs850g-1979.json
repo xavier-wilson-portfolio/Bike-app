@@ -93,5 +93,14 @@
    "what": "Owner forum and tech library for Suzuki GS bikes."
   }
  ],
- "heroName": "GS850"
+ "silhouette": "suzuki-gs850g-1979",
+ "areas": [],
+ "heroName": "GS850",
+ "hero": {
+  "src": "img/hero/suzuki-gs850g-1979.jpg",
+  "artist": "SG2012",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_GS850G_(1980)_-_10234005573.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

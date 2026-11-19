@@ -58,5 +58,14 @@
    "what": "Owner forum for Kawasaki ZX sport bikes."
   }
  ],
- "heroName": "ZX-10R"
+ "silhouette": "kawasaki-ninja-zx-10r-2021-on-2021",
+ "areas": [],
+ "heroName": "ZX-10R",
+ "hero": {
+  "src": "img/hero/kawasaki-ninja-zx-10r-2021-on-2021.jpg",
+  "artist": "UKER",
+  "page": "https://commons.wikimedia.org/wiki/File:2013_Kawasaki_ZX-6R.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

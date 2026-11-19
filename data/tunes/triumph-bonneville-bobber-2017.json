@@ -56,5 +56,14 @@
    "what": "Owner forum for modern and classic Triumphs."
   }
  ],
- "heroName": "BOBBER"
+ "silhouette": "triumph-bonneville-bobber-2017",
+ "areas": [],
+ "heroName": "BOBBER",
+ "hero": {
+  "src": "img/hero/triumph-bonneville-bobber-2017.jpg",
+  "artist": "Alex Tanchoco",
+  "page": "https://commons.wikimedia.org/wiki/File:Triumph_Bonneville_Bobber.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

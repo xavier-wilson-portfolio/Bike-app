@@ -55,5 +55,14 @@
    "what": "BMW Motorcycle Owners of America forum."
   }
  ],
- "heroName": "G310R"
+ "silhouette": "bmw-g310r-2017",
+ "areas": [],
+ "heroName": "G310R",
+ "hero": {
+  "src": "img/hero/bmw-g310r-2017.jpg",
+  "artist": "Erluw",
+  "page": "https://commons.wikimedia.org/wiki/File:BMW_G_310_R.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

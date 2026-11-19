@@ -57,5 +57,14 @@
    "what": "Big dirt bike forum with model sections for most off-road bikes."
   }
  ],
- "heroName": "TE 610"
+ "silhouette": "husqvarna-te-610-sm-610-1998",
+ "areas": [],
+ "heroName": "TE 610",
+ "hero": {
+  "src": "img/hero/husqvarna-te-610-sm-610-1998.jpg",
+  "artist": "Cjp24",
+  "page": "https://commons.wikimedia.org/wiki/File:Husqvarna,_right_view.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

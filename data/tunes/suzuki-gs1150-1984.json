@@ -61,5 +61,14 @@
    "what": "Owner forum for air-cooled Suzuki GS fours."
   }
  ],
- "heroName": "GS1150"
+ "silhouette": "suzuki-gs1150-1984",
+ "areas": [],
+ "heroName": "GS1150",
+ "hero": {
+  "src": "img/hero/suzuki-gs1150-1984.jpg",
+  "artist": "Mr.choppers",
+  "page": "https://commons.wikimedia.org/wiki/File:1985_Suzuki_GS1150E,_rear_%C2%BE_view.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

@@ -63,5 +63,14 @@
    "what": "Parts and know-how for Honda XR dirt bikes."
   }
  ],
- "heroName": "XL600R"
+ "silhouette": "honda-xl600r-1983",
+ "areas": [],
+ "heroName": "XL600R",
+ "hero": {
+  "src": "img/hero/honda-xl600r-1983.jpg",
+  "artist": "No machine-readable author provided. Miocene assumed (based on copyright claims).",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_XL250.JPG",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

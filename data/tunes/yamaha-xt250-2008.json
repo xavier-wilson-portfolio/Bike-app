@@ -65,5 +65,14 @@
  ],
  "known": [],
  "forums": [],
- "heroName": "XT250"
+ "silhouette": "yamaha-xt250-2008",
+ "areas": [],
+ "heroName": "XT250",
+ "hero": {
+  "src": "img/hero/yamaha-xt250-2008.jpg",
+  "artist": "Rikita",
+  "page": "https://commons.wikimedia.org/wiki/File:YAMAHA_SEROW225.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

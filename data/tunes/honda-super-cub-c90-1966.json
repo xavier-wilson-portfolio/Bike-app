@@ -63,5 +63,14 @@
   }
  ],
  "forums": [],
- "heroName": "C90"
+ "silhouette": "honda-super-cub-c90-1966",
+ "areas": [],
+ "heroName": "C90",
+ "hero": {
+  "src": "img/hero/honda-super-cub-c90-1966.jpg",
+  "artist": "Marc Blackburn-Wilson from Leeds, England",
+  "page": "https://commons.wikimedia.org/wiki/File:My_Honda_c90_%27Midnight_Stallion%27_-_Flickr_-_Marc_Wilson-Blackburn.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

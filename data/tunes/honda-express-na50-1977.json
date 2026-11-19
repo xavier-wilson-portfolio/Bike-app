@@ -65,5 +65,14 @@
    "what": "Owner community and wiki for mopeds and small two-strokes."
   }
  ],
- "heroName": "EXPRESS"
+ "silhouette": "honda-express-na50-1977",
+ "areas": [],
+ "heroName": "EXPRESS",
+ "hero": {
+  "src": "img/hero/honda-express-na50-1977.jpg",
+  "artist": "User Jax184 on en.wikipedia",
+  "page": "https://commons.wikimedia.org/wiki/File:1982_Honda_Express.jpg",
+  "lic": "CC BY-SA 2.5",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.5"
+ }
 }

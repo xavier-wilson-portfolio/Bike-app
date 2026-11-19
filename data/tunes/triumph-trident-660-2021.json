@@ -81,5 +81,14 @@
    "what": "Owner forum for modern and classic Triumphs."
   }
  ],
- "heroName": "TRIDENT 660"
+ "silhouette": "triumph-trident-660-2021",
+ "areas": [],
+ "heroName": "TRIDENT 660",
+ "hero": {
+  "src": "img/hero/triumph-trident-660-2021.jpg",
+  "artist": "PackMecEng",
+  "page": "https://commons.wikimedia.org/wiki/File:2022_Triumph_Trident_660.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

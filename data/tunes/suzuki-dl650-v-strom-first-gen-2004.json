@@ -58,5 +58,14 @@
    "what": "Owner forum for Suzuki V-Strom models."
   }
  ],
- "heroName": "V-STROM"
+ "silhouette": "suzuki-dl650-v-strom-first-gen-2004",
+ "areas": [],
+ "heroName": "V-STROM",
+ "hero": {
+  "src": "img/hero/suzuki-dl650-v-strom-first-gen-2004.jpg",
+  "artist": "Alex McClung from Orlando, FL, USA",
+  "page": "https://commons.wikimedia.org/wiki/File:Red_2005_Suzuki_V-Strom_650.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

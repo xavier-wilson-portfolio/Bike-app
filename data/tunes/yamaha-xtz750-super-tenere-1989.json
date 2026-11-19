@@ -55,5 +55,14 @@
    "what": "Large adventure riding forum with model-specific threads."
   }
  ],
- "heroName": "SUPER TENERE"
+ "silhouette": "yamaha-xtz750-super-tenere-1989",
+ "areas": [],
+ "heroName": "SUPER TENERE",
+ "hero": {
+  "src": "img/hero/yamaha-xtz750-super-tenere-1989.jpg",
+  "artist": "LargeNewt",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_Tenere_XTZ660.jpg",
+  "lic": "CC BY 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by/3.0"
+ }
 }

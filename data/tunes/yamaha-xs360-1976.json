@@ -55,5 +55,14 @@
    "what": "Owner forum for the Yamaha XS400."
   }
  ],
- "heroName": "XS360"
+ "silhouette": "yamaha-xs360-1976",
+ "areas": [],
+ "heroName": "XS360",
+ "hero": {
+  "src": "img/hero/yamaha-xs360-1976.jpg",
+  "artist": "Fmaschek Felix Maschek, Hamburg",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_XS-400.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }
