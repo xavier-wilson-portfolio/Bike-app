@@ -1,0 +1,63 @@
+{
+ "id": "yamaha-yz400f-yz426f-1998",
+ "make": "Yamaha",
+ "model": "YZ400F / YZ426F",
+ "name": "Yamaha YZ400F / YZ426F",
+ "years": [
+  1998,
+  2002
+ ],
+ "match": [
+  "yz400f",
+  "yz426f",
+  "yz 400 f",
+  "yz 426 f"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "399 or 426 cc liquid-cooled five-valve single",
+ "intro": "The four-stroke motocross bikes that started the modern four-stroke era. Hot starting takes practice.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Hot start",
+   "Learn it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Four-stroke motocross engines need frequent valve checks and oil changes. Follow the hour-based schedule in the manual, not the calendar."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Yamaha dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "YZ426F"
+}

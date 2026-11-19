@@ -1,0 +1,59 @@
+{
+ "id": "suzuki-xf650-freewind-1997",
+ "make": "Suzuki",
+ "model": "XF650 Freewind",
+ "name": "Suzuki XF650 Freewind",
+ "years": [
+  1997,
+  2002
+ ],
+ "match": [
+  "freewind",
+  "xf650",
+  "xf 650"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "644 cc air/oil-cooled four-valve single",
+ "intro": "A road-biased single with the DR650 engine. Sold in Europe.",
+ "focus": [
+  [
+   "Single",
+   "Air/oil-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check stator"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Suzuki dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "FREEWIND"
+}

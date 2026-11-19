@@ -1,0 +1,62 @@
+{
+ "id": "yamaha-tdr250-1988",
+ "make": "Yamaha",
+ "model": "TDR250",
+ "name": "Yamaha TDR250",
+ "years": [
+  1988,
+  1990
+ ],
+ "match": [
+  "tdr250",
+  "tdr 250"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 cc liquid-cooled two-stroke twin from the TZR",
+ "intro": "A road-biased trail bike with a two-stroke twin.",
+ "focus": [
+  [
+   "Two-stroke twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Oil injection",
+   "Bleed the pump"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Power valve",
+   "Clean it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Yamaha dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "TDR250"
+}

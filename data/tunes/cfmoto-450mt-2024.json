@@ -1,0 +1,58 @@
+{
+ "id": "cfmoto-450mt-2024",
+ "make": "CFMoto",
+ "model": "450MT",
+ "name": "CFMoto 450MT",
+ "years": [
+  2024,
+  2026
+ ],
+ "match": [
+  "450mt",
+  "450 mt",
+  "cfmoto 450mt"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "449 cc liquid-cooled parallel twin",
+ "intro": "A light adventure bike with a 21-inch front.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "450MT"
+}

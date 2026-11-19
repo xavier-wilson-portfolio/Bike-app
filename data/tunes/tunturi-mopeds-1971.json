@@ -1,0 +1,64 @@
+{
+ "id": "tunturi-mopeds-1971",
+ "make": "Tunturi",
+ "model": "Mopeds",
+ "name": "Tunturi Mopeds",
+ "years": [
+  1971,
+  1987
+ ],
+ "match": [
+  "tunturi",
+  "tunturi sport",
+  "tunturi moped"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "49 cc two-stroke moped",
+ "intro": "Finnish mopeds, including the Tunturi Sport.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "heroName": "TUNTURI"
+}

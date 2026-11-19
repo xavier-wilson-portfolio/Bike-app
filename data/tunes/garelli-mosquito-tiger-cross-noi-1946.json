@@ -1,0 +1,65 @@
+{
+ "id": "garelli-mosquito-tiger-cross-noi-1946",
+ "make": "Garelli",
+ "model": "Mosquito / Tiger Cross / Noi",
+ "name": "Garelli Mosquito / Tiger Cross / Noi",
+ "years": [
+  1946,
+  1990
+ ],
+ "match": [
+  "mosquito",
+  "tiger cross",
+  "garelli noi",
+  "garelli 50 sport"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "38 to 125 cc two-stroke single",
+ "intro": "Garelli's clip-on engine, mopeds and small sport bikes.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "heroName": "MOSQUITO"
+}

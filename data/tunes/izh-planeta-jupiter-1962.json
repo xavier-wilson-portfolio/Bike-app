@@ -1,0 +1,66 @@
+{
+ "id": "izh-planeta-jupiter-1962",
+ "make": "IZH",
+ "model": "Planeta / Jupiter",
+ "name": "IZH Planeta / Jupiter",
+ "years": [
+  1962,
+  2008
+ ],
+ "match": [
+  "planeta",
+  "jupiter",
+  "izh planeta",
+  "izh jupiter",
+  "izh 350"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "346 cc two-stroke single (Planeta) or twin (Jupiter)",
+ "intro": "Russian two-strokes from Izhevsk, simple and tough.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "PLANETA"
+}

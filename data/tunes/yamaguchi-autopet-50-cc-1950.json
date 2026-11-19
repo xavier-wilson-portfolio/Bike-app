@@ -1,0 +1,64 @@
+{
+ "id": "yamaguchi-autopet-50-cc-1950",
+ "make": "Yamaguchi",
+ "model": "Autopet / 50 cc",
+ "name": "Yamaguchi Autopet / 50 cc",
+ "years": [
+  1950,
+  1963
+ ],
+ "match": [
+  "yamaguchi",
+  "autopet",
+  "yamaguchi 50"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "49 cc two-stroke moped",
+ "intro": "A Japanese bicycle maker's small motorcycles.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "YAMAGUCHI"
+}

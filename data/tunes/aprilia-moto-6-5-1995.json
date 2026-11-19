@@ -1,0 +1,58 @@
+{
+ "id": "aprilia-moto-6-5-1995",
+ "make": "Aprilia",
+ "model": "Moto 6.5",
+ "name": "Aprilia Moto 6.5",
+ "years": [
+  1995,
+  2001
+ ],
+ "match": [
+  "moto 6.5",
+  "moto6.5",
+  "aprilia 6.5"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "649 cc Rotax five-valve single, Philippe Starck design",
+ "intro": "A Starck-designed single with the Pegaso engine. Odd looking and collected now.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Aprilia has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ApriliaForum",
+   "url": "https://www.apriliaforum.com/",
+   "what": "Owner forum for Aprilia motorcycles."
+  }
+ ],
+ "heroName": "MOTO 6.5"
+}

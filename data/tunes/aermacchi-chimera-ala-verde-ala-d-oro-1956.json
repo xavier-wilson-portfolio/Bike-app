@@ -1,0 +1,60 @@
+{
+ "id": "aermacchi-chimera-ala-verde-ala-d-oro-1956",
+ "make": "Aermacchi",
+ "model": "Chimera / Ala Verde / Ala d'Oro",
+ "name": "Aermacchi Chimera / Ala Verde / Ala d'Oro",
+ "years": [
+  1956,
+  1972
+ ],
+ "match": [
+  "chimera",
+  "ala verde",
+  "ala d'oro",
+  "aermacchi 250"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "175 to 350 cc horizontal OHV single",
+ "intro": "Aermacchi's Italian-market singles, the base of the Harley Sprint.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Set rockers"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "AERMACCHI"
+}

@@ -1,0 +1,64 @@
+{
+ "id": "suzuki-rg125-gamma-1985",
+ "make": "Suzuki",
+ "model": "RG125 Gamma",
+ "name": "Suzuki RG125 Gamma",
+ "years": [
+  1985,
+  1996
+ ],
+ "match": [
+  "rg125",
+  "rg125 gamma",
+  "rg 125",
+  "rg125f"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "124 cc liquid-cooled two-stroke single, power valve",
+ "intro": "A small two-stroke sport bike for European learners.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "CCI",
+   "Check pump"
+  ],
+  [
+   "Power valve",
+   "Clean it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Suzuki's CCI system pumps oil into the engine, so it does not need premix. Check the oil tank, pump and lines. If the pump was removed, it runs premix."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "GSXR.com",
+   "url": "https://www.gsxr.com/",
+   "what": "Owner forum for Suzuki GSX-R models, including the early oil-cooled bikes."
+  }
+ ],
+ "heroName": "RG125"
+}

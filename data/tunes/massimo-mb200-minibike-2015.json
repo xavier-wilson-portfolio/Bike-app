@@ -1,0 +1,59 @@
+{
+ "id": "massimo-mb200-minibike-2015",
+ "make": "Massimo",
+ "model": "MB200 minibike",
+ "name": "Massimo MB200 minibike",
+ "years": [
+  2015,
+  2026
+ ],
+ "match": [
+  "massimo mb200",
+  "massimo minibike",
+  "mb200"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "196 cc Predator-style horizontal engine, minibike",
+ "intro": "A budget minibike sold through farm and tool stores.",
+ "focus": [
+  [
+   "Small engine",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Clutch",
+   "Check it"
+  ],
+  [
+   "Frame",
+   "Check welds"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "MASSIMO"
+}

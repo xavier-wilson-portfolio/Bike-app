@@ -1,0 +1,65 @@
+{
+ "id": "royal-enfield-model-j-g-kx-pre-war-and-1940s-1931",
+ "make": "Royal Enfield",
+ "model": "Model J / G / KX (pre-war and 1940s)",
+ "name": "Royal Enfield Model J / G / KX (pre-war and 1940s)",
+ "years": [
+  1931,
+  1954
+ ],
+ "match": [
+  "model j",
+  "model g",
+  "royal enfield kx",
+  "wd/co",
+  "flying flea"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "346 or 499 cc OHV single or 1140 cc V-twin",
+ "intro": "Pre-war and wartime Redditch Enfields, including the KX V-twin and the WD/CO.",
+ "focus": [
+  [
+   "Engine",
+   "Air-cooled"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Oil",
+   "Check system"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "MODEL G"
+}

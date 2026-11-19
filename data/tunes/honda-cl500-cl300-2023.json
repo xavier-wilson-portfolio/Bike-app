@@ -1,0 +1,60 @@
+{
+ "id": "honda-cl500-cl300-2023",
+ "make": "Honda",
+ "model": "CL500 / CL300",
+ "name": "Honda CL500 / CL300",
+ "years": [
+  2023,
+  2026
+ ],
+ "match": [
+  "cl500",
+  "cl300",
+  "scl500",
+  "cl 500",
+  "cl 300"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "286 cc single or 471 cc twin, liquid-cooled, fuel injected",
+ "intro": "Scrambler-styled versions of the Rebel engines. Light and easy to live with.",
+ "focus": [
+  [
+   "Engine",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "CL500"
+}

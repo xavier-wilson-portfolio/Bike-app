@@ -1,0 +1,64 @@
+{
+ "id": "vespa-t5-1985",
+ "make": "Vespa",
+ "model": "T5",
+ "name": "Vespa T5",
+ "years": [
+  1985,
+  1993
+ ],
+ "match": [
+  "t5",
+  "vespa t5",
+  "pk t5"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "125 cc two-stroke single, five-port cylinder",
+ "intro": "A sporty PX variant with a five-port engine.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix or oil injection",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Gearbox",
+   "Check oil"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Vintage Vespas mix oil into the fuel. Check the ratio for your model before you fill up."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Piaggio has issued recalls on some Vespas in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "T5"
+}

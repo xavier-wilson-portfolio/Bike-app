@@ -1,0 +1,64 @@
+{
+ "id": "yamaha-ym1-305-1965",
+ "make": "Yamaha",
+ "model": "YM1 305",
+ "name": "Yamaha YM1 305",
+ "years": [
+  1965,
+  1967
+ ],
+ "match": [
+  "ym1",
+  "ym-1",
+  "yamaha 305"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "305 cc air-cooled two-stroke parallel twin, Autolube oil injection",
+ "intro": "A bigger version of the YDS twin with Autolube oil injection. Uncommon and collectible.",
+ "focus": [
+  [
+   "Two-stroke twin",
+   "Air-cooled"
+  ],
+  [
+   "Autolube",
+   "Bleed the pump"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "YM1"
+}

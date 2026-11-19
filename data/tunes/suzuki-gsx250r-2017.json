@@ -1,0 +1,58 @@
+{
+ "id": "suzuki-gsx250r-2017",
+ "make": "Suzuki",
+ "model": "GSX250R",
+ "name": "Suzuki GSX250R",
+ "years": [
+  2017,
+  2026
+ ],
+ "match": [
+  "gsx250r",
+  "gsx 250 r",
+  "gsx250"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "248 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "A small faired twin built on the Inazuma engine.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "GSXR.com",
+   "url": "https://www.gsxr.com/",
+   "what": "Owner forum for Suzuki GSX-R models, including the early oil-cooled bikes."
+  }
+ ],
+ "heroName": "GSX250R"
+}

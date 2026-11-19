@@ -1,0 +1,59 @@
+{
+ "id": "mz-1000s-1000sf-2003",
+ "make": "MZ",
+ "model": "1000S / 1000SF",
+ "name": "MZ 1000S / 1000SF",
+ "years": [
+  2003,
+  2008
+ ],
+ "match": [
+  "1000s",
+  "1000sf",
+  "mz 1000",
+  "mz 1000s"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "998 cc liquid-cooled parallel twin",
+ "intro": "MZ's last big bike, built in small numbers before the factory closed.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "MZ 1000S"
+}

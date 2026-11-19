@@ -1,0 +1,65 @@
+{
+ "id": "bmw-r80-r80rt-monolever-1984",
+ "make": "BMW",
+ "model": "R80 / R80RT (monolever)",
+ "name": "BMW R80 / R80RT (monolever)",
+ "years": [
+  1984,
+  1995
+ ],
+ "match": [
+  "r80rt",
+  "r80 monolever",
+  "r 80 rt",
+  "r80 1985",
+  "r80 1990"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "engine": "798 cc air-cooled OHV boxer twin, monolever rear",
+ "intro": "The monolever R80 roadsters and tourers. Reliable, economical and easy to work on.",
+ "focus": [
+  [
+   "Boxer twin",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Set rockers"
+  ],
+  [
+   "Charging",
+   "Check diode board"
+  ],
+  [
+   "Shaft drive",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Boxer twins need the valve clearance checked on both sides and the throttle bodies synced. Do both at the same service."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "BMW has issued several recalls across these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Airheads Beemer Club",
+   "url": "https://www.airheads.org/",
+   "what": "Tech library and owner club for BMW airhead twins."
+  }
+ ],
+ "heroName": "R80RT"
+}

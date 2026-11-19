@@ -1,0 +1,63 @@
+{
+ "id": "yamaha-sdr200-1987",
+ "make": "Yamaha",
+ "model": "SDR200",
+ "name": "Yamaha SDR200",
+ "years": [
+  1987,
+  1989
+ ],
+ "match": [
+  "sdr200",
+  "sdr",
+  "sdr 200"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "195 cc liquid-cooled two-stroke single, trellis frame",
+ "intro": "A light Japanese two-stroke with a chrome trellis frame.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "Oil injection",
+   "Bleed the pump"
+  ],
+  [
+   "Power valve",
+   "Clean it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "heroName": "SDR200"
+}

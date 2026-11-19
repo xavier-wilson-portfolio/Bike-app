@@ -1,0 +1,62 @@
+{
+ "id": "yamaha-fzr750r-ow01-1989",
+ "make": "Yamaha",
+ "model": "FZR750R OW01",
+ "name": "Yamaha FZR750R OW01",
+ "years": [
+  1989,
+  1990
+ ],
+ "match": [
+  "ow01",
+  "fzr750r",
+  "fzr 750 r"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "749 cc liquid-cooled 20-valve inline four, EXUP",
+ "intro": "Yamaha's World Superbike homologation special. Rare.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "heroName": "OW01"
+}

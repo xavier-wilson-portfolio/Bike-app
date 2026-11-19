@@ -1,0 +1,59 @@
+{
+ "id": "yamaha-xv700-virago-1984",
+ "make": "Yamaha",
+ "model": "XV700 Virago",
+ "name": "Yamaha XV700 Virago",
+ "years": [
+  1984,
+  1987
+ ],
+ "match": [
+  "xv700",
+  "virago 700",
+  "xv 700"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "699 cc air-cooled V-twin, shaft drive",
+ "intro": "The 700 Virago sold in the US to avoid the tariff on bigger bikes.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Starter",
+   "Check gear"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Shaft drive",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Virago Tech forum",
+   "url": "http://viragotechforum.com/",
+   "what": "Owner forum for Yamaha Viragos."
+  }
+ ],
+ "heroName": "VIRAGO 700"
+}

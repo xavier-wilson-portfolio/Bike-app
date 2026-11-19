@@ -1,0 +1,67 @@
+{
+ "id": "yamaha-rd250lc-rd350lc-1980",
+ "make": "Yamaha",
+ "model": "RD250LC / RD350LC",
+ "name": "Yamaha RD250LC / RD350LC",
+ "years": [
+  1980,
+  1983
+ ],
+ "match": [
+  "rd350lc",
+  "rd250lc",
+  "rd 350 lc",
+  "rd 250 lc",
+  "4l0",
+  "4l1"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "247 or 347 cc liquid-cooled two-stroke parallel twin, Autolube",
+ "intro": "The liquid-cooled RD twins sold in Europe, Canada and elsewhere. The 350LC led to the RZ350 in the US.",
+ "focus": [
+  [
+   "Two-stroke twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Autolube",
+   "Bleed the pump"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Cooling",
+   "Coolant check"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XJBikes forum",
+   "url": "https://www.xjbikes.com/forums/",
+   "what": "Owner forum for Yamaha XJ, Seca, Maxim and Radian fours."
+  }
+ ],
+ "heroName": "RD350LC"
+}

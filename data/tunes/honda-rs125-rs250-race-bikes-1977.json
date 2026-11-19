@@ -1,0 +1,65 @@
+{
+ "id": "honda-rs125-rs250-race-bikes-1977",
+ "make": "Honda",
+ "model": "RS125 / RS250 race bikes",
+ "name": "Honda RS125 / RS250 race bikes",
+ "years": [
+  1977,
+  2010
+ ],
+ "match": [
+  "rs125",
+  "rs250",
+  "rs 125 r",
+  "rs 250 r",
+  "nf4"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "124 or 249 cc liquid-cooled two-stroke racer",
+ "intro": "Honda's production Grand Prix race bikes.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Top end",
+   "Check by hours"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "VFRDiscussion",
+   "url": "https://www.vfrdiscussion.com/",
+   "what": "Owner forum for Honda VFR and Interceptor models."
+  }
+ ],
+ "heroName": "RS125"
+}

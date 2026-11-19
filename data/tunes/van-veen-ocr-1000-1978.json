@@ -1,0 +1,58 @@
+{
+ "id": "van-veen-ocr-1000-1978",
+ "make": "Van Veen",
+ "model": "OCR 1000",
+ "name": "Van Veen OCR 1000",
+ "years": [
+  1978,
+  1981
+ ],
+ "match": [
+  "van veen",
+  "ocr 1000",
+  "van veen ocr"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "engine": "996 cc twin-rotor Wankel engine",
+ "intro": "A Dutch rotary superbike. Very few were made.",
+ "focus": [
+  [
+   "Rotary engine",
+   "Twin rotor"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Rotor seals",
+   "Check compression"
+  ],
+  [
+   "Cooling",
+   "Check system"
+  ],
+  [
+   "Shaft drive",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "VAN VEEN"
+}

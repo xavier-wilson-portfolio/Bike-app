@@ -1,0 +1,65 @@
+{
+ "id": "yamaha-rd500lc-rzv500r-1984",
+ "make": "Yamaha",
+ "model": "RD500LC / RZV500R",
+ "name": "Yamaha RD500LC / RZV500R",
+ "years": [
+  1984,
+  1986
+ ],
+ "match": [
+  "rd500",
+  "rd500lc",
+  "rzv500",
+  "rzv500r",
+  "rz500"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "499 cc liquid-cooled two-stroke V4, power valves",
+ "intro": "Yamaha's road-going V4 two-stroke based on its GP bikes. Rare and valuable, with parts to match.",
+ "focus": [
+  [
+   "Two-stroke V4",
+   "Liquid-cooled"
+  ],
+  [
+   "Power valves",
+   "Clean them"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Cooling",
+   "Coolant check"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XJBikes forum",
+   "url": "https://www.xjbikes.com/forums/",
+   "what": "Owner forum for Yamaha XJ, Seca, Maxim and Radian fours."
+  }
+ ],
+ "heroName": "RD500LC"
+}

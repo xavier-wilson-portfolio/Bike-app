@@ -1,0 +1,59 @@
+{
+ "id": "honda-dax-125-st125-2023",
+ "make": "Honda",
+ "model": "Dax 125 (ST125)",
+ "name": "Honda Dax 125 (ST125)",
+ "years": [
+  2023,
+  2026
+ ],
+ "match": [
+  "dax 125",
+  "st125",
+  "dax125"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "124 cc air-cooled single, fuel injected, four-speed",
+ "intro": "The modern Dax with a pressed-steel T-frame. Small, simple and fun.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Clutch",
+   "Auto clutch"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "DAX 125"
+}

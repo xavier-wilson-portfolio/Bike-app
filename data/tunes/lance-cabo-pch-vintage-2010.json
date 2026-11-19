@@ -1,0 +1,57 @@
+{
+ "id": "lance-cabo-pch-vintage-2010",
+ "make": "Lance",
+ "model": "Cabo / PCH / Vintage",
+ "name": "Lance Cabo / PCH / Vintage",
+ "years": [
+  2010,
+  2026
+ ],
+ "match": [
+  "lance cabo",
+  "lance pch",
+  "lance vintage",
+  "cabo 200"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 to 200 cc single",
+ "intro": "Taiwanese-built scooters sold in the US.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ],
+  [
+   "Body panels",
+   "Check clips"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "LANCE"
+}

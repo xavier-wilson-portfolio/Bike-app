@@ -1,0 +1,66 @@
+{
+ "id": "husqvarna-wr-cr-125-360-italian-two-stroke-1988",
+ "make": "Husqvarna",
+ "model": "WR / CR 125-360 (Italian two-stroke)",
+ "name": "Husqvarna WR / CR 125-360 (Italian two-stroke)",
+ "years": [
+  1988,
+  2013
+ ],
+ "match": [
+  "wr250 1995",
+  "wr360",
+  "cr125 husqvarna",
+  "wre125",
+  "cr 250 2005",
+  "wr 300"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "124 to 349 cc liquid-cooled two-stroke single, premix",
+ "intro": "The Cagiva-era Husqvarna two-strokes built in Varese.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Power valve",
+   "Clean it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Husqvarna dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "WR300"
+}

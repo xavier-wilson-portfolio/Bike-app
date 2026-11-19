@@ -1,0 +1,60 @@
+{
+ "id": "honda-cb125f-glr125-2015",
+ "make": "Honda",
+ "model": "CB125F / GLR125",
+ "name": "Honda CB125F / GLR125",
+ "years": [
+  2015,
+  2026
+ ],
+ "match": [
+  "cb125f",
+  "glr125",
+  "cb 125 f",
+  "glr 125"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "124 cc air-cooled single, fuel injected",
+ "intro": "A plain air-cooled commuter single. Cheap, frugal and easy to work on.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "CB125F"
+}

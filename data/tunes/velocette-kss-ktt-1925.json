@@ -1,0 +1,67 @@
+{
+ "id": "velocette-kss-ktt-1925",
+ "make": "Velocette",
+ "model": "KSS / KTT",
+ "name": "Velocette KSS / KTT",
+ "years": [
+  1925,
+  1948
+ ],
+ "match": [
+  "kss",
+  "ktt",
+  "velocette kss",
+  "velocette ktt"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "348 cc OHC single, bevel-driven cam",
+ "intro": "Velocette's overhead-cam 350s, road and racing versions.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Bevel drive",
+   "Check gears"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ],
+  "K": [
+   "The gearbox is separate from the engine and has its own oil. Check and change both, and set the primary chain."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "KSS"
+}

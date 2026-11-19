@@ -1,0 +1,66 @@
+{
+ "id": "zundapp-ks-50-ks-125-gts-50-1963",
+ "make": "Zundapp",
+ "model": "KS 50 / KS 125 / GTS 50",
+ "name": "Zundapp KS 50 / KS 125 / GTS 50",
+ "years": [
+  1963,
+  1984
+ ],
+ "match": [
+  "ks 50",
+  "ks 125",
+  "gts 50",
+  "ks50",
+  "ks125"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "49 to 124 cc two-stroke single",
+ "intro": "Small sporty Zundapp two-strokes, very popular with German teens.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air or liquid cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "KS 50"
+}

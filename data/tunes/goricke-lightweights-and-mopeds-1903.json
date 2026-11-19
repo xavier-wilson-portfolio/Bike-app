@@ -1,0 +1,63 @@
+{
+ "id": "goricke-lightweights-and-mopeds-1903",
+ "make": "Goricke",
+ "model": "Lightweights and mopeds",
+ "name": "Goricke Lightweights and mopeds",
+ "years": [
+  1903,
+  1962
+ ],
+ "match": [
+  "goricke",
+  "goericke"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "Two-stroke singles, Sachs and ILO engines",
+ "intro": "A Bielefeld maker of bicycles and light motorcycles.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "GORICKE"
+}

@@ -1,0 +1,65 @@
+{
+ "id": "twn-boss-cornet-contessa-1953",
+ "make": "TWN",
+ "model": "Boss / Cornet / Contessa",
+ "name": "TWN Boss / Cornet / Contessa",
+ "years": [
+  1953,
+  1957
+ ],
+ "match": [
+  "twn boss",
+  "twn cornet",
+  "contessa",
+  "twn"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "197 to 344 cc split-single two-stroke",
+ "intro": "German Triumph (TWN) two-strokes with the split-single engine.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "TWN"
+}

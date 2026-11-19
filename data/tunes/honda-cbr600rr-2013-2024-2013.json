@@ -1,0 +1,59 @@
+{
+ "id": "honda-cbr600rr-2013-2024-2013",
+ "make": "Honda",
+ "model": "CBR600RR (2013-2024)",
+ "name": "Honda CBR600RR (2013-2024)",
+ "years": [
+  2013,
+  2024
+ ],
+ "match": [
+  "cbr600rr",
+  "cbr 600 rr",
+  "cbr600rr abs",
+  "pc40"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "599 cc liquid-cooled DOHC inline four, fuel injected",
+ "intro": "The later CBR600RR with updated bodywork and, from 2021, ride-by-wire electronics in some markets.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "CBR Forum",
+   "url": "https://www.cbrforum.com/",
+   "what": "Owner forum for Honda CBR models."
+  }
+ ],
+ "heroName": "CBR600RR"
+}

@@ -1,0 +1,60 @@
+{
+ "id": "yamaha-fz16-fz-s-asia-2008",
+ "make": "Yamaha",
+ "model": "FZ16 / FZ-S (Asia)",
+ "name": "Yamaha FZ16 / FZ-S (Asia)",
+ "years": [
+  2008,
+  2026
+ ],
+ "match": [
+  "fz16",
+  "fz-s",
+  "fz s",
+  "fz-s v3"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "149 or 153 cc air-cooled single",
+ "intro": "A small naked commuter sold in India and Latin America.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "heroName": "FZ16"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "yamaha-td-tr-tz-road-racers-1962",
+ "make": "Yamaha",
+ "model": "TD / TR / TZ road racers",
+ "name": "Yamaha TD / TR / TZ road racers",
+ "years": [
+  1962,
+  2010
+ ],
+ "match": [
+  "tz250",
+  "tz350",
+  "td1",
+  "tr2",
+  "tz750",
+  "td2"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "125 to 750 cc two-stroke racers",
+ "intro": "Yamaha's production road racers, from the TD1 to the TZ250.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air or liquid cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carbs",
+   "Clean and jet"
+  ],
+  [
+   "Top end",
+   "Check by hours"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XJBikes forum",
+   "url": "https://www.xjbikes.com/forums/",
+   "what": "Owner forum for Yamaha XJ, Seca, Maxim and Radian fours."
+  }
+ ],
+ "heroName": "TZ250"
+}

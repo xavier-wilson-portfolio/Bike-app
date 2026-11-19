@@ -1,0 +1,62 @@
+{
+ "id": "suzuki-gsx1100f-katana-1988",
+ "make": "Suzuki",
+ "model": "GSX1100F Katana",
+ "name": "Suzuki GSX1100F Katana",
+ "years": [
+  1988,
+  1993
+ ],
+ "match": [
+  "gsx1100f",
+  "gsx 1100 f",
+  "katana 1100 1990"
+ ],
+ "style": "touring",
+ "drive": "chain",
+ "engine": "1127 cc oil-cooled inline four, adjustable screen",
+ "intro": "A big sport tourer with the GSX-R1100 engine and a powered windscreen.",
+ "focus": [
+  [
+   "Inline four",
+   "Oil-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Oil cooler",
+   "Check lines"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Suzuki Forums",
+   "url": "https://www.suzuki-forums.com/forums/",
+   "what": "General owner forum for Suzuki motorcycles."
+  }
+ ],
+ "heroName": "GSX1100F"
+}

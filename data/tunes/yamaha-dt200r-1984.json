@@ -1,0 +1,64 @@
+{
+ "id": "yamaha-dt200r-1984",
+ "make": "Yamaha",
+ "model": "DT200R",
+ "name": "Yamaha DT200R",
+ "years": [
+  1984,
+  1990
+ ],
+ "match": [
+  "dt200r",
+  "dt200",
+  "dt 200",
+  "dt200 wr"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "195 cc liquid-cooled two-stroke single, YPVS power valve",
+ "intro": "A liquid-cooled two-stroke enduro with a power valve and monoshock. Quick and light.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "Power valve",
+   "Clean it"
+  ],
+  [
+   "Autolube",
+   "Bleed the pump"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Yamaha dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Enduros forum",
+   "url": "https://www.yamaha-enduros.com/",
+   "what": "Owner forum for vintage Yamaha two-stroke enduros."
+  }
+ ],
+ "heroName": "DT200R"
+}

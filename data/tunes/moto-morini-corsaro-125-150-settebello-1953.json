@@ -1,0 +1,60 @@
+{
+ "id": "moto-morini-corsaro-125-150-settebello-1953",
+ "make": "Moto Morini",
+ "model": "Corsaro 125 / 150 / Settebello",
+ "name": "Moto Morini Corsaro 125 / 150 / Settebello",
+ "years": [
+  1953,
+  1970
+ ],
+ "match": [
+  "corsaro 125",
+  "corsaro 150",
+  "settebello",
+  "morini corsarino"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "125 to 175 cc OHV single",
+ "intro": "Moto Morini's small four-strokes of the 1950s and 1960s.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "CORSARO 125"
+}

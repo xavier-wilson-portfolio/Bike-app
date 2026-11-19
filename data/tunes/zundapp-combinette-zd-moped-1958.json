@@ -1,0 +1,65 @@
+{
+ "id": "zundapp-combinette-zd-moped-1958",
+ "make": "Zundapp",
+ "model": "Combinette / ZD moped",
+ "name": "Zundapp Combinette / ZD moped",
+ "years": [
+  1958,
+  1984
+ ],
+ "match": [
+  "combinette",
+  "zd 20",
+  "zd 40",
+  "zundapp moped"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "49 cc two-stroke moped",
+ "intro": "Zundapp's step-through mopeds.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Brakes",
+   "Check drums"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "heroName": "COMBINETTE"
+}

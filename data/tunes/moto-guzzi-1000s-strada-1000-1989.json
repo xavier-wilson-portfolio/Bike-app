@@ -1,0 +1,64 @@
+{
+ "id": "moto-guzzi-1000s-strada-1000-1989",
+ "make": "Moto Guzzi",
+ "model": "1000S / Strada 1000",
+ "name": "Moto Guzzi 1000S / Strada 1000",
+ "years": [
+  1989,
+  1993
+ ],
+ "match": [
+  "1000s",
+  "1000 s",
+  "guzzi 1000s",
+  "strada 1000"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "949 cc air-cooled V-twin",
+ "intro": "Retro-styled big-block Guzzis built in small numbers.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Set rockers"
+  ],
+  [
+   "Dry clutch",
+   "Check it"
+  ],
+  [
+   "Shaft drive",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Guzzi V-twins need the valves set and the throttle bodies or carbs balanced together. Do both at the same service."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moto Guzzi National Owners Club",
+   "url": "https://www.mgnoc.org/",
+   "what": "US owner club for Moto Guzzi."
+  }
+ ],
+ "heroName": "1000S"
+}

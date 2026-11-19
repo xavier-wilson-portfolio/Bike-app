@@ -1,0 +1,62 @@
+{
+ "id": "honda-xl175-1973",
+ "make": "Honda",
+ "model": "XL175",
+ "name": "Honda XL175",
+ "years": [
+  1973,
+  1978
+ ],
+ "match": [
+  "xl175",
+  "xl 175"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "173 cc air-cooled SOHC single",
+ "intro": "A middle-size Honda dual sport between the XL125 and XL250. Simple and tough.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XR's Only",
+   "url": "https://www.xrsonly.com/",
+   "what": "Parts and know-how for Honda XR dirt bikes."
+  }
+ ],
+ "heroName": "XL175"
+}

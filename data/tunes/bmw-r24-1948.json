@@ -1,0 +1,59 @@
+{
+ "id": "bmw-r24-1948",
+ "make": "BMW",
+ "model": "R24",
+ "name": "BMW R24",
+ "years": [
+  1948,
+  1950
+ ],
+ "match": [
+  "r24",
+  "r 24",
+  "bmw r24"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "247 cc OHV single, shaft drive",
+ "intro": "BMW's first post-war motorcycle. A single with shaft drive and a rigid frame.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Set rockers"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Shaft drive",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Airheads Beemer Club",
+   "url": "https://www.airheads.org/",
+   "what": "Tech library and owner club for BMW airhead twins."
+  }
+ ],
+ "heroName": "R24"
+}

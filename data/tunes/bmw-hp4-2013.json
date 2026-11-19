@@ -1,0 +1,58 @@
+{
+ "id": "bmw-hp4-2013",
+ "make": "BMW",
+ "model": "HP4",
+ "name": "BMW HP4",
+ "years": [
+  2013,
+  2014
+ ],
+ "match": [
+  "hp4",
+  "hp 4",
+  "bmw hp4"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "999 cc liquid-cooled inline four with dynamic damping",
+ "intro": "A lighter, higher-spec S1000RR with semi-active suspension.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Ride-by-wire"
+  ],
+  [
+   "DDC",
+   "Check codes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "BMW has issued several recalls across these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BMW MOA forum",
+   "url": "https://forums.bmwmoa.org/",
+   "what": "BMW Motorcycle Owners of America forum."
+  }
+ ],
+ "heroName": "HP4"
+}

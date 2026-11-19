@@ -1,0 +1,58 @@
+{
+ "id": "honda-vt500e-1983",
+ "make": "Honda",
+ "model": "VT500E",
+ "name": "Honda VT500E",
+ "years": [
+  1983,
+  1988
+ ],
+ "match": [
+  "vt500e",
+  "vt 500 e",
+  "vt500 euro"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "491 cc liquid-cooled V-twin, twin carbs, shaft drive",
+ "intro": "The European sport standard version of the Ascot VT500 engine. Shaft drive and a small fairing.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Cam chains",
+   "Check tensioners"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Shaft drive",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "VT500E"
+}

@@ -1,0 +1,63 @@
+{
+ "id": "honda-ss50-1967",
+ "make": "Honda",
+ "model": "SS50",
+ "name": "Honda SS50",
+ "years": [
+  1967,
+  1982
+ ],
+ "match": [
+  "ss50",
+  "ss 50",
+  "ss50z"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "49 cc air-cooled OHC single, sport moped",
+ "intro": "A small sporty Honda sold in Europe and Asia. A first bike for many teenagers.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Six-volt",
+   "Check charging"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "SS50"
+}

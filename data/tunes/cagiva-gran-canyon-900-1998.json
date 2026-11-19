@@ -1,0 +1,62 @@
+{
+ "id": "cagiva-gran-canyon-900-1998",
+ "make": "Cagiva",
+ "model": "Gran Canyon 900",
+ "name": "Cagiva Gran Canyon 900",
+ "years": [
+  1998,
+  2002
+ ],
+ "match": [
+  "gran canyon",
+  "gran canyon 900"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "904 cc air-cooled Ducati V-twin, fuel injected",
+ "intro": "An adventure tourer with the Ducati 900SS engine.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Timing belts",
+   "Change by date"
+  ],
+  [
+   "Desmo valves",
+   "Shim check"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Ducati timing belts are changed by time as well as miles. If you can't prove when they were done, do them before riding."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "GRAN CANYON"
+}

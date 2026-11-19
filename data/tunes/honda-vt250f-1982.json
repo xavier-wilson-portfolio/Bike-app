@@ -1,0 +1,59 @@
+{
+ "id": "honda-vt250f-1982",
+ "make": "Honda",
+ "model": "VT250F",
+ "name": "Honda VT250F",
+ "years": [
+  1982,
+  1989
+ ],
+ "match": [
+  "vt250f",
+  "vt 250 f",
+  "vt250fe",
+  "vt250 spada"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "248 cc liquid-cooled 90-degree V-twin, twin carbs",
+ "intro": "A small liquid-cooled V-twin sport bike sold in Japan and Europe. Revvy, reliable and often an import elsewhere.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "VFRDiscussion",
+   "url": "https://www.vfrdiscussion.com/",
+   "what": "Owner forum for Honda VFR and Interceptor models."
+  }
+ ],
+ "heroName": "VT250F"
+}

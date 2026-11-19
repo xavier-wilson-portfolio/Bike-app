@@ -1,0 +1,63 @@
+{
+ "id": "imme-r100-1948",
+ "make": "Imme",
+ "model": "R100",
+ "name": "Imme R100",
+ "years": [
+  1948,
+  1951
+ ],
+ "match": [
+  "imme",
+  "imme r100"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "99 cc two-stroke single, single-sided swingarm",
+ "intro": "A clever lightweight with the engine in the swingarm.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Enclosed chain"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "IMME"
+}

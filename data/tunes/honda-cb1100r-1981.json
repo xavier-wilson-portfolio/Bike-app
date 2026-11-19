@@ -1,0 +1,68 @@
+{
+ "id": "honda-cb1100r-1981",
+ "make": "Honda",
+ "model": "CB1100R",
+ "name": "Honda CB1100R",
+ "years": [
+  1981,
+  1983
+ ],
+ "match": [
+  "cb1100r",
+  "cb 1100 r",
+  "cb1100rb",
+  "cb1100rc",
+  "cb1100rd"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "1062 cc air-cooled DOHC inline four, four carbs",
+ "intro": "Honda's homologation sport bike built for production racing. Mostly sold in Europe and Australia, and valuable today.",
+ "focus": [
+  [
+   "Inline four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Fairing",
+   "Check mounts"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ],
+  "A": [
+   "Many of these are imports. Make sure the title and VIN paperwork match before you put money in."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "VFRDiscussion",
+   "url": "https://www.vfrdiscussion.com/",
+   "what": "Owner forum for Honda VFR and Interceptor models."
+  }
+ ],
+ "heroName": "CB1100R"
+}

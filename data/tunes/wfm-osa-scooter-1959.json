@@ -1,0 +1,65 @@
+{
+ "id": "wfm-osa-scooter-1959",
+ "make": "WFM",
+ "model": "Osa scooter",
+ "name": "WFM Osa scooter",
+ "years": [
+  1959,
+  1965
+ ],
+ "match": [
+  "osa",
+  "wfm osa",
+  "osa m50",
+  "osa m52"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "150 or 175 cc two-stroke single",
+ "intro": "A Polish scooter used in rallies.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Enclosed chain"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "OSA"
+}

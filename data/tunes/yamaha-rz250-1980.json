@@ -1,0 +1,63 @@
+{
+ "id": "yamaha-rz250-1980",
+ "make": "Yamaha",
+ "model": "RZ250",
+ "name": "Yamaha RZ250",
+ "years": [
+  1980,
+  1990
+ ],
+ "match": [
+  "rz250",
+  "rz 250",
+  "rz250r"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "247 cc liquid-cooled two-stroke parallel twin",
+ "intro": "The Japanese name for the liquid-cooled 250 twin. Often an import outside Japan.",
+ "focus": [
+  [
+   "Two-stroke twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Autolube",
+   "Bleed the pump"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Cooling",
+   "Coolant check"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XJBikes forum",
+   "url": "https://www.xjbikes.com/forums/",
+   "what": "Owner forum for Yamaha XJ, Seca, Maxim and Radian fours."
+  }
+ ],
+ "heroName": "RZ250"
+}

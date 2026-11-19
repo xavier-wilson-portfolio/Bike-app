@@ -1,0 +1,66 @@
+{
+ "id": "vespa-gs150-gs160-1955",
+ "make": "Vespa",
+ "model": "GS150 / GS160",
+ "name": "Vespa GS150 / GS160",
+ "years": [
+  1955,
+  1964
+ ],
+ "match": [
+  "gs150",
+  "gs160",
+  "gs 150",
+  "gs 160",
+  "vespa gs"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "145 or 158 cc two-stroke single, premix",
+ "intro": "The sporty Gran Sport Vespas, valuable today.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Gearbox",
+   "Check oil"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Vintage Vespas mix oil into the fuel. Check the ratio for your model before you fill up."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Owner forum for Vespa scooters, classic and modern."
+  }
+ ],
+ "heroName": "VESPA GS"
+}

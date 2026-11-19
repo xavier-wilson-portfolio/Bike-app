@@ -1,0 +1,60 @@
+{
+ "id": "yamaha-tt350-tt225-1986",
+ "make": "Yamaha",
+ "model": "TT350 / TT225",
+ "name": "Yamaha TT350 / TT225",
+ "years": [
+  1986,
+  1987
+ ],
+ "match": [
+  "tt350",
+  "tt225",
+  "tt 350",
+  "tt 225"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "346 or 223 cc air-cooled four-valve single",
+ "intro": "Off-road versions of the XT350 and XT225 engines. Simple four-stroke trail bikes.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Air filter",
+   "Clean it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Yamaha dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "TT350"
+}

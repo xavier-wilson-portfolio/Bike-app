@@ -1,0 +1,59 @@
+{
+ "id": "tvs-ronin-2022",
+ "make": "TVS",
+ "model": "Ronin",
+ "name": "TVS Ronin",
+ "years": [
+  2022,
+  2026
+ ],
+ "match": [
+  "ronin",
+  "tvs ronin",
+  "ronin 225"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "225 cc air/oil-cooled single",
+ "intro": "A neo-retro roadster from TVS.",
+ "focus": [
+  [
+   "Single",
+   "Air/oil-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "RONIN"
+}

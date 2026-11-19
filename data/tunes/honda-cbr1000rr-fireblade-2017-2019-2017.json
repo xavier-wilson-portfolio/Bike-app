@@ -1,0 +1,60 @@
+{
+ "id": "honda-cbr1000rr-fireblade-2017-2019-2017",
+ "make": "Honda",
+ "model": "CBR1000RR Fireblade (2017-2019)",
+ "name": "Honda CBR1000RR Fireblade (2017-2019)",
+ "years": [
+  2017,
+  2019
+ ],
+ "match": [
+  "cbr1000rr",
+  "fireblade",
+  "cbr 1000 rr",
+  "sc77",
+  "cbr1000rr sp"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "999 cc liquid-cooled DOHC inline four, ride-by-wire, fuel injected",
+ "intro": "The SC77 Fireblade, lighter than before, with ride-by-wire, an IMU and traction control.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Ride-by-wire"
+  ],
+  [
+   "Electronics",
+   "Scan for codes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "CBR Forum",
+   "url": "https://www.cbrforum.com/",
+   "what": "Owner forum for Honda CBR models."
+  }
+ ],
+ "heroName": "FIREBLADE"
+}

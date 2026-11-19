@@ -1,0 +1,59 @@
+{
+ "id": "arch-krgt-1-2015",
+ "make": "Arch",
+ "model": "KRGT-1",
+ "name": "Arch KRGT-1",
+ "years": [
+  2015,
+  2026
+ ],
+ "match": [
+  "krgt-1",
+  "arch krgt",
+  "arch motorcycle"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "2032 cc S&S V-twin",
+ "intro": "A hand-built power cruiser co-founded by Keanu Reeves.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Pushrods",
+   "Check them"
+  ],
+  [
+   "Charging",
+   "Check stator"
+  ],
+  [
+   "Belt drive",
+   "Check tension"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "HDForums",
+   "url": "https://www.hdforums.com/",
+   "what": "Large owner forum for all Harley-Davidson models."
+  }
+ ],
+ "heroName": "ARCH"
+}

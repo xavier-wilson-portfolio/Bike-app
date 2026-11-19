@@ -1,0 +1,59 @@
+{
+ "id": "mz-mastiff-silver-star-500-660-1993",
+ "make": "MZ",
+ "model": "Mastiff / Silver Star 500 / 660",
+ "name": "MZ Mastiff / Silver Star 500 / 660",
+ "years": [
+  1993,
+  2004
+ ],
+ "match": [
+  "mastiff",
+  "silver star",
+  "mz mastiff",
+  "mz silver star"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "494 or 660 cc Rotax or Yamaha single",
+ "intro": "MZ's four-stroke singles with outside engines.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant check"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "MASTIFF"
+}

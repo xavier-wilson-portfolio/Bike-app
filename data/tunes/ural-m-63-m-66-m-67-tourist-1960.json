@@ -1,0 +1,62 @@
+{
+ "id": "ural-m-63-m-66-m-67-tourist-1960",
+ "make": "Ural",
+ "model": "M-63 / M-66 / M-67 / Tourist",
+ "name": "Ural M-63 / M-66 / M-67 / Tourist",
+ "years": [
+  1960,
+  2000
+ ],
+ "match": [
+  "m-63",
+  "m-66",
+  "m-67",
+  "ural tourist",
+  "ural m67",
+  "ural m63"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "649 cc OHV flat twin, sidecar outfit",
+ "intro": "Soviet-era Ural sidecar outfits from Irbit.",
+ "focus": [
+  [
+   "Flat twin",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Set rockers"
+  ],
+  [
+   "Sidecar",
+   "Check alignment"
+  ],
+  [
+   "Shaft drive",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "No recalls found for these years when this course was written. Run your VIN at nhtsa.gov/recalls to be sure.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BMW MOA forum",
+   "url": "https://forums.bmwmoa.org/",
+   "what": "BMW Motorcycle Owners of America forum."
+  }
+ ],
+ "heroName": "URAL"
+}

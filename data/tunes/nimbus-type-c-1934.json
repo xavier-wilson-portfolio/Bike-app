@@ -1,0 +1,60 @@
+{
+ "id": "nimbus-type-c-1934",
+ "make": "Nimbus",
+ "model": "Type C",
+ "name": "Nimbus Type C",
+ "years": [
+  1934,
+  1960
+ ],
+ "match": [
+  "nimbus",
+  "nimbus type c",
+  "bumblebee",
+  "humlebi"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "746 cc inline four, shaft drive",
+ "intro": "Denmark's long-lived inline four, used by the Danish army and post office.",
+ "focus": [
+  [
+   "Inline four",
+   "Air-cooled"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Shaft drive",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "NIMBUS"
+}

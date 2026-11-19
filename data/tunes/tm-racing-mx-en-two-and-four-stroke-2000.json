@@ -1,0 +1,58 @@
+{
+ "id": "tm-racing-mx-en-two-and-four-stroke-2000",
+ "make": "TM Racing",
+ "model": "MX / EN two- and four-stroke",
+ "name": "TM Racing MX / EN two- and four-stroke",
+ "years": [
+  2000,
+  2026
+ ],
+ "match": [
+  "tm 300 en",
+  "tm 250 mx",
+  "tm en 300",
+  "tm mx 450",
+  "tm racing"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "85 to 530 cc liquid-cooled single, two- or four-stroke",
+ "intro": "Small-batch Italian competition bikes from Pesaro.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "Top end",
+   "Check by hours"
+  ],
+  [
+   "Oil",
+   "Change by hours"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "TM"
+}

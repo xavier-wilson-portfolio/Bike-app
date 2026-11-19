@@ -1,0 +1,59 @@
+{
+ "id": "honda-vision-110-2011",
+ "make": "Honda",
+ "model": "Vision 110",
+ "name": "Honda Vision 110",
+ "years": [
+  2011,
+  2026
+ ],
+ "match": [
+  "vision 110",
+  "vision 50",
+  "nsc110"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "108 cc air-cooled single, fuel injected",
+ "intro": "A light, cheap commuter scooter.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check combined"
+  ],
+  [
+   "Body panels",
+   "Check clips"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Honda scooters."
+  }
+ ],
+ "heroName": "VISION"
+}

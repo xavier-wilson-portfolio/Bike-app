@@ -1,0 +1,63 @@
+{
+ "id": "honda-cb750sc-nighthawk-1982-1983-1982",
+ "make": "Honda",
+ "model": "CB750SC Nighthawk (1982-1983)",
+ "name": "Honda CB750SC Nighthawk (1982-1983)",
+ "years": [
+  1982,
+  1983
+ ],
+ "match": [
+  "cb750sc",
+  "nighthawk 750 1982",
+  "cb 750 sc"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "749 cc air-cooled DOHC inline four, hydraulic lifters",
+ "intro": "The first Nighthawk 750, with hydraulic valve adjusters.",
+ "focus": [
+  [
+   "Inline four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Hydraulic lifters",
+   "Check oil"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "CB750.com forum",
+   "url": "https://www.cb750.com/",
+   "what": "Restoration threads and engine rebuild help."
+  }
+ ],
+ "heroName": "NIGHTHAWK"
+}

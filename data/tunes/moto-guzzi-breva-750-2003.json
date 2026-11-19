@@ -1,0 +1,62 @@
+{
+ "id": "moto-guzzi-breva-750-2003",
+ "make": "Moto Guzzi",
+ "model": "Breva 750",
+ "name": "Moto Guzzi Breva 750",
+ "years": [
+  2003,
+  2009
+ ],
+ "match": [
+  "breva 750",
+  "breva v750"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "744 cc air-cooled 90-degree V-twin, fuel injected",
+ "intro": "A small-block Guzzi standard for everyday riding.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Set rockers"
+  ],
+  [
+   "Dry clutch",
+   "Check it"
+  ],
+  [
+   "Shaft drive",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Guzzi V-twins need the valves set and the throttle bodies or carbs balanced together. Do both at the same service."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moto Guzzi National Owners Club",
+   "url": "https://www.mgnoc.org/",
+   "what": "US owner club for Moto Guzzi."
+  }
+ ],
+ "heroName": "BREVA"
+}

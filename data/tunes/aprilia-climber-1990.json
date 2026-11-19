@@ -1,0 +1,62 @@
+{
+ "id": "aprilia-climber-1990",
+ "make": "Aprilia",
+ "model": "Climber",
+ "name": "Aprilia Climber",
+ "years": [
+  1990,
+  1995
+ ],
+ "match": [
+  "climber",
+  "aprilia climber"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "240 to 280 cc two-stroke trials single",
+ "intro": "Aprilia's trials bike, with Rotax engines.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Clutch",
+   "Check plates"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Aprilia has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "TrialsCentral",
+   "url": "https://www.trialscentral.com/",
+   "what": "Forum for trials riders, with sections for most trials makes."
+  }
+ ],
+ "heroName": "CLIMBER"
+}

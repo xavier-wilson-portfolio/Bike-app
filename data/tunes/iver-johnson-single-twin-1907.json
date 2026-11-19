@@ -1,0 +1,62 @@
+{
+ "id": "iver-johnson-single-twin-1907",
+ "make": "Iver Johnson",
+ "model": "Single / twin",
+ "name": "Iver Johnson Single / twin",
+ "years": [
+  1907,
+  1916
+ ],
+ "match": [
+  "iver johnson",
+  "iver johnson motorcycle"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "Single or V-twin with mechanical valves",
+ "intro": "Built by the gun and bicycle maker in Massachusetts.",
+ "focus": [
+  [
+   "Engine",
+   "Air-cooled"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Oil",
+   "Total loss"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Check whether yours has a total-loss or a recirculating oil system before you fill it, and know which one you are running."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "IVER JOHNSON"
+}

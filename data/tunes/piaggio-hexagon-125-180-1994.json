@@ -1,0 +1,64 @@
+{
+ "id": "piaggio-hexagon-125-180-1994",
+ "make": "Piaggio",
+ "model": "Hexagon 125 / 180",
+ "name": "Piaggio Hexagon 125 / 180",
+ "years": [
+  1994,
+  2001
+ ],
+ "match": [
+  "hexagon",
+  "hexagon 180",
+  "hexagon 125",
+  "hexagon gtx"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "124 to 180 cc liquid-cooled two-stroke single",
+ "intro": "One of the first big-body maxi-scooters.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "Oil injection",
+   "Check pump"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "HEXAGON"
+}

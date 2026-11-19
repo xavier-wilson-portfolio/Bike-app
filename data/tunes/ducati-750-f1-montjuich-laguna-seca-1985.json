@@ -1,0 +1,66 @@
+{
+ "id": "ducati-750-f1-montjuich-laguna-seca-1985",
+ "make": "Ducati",
+ "model": "750 F1 / Montjuich / Laguna Seca",
+ "name": "Ducati 750 F1 / Montjuich / Laguna Seca",
+ "years": [
+  1985,
+  1988
+ ],
+ "match": [
+  "750 f1",
+  "montjuich",
+  "laguna seca",
+  "santamonica",
+  "ducati f1"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "748 cc air-cooled belt-drive desmo V-twin",
+ "intro": "A race-bred 750 based on the Pantah engine. The last Ducati of the Cagiva takeover period.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Timing belts",
+   "Change by date"
+  ],
+  [
+   "Desmo valves",
+   "Shim check"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Desmo valve service needs both opening and closing shims checked. Follow the interval in the manual; it is not a job to skip.",
+   "Ducati timing belts are changed by time as well as miles. If you can't prove when they were done, do them before riding."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "heroName": "750 F1"
+}

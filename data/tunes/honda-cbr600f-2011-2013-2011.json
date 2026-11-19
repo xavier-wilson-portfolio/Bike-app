@@ -1,0 +1,58 @@
+{
+ "id": "honda-cbr600f-2011-2013-2011",
+ "make": "Honda",
+ "model": "CBR600F (2011-2013)",
+ "name": "Honda CBR600F (2011-2013)",
+ "years": [
+  2011,
+  2013
+ ],
+ "match": [
+  "cbr600f 2011",
+  "cbr600fa",
+  "cbr 600 f 2012"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "599 cc liquid-cooled inline four from the Hornet, fuel injected",
+ "intro": "A sport-touring 600 for Europe based on the later Hornet.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "ABS",
+   "Check if fitted"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "CBR Forum",
+   "url": "https://www.cbrforum.com/",
+   "what": "Owner forum for Honda CBR models."
+  }
+ ],
+ "heroName": "CBR600F"
+}

@@ -1,0 +1,68 @@
+{
+ "id": "yamaha-tzr250-1986",
+ "make": "Yamaha",
+ "model": "TZR250",
+ "name": "Yamaha TZR250",
+ "years": [
+  1986,
+  1995
+ ],
+ "match": [
+  "tzr250",
+  "tzr 250",
+  "tzr250r",
+  "3ma",
+  "3xv"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "249 cc liquid-cooled two-stroke twin, power valve",
+ "intro": "A small two-stroke sport bike from Japan with race-bike looks. Several engine layouts over the years.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "Power valve",
+   "Clean it"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Cooling",
+   "Coolant check"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ],
+  "A": [
+   "Many of these are imports. Make sure the title and VIN paperwork match before you put money in."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "heroName": "TZR250"
+}

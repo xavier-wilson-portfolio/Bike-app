@@ -1,0 +1,65 @@
+{
+ "id": "piaggio-skipper-nrg-free-1993",
+ "make": "Piaggio",
+ "model": "Skipper / NRG / Free",
+ "name": "Piaggio Skipper / NRG / Free",
+ "years": [
+  1993,
+  2010
+ ],
+ "match": [
+  "skipper",
+  "nrg",
+  "piaggio free",
+  "nrg power",
+  "nrg mc3"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 to 150 cc two-stroke single",
+ "intro": "Sporty and practical small Piaggio scooters.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air or liquid cooled"
+  ],
+  [
+   "Oil injection",
+   "Check pump"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "NRG"
+}

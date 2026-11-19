@@ -1,0 +1,62 @@
+{
+ "id": "suzuki-rmx450z-2010",
+ "make": "Suzuki",
+ "model": "RMX450Z",
+ "name": "Suzuki RMX450Z",
+ "years": [
+  2010,
+  2018
+ ],
+ "match": [
+  "rmx450z",
+  "rmx450",
+  "rmx 450 z"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "449 cc liquid-cooled single, fuel injected",
+ "intro": "An off-road version of the RM-Z450 with lights and an 18-inch rear wheel.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check often"
+  ],
+  [
+   "Oil",
+   "Change by hours"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Four-stroke motocross engines need frequent valve checks and oil changes. Follow the hour-based schedule in the manual, not the calendar."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Suzuki dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "RMX450Z"
+}

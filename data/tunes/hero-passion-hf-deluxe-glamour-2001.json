@@ -1,0 +1,60 @@
+{
+ "id": "hero-passion-hf-deluxe-glamour-2001",
+ "make": "Hero",
+ "model": "Passion / HF Deluxe / Glamour",
+ "name": "Hero Passion / HF Deluxe / Glamour",
+ "years": [
+  2001,
+  2026
+ ],
+ "match": [
+  "passion",
+  "hf deluxe",
+  "glamour",
+  "passion pro"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "97 to 125 cc air-cooled single",
+ "intro": "Hero's everyday commuters, sold in huge numbers.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "PASSION"
+}

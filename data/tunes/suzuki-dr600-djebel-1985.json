@@ -1,0 +1,60 @@
+{
+ "id": "suzuki-dr600-djebel-1985",
+ "make": "Suzuki",
+ "model": "DR600 Djebel",
+ "name": "Suzuki DR600 Djebel",
+ "years": [
+  1985,
+  1989
+ ],
+ "match": [
+  "dr600",
+  "dr 600",
+  "djebel 600",
+  "dr600s"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "589 cc air-cooled four-valve single, oil-cooled head",
+ "intro": "A big single dual sport before the DR650. Sold mostly in Europe.",
+ "focus": [
+  [
+   "Single",
+   "Air/oil-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check stator"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "DR600"
+}

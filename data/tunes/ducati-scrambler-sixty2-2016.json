@@ -1,0 +1,63 @@
+{
+ "id": "ducati-scrambler-sixty2-2016",
+ "make": "Ducati",
+ "model": "Scrambler Sixty2",
+ "name": "Ducati Scrambler Sixty2",
+ "years": [
+  2016,
+  2020
+ ],
+ "match": [
+  "sixty2",
+  "scrambler sixty2",
+  "scrambler 400"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "399 cc air-cooled desmo V-twin, fuel injected",
+ "intro": "The small-bore Scrambler for license-restricted riders.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Timing belts",
+   "Change by date"
+  ],
+  [
+   "Desmo valves",
+   "Shim check"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Ducati timing belts are changed by time as well as miles. If you can't prove when they were done, do them before riding."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Ducati has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "heroName": "SIXTY2"
+}

@@ -1,0 +1,59 @@
+{
+ "id": "morbidelli-n502-t502-c252-2021",
+ "make": "Morbidelli",
+ "model": "N502 / T502 / C252",
+ "name": "Morbidelli N502 / T502 / C252",
+ "years": [
+  2021,
+  2026
+ ],
+ "match": [
+  "morbidelli n502",
+  "morbidelli t502",
+  "c252",
+  "morbidelli 502"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "249 or 500 cc liquid-cooled twin",
+ "intro": "The Morbidelli name on QJ-built twins.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "MORBIDELLI"
+}

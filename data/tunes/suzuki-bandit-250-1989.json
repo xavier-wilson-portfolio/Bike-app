@@ -1,0 +1,62 @@
+{
+ "id": "suzuki-bandit-250-1989",
+ "make": "Suzuki",
+ "model": "Bandit 250",
+ "name": "Suzuki Bandit 250",
+ "years": [
+  1989,
+  2000
+ ],
+ "match": [
+  "bandit 250",
+  "gsf250",
+  "gj74a"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "248 cc liquid-cooled inline four",
+ "intro": "The small Bandit four built for Japan.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Suzuki Forums",
+   "url": "https://www.suzuki-forums.com/forums/",
+   "what": "General owner forum for Suzuki motorcycles."
+  }
+ ],
+ "heroName": "BANDIT 250"
+}

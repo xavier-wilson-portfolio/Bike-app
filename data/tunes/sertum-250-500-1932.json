@@ -1,0 +1,63 @@
+{
+ "id": "sertum-250-500-1932",
+ "make": "Sertum",
+ "model": "250 / 500",
+ "name": "Sertum 250 / 500",
+ "years": [
+  1932,
+  1951
+ ],
+ "match": [
+  "sertum",
+  "sertum 250",
+  "sertum 500"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "250 to 500 cc OHV single or twin",
+ "intro": "A Milan instrument maker's motorcycles, raced in the 1940s.",
+ "focus": [
+  [
+   "Engine",
+   "Air-cooled"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "SERTUM"
+}

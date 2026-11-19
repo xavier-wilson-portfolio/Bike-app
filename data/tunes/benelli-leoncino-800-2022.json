@@ -1,0 +1,57 @@
+{
+ "id": "benelli-leoncino-800-2022",
+ "make": "Benelli",
+ "model": "Leoncino 800",
+ "name": "Benelli Leoncino 800",
+ "years": [
+  2022,
+  2026
+ ],
+ "match": [
+  "leoncino 800",
+  "leoncino 800 trail"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "754 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "A retro-styled naked twin from the Leoncino family.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "LEONCINO"
+}

@@ -1,0 +1,58 @@
+{
+ "id": "yamaha-mt-15-2018",
+ "make": "Yamaha",
+ "model": "MT-15",
+ "name": "Yamaha MT-15",
+ "years": [
+  2018,
+  2026
+ ],
+ "match": [
+  "mt-15",
+  "mt15",
+  "mt 15"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "155 cc liquid-cooled single, fuel injected, VVA",
+ "intro": "A small naked bike sold in Asia and Latin America.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "heroName": "MT-15"
+}

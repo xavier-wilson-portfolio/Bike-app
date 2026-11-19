@@ -1,0 +1,59 @@
+{
+ "id": "voge-300ac-500ac-500r-2020",
+ "make": "Voge",
+ "model": "300AC / 500AC / 500R",
+ "name": "Voge 300AC / 500AC / 500R",
+ "years": [
+  2020,
+  2026
+ ],
+ "match": [
+  "voge 300ac",
+  "voge 500ac",
+  "voge 500r",
+  "300ac"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "292 or 471 cc liquid-cooled single or twin",
+ "intro": "Voge's road and retro bikes built by Loncin.",
+ "focus": [
+  [
+   "Engine",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Many of these were sold under several brand names and may not show up in the NHTSA search. Check with the seller or importer for open recalls.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "VOGE AC"
+}

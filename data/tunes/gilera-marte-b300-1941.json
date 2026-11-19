@@ -1,0 +1,59 @@
+{
+ "id": "gilera-marte-b300-1941",
+ "make": "Gilera",
+ "model": "Marte / B300",
+ "name": "Gilera Marte / B300",
+ "years": [
+  1941,
+  1969
+ ],
+ "match": [
+  "gilera b300",
+  "gilera marte",
+  "b300 extra"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "300 cc twin (B300) or 500 cc single military sidecar (Marte)",
+ "intro": "Gilera's wartime Marte and the post-war B300 twin.",
+ "focus": [
+  [
+   "Engine",
+   "Air-cooled"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain or shaft",
+   "Check drive"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "B300"
+}

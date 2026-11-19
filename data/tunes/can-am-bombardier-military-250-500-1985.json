@@ -1,0 +1,60 @@
+{
+ "id": "can-am-bombardier-military-250-500-1985",
+ "make": "Can-Am",
+ "model": "Bombardier military 250 / 500",
+ "name": "Can-Am Bombardier military 250 / 500",
+ "years": [
+  1985,
+  2000
+ ],
+ "match": [
+  "bombardier",
+  "can-am bombardier",
+  "armstrong mt500",
+  "bombardier 250"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "Rotax four-stroke single, military trail bike",
+ "intro": "Rotax-engined military bikes used by Canada and the UK.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Charging",
+   "Check stator"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "BOMBARDIER"
+}

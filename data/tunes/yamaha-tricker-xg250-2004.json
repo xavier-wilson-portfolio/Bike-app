@@ -1,0 +1,59 @@
+{
+ "id": "yamaha-tricker-xg250-2004",
+ "make": "Yamaha",
+ "model": "Tricker (XG250)",
+ "name": "Yamaha Tricker (XG250)",
+ "years": [
+  2004,
+  2017
+ ],
+ "match": [
+  "tricker",
+  "xg250",
+  "xg 250 tricker"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 cc air-cooled single, fuel injected",
+ "intro": "A light, short trail and trials-style bike from Japan, also sold in Europe.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Yamaha dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "TRICKER"
+}

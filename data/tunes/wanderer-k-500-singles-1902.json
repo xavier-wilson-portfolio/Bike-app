@@ -1,0 +1,63 @@
+{
+ "id": "wanderer-k-500-singles-1902",
+ "make": "Wanderer",
+ "model": "K 500 / singles",
+ "name": "Wanderer K 500 / singles",
+ "years": [
+  1902,
+  1929
+ ],
+ "match": [
+  "wanderer",
+  "wanderer k500",
+  "wanderer motorcycle"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "Singles and V-twins, early shaft-drive K 500",
+ "intro": "Wanderer of Chemnitz, whose motorcycle line went to Jawa.",
+ "focus": [
+  [
+   "Engine",
+   "Air-cooled"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Drive",
+   "Check it"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "WANDERER"
+}

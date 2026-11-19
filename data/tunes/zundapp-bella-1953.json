@@ -1,0 +1,65 @@
+{
+ "id": "zundapp-bella-1953",
+ "make": "Zundapp",
+ "model": "Bella",
+ "name": "Zundapp Bella",
+ "years": [
+  1953,
+  1964
+ ],
+ "match": [
+  "bella",
+  "zundapp bella",
+  "bella 200",
+  "r 200"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "146 to 198 cc two-stroke single",
+ "intro": "A big-wheel German touring scooter. Comfortable and sturdy.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Enclosed chain"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "BELLA"
+}

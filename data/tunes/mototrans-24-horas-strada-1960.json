@@ -1,0 +1,64 @@
+{
+ "id": "mototrans-24-horas-strada-1960",
+ "make": "Mototrans",
+ "model": "24 Horas / Strada",
+ "name": "Mototrans 24 Horas / Strada",
+ "years": [
+  1960,
+  1982
+ ],
+ "match": [
+  "24 horas",
+  "mototrans",
+  "mototrans 250",
+  "strada 250"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "248 to 350 cc Ducati-derived OHC single",
+ "intro": "Ducati singles built under license in Barcelona.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Bevel drive",
+   "Check gears"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "The bevel-drive cams are set with shims and need patience. Check the bevel gear backlash and the desmo shims before you run it hard."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "MOTOTRANS"
+}

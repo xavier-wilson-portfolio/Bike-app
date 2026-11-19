@@ -1,0 +1,56 @@
+{
+ "id": "sym-mio-50-100-2004",
+ "make": "SYM",
+ "model": "Mio 50 / 100",
+ "name": "SYM Mio 50 / 100",
+ "years": [
+  2004,
+  2026
+ ],
+ "match": [
+  "mio",
+  "mio 50",
+  "sym mio"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 or 101 cc air-cooled single",
+ "intro": "SYM's small city scooter.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ],
+  [
+   "Body panels",
+   "Check clips"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "MIO"
+}

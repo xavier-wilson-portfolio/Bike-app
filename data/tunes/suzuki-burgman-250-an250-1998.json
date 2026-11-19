@@ -1,0 +1,58 @@
+{
+ "id": "suzuki-burgman-250-an250-1998",
+ "make": "Suzuki",
+ "model": "Burgman 250 (AN250)",
+ "name": "Suzuki Burgman 250 (AN250)",
+ "years": [
+  1998,
+  2008
+ ],
+ "match": [
+  "burgman 250",
+  "an250",
+  "an 250"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "249 cc liquid-cooled single, CVT",
+ "intro": "The mid-size Burgman sold in Europe and Japan.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "BURGMAN"
+}

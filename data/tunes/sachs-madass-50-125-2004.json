@@ -1,0 +1,59 @@
+{
+ "id": "sachs-madass-50-125-2004",
+ "make": "Sachs",
+ "model": "MadAss 50 / 125",
+ "name": "Sachs MadAss 50 / 125",
+ "years": [
+  2004,
+  2008
+ ],
+ "match": [
+  "madass",
+  "mad ass",
+  "sachs madass"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "49 or 124 cc four-stroke single",
+ "intro": "A quirky small bike with the fuel tank built into the frame.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Tank frame",
+   "Check welds"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "MADASS"
+}

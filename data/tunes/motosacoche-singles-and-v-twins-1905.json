@@ -1,0 +1,63 @@
+{
+ "id": "motosacoche-singles-and-v-twins-1905",
+ "make": "Motosacoche",
+ "model": "Singles and V-twins",
+ "name": "Motosacoche Singles and V-twins",
+ "years": [
+  1905,
+  1957
+ ],
+ "match": [
+  "motosacoche",
+  "mag",
+  "motosacoche 500"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "Side-valve or OHV single or V-twin",
+ "intro": "The Swiss maker of MAG engines and its own motorcycles.",
+ "focus": [
+  [
+   "Engine",
+   "Air-cooled"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "MOTOSACOCHE"
+}

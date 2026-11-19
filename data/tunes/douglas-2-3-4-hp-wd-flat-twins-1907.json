@@ -1,0 +1,66 @@
+{
+ "id": "douglas-2-3-4-hp-wd-flat-twins-1907",
+ "make": "Douglas",
+ "model": "2 3/4 hp / WD flat twins",
+ "name": "Douglas 2 3/4 hp / WD flat twins",
+ "years": [
+  1907,
+  1925
+ ],
+ "match": [
+  "douglas 2 3/4",
+  "douglas wd",
+  "douglas model w"
+ ],
+ "style": "standard",
+ "drive": "belt",
+ "engine": "348 cc side-valve flat twin",
+ "intro": "The early Douglas flat twins, used in huge numbers in World War I.",
+ "focus": [
+  [
+   "Flat twin",
+   "Air-cooled"
+  ],
+  [
+   "Side valves",
+   "Set tappets"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Oil",
+   "Total loss"
+  ],
+  [
+   "Belt drive",
+   "Check tension"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ],
+  "H": [
+   "Check whether yours has a total-loss or a recirculating oil system before you fill it, and know which one you are running."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "DOUGLAS"
+}

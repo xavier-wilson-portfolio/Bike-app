@@ -1,0 +1,63 @@
+{
+ "id": "honda-cj360t-1976",
+ "make": "Honda",
+ "model": "CJ360T",
+ "name": "Honda CJ360T",
+ "years": [
+  1976,
+  1977
+ ],
+ "match": [
+  "cj360",
+  "cj360t",
+  "cj 360"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "356 cc air-cooled SOHC parallel twin, five-speed",
+ "intro": "A budget version of the CB360 with one exhaust and fewer extras. Shares most engine parts with the CB360.",
+ "focus": [
+  [
+   "Twin",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Cam chain",
+   "Check tensioner"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "CJ360T"
+}

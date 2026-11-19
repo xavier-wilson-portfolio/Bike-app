@@ -1,0 +1,60 @@
+{
+ "id": "peugeot-speedfight-1997",
+ "make": "Peugeot",
+ "model": "Speedfight",
+ "name": "Peugeot Speedfight",
+ "years": [
+  1997,
+  2026
+ ],
+ "match": [
+  "speedfight",
+  "speedfight 2",
+  "speedfight 4",
+  "peugeot speedfight"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 to 125 cc single, two- or four-stroke",
+ "intro": "A sporty French scooter and a tuning favorite.",
+ "focus": [
+  [
+   "Single",
+   "Air or liquid cooled"
+  ],
+  [
+   "Oil",
+   "Check type"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "heroName": "SPEEDFIGHT"
+}

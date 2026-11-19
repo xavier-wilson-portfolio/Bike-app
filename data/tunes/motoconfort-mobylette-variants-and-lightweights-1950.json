@@ -1,0 +1,63 @@
+{
+ "id": "motoconfort-mobylette-variants-and-lightweights-1950",
+ "make": "Motoconfort",
+ "model": "Mobylette variants and lightweights",
+ "name": "Motoconfort Mobylette variants and lightweights",
+ "years": [
+  1950,
+  1984
+ ],
+ "match": [
+  "motoconfort",
+  "motoconfort mobylette"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "49 to 175 cc two-stroke single",
+ "intro": "Motobecane's twin brand, selling much the same bikes.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain or belt",
+   "Check drive"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "heroName": "MOTOCONFORT"
+}

@@ -1,0 +1,59 @@
+{
+ "id": "kymco-movie-bet-win-1999",
+ "make": "Kymco",
+ "model": "Movie / Bet&Win",
+ "name": "Kymco Movie / Bet&Win",
+ "years": [
+  1999,
+  2008
+ ],
+ "match": [
+  "kymco movie",
+  "bet&win",
+  "bet and win",
+  "bet win 250"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "124 to 249 cc single",
+ "intro": "Kymco's sporty city scooters of the early 2000s.",
+ "focus": [
+  [
+   "Single",
+   "Air or liquid cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ],
+  [
+   "Body panels",
+   "Check clips"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "MOVIE"
+}

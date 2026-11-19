@@ -1,0 +1,60 @@
+{
+ "id": "pitster-pro-lxr-x4-fxr-2005",
+ "make": "Pitster Pro",
+ "model": "LXR / X4 / FXR",
+ "name": "Pitster Pro LXR / X4 / FXR",
+ "years": [
+  2005,
+  2026
+ ],
+ "match": [
+  "pitster pro",
+  "pitster",
+  "lxr 160",
+  "x4 155"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "110 to 190 cc air-cooled single",
+ "intro": "US pit bikes with Chinese horizontal engines.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Oil",
+   "Change often"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "PITSTER"
+}

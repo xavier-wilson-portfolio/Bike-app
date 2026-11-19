@@ -1,0 +1,58 @@
+{
+ "id": "triumph-speed-twin-1200-2019",
+ "make": "Triumph",
+ "model": "Speed Twin 1200",
+ "name": "Triumph Speed Twin 1200",
+ "years": [
+  2019,
+  2026
+ ],
+ "match": [
+  "speed twin 1200",
+  "speed twin 2019",
+  "speed twin rs"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "1200 cc liquid-cooled parallel twin, ride-by-wire",
+ "intro": "A sporty roadster built on the Thruxton 1200 engine.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Ride-by-wire"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant check"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Triumph has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "heroName": "SPEED TWIN"
+}

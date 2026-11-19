@@ -1,0 +1,65 @@
+{
+ "id": "yamaha-wr250-wr500-two-stroke-1991",
+ "make": "Yamaha",
+ "model": "WR250 / WR500 (two-stroke)",
+ "name": "Yamaha WR250 / WR500 (two-stroke)",
+ "years": [
+  1991,
+  1997
+ ],
+ "match": [
+  "wr250z",
+  "wr500z",
+  "wr250 two stroke",
+  "wr 500",
+  "wr500"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 or 499 cc liquid-cooled two-stroke single, premix",
+ "intro": "Yamaha's two-stroke enduros of the 1990s, based on the YZ motocrossers.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Power valve",
+   "Clean it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Yamaha dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "WR250"
+}

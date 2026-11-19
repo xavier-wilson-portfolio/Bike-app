@@ -1,0 +1,65 @@
+{
+ "id": "suzuki-gp100-gp125-1978",
+ "make": "Suzuki",
+ "model": "GP100 / GP125",
+ "name": "Suzuki GP100 / GP125",
+ "years": [
+  1978,
+  1983
+ ],
+ "match": [
+  "gp100",
+  "gp125",
+  "gp 125",
+  "gp 100"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "98 or 123 cc rotary-valve two-stroke single",
+ "intro": "Small sporty commuters with rotary valves.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "CCI",
+   "Check pump"
+  ],
+  [
+   "Rotary valve",
+   "Check disc"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Suzuki's CCI system pumps oil into the engine, so it does not need premix. Check the oil tank, pump and lines. If the pump was removed, it runs premix."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "GP125"
+}

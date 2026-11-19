@@ -1,0 +1,67 @@
+{
+ "id": "ajs-model-20-model-30-33-csr-twins-1949",
+ "make": "AJS",
+ "model": "Model 20 / Model 30 / 33 CSR twins",
+ "name": "AJS Model 20 / Model 30 / 33 CSR twins",
+ "years": [
+  1949,
+  1966
+ ],
+ "match": [
+  "ajs model 20",
+  "ajs model 30",
+  "ajs 33 csr",
+  "ajs 20"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "498 to 646 cc OHV parallel twin",
+ "intro": "AJS-badged versions of the AMC twins.",
+ "focus": [
+  [
+   "Twin",
+   "Air-cooled"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Carbs",
+   "Clean and jet"
+  ],
+  [
+   "Gearbox",
+   "Separate oil"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ],
+  "K": [
+   "The gearbox is separate from the engine and has its own oil. Check and change both, and set the primary chain."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "AJS 20"
+}

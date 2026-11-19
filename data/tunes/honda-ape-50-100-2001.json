@@ -1,0 +1,59 @@
+{
+ "id": "honda-ape-50-100-2001",
+ "make": "Honda",
+ "model": "Ape 50 / 100",
+ "name": "Honda Ape 50 / 100",
+ "years": [
+  2001,
+  2008
+ ],
+ "match": [
+  "ape 50",
+  "ape 100",
+  "honda ape"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "49 or 99 cc air-cooled single",
+ "intro": "A small Japanese naked bike, popular for mini customs.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "APE"
+}

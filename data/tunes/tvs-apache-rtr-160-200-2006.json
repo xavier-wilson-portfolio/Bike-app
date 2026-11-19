@@ -1,0 +1,57 @@
+{
+ "id": "tvs-apache-rtr-160-200-2006",
+ "make": "TVS",
+ "model": "Apache RTR 160 / 200",
+ "name": "TVS Apache RTR 160 / 200",
+ "years": [
+  2006,
+  2026
+ ],
+ "match": [
+  "apache rtr",
+  "apache 160",
+  "apache 200",
+  "rtr 200"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "159 or 197 cc air- or oil-cooled single",
+ "intro": "A sporty Indian commuter.",
+ "focus": [
+  [
+   "Single",
+   "Air or oil cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "APACHE"
+}

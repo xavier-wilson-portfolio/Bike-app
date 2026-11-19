@@ -1,0 +1,64 @@
+{
+ "id": "indian-hendee-single-hedstrom-twin-1901",
+ "make": "Indian",
+ "model": "Hendee Single / Hedstrom Twin",
+ "name": "Indian Hendee Single / Hedstrom Twin",
+ "years": [
+  1901,
+  1915
+ ],
+ "match": [
+  "hendee",
+  "camelback",
+  "hedstrom",
+  "indian single 1905"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "Single or V-twin, early Indian",
+ "intro": "The first Indians, from the camelback single to the Hedstrom twins.",
+ "focus": [
+  [
+   "Engine",
+   "Air-cooled"
+  ],
+  [
+   "IOE valves",
+   "Set them"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Oil",
+   "Total loss"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Check whether yours has a total-loss or a recirculating oil system before you fill it, and know which one you are running."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "HENDEE"
+}

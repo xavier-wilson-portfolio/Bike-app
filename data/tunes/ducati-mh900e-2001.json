@@ -1,0 +1,64 @@
+{
+ "id": "ducati-mh900e-2001",
+ "make": "Ducati",
+ "model": "MH900e",
+ "name": "Ducati MH900e",
+ "years": [
+  2001,
+  2002
+ ],
+ "match": [
+  "mh900e",
+  "mh 900 e",
+  "mh900"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "904 cc air-cooled desmo V-twin",
+ "intro": "A modern tribute to Mike Hailwood's 1978 TT win, sold online.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Timing belts",
+   "Change by date"
+  ],
+  [
+   "Desmo valves",
+   "Shim check"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Desmo valve service needs both opening and closing shims checked. Follow the interval in the manual; it is not a job to skip.",
+   "Ducati timing belts are changed by time as well as miles. If you can't prove when they were done, do them before riding."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Ducati has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "heroName": "MH900E"
+}

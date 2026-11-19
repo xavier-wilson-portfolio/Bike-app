@@ -1,0 +1,65 @@
+{
+ "id": "kawasaki-j1-85-c2ss-road-runner-1965",
+ "make": "Kawasaki",
+ "model": "J1 85 / C2SS Road Runner",
+ "name": "Kawasaki J1 85 / C2SS Road Runner",
+ "years": [
+  1965,
+  1969
+ ],
+ "match": [
+  "j1",
+  "c2ss",
+  "road runner",
+  "kawasaki j1"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "85 to 120 cc rotary-valve two-stroke single",
+ "intro": "Kawasaki's early small two-strokes for the US.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Oil injection",
+   "Bleed the pump"
+  ],
+  [
+   "Rotary valve",
+   "Check disc"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KZRider forum",
+   "url": "https://www.kzrider.com/",
+   "what": "Owner forum for classic Kawasakis."
+  }
+ ],
+ "heroName": "J1"
+}

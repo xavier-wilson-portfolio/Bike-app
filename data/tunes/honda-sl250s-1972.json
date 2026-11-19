@@ -1,0 +1,63 @@
+{
+ "id": "honda-sl250s-1972",
+ "make": "Honda",
+ "model": "SL250S",
+ "name": "Honda SL250S",
+ "years": [
+  1972,
+  1976
+ ],
+ "match": [
+  "sl250",
+  "sl250s",
+  "sl 250"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "248 cc air-cooled SOHC four-valve single",
+ "intro": "The Motosport 250, a forerunner of the XL250.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XR's Only",
+   "url": "https://www.xrsonly.com/",
+   "what": "Parts and know-how for Honda XR dirt bikes."
+  }
+ ],
+ "heroName": "SL250"
+}

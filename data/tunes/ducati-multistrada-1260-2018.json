@@ -1,0 +1,63 @@
+{
+ "id": "ducati-multistrada-1260-2018",
+ "make": "Ducati",
+ "model": "Multistrada 1260",
+ "name": "Ducati Multistrada 1260",
+ "years": [
+  2018,
+  2020
+ ],
+ "match": [
+  "multistrada 1260",
+  "mts 1260",
+  "multistrada 1260 s",
+  "1260 enduro"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "1262 cc liquid-cooled DVT V-twin, ride-by-wire",
+ "intro": "The Multistrada with the bigger DVT engine and semi-active suspension on the S.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Timing belts",
+   "Change by date"
+  ],
+  [
+   "DVT",
+   "Scan for codes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fans"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Ducati timing belts are changed by time as well as miles. If you can't prove when they were done, do them before riding."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Ducati has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "heroName": "MULTISTRADA"
+}

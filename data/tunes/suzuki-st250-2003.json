@@ -1,0 +1,58 @@
+{
+ "id": "suzuki-st250-2003",
+ "make": "Suzuki",
+ "model": "ST250",
+ "name": "Suzuki ST250",
+ "years": [
+  2003,
+  2017
+ ],
+ "match": [
+  "st250",
+  "st 250"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "249 cc air-cooled single",
+ "intro": "A plain retro single built for Japan, related to the TU250.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Suzuki Forums",
+   "url": "https://www.suzuki-forums.com/forums/",
+   "what": "General owner forum for Suzuki motorcycles."
+  }
+ ],
+ "heroName": "ST250"
+}

@@ -1,0 +1,62 @@
+{
+ "id": "oec-duplex-steering-models-1901",
+ "make": "OEC",
+ "model": "Duplex steering models",
+ "name": "OEC Duplex steering models",
+ "years": [
+  1901,
+  1954
+ ],
+ "match": [
+  "oec",
+  "oec duplex"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "JAP and Blackburne engines, singles and V-twins",
+ "intro": "Ottley Engineering's bikes with duplex hub-center-style steering.",
+ "focus": [
+  [
+   "Engine",
+   "Air-cooled"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Steering",
+   "Check linkage"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "OEC"
+}

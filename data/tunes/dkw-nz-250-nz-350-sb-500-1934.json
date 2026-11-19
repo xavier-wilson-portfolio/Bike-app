@@ -1,0 +1,66 @@
+{
+ "id": "dkw-nz-250-nz-350-sb-500-1934",
+ "make": "DKW",
+ "model": "NZ 250 / NZ 350 / SB 500",
+ "name": "DKW NZ 250 / NZ 350 / SB 500",
+ "years": [
+  1934,
+  1945
+ ],
+ "match": [
+  "nz 250",
+  "nz 350",
+  "sb 500",
+  "nz350",
+  "sb500"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "247 to 494 cc two-stroke single or twin",
+ "intro": "Pre-war and wartime DKW two-strokes, widely used by the military.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "NZ 350"
+}

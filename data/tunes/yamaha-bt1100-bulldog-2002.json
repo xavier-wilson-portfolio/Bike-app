@@ -1,0 +1,59 @@
+{
+ "id": "yamaha-bt1100-bulldog-2002",
+ "make": "Yamaha",
+ "model": "BT1100 Bulldog",
+ "name": "Yamaha BT1100 Bulldog",
+ "years": [
+  2002,
+  2006
+ ],
+ "match": [
+  "bt1100",
+  "bulldog",
+  "bt 1100 bulldog"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "1063 cc air-cooled V-twin from the Drag Star",
+ "intro": "A naked roadster with the Drag Star 1100 engine. Built in Italy.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "heroName": "BULLDOG"
+}

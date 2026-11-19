@@ -1,0 +1,66 @@
+{
+ "id": "mz-es-125-es-150-es-250-1956",
+ "make": "MZ",
+ "model": "ES 125 / ES 150 / ES 250",
+ "name": "MZ ES 125 / ES 150 / ES 250",
+ "years": [
+  1956,
+  1977
+ ],
+ "match": [
+  "es 250",
+  "es 150",
+  "es 125",
+  "mz es",
+  "es250"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "123 to 243 cc two-stroke single, Earles fork",
+ "intro": "MZ's two-strokes with leading-link forks and enclosed chains.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Enclosed chain"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "ES 250"
+}

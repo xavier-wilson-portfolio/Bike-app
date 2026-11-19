@@ -1,0 +1,57 @@
+{
+ "id": "ajp-pr4-pr7-2005",
+ "make": "AJP",
+ "model": "PR4 / PR7",
+ "name": "AJP PR4 / PR7",
+ "years": [
+  2005,
+  2026
+ ],
+ "match": [
+  "ajp pr4",
+  "ajp pr7",
+  "pr7",
+  "pr4"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "240 to 600 cc single",
+ "intro": "Portuguese dual sport and rally bikes.",
+ "focus": [
+  [
+   "Single",
+   "Air or liquid cooled"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Frame",
+   "Check welds"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "AJP"
+}

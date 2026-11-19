@@ -1,0 +1,64 @@
+{
+ "id": "honda-cbx550f-1982",
+ "make": "Honda",
+ "model": "CBX550F",
+ "name": "Honda CBX550F",
+ "years": [
+  1982,
+  1986
+ ],
+ "match": [
+  "cbx550",
+  "cbx550f",
+  "cbx 550",
+  "cbx550f2"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "572 cc air-cooled DOHC 16-valve inline four, four carbs, inboard disc brakes",
+ "intro": "A sporty middleweight four sold mainly in Europe. Its inboard front discs and rear brake need extra care.",
+ "focus": [
+  [
+   "Inline four",
+   "Air-cooled"
+  ],
+  [
+   "Inboard brakes",
+   "Check them"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "VFRDiscussion",
+   "url": "https://www.vfrdiscussion.com/",
+   "what": "Owner forum for Honda VFR and Interceptor models."
+  }
+ ],
+ "heroName": "CBX550F"
+}

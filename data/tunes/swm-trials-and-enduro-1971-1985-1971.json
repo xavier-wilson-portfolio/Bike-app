@@ -1,0 +1,65 @@
+{
+ "id": "swm-trials-and-enduro-1971-1985-1971",
+ "make": "SWM",
+ "model": "Trials and enduro (1971-1985)",
+ "name": "SWM Trials and enduro (1971-1985)",
+ "years": [
+  1971,
+  1985
+ ],
+ "match": [
+  "swm 1975",
+  "swm rotax",
+  "swm trial",
+  "swm 250 gs"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "50 to 440 cc two-stroke single, Sachs or Rotax engines",
+ "intro": "The original SWM from Milan, with competition two-strokes.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air or liquid cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "SWM"
+}

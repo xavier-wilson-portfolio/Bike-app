@@ -1,0 +1,65 @@
+{
+ "id": "kawasaki-b8-b1-125-1962",
+ "make": "Kawasaki",
+ "model": "B8 / B1 125",
+ "name": "Kawasaki B8 / B1 125",
+ "years": [
+  1962,
+  1966
+ ],
+ "match": [
+  "b8",
+  "b1",
+  "kawasaki b8",
+  "kawasaki b1"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "124 cc two-stroke single",
+ "intro": "Kawasaki's first motorcycles under its own name.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KZRider forum",
+   "url": "https://www.kzrider.com/",
+   "what": "Owner forum for classic Kawasakis."
+  }
+ ],
+ "heroName": "B8"
+}

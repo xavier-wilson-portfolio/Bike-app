@@ -1,0 +1,61 @@
+{
+ "id": "honda-ns125r-nsr125r-1986",
+ "make": "Honda",
+ "model": "NS125R / NSR125R",
+ "name": "Honda NS125R / NSR125R",
+ "years": [
+  1986,
+  2003
+ ],
+ "match": [
+  "nsr125",
+  "nsr125r",
+  "ns125r",
+  "nsr 125",
+  "ns 125 r"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "124 cc liquid-cooled two-stroke single, oil injection",
+ "intro": "Honda's small two-stroke sport bikes for European learners. Top ends and the exhaust power valve need care.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Oil injection",
+   "Bleed the pump"
+  ],
+  [
+   "Power valve",
+   "Clean it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "CBR Forum",
+   "url": "https://www.cbrforum.com/",
+   "what": "Owner forum for Honda CBR models."
+  }
+ ],
+ "heroName": "NSR125"
+}

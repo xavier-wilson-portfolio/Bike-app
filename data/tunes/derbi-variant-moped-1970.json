@@ -1,0 +1,64 @@
+{
+ "id": "derbi-variant-moped-1970",
+ "make": "Derbi",
+ "model": "Variant moped",
+ "name": "Derbi Variant moped",
+ "years": [
+  1970,
+  1995
+ ],
+ "match": [
+  "variant",
+  "derbi variant",
+  "variant sport"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "49 cc two-stroke moped",
+ "intro": "A long-running Spanish moped.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Brakes",
+   "Check drums"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "heroName": "VARIANT"
+}

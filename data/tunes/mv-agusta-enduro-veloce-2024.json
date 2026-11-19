@@ -1,0 +1,57 @@
+{
+ "id": "mv-agusta-enduro-veloce-2024",
+ "make": "MV Agusta",
+ "model": "Enduro Veloce",
+ "name": "MV Agusta Enduro Veloce",
+ "years": [
+  2024,
+  2026
+ ],
+ "match": [
+  "enduro veloce",
+  "mv enduro veloce"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "931 cc liquid-cooled triple",
+ "intro": "MV Agusta's adventure bike.",
+ "focus": [
+  [
+   "Triple",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Ride-by-wire"
+  ],
+  [
+   "Electronics",
+   "Scan for codes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "MV Agusta has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "ENDURO VELOCE"
+}

@@ -1,0 +1,64 @@
+{
+ "id": "kawasaki-zephyr-400-1989",
+ "make": "Kawasaki",
+ "model": "Zephyr 400",
+ "name": "Kawasaki Zephyr 400",
+ "years": [
+  1989,
+  2008
+ ],
+ "match": [
+  "zephyr 400",
+  "zr400c",
+  "zephyr x",
+  "zephyr chi"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "399 cc air-cooled inline four",
+ "intro": "The small Zephyr built for Japan.",
+ "focus": [
+  [
+   "Inline four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KawiForums",
+   "url": "https://www.kawiforums.com/",
+   "what": "Owner forum for Kawasaki motorcycles."
+  }
+ ],
+ "heroName": "ZEPHYR 400"
+}

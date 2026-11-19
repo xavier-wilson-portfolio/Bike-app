@@ -1,0 +1,64 @@
+{
+ "id": "ducati-scrambler-800-2023-on-2023",
+ "make": "Ducati",
+ "model": "Scrambler 800 (2023 on)",
+ "name": "Ducati Scrambler 800 (2023 on)",
+ "years": [
+  2023,
+  2026
+ ],
+ "match": [
+  "scrambler 2023",
+  "scrambler icon 2023",
+  "scrambler full throttle 2024",
+  "scrambler nightshift 2023"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "803 cc air-cooled desmo V-twin, ride-by-wire",
+ "intro": "The second-generation Scrambler, lighter, with ride-by-wire and a TFT dash.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Timing belts",
+   "Change by date"
+  ],
+  [
+   "Desmo valves",
+   "Shim check"
+  ],
+  [
+   "Fuel injected",
+   "Ride-by-wire"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Ducati timing belts are changed by time as well as miles. If you can't prove when they were done, do them before riding."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Ducati has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "heroName": "SCRAMBLER"
+}

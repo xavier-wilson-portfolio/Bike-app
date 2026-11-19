@@ -1,0 +1,62 @@
+{
+ "id": "kawasaki-balius-250-zr250-1991",
+ "make": "Kawasaki",
+ "model": "Balius 250 (ZR250)",
+ "name": "Kawasaki Balius 250 (ZR250)",
+ "years": [
+  1991,
+  2007
+ ],
+ "match": [
+  "balius",
+  "zr250",
+  "balius 250"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "249 cc liquid-cooled inline four",
+ "intro": "A small naked four from Japan.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KawiForums",
+   "url": "https://www.kawiforums.com/",
+   "what": "Owner forum for Kawasaki motorcycles."
+  }
+ ],
+ "heroName": "BALIUS"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "yamaha-lt2-lt3-100-enduro-1972",
+ "make": "Yamaha",
+ "model": "LT2 / LT3 100 Enduro",
+ "name": "Yamaha LT2 / LT3 100 Enduro",
+ "years": [
+  1972,
+  1974
+ ],
+ "match": [
+  "lt2",
+  "lt3",
+  "lt-2",
+  "lt-3",
+  "yamaha 100 enduro"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "97 cc air-cooled two-stroke single, rotary valve, Autolube",
+ "intro": "Small two-stroke enduros between the mini enduros and the DT125. Light and easy to fix.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Autolube",
+   "Bleed the pump"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Rotary valve",
+   "Check disc"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Enduros forum",
+   "url": "https://www.yamaha-enduros.com/",
+   "what": "Owner forum for vintage Yamaha two-stroke enduros."
+  }
+ ],
+ "heroName": "LT2"
+}

@@ -1,0 +1,63 @@
+{
+ "id": "yamaha-sr400-1978-2008-1978",
+ "make": "Yamaha",
+ "model": "SR400 (1978-2008)",
+ "name": "Yamaha SR400 (1978-2008)",
+ "years": [
+  1978,
+  2008
+ ],
+ "match": [
+  "sr400 1990",
+  "sr400 japan",
+  "sr 400 1980"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "399 cc air-cooled SOHC single, kick start only",
+ "intro": "The Japanese-market SR400, built with few changes for decades. Kick start only.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Kick start",
+   "Learn the drill"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "A": [
+   "Many of these are imports. Make sure the title and VIN paperwork match before you put money in."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "SR400"
+}

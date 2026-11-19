@@ -1,0 +1,58 @@
+{
+ "id": "honda-fmx650-2005",
+ "make": "Honda",
+ "model": "FMX650",
+ "name": "Honda FMX650",
+ "years": [
+  2005,
+  2007
+ ],
+ "match": [
+  "fmx650",
+  "fmx 650"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "644 cc air-cooled single, carb, supermoto style",
+ "intro": "A supermoto-styled single with the Dominator engine. Sold in Europe.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Brakes",
+   "Check discs"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Honda dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XR's Only",
+   "url": "https://www.xrsonly.com/",
+   "what": "Parts and know-how for Honda XR dirt bikes."
+  }
+ ],
+ "heroName": "FMX650"
+}

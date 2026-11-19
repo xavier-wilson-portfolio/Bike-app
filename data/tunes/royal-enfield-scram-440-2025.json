@@ -1,0 +1,58 @@
+{
+ "id": "royal-enfield-scram-440-2025",
+ "make": "Royal Enfield",
+ "model": "Scram 440",
+ "name": "Royal Enfield Scram 440",
+ "years": [
+  2025,
+  2026
+ ],
+ "match": [
+  "scram 440",
+  "scram440"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "443 cc air/oil-cooled single",
+ "intro": "The bigger-bore update of the Scram 411.",
+ "focus": [
+  [
+   "Single",
+   "Air/oil-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with Royal Enfield owner threads."
+  }
+ ],
+ "heroName": "SCRAM 440"
+}

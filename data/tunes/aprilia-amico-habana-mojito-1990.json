@@ -1,0 +1,60 @@
+{
+ "id": "aprilia-amico-habana-mojito-1990",
+ "make": "Aprilia",
+ "model": "Amico / Habana / Mojito",
+ "name": "Aprilia Amico / Habana / Mojito",
+ "years": [
+  1990,
+  2010
+ ],
+ "match": [
+  "amico",
+  "habana",
+  "mojito",
+  "aprilia habana"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 to 150 cc two- or four-stroke single",
+ "intro": "Aprilia's small and retro city scooters.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Oil",
+   "Check type"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Aprilia has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "HABANA"
+}

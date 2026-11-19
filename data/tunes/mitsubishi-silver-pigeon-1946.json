@@ -1,0 +1,58 @@
+{
+ "id": "mitsubishi-silver-pigeon-1946",
+ "make": "Mitsubishi",
+ "model": "Silver Pigeon",
+ "name": "Mitsubishi Silver Pigeon",
+ "years": [
+  1946,
+  1964
+ ],
+ "match": [
+  "silver pigeon",
+  "mitsubishi pigeon"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "Two- or four-stroke single scooter",
+ "intro": "Mitsubishi's scooters, rivals of the Fuji Rabbit.",
+ "focus": [
+  [
+   "Engine",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Drive",
+   "Check it"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Brakes",
+   "Check drums"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "PIGEON"
+}

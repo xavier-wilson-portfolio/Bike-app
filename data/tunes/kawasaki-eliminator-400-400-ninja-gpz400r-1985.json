@@ -1,0 +1,63 @@
+{
+ "id": "kawasaki-eliminator-400-400-ninja-gpz400r-1985",
+ "make": "Kawasaki",
+ "model": "Eliminator 400 / 400 Ninja (GPZ400R)",
+ "name": "Kawasaki Eliminator 400 / 400 Ninja (GPZ400R)",
+ "years": [
+  1985,
+  1990
+ ],
+ "match": [
+  "gpz400r",
+  "eliminator 400",
+  "zx400d",
+  "gpz 400 r"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "398 cc liquid-cooled inline four",
+ "intro": "Japanese-market 400 fours.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KawiForums",
+   "url": "https://www.kawiforums.com/",
+   "what": "Owner forum for Kawasaki motorcycles."
+  }
+ ],
+ "heroName": "GPZ400R"
+}

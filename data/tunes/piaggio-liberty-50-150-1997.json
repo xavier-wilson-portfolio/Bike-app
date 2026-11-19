@@ -1,0 +1,56 @@
+{
+ "id": "piaggio-liberty-50-150-1997",
+ "make": "Piaggio",
+ "model": "Liberty 50 / 150",
+ "name": "Piaggio Liberty 50 / 150",
+ "years": [
+  1997,
+  2026
+ ],
+ "match": [
+  "liberty 50",
+  "liberty 150",
+  "piaggio liberty"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 to 155 cc air-cooled single, big wheels",
+ "intro": "A light, big-wheel city scooter.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ],
+  [
+   "Body panels",
+   "Check clips"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "LIBERTY"
+}

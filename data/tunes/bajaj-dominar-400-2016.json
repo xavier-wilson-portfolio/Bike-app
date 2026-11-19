@@ -1,0 +1,58 @@
+{
+ "id": "bajaj-dominar-400-2016",
+ "make": "Bajaj",
+ "model": "Dominar 400",
+ "name": "Bajaj Dominar 400",
+ "years": [
+  2016,
+  2026
+ ],
+ "match": [
+  "dominar",
+  "dominar 400",
+  "dominar 250"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "373 cc liquid-cooled single from the KTM 390",
+ "intro": "A power cruiser-tourer with a KTM-derived engine.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "DOMINAR"
+}

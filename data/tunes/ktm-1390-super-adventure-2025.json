@@ -1,0 +1,58 @@
+{
+ "id": "ktm-1390-super-adventure-2025",
+ "make": "KTM",
+ "model": "1390 Super Adventure",
+ "name": "KTM 1390 Super Adventure",
+ "years": [
+  2025,
+  2026
+ ],
+ "match": [
+  "1390 super adventure",
+  "1390 adventure",
+  "1390 sa"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "1350 cc liquid-cooled V-twin, ride-by-wire",
+ "intro": "The latest big KTM adventure bike, with a bigger LC8 engine and new electronics.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Ride-by-wire"
+  ],
+  [
+   "Electronics",
+   "Scan for codes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fans"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "KTM has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "1390 ADVENTURE"
+}

@@ -1,0 +1,59 @@
+{
+ "id": "honda-xl650v-xl700v-transalp-2000",
+ "make": "Honda",
+ "model": "XL650V / XL700V Transalp",
+ "name": "Honda XL650V / XL700V Transalp",
+ "years": [
+  2000,
+  2012
+ ],
+ "match": [
+  "xl650v",
+  "xl700v",
+  "transalp 650",
+  "transalp 700",
+  "xl 650 v",
+  "xl 700 v"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "647 or 680 cc liquid-cooled V-twin, carbs then fuel injection",
+ "intro": "The later Transalps sold in Europe. Simple and tough, with carbs on the 650 and fuel injection on the 700.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel",
+   "Carbs or EFI"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "TRANSALP"
+}

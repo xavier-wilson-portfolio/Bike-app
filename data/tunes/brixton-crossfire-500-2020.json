@@ -1,0 +1,58 @@
+{
+ "id": "brixton-crossfire-500-2020",
+ "make": "Brixton",
+ "model": "Crossfire 500",
+ "name": "Brixton Crossfire 500",
+ "years": [
+  2020,
+  2026
+ ],
+ "match": [
+  "crossfire 500",
+  "brixton crossfire",
+  "crossfire 500x"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "486 cc liquid-cooled parallel twin",
+ "intro": "An Austrian-brand, Chinese-built retro roadster.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "CROSSFIRE"
+}

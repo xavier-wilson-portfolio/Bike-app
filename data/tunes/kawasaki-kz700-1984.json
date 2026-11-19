@@ -1,0 +1,63 @@
+{
+ "id": "kawasaki-kz700-1984",
+ "make": "Kawasaki",
+ "model": "KZ700",
+ "name": "Kawasaki KZ700",
+ "years": [
+  1984,
+  1984
+ ],
+ "match": [
+  "kz700",
+  "kz 700",
+  "zx700a"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "738 cc air-cooled DOHC inline four",
+ "intro": "A one-year 700 cc four sold in the US to dodge the tariff on bigger bikes.",
+ "focus": [
+  [
+   "Inline four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KZRider forum",
+   "url": "https://www.kzrider.com/",
+   "what": "Owner forum for classic Kawasakis."
+  }
+ ],
+ "heroName": "KZ700"
+}

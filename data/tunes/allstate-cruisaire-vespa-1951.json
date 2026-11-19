@@ -1,0 +1,64 @@
+{
+ "id": "allstate-cruisaire-vespa-1951",
+ "make": "Allstate",
+ "model": "Cruisaire (Vespa)",
+ "name": "Allstate Cruisaire (Vespa)",
+ "years": [
+  1951,
+  1963
+ ],
+ "match": [
+  "cruisaire",
+  "allstate vespa",
+  "allstate scooter"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "125 or 150 cc two-stroke single",
+ "intro": "Vespa scooters sold through Sears under the Allstate name.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Gearbox",
+   "Check oil"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Vintage Vespas mix oil into the fuel. Check the ratio for your model before you fill up."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "CRUISAIRE"
+}

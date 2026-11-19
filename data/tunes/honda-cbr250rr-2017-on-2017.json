@@ -1,0 +1,58 @@
+{
+ "id": "honda-cbr250rr-2017-on-2017",
+ "make": "Honda",
+ "model": "CBR250RR (2017 on)",
+ "name": "Honda CBR250RR (2017 on)",
+ "years": [
+  2017,
+  2026
+ ],
+ "match": [
+  "cbr250rr",
+  "cbr 250 rr",
+  "mc51"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "249 cc liquid-cooled parallel twin, ride-by-wire fuel injection",
+ "intro": "A high-spec 250 twin sold in Asia. Ride-by-wire and sharp styling, imported elsewhere.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Ride-by-wire"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "CBR Forum",
+   "url": "https://www.cbrforum.com/",
+   "what": "Owner forum for Honda CBR models."
+  }
+ ],
+ "heroName": "CBR250RR"
+}

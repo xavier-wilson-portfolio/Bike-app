@@ -1,0 +1,59 @@
+{
+ "id": "kawasaki-kl250-1978",
+ "make": "Kawasaki",
+ "model": "KL250",
+ "name": "Kawasaki KL250",
+ "years": [
+  1978,
+  1983
+ ],
+ "match": [
+  "kl250",
+  "kl 250",
+  "kl250a"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "246 cc air-cooled four-stroke single",
+ "intro": "Kawasaki's first four-stroke trail bike. Simple and tough.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KZRider forum",
+   "url": "https://www.kzrider.com/",
+   "what": "Owner forum for classic Kawasakis."
+  }
+ ],
+ "heroName": "KL250"
+}

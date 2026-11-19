@@ -1,0 +1,60 @@
+{
+ "id": "cushman-airborne-model-53-1944",
+ "make": "Cushman",
+ "model": "Airborne Model 53",
+ "name": "Cushman Airborne Model 53",
+ "years": [
+  1944,
+  1945
+ ],
+ "match": [
+  "airborne",
+  "model 53",
+  "cushman 53",
+  "cushman airborne"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "244 cc side-valve single, paratrooper scooter",
+ "intro": "A wartime scooter built to be dropped by parachute.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Flathead",
+   "Set tappets"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Clutch",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "AIRBORNE"
+}

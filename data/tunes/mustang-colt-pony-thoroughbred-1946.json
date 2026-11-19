@@ -1,0 +1,60 @@
+{
+ "id": "mustang-colt-pony-thoroughbred-1946",
+ "make": "Mustang",
+ "model": "Colt / Pony / Thoroughbred",
+ "name": "Mustang Colt / Pony / Thoroughbred",
+ "years": [
+  1946,
+  1965
+ ],
+ "match": [
+  "mustang",
+  "mustang pony",
+  "mustang colt",
+  "thoroughbred"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "320 cc side-valve single, small wheels",
+ "intro": "A small-wheel American motorcycle from Glendale, California.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Flathead",
+   "Set tappets"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "MUSTANG"
+}

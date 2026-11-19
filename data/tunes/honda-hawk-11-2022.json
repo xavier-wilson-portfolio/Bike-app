@@ -1,0 +1,57 @@
+{
+ "id": "honda-hawk-11-2022",
+ "make": "Honda",
+ "model": "Hawk 11",
+ "name": "Honda Hawk 11",
+ "years": [
+  2022,
+  2024
+ ],
+ "match": [
+  "hawk 11",
+  "hawk11"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "1084 cc liquid-cooled parallel twin from the Africa Twin, fuel injected",
+ "intro": "A cafe-styled sport bike built around the Africa Twin engine. Sold mainly in Japan and Asia.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Ride-by-wire"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "CBR Forum",
+   "url": "https://www.cbrforum.com/",
+   "what": "Owner forum for Honda CBR models."
+  }
+ ],
+ "heroName": "HAWK 11"
+}

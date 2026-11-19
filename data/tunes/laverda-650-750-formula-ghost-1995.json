@@ -1,0 +1,59 @@
+{
+ "id": "laverda-650-750-formula-ghost-1995",
+ "make": "Laverda",
+ "model": "650 / 750 Formula / Ghost",
+ "name": "Laverda 650 / 750 Formula / Ghost",
+ "years": [
+  1995,
+  2001
+ ],
+ "match": [
+  "laverda 750 formula",
+  "laverda ghost",
+  "laverda 650",
+  "laverda 750s"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "668 or 747 cc air/oil-cooled parallel twin",
+ "intro": "The revived Laverda twins from Breganze.",
+ "focus": [
+  [
+   "Twin",
+   "Air/oil-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "LAVERDA"
+}

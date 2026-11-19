@@ -1,0 +1,59 @@
+{
+ "id": "yamaha-yzf-r6-2017-2020-2017",
+ "make": "Yamaha",
+ "model": "YZF-R6 (2017-2020)",
+ "name": "Yamaha YZF-R6 (2017-2020)",
+ "years": [
+  2017,
+  2020
+ ],
+ "match": [
+  "yzf-r6 2017",
+  "r6 2017",
+  "r6 2019",
+  "yzf r6 2020"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "599 cc liquid-cooled inline four, ride-by-wire, fuel injected",
+ "intro": "The last road-legal R6, with R1-style bodywork and traction control.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Ride-by-wire"
+  ],
+  [
+   "Electronics",
+   "Scan for codes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "heroName": "R6"
+}

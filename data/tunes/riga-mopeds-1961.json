@@ -1,0 +1,65 @@
+{
+ "id": "riga-mopeds-1961",
+ "make": "Riga",
+ "model": "Mopeds",
+ "name": "Riga Mopeds",
+ "years": [
+  1961,
+  1998
+ ],
+ "match": [
+  "riga",
+  "riga 13",
+  "riga 16",
+  "riga moped"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "49 cc two-stroke moped",
+ "intro": "Latvian mopeds built in huge numbers for the Soviet market.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "heroName": "RIGA"
+}

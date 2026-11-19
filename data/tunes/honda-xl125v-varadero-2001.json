@@ -1,0 +1,58 @@
+{
+ "id": "honda-xl125v-varadero-2001",
+ "make": "Honda",
+ "model": "XL125V Varadero",
+ "name": "Honda XL125V Varadero",
+ "years": [
+  2001,
+  2013
+ ],
+ "match": [
+  "xl125v",
+  "varadero 125",
+  "xl 125 v"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "124 cc liquid-cooled V-twin",
+ "intro": "A small V-twin adventure-styled bike for European learners.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "VARADERO"
+}

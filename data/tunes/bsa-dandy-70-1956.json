@@ -1,0 +1,64 @@
+{
+ "id": "bsa-dandy-70-1956",
+ "make": "BSA",
+ "model": "Dandy 70",
+ "name": "BSA Dandy 70",
+ "years": [
+  1956,
+  1962
+ ],
+ "match": [
+  "dandy",
+  "dandy 70",
+  "bsa dandy"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "70 cc two-stroke single, step-through",
+ "intro": "A small BSA step-through scooter.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Brakes",
+   "Check drums"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BSA Owners Club",
+   "url": "https://www.bsaoc.org/",
+   "what": "Owner club for BSA motorcycles, with tech help and parts."
+  }
+ ],
+ "heroName": "DANDY"
+}

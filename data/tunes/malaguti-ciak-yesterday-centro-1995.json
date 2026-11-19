@@ -1,0 +1,60 @@
+{
+ "id": "malaguti-ciak-yesterday-centro-1995",
+ "make": "Malaguti",
+ "model": "Ciak / Yesterday / Centro",
+ "name": "Malaguti Ciak / Yesterday / Centro",
+ "years": [
+  1995,
+  2011
+ ],
+ "match": [
+  "ciak",
+  "yesterday",
+  "centro",
+  "malaguti ciak"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 to 200 cc single",
+ "intro": "Malaguti's city and retro scooters.",
+ "focus": [
+  [
+   "Single",
+   "Air or liquid cooled"
+  ],
+  [
+   "Oil",
+   "Check type"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "CIAK"
+}

@@ -1,0 +1,57 @@
+{
+ "id": "atk-406-604-250-1987",
+ "make": "ATK",
+ "model": "406 / 604 / 250",
+ "name": "ATK 406 / 604 / 250",
+ "years": [
+  1987,
+  2006
+ ],
+ "match": [
+  "atk 604",
+  "atk 406",
+  "atk 250",
+  "atk 490"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "Rotax-based four-stroke or two-stroke single",
+ "intro": "American dirt bikes with an unusual chain-torque eliminator.",
+ "focus": [
+  [
+   "Single",
+   "Air or liquid cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Chain tensioner",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "ATK"
+}

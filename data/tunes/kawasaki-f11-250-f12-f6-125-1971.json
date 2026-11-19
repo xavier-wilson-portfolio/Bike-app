@@ -1,0 +1,66 @@
+{
+ "id": "kawasaki-f11-250-f12-f6-125-1971",
+ "make": "Kawasaki",
+ "model": "F11 250 / F12 / F6 125",
+ "name": "Kawasaki F11 250 / F12 / F6 125",
+ "years": [
+  1971,
+  1975
+ ],
+ "match": [
+  "f11",
+  "f12",
+  "f6",
+  "kawasaki f11",
+  "kawasaki 250 enduro"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "125 to 250 cc air-cooled two-stroke single, oil injection",
+ "intro": "Small and mid-size Kawasaki enduros of the early 1970s.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Oil injection",
+   "Bleed the pump"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KZRider forum",
+   "url": "https://www.kzrider.com/",
+   "what": "Owner forum for classic Kawasakis."
+  }
+ ],
+ "heroName": "F11"
+}

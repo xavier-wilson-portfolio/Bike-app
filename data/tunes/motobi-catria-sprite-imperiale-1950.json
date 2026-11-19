@@ -1,0 +1,60 @@
+{
+ "id": "motobi-catria-sprite-imperiale-1950",
+ "make": "Motobi",
+ "model": "Catria / Sprite / Imperiale",
+ "name": "Motobi Catria / Sprite / Imperiale",
+ "years": [
+  1950,
+  1976
+ ],
+ "match": [
+  "motobi",
+  "motobi catria",
+  "motobi sprite",
+  "motobi imperiale"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "125 to 250 cc horizontal single, egg-shaped engine",
+ "intro": "Benelli's sister brand with \"egg\" engines.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Oil",
+   "Check type"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "MOTOBI"
+}

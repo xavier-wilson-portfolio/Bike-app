@@ -1,0 +1,65 @@
+{
+ "id": "moto-guzzi-v65-tt-ntx-350-750-1984",
+ "make": "Moto Guzzi",
+ "model": "V65 TT / NTX 350-750",
+ "name": "Moto Guzzi V65 TT / NTX 350-750",
+ "years": [
+  1984,
+  1995
+ ],
+ "match": [
+  "v65 tt",
+  "ntx 650",
+  "ntx 750",
+  "ntx 350",
+  "guzzi ntx"
+ ],
+ "style": "dualsport",
+ "drive": "shaft",
+ "engine": "350 to 744 cc air-cooled small-block V-twin",
+ "intro": "The small-block off-road Guzzis, inspired by Paris-Dakar.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Set rockers"
+  ],
+  [
+   "Dry clutch",
+   "Check it"
+  ],
+  [
+   "Shaft drive",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Guzzi V-twins need the valves set and the throttle bodies or carbs balanced together. Do both at the same service."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moto Guzzi National Owners Club",
+   "url": "https://www.mgnoc.org/",
+   "what": "US owner club for Moto Guzzi."
+  }
+ ],
+ "heroName": "NTX"
+}

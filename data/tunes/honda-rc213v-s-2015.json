@@ -1,0 +1,58 @@
+{
+ "id": "honda-rc213v-s-2015",
+ "make": "Honda",
+ "model": "RC213V-S",
+ "name": "Honda RC213V-S",
+ "years": [
+  2015,
+  2016
+ ],
+ "match": [
+  "rc213v-s",
+  "rc213vs",
+  "rc213v s"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "999 cc liquid-cooled V4, MotoGP-derived",
+ "intro": "A road version of Honda's MotoGP bike. Extremely rare.",
+ "focus": [
+  [
+   "V4",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Ride-by-wire"
+  ],
+  [
+   "Electronics",
+   "Dealer tools"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "CBR Forum",
+   "url": "https://www.cbrforum.com/",
+   "what": "Owner forum for Honda CBR models."
+  }
+ ],
+ "heroName": "RC213V-S"
+}

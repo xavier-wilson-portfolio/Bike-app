@@ -1,0 +1,64 @@
+{
+ "id": "scott-flying-squirrel-1922",
+ "make": "Scott",
+ "model": "Flying Squirrel",
+ "name": "Scott Flying Squirrel",
+ "years": [
+  1922,
+  1950
+ ],
+ "match": [
+  "flying squirrel",
+  "scott squirrel",
+  "scott flying squirrel"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "486 or 596 cc water-cooled two-stroke parallel twin",
+ "intro": "Scott's unusual water-cooled two-stroke twins from Yorkshire.",
+ "focus": [
+  [
+   "Two-stroke twin",
+   "Water-cooled"
+  ],
+  [
+   "Oil",
+   "Check pump"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Radiator",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "SQUIRREL"
+}

@@ -1,0 +1,64 @@
+{
+ "id": "moto-guzzi-alce-trialce-military-1939",
+ "make": "Moto Guzzi",
+ "model": "Alce / Trialce (military)",
+ "name": "Moto Guzzi Alce / Trialce (military)",
+ "years": [
+  1939,
+  1945
+ ],
+ "match": [
+  "alce",
+  "trialce",
+  "superalce",
+  "guzzi alce"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "498 cc horizontal single, military bike and trike",
+ "intro": "Guzzi's wartime military motorcycle and three-wheeler.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Outside flywheel",
+   "Check it"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moto Guzzi National Owners Club",
+   "url": "https://www.mgnoc.org/",
+   "what": "US owner club for Moto Guzzi."
+  }
+ ],
+ "heroName": "ALCE"
+}

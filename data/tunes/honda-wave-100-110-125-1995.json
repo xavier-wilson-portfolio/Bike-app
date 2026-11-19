@@ -1,0 +1,61 @@
+{
+ "id": "honda-wave-100-110-125-1995",
+ "make": "Honda",
+ "model": "Wave 100 / 110 / 125",
+ "name": "Honda Wave 100 / 110 / 125",
+ "years": [
+  1995,
+  2026
+ ],
+ "match": [
+  "wave 110",
+  "wave 125",
+  "wave 100",
+  "honda wave",
+  "wave alpha"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "97 to 124 cc air-cooled single, semi-automatic",
+ "intro": "Honda's best-selling underbone in Southeast Asia.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "Clutch",
+   "Auto clutch"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Chain drive",
+   "Enclosed chain"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "WAVE"
+}

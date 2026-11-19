@@ -1,0 +1,59 @@
+{
+ "id": "kawasaki-ninja-zx-25r-2020",
+ "make": "Kawasaki",
+ "model": "Ninja ZX-25R",
+ "name": "Kawasaki Ninja ZX-25R",
+ "years": [
+  2020,
+  2026
+ ],
+ "match": [
+  "zx-25r",
+  "zx25r",
+  "zx 25r",
+  "ninja zx-25r"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "249 cc liquid-cooled inline four, fuel injected",
+ "intro": "A 250 cc four that revs to 17,000 rpm. Sold in Asia and imported elsewhere.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KawiForums",
+   "url": "https://www.kawiforums.com/",
+   "what": "Owner forum for Kawasaki motorcycles."
+  }
+ ],
+ "heroName": "ZX-25R"
+}

@@ -1,0 +1,58 @@
+{
+ "id": "yamaha-tw125-1999",
+ "make": "Yamaha",
+ "model": "TW125",
+ "name": "Yamaha TW125",
+ "years": [
+  1999,
+  2004
+ ],
+ "match": [
+  "tw125",
+  "tw 125"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "124 cc air-cooled single, fat tires",
+ "intro": "The small brother of the TW200, sold in Europe.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Fat tires",
+   "Check pressure"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Yamaha dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "TW125"
+}

@@ -1,0 +1,60 @@
+{
+ "id": "bourget-s-fat-daddy-python-1993",
+ "make": "Bourget's",
+ "model": "Fat Daddy / Python",
+ "name": "Bourget's Fat Daddy / Python",
+ "years": [
+  1993,
+  2011
+ ],
+ "match": [
+  "bourget",
+  "bourgets",
+  "fat daddy",
+  "python chopper"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "S&S V-twin, factory chopper",
+ "intro": "Arizona-built custom choppers.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Pushrods",
+   "Check them"
+  ],
+  [
+   "Charging",
+   "Check stator"
+  ],
+  [
+   "Belt drive",
+   "Check tension"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "HDForums",
+   "url": "https://www.hdforums.com/",
+   "what": "Large owner forum for all Harley-Davidson models."
+  }
+ ],
+ "heroName": "BOURGET"
+}

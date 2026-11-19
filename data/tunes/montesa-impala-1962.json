@@ -1,0 +1,64 @@
+{
+ "id": "montesa-impala-1962",
+ "make": "Montesa",
+ "model": "Impala",
+ "name": "Montesa Impala",
+ "years": [
+  1962,
+  1970
+ ],
+ "match": [
+  "impala",
+  "montesa impala",
+  "impala sport"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "175 cc two-stroke single",
+ "intro": "A Spanish road two-stroke, famous for a long-distance run across Africa.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "TrialsCentral",
+   "url": "https://www.trialscentral.com/",
+   "what": "Forum for trials riders, with sections for most trials makes."
+  }
+ ],
+ "heroName": "IMPALA"
+}

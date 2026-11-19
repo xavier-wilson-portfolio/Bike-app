@@ -1,0 +1,60 @@
+{
+ "id": "baotian-bt49qt-2004",
+ "make": "Baotian",
+ "model": "BT49QT",
+ "name": "Baotian BT49QT",
+ "years": [
+  2004,
+  2026
+ ],
+ "match": [
+  "baotian",
+  "bt49qt",
+  "baotian 50",
+  "bt49qt-9"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 cc air-cooled 139QMB single",
+ "intro": "A common Chinese 50 cc scooter sold under many names.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Wiring",
+   "Check connectors"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "BAOTIAN"
+}

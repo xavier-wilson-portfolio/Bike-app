@@ -1,0 +1,57 @@
+{
+ "id": "aprilia-scarabeo-50-100-125-200-1993",
+ "make": "Aprilia",
+ "model": "Scarabeo 50 / 100 / 125 / 200",
+ "name": "Aprilia Scarabeo 50 / 100 / 125 / 200",
+ "years": [
+  1993,
+  2016
+ ],
+ "match": [
+  "scarabeo 50",
+  "scarabeo 100",
+  "scarabeo 125",
+  "scarabeo 200"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 to 181 cc single, two- and four-stroke versions, big wheels",
+ "intro": "Big-wheel city scooters sold across Europe.",
+ "focus": [
+  [
+   "Single",
+   "Air or liquid cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ],
+  [
+   "Body panels",
+   "Check clips"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Aprilia has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "SCARABEO"
+}

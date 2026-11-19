@@ -1,0 +1,65 @@
+{
+ "id": "minsk-m1-mmvz-125-1951",
+ "make": "Minsk",
+ "model": "M1 / MMVZ 125",
+ "name": "Minsk M1 / MMVZ 125",
+ "years": [
+  1951,
+  2007
+ ],
+ "match": [
+  "minsk",
+  "minsk 125",
+  "mmvz",
+  "minsk m1"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "123 cc two-stroke single",
+ "intro": "A light Belarusian two-stroke based on the DKW RT 125.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "MINSK"
+}

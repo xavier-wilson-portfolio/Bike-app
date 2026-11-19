@@ -1,0 +1,64 @@
+{
+ "id": "indian-junior-scout-30-50-1932",
+ "make": "Indian",
+ "model": "Junior Scout / 30.50",
+ "name": "Indian Junior Scout / 30.50",
+ "years": [
+  1932,
+  1942
+ ],
+ "match": [
+  "junior scout",
+  "30.50",
+  "thirty fifty",
+  "indian 30.50"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "500 cc side-valve V-twin",
+ "intro": "The smallest Indian V-twin, also called the Thirty-fifty.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Flathead",
+   "Set tappets"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "E": [
+   "It is a flathead. The valves sit beside the cylinder, so set the tappets with the engine cold and check the valve guides for wear."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "JUNIOR SCOUT"
+}

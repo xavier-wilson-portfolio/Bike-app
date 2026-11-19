@@ -1,0 +1,59 @@
+{
+ "id": "honda-beat-asia-2008",
+ "make": "Honda",
+ "model": "Beat (Asia)",
+ "name": "Honda Beat (Asia)",
+ "years": [
+  2008,
+  2026
+ ],
+ "match": [
+  "honda beat",
+  "beat 110",
+  "beat fi"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "108 cc air-cooled single",
+ "intro": "A small, cheap Honda scooter sold in Asia.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check combined"
+  ],
+  [
+   "Body panels",
+   "Check clips"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Honda scooters."
+  }
+ ],
+ "heroName": "BEAT"
+}

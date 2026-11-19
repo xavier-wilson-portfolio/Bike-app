@@ -1,0 +1,60 @@
+{
+ "id": "bsa-sunbeam-triumph-tigress-scooter-1958",
+ "make": "BSA",
+ "model": "Sunbeam / Triumph Tigress scooter",
+ "name": "BSA Sunbeam / Triumph Tigress scooter",
+ "years": [
+  1958,
+  1964
+ ],
+ "match": [
+  "bsa sunbeam",
+  "triumph tigress",
+  "sunbeam scooter",
+  "tigress"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "172 cc two-stroke single or 249 cc four-stroke twin",
+ "intro": "BSA group scooters, sold as the BSA Sunbeam and the Triumph Tigress.",
+ "focus": [
+  [
+   "Engine",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Gearbox",
+   "Check oil"
+  ],
+  [
+   "Chain drive",
+   "Enclosed chain"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BSA Owners Club",
+   "url": "https://www.bsaoc.org/",
+   "what": "Owner club for BSA motorcycles, with tech help and parts."
+  }
+ ],
+ "heroName": "SUNBEAM"
+}

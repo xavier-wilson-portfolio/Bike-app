@@ -1,0 +1,58 @@
+{
+ "id": "kawasaki-klx125-2003",
+ "make": "Kawasaki",
+ "model": "KLX125",
+ "name": "Kawasaki KLX125",
+ "years": [
+  2003,
+  2006
+ ],
+ "match": [
+  "klx125",
+  "klx 125"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "124 cc air-cooled single",
+ "intro": "A small four-stroke trail bike between the KLX110 and KLX250.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Air filter",
+   "Clean it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Kawasaki dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "KLX125"
+}

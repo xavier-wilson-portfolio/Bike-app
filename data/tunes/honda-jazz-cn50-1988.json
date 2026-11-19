@@ -1,0 +1,59 @@
+{
+ "id": "honda-jazz-cn50-1988",
+ "make": "Honda",
+ "model": "Jazz (CN50)",
+ "name": "Honda Jazz (CN50)",
+ "years": [
+  1988,
+  2001
+ ],
+ "match": [
+  "jazz",
+  "cn50",
+  "honda jazz"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 cc four-stroke single, low cruiser scooter",
+ "intro": "A tiny low-slung scooter related to the Ruckus engine family.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Brakes",
+   "Check drums"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Honda scooters."
+  }
+ ],
+ "heroName": "JAZZ"
+}

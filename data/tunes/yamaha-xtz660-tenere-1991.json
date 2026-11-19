@@ -1,0 +1,60 @@
+{
+ "id": "yamaha-xtz660-tenere-1991",
+ "make": "Yamaha",
+ "model": "XTZ660 Tenere",
+ "name": "Yamaha XTZ660 Tenere",
+ "years": [
+  1991,
+  1998
+ ],
+ "match": [
+  "xtz660",
+  "xtz 660",
+  "tenere 660 1991",
+  "3yf",
+  "4tk"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "659 cc liquid-cooled five-valve single",
+ "intro": "The liquid-cooled Tenere with a fairing and a big tank. Mostly sold in Europe.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "TENERE"
+}

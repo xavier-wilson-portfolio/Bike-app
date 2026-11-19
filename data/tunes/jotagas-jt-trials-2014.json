@@ -1,0 +1,63 @@
+{
+ "id": "jotagas-jt-trials-2014",
+ "make": "Jotagas",
+ "model": "JT trials",
+ "name": "Jotagas JT trials",
+ "years": [
+  2014,
+  2018
+ ],
+ "match": [
+  "jotagas",
+  "jt 300",
+  "jotagas jt"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "250 to 300 cc two-stroke trials single",
+ "intro": "A short-lived Spanish trials brand.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Clutch",
+   "Check plates"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "TrialsCentral",
+   "url": "https://www.trialscentral.com/",
+   "what": "Forum for trials riders, with sections for most trials makes."
+  }
+ ],
+ "heroName": "JOTAGAS"
+}

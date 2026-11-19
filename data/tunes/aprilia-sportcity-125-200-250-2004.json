@@ -1,0 +1,58 @@
+{
+ "id": "aprilia-sportcity-125-200-250-2004",
+ "make": "Aprilia",
+ "model": "Sportcity 125 / 200 / 250",
+ "name": "Aprilia Sportcity 125 / 200 / 250",
+ "years": [
+  2004,
+  2012
+ ],
+ "match": [
+  "sportcity",
+  "sport city",
+  "sportcity cube"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "124 to 244 cc single",
+ "intro": "Aprilia's sporty city scooter with 16-inch wheels.",
+ "focus": [
+  [
+   "Single",
+   "Liquid or air cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ],
+  [
+   "Body panels",
+   "Check clips"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Aprilia has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "SPORTCITY"
+}

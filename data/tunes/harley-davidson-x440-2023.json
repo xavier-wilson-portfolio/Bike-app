@@ -1,0 +1,59 @@
+{
+ "id": "harley-davidson-x440-2023",
+ "make": "Harley-Davidson",
+ "model": "X440",
+ "name": "Harley-Davidson X440",
+ "years": [
+  2023,
+  2026
+ ],
+ "match": [
+  "x440",
+  "x 440",
+  "harley x440"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "440 cc air/oil-cooled single",
+ "intro": "An Indian-built Harley made with Hero MotoCorp.",
+ "focus": [
+  [
+   "Single",
+   "Air/oil-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Harley-Davidson has issued several recalls that touch these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XLForum",
+   "url": "https://www.xlforum.net/",
+   "what": "Owner forum for Harley Sportsters."
+  }
+ ],
+ "heroName": "X440"
+}

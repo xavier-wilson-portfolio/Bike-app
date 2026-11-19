@@ -1,0 +1,59 @@
+{
+ "id": "aprilia-leonardo-125-150-250-300-1996",
+ "make": "Aprilia",
+ "model": "Leonardo 125 / 150 / 250 / 300",
+ "name": "Aprilia Leonardo 125 / 150 / 250 / 300",
+ "years": [
+  1996,
+  2005
+ ],
+ "match": [
+  "leonardo",
+  "leonardo 125",
+  "leonardo 250",
+  "leonardo 300"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "124 to 278 cc liquid-cooled four-stroke single, CVT",
+ "intro": "Aprilia's sporty four-stroke scooters of the late 1990s.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Aprilia has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "LEONARDO"
+}

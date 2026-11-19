@@ -1,0 +1,58 @@
+{
+ "id": "honda-nr750-1992",
+ "make": "Honda",
+ "model": "NR750",
+ "name": "Honda NR750",
+ "years": [
+  1992,
+  1992
+ ],
+ "match": [
+  "nr750",
+  "nr 750",
+  "honda nr"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "748 cc oval-piston V4, eight valves per cylinder",
+ "intro": "Honda's oval-piston exotic. Very few were built.",
+ "focus": [
+  [
+   "Oval-piston V4",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Specialist"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "CBR Forum",
+   "url": "https://www.cbrforum.com/",
+   "what": "Owner forum for Honda CBR models."
+  }
+ ],
+ "heroName": "NR750"
+}

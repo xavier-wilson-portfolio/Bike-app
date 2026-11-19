@@ -1,0 +1,64 @@
+{
+ "id": "suzuki-katana-50-ay50-1997",
+ "make": "Suzuki",
+ "model": "Katana 50 (AY50)",
+ "name": "Suzuki Katana 50 (AY50)",
+ "years": [
+  1997,
+  2004
+ ],
+ "match": [
+  "ay50",
+  "katana 50",
+  "katana scooter"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 cc air or liquid cooled two-stroke single, oil injection",
+ "intro": "A sporty small two-stroke scooter sold in Europe and the US.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Small single"
+  ],
+  [
+   "Oil injection",
+   "Bleed the pump"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check drums"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "KATANA 50"
+}

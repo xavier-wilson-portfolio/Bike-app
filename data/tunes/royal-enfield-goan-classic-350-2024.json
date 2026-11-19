@@ -1,0 +1,58 @@
+{
+ "id": "royal-enfield-goan-classic-350-2024",
+ "make": "Royal Enfield",
+ "model": "Goan Classic 350",
+ "name": "Royal Enfield Goan Classic 350",
+ "years": [
+  2024,
+  2026
+ ],
+ "match": [
+  "goan classic",
+  "goan classic 350"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "349 cc air/oil-cooled J-series single",
+ "intro": "A bobber-styled Classic 350.",
+ "focus": [
+  [
+   "Single",
+   "Air/oil-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Royal Enfield community",
+   "url": "https://www.royalenfield.com/us/en/",
+   "what": "Royal Enfield USA, with dealer and owner resources."
+  }
+ ],
+ "heroName": "GOAN"
+}

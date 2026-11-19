@@ -1,0 +1,64 @@
+{
+ "id": "ardie-two-strokes-and-singles-1919",
+ "make": "Ardie",
+ "model": "Two-strokes and singles",
+ "name": "Ardie Two-strokes and singles",
+ "years": [
+  1919,
+  1958
+ ],
+ "match": [
+  "ardie",
+  "ardie 125",
+  "ardie 250"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "98 to 500 cc two-stroke and four-stroke singles",
+ "intro": "A Nuremberg maker, later part of Dürkopp.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Oil",
+   "Check type"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "ARDIE"
+}

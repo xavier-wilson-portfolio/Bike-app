@@ -1,0 +1,58 @@
+{
+ "id": "voge-900dsx-2024",
+ "make": "Voge",
+ "model": "900DSX",
+ "name": "Voge 900DSX",
+ "years": [
+  2024,
+  2026
+ ],
+ "match": [
+  "900dsx",
+  "voge 900",
+  "900 dsx"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "895 cc liquid-cooled parallel twin",
+ "intro": "A large adventure bike with a BMW-derived twin.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Many of these were sold under several brand names and may not show up in the NHTSA search. Check with the seller or importer for open recalls.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "900DSX"
+}

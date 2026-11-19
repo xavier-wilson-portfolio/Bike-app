@@ -1,0 +1,60 @@
+{
+ "id": "jonway-yy50qt-yy150t-2005",
+ "make": "Jonway",
+ "model": "YY50QT / YY150T",
+ "name": "Jonway YY50QT / YY150T",
+ "years": [
+  2005,
+  2026
+ ],
+ "match": [
+  "jonway",
+  "yy50qt",
+  "yy150t",
+  "jonway 50"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 or 150 cc air-cooled single (139QMB / GY6)",
+ "intro": "Chinese scooters sold through US dealers.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Wiring",
+   "Check connectors"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "JONWAY"
+}

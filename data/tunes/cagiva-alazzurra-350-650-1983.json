@@ -1,0 +1,64 @@
+{
+ "id": "cagiva-alazzurra-350-650-1983",
+ "make": "Cagiva",
+ "model": "Alazzurra 350 / 650",
+ "name": "Cagiva Alazzurra 350 / 650",
+ "years": [
+  1983,
+  1988
+ ],
+ "match": [
+  "alazzurra",
+  "alazzurra 650",
+  "alazzurra 350"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "349 or 649 cc air-cooled Ducati Pantah V-twin",
+ "intro": "A sport tourer with a Ducati belt-drive engine.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Timing belts",
+   "Change by date"
+  ],
+  [
+   "Desmo valves",
+   "Shim check"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Desmo valve service needs both opening and closing shims checked. Follow the interval in the manual; it is not a job to skip.",
+   "Ducati timing belts are changed by time as well as miles. If you can't prove when they were done, do them before riding."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "ALAZZURRA"
+}

@@ -1,0 +1,61 @@
+{
+ "id": "douglas-dragonfly-t35-mark-series-1946",
+ "make": "Douglas",
+ "model": "Dragonfly / T35 / Mark series",
+ "name": "Douglas Dragonfly / T35 / Mark series",
+ "years": [
+  1946,
+  1957
+ ],
+ "match": [
+  "dragonfly",
+  "douglas t35",
+  "douglas mk3",
+  "douglas 90 plus",
+  "douglas mark v"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "348 cc OHV flat twin",
+ "intro": "Douglas's post-war flat twins with torsion-bar rear suspension.",
+ "focus": [
+  [
+   "Flat twin",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Gearbox",
+   "Check oil"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "DRAGONFLY"
+}

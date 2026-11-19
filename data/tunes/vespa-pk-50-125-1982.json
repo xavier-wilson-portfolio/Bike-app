@@ -1,0 +1,66 @@
+{
+ "id": "vespa-pk-50-125-1982",
+ "make": "Vespa",
+ "model": "PK 50 / 125",
+ "name": "Vespa PK 50 / 125",
+ "years": [
+  1982,
+  1990
+ ],
+ "match": [
+  "pk50",
+  "pk125",
+  "pk 50",
+  "pk 125",
+  "pk xl"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "49 to 124 cc two-stroke single",
+ "intro": "The small-frame Vespas of the 1980s.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Gearbox",
+   "Check oil"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Vintage Vespas mix oil into the fuel. Check the ratio for your model before you fill up."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Piaggio has issued recalls on some Vespas in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Owner forum for Vespa scooters, classic and modern."
+  }
+ ],
+ "heroName": "PK"
+}

@@ -1,0 +1,59 @@
+{
+ "id": "aeon-elite-revo-urban-scooters-2000",
+ "make": "Aeon",
+ "model": "Elite / Revo / Urban scooters",
+ "name": "Aeon Elite / Revo / Urban scooters",
+ "years": [
+  2000,
+  2015
+ ],
+ "match": [
+  "aeon elite",
+  "aeon revo",
+  "aeon urban",
+  "aeon 300"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 to 400 cc single",
+ "intro": "Taiwanese scooters from Aeon.",
+ "focus": [
+  [
+   "Single",
+   "Air or liquid cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ],
+  [
+   "Body panels",
+   "Check clips"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "AEON"
+}

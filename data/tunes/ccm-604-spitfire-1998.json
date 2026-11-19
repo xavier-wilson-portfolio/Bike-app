@@ -1,0 +1,57 @@
+{
+ "id": "ccm-604-spitfire-1998",
+ "make": "CCM",
+ "model": "604 / Spitfire",
+ "name": "CCM 604 / Spitfire",
+ "years": [
+  1998,
+  2020
+ ],
+ "match": [
+  "ccm 604",
+  "ccm spitfire",
+  "ccm gp450",
+  "ccm r30"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "598 cc single (Suzuki or BMW-based)",
+ "intro": "Small-batch British singles, from 604 enduros to the Spitfire scrambler.",
+ "focus": [
+  [
+   "Single",
+   "Air or liquid cooled"
+  ],
+  [
+   "Fuel",
+   "Carbs or EFI"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Frame",
+   "Check welds"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "CCM"
+}

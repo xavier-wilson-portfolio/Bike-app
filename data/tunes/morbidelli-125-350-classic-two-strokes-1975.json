@@ -1,0 +1,63 @@
+{
+ "id": "morbidelli-125-350-classic-two-strokes-1975",
+ "make": "Morbidelli",
+ "model": "125 / 350 (classic two-strokes)",
+ "name": "Morbidelli 125 / 350 (classic two-strokes)",
+ "years": [
+  1975,
+  1985
+ ],
+ "match": [
+  "morbidelli 125",
+  "morbidelli 350",
+  "morbidelli gp"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "124 to 350 cc two-stroke, GP-derived",
+ "intro": "Morbidelli's Grand Prix-winning two-strokes and their road and race versions.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carbs",
+   "Clean and jet"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "MORBIDELLI"
+}

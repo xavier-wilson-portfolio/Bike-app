@@ -1,0 +1,64 @@
+{
+ "id": "cezeta-type-501-502-scooter-1957",
+ "make": "Cezeta",
+ "model": "Type 501 / 502 scooter",
+ "name": "Cezeta Type 501 / 502 scooter",
+ "years": [
+  1957,
+  1964
+ ],
+ "match": [
+  "cezeta",
+  "cz cezeta",
+  "cezeta 502"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "172 cc two-stroke single, torpedo body",
+ "intro": "The torpedo-shaped Czech scooter.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Enclosed chain"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "CEZETA"
+}

@@ -1,0 +1,62 @@
+{
+ "id": "honda-crf80f-crf100f-2004",
+ "make": "Honda",
+ "model": "CRF80F / CRF100F",
+ "name": "Honda CRF80F / CRF100F",
+ "years": [
+  2004,
+  2013
+ ],
+ "match": [
+  "crf80f",
+  "crf100f",
+  "crf 80",
+  "crf 100",
+  "crf80",
+  "crf100"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "80 or 99 cc air-cooled single, kick start",
+ "intro": "Small kids' trail bikes that replaced the XR80R and XR100R. Hard to kill.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Clutch",
+   "Check cable"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Honda dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XR's Only",
+   "url": "https://www.xrsonly.com/",
+   "what": "Parts and know-how for Honda XR dirt bikes."
+  }
+ ],
+ "heroName": "CRF100F"
+}

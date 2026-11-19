@@ -1,0 +1,63 @@
+{
+ "id": "trrs-one-raga-racing-2015",
+ "make": "TRRS",
+ "model": "One / Raga Racing",
+ "name": "TRRS One / Raga Racing",
+ "years": [
+  2015,
+  2026
+ ],
+ "match": [
+  "trrs",
+  "trrs one",
+  "trrs raga"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "125 to 300 cc two-stroke trials single",
+ "intro": "Spanish trials bikes from Adam Raga's team.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Clutch",
+   "Check plates"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "TrialsCentral",
+   "url": "https://www.trialscentral.com/",
+   "what": "Forum for trials riders, with sections for most trials makes."
+  }
+ ],
+ "heroName": "TRRS"
+}

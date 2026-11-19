@@ -1,0 +1,60 @@
+{
+ "id": "mbk-ovetto-skyliner-stunt-1997",
+ "make": "MBK",
+ "model": "Ovetto / Skyliner / Stunt",
+ "name": "MBK Ovetto / Skyliner / Stunt",
+ "years": [
+  1997,
+  2015
+ ],
+ "match": [
+  "mbk ovetto",
+  "skyliner",
+  "mbk stunt",
+  "mbk skycruiser"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 to 250 cc single",
+ "intro": "MBK versions of Yamaha scooters, built in France.",
+ "focus": [
+  [
+   "Single",
+   "Air or liquid cooled"
+  ],
+  [
+   "Oil",
+   "Check type"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "OVETTO"
+}

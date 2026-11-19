@@ -1,0 +1,64 @@
+{
+ "id": "ktm-380-exc-380-sx-1998",
+ "make": "KTM",
+ "model": "380 EXC / 380 SX",
+ "name": "KTM 380 EXC / 380 SX",
+ "years": [
+  1998,
+  2002
+ ],
+ "match": [
+  "380 exc",
+  "380 sx",
+  "380 mxc",
+  "ktm 380"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "368 cc liquid-cooled two-stroke single, premix",
+ "intro": "KTM's big-bore two-stroke of the late 1990s. Strong and simple, but heavy to kick.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Power valve",
+   "Clean it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a KTM dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KTM Forums",
+   "url": "https://www.ktmforums.com/",
+   "what": "Owner forum for KTM street and adventure bikes."
+  }
+ ],
+ "heroName": "380 EXC"
+}

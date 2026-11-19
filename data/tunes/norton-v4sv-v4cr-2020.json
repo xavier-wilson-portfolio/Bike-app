@@ -1,0 +1,59 @@
+{
+ "id": "norton-v4sv-v4cr-2020",
+ "make": "Norton",
+ "model": "V4SV / V4CR",
+ "name": "Norton V4SV / V4CR",
+ "years": [
+  2020,
+  2026
+ ],
+ "match": [
+  "v4sv",
+  "v4cr",
+  "norton v4",
+  "v4rr"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "1200 cc liquid-cooled 72-degree V4",
+ "intro": "Norton's modern V4 superbike and cafe racer, built in Solihull.",
+ "focus": [
+  [
+   "V4",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Ride-by-wire"
+  ],
+  [
+   "Electronics",
+   "Scan for codes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fans"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Norton Owners Club",
+   "url": "https://www.nortonownersclub.org/",
+   "what": "Owner club and forum for Nortons."
+  }
+ ],
+ "heroName": "V4SV"
+}

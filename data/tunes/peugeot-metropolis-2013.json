@@ -1,0 +1,58 @@
+{
+ "id": "peugeot-metropolis-2013",
+ "make": "Peugeot",
+ "model": "Metropolis",
+ "name": "Peugeot Metropolis",
+ "years": [
+  2013,
+  2026
+ ],
+ "match": [
+  "metropolis",
+  "peugeot metropolis",
+  "metropolis 400"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "399 cc liquid-cooled single, three wheels",
+ "intro": "A tilting three-wheel maxi-scooter.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Front tilt",
+   "Check linkage"
+  ],
+  [
+   "Brakes",
+   "Check ABS"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "heroName": "METROPOLIS"
+}

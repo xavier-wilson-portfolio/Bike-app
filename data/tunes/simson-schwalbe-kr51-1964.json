@@ -1,0 +1,65 @@
+{
+ "id": "simson-schwalbe-kr51-1964",
+ "make": "Simson",
+ "model": "Schwalbe KR51",
+ "name": "Simson Schwalbe KR51",
+ "years": [
+  1964,
+  1986
+ ],
+ "match": [
+  "schwalbe",
+  "kr51",
+  "kr 51",
+  "simson schwalbe"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "49 cc two-stroke single, small scooter",
+ "intro": "The East German \"swallow\", still very common in Germany.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Enclosed chain"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "SCHWALBE"
+}

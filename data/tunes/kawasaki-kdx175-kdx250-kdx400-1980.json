@@ -1,0 +1,66 @@
+{
+ "id": "kawasaki-kdx175-kdx250-kdx400-1980",
+ "make": "Kawasaki",
+ "model": "KDX175 / KDX250 / KDX400",
+ "name": "Kawasaki KDX175 / KDX250 / KDX400",
+ "years": [
+  1980,
+  1984
+ ],
+ "match": [
+  "kdx175",
+  "kdx400",
+  "kdx250 1982",
+  "kdx 175",
+  "kdx 400"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "175 to 400 cc air-cooled two-stroke single, premix",
+ "intro": "The first KDX enduros with Uni-Trak rear suspension.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KZRider forum",
+   "url": "https://www.kzrider.com/",
+   "what": "Owner forum for classic Kawasakis."
+  }
+ ],
+ "heroName": "KDX"
+}

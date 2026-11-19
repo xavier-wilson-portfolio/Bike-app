@@ -1,0 +1,65 @@
+{
+ "id": "yamaha-dt125r-dt125re-1988",
+ "make": "Yamaha",
+ "model": "DT125R / DT125RE",
+ "name": "Yamaha DT125R / DT125RE",
+ "years": [
+  1988,
+  2006
+ ],
+ "match": [
+  "dt125r",
+  "dt125re",
+  "dt125x",
+  "dt 125 r",
+  "dt 125 re"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "124 cc liquid-cooled two-stroke single, power valve",
+ "intro": "The European learner enduro. Restricted for learners in many countries, with a power valve and oil injection.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "Power valve",
+   "Clean it"
+  ],
+  [
+   "Autolube",
+   "Bleed the pump"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Yamaha dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "DT125R"
+}

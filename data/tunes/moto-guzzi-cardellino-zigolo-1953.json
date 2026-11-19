@@ -1,0 +1,65 @@
+{
+ "id": "moto-guzzi-cardellino-zigolo-1953",
+ "make": "Moto Guzzi",
+ "model": "Cardellino / Zigolo",
+ "name": "Moto Guzzi Cardellino / Zigolo",
+ "years": [
+  1953,
+  1966
+ ],
+ "match": [
+  "cardellino",
+  "zigolo",
+  "guzzi zigolo",
+  "guzzi cardellino"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "73 to 110 cc two-stroke single",
+ "intro": "Guzzi's small post-war two-strokes.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moto Guzzi National Owners Club",
+   "url": "https://www.mgnoc.org/",
+   "what": "US owner club for Moto Guzzi."
+  }
+ ],
+ "heroName": "ZIGOLO"
+}

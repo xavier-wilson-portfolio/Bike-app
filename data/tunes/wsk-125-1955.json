@@ -1,0 +1,64 @@
+{
+ "id": "wsk-125-1955",
+ "make": "WSK",
+ "model": "125",
+ "name": "WSK 125",
+ "years": [
+  1955,
+  1985
+ ],
+ "match": [
+  "wsk",
+  "wsk 125",
+  "wsk m06"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "123 cc two-stroke single",
+ "intro": "A Polish two-stroke commuter, built in millions.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "WSK"
+}

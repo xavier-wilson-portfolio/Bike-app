@@ -1,0 +1,59 @@
+{
+ "id": "aprilia-rs4-125-rs-125-four-stroke-2011",
+ "make": "Aprilia",
+ "model": "RS4 125 / RS 125 (four-stroke)",
+ "name": "Aprilia RS4 125 / RS 125 (four-stroke)",
+ "years": [
+  2011,
+  2026
+ ],
+ "match": [
+  "rs4 125",
+  "rs 125 2018",
+  "rs 125 4t",
+  "tuono 125"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "124 cc liquid-cooled four-stroke single, fuel injected",
+ "intro": "Aprilia's four-stroke learner sport bikes that replaced the two-stroke RS 125.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Aprilia has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ApriliaForum",
+   "url": "https://www.apriliaforum.com/",
+   "what": "Owner forum for Aprilia motorcycles."
+  }
+ ],
+ "heroName": "RS 125"
+}

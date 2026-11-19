@@ -1,0 +1,65 @@
+{
+ "id": "hercules-k-50-k-125-1966",
+ "make": "Hercules",
+ "model": "K 50 / K 125",
+ "name": "Hercules K 50 / K 125",
+ "years": [
+  1966,
+  1985
+ ],
+ "match": [
+  "hercules k50",
+  "hercules k125",
+  "k 125 bw",
+  "k 50 sl"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "49 or 124 cc Sachs two-stroke single",
+ "intro": "Hercules's small sporty motorcycles and enduros with Sachs engines.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "HERCULES"
+}

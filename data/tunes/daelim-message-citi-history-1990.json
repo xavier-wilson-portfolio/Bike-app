@@ -1,0 +1,59 @@
+{
+ "id": "daelim-message-citi-history-1990",
+ "make": "Daelim",
+ "model": "Message / Citi / History",
+ "name": "Daelim Message / Citi / History",
+ "years": [
+  1990,
+  2012
+ ],
+ "match": [
+  "daelim message",
+  "daelim history",
+  "daelim citi"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 to 125 cc single",
+ "intro": "Daelim's small scooters.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ],
+  [
+   "Body panels",
+   "Check clips"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "MESSAGE"
+}

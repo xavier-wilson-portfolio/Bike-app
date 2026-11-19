@@ -1,0 +1,59 @@
+{
+ "id": "suzuki-inazuma-250-gw250-2012",
+ "make": "Suzuki",
+ "model": "Inazuma 250 (GW250)",
+ "name": "Suzuki Inazuma 250 (GW250)",
+ "years": [
+  2012,
+  2019
+ ],
+ "match": [
+  "inazuma",
+  "gw250",
+  "gsr250",
+  "inazuma 250"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "248 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "A small commuter twin built in China for Suzuki. Also sold as the GSR250.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Suzuki Forums",
+   "url": "https://www.suzuki-forums.com/forums/",
+   "what": "General owner forum for Suzuki motorcycles."
+  }
+ ],
+ "heroName": "INAZUMA"
+}

@@ -1,0 +1,60 @@
+{
+ "id": "honda-click-vario-125-150-160-2006",
+ "make": "Honda",
+ "model": "Click / Vario 125 / 150 / 160",
+ "name": "Honda Click / Vario 125 / 150 / 160",
+ "years": [
+  2006,
+  2026
+ ],
+ "match": [
+  "click 125",
+  "click 160",
+  "vario 150",
+  "vario 160",
+  "honda click"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "108 to 157 cc liquid-cooled single",
+ "intro": "A common Honda scooter in Southeast Asia.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Brakes",
+   "Check combined"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Honda scooters."
+  }
+ ],
+ "heroName": "CLICK"
+}

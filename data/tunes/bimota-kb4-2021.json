@@ -1,0 +1,58 @@
+{
+ "id": "bimota-kb4-2021",
+ "make": "Bimota",
+ "model": "KB4",
+ "name": "Bimota KB4",
+ "years": [
+  2021,
+  2026
+ ],
+ "match": [
+  "kb4",
+  "bimota kb4",
+  "kb4rc"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "1043 cc liquid-cooled inline four from the Kawasaki Ninja 1000SX",
+ "intro": "A hand-built Bimota with a Kawasaki engine.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "KB4"
+}

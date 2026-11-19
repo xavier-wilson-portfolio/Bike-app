@@ -1,0 +1,62 @@
+{
+ "id": "zenith-gradua-v-twins-1904",
+ "make": "Zenith",
+ "model": "Gradua / V-twins",
+ "name": "Zenith Gradua / V-twins",
+ "years": [
+  1904,
+  1950
+ ],
+ "match": [
+  "zenith",
+  "zenith gradua"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "JAP V-twins and singles, Gradua variable gear",
+ "intro": "A maker known for its early Gradua variable gearing.",
+ "focus": [
+  [
+   "Engine",
+   "Air-cooled"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain or belt",
+   "Check drive"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "ZENITH"
+}

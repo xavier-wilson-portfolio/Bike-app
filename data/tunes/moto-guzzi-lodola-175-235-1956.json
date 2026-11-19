@@ -1,0 +1,60 @@
+{
+ "id": "moto-guzzi-lodola-175-235-1956",
+ "make": "Moto Guzzi",
+ "model": "Lodola 175 / 235",
+ "name": "Moto Guzzi Lodola 175 / 235",
+ "years": [
+  1956,
+  1966
+ ],
+ "match": [
+  "lodola",
+  "lodola 175",
+  "lodola 235",
+  "lodola gran turismo"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "175 or 235 cc inclined single, OHC then OHV",
+ "intro": "Carcano-designed lightweights from Mandello.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moto Guzzi National Owners Club",
+   "url": "https://www.mgnoc.org/",
+   "what": "US owner club for Moto Guzzi."
+  }
+ ],
+ "heroName": "LODOLA"
+}

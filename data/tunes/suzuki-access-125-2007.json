@@ -1,0 +1,58 @@
+{
+ "id": "suzuki-access-125-2007",
+ "make": "Suzuki",
+ "model": "Access 125",
+ "name": "Suzuki Access 125",
+ "years": [
+  2007,
+  2026
+ ],
+ "match": [
+  "access 125",
+  "suzuki access"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "124 cc air-cooled single",
+ "intro": "A popular Suzuki scooter in India.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check combined"
+  ],
+  [
+   "Body panels",
+   "Check clips"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "ACCESS"
+}

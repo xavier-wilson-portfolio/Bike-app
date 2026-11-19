@@ -1,0 +1,59 @@
+{
+ "id": "ratier-c6s-l7-1959",
+ "make": "Ratier",
+ "model": "C6S / L7",
+ "name": "Ratier C6S / L7",
+ "years": [
+  1959,
+  1962
+ ],
+ "match": [
+  "ratier",
+  "ratier c6s",
+  "ratier l7"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "490 to 600 cc OHV flat twin, shaft drive",
+ "intro": "French flat twins derived from the CMR (BMW-style) design.",
+ "focus": [
+  [
+   "Flat twin",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Set rockers"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Shaft drive",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "RATIER"
+}

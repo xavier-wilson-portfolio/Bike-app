@@ -1,0 +1,60 @@
+{
+ "id": "mv-agusta-350-b-350-sport-1970",
+ "make": "MV Agusta",
+ "model": "350 B / 350 Sport",
+ "name": "MV Agusta 350 B / 350 Sport",
+ "years": [
+  1970,
+  1978
+ ],
+ "match": [
+  "350 b",
+  "350 sport",
+  "mv 350",
+  "350 ipotesi"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "349 cc air-cooled OHV parallel twin",
+ "intro": "MV's smaller road twin of the 1970s.",
+ "focus": [
+  [
+   "Twin",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "MV Agusta forum",
+   "url": "https://www.mvagusta.net/",
+   "what": "Owner forum for MV Agusta motorcycles."
+  }
+ ],
+ "heroName": "MV 350"
+}

@@ -1,0 +1,59 @@
+{
+ "id": "sunbeam-s7-s8-1947",
+ "make": "Sunbeam",
+ "model": "S7 / S8",
+ "name": "Sunbeam S7 / S8",
+ "years": [
+  1947,
+  1956
+ ],
+ "match": [
+  "sunbeam s7",
+  "sunbeam s8",
+  "s7 deluxe"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "487 cc OHC inline twin, shaft drive",
+ "intro": "BSA-owned Sunbeam's inline twins, unusual for a British bike.",
+ "focus": [
+  [
+   "Inline twin",
+   "Air-cooled"
+  ],
+  [
+   "Cam chain",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Coil ignition",
+   "Check it"
+  ],
+  [
+   "Shaft drive",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "S7"
+}

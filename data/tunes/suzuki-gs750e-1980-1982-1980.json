@@ -1,0 +1,64 @@
+{
+ "id": "suzuki-gs750e-1980-1982-1980",
+ "make": "Suzuki",
+ "model": "GS750E (1980-1982)",
+ "name": "Suzuki GS750E (1980-1982)",
+ "years": [
+  1980,
+  1982
+ ],
+ "match": [
+  "gs750e 1980",
+  "gs750e 1981",
+  "gs750et",
+  "gs750ez"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "747 cc air-cooled 16-valve TSCC inline four",
+ "intro": "The four-valve GS750 that followed the first eight-valve bike.",
+ "focus": [
+  [
+   "Inline four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The GS Resources forum",
+   "url": "https://www.thegsresources.com/_forum/",
+   "what": "Owner forum for Suzuki GS fours and twins."
+  }
+ ],
+ "heroName": "GS750E"
+}

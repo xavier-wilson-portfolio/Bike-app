@@ -1,0 +1,61 @@
+{
+ "id": "piaggio-zip-50-1992",
+ "make": "Piaggio",
+ "model": "Zip 50",
+ "name": "Piaggio Zip 50",
+ "years": [
+  1992,
+  2026
+ ],
+ "match": [
+  "zip 50",
+  "piaggio zip",
+  "zip sp",
+  "zip 4t"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 cc air-cooled two-stroke or four-stroke single",
+ "intro": "A simple city scooter and a tuning platform.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Oil",
+   "Check type"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check drums"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "ZIP"
+}

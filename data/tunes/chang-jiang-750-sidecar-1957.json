@@ -1,0 +1,60 @@
+{
+ "id": "chang-jiang-750-sidecar-1957",
+ "make": "Chang Jiang",
+ "model": "750 sidecar",
+ "name": "Chang Jiang 750 sidecar",
+ "years": [
+  1957,
+  2005
+ ],
+ "match": [
+  "chang jiang",
+  "cj750",
+  "chang jiang 750",
+  "cj 750"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "746 cc side-valve or OHV flat twin, sidecar",
+ "intro": "A Chinese copy of the BMW R71, through the Soviet M-72.",
+ "focus": [
+  [
+   "Flat twin",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Sidecar",
+   "Check alignment"
+  ],
+  [
+   "Shaft drive",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BMW MOA forum",
+   "url": "https://forums.bmwmoa.org/",
+   "what": "BMW Motorcycle Owners of America forum."
+  }
+ ],
+ "heroName": "CJ750"
+}

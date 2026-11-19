@@ -1,0 +1,60 @@
+{
+ "id": "malaguti-f12-phantom-1996",
+ "make": "Malaguti",
+ "model": "F12 Phantom",
+ "name": "Malaguti F12 Phantom",
+ "years": [
+  1996,
+  2011
+ ],
+ "match": [
+  "f12",
+  "phantom",
+  "f12 phantom",
+  "malaguti f12"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 cc liquid-cooled two-stroke single",
+ "intro": "A popular sporty 50 cc scooter in Europe.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "Oil injection",
+   "Check pump"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "F12"
+}

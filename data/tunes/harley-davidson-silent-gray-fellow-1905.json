@@ -1,0 +1,65 @@
+{
+ "id": "harley-davidson-silent-gray-fellow-1905",
+ "make": "Harley-Davidson",
+ "model": "Silent Gray Fellow",
+ "name": "Harley-Davidson Silent Gray Fellow",
+ "years": [
+  1905,
+  1918
+ ],
+ "match": [
+  "silent gray fellow",
+  "harley single 1910",
+  "model 5",
+  "model 6",
+  "model 9"
+ ],
+ "style": "standard",
+ "drive": "belt",
+ "engine": "Single-cylinder IOE engine, belt or chain drive",
+ "intro": "Harley's early single, named for its quiet muffler and gray paint.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "IOE valves",
+   "Set them"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Oil",
+   "Total loss"
+  ],
+  [
+   "Belt drive",
+   "Check tension"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Check whether yours has a total-loss or a recirculating oil system before you fill it, and know which one you are running."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "SILENT GRAY"
+}

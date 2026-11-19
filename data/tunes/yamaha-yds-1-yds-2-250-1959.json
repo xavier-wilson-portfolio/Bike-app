@@ -1,0 +1,66 @@
+{
+ "id": "yamaha-yds-1-yds-2-250-1959",
+ "make": "Yamaha",
+ "model": "YDS-1 / YDS-2 250",
+ "name": "Yamaha YDS-1 / YDS-2 250",
+ "years": [
+  1959,
+  1962
+ ],
+ "match": [
+  "yds1",
+  "yds2",
+  "yds-1",
+  "yds-2",
+  "yds 2"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "246 cc air-cooled two-stroke parallel twin, premix",
+ "intro": "Yamaha's first sporting 250 twins. Very rare now, with parts shared in places with the later YDS-3.",
+ "focus": [
+  [
+   "Two-stroke twin",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "YDS-2"
+}

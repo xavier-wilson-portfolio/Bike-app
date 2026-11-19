@@ -1,0 +1,62 @@
+{
+ "id": "honda-jade-250-1991",
+ "make": "Honda",
+ "model": "Jade 250",
+ "name": "Honda Jade 250",
+ "years": [
+  1991,
+  1996
+ ],
+ "match": [
+  "jade",
+  "jade 250",
+  "mc23"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "249 cc liquid-cooled inline four",
+ "intro": "A small naked four from Japan.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "JADE"
+}

@@ -1,0 +1,60 @@
+{
+ "id": "honda-cb400a-hawk-hondamatic-1978",
+ "make": "Honda",
+ "model": "CB400A Hawk Hondamatic",
+ "name": "Honda CB400A Hawk Hondamatic",
+ "years": [
+  1978,
+  1979
+ ],
+ "match": [
+  "cb400a",
+  "cb 400a",
+  "400 hondamatic",
+  "hawk hondamatic"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "395 cc air-cooled three-valve parallel twin, two-speed Hondamatic",
+ "intro": "The 400 Hawk twin with the two-speed Hondamatic gearbox. Rare now, with parts shared with the CB400T.",
+ "focus": [
+  [
+   "Twin",
+   "Air-cooled"
+  ],
+  [
+   "Hondamatic",
+   "Check fluid"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Cam chain",
+   "Check tensioner"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "CB400A"
+}

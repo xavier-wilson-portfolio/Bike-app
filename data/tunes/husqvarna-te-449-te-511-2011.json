@@ -1,0 +1,63 @@
+{
+ "id": "husqvarna-te-449-te-511-2011",
+ "make": "Husqvarna",
+ "model": "TE 449 / TE 511",
+ "name": "Husqvarna TE 449 / TE 511",
+ "years": [
+  2011,
+  2013
+ ],
+ "match": [
+  "te 449",
+  "te 511",
+  "te449",
+  "te511"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "449 or 477 cc liquid-cooled single, fuel injected",
+ "intro": "The BMW-era Husqvarna enduros with the countershaft next to the swingarm pivot.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check often"
+  ],
+  [
+   "Oil",
+   "Change by hours"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Four-stroke motocross engines need frequent valve checks and oil changes. Follow the hour-based schedule in the manual, not the calendar."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Husqvarna dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "TE 511"
+}

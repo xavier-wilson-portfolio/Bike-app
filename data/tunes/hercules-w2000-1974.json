@@ -1,0 +1,59 @@
+{
+ "id": "hercules-w2000-1974",
+ "make": "Hercules",
+ "model": "W2000",
+ "name": "Hercules W2000",
+ "years": [
+  1974,
+  1979
+ ],
+ "match": [
+  "w2000",
+  "hercules w2000",
+  "wankel 2000",
+  "dkw w2000"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "294 cc air-cooled Sachs Wankel rotary",
+ "intro": "One of the first rotary-engined production motorcycles.",
+ "focus": [
+  [
+   "Rotary engine",
+   "Air-cooled"
+  ],
+  [
+   "Oil",
+   "Check pump"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Rotor seals",
+   "Check compression"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "W2000"
+}

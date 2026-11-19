@@ -1,0 +1,59 @@
+{
+ "id": "yamaha-xs360-1976",
+ "make": "Yamaha",
+ "model": "XS360",
+ "name": "Yamaha XS360",
+ "years": [
+  1976,
+  1977
+ ],
+ "match": [
+  "xs360",
+  "xs 360",
+  "xs360c"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "358 cc air-cooled SOHC parallel twin",
+ "intro": "The forerunner of the XS400. A plain, reliable small twin.",
+ "focus": [
+  [
+   "Twin",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Cam chain",
+   "Check tensioner"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XS400.com forum",
+   "url": "https://www.xs400.com/",
+   "what": "Owner forum for the Yamaha XS400."
+  }
+ ],
+ "heroName": "XS360"
+}

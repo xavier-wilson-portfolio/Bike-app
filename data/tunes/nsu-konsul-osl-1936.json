@@ -1,0 +1,64 @@
+{
+ "id": "nsu-konsul-osl-1936",
+ "make": "NSU",
+ "model": "Konsul / OSL",
+ "name": "NSU Konsul / OSL",
+ "years": [
+  1936,
+  1954
+ ],
+ "match": [
+  "konsul",
+  "osl",
+  "nsu konsul",
+  "nsu osl"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "251 to 494 cc OHV single",
+ "intro": "NSU's pre-war and early post-war pushrod singles.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "KONSUL"
+}

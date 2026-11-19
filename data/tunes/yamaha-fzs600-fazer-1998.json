@@ -1,0 +1,63 @@
+{
+ "id": "yamaha-fzs600-fazer-1998",
+ "make": "Yamaha",
+ "model": "FZS600 Fazer",
+ "name": "Yamaha FZS600 Fazer",
+ "years": [
+  1998,
+  2003
+ ],
+ "match": [
+  "fzs600",
+  "fazer 600",
+  "fzs 600",
+  "fazer"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "599 cc liquid-cooled inline four from the Thundercat, carbs",
+ "intro": "A half-faired, comfortable four sold in Europe. Simple and reliable.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "heroName": "FAZER"
+}

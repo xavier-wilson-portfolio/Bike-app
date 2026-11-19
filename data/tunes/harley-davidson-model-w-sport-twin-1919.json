@@ -1,0 +1,68 @@
+{
+ "id": "harley-davidson-model-w-sport-twin-1919",
+ "make": "Harley-Davidson",
+ "model": "Model W Sport Twin",
+ "name": "Harley-Davidson Model W Sport Twin",
+ "years": [
+  1919,
+  1923
+ ],
+ "match": [
+  "model w",
+  "sport twin",
+  "wf",
+  "wj",
+  "harley sport twin"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "584 cc side-valve flat twin, total-loss oil",
+ "intro": "Harley's opposed-twin lightweight, very different from the V-twins. Rare and mostly in collections.",
+ "focus": [
+  [
+   "Flat twin",
+   "Air-cooled"
+  ],
+  [
+   "Oil system",
+   "Total loss"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ],
+  "H": [
+   "Check whether yours has a total-loss or a recirculating oil system before you fill it, and know which one you are running."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "SPORT TWIN"
+}

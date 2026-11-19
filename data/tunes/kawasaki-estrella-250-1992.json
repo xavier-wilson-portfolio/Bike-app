@@ -1,0 +1,59 @@
+{
+ "id": "kawasaki-estrella-250-1992",
+ "make": "Kawasaki",
+ "model": "Estrella 250",
+ "name": "Kawasaki Estrella 250",
+ "years": [
+  1992,
+  2017
+ ],
+ "match": [
+  "estrella",
+  "estrella 250",
+  "bj250"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "249 cc air-cooled single, retro",
+ "intro": "A retro single from Japan, simple and light.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KawiForums",
+   "url": "https://www.kawiforums.com/",
+   "what": "Owner forum for Kawasaki motorcycles."
+  }
+ ],
+ "heroName": "ESTRELLA"
+}

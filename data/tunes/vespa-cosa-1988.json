@@ -1,0 +1,60 @@
+{
+ "id": "vespa-cosa-1988",
+ "make": "Vespa",
+ "model": "Cosa",
+ "name": "Vespa Cosa",
+ "years": [
+  1988,
+  1997
+ ],
+ "match": [
+  "cosa",
+  "vespa cosa",
+  "cosa 200"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "124 to 198 cc two-stroke single, linked brakes",
+ "intro": "A modernized PX with plastic body parts and linked brakes on some.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Oil",
+   "Check type"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Linked brakes",
+   "Check them"
+  ],
+  [
+   "Gearbox",
+   "Check oil"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Piaggio has issued recalls on some Vespas in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "COSA"
+}

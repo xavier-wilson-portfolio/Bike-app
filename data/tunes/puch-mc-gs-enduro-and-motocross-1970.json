@@ -1,0 +1,65 @@
+{
+ "id": "puch-mc-gs-enduro-and-motocross-1970",
+ "make": "Puch",
+ "model": "MC / GS enduro and motocross",
+ "name": "Puch MC / GS enduro and motocross",
+ "years": [
+  1970,
+  1985
+ ],
+ "match": [
+  "puch mc 125",
+  "puch gs 250",
+  "puch 175 enduro",
+  "puch mc 250"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "123 to 504 cc two-stroke single, premix",
+ "intro": "Austrian competition two-strokes from Graz.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "heroName": "PUCH"
+}

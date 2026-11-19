@@ -1,0 +1,59 @@
+{
+ "id": "silk-700s-1975",
+ "make": "Silk",
+ "model": "700S",
+ "name": "Silk 700S",
+ "years": [
+  1975,
+  1979
+ ],
+ "match": [
+  "silk 700s",
+  "silk",
+  "silk 700"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "653 cc liquid-cooled two-stroke twin, Scott-derived",
+ "intro": "A British two-stroke twin developed from the Scott design.",
+ "focus": [
+  [
+   "Two-stroke twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Oil",
+   "Check pump"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Cooling",
+   "Coolant check"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "SILK"
+}

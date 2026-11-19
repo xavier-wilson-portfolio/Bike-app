@@ -1,0 +1,63 @@
+{
+ "id": "sunbeam-model-90-lion-pre-war-1912",
+ "make": "Sunbeam",
+ "model": "Model 90 / Lion (pre-war)",
+ "name": "Sunbeam Model 90 / Lion (pre-war)",
+ "years": [
+  1912,
+  1939
+ ],
+ "match": [
+  "sunbeam lion",
+  "sunbeam model 90",
+  "sunbeam 90"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "347 to 599 cc side-valve or OHV single, enclosed chains",
+ "intro": "Pre-war Sunbeams, known for their finish and oil-bath chaincases.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Enclosed"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "SUNBEAM"
+}

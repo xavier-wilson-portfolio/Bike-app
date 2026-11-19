@@ -1,0 +1,59 @@
+{
+ "id": "motomel-skua-blitz-2005",
+ "make": "Motomel",
+ "model": "Skua / Blitz",
+ "name": "Motomel Skua / Blitz",
+ "years": [
+  2005,
+  2026
+ ],
+ "match": [
+  "motomel",
+  "motomel skua",
+  "motomel blitz"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "110 to 250 cc air-cooled single",
+ "intro": "An Argentine motorcycle brand.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Wiring",
+   "Check connectors"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "MOTOMEL"
+}

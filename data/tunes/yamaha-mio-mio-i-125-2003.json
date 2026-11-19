@@ -1,0 +1,57 @@
+{
+ "id": "yamaha-mio-mio-i-125-2003",
+ "make": "Yamaha",
+ "model": "Mio / Mio i 125",
+ "name": "Yamaha Mio / Mio i 125",
+ "years": [
+  2003,
+  2026
+ ],
+ "match": [
+  "mio",
+  "yamaha mio",
+  "mio i 125",
+  "mio soul"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "113 or 125 cc single",
+ "intro": "A popular small scooter in Southeast Asia.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ],
+  [
+   "Body panels",
+   "Check clips"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "MIO"
+}

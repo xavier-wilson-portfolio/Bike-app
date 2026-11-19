@@ -1,0 +1,63 @@
+{
+ "id": "cobra-cx50-cx65-1997",
+ "make": "Cobra",
+ "model": "CX50 / CX65",
+ "name": "Cobra CX50 / CX65",
+ "years": [
+  1997,
+  2026
+ ],
+ "match": [
+  "cobra cx50",
+  "cobra cx65",
+  "cobra king"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "49 or 65 cc liquid-cooled two-stroke minicross",
+ "intro": "American-built kids' motocross bikes.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "COBRA"
+}

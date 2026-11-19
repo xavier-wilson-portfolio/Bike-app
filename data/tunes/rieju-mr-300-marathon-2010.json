@@ -1,0 +1,57 @@
+{
+ "id": "rieju-mr-300-marathon-2010",
+ "make": "Rieju",
+ "model": "MR 300 / Marathon",
+ "name": "Rieju MR 300 / Marathon",
+ "years": [
+  2010,
+  2026
+ ],
+ "match": [
+  "mr 300",
+  "marathon",
+  "rieju mr",
+  "marathon 425"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 to 425 cc two- or four-stroke single",
+ "intro": "Spanish enduro and trail bikes.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "Top end",
+   "Check it"
+  ],
+  [
+   "Cooling",
+   "Coolant check"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "RIEJU"
+}

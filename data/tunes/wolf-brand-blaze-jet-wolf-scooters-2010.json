@@ -1,0 +1,59 @@
+{
+ "id": "wolf-brand-blaze-jet-wolf-scooters-2010",
+ "make": "Wolf Brand",
+ "model": "Blaze / Jet / Wolf scooters",
+ "name": "Wolf Brand Blaze / Jet / Wolf scooters",
+ "years": [
+  2010,
+  2026
+ ],
+ "match": [
+  "wolf brand",
+  "wolf blaze",
+  "wolf jet"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 to 150 cc single",
+ "intro": "Budget scooters sold in the US under the Wolf brand.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ],
+  [
+   "Wiring",
+   "Check connectors"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "WOLF"
+}

@@ -1,0 +1,59 @@
+{
+ "id": "honda-xre300-2009",
+ "make": "Honda",
+ "model": "XRE300",
+ "name": "Honda XRE300",
+ "years": [
+  2009,
+  2026
+ ],
+ "match": [
+  "xre300",
+  "xre 300",
+  "xre 190"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "291 cc air-cooled single",
+ "intro": "A Brazilian-built dual sport, popular in Latin America.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Honda dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "XRE300"
+}

@@ -1,0 +1,59 @@
+{
+ "id": "sym-maxsym-400-600-tl-2011",
+ "make": "SYM",
+ "model": "Maxsym 400 / 600 / TL",
+ "name": "SYM Maxsym 400 / 600 / TL",
+ "years": [
+  2011,
+  2026
+ ],
+ "match": [
+  "maxsym",
+  "maxsym 400",
+  "maxsym 600",
+  "maxsym tl"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "399 to 565 cc liquid-cooled single or twin",
+ "intro": "SYM's maxi-scooters.",
+ "focus": [
+  [
+   "Engine",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Brakes",
+   "Check ABS"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "MAXSYM"
+}

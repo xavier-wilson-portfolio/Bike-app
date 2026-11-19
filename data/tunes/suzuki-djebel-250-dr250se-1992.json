@@ -1,0 +1,60 @@
+{
+ "id": "suzuki-djebel-250-dr250se-1992",
+ "make": "Suzuki",
+ "model": "Djebel 250 / DR250SE",
+ "name": "Suzuki Djebel 250 / DR250SE",
+ "years": [
+  1992,
+  2004
+ ],
+ "match": [
+  "djebel 250",
+  "dr250se",
+  "djebel 250 xc",
+  "dr 250 se"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 cc air/oil-cooled single, carb",
+ "intro": "Japanese and European DR250 versions with big tanks or electric start.",
+ "focus": [
+  [
+   "Single",
+   "Air/oil-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check stator"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Suzuki dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "DJEBEL"
+}

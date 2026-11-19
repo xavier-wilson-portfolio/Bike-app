@@ -1,0 +1,58 @@
+{
+ "id": "honda-magna-250-v-twin-1994",
+ "make": "Honda",
+ "model": "Magna 250 (V-twin)",
+ "name": "Honda Magna 250 (V-twin)",
+ "years": [
+  1994,
+  2007
+ ],
+ "match": [
+  "magna 250",
+  "v-twin magna",
+  "mc29"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "249 cc liquid-cooled V-twin",
+ "intro": "A small chopper-styled V-twin cruiser from Japan.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Shadow Riders",
+   "url": "https://www.shadowriders.com/",
+   "what": "Owner forum for Honda Shadows and other Honda cruisers."
+  }
+ ],
+ "heroName": "MAGNA 250"
+}

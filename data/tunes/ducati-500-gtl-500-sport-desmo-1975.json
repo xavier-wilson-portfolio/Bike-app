@@ -1,0 +1,60 @@
+{
+ "id": "ducati-500-gtl-500-sport-desmo-1975",
+ "make": "Ducati",
+ "model": "500 GTL / 500 Sport Desmo",
+ "name": "Ducati 500 GTL / 500 Sport Desmo",
+ "years": [
+  1975,
+  1983
+ ],
+ "match": [
+  "500 gtl",
+  "500 sport desmo",
+  "350 gtl",
+  "ducati 500 desmo"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "497 cc air-cooled parallel twin, valve springs or desmo",
+ "intro": "Ducati's parallel twins, unusual for the brand. Not well loved at the time and rare now.",
+ "focus": [
+  [
+   "Twin",
+   "Air-cooled"
+  ],
+  [
+   "Valves",
+   "Spring or desmo"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "heroName": "500 DESMO"
+}

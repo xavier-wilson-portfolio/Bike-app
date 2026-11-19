@@ -1,0 +1,58 @@
+{
+ "id": "yamaha-neo-s-vity-xenter-1997",
+ "make": "Yamaha",
+ "model": "Neo's / Vity / Xenter",
+ "name": "Yamaha Neo's / Vity / Xenter",
+ "years": [
+  1997,
+  2015
+ ],
+ "match": [
+  "neo's",
+  "neos",
+  "vity",
+  "xenter",
+  "ovetto"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 to 150 cc single",
+ "intro": "Yamaha's European city scooters.",
+ "focus": [
+  [
+   "Single",
+   "Air or liquid cooled"
+  ],
+  [
+   "Oil",
+   "Check type"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "NEOS"
+}

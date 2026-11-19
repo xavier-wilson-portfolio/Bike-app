@@ -1,0 +1,65 @@
+{
+ "id": "yamaha-yl1-twin-jet-100-1966",
+ "make": "Yamaha",
+ "model": "YL1 Twin Jet 100",
+ "name": "Yamaha YL1 Twin Jet 100",
+ "years": [
+  1966,
+  1967
+ ],
+ "match": [
+  "yl1",
+  "twin jet",
+  "yl-1",
+  "twin jet 100"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "97 cc air-cooled two-stroke parallel twin, Autolube",
+ "intro": "A tiny two-stroke twin with rotary valves and oil injection. Quick for its size.",
+ "focus": [
+  [
+   "Two-stroke twin",
+   "Air-cooled"
+  ],
+  [
+   "Autolube",
+   "Bleed the pump"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "TWIN JET"
+}

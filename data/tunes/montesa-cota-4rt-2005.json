@@ -1,0 +1,59 @@
+{
+ "id": "montesa-cota-4rt-2005",
+ "make": "Montesa",
+ "model": "Cota 4RT",
+ "name": "Montesa Cota 4RT",
+ "years": [
+  2005,
+  2026
+ ],
+ "match": [
+  "4rt",
+  "cota 4rt",
+  "4ride",
+  "cota 301rr"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "260 or 300 cc liquid-cooled four-stroke trials single",
+ "intro": "Honda-built four-stroke trials bikes.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Clutch",
+   "Check plates"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "TrialsCentral",
+   "url": "https://www.trialscentral.com/",
+   "what": "Forum for trials riders, with sections for most trials makes."
+  }
+ ],
+ "heroName": "4RT"
+}

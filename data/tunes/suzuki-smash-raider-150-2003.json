@@ -1,0 +1,57 @@
+{
+ "id": "suzuki-smash-raider-150-2003",
+ "make": "Suzuki",
+ "model": "Smash / Raider 150",
+ "name": "Suzuki Smash / Raider 150",
+ "years": [
+  2003,
+  2026
+ ],
+ "match": [
+  "smash",
+  "raider 150",
+  "suzuki raider",
+  "satria fu"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "110 to 150 cc single, underbone",
+ "intro": "Popular Suzuki underbones in Southeast Asia.",
+ "focus": [
+  [
+   "Single",
+   "Air or liquid cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Clutch",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Suzuki Forums",
+   "url": "https://www.suzuki-forums.com/forums/",
+   "what": "General owner forum for Suzuki motorcycles."
+  }
+ ],
+ "heroName": "RAIDER"
+}

@@ -1,0 +1,59 @@
+{
+ "id": "ossa-tr280i-2011",
+ "make": "Ossa",
+ "model": "TR280i",
+ "name": "Ossa TR280i",
+ "years": [
+  2011,
+  2015
+ ],
+ "match": [
+  "tr280i",
+  "ossa tr280",
+  "explorer 280"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "272 cc fuel-injected two-stroke trials single",
+ "intro": "The revived Ossa's injected two-stroke trials bike.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Two-stroke EFI"
+  ],
+  [
+   "Oil",
+   "Premix"
+  ],
+  [
+   "Clutch",
+   "Check plates"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "TrialsCentral",
+   "url": "https://www.trialscentral.com/",
+   "what": "Forum for trials riders, with sections for most trials makes."
+  }
+ ],
+ "heroName": "TR280I"
+}

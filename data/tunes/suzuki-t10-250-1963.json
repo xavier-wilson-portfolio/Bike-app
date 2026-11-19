@@ -1,0 +1,64 @@
+{
+ "id": "suzuki-t10-250-1963",
+ "make": "Suzuki",
+ "model": "T10 250",
+ "name": "Suzuki T10 250",
+ "years": [
+  1963,
+  1967
+ ],
+ "match": [
+  "t10",
+  "suzuki t10",
+  "t10 250"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "246 cc two-stroke twin",
+ "intro": "Suzuki's first 250 twin, before the X6 Hustler.",
+ "focus": [
+  [
+   "Two-stroke twin",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "T10"
+}

@@ -1,0 +1,67 @@
+{
+ "id": "honda-cb350-four-1972",
+ "make": "Honda",
+ "model": "CB350 Four",
+ "name": "Honda CB350 Four",
+ "years": [
+  1972,
+  1974
+ ],
+ "match": [
+  "cb350f",
+  "cb350 four",
+  "cb 350 four",
+  "cb350f four"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "347 cc air-cooled SOHC inline four, four carbs",
+ "intro": "Honda's smallest four of the early 1970s. Smooth and light, with four small carbs that need patience to sync.",
+ "focus": [
+  [
+   "Inline four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ],
+  "B": [
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "CB350 FOUR"
+}

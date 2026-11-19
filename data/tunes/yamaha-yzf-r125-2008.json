@@ -1,0 +1,58 @@
+{
+ "id": "yamaha-yzf-r125-2008",
+ "make": "Yamaha",
+ "model": "YZF-R125",
+ "name": "Yamaha YZF-R125",
+ "years": [
+  2008,
+  2026
+ ],
+ "match": [
+  "yzf-r125",
+  "r125",
+  "yzf r125"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "124 cc liquid-cooled single, fuel injected",
+ "intro": "A full-size small sport bike for European learners. VVA on later models.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "heroName": "R125"
+}

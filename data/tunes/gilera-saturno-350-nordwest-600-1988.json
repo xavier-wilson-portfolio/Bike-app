@@ -1,0 +1,59 @@
+{
+ "id": "gilera-saturno-350-nordwest-600-1988",
+ "make": "Gilera",
+ "model": "Saturno 350 / Nordwest 600",
+ "name": "Gilera Saturno 350 / Nordwest 600",
+ "years": [
+  1988,
+  1993
+ ],
+ "match": [
+  "saturno 350",
+  "nordwest",
+  "nordwest 600",
+  "saturno bialbero"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "349 or 558 cc liquid-cooled DOHC single",
+ "intro": "Gilera's 1980s four-stroke singles, Japanese-styled cafe and supermoto.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant check"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "NORDWEST"
+}

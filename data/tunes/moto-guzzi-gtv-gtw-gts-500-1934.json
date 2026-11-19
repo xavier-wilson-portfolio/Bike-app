@@ -1,0 +1,65 @@
+{
+ "id": "moto-guzzi-gtv-gtw-gts-500-1934",
+ "make": "Moto Guzzi",
+ "model": "GTV / GTW / GTS 500",
+ "name": "Moto Guzzi GTV / GTW / GTS 500",
+ "years": [
+  1934,
+  1948
+ ],
+ "match": [
+  "gtv",
+  "gtw",
+  "gts 500",
+  "guzzi gtv",
+  "guzzi gtw"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "498 cc horizontal OHV single",
+ "intro": "Pre-war and early post-war Guzzi big singles.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Outside flywheel",
+   "Check it"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moto Guzzi National Owners Club",
+   "url": "https://www.mgnoc.org/",
+   "what": "US owner club for Moto Guzzi."
+  }
+ ],
+ "heroName": "GTV"
+}

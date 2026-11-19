@@ -1,0 +1,59 @@
+{
+ "id": "yamaha-srv250-1992",
+ "make": "Yamaha",
+ "model": "SRV250",
+ "name": "Yamaha SRV250",
+ "years": [
+  1992,
+  1996
+ ],
+ "match": [
+  "srv250",
+  "srv 250",
+  "renaissa"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "249 cc air-cooled V-twin",
+ "intro": "A small retro V-twin from Japan.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "heroName": "SRV250"
+}

@@ -1,0 +1,57 @@
+{
+ "id": "kawasaki-j300-2014",
+ "make": "Kawasaki",
+ "model": "J300",
+ "name": "Kawasaki J300",
+ "years": [
+  2014,
+  2020
+ ],
+ "match": [
+  "j300",
+  "j 300"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "299 cc liquid-cooled single, fuel injected, CVT",
+ "intro": "Kawasaki's maxi-scooter, built with Kymco. Sold in Europe and Asia.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Brakes",
+   "Check ABS"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KawiForums",
+   "url": "https://www.kawiforums.com/",
+   "what": "Owner forum for Kawasaki motorcycles."
+  }
+ ],
+ "heroName": "J300"
+}

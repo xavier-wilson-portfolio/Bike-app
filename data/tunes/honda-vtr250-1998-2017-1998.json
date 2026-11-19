@@ -1,0 +1,56 @@
+{
+ "id": "honda-vtr250-1998-2017-1998",
+ "make": "Honda",
+ "model": "VTR250 (1998-2017)",
+ "name": "Honda VTR250 (1998-2017)",
+ "years": [
+  1998,
+  2017
+ ],
+ "match": [
+  "vtr250 2000",
+  "vtr 250 mc33",
+  "mc33"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "249 cc liquid-cooled V-twin, carbs then fuel injection",
+ "intro": "The later VTR250 naked twin sold in Japan and Australia. Reliable and light.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel",
+   "Carbs or EFI"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "VTR250"
+}

@@ -1,0 +1,59 @@
+{
+ "id": "voxan-black-magic-cafe-racer-roadster-1999",
+ "make": "Voxan",
+ "model": "Black Magic / Cafe Racer / Roadster",
+ "name": "Voxan Black Magic / Cafe Racer / Roadster",
+ "years": [
+  1999,
+  2009
+ ],
+ "match": [
+  "voxan",
+  "black magic",
+  "voxan roadster",
+  "voxan cafe racer"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "996 cc liquid-cooled 72-degree V-twin",
+ "intro": "French V-twins built in small numbers.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant check"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "VOXAN"
+}

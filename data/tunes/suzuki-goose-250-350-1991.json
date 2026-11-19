@@ -1,0 +1,60 @@
+{
+ "id": "suzuki-goose-250-350-1991",
+ "make": "Suzuki",
+ "model": "Goose 250 / 350",
+ "name": "Suzuki Goose 250 / 350",
+ "years": [
+  1991,
+  1999
+ ],
+ "match": [
+  "goose",
+  "goose 350",
+  "goose 250",
+  "nk42a"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "249 or 348 cc air/oil-cooled single from the DR350",
+ "intro": "A sporty single with a trellis frame. Mostly Japanese.",
+ "focus": [
+  [
+   "Single",
+   "Air/oil-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check stator"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Suzuki Forums",
+   "url": "https://www.suzuki-forums.com/forums/",
+   "what": "General owner forum for Suzuki motorcycles."
+  }
+ ],
+ "heroName": "GOOSE"
+}

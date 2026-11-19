@@ -1,0 +1,65 @@
+{
+ "id": "ducati-monster-s4-s4r-s4rs-2001",
+ "make": "Ducati",
+ "model": "Monster S4 / S4R / S4RS",
+ "name": "Ducati Monster S4 / S4R / S4RS",
+ "years": [
+  2001,
+  2008
+ ],
+ "match": [
+  "monster s4",
+  "s4r",
+  "s4rs",
+  "monster s4r",
+  "monster s4rs testastretta"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "916 to 998 cc liquid-cooled desmo V-twin from the superbikes",
+ "intro": "The liquid-cooled Monsters, using the 916, 996 and Testastretta engines.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Timing belts",
+   "Change by date"
+  ],
+  [
+   "Desmo valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Desmo valve service needs both opening and closing shims checked. Follow the interval in the manual; it is not a job to skip.",
+   "Ducati timing belts are changed by time as well as miles. If you can't prove when they were done, do them before riding."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Ducati has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "heroName": "S4R"
+}

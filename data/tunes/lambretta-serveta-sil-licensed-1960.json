@@ -1,0 +1,65 @@
+{
+ "id": "lambretta-serveta-sil-licensed-1960",
+ "make": "Lambretta",
+ "model": "Serveta / SIL (licensed)",
+ "name": "Lambretta Serveta / SIL (licensed)",
+ "years": [
+  1960,
+  1997
+ ],
+ "match": [
+  "serveta",
+  "sil lambretta",
+  "lambretta sil",
+  "serveta jet 200"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "125 to 200 cc two-stroke single",
+ "intro": "Lambrettas built under license in Spain and India.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Gearbox",
+   "Check oil"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Lambretta Club USA",
+   "url": "https://www.lambrettaclubusa.org/",
+   "what": "US club for classic Lambretta scooters."
+  }
+ ],
+ "heroName": "SERVETA"
+}

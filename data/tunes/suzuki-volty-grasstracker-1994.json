@@ -1,0 +1,60 @@
+{
+ "id": "suzuki-volty-grasstracker-1994",
+ "make": "Suzuki",
+ "model": "Volty / Grasstracker",
+ "name": "Suzuki Volty / Grasstracker",
+ "years": [
+  1994,
+  2004
+ ],
+ "match": [
+  "volty",
+  "grasstracker",
+  "grass tracker",
+  "volty 250"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "249 cc air-cooled single",
+ "intro": "Small Japanese retro singles.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Suzuki Forums",
+   "url": "https://www.suzuki-forums.com/forums/",
+   "what": "General owner forum for Suzuki motorcycles."
+  }
+ ],
+ "heroName": "VOLTY"
+}

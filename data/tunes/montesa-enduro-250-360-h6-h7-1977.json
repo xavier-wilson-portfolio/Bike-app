@@ -1,0 +1,66 @@
+{
+ "id": "montesa-enduro-250-360-h6-h7-1977",
+ "make": "Montesa",
+ "model": "Enduro 250 / 360 (H6 / H7)",
+ "name": "Montesa Enduro 250 / 360 (H6 / H7)",
+ "years": [
+  1977,
+  1985
+ ],
+ "match": [
+  "montesa enduro",
+  "enduro 250",
+  "h6",
+  "h7",
+  "enduro 360"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 or 349 cc two-stroke single",
+ "intro": "Montesa's enduros of the late 1970s and 1980s.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air or liquid cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "TrialsCentral",
+   "url": "https://www.trialscentral.com/",
+   "what": "Forum for trials riders, with sections for most trials makes."
+  }
+ ],
+ "heroName": "ENDURO"
+}

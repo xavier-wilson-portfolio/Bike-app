@@ -1,0 +1,58 @@
+{
+ "id": "aprilia-sr-max-125-300-2011",
+ "make": "Aprilia",
+ "model": "SR Max 125 / 300",
+ "name": "Aprilia SR Max 125 / 300",
+ "years": [
+  2011,
+  2018
+ ],
+ "match": [
+  "sr max",
+  "srmax",
+  "sr max 300"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "124 or 278 cc liquid-cooled single, CVT",
+ "intro": "A maxi-scooter built on Piaggio engines.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Aprilia has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "SR MAX"
+}

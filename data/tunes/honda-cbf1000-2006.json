@@ -1,0 +1,59 @@
+{
+ "id": "honda-cbf1000-2006",
+ "make": "Honda",
+ "model": "CBF1000",
+ "name": "Honda CBF1000",
+ "years": [
+  2006,
+  2016
+ ],
+ "match": [
+  "cbf1000",
+  "cbf 1000",
+  "cbf1000f",
+  "cbf1000a"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "998 cc liquid-cooled inline four from the Fireblade, detuned, fuel injected",
+ "intro": "A detuned Fireblade engine in a comfortable sport-touring standard. Common in Europe.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "ABS",
+   "Check if fitted"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "CBF1000"
+}

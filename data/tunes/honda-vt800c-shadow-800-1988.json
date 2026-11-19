@@ -1,0 +1,58 @@
+{
+ "id": "honda-vt800c-shadow-800-1988",
+ "make": "Honda",
+ "model": "VT800C Shadow 800",
+ "name": "Honda VT800C Shadow 800",
+ "years": [
+  1988,
+  1988
+ ],
+ "match": [
+  "vt800c",
+  "shadow 800",
+  "vt 800"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "800 cc liquid-cooled V-twin, shaft drive",
+ "intro": "A one-year Shadow 800 sold in the US.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Shaft drive",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Shadow Riders",
+   "url": "https://www.shadowriders.com/",
+   "what": "Owner forum for Honda Shadows and other Honda cruisers."
+  }
+ ],
+ "heroName": "SHADOW 800"
+}

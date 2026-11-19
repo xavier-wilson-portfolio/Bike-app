@@ -1,0 +1,58 @@
+{
+ "id": "yamaha-mt-03-single-2006-2014-2006",
+ "make": "Yamaha",
+ "model": "MT-03 (single, 2006-2014)",
+ "name": "Yamaha MT-03 (single, 2006-2014)",
+ "years": [
+  2006,
+  2014
+ ],
+ "match": [
+  "mt-03 660",
+  "mt03 2007",
+  "mt 03 single"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "660 cc liquid-cooled single from the XT660",
+ "intro": "A single-cylinder naked bike sold in Europe.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant check"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "heroName": "MT-03"
+}

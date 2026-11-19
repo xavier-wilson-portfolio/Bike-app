@@ -1,0 +1,60 @@
+{
+ "id": "peugeot-trekker-tweet-kisbee-2000",
+ "make": "Peugeot",
+ "model": "Trekker / Tweet / Kisbee",
+ "name": "Peugeot Trekker / Tweet / Kisbee",
+ "years": [
+  2000,
+  2026
+ ],
+ "match": [
+  "trekker",
+  "tweet",
+  "kisbee",
+  "peugeot tweet"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 to 150 cc single",
+ "intro": "Peugeot's small off-road styled and city scooters.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Oil",
+   "Check type"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "heroName": "TWEET"
+}

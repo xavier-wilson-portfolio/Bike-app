@@ -1,0 +1,59 @@
+{
+ "id": "benelli-bn600-tnt-600-2012",
+ "make": "Benelli",
+ "model": "BN600 / TNT 600",
+ "name": "Benelli BN600 / TNT 600",
+ "years": [
+  2012,
+  2018
+ ],
+ "match": [
+  "bn600",
+  "tnt 600",
+  "bn 600",
+  "bn600gt"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "600 cc liquid-cooled inline four, fuel injected",
+ "intro": "A budget middleweight four built in China under Benelli's name.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "BN600"
+}

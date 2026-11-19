@@ -1,0 +1,58 @@
+{
+ "id": "mv-agusta-lucky-explorer-5-5-2024",
+ "make": "MV Agusta",
+ "model": "Lucky Explorer 5.5",
+ "name": "MV Agusta Lucky Explorer 5.5",
+ "years": [
+  2024,
+  2026
+ ],
+ "match": [
+  "lucky explorer",
+  "lucky explorer 5.5",
+  "le 5.5"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "554 cc liquid-cooled parallel twin",
+ "intro": "A smaller adventure bike built with QJ Motor.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "MV Agusta has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "LUCKY EXPLORER"
+}

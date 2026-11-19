@@ -1,0 +1,64 @@
+{
+ "id": "neracar-neracar-1921",
+ "make": "Neracar",
+ "model": "Neracar",
+ "name": "Neracar Neracar",
+ "years": [
+  1921,
+  1926
+ ],
+ "match": [
+  "neracar",
+  "ner-a-car",
+  "ner a car"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "211 to 285 cc two-stroke single, hub-center steering",
+ "intro": "A low, car-like motorcycle with hub-center steering.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Friction drive",
+   "Check it"
+  ],
+  [
+   "Steering",
+   "Check hub"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "NERACAR"
+}

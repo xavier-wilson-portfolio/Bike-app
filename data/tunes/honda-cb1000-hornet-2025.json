@@ -1,0 +1,58 @@
+{
+ "id": "honda-cb1000-hornet-2025",
+ "make": "Honda",
+ "model": "CB1000 Hornet",
+ "name": "Honda CB1000 Hornet",
+ "years": [
+  2025,
+  2026
+ ],
+ "match": [
+  "cb1000 hornet",
+  "hornet 1000",
+  "cb 1000 hornet"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "999 cc liquid-cooled inline four from the Fireblade, fuel injected",
+ "intro": "Honda's big naked Hornet with a retuned Fireblade engine.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Ride-by-wire"
+  ],
+  [
+   "Electronics",
+   "Scan for codes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "HORNET"
+}

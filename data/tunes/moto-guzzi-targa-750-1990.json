@@ -1,0 +1,63 @@
+{
+ "id": "moto-guzzi-targa-750-1990",
+ "make": "Moto Guzzi",
+ "model": "Targa 750",
+ "name": "Moto Guzzi Targa 750",
+ "years": [
+  1990,
+  1993
+ ],
+ "match": [
+  "targa",
+  "targa 750",
+  "guzzi targa"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "744 cc air-cooled small-block V-twin",
+ "intro": "A sporty small-block with a half fairing.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Set rockers"
+  ],
+  [
+   "Dry clutch",
+   "Check it"
+  ],
+  [
+   "Shaft drive",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Guzzi V-twins need the valves set and the throttle bodies or carbs balanced together. Do both at the same service."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moto Guzzi National Owners Club",
+   "url": "https://www.mgnoc.org/",
+   "what": "US owner club for Moto Guzzi."
+  }
+ ],
+ "heroName": "TARGA"
+}

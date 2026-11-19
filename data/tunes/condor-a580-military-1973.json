@@ -1,0 +1,59 @@
+{
+ "id": "condor-a580-military-1973",
+ "make": "Condor",
+ "model": "A580 military",
+ "name": "Condor A580 military",
+ "years": [
+  1973,
+  1978
+ ],
+ "match": [
+  "condor a580",
+  "a580",
+  "condor 580"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "577 cc OHV Ducati-built flat twin, shaft drive",
+ "intro": "A Swiss army motorcycle with a Ducati-built boxer engine.",
+ "focus": [
+  [
+   "Flat twin",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Set rockers"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Shaft drive",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "CONDOR"
+}

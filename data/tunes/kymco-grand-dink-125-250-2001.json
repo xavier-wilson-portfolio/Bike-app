@@ -1,0 +1,58 @@
+{
+ "id": "kymco-grand-dink-125-250-2001",
+ "make": "Kymco",
+ "model": "Grand Dink 125 / 250",
+ "name": "Kymco Grand Dink 125 / 250",
+ "years": [
+  2001,
+  2012
+ ],
+ "match": [
+  "grand dink",
+  "grand dink 250",
+  "grand dink 125"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "124 or 249 cc liquid-cooled single",
+ "intro": "Kymco's comfortable mid-size touring scooter.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "GRAND DINK"
+}

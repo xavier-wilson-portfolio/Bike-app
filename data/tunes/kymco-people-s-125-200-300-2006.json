@@ -1,0 +1,57 @@
+{
+ "id": "kymco-people-s-125-200-300-2006",
+ "make": "Kymco",
+ "model": "People S 125 / 200 / 300",
+ "name": "Kymco People S 125 / 200 / 300",
+ "years": [
+  2006,
+  2020
+ ],
+ "match": [
+  "people s",
+  "people s 125",
+  "people s 200",
+  "people gti"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "124 to 299 cc single, big wheels",
+ "intro": "Big-wheel city scooters, the sportier People line.",
+ "focus": [
+  [
+   "Single",
+   "Air or liquid cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ],
+  [
+   "Body panels",
+   "Check clips"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "PEOPLE S"
+}

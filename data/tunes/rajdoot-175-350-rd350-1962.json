@@ -1,0 +1,61 @@
+{
+ "id": "rajdoot-175-350-rd350-1962",
+ "make": "Rajdoot",
+ "model": "175 / 350 (RD350)",
+ "name": "Rajdoot 175 / 350 (RD350)",
+ "years": [
+  1962,
+  1991
+ ],
+ "match": [
+  "rajdoot",
+  "rajdoot 350",
+  "rajdoot 175",
+  "rd350 india"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "173 cc two-stroke single or 347 cc Yamaha RD350 twin",
+ "intro": "Indian two-strokes, including a licensed Yamaha RD350.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Oil",
+   "Check type"
+  ],
+  [
+   "Carbs",
+   "Clean and jet"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "RAJDOOT"
+}

@@ -1,0 +1,60 @@
+{
+ "id": "hero-karizma-xtreme-2003",
+ "make": "Hero",
+ "model": "Karizma / Xtreme",
+ "name": "Hero Karizma / Xtreme",
+ "years": [
+  2003,
+  2026
+ ],
+ "match": [
+  "karizma",
+  "xtreme",
+  "karizma zmr",
+  "xtreme 160r"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "149 to 223 cc air- or oil-cooled single",
+ "intro": "Hero's sportier commuters.",
+ "focus": [
+  [
+   "Single",
+   "Air or oil cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "KARIZMA"
+}

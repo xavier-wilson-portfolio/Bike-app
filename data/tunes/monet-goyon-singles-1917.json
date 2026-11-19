@@ -1,0 +1,59 @@
+{
+ "id": "monet-goyon-singles-1917",
+ "make": "Monet-Goyon",
+ "model": "Singles",
+ "name": "Monet-Goyon Singles",
+ "years": [
+  1917,
+  1959
+ ],
+ "match": [
+  "monet goyon",
+  "monet-goyon"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "Villiers or Koehler-Escoffier engines, two- and four-stroke",
+ "intro": "A French maker of light motorcycles from Macon.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Oil",
+   "Check type"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "MONET-GOYON"
+}

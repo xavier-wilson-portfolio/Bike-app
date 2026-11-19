@@ -1,0 +1,59 @@
+{
+ "id": "kawasaki-klr650-2022-on-2022",
+ "make": "Kawasaki",
+ "model": "KLR650 (2022 on)",
+ "name": "Kawasaki KLR650 (2022 on)",
+ "years": [
+  2022,
+  2026
+ ],
+ "match": [
+  "klr650 2022",
+  "klr 650 2023",
+  "klr650 s",
+  "klr650 adventure"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "652 cc liquid-cooled single, fuel injected",
+ "intro": "The fuel-injected KLR650, with optional ABS and a few versions.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Doohickey",
+   "Already updated"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Kawasaki dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "KLR650"
+}

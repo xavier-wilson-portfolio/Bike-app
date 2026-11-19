@@ -1,0 +1,59 @@
+{
+ "id": "bmw-c600-sport-c650gt-2012",
+ "make": "BMW",
+ "model": "C600 Sport / C650GT",
+ "name": "BMW C600 Sport / C650GT",
+ "years": [
+  2012,
+  2015
+ ],
+ "match": [
+  "c600 sport",
+  "c650gt 2013",
+  "c 600 sport",
+  "c650 gt 2014"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "647 cc liquid-cooled parallel twin, CVT",
+ "intro": "BMW's first maxi-scooters, sport and touring versions.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Brakes",
+   "Check ABS"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "BMW has issued several recalls across these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "C600"
+}

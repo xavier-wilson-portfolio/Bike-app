@@ -1,0 +1,59 @@
+{
+ "id": "moto-morini-corsaro-1200-9-1-2-2005",
+ "make": "Moto Morini",
+ "model": "Corsaro 1200 / 9 1/2",
+ "name": "Moto Morini Corsaro 1200 / 9 1/2",
+ "years": [
+  2005,
+  2010
+ ],
+ "match": [
+  "corsaro 1200",
+  "9 1/2",
+  "nove e mezzo",
+  "granpasso"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "1187 cc liquid-cooled 87-degree V-twin (CorsaCorta)",
+ "intro": "The revived Morini's big V-twins.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "CORSARO"
+}

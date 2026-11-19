@@ -1,0 +1,65 @@
+{
+ "id": "montesa-cota-311-314r-315r-1986",
+ "make": "Montesa",
+ "model": "Cota 311 / 314R / 315R",
+ "name": "Montesa Cota 311 / 314R / 315R",
+ "years": [
+  1986,
+  2004
+ ],
+ "match": [
+  "cota 315",
+  "cota 314",
+  "cota 311",
+  "315r",
+  "314r"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 to 272 cc liquid-cooled two-stroke trials single",
+ "intro": "Montesa's later two-stroke trials bikes, some with Honda input.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Clutch",
+   "Check plates"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "TrialsCentral",
+   "url": "https://www.trialscentral.com/",
+   "what": "Forum for trials riders, with sections for most trials makes."
+  }
+ ],
+ "heroName": "COTA"
+}

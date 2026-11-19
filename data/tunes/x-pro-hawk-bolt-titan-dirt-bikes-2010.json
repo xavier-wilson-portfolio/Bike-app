@@ -1,0 +1,60 @@
+{
+ "id": "x-pro-hawk-bolt-titan-dirt-bikes-2010",
+ "make": "X-Pro",
+ "model": "Hawk / Bolt / Titan dirt bikes",
+ "name": "X-Pro Hawk / Bolt / Titan dirt bikes",
+ "years": [
+  2010,
+  2026
+ ],
+ "match": [
+  "x-pro",
+  "xpro",
+  "x pro hawk",
+  "x-pro titan"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "110 to 250 cc air-cooled single",
+ "intro": "Budget Chinese dirt bikes and pit bikes sold online in the US.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Wiring",
+   "Check connectors"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "X-PRO"
+}

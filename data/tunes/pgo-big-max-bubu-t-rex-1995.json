@@ -1,0 +1,62 @@
+{
+ "id": "pgo-big-max-bubu-t-rex-1995",
+ "make": "PGO",
+ "model": "Big Max / Bubu / T-Rex",
+ "name": "PGO Big Max / Bubu / T-Rex",
+ "years": [
+  1995,
+  2015
+ ],
+ "match": [
+  "pgo",
+  "big max",
+  "bubu",
+  "t-rex 150",
+  "pgo bubu"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 to 150 cc two- or four-stroke single",
+ "intro": "Taiwanese scooters sold widely in Europe and the US.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Oil",
+   "Check type"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "PGO"
+}

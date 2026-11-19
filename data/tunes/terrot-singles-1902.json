@@ -1,0 +1,63 @@
+{
+ "id": "terrot-singles-1902",
+ "make": "Terrot",
+ "model": "Singles",
+ "name": "Terrot Singles",
+ "years": [
+  1902,
+  1961
+ ],
+ "match": [
+  "terrot",
+  "terrot 500",
+  "terrot 350"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "100 to 500 cc two- and four-stroke singles",
+ "intro": "A big French maker from Dijon.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Oil",
+   "Check type"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "TERROT"
+}

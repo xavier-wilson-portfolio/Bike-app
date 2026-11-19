@@ -1,0 +1,64 @@
+{
+ "id": "kawasaki-mc1-90-1973",
+ "make": "Kawasaki",
+ "model": "MC1 90",
+ "name": "Kawasaki MC1 90",
+ "years": [
+  1973,
+  1975
+ ],
+ "match": [
+  "mc1",
+  "mc1m",
+  "kawasaki mc1"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "89 cc rotary-valve two-stroke single",
+ "intro": "A small street and trail two-stroke.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Oil injection",
+   "Bleed the pump"
+  ],
+  [
+   "Rotary valve",
+   "Check disc"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KZRider forum",
+   "url": "https://www.kzrider.com/",
+   "what": "Owner forum for classic Kawasakis."
+  }
+ ],
+ "heroName": "MC1"
+}

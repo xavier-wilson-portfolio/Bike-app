@@ -1,0 +1,60 @@
+{
+ "id": "laverda-500-alpino-montjuic-1977",
+ "make": "Laverda",
+ "model": "500 Alpino / Montjuic",
+ "name": "Laverda 500 Alpino / Montjuic",
+ "years": [
+  1977,
+  1983
+ ],
+ "match": [
+  "alpino",
+  "montjuic",
+  "laverda 500",
+  "laverda alpina"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "497 cc DOHC eight-valve parallel twin",
+ "intro": "Laverda's small twins, sporty and rare.",
+ "focus": [
+  [
+   "Twin",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "ALPINO"
+}

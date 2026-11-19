@@ -1,0 +1,60 @@
+{
+ "id": "victoria-kr-50-bergmeister-swing-1950",
+ "make": "Victoria",
+ "model": "KR 50 / Bergmeister / Swing",
+ "name": "Victoria KR 50 / Bergmeister / Swing",
+ "years": [
+  1950,
+  1958
+ ],
+ "match": [
+  "victoria bergmeister",
+  "victoria swing",
+  "victoria kr",
+  "bergmeister"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "Two-stroke singles and the 350 cc V-twin Bergmeister",
+ "intro": "Victoria of Nuremberg, known for the Bergmeister V-twin and Swing.",
+ "focus": [
+  [
+   "Engine",
+   "Air-cooled"
+  ],
+  [
+   "Oil",
+   "Check type"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain or shaft",
+   "Check drive"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "VICTORIA"
+}

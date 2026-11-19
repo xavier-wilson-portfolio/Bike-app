@@ -1,0 +1,58 @@
+{
+ "id": "ducati-hypermotard-698-mono-2024",
+ "make": "Ducati",
+ "model": "Hypermotard 698 Mono",
+ "name": "Ducati Hypermotard 698 Mono",
+ "years": [
+  2024,
+  2026
+ ],
+ "match": [
+  "698 mono",
+  "hypermotard 698",
+  "hypermotard mono"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "659 cc liquid-cooled single from the Panigale twin",
+ "intro": "Ducati's supermoto single.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Ride-by-wire"
+  ],
+  [
+   "Desmo valves",
+   "Check them"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Ducati has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "heroName": "698 MONO"
+}

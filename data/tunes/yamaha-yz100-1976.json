@@ -1,0 +1,63 @@
+{
+ "id": "yamaha-yz100-1976",
+ "make": "Yamaha",
+ "model": "YZ100",
+ "name": "Yamaha YZ100",
+ "years": [
+  1976,
+  1983
+ ],
+ "match": [
+  "yz100",
+  "yz 100"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "97 cc two-stroke single motocrosser",
+ "intro": "Yamaha's 100 cc motocrosser for teens.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Yamaha dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Enduros forum",
+   "url": "https://www.yamaha-enduros.com/",
+   "what": "Owner forum for vintage Yamaha two-stroke enduros."
+  }
+ ],
+ "heroName": "YZ100"
+}

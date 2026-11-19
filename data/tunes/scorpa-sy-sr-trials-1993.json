@@ -1,0 +1,64 @@
+{
+ "id": "scorpa-sy-sr-trials-1993",
+ "make": "Scorpa",
+ "model": "SY / SR trials",
+ "name": "Scorpa SY / SR trials",
+ "years": [
+  1993,
+  2026
+ ],
+ "match": [
+  "scorpa",
+  "sy 250",
+  "sr 280",
+  "scorpa 250"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "125 to 300 cc two-stroke trials single",
+ "intro": "French trials bikes, often with Yamaha engines.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Clutch",
+   "Check plates"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "TrialsCentral",
+   "url": "https://www.trialscentral.com/",
+   "what": "Forum for trials riders, with sections for most trials makes."
+  }
+ ],
+ "heroName": "SCORPA"
+}

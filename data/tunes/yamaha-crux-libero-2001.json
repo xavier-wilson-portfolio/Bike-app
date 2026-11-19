@@ -1,0 +1,59 @@
+{
+ "id": "yamaha-crux-libero-2001",
+ "make": "Yamaha",
+ "model": "Crux / Libero",
+ "name": "Yamaha Crux / Libero",
+ "years": [
+  2001,
+  2010
+ ],
+ "match": [
+  "crux",
+  "libero",
+  "yamaha crux"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "106 cc air-cooled single",
+ "intro": "Indian Yamaha commuters.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "heroName": "CRUX"
+}

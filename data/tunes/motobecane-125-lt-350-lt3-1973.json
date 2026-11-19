@@ -1,0 +1,61 @@
+{
+ "id": "motobecane-125-lt-350-lt3-1973",
+ "make": "Motobecane",
+ "model": "125 LT / 350 LT3",
+ "name": "Motobecane 125 LT / 350 LT3",
+ "years": [
+  1973,
+  1983
+ ],
+ "match": [
+  "motobecane 125",
+  "lt3",
+  "motobecane 350",
+  "125 lt"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "125 cc twin or 350 cc triple, two-stroke",
+ "intro": "Motobecane's road two-strokes, including a rare 350 triple.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Oil",
+   "Check type"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "heroName": "LT3"
+}

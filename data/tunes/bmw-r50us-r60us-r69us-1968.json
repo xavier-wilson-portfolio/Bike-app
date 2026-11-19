@@ -1,0 +1,64 @@
+{
+ "id": "bmw-r50us-r60us-r69us-1968",
+ "make": "BMW",
+ "model": "R50US / R60US / R69US",
+ "name": "BMW R50US / R60US / R69US",
+ "years": [
+  1968,
+  1969
+ ],
+ "match": [
+  "r69us",
+  "r60us",
+  "r50us",
+  "r 69 us"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "494 to 594 cc OHV boxer twin, telescopic fork",
+ "intro": "The US-market Earles-frame twins with telescopic forks.",
+ "focus": [
+  [
+   "Boxer twin",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Set rockers"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Shaft drive",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Boxer twins need the valve clearance checked on both sides and the throttle bodies synced. Do both at the same service."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Airheads Beemer Club",
+   "url": "https://www.airheads.org/",
+   "what": "Tech library and owner club for BMW airhead twins."
+  }
+ ],
+ "heroName": "R69US"
+}

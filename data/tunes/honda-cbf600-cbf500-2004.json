@@ -1,0 +1,59 @@
+{
+ "id": "honda-cbf600-cbf500-2004",
+ "make": "Honda",
+ "model": "CBF600 / CBF500",
+ "name": "Honda CBF600 / CBF500",
+ "years": [
+  2004,
+  2013
+ ],
+ "match": [
+  "cbf600",
+  "cbf500",
+  "cbf 600",
+  "cbf 500",
+  "cbf600s",
+  "cbf600n"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "499 cc twin or 599 cc inline four, liquid-cooled, carbs then fuel injection",
+ "intro": "Honda's practical European all-rounders with adjustable seats and optional ABS.",
+ "focus": [
+  [
+   "Engine",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel",
+   "Carbs or EFI"
+  ],
+  [
+   "ABS",
+   "Check if fitted"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "CBF600"
+}

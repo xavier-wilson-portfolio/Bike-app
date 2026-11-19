@@ -1,0 +1,63 @@
+{
+ "id": "gillet-herstal-superconfort-tour-du-monde-1919",
+ "make": "Gillet Herstal",
+ "model": "Superconfort / Tour du Monde",
+ "name": "Gillet Herstal Superconfort / Tour du Monde",
+ "years": [
+  1919,
+  1959
+ ],
+ "match": [
+  "gillet herstal",
+  "gillet",
+  "tour du monde"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "350 to 500 cc two-stroke and four-stroke singles",
+ "intro": "Belgian bikes, famous for a round-the-world ride in the 1920s.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Oil",
+   "Check type"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "GILLET"
+}

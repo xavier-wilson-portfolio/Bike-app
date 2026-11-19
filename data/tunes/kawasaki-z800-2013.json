@@ -1,0 +1,58 @@
+{
+ "id": "kawasaki-z800-2013",
+ "make": "Kawasaki",
+ "model": "Z800",
+ "name": "Kawasaki Z800",
+ "years": [
+  2013,
+  2016
+ ],
+ "match": [
+  "z800",
+  "z 800",
+  "zr800"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "806 cc liquid-cooled inline four, fuel injected",
+ "intro": "A naked four between the Z750 and Z1000, sold in Europe.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KawiForums",
+   "url": "https://www.kawiforums.com/",
+   "what": "Owner forum for Kawasaki motorcycles."
+  }
+ ],
+ "heroName": "Z800"
+}

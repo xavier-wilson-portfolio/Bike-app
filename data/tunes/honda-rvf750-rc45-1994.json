@@ -1,0 +1,58 @@
+{
+ "id": "honda-rvf750-rc45-1994",
+ "make": "Honda",
+ "model": "RVF750 RC45",
+ "name": "Honda RVF750 RC45",
+ "years": [
+  1994,
+  1999
+ ],
+ "match": [
+  "rc45",
+  "rvf750",
+  "rvf 750"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "749 cc liquid-cooled V4, gear-driven cams, fuel injected",
+ "intro": "Honda's World Superbike homologation V4. Rare and valuable.",
+ "focus": [
+  [
+   "V4",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Gear cams",
+   "Listen"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "CBR Forum",
+   "url": "https://www.cbrforum.com/",
+   "what": "Owner forum for Honda CBR models."
+  }
+ ],
+ "heroName": "RC45"
+}

@@ -1,0 +1,59 @@
+{
+ "id": "cleveland-lightweight-tornado-1915",
+ "make": "Cleveland",
+ "model": "Lightweight / Tornado",
+ "name": "Cleveland Lightweight / Tornado",
+ "years": [
+  1915,
+  1929
+ ],
+ "match": [
+  "cleveland",
+  "cleveland tornado",
+  "cleveland four"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "221 cc two-stroke single or 1000 cc four",
+ "intro": "Cleveland's light two-stroke and later inline fours.",
+ "focus": [
+  [
+   "Engine",
+   "Air-cooled"
+  ],
+  [
+   "Oil",
+   "Check system"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "CLEVELAND"
+}

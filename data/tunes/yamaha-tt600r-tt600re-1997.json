@@ -1,0 +1,60 @@
+{
+ "id": "yamaha-tt600r-tt600re-1997",
+ "make": "Yamaha",
+ "model": "TT600R / TT600RE",
+ "name": "Yamaha TT600R / TT600RE",
+ "years": [
+  1997,
+  2003
+ ],
+ "match": [
+  "tt600r",
+  "tt600re",
+  "tt 600 r",
+  "tt 600 re"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "595 cc air-cooled single, Belgian-built",
+ "intro": "Big-bore Yamaha singles built by Belgarda for Europe. The RE has electric start.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check stator"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Yamaha dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "TT600R"
+}

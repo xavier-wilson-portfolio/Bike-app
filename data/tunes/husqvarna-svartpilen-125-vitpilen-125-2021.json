@@ -1,0 +1,57 @@
+{
+ "id": "husqvarna-svartpilen-125-vitpilen-125-2021",
+ "make": "Husqvarna",
+ "model": "Svartpilen 125 / Vitpilen 125",
+ "name": "Husqvarna Svartpilen 125 / Vitpilen 125",
+ "years": [
+  2021,
+  2026
+ ],
+ "match": [
+  "svartpilen 125",
+  "vitpilen 125"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "124 cc liquid-cooled single",
+ "intro": "The small Pilen bikes for learners.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Husqvarna (KTM group) has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Husqvarna forum",
+   "url": "https://www.huskyforum.com/",
+   "what": "Owner forum for Husqvarna street and dirt bikes."
+  }
+ ],
+ "heroName": "SVARTPILEN 125"
+}

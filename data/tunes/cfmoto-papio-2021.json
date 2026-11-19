@@ -1,0 +1,59 @@
+{
+ "id": "cfmoto-papio-2021",
+ "make": "CFMoto",
+ "model": "Papio",
+ "name": "CFMoto Papio",
+ "years": [
+  2021,
+  2026
+ ],
+ "match": [
+  "papio",
+  "cfmoto papio",
+  "papio ss"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "126 cc air-cooled single, mini bike",
+ "intro": "A Grom-sized mini bike from CFMoto.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "CFMoto forum",
+   "url": "https://www.cfmotoforum.com/",
+   "what": "Owner forum for CFMoto motorcycles."
+  }
+ ],
+ "heroName": "PAPIO"
+}

@@ -1,0 +1,64 @@
+{
+ "id": "harley-davidson-mx250-1977",
+ "make": "Harley-Davidson",
+ "model": "MX250",
+ "name": "Harley-Davidson MX250",
+ "years": [
+  1977,
+  1978
+ ],
+ "match": [
+  "mx250",
+  "mx 250",
+  "harley mx250"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "242 cc two-stroke single motocrosser",
+ "intro": "Harley's own motocrosser, built in Italy. Rare.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "MX250"
+}

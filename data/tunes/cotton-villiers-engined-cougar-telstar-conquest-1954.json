@@ -1,0 +1,65 @@
+{
+ "id": "cotton-villiers-engined-cougar-telstar-conquest-1954",
+ "make": "Cotton",
+ "model": "Villiers-engined (Cougar / Telstar / Conquest)",
+ "name": "Cotton Villiers-engined (Cougar / Telstar / Conquest)",
+ "years": [
+  1954,
+  1980
+ ],
+ "match": [
+  "cotton cougar",
+  "cotton telstar",
+  "cotton conquest",
+  "cotton"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "197 to 247 cc Villiers two-stroke single or twin",
+ "intro": "Small British two-strokes from Gloucester, raced in scrambles and trials.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "COTTON"
+}

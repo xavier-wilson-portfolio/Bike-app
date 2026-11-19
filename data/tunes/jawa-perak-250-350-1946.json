@@ -1,0 +1,64 @@
+{
+ "id": "jawa-perak-250-350-1946",
+ "make": "Jawa",
+ "model": "Perak 250 / 350",
+ "name": "Jawa Perak 250 / 350",
+ "years": [
+  1946,
+  1954
+ ],
+ "match": [
+  "perak",
+  "jawa perak",
+  "jawa 250 perak"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "248 or 346 cc two-stroke single or twin",
+ "intro": "Jawa's post-war two-strokes with an automatic clutch.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Auto clutch",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "PERAK"
+}

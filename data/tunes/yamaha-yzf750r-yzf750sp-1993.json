@@ -1,0 +1,64 @@
+{
+ "id": "yamaha-yzf750r-yzf750sp-1993",
+ "make": "Yamaha",
+ "model": "YZF750R / YZF750SP",
+ "name": "Yamaha YZF750R / YZF750SP",
+ "years": [
+  1993,
+  1998
+ ],
+ "match": [
+  "yzf750",
+  "yzf750r",
+  "yzf750sp",
+  "yzf 750",
+  "yzf750 sp"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "749 cc liquid-cooled 20-valve inline four",
+ "intro": "Yamaha's 750 sport bike and its race homologation SP version.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "heroName": "YZF750"
+}

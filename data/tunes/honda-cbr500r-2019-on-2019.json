@@ -1,0 +1,58 @@
+{
+ "id": "honda-cbr500r-2019-on-2019",
+ "make": "Honda",
+ "model": "CBR500R (2019 on)",
+ "name": "Honda CBR500R (2019 on)",
+ "years": [
+  2019,
+  2026
+ ],
+ "match": [
+  "cbr500r 2019",
+  "cbr500r 2022",
+  "cbr 500 r"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "471 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "The updated CBR500R with sharper styling and, later, a USD fork.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "CBR Forum",
+   "url": "https://www.cbrforum.com/",
+   "what": "Owner forum for Honda CBR models."
+  }
+ ],
+ "heroName": "CBR500R"
+}

@@ -1,0 +1,59 @@
+{
+ "id": "yamaha-srx600-1986",
+ "make": "Yamaha",
+ "model": "SRX600",
+ "name": "Yamaha SRX600",
+ "years": [
+  1986,
+  1987
+ ],
+ "match": [
+  "srx600",
+  "srx 600",
+  "srx"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "608 cc air-cooled four-valve single, twin-choke carb",
+ "intro": "A sporty single with cafe looks. Kick start only and a cult following.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Kick start",
+   "Learn the drill"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "heroName": "SRX600"
+}

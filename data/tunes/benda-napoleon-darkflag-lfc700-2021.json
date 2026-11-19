@@ -1,0 +1,60 @@
+{
+ "id": "benda-napoleon-darkflag-lfc700-2021",
+ "make": "Benda",
+ "model": "Napoleon / Darkflag / LFC700",
+ "name": "Benda Napoleon / Darkflag / LFC700",
+ "years": [
+  2021,
+  2026
+ ],
+ "match": [
+  "benda",
+  "napoleon",
+  "darkflag",
+  "lfc700",
+  "benda chinchilla"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "249 to 700 cc liquid-cooled V-twin or V4",
+ "intro": "A Chinese cruiser brand with unusual engines.",
+ "focus": [
+  [
+   "Engine",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Belt drive",
+   "Check tension"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "BENDA"
+}

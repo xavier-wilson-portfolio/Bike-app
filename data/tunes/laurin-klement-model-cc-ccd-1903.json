@@ -1,0 +1,63 @@
+{
+ "id": "laurin-klement-model-cc-ccd-1903",
+ "make": "Laurin & Klement",
+ "model": "Model CC / CCD",
+ "name": "Laurin & Klement Model CC / CCD",
+ "years": [
+  1903,
+  1909
+ ],
+ "match": [
+  "laurin klement",
+  "laurin & klement",
+  "slavia"
+ ],
+ "style": "standard",
+ "drive": "belt",
+ "engine": "V-twin or single, early motorcycle",
+ "intro": "The Czech pioneers whose company became Skoda.",
+ "focus": [
+  [
+   "Engine",
+   "Air-cooled"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Oil",
+   "Total loss"
+  ],
+  [
+   "Belt drive",
+   "Check tension"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Check whether yours has a total-loss or a recirculating oil system before you fill it, and know which one you are running."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "L&K"
+}

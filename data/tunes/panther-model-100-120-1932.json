@@ -1,0 +1,67 @@
+{
+ "id": "panther-model-100-120-1932",
+ "make": "Panther",
+ "model": "Model 100 / 120",
+ "name": "Panther Model 100 / 120",
+ "years": [
+  1932,
+  1967
+ ],
+ "match": [
+  "panther",
+  "model 100",
+  "panther 120",
+  "panther model 100"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "598 or 645 cc sloping OHV single, engine as frame member",
+ "intro": "Big-bore sloping singles often used with sidecars.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Oil",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ],
+  "K": [
+   "The gearbox is separate from the engine and has its own oil. Check and change both, and set the primary chain."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "PANTHER"
+}

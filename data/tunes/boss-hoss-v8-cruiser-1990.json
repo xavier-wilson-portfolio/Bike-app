@@ -1,0 +1,56 @@
+{
+ "id": "boss-hoss-v8-cruiser-1990",
+ "make": "Boss Hoss",
+ "model": "V8 Cruiser",
+ "name": "Boss Hoss V8 Cruiser",
+ "years": [
+  1990,
+  2026
+ ],
+ "match": [
+  "boss hoss",
+  "bhc-3",
+  "boss hoss v8"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "350 to 502 cu in Chevrolet V8",
+ "intro": "Huge motorcycles with Chevy small-block and big-block V8s.",
+ "focus": [
+  [
+   "V8",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "Cooling",
+   "Coolant and fans"
+  ],
+  [
+   "Charging",
+   "Check alternator"
+  ],
+  [
+   "Drive",
+   "Check it"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "BOSS HOSS"
+}

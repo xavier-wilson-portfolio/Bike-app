@@ -1,0 +1,63 @@
+{
+ "id": "honda-ns400r-1985",
+ "make": "Honda",
+ "model": "NS400R",
+ "name": "Honda NS400R",
+ "years": [
+  1985,
+  1987
+ ],
+ "match": [
+  "ns400r",
+  "ns 400 r",
+  "ns400"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "387 cc liquid-cooled two-stroke V3, three carbs, oil injection",
+ "intro": "Honda's three-cylinder two-stroke road bike based on its GP machines. Parts are getting hard to find.",
+ "focus": [
+  [
+   "Two-stroke V3",
+   "Liquid-cooled"
+  ],
+  [
+   "Three carbs",
+   "Clean and sync"
+  ],
+  [
+   "Oil injection",
+   "Bleed the pump"
+  ],
+  [
+   "Exhaust valves",
+   "Clean them"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "CBR Forum",
+   "url": "https://www.cbrforum.com/",
+   "what": "Owner forum for Honda CBR models."
+  }
+ ],
+ "heroName": "NS400R"
+}

@@ -1,0 +1,59 @@
+{
+ "id": "gilera-nexus-250-500-2003",
+ "make": "Gilera",
+ "model": "Nexus 250 / 500",
+ "name": "Gilera Nexus 250 / 500",
+ "years": [
+  2003,
+  2012
+ ],
+ "match": [
+  "nexus",
+  "nexus 500",
+  "nexus 250",
+  "gilera nexus"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "244 or 460 cc liquid-cooled single, CVT",
+ "intro": "A sporty Piaggio-group maxi-scooter.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "NEXUS"
+}

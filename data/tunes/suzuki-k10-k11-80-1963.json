@@ -1,0 +1,65 @@
+{
+ "id": "suzuki-k10-k11-80-1963",
+ "make": "Suzuki",
+ "model": "K10 / K11 80",
+ "name": "Suzuki K10 / K11 80",
+ "years": [
+  1963,
+  1967
+ ],
+ "match": [
+  "k10",
+  "k11",
+  "suzuki k10",
+  "k15"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "79 cc two-stroke single, oil injection",
+ "intro": "Small Suzuki two-strokes of the 1960s.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Oil injection",
+   "Bleed the pump"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "K10"
+}

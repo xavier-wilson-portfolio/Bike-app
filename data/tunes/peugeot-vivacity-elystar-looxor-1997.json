@@ -1,0 +1,60 @@
+{
+ "id": "peugeot-vivacity-elystar-looxor-1997",
+ "make": "Peugeot",
+ "model": "Vivacity / Elystar / Looxor",
+ "name": "Peugeot Vivacity / Elystar / Looxor",
+ "years": [
+  1997,
+  2012
+ ],
+ "match": [
+  "vivacity",
+  "elystar",
+  "looxor",
+  "peugeot vivacity"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 to 150 cc two- or four-stroke single",
+ "intro": "Peugeot's mainstream city scooters of the 2000s.",
+ "focus": [
+  [
+   "Single",
+   "Air or liquid cooled"
+  ],
+  [
+   "Oil",
+   "Check type"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "heroName": "VIVACITY"
+}

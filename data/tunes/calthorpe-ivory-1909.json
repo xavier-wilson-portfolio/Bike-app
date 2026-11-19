@@ -1,0 +1,62 @@
+{
+ "id": "calthorpe-ivory-1909",
+ "make": "Calthorpe",
+ "model": "Ivory",
+ "name": "Calthorpe Ivory",
+ "years": [
+  1909,
+  1939
+ ],
+ "match": [
+  "calthorpe",
+  "calthorpe ivory"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "Two-stroke and OHV singles",
+ "intro": "A Birmingham maker best known for its cream-painted Ivory models.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "CALTHORPE"
+}

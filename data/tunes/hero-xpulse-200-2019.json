@@ -1,0 +1,59 @@
+{
+ "id": "hero-xpulse-200-2019",
+ "make": "Hero",
+ "model": "Xpulse 200",
+ "name": "Hero Xpulse 200",
+ "years": [
+  2019,
+  2026
+ ],
+ "match": [
+  "xpulse",
+  "xpulse 200",
+  "xpulse 200 4v"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "199 cc air/oil-cooled single",
+ "intro": "A budget dual sport from Hero MotoCorp.",
+ "focus": [
+  [
+   "Single",
+   "Air/oil-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Spoked wheels",
+   "Check spokes"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "XPULSE"
+}

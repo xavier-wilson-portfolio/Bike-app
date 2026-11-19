@@ -1,0 +1,65 @@
+{
+ "id": "suzuki-m15-m30-50-1963",
+ "make": "Suzuki",
+ "model": "M15 / M30 50",
+ "name": "Suzuki M15 / M30 50",
+ "years": [
+  1963,
+  1967
+ ],
+ "match": [
+  "m15",
+  "m30",
+  "suzuki m15",
+  "suzuki 50 1965"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "50 cc two-stroke single",
+ "intro": "Suzuki's early 50 cc bikes and step-throughs.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "M15"
+}

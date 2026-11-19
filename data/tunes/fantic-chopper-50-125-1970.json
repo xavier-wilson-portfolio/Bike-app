@@ -1,0 +1,64 @@
+{
+ "id": "fantic-chopper-50-125-1970",
+ "make": "Fantic",
+ "model": "Chopper 50 / 125",
+ "name": "Fantic Chopper 50 / 125",
+ "years": [
+  1970,
+  1985
+ ],
+ "match": [
+  "fantic chopper",
+  "fantic 125 chopper",
+  "tx7"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "49 or 124 cc two-stroke single",
+ "intro": "Small chopper-styled Fantics, popular in Europe.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "FANTIC CHOPPER"
+}

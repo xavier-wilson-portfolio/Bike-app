@@ -1,0 +1,60 @@
+{
+ "id": "honda-crf1000l-africa-twin-2016",
+ "make": "Honda",
+ "model": "CRF1000L Africa Twin",
+ "name": "Honda CRF1000L Africa Twin",
+ "years": [
+  2016,
+  2019
+ ],
+ "match": [
+  "crf1000l",
+  "crf1000",
+  "africa twin 1000",
+  "crf 1000 l",
+  "crf1000l2 adventure sports"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "998 cc liquid-cooled parallel twin, fuel injected, optional DCT",
+ "intro": "The return of the Africa Twin. A 21-inch front, a 270-degree twin and an optional dual-clutch gearbox.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "DCT",
+   "Check fluid"
+  ],
+  [
+   "Spoked wheels",
+   "Check spokes"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "AFRICA TWIN"
+}

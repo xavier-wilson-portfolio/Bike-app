@@ -1,0 +1,57 @@
+{
+ "id": "suzuki-gixxer-150-250-2014",
+ "make": "Suzuki",
+ "model": "Gixxer 150 / 250",
+ "name": "Suzuki Gixxer 150 / 250",
+ "years": [
+  2014,
+  2026
+ ],
+ "match": [
+  "gixxer",
+  "gixxer 150",
+  "gixxer 250",
+  "gixxer sf"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "155 or 249 cc single",
+ "intro": "Indian-built Suzuki commuters and sport bikes.",
+ "focus": [
+  [
+   "Single",
+   "Air or oil cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Suzuki Forums",
+   "url": "https://www.suzuki-forums.com/forums/",
+   "what": "General owner forum for Suzuki motorcycles."
+  }
+ ],
+ "heroName": "GIXXER"
+}

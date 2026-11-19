@@ -1,0 +1,64 @@
+{
+ "id": "express-radex-sport-98-1950",
+ "make": "Express",
+ "model": "Radex / Sport 98",
+ "name": "Express Radex / Sport 98",
+ "years": [
+  1950,
+  1958
+ ],
+ "match": [
+  "express radex",
+  "express sport",
+  "express moped"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "49 to 247 cc Sachs or ILO two-stroke",
+ "intro": "A Neumarkt maker of mopeds and light motorcycles.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "EXPRESS"
+}

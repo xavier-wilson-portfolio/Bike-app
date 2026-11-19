@@ -1,0 +1,63 @@
+{
+ "id": "kawasaki-kdx250-1991-1994-1991",
+ "make": "Kawasaki",
+ "model": "KDX250 (1991-1994)",
+ "name": "Kawasaki KDX250 (1991-1994)",
+ "years": [
+  1991,
+  1994
+ ],
+ "match": [
+  "kdx250 1991",
+  "kdx 250 1992",
+  "kdx250 1993"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 cc liquid-cooled two-stroke single, KIPS power valve",
+ "intro": "The liquid-cooled KDX250 enduro of the early 1990s.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "KIPS valve",
+   "Clean it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Kawasaki dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "KDX250"
+}

@@ -1,0 +1,58 @@
+{
+ "id": "suzuki-ux150-sixteen-2008",
+ "make": "Suzuki",
+ "model": "UX150 Sixteen",
+ "name": "Suzuki UX150 Sixteen",
+ "years": [
+  2008,
+  2012
+ ],
+ "match": [
+  "sixteen",
+  "ux150",
+  "ux125"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "150 cc liquid-cooled single, big-wheel scooter",
+ "intro": "A tall big-wheel scooter sold in Europe.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Cooling",
+   "Coolant check"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "SIXTEEN"
+}

@@ -1,0 +1,59 @@
+{
+ "id": "honda-xr185-xr200-1979-1980-1979",
+ "make": "Honda",
+ "model": "XR185 / XR200 (1979-1980)",
+ "name": "Honda XR185 / XR200 (1979-1980)",
+ "years": [
+  1979,
+  1980
+ ],
+ "match": [
+  "xr185",
+  "xr 185",
+  "xr200 1980"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "180 or 195 cc air-cooled single, twin shock",
+ "intro": "Small Honda off-road singles before the Pro-Link XR200R. Easy to ride and hard to kill.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Honda dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XR's Only",
+   "url": "https://www.xrsonly.com/",
+   "what": "Parts and know-how for Honda XR dirt bikes."
+  }
+ ],
+ "heroName": "XR185"
+}

@@ -1,0 +1,62 @@
+{
+ "id": "honda-rvf400-nc35-1994",
+ "make": "Honda",
+ "model": "RVF400 (NC35)",
+ "name": "Honda RVF400 (NC35)",
+ "years": [
+  1994,
+  1996
+ ],
+ "match": [
+  "rvf400",
+  "nc35",
+  "rvf 400"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "399 cc liquid-cooled V4 with gear-driven cams",
+ "intro": "A small V4 race replica built for Japan.",
+ "focus": [
+  [
+   "V4",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Gear cams",
+   "Listen"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "CBR Forum",
+   "url": "https://www.cbrforum.com/",
+   "what": "Owner forum for Honda CBR models."
+  }
+ ],
+ "heroName": "RVF400"
+}

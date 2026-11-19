@@ -1,0 +1,58 @@
+{
+ "id": "hyosung-st7-gv700-2006",
+ "make": "Hyosung",
+ "model": "ST7 / GV700",
+ "name": "Hyosung ST7 / GV700",
+ "years": [
+  2006,
+  2012
+ ],
+ "match": [
+  "st7",
+  "gv700",
+  "hyosung st7"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "678 cc liquid-cooled V-twin",
+ "intro": "Hyosung's bigger cruiser.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Belt drive",
+   "Check tension"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "ST7"
+}

@@ -1,0 +1,57 @@
+{
+ "id": "piaggio-x9-125-250-500-2001",
+ "make": "Piaggio",
+ "model": "X9 125 / 250 / 500",
+ "name": "Piaggio X9 125 / 250 / 500",
+ "years": [
+  2001,
+  2007
+ ],
+ "match": [
+  "x9",
+  "x9 500",
+  "x9 250",
+  "piaggio x9"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "124 to 460 cc liquid-cooled single, CVT",
+ "intro": "A big touring scooter from Piaggio.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "X9"
+}

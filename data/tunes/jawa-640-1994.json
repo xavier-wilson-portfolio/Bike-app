@@ -1,0 +1,60 @@
+{
+ "id": "jawa-640-1994",
+ "make": "Jawa",
+ "model": "640",
+ "name": "Jawa 640",
+ "years": [
+  1994,
+  2005
+ ],
+ "match": [
+  "jawa 640",
+  "640 style",
+  "640 classic"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "343 cc two-stroke parallel twin, oil injection",
+ "intro": "The last of the classic Jawa twins.",
+ "focus": [
+  [
+   "Two-stroke twin",
+   "Air-cooled"
+  ],
+  [
+   "Oil injection",
+   "Check pump"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "JAWA 640"
+}

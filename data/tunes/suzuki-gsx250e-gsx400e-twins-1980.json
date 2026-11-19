@@ -1,0 +1,60 @@
+{
+ "id": "suzuki-gsx250e-gsx400e-twins-1980",
+ "make": "Suzuki",
+ "model": "GSX250E / GSX400E twins",
+ "name": "Suzuki GSX250E / GSX400E twins",
+ "years": [
+  1980,
+  1987
+ ],
+ "match": [
+  "gsx250e",
+  "gsx400e",
+  "gsx 250",
+  "gsx 400 twin"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "248 or 398 cc air-cooled four-valve parallel twin",
+ "intro": "Suzuki's four-valve twins, some with Katana styling.",
+ "focus": [
+  [
+   "Twin",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The GS Resources forum",
+   "url": "https://www.thegsresources.com/_forum/",
+   "what": "Owner forum for Suzuki GS fours and twins."
+  }
+ ],
+ "heroName": "GSX400E"
+}

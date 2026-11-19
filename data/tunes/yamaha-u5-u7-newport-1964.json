@@ -1,0 +1,66 @@
+{
+ "id": "yamaha-u5-u7-newport-1964",
+ "make": "Yamaha",
+ "model": "U5 / U7 Newport",
+ "name": "Yamaha U5 / U7 Newport",
+ "years": [
+  1964,
+  1972
+ ],
+ "match": [
+  "u5",
+  "u7",
+  "newport",
+  "yamaha newport",
+  "u5e"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "49 or 73 cc two-stroke step-through",
+ "intro": "Yamaha's small step-through scooters for the US.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Autolube",
+   "Bleed the pump"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Enclosed"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "NEWPORT"
+}

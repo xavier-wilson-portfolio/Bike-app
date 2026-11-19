@@ -1,0 +1,59 @@
+{
+ "id": "cfmoto-800mt-2022",
+ "make": "CFMoto",
+ "model": "800MT",
+ "name": "CFMoto 800MT",
+ "years": [
+  2022,
+  2026
+ ],
+ "match": [
+  "800mt",
+  "800 mt",
+  "cfmoto 800mt",
+  "800mt explore"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "799 cc liquid-cooled KTM-derived parallel twin",
+ "intro": "An adventure bike with an engine based on KTM's 790 twin.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "800MT"
+}

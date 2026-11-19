@@ -1,0 +1,57 @@
+{
+ "id": "honda-nt1100-2022",
+ "make": "Honda",
+ "model": "NT1100",
+ "name": "Honda NT1100",
+ "years": [
+  2022,
+  2026
+ ],
+ "match": [
+  "nt1100",
+  "nt 1100"
+ ],
+ "style": "touring",
+ "drive": "chain",
+ "engine": "1084 cc liquid-cooled parallel twin, fuel injected, optional DCT",
+ "intro": "A road tourer with the Africa Twin engine, panniers and a big screen. Sold in Europe and Asia.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "DCT",
+   "Check fluid"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Goldwingparts.com rider blog",
+   "url": "https://www.goldwingparts.com/blogs/goldwing-rider-blog",
+   "what": "Gold Wing repair notes by model."
+  }
+ ],
+ "heroName": "NT1100"
+}

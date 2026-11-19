@@ -1,0 +1,60 @@
+{
+ "id": "big-bear-choppers-devil-s-advocate-paradox-sled-1999",
+ "make": "Big Bear Choppers",
+ "model": "Devil's Advocate / Paradox / Sled",
+ "name": "Big Bear Choppers Devil's Advocate / Paradox / Sled",
+ "years": [
+  1999,
+  2013
+ ],
+ "match": [
+  "big bear choppers",
+  "devils advocate",
+  "paradox",
+  "big bear sled"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "S&S V-twin, factory chopper",
+ "intro": "California-built production choppers.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel",
+   "Carb or EFI"
+  ],
+  [
+   "Pushrods",
+   "Check them"
+  ],
+  [
+   "Charging",
+   "Check stator"
+  ],
+  [
+   "Belt drive",
+   "Check tension"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "HDForums",
+   "url": "https://www.hdforums.com/",
+   "what": "Large owner forum for all Harley-Davidson models."
+  }
+ ],
+ "heroName": "BIG BEAR"
+}

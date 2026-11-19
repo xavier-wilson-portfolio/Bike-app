@@ -1,0 +1,61 @@
+{
+ "id": "indian-chief-kings-mountain-2009",
+ "make": "Indian",
+ "model": "Chief (Kings Mountain)",
+ "name": "Indian Chief (Kings Mountain)",
+ "years": [
+  2009,
+  2013
+ ],
+ "match": [
+  "chief 2009",
+  "chief 2010",
+  "kings mountain chief",
+  "chief vintage 2011",
+  "chief dark horse 2012"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "1720 cc air-cooled Power Plus 105 V-twin, fuel injected",
+ "intro": "The Chiefs built in Kings Mountain, North Carolina, before Polaris.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Pushrods",
+   "Check them"
+  ],
+  [
+   "Charging",
+   "Check stator"
+  ],
+  [
+   "Belt drive",
+   "Check tension"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Polaris (Indian and Victory) issued several recalls on these bikes. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Indian Motorcycle Forum",
+   "url": "https://www.indianmotorcycleforum.com/",
+   "what": "Owner forum for modern Indian motorcycles."
+  }
+ ],
+ "heroName": "CHIEF"
+}

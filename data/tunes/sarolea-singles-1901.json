@@ -1,0 +1,63 @@
+{
+ "id": "sarolea-singles-1901",
+ "make": "Sarolea",
+ "model": "Singles",
+ "name": "Sarolea Singles",
+ "years": [
+  1901,
+  1960
+ ],
+ "match": [
+  "sarolea",
+  "sarolea 500",
+  "sarolea 350"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "350 to 600 cc side-valve or OHV single",
+ "intro": "A long-lived Belgian maker of solid singles.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "SAROLEA"
+}

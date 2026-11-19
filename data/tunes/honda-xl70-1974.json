@@ -1,0 +1,62 @@
+{
+ "id": "honda-xl70-1974",
+ "make": "Honda",
+ "model": "XL70",
+ "name": "Honda XL70",
+ "years": [
+  1974,
+  1976
+ ],
+ "match": [
+  "xl70",
+  "xl 70"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "72 cc air-cooled single, kick start",
+ "intro": "A small dual sport for younger and smaller riders. Street legal with lights.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Six-volt",
+   "Check charging"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XR's Only",
+   "url": "https://www.xrsonly.com/",
+   "what": "Parts and know-how for Honda XR dirt bikes."
+  }
+ ],
+ "heroName": "XL70"
+}

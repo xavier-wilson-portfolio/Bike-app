@@ -1,0 +1,64 @@
+{
+ "id": "kawasaki-kdx125-kmx125-kmx200-1986",
+ "make": "Kawasaki",
+ "model": "KDX125 / KMX125 / KMX200",
+ "name": "Kawasaki KDX125 / KMX125 / KMX200",
+ "years": [
+  1986,
+  2003
+ ],
+ "match": [
+  "kdx125",
+  "kmx125",
+  "kmx200",
+  "kmx 125"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "124 or 191 cc liquid-cooled two-stroke single",
+ "intro": "Kawasaki's small two-stroke trail bikes for Europe.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "Oil injection",
+   "Bleed the pump"
+  ],
+  [
+   "KIPS",
+   "Clean it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Kawasaki dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "KMX125"
+}

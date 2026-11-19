@@ -1,0 +1,59 @@
+{
+ "id": "suzuki-gsr600-gsr750-2006",
+ "make": "Suzuki",
+ "model": "GSR600 / GSR750",
+ "name": "Suzuki GSR600 / GSR750",
+ "years": [
+  2006,
+  2016
+ ],
+ "match": [
+  "gsr600",
+  "gsr750",
+  "gsr 600",
+  "gsr 750"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "599 or 749 cc liquid-cooled inline four from the GSX-R",
+ "intro": "Naked middleweights sold in Europe.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Suzuki Forums",
+   "url": "https://www.suzuki-forums.com/forums/",
+   "what": "General owner forum for Suzuki motorcycles."
+  }
+ ],
+ "heroName": "GSR750"
+}

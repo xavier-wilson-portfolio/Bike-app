@@ -1,0 +1,60 @@
+{
+ "id": "parilla-175-250-1950",
+ "make": "Parilla",
+ "model": "175 / 250",
+ "name": "Parilla 175 / 250",
+ "years": [
+  1950,
+  1967
+ ],
+ "match": [
+  "parilla",
+  "parilla 250",
+  "parilla 175",
+  "parilla wildcat"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "174 or 247 cc high-cam single",
+ "intro": "Italian singles with a high-mounted camshaft. Popular with racers.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "PARILLA"
+}

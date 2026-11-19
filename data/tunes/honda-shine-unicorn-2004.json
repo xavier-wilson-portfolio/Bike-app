@@ -1,0 +1,61 @@
+{
+ "id": "honda-shine-unicorn-2004",
+ "make": "Honda",
+ "model": "Shine / Unicorn",
+ "name": "Honda Shine / Unicorn",
+ "years": [
+  2004,
+  2026
+ ],
+ "match": [
+  "cb shine",
+  "honda shine",
+  "unicorn",
+  "cb unicorn",
+  "unicorn 160"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "124 or 162 cc air-cooled single",
+ "intro": "Popular Honda commuters in India.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "SHINE"
+}

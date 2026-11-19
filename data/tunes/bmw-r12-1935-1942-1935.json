@@ -1,0 +1,60 @@
+{
+ "id": "bmw-r12-1935-1942-1935",
+ "make": "BMW",
+ "model": "R12 (1935-1942)",
+ "name": "BMW R12 (1935-1942)",
+ "years": [
+  1935,
+  1942
+ ],
+ "match": [
+  "r12 1935",
+  "r12 1938",
+  "bmw r12 vintage",
+  "r 12 1936"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "745 cc side-valve flat twin, shaft drive, telescopic fork",
+ "intro": "One of the first production bikes with a hydraulic telescopic fork. Many served in the military.",
+ "focus": [
+  [
+   "Flat twin",
+   "Air-cooled"
+  ],
+  [
+   "Side valves",
+   "Set tappets"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Shaft drive",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Airheads Beemer Club",
+   "url": "https://www.airheads.org/",
+   "what": "Tech library and owner club for BMW airhead twins."
+  }
+ ],
+ "heroName": "R12"
+}

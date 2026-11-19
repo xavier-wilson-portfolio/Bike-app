@@ -1,0 +1,60 @@
+{
+ "id": "derbi-atlantis-boulevard-1998",
+ "make": "Derbi",
+ "model": "Atlantis / Boulevard",
+ "name": "Derbi Atlantis / Boulevard",
+ "years": [
+  1998,
+  2010
+ ],
+ "match": [
+  "atlantis",
+  "derbi boulevard",
+  "boulevard 150",
+  "atlantis 50"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 to 150 cc single",
+ "intro": "Derbi's city scooters.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Oil",
+   "Check type"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "ATLANTIS"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "bsa-g14-y13-v-twins-1936",
+ "make": "BSA",
+ "model": "G14 / Y13 V-twins",
+ "name": "BSA G14 / Y13 V-twins",
+ "years": [
+  1936,
+  1940
+ ],
+ "match": [
+  "bsa g14",
+  "bsa y13",
+  "bsa v-twin"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "748 to 986 cc side-valve or OHV V-twin",
+ "intro": "BSA's big pre-war V-twins, often used with sidecars.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Gearbox",
+   "Separate oil"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ],
+  "K": [
+   "The gearbox is separate from the engine and has its own oil. Check and change both, and set the primary chain."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BSA Owners Club",
+   "url": "https://www.bsaoc.org/",
+   "what": "Owner club for BSA motorcycles, with tech help and parts."
+  }
+ ],
+ "heroName": "BSA V-TWIN"
+}

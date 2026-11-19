@@ -1,0 +1,58 @@
+{
+ "id": "honda-cbf125-2009",
+ "make": "Honda",
+ "model": "CBF125",
+ "name": "Honda CBF125",
+ "years": [
+  2009,
+  2015
+ ],
+ "match": [
+  "cbf125",
+  "cbf 125"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "124 cc air-cooled single, fuel injected",
+ "intro": "A simple fuel-injected commuter sold in Europe and Asia.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "CBF125"
+}

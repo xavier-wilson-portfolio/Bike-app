@@ -1,0 +1,64 @@
+{
+ "id": "honda-p50-pc50-1966",
+ "make": "Honda",
+ "model": "P50 / PC50",
+ "name": "Honda P50 / PC50",
+ "years": [
+  1966,
+  1974
+ ],
+ "match": [
+  "p50",
+  "pc50",
+  "honda p50",
+  "little honda"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "49 cc four-stroke moped, engine in the rear wheel on the P50",
+ "intro": "Honda's pedal mopeds. The P50 has its engine built into the rear wheel.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Pedals",
+   "Check them"
+  ],
+  [
+   "Brakes",
+   "Check drums"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "heroName": "P50"
+}

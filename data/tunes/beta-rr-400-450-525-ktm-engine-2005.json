@@ -1,0 +1,63 @@
+{
+ "id": "beta-rr-400-450-525-ktm-engine-2005",
+ "make": "Beta",
+ "model": "RR 400 / 450 / 525 (KTM engine)",
+ "name": "Beta RR 400 / 450 / 525 (KTM engine)",
+ "years": [
+  2005,
+  2009
+ ],
+ "match": [
+  "rr 525",
+  "rr 450 2006",
+  "rr 400 2007",
+  "beta 525"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "398 to 510 cc liquid-cooled single, KTM-built engine",
+ "intro": "Beta's four-stroke enduros that used KTM RFS engines.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Oil",
+   "Change by hours"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Four-stroke motocross engines need frequent valve checks and oil changes. Follow the hour-based schedule in the manual, not the calendar."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road and trials models are often not in the NHTSA recall search. Ask a dealer for the make to run the frame number.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "RR 525"
+}

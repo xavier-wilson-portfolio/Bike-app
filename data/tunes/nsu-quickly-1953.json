@@ -1,0 +1,65 @@
+{
+ "id": "nsu-quickly-1953",
+ "make": "NSU",
+ "model": "Quickly",
+ "name": "NSU Quickly",
+ "years": [
+  1953,
+  1966
+ ],
+ "match": [
+  "quickly",
+  "nsu quickly",
+  "quickly n",
+  "quickly s"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "49 cc two-stroke moped",
+ "intro": "One of the best-selling mopeds ever, made in huge numbers in Germany.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Flywheel magneto",
+   "Check it"
+  ],
+  [
+   "Brakes",
+   "Check drums"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "heroName": "QUICKLY"
+}

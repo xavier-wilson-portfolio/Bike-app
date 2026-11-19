@@ -1,0 +1,60 @@
+{
+ "id": "beta-alp-4-0-alp-200-2003",
+ "make": "Beta",
+ "model": "Alp 4.0 / Alp 200",
+ "name": "Beta Alp 4.0 / Alp 200",
+ "years": [
+  2003,
+  2026
+ ],
+ "match": [
+  "alp 4.0",
+  "alp 200",
+  "alp 350",
+  "beta alp"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "199 or 350 cc air-cooled single, low seat",
+ "intro": "Light, low trail bikes with Suzuki-derived engines.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Low seat",
+   "Check fit"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road and trials models are often not in the NHTSA recall search. Ask a dealer for the make to run the frame number.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "ALP"
+}

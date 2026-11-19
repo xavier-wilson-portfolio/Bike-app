@@ -1,0 +1,65 @@
+{
+ "id": "beta-techno-rev-3-trials-1993",
+ "make": "Beta",
+ "model": "Techno / Rev-3 trials",
+ "name": "Beta Techno / Rev-3 trials",
+ "years": [
+  1993,
+  2008
+ ],
+ "match": [
+  "techno",
+  "rev-3",
+  "rev 3",
+  "beta techno",
+  "beta rev3"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "124 to 270 cc liquid-cooled two-stroke trials single",
+ "intro": "Beta's trials bikes before the Evo range.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Clutch",
+   "Check plates"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road and trials models are often not in the NHTSA recall search. Ask a dealer for the make to run the frame number.",
+ "known": [],
+ "forums": [
+  {
+   "name": "TrialsCentral",
+   "url": "https://www.trialscentral.com/",
+   "what": "Forum for trials riders, with sections for most trials makes."
+  }
+ ],
+ "heroName": "REV-3"
+}

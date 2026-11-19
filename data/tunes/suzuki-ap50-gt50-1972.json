@@ -1,0 +1,65 @@
+{
+ "id": "suzuki-ap50-gt50-1972",
+ "make": "Suzuki",
+ "model": "AP50 / GT50",
+ "name": "Suzuki AP50 / GT50",
+ "years": [
+  1972,
+  1982
+ ],
+ "match": [
+  "ap50",
+  "gt50",
+  "ap 50",
+  "gt 50"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "49 cc two-stroke single",
+ "intro": "Small sporty Suzukis for European teens.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "CCI",
+   "Check pump"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Suzuki's CCI system pumps oil into the engine, so it does not need premix. Check the oil tank, pump and lines. If the pump was removed, it runs premix."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "AP50"
+}

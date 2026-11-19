@@ -1,0 +1,65 @@
+{
+ "id": "kawasaki-kh250-kh400-1976",
+ "make": "Kawasaki",
+ "model": "KH250 / KH400",
+ "name": "Kawasaki KH250 / KH400",
+ "years": [
+  1976,
+  1980
+ ],
+ "match": [
+  "kh400",
+  "kh250",
+  "kh 400",
+  "kh 250"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "249 or 400 cc air-cooled two-stroke triple, oil injection",
+ "intro": "The later versions of the S1 and S3 triples. Smoother and a bit tamer than the early bikes.",
+ "focus": [
+  [
+   "Two-stroke triple",
+   "Air-cooled"
+  ],
+  [
+   "Oil injection",
+   "Bleed the pump"
+  ],
+  [
+   "Three carbs",
+   "Clean and sync"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Kawasaki Triples forum",
+   "url": "https://www.tapatalk.com/groups/kawasakitriples/",
+   "what": "Owner forum for Kawasaki two-stroke triples."
+  }
+ ],
+ "heroName": "KH400"
+}

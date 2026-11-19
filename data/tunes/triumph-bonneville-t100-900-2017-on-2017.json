@@ -1,0 +1,59 @@
+{
+ "id": "triumph-bonneville-t100-900-2017-on-2017",
+ "make": "Triumph",
+ "model": "Bonneville T100 (900, 2017 on)",
+ "name": "Triumph Bonneville T100 (900, 2017 on)",
+ "years": [
+  2017,
+  2026
+ ],
+ "match": [
+  "bonneville t100 2017",
+  "t100 2018",
+  "t100 900",
+  "bonnie t100 2020"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "900 cc liquid-cooled parallel twin, fuel injected",
+ "intro": "The 900 cc Bonneville T100 built on the Street Twin engine.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant check"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Triumph has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "heroName": "T100"
+}

@@ -1,0 +1,65 @@
+{
+ "id": "nsu-prima-1956",
+ "make": "NSU",
+ "model": "Prima",
+ "name": "NSU Prima",
+ "years": [
+  1956,
+  1964
+ ],
+ "match": [
+  "nsu prima",
+  "prima d",
+  "prima v",
+  "prima iii"
+ ],
+ "style": "scooter",
+ "drive": "shaft",
+ "engine": "146 or 174 cc two-stroke single, licensed from Lambretta",
+ "intro": "NSU's scooter, a licensed Lambretta at first and later its own design.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Shaft drive",
+   "Check oil"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "PRIMA"
+}

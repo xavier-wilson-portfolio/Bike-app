@@ -1,0 +1,58 @@
+{
+ "id": "yamaha-trx850-1995",
+ "make": "Yamaha",
+ "model": "TRX850",
+ "name": "Yamaha TRX850",
+ "years": [
+  1995,
+  2000
+ ],
+ "match": [
+  "trx850",
+  "trx 850",
+  "trx"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "849 cc liquid-cooled parallel twin with a 270-degree crank",
+ "intro": "A V-twin feel from a parallel twin in a trellis frame. Mostly sold in Europe and Japan.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "heroName": "TRX850"
+}

@@ -1,0 +1,65 @@
+{
+ "id": "yamaha-yz360-yz400-two-stroke-1974",
+ "make": "Yamaha",
+ "model": "YZ360 / YZ400 (two-stroke)",
+ "name": "Yamaha YZ360 / YZ400 (two-stroke)",
+ "years": [
+  1974,
+  1979
+ ],
+ "match": [
+  "yz360",
+  "yz400 1977",
+  "yz 360",
+  "yz400 two stroke"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "360 or 397 cc air-cooled two-stroke single, premix",
+ "intro": "The big-bore YZ motocrossers of the 1970s. Strong and now collectible for vintage racing.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Yamaha dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Enduros forum",
+   "url": "https://www.yamaha-enduros.com/",
+   "what": "Owner forum for vintage Yamaha two-stroke enduros."
+  }
+ ],
+ "heroName": "YZ400"
+}

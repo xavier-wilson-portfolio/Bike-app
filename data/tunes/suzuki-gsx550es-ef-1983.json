@@ -1,0 +1,64 @@
+{
+ "id": "suzuki-gsx550es-ef-1983",
+ "make": "Suzuki",
+ "model": "GSX550ES / EF",
+ "name": "Suzuki GSX550ES / EF",
+ "years": [
+  1983,
+  1988
+ ],
+ "match": [
+  "gsx550",
+  "gsx550es",
+  "gsx550ef",
+  "gsx 550"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "572 cc air-cooled 16-valve inline four, TSCC",
+ "intro": "A sporty middleweight four with anti-dive forks.",
+ "focus": [
+  [
+   "Inline four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The GS Resources forum",
+   "url": "https://www.thegsresources.com/_forum/",
+   "what": "Owner forum for Suzuki GS fours and twins."
+  }
+ ],
+ "heroName": "GSX550"
+}

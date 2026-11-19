@@ -1,0 +1,64 @@
+{
+ "id": "suzuki-ts125r-ts200r-1990",
+ "make": "Suzuki",
+ "model": "TS125R / TS200R",
+ "name": "Suzuki TS125R / TS200R",
+ "years": [
+  1990,
+  2000
+ ],
+ "match": [
+  "ts125r",
+  "ts200r",
+  "ts 125 r",
+  "ts 200 r"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "124 or 195 cc liquid-cooled two-stroke single, power valve",
+ "intro": "Liquid-cooled two-stroke enduros sold in Europe, Asia and Australia.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "CCI",
+   "Check pump"
+  ],
+  [
+   "Power valve",
+   "Clean it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Suzuki's CCI system pumps oil into the engine, so it does not need premix. Check the oil tank, pump and lines. If the pump was removed, it runs premix."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Suzuki dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "TS200R"
+}

@@ -1,0 +1,65 @@
+{
+ "id": "ducati-860-gt-900-gts-1974",
+ "make": "Ducati",
+ "model": "860 GT / 900 GTS",
+ "name": "Ducati 860 GT / 900 GTS",
+ "years": [
+  1974,
+  1979
+ ],
+ "match": [
+  "860 gt",
+  "860gt",
+  "900 gts",
+  "860 gte",
+  "ducati 860"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "864 cc air-cooled bevel-drive V-twin, square cases",
+ "intro": "The square-case touring bevel twins. Giugiaro styled the 860 GT.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Bevel drive",
+   "Check gears"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "The bevel-drive cams are set with shims and need patience. Check the bevel gear backlash and the desmo shims before you run it hard."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "heroName": "860 GT"
+}

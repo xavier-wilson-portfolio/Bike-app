@@ -1,0 +1,63 @@
+{
+ "id": "honda-dio-1988",
+ "make": "Honda",
+ "model": "Dio",
+ "name": "Honda Dio",
+ "years": [
+  1988,
+  2001
+ ],
+ "match": [
+  "dio",
+  "af18",
+  "af27",
+  "af34",
+  "sk50",
+  "dio zx"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 cc air-cooled two-stroke single, oil injection, CVT",
+ "intro": "Honda's small two-stroke scooter, common in Japan and Europe and as an import. Lots of aftermarket tuning parts.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Oil injection",
+   "Bleed the pump"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check drums"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Honda scooters."
+  }
+ ],
+ "heroName": "DIO"
+}

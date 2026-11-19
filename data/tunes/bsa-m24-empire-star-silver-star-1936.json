@@ -1,0 +1,67 @@
+{
+ "id": "bsa-m24-empire-star-silver-star-1936",
+ "make": "BSA",
+ "model": "M24 Empire Star / Silver Star",
+ "name": "BSA M24 Empire Star / Silver Star",
+ "years": [
+  1936,
+  1940
+ ],
+ "match": [
+  "empire star",
+  "silver star",
+  "m24",
+  "bsa empire star"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "248 to 496 cc OHV single",
+ "intro": "BSA's late-1930s sporting singles before the Gold Star name was used widely.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Gearbox",
+   "Separate oil"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ],
+  "K": [
+   "The gearbox is separate from the engine and has its own oil. Check and change both, and set the primary chain."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BSA Owners Club",
+   "url": "https://www.bsaoc.org/",
+   "what": "Owner club for BSA motorcycles, with tech help and parts."
+  }
+ ],
+ "heroName": "EMPIRE STAR"
+}

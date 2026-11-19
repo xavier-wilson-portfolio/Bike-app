@@ -1,0 +1,62 @@
+{
+ "id": "honda-sl175-1970",
+ "make": "Honda",
+ "model": "SL175",
+ "name": "Honda SL175",
+ "years": [
+  1970,
+  1972
+ ],
+ "match": [
+  "sl175",
+  "sl 175"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "174 cc air-cooled parallel twin trail bike",
+ "intro": "A twin-cylinder trail bike based on the CB175. Unusual and collectible today.",
+ "focus": [
+  [
+   "Twin",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XR's Only",
+   "url": "https://www.xrsonly.com/",
+   "what": "Parts and know-how for Honda XR dirt bikes."
+  }
+ ],
+ "heroName": "SL175"
+}

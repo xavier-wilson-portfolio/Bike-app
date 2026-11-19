@@ -1,0 +1,65 @@
+{
+ "id": "honda-mb5-mbx50-1980",
+ "make": "Honda",
+ "model": "MB5 / MBX50",
+ "name": "Honda MB5 / MBX50",
+ "years": [
+  1980,
+  1983
+ ],
+ "match": [
+  "mb5",
+  "mbx50",
+  "mb 5",
+  "mb50"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "49 cc air-cooled two-stroke single, oil injection",
+ "intro": "A small two-stroke sport moped sold in the US as the MB5.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Oil injection",
+   "Bleed the pump"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "VFRDiscussion",
+   "url": "https://www.vfrdiscussion.com/",
+   "what": "Owner forum for Honda VFR and Interceptor models."
+  }
+ ],
+ "heroName": "MB5"
+}

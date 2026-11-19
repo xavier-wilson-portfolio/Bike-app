@@ -1,0 +1,64 @@
+{
+ "id": "yamaha-xj900s-diversion-1995",
+ "make": "Yamaha",
+ "model": "XJ900S Diversion",
+ "name": "Yamaha XJ900S Diversion",
+ "years": [
+  1995,
+  2003
+ ],
+ "match": [
+  "xj900s",
+  "xj900 diversion",
+  "xj 900 s",
+  "diversion 900"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "engine": "892 cc air-cooled inline four, shaft drive",
+ "intro": "A plain shaft-drive sport tourer from Europe, related to the older XJ900.",
+ "focus": [
+  [
+   "Inline four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Shaft drive",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XJBikes forum",
+   "url": "https://www.xjbikes.com/forums/",
+   "what": "Owner forum for Yamaha XJ, Seca, Maxim and Radian fours."
+  }
+ ],
+ "heroName": "DIVERSION"
+}

@@ -1,0 +1,57 @@
+{
+ "id": "tvs-apache-rtr-310-2023",
+ "make": "TVS",
+ "model": "Apache RTR 310",
+ "name": "TVS Apache RTR 310",
+ "years": [
+  2023,
+  2026
+ ],
+ "match": [
+  "rtr 310",
+  "apache rtr 310"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "312 cc liquid-cooled single",
+ "intro": "The naked version of the Apache RR 310.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "RTR 310"
+}

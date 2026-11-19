@@ -1,0 +1,62 @@
+{
+ "id": "honda-cb250n-cb400n-super-dream-1978",
+ "make": "Honda",
+ "model": "CB250N / CB400N Super Dream",
+ "name": "Honda CB250N / CB400N Super Dream",
+ "years": [
+  1978,
+  1986
+ ],
+ "match": [
+  "super dream",
+  "cb250n",
+  "cb400n",
+  "cb 250 n",
+  "cb 400 n",
+  "superdream"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "249 or 395 cc air-cooled three-valve parallel twin, twin carbs",
+ "intro": "The European versions of the CB400T Hawk, very common as learner bikes in the UK.",
+ "focus": [
+  [
+   "Twin",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Cam chain",
+   "Check tensioner"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "SUPER DREAM"
+}

@@ -1,0 +1,65 @@
+{
+ "id": "ktm-mecky-ponny-comet-classic-1954",
+ "make": "KTM",
+ "model": "Mecky / Ponny / Comet (classic)",
+ "name": "KTM Mecky / Ponny / Comet (classic)",
+ "years": [
+  1954,
+  1970
+ ],
+ "match": [
+  "ktm mecky",
+  "ktm ponny",
+  "ktm comet",
+  "ktm mirabell"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "49 to 125 cc two-stroke scooters and mopeds",
+ "intro": "KTM's early scooters and mopeds.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Enclosed chain"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "KTM PONNY"
+}

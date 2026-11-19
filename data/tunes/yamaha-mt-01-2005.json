@@ -1,0 +1,59 @@
+{
+ "id": "yamaha-mt-01-2005",
+ "make": "Yamaha",
+ "model": "MT-01",
+ "name": "Yamaha MT-01",
+ "years": [
+  2005,
+  2012
+ ],
+ "match": [
+  "mt-01",
+  "mt01",
+  "mt 01"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "1670 cc air-cooled V-twin from the Warrior",
+ "intro": "A torque-heavy naked bike with a cruiser engine.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Pushrods",
+   "Check them"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "heroName": "MT-01"
+}

@@ -1,0 +1,62 @@
+{
+ "id": "yamaha-it200-1984",
+ "make": "Yamaha",
+ "model": "IT200",
+ "name": "Yamaha IT200",
+ "years": [
+  1984,
+  1986
+ ],
+ "match": [
+  "it200",
+  "it 200"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "195 cc liquid-cooled two-stroke single, premix",
+ "intro": "The last of the IT enduros. Liquid-cooled and light.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Power valve",
+   "Clean it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Yamaha dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Enduros forum",
+   "url": "https://www.yamaha-enduros.com/",
+   "what": "Owner forum for vintage Yamaha two-stroke enduros."
+  }
+ ],
+ "heroName": "IT200"
+}

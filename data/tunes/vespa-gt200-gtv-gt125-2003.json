@@ -1,0 +1,60 @@
+{
+ "id": "vespa-gt200-gtv-gt125-2003",
+ "make": "Vespa",
+ "model": "GT200 / GTV / GT125",
+ "name": "Vespa GT200 / GTV / GT125",
+ "years": [
+  2003,
+  2008
+ ],
+ "match": [
+  "gt200",
+  "gt 200",
+  "gtv 250",
+  "gt125",
+  "granturismo"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "124 or 198 cc liquid-cooled four-stroke single, CVT",
+ "intro": "The first big-body automatic Vespas before the GTS.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Piaggio has issued recalls on some Vespas in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "GT200"
+}

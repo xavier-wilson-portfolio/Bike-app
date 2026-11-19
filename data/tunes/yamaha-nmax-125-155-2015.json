@@ -1,0 +1,59 @@
+{
+ "id": "yamaha-nmax-125-155-2015",
+ "make": "Yamaha",
+ "model": "NMAX 125 / 155",
+ "name": "Yamaha NMAX 125 / 155",
+ "years": [
+  2015,
+  2026
+ ],
+ "match": [
+  "nmax",
+  "nmax 155",
+  "nmax 125",
+  "n-max"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "125 or 155 cc liquid-cooled single, fuel injected, VVA",
+ "intro": "A popular small scooter with ABS and VVA. Sold worldwide.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Brakes",
+   "Check ABS"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "NMAX"
+}

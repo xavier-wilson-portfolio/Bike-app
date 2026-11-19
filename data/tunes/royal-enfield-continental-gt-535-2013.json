@@ -1,0 +1,59 @@
+{
+ "id": "royal-enfield-continental-gt-535-2013",
+ "make": "Royal Enfield",
+ "model": "Continental GT 535",
+ "name": "Royal Enfield Continental GT 535",
+ "years": [
+  2013,
+  2018
+ ],
+ "match": [
+  "continental gt 535",
+  "gt 535",
+  "continental 535"
+ ],
+ "style": "cafe",
+ "drive": "chain",
+ "engine": "535 cc air-cooled single, fuel injected",
+ "intro": "A cafe racer built on the Bullet engine with a Harris frame.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with Royal Enfield owner threads."
+  }
+ ],
+ "heroName": "CONTINENTAL GT"
+}

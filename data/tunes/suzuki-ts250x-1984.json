@@ -1,0 +1,62 @@
+{
+ "id": "suzuki-ts250x-1984",
+ "make": "Suzuki",
+ "model": "TS250X",
+ "name": "Suzuki TS250X",
+ "years": [
+  1984,
+  1990
+ ],
+ "match": [
+  "ts250x",
+  "ts 250 x"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "246 cc liquid-cooled two-stroke single",
+ "intro": "A liquid-cooled two-stroke trail bike sold in Europe and Japan.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "CCI",
+   "Check pump"
+  ],
+  [
+   "Power valve",
+   "Clean it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Suzuki's CCI system pumps oil into the engine, so it does not need premix. Check the oil tank, pump and lines. If the pump was removed, it runs premix."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Suzuki dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "TS250X"
+}

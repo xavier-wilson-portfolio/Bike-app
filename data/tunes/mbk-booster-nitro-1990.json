@@ -1,0 +1,64 @@
+{
+ "id": "mbk-booster-nitro-1990",
+ "make": "MBK",
+ "model": "Booster / Nitro",
+ "name": "MBK Booster / Nitro",
+ "years": [
+  1990,
+  2018
+ ],
+ "match": [
+  "mbk booster",
+  "booster",
+  "mbk nitro",
+  "booster spirit"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 cc two-stroke single",
+ "intro": "The European versions of the Yamaha BW's and Aerox, very common in France.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air or liquid cooled"
+  ],
+  [
+   "Oil injection",
+   "Check pump"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "BOOSTER"
+}

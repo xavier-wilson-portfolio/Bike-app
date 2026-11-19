@@ -1,0 +1,59 @@
+{
+ "id": "heinkel-tourist-1953",
+ "make": "Heinkel",
+ "model": "Tourist",
+ "name": "Heinkel Tourist",
+ "years": [
+  1953,
+  1965
+ ],
+ "match": [
+  "heinkel tourist",
+  "tourist 103",
+  "heinkel 103"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "149 or 174 cc four-stroke single",
+ "intro": "A big touring scooter from the aircraft maker, known for being sturdy.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Electrics",
+   "Check charging"
+  ],
+  [
+   "Chain drive",
+   "Enclosed chain"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "TOURIST"
+}

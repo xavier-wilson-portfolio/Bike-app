@@ -1,0 +1,62 @@
+{
+ "id": "rex-acme-singles-and-v-twins-1921",
+ "make": "Rex-Acme",
+ "model": "Singles and V-twins",
+ "name": "Rex-Acme Singles and V-twins",
+ "years": [
+  1921,
+  1933
+ ],
+ "match": [
+  "rex-acme",
+  "rex acme"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "Blackburne and JAP engines",
+ "intro": "A Coventry maker with strong racing results in the 1920s.",
+ "focus": [
+  [
+   "Engine",
+   "Air-cooled"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "REX-ACME"
+}

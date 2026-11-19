@@ -1,0 +1,59 @@
+{
+ "id": "hesketh-v1000-1980",
+ "make": "Hesketh",
+ "model": "V1000",
+ "name": "Hesketh V1000",
+ "years": [
+  1980,
+  1984
+ ],
+ "match": [
+  "hesketh v1000",
+  "vampire",
+  "hesketh"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "992 cc air-cooled four-valve V-twin",
+ "intro": "Lord Hesketh's British V-twin. Only a few were built.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Gearbox",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "HESKETH"
+}

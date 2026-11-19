@@ -1,0 +1,65 @@
+{
+ "id": "kawasaki-kr250-kr-1-1984",
+ "make": "Kawasaki",
+ "model": "KR250 / KR-1",
+ "name": "Kawasaki KR250 / KR-1",
+ "years": [
+  1984,
+  1992
+ ],
+ "match": [
+  "kr250",
+  "kr-1",
+  "kr1",
+  "kr1s",
+  "kr 250"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "249 cc liquid-cooled two-stroke twin",
+ "intro": "Kawasaki's two-stroke 250 race replicas.",
+ "focus": [
+  [
+   "Two-stroke twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Oil injection",
+   "Bleed the pump"
+  ],
+  [
+   "Power valves",
+   "Clean them"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KZRider forum",
+   "url": "https://www.kzrider.com/",
+   "what": "Owner forum for classic Kawasakis."
+  }
+ ],
+ "heroName": "KR-1"
+}

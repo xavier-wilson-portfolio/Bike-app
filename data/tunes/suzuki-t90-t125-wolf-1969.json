@@ -1,0 +1,66 @@
+{
+ "id": "suzuki-t90-t125-wolf-1969",
+ "make": "Suzuki",
+ "model": "T90 / T125 Wolf",
+ "name": "Suzuki T90 / T125 Wolf",
+ "years": [
+  1969,
+  1971
+ ],
+ "match": [
+  "t90 wolf",
+  "t125 wolf",
+  "wolf 90",
+  "suzuki wolf",
+  "t90"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "89 or 124 cc air-cooled two-stroke twin, Posi-Force oil injection",
+ "intro": "Small two-stroke twins with a racy look. Quick and fun when the twin carbs are in sync.",
+ "focus": [
+  [
+   "Two-stroke twin",
+   "Air-cooled"
+  ],
+  [
+   "Oil injection",
+   "Bleed the pump"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "WOLF"
+}

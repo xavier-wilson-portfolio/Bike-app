@@ -1,0 +1,63 @@
+{
+ "id": "triumph-trw-military-1948",
+ "make": "Triumph",
+ "model": "TRW military",
+ "name": "Triumph TRW military",
+ "years": [
+  1948,
+  1964
+ ],
+ "match": [
+  "trw",
+  "triumph trw",
+  "trw 500"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "499 cc side-valve parallel twin",
+ "intro": "A side-valve twin built for the British Army and other forces.",
+ "focus": [
+  [
+   "Twin",
+   "Air-cooled"
+  ],
+  [
+   "Side valves",
+   "Set tappets"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Gearbox",
+   "Separate oil"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "K": [
+   "The gearbox is separate from the engine and has its own oil. Check and change both, and set the primary chain."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "TRW"
+}

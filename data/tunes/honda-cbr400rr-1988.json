@@ -1,0 +1,67 @@
+{
+ "id": "honda-cbr400rr-1988",
+ "make": "Honda",
+ "model": "CBR400RR",
+ "name": "Honda CBR400RR",
+ "years": [
+  1988,
+  1999
+ ],
+ "match": [
+  "cbr400rr",
+  "nc23",
+  "nc29",
+  "cbr 400 rr",
+  "cbr400 gull arm"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "399 cc liquid-cooled gear-driven-cam inline four, four carbs",
+ "intro": "The Japanese-market 400 four with gear-driven cams. Many came to other countries as grey imports.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Gear cams",
+   "Listen for noise"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ],
+  "A": [
+   "Many of these are imports. Make sure the title and VIN paperwork match before you put money in."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "CBR Forum",
+   "url": "https://www.cbrforum.com/",
+   "what": "Owner forum for Honda CBR models."
+  }
+ ],
+ "heroName": "CBR400RR"
+}

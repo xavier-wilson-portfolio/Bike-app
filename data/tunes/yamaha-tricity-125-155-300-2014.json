@@ -1,0 +1,59 @@
+{
+ "id": "yamaha-tricity-125-155-300-2014",
+ "make": "Yamaha",
+ "model": "Tricity 125 / 155 / 300",
+ "name": "Yamaha Tricity 125 / 155 / 300",
+ "years": [
+  2014,
+  2026
+ ],
+ "match": [
+  "tricity",
+  "tricity 125",
+  "tricity 155",
+  "tricity 300"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "124 to 292 cc liquid-cooled single, tilting three-wheeler",
+ "intro": "Yamaha's tilting three-wheel scooters.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Front tilt",
+   "Check linkage"
+  ],
+  [
+   "Brakes",
+   "Check ABS"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "TRICITY"
+}

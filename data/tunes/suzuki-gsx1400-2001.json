@@ -1,0 +1,57 @@
+{
+ "id": "suzuki-gsx1400-2001",
+ "make": "Suzuki",
+ "model": "GSX1400",
+ "name": "Suzuki GSX1400",
+ "years": [
+  2001,
+  2008
+ ],
+ "match": [
+  "gsx1400",
+  "gsx 1400"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "1402 cc oil-cooled inline four, fuel injected",
+ "intro": "A huge-torque naked bike sold in Europe and Japan.",
+ "focus": [
+  [
+   "Inline four",
+   "Oil-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Oil cooler",
+   "Check lines"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Suzuki Forums",
+   "url": "https://www.suzuki-forums.com/forums/",
+   "what": "General owner forum for Suzuki motorcycles."
+  }
+ ],
+ "heroName": "GSX1400"
+}

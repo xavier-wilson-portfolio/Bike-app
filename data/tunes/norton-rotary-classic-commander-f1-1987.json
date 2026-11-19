@@ -1,0 +1,60 @@
+{
+ "id": "norton-rotary-classic-commander-f1-1987",
+ "make": "Norton",
+ "model": "Rotary (Classic / Commander / F1)",
+ "name": "Norton Rotary (Classic / Commander / F1)",
+ "years": [
+  1987,
+  1994
+ ],
+ "match": [
+  "norton rotary",
+  "norton f1",
+  "norton commander",
+  "norton classic",
+  "interpol 2"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "588 cc liquid- or air-cooled twin-rotor Wankel engine",
+ "intro": "Norton's rotary bikes, built in small numbers. Specialist parts and knowledge needed.",
+ "focus": [
+  [
+   "Rotary engine",
+   "Twin rotor"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Rotor seals",
+   "Check compression"
+  ],
+  [
+   "Cooling",
+   "Check system"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Norton Owners Club",
+   "url": "https://www.nortonownersclub.org/",
+   "what": "Owner club and forum for Nortons."
+  }
+ ],
+ "heroName": "ROTARY"
+}

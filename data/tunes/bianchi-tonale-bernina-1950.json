@@ -1,0 +1,59 @@
+{
+ "id": "bianchi-tonale-bernina-1950",
+ "make": "Bianchi",
+ "model": "Tonale / Bernina",
+ "name": "Bianchi Tonale / Bernina",
+ "years": [
+  1950,
+  1967
+ ],
+ "match": [
+  "bianchi tonale",
+  "bianchi bernina",
+  "bianchi 175"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "124 to 175 cc OHC single",
+ "intro": "Bianchi's post-war lightweights from Milan.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Cam chain",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "BIANCHI"
+}

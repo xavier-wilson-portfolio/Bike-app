@@ -1,0 +1,59 @@
+{
+ "id": "yamaha-majesty-250-yp250-1996",
+ "make": "Yamaha",
+ "model": "Majesty 250 (YP250)",
+ "name": "Yamaha Majesty 250 (YP250)",
+ "years": [
+  1996,
+  2009
+ ],
+ "match": [
+  "majesty 250",
+  "yp250",
+  "yp 250",
+  "majesty250"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "249 cc liquid-cooled single, CVT",
+ "intro": "A comfortable mid-size scooter sold in Europe and Japan.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "MAJESTY"
+}

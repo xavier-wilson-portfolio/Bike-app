@@ -1,0 +1,59 @@
+{
+ "id": "powell-challenger-a-v-8-1939",
+ "make": "Powell",
+ "model": "Challenger / A-V-8",
+ "name": "Powell Challenger / A-V-8",
+ "years": [
+  1939,
+  1951
+ ],
+ "match": [
+  "powell challenger",
+  "powell a-v-8",
+  "powell"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "Side-valve single, small-wheel motorcycle",
+ "intro": "Small American motorcycles from Compton, California.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Flathead",
+   "Set tappets"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "POWELL"
+}

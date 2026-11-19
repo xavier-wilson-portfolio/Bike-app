@@ -1,0 +1,66 @@
+{
+ "id": "reading-standard-single-v-twin-1903",
+ "make": "Reading Standard",
+ "model": "Single / V-twin",
+ "name": "Reading Standard Single / V-twin",
+ "years": [
+  1903,
+  1922
+ ],
+ "match": [
+  "reading standard",
+  "r-s",
+  "reading-standard"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "Side-valve single or V-twin",
+ "intro": "Among the first American side-valve motorcycles.",
+ "focus": [
+  [
+   "Engine",
+   "Air-cooled"
+  ],
+  [
+   "Flathead",
+   "Set tappets"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Oil",
+   "Total loss"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "E": [
+   "It is a flathead. The valves sit beside the cylinder, so set the tappets with the engine cold and check the valve guides for wear."
+  ],
+  "H": [
+   "Check whether yours has a total-loss or a recirculating oil system before you fill it, and know which one you are running."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "READING"
+}

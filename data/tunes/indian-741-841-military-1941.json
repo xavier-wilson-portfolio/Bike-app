@@ -1,0 +1,65 @@
+{
+ "id": "indian-741-841-military-1941",
+ "make": "Indian",
+ "model": "741 / 841 military",
+ "name": "Indian 741 / 841 military",
+ "years": [
+  1941,
+  1945
+ ],
+ "match": [
+  "741",
+  "841",
+  "indian 741",
+  "indian 841",
+  "military scout"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "500 cc side-valve V-twin (741) or 750 cc transverse V-twin with shaft drive (841)",
+ "intro": "Indian's wartime bikes. The 741 is a military Scout; the 841 is a shaft-drive desert prototype.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Flathead",
+   "Set tappets"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Drive",
+   "Chain or shaft"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "E": [
+   "It is a flathead. The valves sit beside the cylinder, so set the tappets with the engine cold and check the valve guides for wear."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "741"
+}

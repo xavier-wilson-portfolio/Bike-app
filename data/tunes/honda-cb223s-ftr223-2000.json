@@ -1,0 +1,60 @@
+{
+ "id": "honda-cb223s-ftr223-2000",
+ "make": "Honda",
+ "model": "CB223S / FTR223",
+ "name": "Honda CB223S / FTR223",
+ "years": [
+  2000,
+  2016
+ ],
+ "match": [
+  "cb223s",
+  "ftr223",
+  "ftr 223",
+  "cb223"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "223 cc air-cooled single",
+ "intro": "Small Japanese-market retro singles.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "FTR223"
+}

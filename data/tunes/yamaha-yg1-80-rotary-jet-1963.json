@@ -1,0 +1,65 @@
+{
+ "id": "yamaha-yg1-80-rotary-jet-1963",
+ "make": "Yamaha",
+ "model": "YG1 80 Rotary Jet",
+ "name": "Yamaha YG1 80 Rotary Jet",
+ "years": [
+  1963,
+  1967
+ ],
+ "match": [
+  "yg1",
+  "rotary jet",
+  "yg-1",
+  "yamaha 80 1965"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "73 cc rotary-valve two-stroke single",
+ "intro": "A small two-stroke that helped Yamaha grow in the US.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Rotary valve",
+   "Check disc"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "YG1"
+}

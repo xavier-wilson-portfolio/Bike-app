@@ -1,0 +1,59 @@
+{
+ "id": "suzuki-gz125-marauder-1998",
+ "make": "Suzuki",
+ "model": "GZ125 Marauder",
+ "name": "Suzuki GZ125 Marauder",
+ "years": [
+  1998,
+  2011
+ ],
+ "match": [
+  "gz125",
+  "gz 125",
+  "marauder 125"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "124 cc air-cooled single",
+ "intro": "The small Marauder sold in Europe for learners.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Suzuki Forums",
+   "url": "https://www.suzuki-forums.com/forums/",
+   "what": "General owner forum for Suzuki motorcycles."
+  }
+ ],
+ "heroName": "MARAUDER"
+}

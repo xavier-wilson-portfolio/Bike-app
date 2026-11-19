@@ -1,0 +1,63 @@
+{
+ "id": "honda-x4-1997",
+ "make": "Honda",
+ "model": "X4",
+ "name": "Honda X4",
+ "years": [
+  1997,
+  2003
+ ],
+ "match": [
+  "x4",
+  "x-4",
+  "cb1300dc",
+  "honda x4"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "1284 cc liquid-cooled inline four from the CBR1100XX family",
+ "intro": "A big power cruiser with an inline four, sold in Japan and Europe.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Shadow Riders",
+   "url": "https://www.shadowriders.com/",
+   "what": "Owner forum for Honda Shadows and other Honda cruisers."
+  }
+ ],
+ "heroName": "X4"
+}

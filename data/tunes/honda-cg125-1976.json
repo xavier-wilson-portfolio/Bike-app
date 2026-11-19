@@ -1,0 +1,60 @@
+{
+ "id": "honda-cg125-1976",
+ "make": "Honda",
+ "model": "CG125",
+ "name": "Honda CG125",
+ "years": [
+  1976,
+  2008
+ ],
+ "match": [
+  "cg125",
+  "cg 125",
+  "cg125 brazil",
+  "cg"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "124 cc air-cooled OHV single",
+ "intro": "A tough pushrod commuter made in huge numbers in Brazil, Pakistan and elsewhere.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "CG125"
+}

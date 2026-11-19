@@ -1,0 +1,58 @@
+{
+ "id": "american-eagle-laverda-built-750-1967",
+ "make": "American Eagle",
+ "model": "Laverda-built 750",
+ "name": "American Eagle Laverda-built 750",
+ "years": [
+  1967,
+  1971
+ ],
+ "match": [
+  "american eagle",
+  "american eagle 750"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "654 or 744 cc Laverda parallel twin",
+ "intro": "Laverda twins sold under the American Eagle name in the US.",
+ "focus": [
+  [
+   "Twin",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "AMERICAN EAGLE"
+}

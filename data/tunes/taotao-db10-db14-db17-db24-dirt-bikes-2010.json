@@ -1,0 +1,61 @@
+{
+ "id": "taotao-db10-db14-db17-db24-dirt-bikes-2010",
+ "make": "TaoTao",
+ "model": "DB10 / DB14 / DB17 / DB24 dirt bikes",
+ "name": "TaoTao DB10 / DB14 / DB17 / DB24 dirt bikes",
+ "years": [
+  2010,
+  2026
+ ],
+ "match": [
+  "db10",
+  "db14",
+  "db17",
+  "db24",
+  "taotao dirt bike"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "49 to 125 cc air-cooled single",
+ "intro": "Budget kids' and pit dirt bikes.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Wiring",
+   "Check connectors"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "TAOTAO DB"
+}

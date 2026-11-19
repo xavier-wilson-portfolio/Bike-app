@@ -1,0 +1,60 @@
+{
+ "id": "honda-cx500-turbo-cx650-turbo-1982",
+ "make": "Honda",
+ "model": "CX500 Turbo / CX650 Turbo",
+ "name": "Honda CX500 Turbo / CX650 Turbo",
+ "years": [
+  1982,
+  1983
+ ],
+ "match": [
+  "cx500 turbo",
+  "cx650 turbo",
+  "cx500tc",
+  "cx650tc",
+  "honda turbo"
+ ],
+ "style": "sport",
+ "drive": "shaft",
+ "engine": "497 or 674 cc liquid-cooled turbocharged V-twin, fuel injected",
+ "intro": "Honda's turbo bikes, among the first production bikes with fuel injection. Complex and collectible.",
+ "focus": [
+  [
+   "Turbo V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injection",
+   "Early system"
+  ],
+  [
+   "Turbo",
+   "Check oil seals"
+  ],
+  [
+   "Cooling",
+   "Coolant check"
+  ],
+  [
+   "Shaft drive",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "CX500 Forum",
+   "url": "https://www.cx500forum.com/",
+   "what": "Owner forum for CX and GL 500/650."
+  }
+ ],
+ "heroName": "CX TURBO"
+}

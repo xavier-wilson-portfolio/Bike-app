@@ -1,0 +1,59 @@
+{
+ "id": "ktm-1050-1090-adventure-2015",
+ "make": "KTM",
+ "model": "1050 / 1090 Adventure",
+ "name": "KTM 1050 / 1090 Adventure",
+ "years": [
+  2015,
+  2019
+ ],
+ "match": [
+  "1050 adventure",
+  "1090 adventure",
+  "1090 adventure r",
+  "ktm 1090"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "1050 cc liquid-cooled 75-degree V-twin, ride-by-wire",
+ "intro": "Smaller-capacity versions of the 1190 Adventure, with simpler electronics.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Ride-by-wire"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fans"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "KTM has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "1090 ADVENTURE"
+}

@@ -1,0 +1,65 @@
+{
+ "id": "honda-nsr50-ns-1-nsr80-1987",
+ "make": "Honda",
+ "model": "NSR50 / NS-1 / NSR80",
+ "name": "Honda NSR50 / NS-1 / NSR80",
+ "years": [
+  1987,
+  1999
+ ],
+ "match": [
+  "nsr50",
+  "ns-1",
+  "ns1",
+  "nsr80",
+  "nsr 50"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "49 or 79 cc liquid-cooled two-stroke single",
+ "intro": "Mini race replicas and sport mopeds, popular for mini racing.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "Oil injection",
+   "Bleed the pump"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "CBR Forum",
+   "url": "https://www.cbrforum.com/",
+   "what": "Owner forum for Honda CBR models."
+  }
+ ],
+ "heroName": "NSR50"
+}

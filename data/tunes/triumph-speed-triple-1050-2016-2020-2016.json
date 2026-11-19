@@ -1,0 +1,59 @@
+{
+ "id": "triumph-speed-triple-1050-2016-2020-2016",
+ "make": "Triumph",
+ "model": "Speed Triple 1050 (2016-2020)",
+ "name": "Triumph Speed Triple 1050 (2016-2020)",
+ "years": [
+  2016,
+  2020
+ ],
+ "match": [
+  "speed triple 2016",
+  "speed triple r 2018",
+  "speed triple rs 2019",
+  "speed triple s 2017"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "1050 cc liquid-cooled triple, ride-by-wire",
+ "intro": "The later 1050 Speed Triple S, R and RS with ride modes.",
+ "focus": [
+  [
+   "Triple",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Ride-by-wire"
+  ],
+  [
+   "Electronics",
+   "Scan for codes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Triumph has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "heroName": "SPEED TRIPLE"
+}

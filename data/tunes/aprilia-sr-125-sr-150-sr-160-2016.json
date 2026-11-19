@@ -1,0 +1,60 @@
+{
+ "id": "aprilia-sr-125-sr-150-sr-160-2016",
+ "make": "Aprilia",
+ "model": "SR 125 / SR 150 / SR 160",
+ "name": "Aprilia SR 125 / SR 150 / SR 160",
+ "years": [
+  2016,
+  2026
+ ],
+ "match": [
+  "sr 125",
+  "sr 150",
+  "sr 160",
+  "sr160 race"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "124 to 160 cc air-cooled single",
+ "intro": "Sporty Indian-built Aprilia scooters.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ],
+  [
+   "Body panels",
+   "Check clips"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Aprilia has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "SR 160"
+}

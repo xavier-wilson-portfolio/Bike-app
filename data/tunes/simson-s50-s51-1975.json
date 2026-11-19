@@ -1,0 +1,66 @@
+{
+ "id": "simson-s50-s51-1975",
+ "make": "Simson",
+ "model": "S50 / S51",
+ "name": "Simson S50 / S51",
+ "years": [
+  1975,
+  1990
+ ],
+ "match": [
+  "s51",
+  "s50",
+  "simson s51",
+  "simson s50",
+  "s51 enduro"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "49 cc two-stroke single",
+ "intro": "East Germany's everyday small motorcycle, built in huge numbers.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "S51"
+}

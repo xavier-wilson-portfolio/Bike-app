@@ -1,0 +1,65 @@
+{
+ "id": "sachs-prima-5-saxonette-mopeds-1970",
+ "make": "Sachs",
+ "model": "Prima 5 / Saxonette / mopeds",
+ "name": "Sachs Prima 5 / Saxonette / mopeds",
+ "years": [
+  1970,
+  2010
+ ],
+ "match": [
+  "sachs moped",
+  "saxonette",
+  "prima 5",
+  "sachs 505"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "49 cc Sachs two-stroke moped engine",
+ "intro": "Mopeds with Sachs engines, sold under several names.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Brakes",
+   "Check drums"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "heroName": "SACHS MOPED"
+}

@@ -1,0 +1,60 @@
+{
+ "id": "rupp-roadster-scrambler-minibike-1960",
+ "make": "Rupp",
+ "model": "Roadster / Scrambler minibike",
+ "name": "Rupp Roadster / Scrambler minibike",
+ "years": [
+  1960,
+  1978
+ ],
+ "match": [
+  "rupp",
+  "rupp roadster",
+  "rupp minibike",
+  "rupp scrambler"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "Tecumseh or Briggs engine, minibike",
+ "intro": "Ohio-built minibikes, many restored today.",
+ "focus": [
+  [
+   "Small engine",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Clutch",
+   "Check it"
+  ],
+  [
+   "Frame",
+   "Check welds"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "RUPP"
+}

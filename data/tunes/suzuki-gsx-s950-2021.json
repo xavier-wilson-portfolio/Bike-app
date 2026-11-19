@@ -1,0 +1,58 @@
+{
+ "id": "suzuki-gsx-s950-2021",
+ "make": "Suzuki",
+ "model": "GSX-S950",
+ "name": "Suzuki GSX-S950",
+ "years": [
+  2021,
+  2026
+ ],
+ "match": [
+  "gsx-s950",
+  "gsx s950",
+  "gsxs950"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "999 cc liquid-cooled inline four, restricted-power version",
+ "intro": "A lower-power GSX-S1000 for riders on restricted licenses.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Suzuki Forums",
+   "url": "https://www.suzuki-forums.com/forums/",
+   "what": "General owner forum for Suzuki motorcycles."
+  }
+ ],
+ "heroName": "GSX-S950"
+}

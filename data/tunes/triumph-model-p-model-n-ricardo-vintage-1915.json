@@ -1,0 +1,64 @@
+{
+ "id": "triumph-model-p-model-n-ricardo-vintage-1915",
+ "make": "Triumph",
+ "model": "Model P / Model N / Ricardo (vintage)",
+ "name": "Triumph Model P / Model N / Ricardo (vintage)",
+ "years": [
+  1915,
+  1932
+ ],
+ "match": [
+  "model h",
+  "model p",
+  "triumph ricardo",
+  "triumph model n"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "500 to 550 cc side-valve or four-valve OHV single",
+ "intro": "Vintage Triumph singles, including the Model H and P and the Ricardo four-valve.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Oil",
+   "Check system"
+  ],
+  [
+   "Chain or belt",
+   "Check drive"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "MODEL P"
+}

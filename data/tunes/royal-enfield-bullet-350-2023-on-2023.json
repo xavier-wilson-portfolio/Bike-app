@@ -1,0 +1,59 @@
+{
+ "id": "royal-enfield-bullet-350-2023-on-2023",
+ "make": "Royal Enfield",
+ "model": "Bullet 350 (2023 on)",
+ "name": "Royal Enfield Bullet 350 (2023 on)",
+ "years": [
+  2023,
+  2026
+ ],
+ "match": [
+  "bullet 350 2023",
+  "new bullet 350",
+  "bullet 350 j"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "349 cc air/oil-cooled J-series single, fuel injected",
+ "intro": "The Bullet on the newer J-series engine.",
+ "focus": [
+  [
+   "Single",
+   "Air/oil-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with Royal Enfield owner threads."
+  }
+ ],
+ "heroName": "BULLET 350"
+}

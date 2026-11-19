@@ -1,0 +1,60 @@
+{
+ "id": "honda-slr650-vigor-650-1997",
+ "make": "Honda",
+ "model": "SLR650 / Vigor 650",
+ "name": "Honda SLR650 / Vigor 650",
+ "years": [
+  1997,
+  2001
+ ],
+ "match": [
+  "slr650",
+  "vigor",
+  "slr 650",
+  "vigor 650"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "644 cc air-cooled four-valve single, carb",
+ "intro": "A road-biased single based on the Dominator engine. Sold in Europe and Japan.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check stator"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Honda dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XR's Only",
+   "url": "https://www.xrsonly.com/",
+   "what": "Parts and know-how for Honda XR dirt bikes."
+  }
+ ],
+ "heroName": "SLR650"
+}

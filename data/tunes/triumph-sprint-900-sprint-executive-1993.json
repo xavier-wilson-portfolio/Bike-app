@@ -1,0 +1,58 @@
+{
+ "id": "triumph-sprint-900-sprint-executive-1993",
+ "make": "Triumph",
+ "model": "Sprint 900 / Sprint Executive",
+ "name": "Triumph Sprint 900 / Sprint Executive",
+ "years": [
+  1993,
+  1998
+ ],
+ "match": [
+  "sprint 900",
+  "sprint executive",
+  "triumph sprint 900"
+ ],
+ "style": "touring",
+ "drive": "chain",
+ "engine": "885 cc liquid-cooled triple, carbs, half fairing",
+ "intro": "The carbureted Sprint sport tourers from Hinckley's first range.",
+ "focus": [
+  [
+   "Triple",
+   "Liquid-cooled"
+  ],
+  [
+   "Three carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Triumph has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "heroName": "SPRINT"
+}

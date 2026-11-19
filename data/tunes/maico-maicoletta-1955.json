@@ -1,0 +1,63 @@
+{
+ "id": "maico-maicoletta-1955",
+ "make": "Maico",
+ "model": "Maicoletta",
+ "name": "Maico Maicoletta",
+ "years": [
+  1955,
+  1966
+ ],
+ "match": [
+  "maicoletta",
+  "maico scooter"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "174 to 277 cc two-stroke single",
+ "intro": "A big, fast German scooter with an electric starter.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Dynastart",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Enclosed chain"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "MAICOLETTA"
+}

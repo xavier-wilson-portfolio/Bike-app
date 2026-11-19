@@ -1,0 +1,59 @@
+{
+ "id": "hero-splendor-1994",
+ "make": "Hero",
+ "model": "Splendor",
+ "name": "Hero Splendor",
+ "years": [
+  1994,
+  2026
+ ],
+ "match": [
+  "splendor",
+  "hero splendor",
+  "splendor plus"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "97 cc air-cooled four-stroke single",
+ "intro": "One of the best-selling motorcycles in the world, from India.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "SPLENDOR"
+}

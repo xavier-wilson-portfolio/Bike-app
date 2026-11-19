@@ -1,0 +1,65 @@
+{
+ "id": "solex-velosolex-1946",
+ "make": "Solex",
+ "model": "VeloSoleX",
+ "name": "Solex VeloSoleX",
+ "years": [
+  1946,
+  1988
+ ],
+ "match": [
+  "velosolex",
+  "solex",
+  "solex 3800",
+  "solex 5000"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "45 to 49 cc two-stroke engine driving the front tire by roller",
+ "intro": "The French motorized bicycle with the engine on the front wheel.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Roller",
+   "Check wear"
+  ],
+  [
+   "Brakes",
+   "Check them"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "heroName": "SOLEX"
+}

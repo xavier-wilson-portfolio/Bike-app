@@ -1,0 +1,58 @@
+{
+ "id": "bonanza-minibike-1967",
+ "make": "Bonanza",
+ "model": "Minibike",
+ "name": "Bonanza Minibike",
+ "years": [
+  1967,
+  1974
+ ],
+ "match": [
+  "bonanza minibike",
+  "bonanza"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "Briggs or Tecumseh engine, minibike",
+ "intro": "A classic US minibike.",
+ "focus": [
+  [
+   "Small engine",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Clutch",
+   "Check it"
+  ],
+  [
+   "Frame",
+   "Check welds"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "BONANZA"
+}

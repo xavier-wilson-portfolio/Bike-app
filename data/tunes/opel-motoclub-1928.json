@@ -1,0 +1,63 @@
+{
+ "id": "opel-motoclub-1928",
+ "make": "Opel",
+ "model": "Motoclub",
+ "name": "Opel Motoclub",
+ "years": [
+  1928,
+  1930
+ ],
+ "match": [
+  "opel motoclub",
+  "opel motorcycle",
+  "motoclub"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "497 cc OHV single in a pressed-steel frame",
+ "intro": "Opel's short-lived motorcycle with a pressed-steel frame.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "MOTOCLUB"
+}

@@ -1,0 +1,65 @@
+{
+ "id": "honda-tl125-tl250-trials-1973",
+ "make": "Honda",
+ "model": "TL125 / TL250 Trials",
+ "name": "Honda TL125 / TL250 Trials",
+ "years": [
+  1973,
+  1976
+ ],
+ "match": [
+  "tl125",
+  "tl250",
+  "tl 125",
+  "tl 250",
+  "bials"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "122 or 248 cc air-cooled four-stroke trials single",
+ "intro": "Honda's early trials bikes, now collected and ridden in vintage trials.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "TrialsCentral",
+   "url": "https://www.trialscentral.com/",
+   "what": "Forum for trials riders, with sections for most trials makes."
+  }
+ ],
+ "heroName": "TL125"
+}

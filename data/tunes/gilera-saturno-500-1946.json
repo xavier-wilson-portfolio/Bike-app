@@ -1,0 +1,63 @@
+{
+ "id": "gilera-saturno-500-1946",
+ "make": "Gilera",
+ "model": "Saturno 500",
+ "name": "Gilera Saturno 500",
+ "years": [
+  1946,
+  1959
+ ],
+ "match": [
+  "saturno",
+  "saturno 500",
+  "gilera saturno 1950"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "499 cc OHV single",
+ "intro": "Gilera's sporting single, raced and ridden by the Italian police.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "SATURNO"
+}

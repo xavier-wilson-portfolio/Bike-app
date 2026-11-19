@@ -1,0 +1,59 @@
+{
+ "id": "fuji-rabbit-scooter-1946",
+ "make": "Fuji",
+ "model": "Rabbit scooter",
+ "name": "Fuji Rabbit scooter",
+ "years": [
+  1946,
+  1968
+ ],
+ "match": [
+  "fuji rabbit",
+  "rabbit scooter",
+  "rabbit s601"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "Two- or four-stroke single scooter",
+ "intro": "Fuji Heavy Industries' scooters, the Subaru maker's first vehicles.",
+ "focus": [
+  [
+   "Engine",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Drive",
+   "Check it"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Brakes",
+   "Check drums"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "RABBIT"
+}

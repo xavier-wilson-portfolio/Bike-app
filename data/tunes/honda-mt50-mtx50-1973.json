@@ -1,0 +1,65 @@
+{
+ "id": "honda-mt50-mtx50-1973",
+ "make": "Honda",
+ "model": "MT50 / MTX50",
+ "name": "Honda MT50 / MTX50",
+ "years": [
+  1973,
+  1993
+ ],
+ "match": [
+  "mt50",
+  "mtx50",
+  "mt 50",
+  "mtx 50"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "49 cc two-stroke single, trail moped",
+ "intro": "Small two-stroke trail bikes for European teens.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air or liquid cooled"
+  ],
+  [
+   "Oil injection",
+   "Bleed the pump"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Honda dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XR's Only",
+   "url": "https://www.xrsonly.com/",
+   "what": "Parts and know-how for Honda XR dirt bikes."
+  }
+ ],
+ "heroName": "MTX50"
+}

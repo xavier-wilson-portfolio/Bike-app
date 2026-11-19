@@ -1,0 +1,59 @@
+{
+ "id": "ultra-chopper-bobber-jurassic-1994",
+ "make": "Ultra",
+ "model": "Chopper / Bobber / Jurassic",
+ "name": "Ultra Chopper / Bobber / Jurassic",
+ "years": [
+  1994,
+  2002
+ ],
+ "match": [
+  "ultra motorcycle",
+  "ultra chopper",
+  "ultra jurassic"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "80 to 113 cu in S&S-style V-twin",
+ "intro": "Harley-style customs built in California.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Pushrods",
+   "Check them"
+  ],
+  [
+   "Charging",
+   "Check stator"
+  ],
+  [
+   "Belt drive",
+   "Check tension"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "HDForums",
+   "url": "https://www.hdforums.com/",
+   "what": "Large owner forum for all Harley-Davidson models."
+  }
+ ],
+ "heroName": "ULTRA"
+}

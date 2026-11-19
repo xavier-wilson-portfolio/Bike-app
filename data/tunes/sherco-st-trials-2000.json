@@ -1,0 +1,64 @@
+{
+ "id": "sherco-st-trials-2000",
+ "make": "Sherco",
+ "model": "ST trials",
+ "name": "Sherco ST trials",
+ "years": [
+  2000,
+  2026
+ ],
+ "match": [
+  "sherco st",
+  "sherco 300 st",
+  "sherco 250 st",
+  "sherco trial"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "80 to 300 cc liquid-cooled two-stroke trials single",
+ "intro": "Sherco's trials bikes, raced at World Championship level.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Clutch",
+   "Check plates"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road and trials models are often not in the NHTSA recall search. Ask a dealer for the make to run the frame number.",
+ "known": [],
+ "forums": [
+  {
+   "name": "TrialsCentral",
+   "url": "https://www.trialscentral.com/",
+   "what": "Forum for trials riders, with sections for most trials makes."
+  }
+ ],
+ "heroName": "SHERCO ST"
+}

@@ -1,0 +1,64 @@
+{
+ "id": "honda-mtx125-mtx200-1983",
+ "make": "Honda",
+ "model": "MTX125 / MTX200",
+ "name": "Honda MTX125 / MTX200",
+ "years": [
+  1983,
+  1987
+ ],
+ "match": [
+  "mtx125",
+  "mtx200",
+  "mtx 125",
+  "mtx 200"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "123 or 194 cc liquid-cooled two-stroke single",
+ "intro": "Two-stroke trail bikes with oil injection.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "Oil injection",
+   "Bleed the pump"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XR's Only",
+   "url": "https://www.xrsonly.com/",
+   "what": "Parts and know-how for Honda XR dirt bikes."
+  }
+ ],
+ "heroName": "MTX125"
+}

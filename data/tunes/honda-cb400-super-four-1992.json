@@ -1,0 +1,60 @@
+{
+ "id": "honda-cb400-super-four-1992",
+ "make": "Honda",
+ "model": "CB400 Super Four",
+ "name": "Honda CB400 Super Four",
+ "years": [
+  1992,
+  2022
+ ],
+ "match": [
+  "cb400sf",
+  "cb400 super four",
+  "cb400 sf",
+  "cb 400 super four",
+  "cb400 vtec",
+  "nc39",
+  "nc42"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "399 cc liquid-cooled inline four with HYPER VTEC, carbs then fuel injection",
+ "intro": "Japan's long-running learner and commuter four. Carbs on early bikes, fuel injection later, and VTEC that switches to four valves at high rpm.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel",
+   "Carbs or EFI"
+  ],
+  [
+   "VTEC",
+   "Check solenoid"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "CB400SF"
+}

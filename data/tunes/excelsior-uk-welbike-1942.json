@@ -1,0 +1,63 @@
+{
+ "id": "excelsior-uk-welbike-1942",
+ "make": "Excelsior (UK)",
+ "model": "Welbike",
+ "name": "Excelsior (UK) Welbike",
+ "years": [
+  1942,
+  1945
+ ],
+ "match": [
+  "welbike",
+  "excelsior welbike"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "98 cc Villiers two-stroke single, folding paratrooper bike",
+ "intro": "A tiny folding motorcycle dropped with British paratroopers.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "WELBIKE"
+}

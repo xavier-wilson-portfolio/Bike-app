@@ -1,0 +1,60 @@
+{
+ "id": "honda-activa-1999",
+ "make": "Honda",
+ "model": "Activa",
+ "name": "Honda Activa",
+ "years": [
+  1999,
+  2026
+ ],
+ "match": [
+  "activa",
+  "activa 125",
+  "activa 6g",
+  "activa 5g"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "102 to 124 cc air-cooled single",
+ "intro": "India's best-selling scooter for many years.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check combined"
+  ],
+  [
+   "Body panels",
+   "Check clips"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Honda scooters."
+  }
+ ],
+ "heroName": "ACTIVA"
+}

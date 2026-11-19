@@ -1,0 +1,59 @@
+{
+ "id": "honda-tlr200-reflex-1986",
+ "make": "Honda",
+ "model": "TLR200 Reflex",
+ "name": "Honda TLR200 Reflex",
+ "years": [
+  1986,
+  1987
+ ],
+ "match": [
+  "tlr200",
+  "reflex 200",
+  "tlr 200"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "195 cc air-cooled single, trials-style",
+ "intro": "A trials-style trail bike, light and easy.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Low gearing",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "TrialsCentral",
+   "url": "https://www.trialscentral.com/",
+   "what": "Forum for trials riders, with sections for most trials makes."
+  }
+ ],
+ "heroName": "TLR200"
+}

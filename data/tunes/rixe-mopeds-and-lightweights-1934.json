@@ -1,0 +1,63 @@
+{
+ "id": "rixe-mopeds-and-lightweights-1934",
+ "make": "Rixe",
+ "model": "Mopeds and lightweights",
+ "name": "Rixe Mopeds and lightweights",
+ "years": [
+  1934,
+  1985
+ ],
+ "match": [
+  "rixe",
+  "rixe moped"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "49 to 175 cc Sachs or ILO two-stroke",
+ "intro": "A German maker of mopeds and light motorcycles.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "heroName": "RIXE"
+}

@@ -1,0 +1,64 @@
+{
+ "id": "honda-sl70-sl90-1969",
+ "make": "Honda",
+ "model": "SL70 / SL90",
+ "name": "Honda SL70 / SL90",
+ "years": [
+  1969,
+  1973
+ ],
+ "match": [
+  "sl70",
+  "sl90",
+  "sl 70",
+  "sl 90"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "72 or 89 cc air-cooled single, small trail bike",
+ "intro": "Honda's small Motosport trail bikes. Light and simple, with six-volt electrics.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Six-volt",
+   "Check charging"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XR's Only",
+   "url": "https://www.xrsonly.com/",
+   "what": "Parts and know-how for Honda XR dirt bikes."
+  }
+ ],
+ "heroName": "SL70"
+}

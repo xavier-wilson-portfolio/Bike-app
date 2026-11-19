@@ -1,0 +1,60 @@
+{
+ "id": "gilera-150-124-giubileo-1950",
+ "make": "Gilera",
+ "model": "150 / 124 / Giubileo",
+ "name": "Gilera 150 / 124 / Giubileo",
+ "years": [
+  1950,
+  1970
+ ],
+ "match": [
+  "gilera 150",
+  "gilera 124",
+  "giubileo",
+  "gilera 150 sport"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "98 to 150 cc OHV single",
+ "intro": "Gilera's small four-stroke singles.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "GILERA 150"
+}

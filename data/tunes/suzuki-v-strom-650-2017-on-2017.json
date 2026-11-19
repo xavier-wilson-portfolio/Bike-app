@@ -1,0 +1,59 @@
+{
+ "id": "suzuki-v-strom-650-2017-on-2017",
+ "make": "Suzuki",
+ "model": "V-Strom 650 (2017 on)",
+ "name": "Suzuki V-Strom 650 (2017 on)",
+ "years": [
+  2017,
+  2026
+ ],
+ "match": [
+  "v-strom 650 2017",
+  "dl650 2018",
+  "vstrom 650 xt 2020",
+  "dl650xa"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "645 cc liquid-cooled V-twin, fuel injected, traction control",
+ "intro": "The updated V-Strom 650 with traction control and the 2017 styling.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "StromTrooper",
+   "url": "https://www.stromtrooper.com/",
+   "what": "Owner forum for Suzuki V-Strom models."
+  }
+ ],
+ "heroName": "V-STROM"
+}

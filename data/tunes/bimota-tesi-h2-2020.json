@@ -1,0 +1,57 @@
+{
+ "id": "bimota-tesi-h2-2020",
+ "make": "Bimota",
+ "model": "Tesi H2",
+ "name": "Bimota Tesi H2",
+ "years": [
+  2020,
+  2024
+ ],
+ "match": [
+  "tesi h2",
+  "bimota tesi h2"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "998 cc supercharged Kawasaki H2 inline four, hub-center steering",
+ "intro": "A supercharged Bimota with hub-center steering.",
+ "focus": [
+  [
+   "Supercharged four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "Ride-by-wire"
+  ],
+  [
+   "Hub steering",
+   "Check linkage"
+  ],
+  [
+   "Cooling",
+   "Coolant and fans"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "TESI H2"
+}

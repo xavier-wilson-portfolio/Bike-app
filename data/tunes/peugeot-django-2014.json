@@ -1,0 +1,56 @@
+{
+ "id": "peugeot-django-2014",
+ "make": "Peugeot",
+ "model": "Django",
+ "name": "Peugeot Django",
+ "years": [
+  2014,
+  2026
+ ],
+ "match": [
+  "django",
+  "peugeot django",
+  "django 150"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 to 150 cc single, retro scooter",
+ "intro": "Peugeot's retro-styled scooter.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ],
+  [
+   "Body panels",
+   "Check clips"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "heroName": "DJANGO"
+}

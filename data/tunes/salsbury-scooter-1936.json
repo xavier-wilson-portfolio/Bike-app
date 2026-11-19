@@ -1,0 +1,59 @@
+{
+ "id": "salsbury-scooter-1936",
+ "make": "Salsbury",
+ "model": "Scooter",
+ "name": "Salsbury Scooter",
+ "years": [
+  1936,
+  1949
+ ],
+ "match": [
+  "salsbury",
+  "salsbury scooter",
+  "salsbury model 85"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "Side-valve single, early automatic drive",
+ "intro": "An early American scooter with a variable belt drive.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Flathead",
+   "Set tappets"
+  ],
+  [
+   "Belt drive",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Brakes",
+   "Check them"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "SALSBURY"
+}

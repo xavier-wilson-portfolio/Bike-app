@@ -1,0 +1,68 @@
+{
+ "id": "yamaha-as1-as2-as3-125-1968",
+ "make": "Yamaha",
+ "model": "AS1 / AS2 / AS3 125",
+ "name": "Yamaha AS1 / AS2 / AS3 125",
+ "years": [
+  1968,
+  1973
+ ],
+ "match": [
+  "as1",
+  "as2",
+  "as3",
+  "as-1",
+  "as-2",
+  "as-3",
+  "yamaha 125 twin"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "124 cc air-cooled two-stroke parallel twin, Autolube",
+ "intro": "Small two-stroke twins that rev hard. Common first bikes in the late 1960s and early 1970s.",
+ "focus": [
+  [
+   "Two-stroke twin",
+   "Air-cooled"
+  ],
+  [
+   "Autolube",
+   "Bleed the pump"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "AS3"
+}

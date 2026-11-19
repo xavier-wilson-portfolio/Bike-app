@@ -1,0 +1,64 @@
+{
+ "id": "kawasaki-kh100-1976",
+ "make": "Kawasaki",
+ "model": "KH100",
+ "name": "Kawasaki KH100",
+ "years": [
+  1976,
+  1992
+ ],
+ "match": [
+  "kh100",
+  "kh 100",
+  "kh100 ex"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "99 cc rotary-valve two-stroke single",
+ "intro": "A simple long-running commuter sold in Europe and Asia.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Oil injection",
+   "Bleed the pump"
+  ],
+  [
+   "Rotary valve",
+   "Check disc"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KZRider forum",
+   "url": "https://www.kzrider.com/",
+   "what": "Owner forum for classic Kawasakis."
+  }
+ ],
+ "heroName": "KH100"
+}

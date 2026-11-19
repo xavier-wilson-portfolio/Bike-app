@@ -1,0 +1,65 @@
+{
+ "id": "lml-star-nv-select-1983",
+ "make": "LML",
+ "model": "Star / NV / Select",
+ "name": "LML Star / NV / Select",
+ "years": [
+  1983,
+  2017
+ ],
+ "match": [
+  "lml nv",
+  "lml select",
+  "lml star 4t",
+  "lml vespa"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "125 to 150 cc two- or four-stroke single, Vespa-derived",
+ "intro": "Indian Vespa-type scooters, sold in the US as the Stella.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Oil",
+   "Check type"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Gearbox",
+   "Check oil"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Vintage Vespas mix oil into the fuel. Check the ratio for your model before you fill up."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "LML"
+}

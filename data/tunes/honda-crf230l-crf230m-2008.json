@@ -1,0 +1,60 @@
+{
+ "id": "honda-crf230l-crf230m-2008",
+ "make": "Honda",
+ "model": "CRF230L / CRF230M",
+ "name": "Honda CRF230L / CRF230M",
+ "years": [
+  2008,
+  2009
+ ],
+ "match": [
+  "crf230l",
+  "crf230m",
+  "crf 230 l",
+  "crf 230 m"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "223 cc air-cooled single, carb",
+ "intro": "Street-legal versions of the CRF230F trail bike. Simple and low.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Honda dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XR's Only",
+   "url": "https://www.xrsonly.com/",
+   "what": "Parts and know-how for Honda XR dirt bikes."
+  }
+ ],
+ "heroName": "CRF230L"
+}

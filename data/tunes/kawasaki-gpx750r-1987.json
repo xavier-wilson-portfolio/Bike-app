@@ -1,0 +1,62 @@
+{
+ "id": "kawasaki-gpx750r-1987",
+ "make": "Kawasaki",
+ "model": "GPX750R",
+ "name": "Kawasaki GPX750R",
+ "years": [
+  1987,
+  1989
+ ],
+ "match": [
+  "gpx750",
+  "gpx750r",
+  "gpx 750"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "748 cc liquid-cooled 16-valve inline four",
+ "intro": "The 750 version of the Ninja 600R family sold in Europe.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KawiForums",
+   "url": "https://www.kawiforums.com/",
+   "what": "Owner forum for Kawasaki motorcycles."
+  }
+ ],
+ "heroName": "GPX750R"
+}

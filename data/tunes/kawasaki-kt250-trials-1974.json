@@ -1,0 +1,63 @@
+{
+ "id": "kawasaki-kt250-trials-1974",
+ "make": "Kawasaki",
+ "model": "KT250 trials",
+ "name": "Kawasaki KT250 trials",
+ "years": [
+  1974,
+  1978
+ ],
+ "match": [
+  "kt250",
+  "kt 250"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "249 cc two-stroke trials single",
+ "intro": "Kawasaki's trials bike, developed with Don Smith.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Clutch",
+   "Check plates"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "TrialsCentral",
+   "url": "https://www.trialscentral.com/",
+   "what": "Forum for trials riders, with sections for most trials makes."
+  }
+ ],
+ "heroName": "KT250"
+}

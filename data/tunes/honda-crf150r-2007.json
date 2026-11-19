@@ -1,0 +1,62 @@
+{
+ "id": "honda-crf150r-2007",
+ "make": "Honda",
+ "model": "CRF150R",
+ "name": "Honda CRF150R",
+ "years": [
+  2007,
+  2026
+ ],
+ "match": [
+  "crf150r",
+  "crf 150 r",
+  "crf150rb"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "149 cc liquid-cooled Unicam single, carb",
+ "intro": "A small four-stroke motocrosser for teens. Valves and top ends need regular care.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Check often"
+  ],
+  [
+   "Oil",
+   "Change by hours"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Four-stroke motocross engines need frequent valve checks and oil changes. Follow the hour-based schedule in the manual, not the calendar."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Honda dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XR's Only",
+   "url": "https://www.xrsonly.com/",
+   "what": "Parts and know-how for Honda XR dirt bikes."
+  }
+ ],
+ "heroName": "CRF150R"
+}

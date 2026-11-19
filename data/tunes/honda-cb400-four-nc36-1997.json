@@ -1,0 +1,62 @@
+{
+ "id": "honda-cb400-four-nc36-1997",
+ "make": "Honda",
+ "model": "CB400 Four (NC36)",
+ "name": "Honda CB400 Four (NC36)",
+ "years": [
+  1997,
+  2001
+ ],
+ "match": [
+  "nc36",
+  "cb400 four 1997",
+  "cb400four"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "399 cc liquid-cooled inline four, retro styling",
+ "intro": "A retro tribute to the 1975 CB400F built for Japan.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "CB400 FOUR"
+}

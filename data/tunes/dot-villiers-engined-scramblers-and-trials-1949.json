@@ -1,0 +1,65 @@
+{
+ "id": "dot-villiers-engined-scramblers-and-trials-1949",
+ "make": "DOT",
+ "model": "Villiers-engined scramblers and trials",
+ "name": "DOT Villiers-engined scramblers and trials",
+ "years": [
+  1949,
+  1968
+ ],
+ "match": [
+  "dot",
+  "dot scrambler",
+  "dot trials",
+  "dot demon"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "197 to 247 cc Villiers two-stroke single",
+ "intro": "Manchester-built competition two-strokes.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "DOT"
+}

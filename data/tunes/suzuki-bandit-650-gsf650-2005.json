@@ -1,0 +1,57 @@
+{
+ "id": "suzuki-bandit-650-gsf650-2005",
+ "make": "Suzuki",
+ "model": "Bandit 650 (GSF650)",
+ "name": "Suzuki Bandit 650 (GSF650)",
+ "years": [
+  2005,
+  2015
+ ],
+ "match": [
+  "bandit 650",
+  "gsf650",
+  "gsf 650",
+  "gsf650s"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "656 cc oil-cooled then liquid-cooled inline four",
+ "intro": "The 650 Bandit sold in Europe and Canada. Carbs early, fuel injection from 2007.",
+ "focus": [
+  [
+   "Inline four",
+   "Oil or liquid cooled"
+  ],
+  [
+   "Fuel",
+   "Carbs or EFI"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Suzuki Forums",
+   "url": "https://www.suzuki-forums.com/forums/",
+   "what": "General owner forum for Suzuki motorcycles."
+  }
+ ],
+ "heroName": "BANDIT 650"
+}

@@ -1,0 +1,64 @@
+{
+ "id": "fantic-caballero-1970s-two-stroke-1970",
+ "make": "Fantic",
+ "model": "Caballero (1970s two-stroke)",
+ "name": "Fantic Caballero (1970s two-stroke)",
+ "years": [
+  1970,
+  1983
+ ],
+ "match": [
+  "caballero 125 1975",
+  "caballero 50 1978",
+  "fantic caballero 1979"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "49 to 125 cc two-stroke single",
+ "intro": "The original Fantic Caballero enduros.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "CABALLERO"
+}

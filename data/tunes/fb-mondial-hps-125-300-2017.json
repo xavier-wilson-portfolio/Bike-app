@@ -1,0 +1,58 @@
+{
+ "id": "fb-mondial-hps-125-300-2017",
+ "make": "FB Mondial",
+ "model": "HPS 125 / 300",
+ "name": "FB Mondial HPS 125 / 300",
+ "years": [
+  2017,
+  2026
+ ],
+ "match": [
+  "hps 125",
+  "hps 300",
+  "mondial hps"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "124 or 278 cc liquid-cooled single",
+ "intro": "A retro scrambler from the revived Mondial name.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant check"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "HPS"
+}

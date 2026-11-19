@@ -1,0 +1,65 @@
+{
+ "id": "fantic-section-240-300-trials-1977",
+ "make": "Fantic",
+ "model": "Section 240 / 300 trials",
+ "name": "Fantic Section 240 / 300 trials",
+ "years": [
+  1977,
+  1990
+ ],
+ "match": [
+  "fantic 240",
+  "fantic 300",
+  "fantic section",
+  "fantic trial"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "240 or 300 cc two-stroke trials single",
+ "intro": "Fantic's trials bikes of the late 1970s and 1980s.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Clutch",
+   "Check plates"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "TrialsCentral",
+   "url": "https://www.trialscentral.com/",
+   "what": "Forum for trials riders, with sections for most trials makes."
+  }
+ ],
+ "heroName": "FANTIC"
+}

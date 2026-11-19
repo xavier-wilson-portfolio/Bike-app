@@ -1,0 +1,60 @@
+{
+ "id": "honda-elite-125-elite-150-ch125-ch150-1984",
+ "make": "Honda",
+ "model": "Elite 125 / Elite 150 (CH125 / CH150)",
+ "name": "Honda Elite 125 / Elite 150 (CH125 / CH150)",
+ "years": [
+  1984,
+  1987
+ ],
+ "match": [
+  "ch150",
+  "ch125",
+  "elite 150",
+  "elite 125",
+  "ch 150"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "124 or 153 cc liquid-cooled four-stroke single, CVT",
+ "intro": "The first big Elites, with liquid cooling and a digital dash on some. Plastic parts are hard to find.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Cooling",
+   "Coolant check"
+  ],
+  [
+   "Body panels",
+   "Check clips"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "heroName": "ELITE 150"
+}

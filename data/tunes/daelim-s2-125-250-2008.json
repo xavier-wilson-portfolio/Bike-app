@@ -1,0 +1,59 @@
+{
+ "id": "daelim-s2-125-250-2008",
+ "make": "Daelim",
+ "model": "S2 125 / 250",
+ "name": "Daelim S2 125 / 250",
+ "years": [
+  2008,
+  2015
+ ],
+ "match": [
+  "s2 250",
+  "s2 125",
+  "daelim s2",
+  "s3 250"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "124 or 249 cc liquid-cooled single",
+ "intro": "Korean maxi-scooters.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "S2"
+}

@@ -1,0 +1,63 @@
+{
+ "id": "moto-guzzi-airone-250-1939",
+ "make": "Moto Guzzi",
+ "model": "Airone 250",
+ "name": "Moto Guzzi Airone 250",
+ "years": [
+  1939,
+  1957
+ ],
+ "match": [
+  "airone",
+  "airone 250",
+  "airone sport"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "247 cc horizontal OHV single, outside flywheel",
+ "intro": "A small horizontal single, long-lived and used by the Italian military.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Outside flywheel",
+   "Check it"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moto Guzzi National Owners Club",
+   "url": "https://www.mgnoc.org/",
+   "what": "US owner club for Moto Guzzi."
+  }
+ ],
+ "heroName": "AIRONE"
+}

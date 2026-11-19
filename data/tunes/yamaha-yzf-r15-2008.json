@@ -1,0 +1,60 @@
+{
+ "id": "yamaha-yzf-r15-2008",
+ "make": "Yamaha",
+ "model": "YZF-R15",
+ "name": "Yamaha YZF-R15",
+ "years": [
+  2008,
+  2026
+ ],
+ "match": [
+  "yzf-r15",
+  "r15",
+  "r15 v3",
+  "r15 v4",
+  "r15m"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "149 or 155 cc liquid-cooled single, fuel injected",
+ "intro": "A small sport bike sold across Asia and Latin America, with VVA on later versions.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "heroName": "R15"
+}

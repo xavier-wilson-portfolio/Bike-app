@@ -1,0 +1,65 @@
+{
+ "id": "adler-mb-200-mb-250-1953",
+ "make": "Adler",
+ "model": "MB 200 / MB 250",
+ "name": "Adler MB 200 / MB 250",
+ "years": [
+  1953,
+  1957
+ ],
+ "match": [
+  "mb 250",
+  "mb 200",
+  "adler mb250",
+  "adler mb 201"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "195 or 247 cc two-stroke parallel twin",
+ "intro": "Adler's fast two-stroke twins, used in racing and copied by others.",
+ "focus": [
+  [
+   "Two-stroke twin",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "ADLER"
+}

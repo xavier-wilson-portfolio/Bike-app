@@ -1,0 +1,60 @@
+{
+ "id": "gilera-dna-stalker-ice-1997",
+ "make": "Gilera",
+ "model": "DNA / Stalker / Ice",
+ "name": "Gilera DNA / Stalker / Ice",
+ "years": [
+  1997,
+  2008
+ ],
+ "match": [
+  "gilera dna",
+  "stalker",
+  "gilera ice",
+  "dna 125"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 to 180 cc single, sporty scooters",
+ "intro": "Gilera's sporty small scooters and the big-wheel DNA.",
+ "focus": [
+  [
+   "Single",
+   "Air or liquid cooled"
+  ],
+  [
+   "Oil",
+   "Check type"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "DNA"
+}

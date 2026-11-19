@@ -1,0 +1,67 @@
+{
+ "id": "suzuki-gsx-r400-1984",
+ "make": "Suzuki",
+ "model": "GSX-R400",
+ "name": "Suzuki GSX-R400",
+ "years": [
+  1984,
+  1998
+ ],
+ "match": [
+  "gsx-r400",
+  "gsxr400",
+  "gsx r400",
+  "gk76a",
+  "gk73a"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "398 cc 16-valve inline four, oil then liquid cooling",
+ "intro": "The 400 cc GSX-R sold in Japan. Many came elsewhere as grey imports.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ],
+  "A": [
+   "Many of these are imports. Make sure the title and VIN paperwork match before you put money in."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "GSXR.com",
+   "url": "https://www.gsxr.com/",
+   "what": "Owner forum for Suzuki GSX-R models, including the early oil-cooled bikes."
+  }
+ ],
+ "heroName": "GSX-R400"
+}

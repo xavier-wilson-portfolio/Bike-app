@@ -1,0 +1,61 @@
+{
+ "id": "yamaha-ty175-ty250-ty350-trials-1974",
+ "make": "Yamaha",
+ "model": "TY175 / TY250 / TY350 trials",
+ "name": "Yamaha TY175 / TY250 / TY350 trials",
+ "years": [
+  1974,
+  1986
+ ],
+ "match": [
+  "ty175",
+  "ty250",
+  "ty350",
+  "ty 250",
+  "ty80"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "171 to 347 cc two-stroke trials single",
+ "intro": "Yamaha's trials bikes, raced by Mick Andrews.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air or liquid cooled"
+  ],
+  [
+   "Oil",
+   "Check type"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Clutch",
+   "Check plates"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "TrialsCentral",
+   "url": "https://www.trialscentral.com/",
+   "what": "Forum for trials riders, with sections for most trials makes."
+  }
+ ],
+ "heroName": "TY250"
+}

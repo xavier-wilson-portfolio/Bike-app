@@ -1,0 +1,58 @@
+{
+ "id": "ducati-desmosedici-rr-2007",
+ "make": "Ducati",
+ "model": "Desmosedici RR",
+ "name": "Ducati Desmosedici RR",
+ "years": [
+  2007,
+  2008
+ ],
+ "match": [
+  "desmosedici",
+  "desmosedici rr",
+  "d16rr"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "989 cc liquid-cooled V4 from MotoGP",
+ "intro": "A road version of Ducati's MotoGP bike, built in limited numbers.",
+ "focus": [
+  [
+   "V4",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Desmo valves",
+   "Specialist"
+  ],
+  [
+   "Cooling",
+   "Coolant and fans"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Ducati has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "heroName": "DESMOSEDICI"
+}

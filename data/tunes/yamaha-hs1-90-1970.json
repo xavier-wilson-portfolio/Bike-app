@@ -1,0 +1,65 @@
+{
+ "id": "yamaha-hs1-90-1970",
+ "make": "Yamaha",
+ "model": "HS1 90",
+ "name": "Yamaha HS1 90",
+ "years": [
+  1970,
+  1972
+ ],
+ "match": [
+  "hs1",
+  "hs-1",
+  "hs1 90",
+  "hs1b"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "89 cc air-cooled two-stroke parallel twin, Autolube",
+ "intro": "A tiny 90 cc two-stroke twin street bike. Light and peppy.",
+ "focus": [
+  [
+   "Two-stroke twin",
+   "Air-cooled"
+  ],
+  [
+   "Autolube",
+   "Bleed the pump"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "HS1"
+}

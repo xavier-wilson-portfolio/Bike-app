@@ -1,0 +1,63 @@
+{
+ "id": "pope-model-l-single-1911",
+ "make": "Pope",
+ "model": "Model L / single",
+ "name": "Pope Model L / single",
+ "years": [
+  1911,
+  1918
+ ],
+ "match": [
+  "pope",
+  "pope model l",
+  "pope motorcycle"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "OHV V-twin or single",
+ "intro": "Pope's early overhead-valve American bikes.",
+ "focus": [
+  [
+   "Engine",
+   "Air-cooled"
+  ],
+  [
+   "OHV",
+   "Set them"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Oil",
+   "Total loss"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Check whether yours has a total-loss or a recirculating oil system before you fill it, and know which one you are running."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "POPE"
+}

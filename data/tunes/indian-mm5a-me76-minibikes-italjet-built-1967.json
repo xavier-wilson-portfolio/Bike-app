@@ -1,0 +1,65 @@
+{
+ "id": "indian-mm5a-me76-minibikes-italjet-built-1967",
+ "make": "Indian",
+ "model": "MM5A / ME76 minibikes (Italjet-built)",
+ "name": "Indian MM5A / ME76 minibikes (Italjet-built)",
+ "years": [
+  1967,
+  1977
+ ],
+ "match": [
+  "mm5a",
+  "me76",
+  "indian minibike",
+  "indian mini mini"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "50 to 100 cc two-stroke minibikes and small bikes",
+ "intro": "Small Indian-branded bikes built in Italy and Taiwan in the Floyd Clymer and later years.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "INDIAN MINI"
+}

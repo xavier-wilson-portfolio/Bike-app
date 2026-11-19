@@ -1,0 +1,61 @@
+{
+ "id": "bajaj-kb4s-kawasaki-bajaj-caliber-1986",
+ "make": "Bajaj",
+ "model": "KB4S / Kawasaki Bajaj Caliber",
+ "name": "Bajaj KB4S / Kawasaki Bajaj Caliber",
+ "years": [
+  1986,
+  2006
+ ],
+ "match": [
+  "kb4s",
+  "caliber",
+  "bajaj caliber",
+  "kawasaki bajaj"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "100 to 115 cc two- and four-stroke singles",
+ "intro": "Kawasaki-Bajaj joint venture commuters in India.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Oil",
+   "Check type"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "CALIBER"
+}

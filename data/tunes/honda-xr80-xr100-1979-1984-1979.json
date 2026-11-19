@@ -1,0 +1,60 @@
+{
+ "id": "honda-xr80-xr100-1979-1984-1979",
+ "make": "Honda",
+ "model": "XR80 / XR100 (1979-1984)",
+ "name": "Honda XR80 / XR100 (1979-1984)",
+ "years": [
+  1979,
+  1984
+ ],
+ "match": [
+  "xr80 1980",
+  "xr100 1981",
+  "xr 80",
+  "xr80 twin shock"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "80 or 99 cc air-cooled single",
+ "intro": "The early small XR trail bikes for kids and teens. Simple and very durable.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Honda dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XR's Only",
+   "url": "https://www.xrsonly.com/",
+   "what": "Parts and know-how for Honda XR dirt bikes."
+  }
+ ],
+ "heroName": "XR80"
+}

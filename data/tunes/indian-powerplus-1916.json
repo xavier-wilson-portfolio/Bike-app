@@ -1,0 +1,66 @@
+{
+ "id": "indian-powerplus-1916",
+ "make": "Indian",
+ "model": "Powerplus",
+ "name": "Indian Powerplus",
+ "years": [
+  1916,
+  1924
+ ],
+ "match": [
+  "powerplus",
+  "power plus",
+  "indian powerplus"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "1000 cc side-valve V-twin",
+ "intro": "Indian's first side-valve big twin, used heavily in World War I.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Flathead",
+   "Set tappets"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Oil",
+   "Total loss"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "E": [
+   "It is a flathead. The valves sit beside the cylinder, so set the tappets with the engine cold and check the valve guides for wear."
+  ],
+  "H": [
+   "Check whether yours has a total-loss or a recirculating oil system before you fill it, and know which one you are running."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "POWERPLUS"
+}

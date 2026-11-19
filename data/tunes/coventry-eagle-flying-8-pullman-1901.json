@@ -1,0 +1,63 @@
+{
+ "id": "coventry-eagle-flying-8-pullman-1901",
+ "make": "Coventry-Eagle",
+ "model": "Flying 8 / Pullman",
+ "name": "Coventry-Eagle Flying 8 / Pullman",
+ "years": [
+  1901,
+  1939
+ ],
+ "match": [
+  "coventry eagle",
+  "flying 8",
+  "coventry-eagle pullman"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "JAP and Villiers engines, singles and V-twins",
+ "intro": "A Coventry maker whose Flying 8 rivaled the Brough Superior.",
+ "focus": [
+  [
+   "Engine",
+   "Air-cooled"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "COVENTRY-EAGLE"
+}

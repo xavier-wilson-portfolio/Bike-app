@@ -1,0 +1,64 @@
+{
+ "id": "bajaj-chetak-classic-1972",
+ "make": "Bajaj",
+ "model": "Chetak (classic)",
+ "name": "Bajaj Chetak (classic)",
+ "years": [
+  1972,
+  2006
+ ],
+ "match": [
+  "chetak",
+  "bajaj chetak 150",
+  "bajaj super"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "145 cc two-stroke single, Vespa-based",
+ "intro": "India's famous Vespa-derived scooter.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Gearbox",
+   "Check oil"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Vintage Vespas mix oil into the fuel. Check the ratio for your model before you fill up."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "CHETAK"
+}

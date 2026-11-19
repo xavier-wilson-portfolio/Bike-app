@@ -1,0 +1,59 @@
+{
+ "id": "italjet-velocifero-1994",
+ "make": "Italjet",
+ "model": "Velocifero",
+ "name": "Italjet Velocifero",
+ "years": [
+  1994,
+  2001
+ ],
+ "match": [
+  "velocifero",
+  "italjet velocifero"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 cc two-stroke single, retro scooter",
+ "intro": "A retro-styled scooter, now collectible.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Oil",
+   "Check type"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check drums"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "VELOCIFERO"
+}

@@ -1,0 +1,60 @@
+{
+ "id": "triumph-tss-tsx-1982",
+ "make": "Triumph",
+ "model": "TSS / TSX",
+ "name": "Triumph TSS / TSX",
+ "years": [
+  1982,
+  1983
+ ],
+ "match": [
+  "tss",
+  "tsx",
+  "triumph tss",
+  "triumph tsx"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "744 cc twin, eight-valve head on the TSS",
+ "intro": "Late Meriden twins. The TSS had an eight-valve head and the TSX was a custom.",
+ "focus": [
+  [
+   "Twin",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Primary",
+   "Check chain"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "TSS"
+}

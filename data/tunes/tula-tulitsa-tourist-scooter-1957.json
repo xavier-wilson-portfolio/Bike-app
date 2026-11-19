@@ -1,0 +1,65 @@
+{
+ "id": "tula-tulitsa-tourist-scooter-1957",
+ "make": "Tula",
+ "model": "Tulitsa / Tourist scooter",
+ "name": "Tula Tulitsa / Tourist scooter",
+ "years": [
+  1957,
+  1996
+ ],
+ "match": [
+  "tula",
+  "tulitsa",
+  "tula tourist",
+  "tula scooter"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "148 to 200 cc two-stroke single",
+ "intro": "Soviet scooters built in Tula.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Enclosed chain"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "TULA"
+}

@@ -1,0 +1,70 @@
+{
+ "id": "harley-davidson-model-d-r-rl-45-flathead-1929",
+ "make": "Harley-Davidson",
+ "model": "Model D / R / RL 45 Flathead",
+ "name": "Harley-Davidson Model D / R / RL 45 Flathead",
+ "years": [
+  1929,
+  1936
+ ],
+ "match": [
+  "model d",
+  "model r",
+  "rl",
+  "dl",
+  "dlds",
+  "harley 45 1930",
+  "r 45"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "45 cu in (742 cc) side-valve V-twin",
+ "intro": "The early 45 flatheads that came before the WL. Simple and long lived.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Flathead",
+   "Set tappets"
+  ],
+  [
+   "Oil system",
+   "Check type"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "E": [
+   "It is a flathead. The valves sit beside the cylinder, so set the tappets with the engine cold and check the valve guides for wear."
+  ],
+  "H": [
+   "Check whether yours has a total-loss or a recirculating oil system before you fill it, and know which one you are running."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "45 FLATHEAD"
+}

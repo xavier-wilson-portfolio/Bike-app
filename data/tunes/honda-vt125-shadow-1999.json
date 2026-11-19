@@ -1,0 +1,58 @@
+{
+ "id": "honda-vt125-shadow-1999",
+ "make": "Honda",
+ "model": "VT125 Shadow",
+ "name": "Honda VT125 Shadow",
+ "years": [
+  1999,
+  2007
+ ],
+ "match": [
+  "vt125",
+  "shadow 125",
+  "vt 125"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "124 cc liquid-cooled V-twin",
+ "intro": "The small Shadow sold in Europe.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Shadow Riders",
+   "url": "https://www.shadowriders.com/",
+   "what": "Owner forum for Honda Shadows and other Honda cruisers."
+  }
+ ],
+ "heroName": "SHADOW 125"
+}

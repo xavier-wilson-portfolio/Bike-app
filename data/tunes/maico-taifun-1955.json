@@ -1,0 +1,63 @@
+{
+ "id": "maico-taifun-1955",
+ "make": "Maico",
+ "model": "Taifun",
+ "name": "Maico Taifun",
+ "years": [
+  1955,
+  1958
+ ],
+ "match": [
+  "taifun",
+  "maico taifun"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "348 or 394 cc two-stroke twin, enclosed bodywork",
+ "intro": "A streamlined two-stroke twin with full bodywork.",
+ "focus": [
+  [
+   "Two-stroke twin",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Enclosed chain"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "TAIFUN"
+}

@@ -1,0 +1,58 @@
+{
+ "id": "bfg-1300-1982",
+ "make": "BFG",
+ "model": "1300",
+ "name": "BFG 1300",
+ "years": [
+  1982,
+  1988
+ ],
+ "match": [
+  "bfg 1300",
+  "bfg",
+  "mf 650"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "engine": "1299 cc Citroen GS car flat four",
+ "intro": "A French bike with a Citroen car engine, used by some police.",
+ "focus": [
+  [
+   "Flat four",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Clutch",
+   "Car type"
+  ],
+  [
+   "Shaft drive",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "BFG"
+}

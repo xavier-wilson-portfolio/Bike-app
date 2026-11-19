@@ -1,0 +1,63 @@
+{
+ "id": "honda-cr60r-1983",
+ "make": "Honda",
+ "model": "CR60R",
+ "name": "Honda CR60R",
+ "years": [
+  1983,
+  1984
+ ],
+ "match": [
+  "cr60r",
+  "cr60",
+  "cr 60"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "59 cc liquid-cooled two-stroke minicross",
+ "intro": "A small kids' motocrosser.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Honda dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XR's Only",
+   "url": "https://www.xrsonly.com/",
+   "what": "Parts and know-how for Honda XR dirt bikes."
+  }
+ ],
+ "heroName": "CR60R"
+}

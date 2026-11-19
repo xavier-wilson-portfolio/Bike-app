@@ -1,0 +1,59 @@
+{
+ "id": "royal-alloy-gp-125-300-2018",
+ "make": "Royal Alloy",
+ "model": "GP 125 / 300",
+ "name": "Royal Alloy GP 125 / 300",
+ "years": [
+  2018,
+  2026
+ ],
+ "match": [
+  "royal alloy",
+  "gp 300",
+  "gp 125",
+  "tg 300"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "125 or 278 cc single, retro scooter",
+ "intro": "A retro-styled scooter with Lambretta-like looks.",
+ "focus": [
+  [
+   "Single",
+   "Liquid or air cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ],
+  [
+   "Body panels",
+   "Check clips"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "ROYAL ALLOY"
+}

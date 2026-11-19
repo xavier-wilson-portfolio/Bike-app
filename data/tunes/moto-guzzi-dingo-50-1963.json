@@ -1,0 +1,64 @@
+{
+ "id": "moto-guzzi-dingo-50-1963",
+ "make": "Moto Guzzi",
+ "model": "Dingo 50",
+ "name": "Moto Guzzi Dingo 50",
+ "years": [
+  1963,
+  1976
+ ],
+ "match": [
+  "dingo",
+  "dingo 50",
+  "dingo cross"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "49 cc two-stroke single moped and lightweight",
+ "intro": "Guzzi's small two-stroke, sold as a moped and a small motorcycle.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moto Guzzi National Owners Club",
+   "url": "https://www.mgnoc.org/",
+   "what": "US owner club for Moto Guzzi."
+  }
+ ],
+ "heroName": "DINGO"
+}

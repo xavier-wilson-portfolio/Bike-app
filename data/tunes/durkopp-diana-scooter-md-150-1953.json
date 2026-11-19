@@ -1,0 +1,64 @@
+{
+ "id": "durkopp-diana-scooter-md-150-1953",
+ "make": "Durkopp",
+ "model": "Diana scooter / MD 150",
+ "name": "Durkopp Diana scooter / MD 150",
+ "years": [
+  1953,
+  1960
+ ],
+ "match": [
+  "durkopp diana",
+  "diana scooter",
+  "durkopp md"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "194 cc two-stroke single",
+ "intro": "A heavy, well-built German scooter.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Enclosed chain"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "DIANA"
+}

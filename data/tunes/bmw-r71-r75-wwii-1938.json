@@ -1,0 +1,61 @@
+{
+ "id": "bmw-r71-r75-wwii-1938",
+ "make": "BMW",
+ "model": "R71 / R75 (WWII)",
+ "name": "BMW R71 / R75 (WWII)",
+ "years": [
+  1938,
+  1944
+ ],
+ "match": [
+  "r71",
+  "r75 1942",
+  "r75 sahara",
+  "r 71",
+  "r 75 wehrmacht"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "746 cc flat twin, side-valve or OHV, sidecar drive on the R75",
+ "intro": "Pre-war and wartime BMW twins. The R75 had a driven sidecar wheel. Most are restored or replicas.",
+ "focus": [
+  [
+   "Flat twin",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Sidecar",
+   "Check drive"
+  ],
+  [
+   "Shaft drive",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Airheads Beemer Club",
+   "url": "https://www.airheads.org/",
+   "what": "Tech library and owner club for BMW airhead twins."
+  }
+ ],
+ "heroName": "R75"
+}

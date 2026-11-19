@@ -1,0 +1,61 @@
+{
+ "id": "excelsior-uk-talisman-manxman-1933",
+ "make": "Excelsior (UK)",
+ "model": "Talisman / Manxman",
+ "name": "Excelsior (UK) Talisman / Manxman",
+ "years": [
+  1933,
+  1964
+ ],
+ "match": [
+  "talisman",
+  "manxman",
+  "excelsior talisman",
+  "excelsior manxman"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "125 to 350 cc two-stroke twins and OHC singles",
+ "intro": "The British Excelsior, known for the Manxman and Talisman twin.",
+ "focus": [
+  [
+   "Engine",
+   "Air-cooled"
+  ],
+  [
+   "Oil",
+   "Check type"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "TALISMAN"
+}

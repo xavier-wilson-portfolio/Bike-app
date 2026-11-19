@@ -1,0 +1,65 @@
+{
+ "id": "rumi-formichino-junior-1950",
+ "make": "Rumi",
+ "model": "Formichino / Junior",
+ "name": "Rumi Formichino / Junior",
+ "years": [
+  1950,
+  1962
+ ],
+ "match": [
+  "rumi",
+  "formichino",
+  "rumi junior",
+  "rumi scoiattolo"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "124 cc horizontal two-stroke twin",
+ "intro": "A distinctive Italian scooter with an aluminum body and twin-cylinder engine.",
+ "focus": [
+  [
+   "Two-stroke twin",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "RUMI"
+}

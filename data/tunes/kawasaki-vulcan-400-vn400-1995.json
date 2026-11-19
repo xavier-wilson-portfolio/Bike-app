@@ -1,0 +1,58 @@
+{
+ "id": "kawasaki-vulcan-400-vn400-1995",
+ "make": "Kawasaki",
+ "model": "Vulcan 400 (VN400)",
+ "name": "Kawasaki Vulcan 400 (VN400)",
+ "years": [
+  1995,
+  2009
+ ],
+ "match": [
+  "vulcan 400",
+  "vn400",
+  "vn 400"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "399 cc liquid-cooled V-twin, carbs",
+ "intro": "A small V-twin cruiser built for Japan and Europe, related to the Vulcan 800.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vulcan Riders Association",
+   "url": "https://www.vulcanriders.org/",
+   "what": "Owner club and forum for Kawasaki Vulcans."
+  }
+ ],
+ "heroName": "VULCAN 400"
+}

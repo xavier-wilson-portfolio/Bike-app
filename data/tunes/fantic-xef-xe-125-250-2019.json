@@ -1,0 +1,59 @@
+{
+ "id": "fantic-xef-xe-125-250-2019",
+ "make": "Fantic",
+ "model": "XEF / XE 125 / 250",
+ "name": "Fantic XEF / XE 125 / 250",
+ "years": [
+  2019,
+  2026
+ ],
+ "match": [
+  "xef 250",
+  "xef 125",
+  "xe 125",
+  "fantic xef"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "124 or 249 cc liquid-cooled single (Minarelli / Yamaha)",
+ "intro": "Modern Fantic enduros and motocrossers with Yamaha-derived engines.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check often"
+  ],
+  [
+   "Oil",
+   "Change by hours"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "XEF"
+}

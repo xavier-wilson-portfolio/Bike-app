@@ -1,0 +1,58 @@
+{
+ "id": "yamaha-yzf-r6s-2006",
+ "make": "Yamaha",
+ "model": "YZF-R6S",
+ "name": "Yamaha YZF-R6S",
+ "years": [
+  2006,
+  2009
+ ],
+ "match": [
+  "r6s",
+  "yzf-r6s",
+  "yzf r6s"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "599 cc liquid-cooled inline four, fuel injected",
+ "intro": "A US and Canada model based on the 2003-2005 R6, sold beside the newer R6.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "heroName": "R6S"
+}

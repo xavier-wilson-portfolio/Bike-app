@@ -1,0 +1,65 @@
+{
+ "id": "jawa-50-pionyr-1958",
+ "make": "Jawa",
+ "model": "50 Pionyr",
+ "name": "Jawa 50 Pionyr",
+ "years": [
+  1958,
+  1983
+ ],
+ "match": [
+  "pionyr",
+  "jawa 50",
+  "jawa pionyr",
+  "pav"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "49 cc two-stroke single",
+ "intro": "A small Czech moped-motorcycle, very common in Eastern Europe.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "PIONYR"
+}

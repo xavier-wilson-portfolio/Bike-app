@@ -1,0 +1,63 @@
+{
+ "id": "rikuo-type-97-rt-1935",
+ "make": "Rikuo",
+ "model": "Type 97 / RT",
+ "name": "Rikuo Type 97 / RT",
+ "years": [
+  1935,
+  1960
+ ],
+ "match": [
+  "rikuo",
+  "rikuo type 97",
+  "rikuo rt2"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "1200 or 750 cc side-valve V-twin, Harley licensed",
+ "intro": "Japanese Harley-Davidsons built under license.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Flathead",
+   "Set tappets"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "E": [
+   "It is a flathead. The valves sit beside the cylinder, so set the tappets with the engine cold and check the valve guides for wear."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "RIKUO"
+}

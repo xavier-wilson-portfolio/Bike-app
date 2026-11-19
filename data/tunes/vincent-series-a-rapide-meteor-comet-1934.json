@@ -1,0 +1,64 @@
+{
+ "id": "vincent-series-a-rapide-meteor-comet-1934",
+ "make": "Vincent",
+ "model": "Series A Rapide / Meteor / Comet",
+ "name": "Vincent Series A Rapide / Meteor / Comet",
+ "years": [
+  1934,
+  1939
+ ],
+ "match": [
+  "series a",
+  "vincent hrd",
+  "vincent series a",
+  "plumber's nightmare"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "499 cc single or 998 cc V-twin, pre-war",
+ "intro": "The pre-war Vincent-HRD bikes. The Series A Rapide is very rare.",
+ "focus": [
+  [
+   "Engine",
+   "Air-cooled"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Carbs",
+   "Clean and jet"
+  ],
+  [
+   "Oil",
+   "Check pipes"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "SERIES A"
+}

@@ -1,0 +1,60 @@
+{
+ "id": "yamaha-fazer-250-fz25-2005",
+ "make": "Yamaha",
+ "model": "Fazer 250 / FZ25",
+ "name": "Yamaha Fazer 250 / FZ25",
+ "years": [
+  2005,
+  2026
+ ],
+ "match": [
+  "fazer 250",
+  "fz25",
+  "ys250",
+  "fz 25"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "249 cc air-cooled single",
+ "intro": "A 250 commuter sold in Brazil and India.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Forums",
+   "url": "https://www.yamahaforums.com/",
+   "what": "General owner forum for Yamaha motorcycles."
+  }
+ ],
+ "heroName": "FAZER 250"
+}

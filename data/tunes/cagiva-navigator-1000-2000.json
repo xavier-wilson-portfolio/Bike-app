@@ -1,0 +1,58 @@
+{
+ "id": "cagiva-navigator-1000-2000",
+ "make": "Cagiva",
+ "model": "Navigator 1000",
+ "name": "Cagiva Navigator 1000",
+ "years": [
+  2000,
+  2005
+ ],
+ "match": [
+  "navigator",
+  "navigator 1000",
+  "cagiva navigator"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "996 cc liquid-cooled Suzuki TL1000 V-twin",
+ "intro": "An adventure-styled road bike with a Suzuki engine.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "NAVIGATOR"
+}

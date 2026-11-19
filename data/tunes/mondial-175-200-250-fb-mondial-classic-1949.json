@@ -1,0 +1,60 @@
+{
+ "id": "mondial-175-200-250-fb-mondial-classic-1949",
+ "make": "Mondial",
+ "model": "175 / 200 / 250 (FB Mondial classic)",
+ "name": "Mondial 175 / 200 / 250 (FB Mondial classic)",
+ "years": [
+  1949,
+  1979
+ ],
+ "match": [
+  "mondial 175",
+  "fb mondial 1955",
+  "mondial sport",
+  "mondial 200"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "125 to 250 cc four-stroke single",
+ "intro": "The original FB Mondial, Grand Prix winner in the 1950s.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "MONDIAL"
+}

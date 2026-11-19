@@ -1,0 +1,65 @@
+{
+ "id": "kinetic-kinetic-honda-luna-tfr-1972",
+ "make": "Kinetic",
+ "model": "Kinetic Honda / Luna / TFR",
+ "name": "Kinetic Kinetic Honda / Luna / TFR",
+ "years": [
+  1972,
+  2008
+ ],
+ "match": [
+  "kinetic honda",
+  "luna",
+  "kinetic tfr",
+  "kinetic luna"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 to 98 cc two-stroke single",
+ "intro": "Indian mopeds and scooters, some built with Honda.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Drive",
+   "Check it"
+  ],
+  [
+   "Brakes",
+   "Check drums"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "heroName": "KINETIC"
+}

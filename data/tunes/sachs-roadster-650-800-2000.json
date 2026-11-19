@@ -1,0 +1,58 @@
+{
+ "id": "sachs-roadster-650-800-2000",
+ "make": "Sachs",
+ "model": "Roadster 650 / 800",
+ "name": "Sachs Roadster 650 / 800",
+ "years": [
+  2000,
+  2007
+ ],
+ "match": [
+  "sachs roadster",
+  "roadster 650",
+  "roadster 800"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "644 cc Suzuki single or 805 cc Suzuki V-twin",
+ "intro": "German retro roadsters with Suzuki engines.",
+ "focus": [
+  [
+   "Engine",
+   "Air or liquid cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Frame",
+   "Check welds"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "ROADSTER"
+}

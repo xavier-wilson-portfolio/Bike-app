@@ -1,0 +1,59 @@
+{
+ "id": "yamaha-drag-star-400-xvs400-1996",
+ "make": "Yamaha",
+ "model": "Drag Star 400 (XVS400)",
+ "name": "Yamaha Drag Star 400 (XVS400)",
+ "years": [
+  1996,
+  2017
+ ],
+ "match": [
+  "drag star 400",
+  "xvs400",
+  "dragstar 400"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "399 cc air-cooled V-twin, shaft drive",
+ "intro": "The small Drag Star sold in Japan and Europe.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check R/R"
+  ],
+  [
+   "Shaft drive",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Virago Tech forum",
+   "url": "http://viragotechforum.com/",
+   "what": "Owner forum for Yamaha Viragos."
+  }
+ ],
+ "heroName": "DRAG STAR"
+}

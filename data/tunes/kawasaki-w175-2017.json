@@ -1,0 +1,59 @@
+{
+ "id": "kawasaki-w175-2017",
+ "make": "Kawasaki",
+ "model": "W175",
+ "name": "Kawasaki W175",
+ "years": [
+  2017,
+  2026
+ ],
+ "match": [
+  "w175",
+  "w 175",
+  "w175 cafe"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "177 cc air-cooled single, retro",
+ "intro": "A small retro roadster built in Indonesia.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KawiForums",
+   "url": "https://www.kawiforums.com/",
+   "what": "Owner forum for Kawasaki motorcycles."
+  }
+ ],
+ "heroName": "W175"
+}

@@ -1,0 +1,63 @@
+{
+ "id": "new-imperial-unit-minor-unit-super-1901",
+ "make": "New Imperial",
+ "model": "Unit Minor / Unit Super",
+ "name": "New Imperial Unit Minor / Unit Super",
+ "years": [
+  1901,
+  1939
+ ],
+ "match": [
+  "new imperial",
+  "unit minor",
+  "unit super"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "150 to 500 cc OHV singles, early unit construction",
+ "intro": "A Birmingham maker that pioneered unit construction.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "NEW IMPERIAL"
+}

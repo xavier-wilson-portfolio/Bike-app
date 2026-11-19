@@ -1,0 +1,60 @@
+{
+ "id": "ducati-brio-cruiser-scooters-1952",
+ "make": "Ducati",
+ "model": "Brio / Cruiser scooters",
+ "name": "Ducati Brio / Cruiser scooters",
+ "years": [
+  1952,
+  1968
+ ],
+ "match": [
+  "ducati brio",
+  "ducati cruiser",
+  "brio 100"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "48 to 175 cc scooters, two- and four-stroke",
+ "intro": "Ducati's scooters, from the early Cruiser to the 1960s Brio.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Oil",
+   "Check type"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Drive",
+   "Check it"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "heroName": "BRIO"
+}

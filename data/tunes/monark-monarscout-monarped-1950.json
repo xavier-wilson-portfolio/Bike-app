@@ -1,0 +1,64 @@
+{
+ "id": "monark-monarscout-monarped-1950",
+ "make": "Monark",
+ "model": "Monarscout / Monarped",
+ "name": "Monark Monarscout / Monarped",
+ "years": [
+  1950,
+  1975
+ ],
+ "match": [
+  "monark",
+  "monarscout",
+  "monarped"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "49 to 175 cc two-stroke single",
+ "intro": "Swedish motorcycles and mopeds from Monark.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "MONARK"
+}

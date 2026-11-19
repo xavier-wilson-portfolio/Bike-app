@@ -1,0 +1,60 @@
+{
+ "id": "ycf-pit-bikes-2006",
+ "make": "YCF",
+ "model": "Pit bikes",
+ "name": "YCF Pit bikes",
+ "years": [
+  2006,
+  2026
+ ],
+ "match": [
+  "ycf",
+  "ycf pilot",
+  "ycf bigy",
+  "ycf start"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "88 to 190 cc air-cooled single, pit bike",
+ "intro": "French-brand pit bikes, raced in supermoto and pit bike series.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Oil",
+   "Change often"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "YCF"
+}

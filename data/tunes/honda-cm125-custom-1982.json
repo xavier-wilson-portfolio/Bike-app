@@ -1,0 +1,59 @@
+{
+ "id": "honda-cm125-custom-1982",
+ "make": "Honda",
+ "model": "CM125 Custom",
+ "name": "Honda CM125 Custom",
+ "years": [
+  1982,
+  2001
+ ],
+ "match": [
+  "cm125",
+  "cm 125",
+  "cm125c"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "124 cc air-cooled twin",
+ "intro": "A small custom-styled twin sold in Europe.",
+ "focus": [
+  [
+   "Twin",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Shadow Riders",
+   "url": "https://www.shadowriders.com/",
+   "what": "Owner forum for Honda Shadows and other Honda cruisers."
+  }
+ ],
+ "heroName": "CM125"
+}

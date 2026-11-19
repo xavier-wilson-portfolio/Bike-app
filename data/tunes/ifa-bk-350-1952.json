@@ -1,0 +1,65 @@
+{
+ "id": "ifa-bk-350-1952",
+ "make": "IFA",
+ "model": "BK 350",
+ "name": "IFA BK 350",
+ "years": [
+  1952,
+  1959
+ ],
+ "match": [
+  "bk 350",
+  "bk350",
+  "ifa bk 350",
+  "mz bk 350"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "343 cc two-stroke flat twin, shaft drive",
+ "intro": "An East German two-stroke boxer twin with shaft drive.",
+ "focus": [
+  [
+   "Two-stroke twin",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Shaft drive",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "BK 350"
+}

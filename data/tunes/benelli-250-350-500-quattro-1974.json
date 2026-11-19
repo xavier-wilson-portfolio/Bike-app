@@ -1,0 +1,65 @@
+{
+ "id": "benelli-250-350-500-quattro-1974",
+ "make": "Benelli",
+ "model": "250 / 350 / 500 Quattro",
+ "name": "Benelli 250 / 350 / 500 Quattro",
+ "years": [
+  1974,
+  1985
+ ],
+ "match": [
+  "benelli 500 quattro",
+  "benelli 350 quattro",
+  "benelli 250 quattro",
+  "354 sport",
+  "504 sport"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "231 to 498 cc air-cooled SOHC inline four",
+ "intro": "Small Italian fours built during the De Tomaso years.",
+ "focus": [
+  [
+   "Inline four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "QUATTRO"
+}

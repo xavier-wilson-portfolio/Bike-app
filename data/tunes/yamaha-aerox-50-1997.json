@@ -1,0 +1,64 @@
+{
+ "id": "yamaha-aerox-50-1997",
+ "make": "Yamaha",
+ "model": "Aerox 50",
+ "name": "Yamaha Aerox 50",
+ "years": [
+  1997,
+  2013
+ ],
+ "match": [
+  "aerox",
+  "aerox 50",
+  "yq50",
+  "aerox r"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 cc liquid-cooled two-stroke single, oil injection, CVT",
+ "intro": "A sporty European two-stroke scooter and a tuning favorite.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "Oil injection",
+   "Bleed the pump"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "AEROX"
+}

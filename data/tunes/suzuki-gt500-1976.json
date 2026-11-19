@@ -1,0 +1,65 @@
+{
+ "id": "suzuki-gt500-1976",
+ "make": "Suzuki",
+ "model": "GT500",
+ "name": "Suzuki GT500",
+ "years": [
+  1976,
+  1977
+ ],
+ "match": [
+  "gt500",
+  "gt 500",
+  "gt500a",
+  "gt500b"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "492 cc air-cooled two-stroke parallel twin, CCI",
+ "intro": "The last version of the T500 Titan, with a front disc and electronic ignition.",
+ "focus": [
+  [
+   "Two-stroke twin",
+   "Air-cooled"
+  ],
+  [
+   "CCI",
+   "Check pump"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Ignition",
+   "Check PEI"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Suzuki's CCI system pumps oil into the engine, so it does not need premix. Check the oil tank, pump and lines. If the pump was removed, it runs premix."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "GT500"
+}

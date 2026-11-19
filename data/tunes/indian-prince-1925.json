@@ -1,0 +1,62 @@
+{
+ "id": "indian-prince-1925",
+ "make": "Indian",
+ "model": "Prince",
+ "name": "Indian Prince",
+ "years": [
+  1925,
+  1928
+ ],
+ "match": [
+  "indian prince",
+  "prince 350"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "350 cc side-valve single",
+ "intro": "A light single-cylinder Indian meant for new riders and export.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Flathead",
+   "Set tappets"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Oil",
+   "Check system"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "E": [
+   "It is a flathead. The valves sit beside the cylinder, so set the tappets with the engine cold and check the valve guides for wear."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "PRINCE"
+}

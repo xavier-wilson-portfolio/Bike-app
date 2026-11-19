@@ -1,0 +1,59 @@
+{
+ "id": "mv-agusta-600-four-1967",
+ "make": "MV Agusta",
+ "model": "600 Four",
+ "name": "MV Agusta 600 Four",
+ "years": [
+  1967,
+  1972
+ ],
+ "match": [
+  "600 four",
+  "mv 600",
+  "600 quattro"
+ ],
+ "style": "touring",
+ "drive": "shaft",
+ "engine": "592 cc air-cooled DOHC inline four, shaft drive",
+ "intro": "MV's first road four, a heavy tourer that sold in small numbers.",
+ "focus": [
+  [
+   "Inline four",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Gear-driven cams",
+   "Listen"
+  ],
+  [
+   "Shaft drive",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "MV Agusta forum",
+   "url": "https://www.mvagusta.net/",
+   "what": "Owner forum for MV Agusta motorcycles."
+  }
+ ],
+ "heroName": "600 FOUR"
+}

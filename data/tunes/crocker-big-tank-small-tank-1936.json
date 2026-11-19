@@ -1,0 +1,59 @@
+{
+ "id": "crocker-big-tank-small-tank-1936",
+ "make": "Crocker",
+ "model": "Big Tank / Small Tank",
+ "name": "Crocker Big Tank / Small Tank",
+ "years": [
+  1936,
+  1942
+ ],
+ "match": [
+  "crocker",
+  "crocker big tank",
+  "crocker small tank"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "61 cu in OHV V-twin",
+ "intro": "Al Crocker's hand-built V-twins, among the most valuable American bikes.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "CROCKER"
+}

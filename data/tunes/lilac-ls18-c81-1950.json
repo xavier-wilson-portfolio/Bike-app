@@ -1,0 +1,59 @@
+{
+ "id": "lilac-ls18-c81-1950",
+ "make": "Lilac",
+ "model": "LS18 / C81",
+ "name": "Lilac LS18 / C81",
+ "years": [
+  1950,
+  1967
+ ],
+ "match": [
+  "lilac",
+  "lilac ls18",
+  "marusho lilac"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "125 to 300 cc V-twin or single, shaft drive",
+ "intro": "A Japanese maker of shaft-drive V-twins, now rare.",
+ "focus": [
+  [
+   "Engine",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Shaft drive",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "LILAC"
+}

@@ -1,0 +1,60 @@
+{
+ "id": "ktm-lc4-350-400-600-early-1987",
+ "make": "KTM",
+ "model": "LC4 350 / 400 / 600 (early)",
+ "name": "KTM LC4 350 / 400 / 600 (early)",
+ "years": [
+  1987,
+  1993
+ ],
+ "match": [
+  "lc4 600",
+  "lc4 400",
+  "600 lc4",
+  "ktm 600 enduro",
+  "lc4 350"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "350 to 553 cc liquid-cooled four-stroke single, kick start",
+ "intro": "The first LC4 singles. Tough, tall and hard to start when tired.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Kick start",
+   "Learn the drill"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a KTM dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KTM Forums",
+   "url": "https://www.ktmforums.com/",
+   "what": "Owner forum for KTM street and adventure bikes."
+  }
+ ],
+ "heroName": "LC4"
+}

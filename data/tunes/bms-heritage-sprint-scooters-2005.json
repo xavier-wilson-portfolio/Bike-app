@@ -1,0 +1,59 @@
+{
+ "id": "bms-heritage-sprint-scooters-2005",
+ "make": "BMS",
+ "model": "Heritage / Sprint scooters",
+ "name": "BMS Heritage / Sprint scooters",
+ "years": [
+  2005,
+  2026
+ ],
+ "match": [
+  "bms heritage",
+  "bms sprint",
+  "bms scooter"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 to 150 cc air-cooled single",
+ "intro": "Chinese scooters sold through US dealers.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Wiring",
+   "Check connectors"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "BMS"
+}

@@ -1,0 +1,60 @@
+{
+ "id": "suzuki-gs125-1982",
+ "make": "Suzuki",
+ "model": "GS125",
+ "name": "Suzuki GS125",
+ "years": [
+  1982,
+  2001
+ ],
+ "match": [
+  "gs125",
+  "gs 125",
+  "gs125e",
+  "gs125es"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "124 cc air-cooled SOHC single",
+ "intro": "A cheap, durable small commuter sold in Europe and Asia.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The GS Resources forum",
+   "url": "https://www.thegsresources.com/_forum/",
+   "what": "Owner forum for Suzuki GS fours and twins."
+  }
+ ],
+ "heroName": "GS125"
+}

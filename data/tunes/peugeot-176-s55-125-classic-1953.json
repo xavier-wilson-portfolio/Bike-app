@@ -1,0 +1,60 @@
+{
+ "id": "peugeot-176-s55-125-classic-1953",
+ "make": "Peugeot",
+ "model": "176 / S55 / 125 (classic)",
+ "name": "Peugeot 176 / S55 / 125 (classic)",
+ "years": [
+  1953,
+  1960
+ ],
+ "match": [
+  "peugeot 176",
+  "peugeot s55",
+  "peugeot 125 1955"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "125 to 175 cc two- and four-stroke singles",
+ "intro": "Peugeot's post-war motorcycles before it focused on mopeds.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Oil",
+   "Check type"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "heroName": "PEUGEOT 176"
+}

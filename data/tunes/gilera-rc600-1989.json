@@ -1,0 +1,58 @@
+{
+ "id": "gilera-rc600-1989",
+ "make": "Gilera",
+ "model": "RC600",
+ "name": "Gilera RC600",
+ "years": [
+  1989,
+  1994
+ ],
+ "match": [
+  "rc600",
+  "rc 600",
+  "gilera rc"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "558 cc liquid-cooled single",
+ "intro": "Gilera's big desert-style enduro.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant check"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "RC600"
+}

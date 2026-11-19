@@ -1,0 +1,59 @@
+{
+ "id": "jawa-classic-42-perak-classic-legends-2018",
+ "make": "Jawa",
+ "model": "Classic / 42 / Perak (Classic Legends)",
+ "name": "Jawa Classic / 42 / Perak (Classic Legends)",
+ "years": [
+  2018,
+  2026
+ ],
+ "match": [
+  "jawa 42",
+  "jawa classic 2019",
+  "jawa perak 2020",
+  "jawa 350 2024"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "293 or 334 cc liquid-cooled single",
+ "intro": "Indian-built Jawas from Classic Legends, styled after the old bikes.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant check"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "JAWA"
+}

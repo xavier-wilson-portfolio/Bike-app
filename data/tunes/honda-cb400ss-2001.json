@@ -1,0 +1,59 @@
+{
+ "id": "honda-cb400ss-2001",
+ "make": "Honda",
+ "model": "CB400SS",
+ "name": "Honda CB400SS",
+ "years": [
+  2001,
+  2008
+ ],
+ "match": [
+  "cb400ss",
+  "cb 400 ss",
+  "cb400 ss"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "397 cc air-cooled single, kick and electric start",
+ "intro": "A retro single from Japan with a kick starter as well as electric start. Usually an import.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check stator"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "CB400SS"
+}

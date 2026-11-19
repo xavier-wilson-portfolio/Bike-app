@@ -1,0 +1,64 @@
+{
+ "id": "montesa-brio-1954",
+ "make": "Montesa",
+ "model": "Brio",
+ "name": "Montesa Brio",
+ "years": [
+  1954,
+  1962
+ ],
+ "match": [
+  "brio 90",
+  "brio 110",
+  "montesa brio"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "90 to 125 cc two-stroke single",
+ "intro": "Montesa's early road bikes.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "TrialsCentral",
+   "url": "https://www.trialscentral.com/",
+   "what": "Forum for trials riders, with sections for most trials makes."
+  }
+ ],
+ "heroName": "MONTESA BRIO"
+}

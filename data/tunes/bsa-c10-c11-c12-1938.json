@@ -1,0 +1,61 @@
+{
+ "id": "bsa-c10-c11-c12-1938",
+ "make": "BSA",
+ "model": "C10 / C11 / C12",
+ "name": "BSA C10 / C11 / C12",
+ "years": [
+  1938,
+  1958
+ ],
+ "match": [
+  "c10",
+  "c11",
+  "c12",
+  "c11g",
+  "bsa c11"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "249 cc side-valve or OHV single",
+ "intro": "BSA's small 250 singles of the 1940s and 1950s. Plain and common.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Coil ignition",
+   "Check points"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Gearbox",
+   "Check oil"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BSA Owners Club",
+   "url": "https://www.bsaoc.org/",
+   "what": "Owner club for BSA motorcycles, with tech help and parts."
+  }
+ ],
+ "heroName": "C11"
+}

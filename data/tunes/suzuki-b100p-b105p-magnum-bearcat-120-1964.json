@@ -1,0 +1,66 @@
+{
+ "id": "suzuki-b100p-b105p-magnum-bearcat-120-1964",
+ "make": "Suzuki",
+ "model": "B100P / B105P Magnum / Bearcat 120",
+ "name": "Suzuki B100P / B105P Magnum / Bearcat 120",
+ "years": [
+  1964,
+  1969
+ ],
+ "match": [
+  "b100p",
+  "b105p",
+  "bearcat",
+  "magnum 120",
+  "suzuki 120"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "118 cc air-cooled rotary-valve two-stroke single, Posi-Force oil injection",
+ "intro": "Suzuki's early 120 cc singles sold in the US. Simple, light and now rare.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Oil injection",
+   "Bleed the pump"
+  ],
+  [
+   "Rotary valve",
+   "Check disc"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "BEARCAT"
+}

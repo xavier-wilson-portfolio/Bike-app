@@ -1,0 +1,59 @@
+{
+ "id": "sanglas-400-500-1962",
+ "make": "Sanglas",
+ "model": "400 / 500",
+ "name": "Sanglas 400 / 500",
+ "years": [
+  1962,
+  1981
+ ],
+ "match": [
+  "sanglas",
+  "sanglas 400",
+  "sanglas 500"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "348 to 496 cc four-stroke single",
+ "intro": "Spanish four-stroke singles, widely used by the police.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "SANGLAS"
+}

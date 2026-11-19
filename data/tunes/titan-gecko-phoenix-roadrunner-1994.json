@@ -1,0 +1,60 @@
+{
+ "id": "titan-gecko-phoenix-roadrunner-1994",
+ "make": "Titan",
+ "model": "Gecko / Phoenix / Roadrunner",
+ "name": "Titan Gecko / Phoenix / Roadrunner",
+ "years": [
+  1994,
+  2001
+ ],
+ "match": [
+  "titan gecko",
+  "titan phoenix",
+  "titan roadrunner",
+  "titan motorcycle"
+ ],
+ "style": "cruiser",
+ "drive": "belt",
+ "engine": "S&S V-twin, Harley-style custom",
+ "intro": "Factory customs built in Phoenix, Arizona.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Pushrods",
+   "Check them"
+  ],
+  [
+   "Charging",
+   "Check stator"
+  ],
+  [
+   "Belt drive",
+   "Check tension"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "HDForums",
+   "url": "https://www.hdforums.com/",
+   "what": "Large owner forum for all Harley-Davidson models."
+  }
+ ],
+ "heroName": "TITAN"
+}

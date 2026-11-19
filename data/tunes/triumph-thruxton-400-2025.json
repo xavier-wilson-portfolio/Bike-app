@@ -1,0 +1,57 @@
+{
+ "id": "triumph-thruxton-400-2025",
+ "make": "Triumph",
+ "model": "Thruxton 400",
+ "name": "Triumph Thruxton 400",
+ "years": [
+  2025,
+  2026
+ ],
+ "match": [
+  "thruxton 400",
+  "thruxton400"
+ ],
+ "style": "cafe",
+ "drive": "chain",
+ "engine": "398 cc liquid-cooled single",
+ "intro": "A cafe racer built on the Speed 400 engine.",
+ "focus": [
+  [
+   "Single",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant check"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Triumph has issued recalls on some bikes in these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The Triumph Forum",
+   "url": "https://www.thetriumphforum.com/",
+   "what": "Owner forum for modern and classic Triumphs."
+  }
+ ],
+ "heroName": "THRUXTON 400"
+}

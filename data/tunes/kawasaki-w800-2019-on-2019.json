@@ -1,0 +1,60 @@
+{
+ "id": "kawasaki-w800-2019-on-2019",
+ "make": "Kawasaki",
+ "model": "W800 (2019 on)",
+ "name": "Kawasaki W800 (2019 on)",
+ "years": [
+  2019,
+  2026
+ ],
+ "match": [
+  "w800 2019",
+  "w800 cafe",
+  "w800 street",
+  "w 800 2020"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "773 cc air-cooled bevel-drive parallel twin, fuel injected",
+ "intro": "The second-generation W800 with a bevel-driven cam like the old W1.",
+ "focus": [
+  [
+   "Twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Bevel drive",
+   "Listen for noise"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KawiForums",
+   "url": "https://www.kawiforums.com/",
+   "what": "Owner forum for Kawasaki motorcycles."
+  }
+ ],
+ "heroName": "W800"
+}

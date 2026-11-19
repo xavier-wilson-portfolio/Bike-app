@@ -1,0 +1,64 @@
+{
+ "id": "gnome-et-rhone-major-ax2-r4-1919",
+ "make": "Gnome et Rhone",
+ "model": "Major / AX2 / R4",
+ "name": "Gnome et Rhone Major / AX2 / R4",
+ "years": [
+  1919,
+  1959
+ ],
+ "match": [
+  "gnome rhone",
+  "gnome et rhone",
+  "ax2",
+  "gnome rhone major"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "Singles and flat twins, side valve or OHV",
+ "intro": "French bikes from the aero-engine maker, including the AX2 military sidecar outfit.",
+ "focus": [
+  [
+   "Engine",
+   "Air-cooled"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Drive",
+   "Check it"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "GNOME RHONE"
+}

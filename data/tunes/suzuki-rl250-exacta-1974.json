@@ -1,0 +1,61 @@
+{
+ "id": "suzuki-rl250-exacta-1974",
+ "make": "Suzuki",
+ "model": "RL250 Exacta",
+ "name": "Suzuki RL250 Exacta",
+ "years": [
+  1974,
+  1976
+ ],
+ "match": [
+  "rl250",
+  "rl 250",
+  "exacta",
+  "beamish suzuki"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "246 cc air-cooled two-stroke single, trials bike",
+ "intro": "Suzuki's trials bike, developed with the Beamish family. Rare today.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Oil",
+   "Check system"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Low gearing",
+   "Check sprockets"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "TrialsCentral",
+   "url": "https://www.trialscentral.com/",
+   "what": "Forum for trials riders, with sections for most trials makes."
+  }
+ ],
+ "heroName": "RL250"
+}

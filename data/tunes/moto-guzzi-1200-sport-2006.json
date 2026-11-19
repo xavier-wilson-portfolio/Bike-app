@@ -1,0 +1,63 @@
+{
+ "id": "moto-guzzi-1200-sport-2006",
+ "make": "Moto Guzzi",
+ "model": "1200 Sport",
+ "name": "Moto Guzzi 1200 Sport",
+ "years": [
+  2006,
+  2013
+ ],
+ "match": [
+  "1200 sport",
+  "1200 sport 4v",
+  "guzzi 1200 sport"
+ ],
+ "style": "standard",
+ "drive": "shaft",
+ "engine": "1151 cc air-cooled V-twin, fuel injected, half fairing",
+ "intro": "A sporty half-faired big-block built on the Breva 1100 chassis.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Set rockers"
+  ],
+  [
+   "Dry clutch",
+   "Check it"
+  ],
+  [
+   "Shaft drive",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Guzzi V-twins need the valves set and the throttle bodies or carbs balanced together. Do both at the same service."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moto Guzzi National Owners Club",
+   "url": "https://www.mgnoc.org/",
+   "what": "US owner club for Moto Guzzi."
+  }
+ ],
+ "heroName": "1200 SPORT"
+}

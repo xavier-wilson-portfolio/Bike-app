@@ -1,0 +1,62 @@
+{
+ "id": "bmw-r850gs-1998",
+ "make": "BMW",
+ "model": "R850GS",
+ "name": "BMW R850GS",
+ "years": [
+  1998,
+  2000
+ ],
+ "match": [
+  "r850gs",
+  "r 850 gs"
+ ],
+ "style": "adventure",
+ "drive": "shaft",
+ "engine": "848 cc oilhead boxer twin",
+ "intro": "A smaller-bore R1100GS sold in Europe.",
+ "focus": [
+  [
+   "Boxer twin",
+   "Air/oil-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Set rockers"
+  ],
+  [
+   "Throttle bodies",
+   "Sync them"
+  ],
+  [
+   "Shaft drive",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Boxer twins need the valve clearance checked on both sides and the throttle bodies synced. Do both at the same service."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "BMW has issued several recalls across these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "UKGSer forum",
+   "url": "https://www.ukgser.com/community/",
+   "what": "Owner forum for BMW GS models."
+  }
+ ],
+ "heroName": "R850GS"
+}

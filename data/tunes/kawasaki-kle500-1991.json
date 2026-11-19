@@ -1,0 +1,57 @@
+{
+ "id": "kawasaki-kle500-1991",
+ "make": "Kawasaki",
+ "model": "KLE500",
+ "name": "Kawasaki KLE500",
+ "years": [
+  1991,
+  2007
+ ],
+ "match": [
+  "kle500",
+  "kle 500"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "498 cc liquid-cooled parallel twin from the EX500",
+ "intro": "A road-biased dual sport with the EX500 twin. Sold in Europe.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Kawasaki dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "KLE500"
+}

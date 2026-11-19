@@ -1,0 +1,64 @@
+{
+ "id": "cagiva-freccia-c12-1987",
+ "make": "Cagiva",
+ "model": "Freccia C12",
+ "name": "Cagiva Freccia C12",
+ "years": [
+  1987,
+  1991
+ ],
+ "match": [
+  "freccia",
+  "c12",
+  "freccia c12",
+  "freccia c10"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "124 cc liquid-cooled two-stroke single",
+ "intro": "The two-stroke sport bike that came before the Mito.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid-cooled"
+  ],
+  [
+   "Oil injection",
+   "Check pump"
+  ],
+  [
+   "Power valve",
+   "Clean it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "FRECCIA"
+}

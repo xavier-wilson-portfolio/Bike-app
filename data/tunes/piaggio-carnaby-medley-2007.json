@@ -1,0 +1,59 @@
+{
+ "id": "piaggio-carnaby-medley-2007",
+ "make": "Piaggio",
+ "model": "Carnaby / Medley",
+ "name": "Piaggio Carnaby / Medley",
+ "years": [
+  2007,
+  2026
+ ],
+ "match": [
+  "carnaby",
+  "medley",
+  "carnaby 300",
+  "medley 150"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "124 to 300 cc single, big wheels",
+ "intro": "Big-wheel Piaggio city scooters.",
+ "focus": [
+  [
+   "Single",
+   "Liquid or air cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ],
+  [
+   "Body panels",
+   "Check clips"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "MEDLEY"
+}

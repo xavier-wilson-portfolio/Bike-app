@@ -1,0 +1,58 @@
+{
+ "id": "bajaj-pulsar-150-180-220-2001",
+ "make": "Bajaj",
+ "model": "Pulsar 150 / 180 / 220",
+ "name": "Bajaj Pulsar 150 / 180 / 220",
+ "years": [
+  2001,
+  2026
+ ],
+ "match": [
+  "pulsar",
+  "pulsar 220",
+  "pulsar 180",
+  "pulsar 150",
+  "ns200"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "149 to 220 cc air- or oil-cooled single",
+ "intro": "India's best-selling sporty commuter, also sold in Latin America.",
+ "focus": [
+  [
+   "Single",
+   "Air or oil cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "PULSAR"
+}

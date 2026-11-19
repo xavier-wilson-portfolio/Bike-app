@@ -1,0 +1,59 @@
+{
+ "id": "kawasaki-kaze-blitz-underbone-1995",
+ "make": "Kawasaki",
+ "model": "Kaze / Blitz underbone",
+ "name": "Kawasaki Kaze / Blitz underbone",
+ "years": [
+  1995,
+  2010
+ ],
+ "match": [
+  "kaze",
+  "blitz",
+  "kawasaki kaze"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "111 to 125 cc air-cooled single, underbone",
+ "intro": "Small Kawasaki underbones sold in Southeast Asia.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Clutch",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KawiForums",
+   "url": "https://www.kawiforums.com/",
+   "what": "Owner forum for Kawasaki motorcycles."
+  }
+ ],
+ "heroName": "KAZE"
+}

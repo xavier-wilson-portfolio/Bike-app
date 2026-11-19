@@ -1,0 +1,57 @@
+{
+ "id": "sym-jet-4-jet-14-orbit-2008",
+ "make": "SYM",
+ "model": "Jet 4 / Jet 14 / Orbit",
+ "name": "SYM Jet 4 / Jet 14 / Orbit",
+ "years": [
+  2008,
+  2026
+ ],
+ "match": [
+  "jet 4",
+  "jet 14",
+  "sym orbit",
+  "orbit ii"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 to 125 cc single",
+ "intro": "Small SYM city scooters sold in Europe.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check pads"
+  ],
+  [
+   "Body panels",
+   "Check clips"
+  ]
+ ],
+ "remove": [],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "JET 4"
+}

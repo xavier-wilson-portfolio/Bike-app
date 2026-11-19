@@ -1,0 +1,58 @@
+{
+ "id": "suzuki-vz1600-marauder-2004",
+ "make": "Suzuki",
+ "model": "VZ1600 Marauder",
+ "name": "Suzuki VZ1600 Marauder",
+ "years": [
+  2004,
+  2005
+ ],
+ "match": [
+  "vz1600",
+  "marauder 1600",
+  "vz 1600"
+ ],
+ "style": "cruiser",
+ "drive": "shaft",
+ "engine": "1602 cc oil-cooled V-twin, shaft drive",
+ "intro": "A big power cruiser sold for two years in the US.",
+ "focus": [
+  [
+   "V-twin",
+   "Oil-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Oil cooler",
+   "Check lines"
+  ],
+  [
+   "Shaft drive",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Suzuki Forums",
+   "url": "https://www.suzuki-forums.com/forums/",
+   "what": "General owner forum for Suzuki motorcycles."
+  }
+ ],
+ "heroName": "MARAUDER"
+}

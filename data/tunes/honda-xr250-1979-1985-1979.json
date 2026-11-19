@@ -1,0 +1,63 @@
+{
+ "id": "honda-xr250-1979-1985-1979",
+ "make": "Honda",
+ "model": "XR250 (1979-1985)",
+ "name": "Honda XR250 (1979-1985)",
+ "years": [
+  1979,
+  1985
+ ],
+ "match": [
+  "xr250",
+  "xr 250",
+  "xr250r 1984"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "248 cc air-cooled four-valve single, kick start",
+ "intro": "The first XR250 off-road bikes. Tough four-stroke singles with simple carbs.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cam chain",
+   "Check tensioner"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Air-cooled Honda singles need the valve clearance checked often. A tight exhaust valve is the usual cause of hard starting."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Honda dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XR's Only",
+   "url": "https://www.xrsonly.com/",
+   "what": "Parts and know-how for Honda XR dirt bikes."
+  }
+ ],
+ "heroName": "XR250"
+}

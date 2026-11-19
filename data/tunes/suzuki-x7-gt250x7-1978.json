@@ -1,0 +1,64 @@
+{
+ "id": "suzuki-x7-gt250x7-1978",
+ "make": "Suzuki",
+ "model": "X7 (GT250X7)",
+ "name": "Suzuki X7 (GT250X7)",
+ "years": [
+  1978,
+  1980
+ ],
+ "match": [
+  "x7",
+  "gt250x7",
+  "gt 250 x7"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "247 cc air-cooled two-stroke twin, CCI",
+ "intro": "A fast quarter-liter two-stroke twin, famous for hitting 100 mph.",
+ "focus": [
+  [
+   "Two-stroke twin",
+   "Air-cooled"
+  ],
+  [
+   "CCI",
+   "Check pump"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "Suzuki's CCI system pumps oil into the engine, so it does not need premix. Check the oil tank, pump and lines. If the pump was removed, it runs premix."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "The GS Resources forum",
+   "url": "https://www.thegsresources.com/_forum/",
+   "what": "Owner forum for Suzuki GS fours and twins."
+  }
+ ],
+ "heroName": "X7"
+}

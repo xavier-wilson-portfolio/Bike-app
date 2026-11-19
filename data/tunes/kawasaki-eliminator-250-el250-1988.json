@@ -1,0 +1,58 @@
+{
+ "id": "kawasaki-eliminator-250-el250-1988",
+ "make": "Kawasaki",
+ "model": "Eliminator 250 (EL250)",
+ "name": "Kawasaki Eliminator 250 (EL250)",
+ "years": [
+  1988,
+  2017
+ ],
+ "match": [
+  "el250",
+  "eliminator 250",
+  "el 250"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "249 cc liquid-cooled parallel twin from the Ninja 250",
+ "intro": "A small drag-style cruiser with the Ninja 250 engine.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vulcan Riders Association",
+   "url": "https://www.vulcanriders.org/",
+   "what": "Owner club and forum for Kawasaki Vulcans."
+  }
+ ],
+ "heroName": "ELIMINATOR"
+}

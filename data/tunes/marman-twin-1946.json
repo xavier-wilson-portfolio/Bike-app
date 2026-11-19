@@ -1,0 +1,58 @@
+{
+ "id": "marman-twin-1946",
+ "make": "Marman",
+ "model": "Twin",
+ "name": "Marman Twin",
+ "years": [
+  1946,
+  1950
+ ],
+ "match": [
+  "marman",
+  "marman twin"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "Small flat-twin bicycle engine kit",
+ "intro": "A flat-twin bicycle engine kit from Zeppo Marx's Marman Products.",
+ "focus": [
+  [
+   "Flat twin",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Drive",
+   "Check it"
+  ],
+  [
+   "Brakes",
+   "Check them"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "MARMAN"
+}

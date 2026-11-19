@@ -1,0 +1,60 @@
+{
+ "id": "honda-cb190r-cbf190-2015",
+ "make": "Honda",
+ "model": "CB190R / CBF190",
+ "name": "Honda CB190R / CBF190",
+ "years": [
+  2015,
+  2026
+ ],
+ "match": [
+  "cb190r",
+  "cbf190",
+  "cb190x",
+  "cb 190"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "184 cc air-cooled single",
+ "intro": "A Chinese-built Honda roadster sold in Asia.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "CB190R"
+}

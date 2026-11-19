@@ -1,0 +1,59 @@
+{
+ "id": "kawasaki-er-5-1997",
+ "make": "Kawasaki",
+ "model": "ER-5",
+ "name": "Kawasaki ER-5",
+ "years": [
+  1997,
+  2006
+ ],
+ "match": [
+  "er-5",
+  "er5",
+  "er 5",
+  "er500"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "498 cc liquid-cooled parallel twin from the EX500",
+ "intro": "A plain naked twin with the GPZ500S engine. A common learner bike in Europe.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KawiForums",
+   "url": "https://www.kawiforums.com/",
+   "what": "Owner forum for Kawasaki motorcycles."
+  }
+ ],
+ "heroName": "ER-5"
+}

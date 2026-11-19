@@ -1,0 +1,59 @@
+{
+ "id": "honda-xr125l-2003",
+ "make": "Honda",
+ "model": "XR125L",
+ "name": "Honda XR125L",
+ "years": [
+  2003,
+  2012
+ ],
+ "match": [
+  "xr125l",
+  "xr 125 l",
+  "xr125"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "124 cc air-cooled single, carb",
+ "intro": "A small, cheap dual sport sold in Europe and Latin America.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Honda dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XR's Only",
+   "url": "https://www.xrsonly.com/",
+   "what": "Parts and know-how for Honda XR dirt bikes."
+  }
+ ],
+ "heroName": "XR125L"
+}

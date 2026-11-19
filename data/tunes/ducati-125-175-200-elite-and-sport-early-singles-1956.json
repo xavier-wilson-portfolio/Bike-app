@@ -1,0 +1,65 @@
+{
+ "id": "ducati-125-175-200-elite-and-sport-early-singles-1956",
+ "make": "Ducati",
+ "model": "125 / 175 / 200 Elite and Sport (early singles)",
+ "name": "Ducati 125 / 175 / 200 Elite and Sport (early singles)",
+ "years": [
+  1956,
+  1965
+ ],
+ "match": [
+  "ducati 175",
+  "ducati 200 elite",
+  "ducati 125 sport",
+  "175 sport",
+  "200 elite"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "124 to 204 cc OHC bevel-drive single",
+ "intro": "Ducati's early bevel-drive singles that came before the wide-case 250s.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Bevel drive",
+   "Check gears"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "The bevel-drive cams are set with shims and need patience. Check the bevel gear backlash and the desmo shims before you run it hard."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Ducati.ms",
+   "url": "https://www.ducati.ms/",
+   "what": "Large owner forum for Ducati models."
+  }
+ ],
+ "heroName": "ELITE"
+}

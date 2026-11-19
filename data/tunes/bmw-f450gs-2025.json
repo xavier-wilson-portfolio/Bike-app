@@ -1,0 +1,57 @@
+{
+ "id": "bmw-f450gs-2025",
+ "make": "BMW",
+ "model": "F450GS",
+ "name": "BMW F450GS",
+ "years": [
+  2025,
+  2026
+ ],
+ "match": [
+  "f450gs",
+  "f 450 gs"
+ ],
+ "style": "adventure",
+ "drive": "chain",
+ "engine": "420 cc liquid-cooled parallel twin",
+ "intro": "BMW's small adventure twin built with TVS.",
+ "focus": [
+  [
+   "Twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "BMW has issued several recalls across these years. Run your VIN at nhtsa.gov/recalls before you start.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "F450GS"
+}

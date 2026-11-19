@@ -1,0 +1,65 @@
+{
+ "id": "kreidler-rs-rmc-flory-1965",
+ "make": "Kreidler",
+ "model": "RS / RMC / Flory",
+ "name": "Kreidler RS / RMC / Flory",
+ "years": [
+  1965,
+  1982
+ ],
+ "match": [
+  "kreidler rs",
+  "kreidler rmc",
+  "kreidler flory",
+  "kreidler mustang"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "49 cc two-stroke single, sport moped",
+ "intro": "Kreidler's later sport mopeds after the Florett.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "heroName": "KREIDLER RS"
+}

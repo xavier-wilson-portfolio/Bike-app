@@ -1,0 +1,59 @@
+{
+ "id": "benelli-650-tornado-1971",
+ "make": "Benelli",
+ "model": "650 Tornado",
+ "name": "Benelli 650 Tornado",
+ "years": [
+  1971,
+  1975
+ ],
+ "match": [
+  "tornado 650",
+  "650 tornado",
+  "benelli 650s"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "643 cc air-cooled OHV parallel twin",
+ "intro": "Benelli's British-style 650 twin aimed at the US.",
+ "focus": [
+  [
+   "Twin",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large riding forum with threads on most European makes, old and new."
+  }
+ ],
+ "heroName": "TORNADO 650"
+}

@@ -1,0 +1,60 @@
+{
+ "id": "ducati-cucciolo-1946",
+ "make": "Ducati",
+ "model": "Cucciolo",
+ "name": "Ducati Cucciolo",
+ "years": [
+  1946,
+  1953
+ ],
+ "match": [
+  "cucciolo",
+  "ducati cucciolo",
+  "t1",
+  "t2"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "48 cc four-stroke clip-on engine",
+ "intro": "The small engine that started Ducati's motorcycle business.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Valves",
+   "Pull-rod"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Drive",
+   "Check it"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "heroName": "CUCCIOLO"
+}

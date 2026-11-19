@@ -1,0 +1,64 @@
+{
+ "id": "pannonia-250-1951",
+ "make": "Pannonia",
+ "model": "250",
+ "name": "Pannonia 250",
+ "years": [
+  1951,
+  1975
+ ],
+ "match": [
+  "pannonia",
+  "pannonia 250",
+  "pannonia tlf"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "247 cc two-stroke single",
+ "intro": "A Hungarian two-stroke from Csepel.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "PANNONIA"
+}

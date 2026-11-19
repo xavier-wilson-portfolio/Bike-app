@@ -1,0 +1,69 @@
+{
+ "id": "triumph-tiger-70-80-90-pre-war-1937",
+ "make": "Triumph",
+ "model": "Tiger 70 / 80 / 90 (pre-war)",
+ "name": "Triumph Tiger 70 / 80 / 90 (pre-war)",
+ "years": [
+  1937,
+  1940
+ ],
+ "match": [
+  "tiger 70",
+  "tiger 80",
+  "tiger 90",
+  "t70",
+  "t80",
+  "t90 triumph"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "250 to 500 cc OHV single, Edward Turner design",
+ "intro": "Edward Turner's sporting singles from the late 1930s. Rare today.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Gearbox",
+   "Separate oil"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ],
+  "K": [
+   "The gearbox is separate from the engine and has its own oil. Check and change both, and set the primary chain."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "TIGER 90"
+}

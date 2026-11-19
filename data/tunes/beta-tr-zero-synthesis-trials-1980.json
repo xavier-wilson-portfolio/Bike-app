@@ -1,0 +1,64 @@
+{
+ "id": "beta-tr-zero-synthesis-trials-1980",
+ "make": "Beta",
+ "model": "TR / Zero / Synthesis trials",
+ "name": "Beta TR / Zero / Synthesis trials",
+ "years": [
+  1980,
+  1993
+ ],
+ "match": [
+  "beta tr32",
+  "beta tr34",
+  "beta zero",
+  "synthesis"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "240 to 260 cc two-stroke trials single",
+ "intro": "Beta's early trials bikes.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Liquid or air cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Clutch",
+   "Check plates"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road and trials models are often not in the NHTSA recall search. Ask a dealer for the make to run the frame number.",
+ "known": [],
+ "forums": [
+  {
+   "name": "TrialsCentral",
+   "url": "https://www.trialscentral.com/",
+   "what": "Forum for trials riders, with sections for most trials makes."
+  }
+ ],
+ "heroName": "BETA ZERO"
+}

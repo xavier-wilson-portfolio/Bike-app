@@ -1,0 +1,64 @@
+{
+ "id": "honda-c110-sport-cub-1960",
+ "make": "Honda",
+ "model": "C110 Sport Cub",
+ "name": "Honda C110 Sport Cub",
+ "years": [
+  1960,
+  1966
+ ],
+ "match": [
+  "c110",
+  "sport cub",
+  "c111",
+  "c114"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "49 cc air-cooled OHV single, sport step-through",
+ "intro": "A sporty Cub with a dropped bar and a manual clutch on some versions.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Six-volt",
+   "Check charging"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "SPORT CUB"
+}

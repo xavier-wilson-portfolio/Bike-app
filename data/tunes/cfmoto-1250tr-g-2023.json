@@ -1,0 +1,58 @@
+{
+ "id": "cfmoto-1250tr-g-2023",
+ "make": "CFMoto",
+ "model": "1250TR-G",
+ "name": "CFMoto 1250TR-G",
+ "years": [
+  2023,
+  2026
+ ],
+ "match": [
+  "1250tr-g",
+  "1250 tr-g",
+  "cfmoto 1250"
+ ],
+ "style": "touring",
+ "drive": "belt",
+ "engine": "1279 cc liquid-cooled V-twin",
+ "intro": "CFMoto's big touring bike.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Electronics",
+   "Scan for codes"
+  ],
+  [
+   "Cooling",
+   "Coolant and fans"
+  ],
+  [
+   "Belt drive",
+   "Check tension"
+  ]
+ ],
+ "remove": [
+  "G-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "CFMoto forum",
+   "url": "https://www.cfmotoforum.com/",
+   "what": "Owner forum for CFMoto motorcycles."
+  }
+ ],
+ "heroName": "1250TR-G"
+}

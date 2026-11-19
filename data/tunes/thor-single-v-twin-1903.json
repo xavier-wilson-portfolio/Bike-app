@@ -1,0 +1,63 @@
+{
+ "id": "thor-single-v-twin-1903",
+ "make": "Thor",
+ "model": "Single / V-twin",
+ "name": "Thor Single / V-twin",
+ "years": [
+  1903,
+  1920
+ ],
+ "match": [
+  "thor",
+  "thor motorcycle",
+  "thor twin"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "IOE single or V-twin",
+ "intro": "Aurora Automatic Machinery's own bikes; they also built engines for Indian.",
+ "focus": [
+  [
+   "Engine",
+   "Air-cooled"
+  ],
+  [
+   "IOE valves",
+   "Set them"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Oil",
+   "Total loss"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "H": [
+   "Check whether yours has a total-loss or a recirculating oil system before you fill it, and know which one you are running."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "THOR"
+}

@@ -1,0 +1,60 @@
+{
+ "id": "mv-agusta-125-tel-cgt-pullman-1949",
+ "make": "MV Agusta",
+ "model": "125 TEL / CGT / Pullman",
+ "name": "MV Agusta 125 TEL / CGT / Pullman",
+ "years": [
+  1949,
+  1960
+ ],
+ "match": [
+  "mv 125 tel",
+  "mv pullman",
+  "mv 125 cgt"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "123 cc two- and four-stroke singles",
+ "intro": "MV's small early bikes and the Pullman scooter.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Oil",
+   "Check type"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "MV Agusta forum",
+   "url": "https://www.mvagusta.net/",
+   "what": "Owner forum for MV Agusta motorcycles."
+  }
+ ],
+ "heroName": "MV 125"
+}

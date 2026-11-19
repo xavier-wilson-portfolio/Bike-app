@@ -1,0 +1,65 @@
+{
+ "id": "puch-cobra-monza-m50-1966",
+ "make": "Puch",
+ "model": "Cobra / Monza / M50",
+ "name": "Puch Cobra / Monza / M50",
+ "years": [
+  1966,
+  1985
+ ],
+ "match": [
+  "puch cobra",
+  "puch monza",
+  "puch m50",
+  "m50 racing"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "49 cc two-stroke sport moped",
+ "intro": "Puch's sporty small bikes for European teens.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moped Army",
+   "url": "https://www.mopedarmy.com/",
+   "what": "Owner community and wiki for mopeds and small two-strokes."
+  }
+ ],
+ "heroName": "PUCH COBRA"
+}

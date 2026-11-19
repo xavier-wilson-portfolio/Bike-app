@@ -1,0 +1,62 @@
+{
+ "id": "honda-cbr400f-1983",
+ "make": "Honda",
+ "model": "CBR400F",
+ "name": "Honda CBR400F",
+ "years": [
+  1983,
+  1986
+ ],
+ "match": [
+  "cbr400f",
+  "cbr 400 f",
+  "nc17"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "399 cc air-cooled 16-valve inline four with REV",
+ "intro": "A Japanese-market 400 four with Honda's REV variable valve system.",
+ "focus": [
+  [
+   "Inline four",
+   "Air-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "REV valves",
+   "Check them"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "VFRDiscussion",
+   "url": "https://www.vfrdiscussion.com/",
+   "what": "Owner forum for Honda VFR and Interceptor models."
+  }
+ ],
+ "heroName": "CBR400F"
+}

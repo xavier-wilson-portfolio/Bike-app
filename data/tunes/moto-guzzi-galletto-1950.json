@@ -1,0 +1,60 @@
+{
+ "id": "moto-guzzi-galletto-1950",
+ "make": "Moto Guzzi",
+ "model": "Galletto",
+ "name": "Moto Guzzi Galletto",
+ "years": [
+  1950,
+  1966
+ ],
+ "match": [
+  "galletto",
+  "galletto 160",
+  "galletto 175",
+  "galletto 192"
+ ],
+ "style": "scooter",
+ "drive": "chain",
+ "engine": "160 to 192 cc horizontal single, large wheels",
+ "intro": "A big-wheel scooter, part motorcycle, part scooter.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Ignition",
+   "Check it"
+  ],
+  [
+   "Gearbox",
+   "Check oil"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Moto Guzzi National Owners Club",
+   "url": "https://www.mgnoc.org/",
+   "what": "US owner club for Moto Guzzi."
+  }
+ ],
+ "heroName": "GALLETTO"
+}

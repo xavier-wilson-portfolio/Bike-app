@@ -1,0 +1,69 @@
+{
+ "id": "bsa-sloper-1927",
+ "make": "BSA",
+ "model": "Sloper",
+ "name": "BSA Sloper",
+ "years": [
+  1927,
+  1935
+ ],
+ "match": [
+  "sloper",
+  "bsa sloper",
+  "s27",
+  "s28",
+  "s30",
+  "s32"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "493 to 595 cc inclined single, side valve or OHV",
+ "intro": "BSA's forward-sloping single. A big seller in its day.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Oil",
+   "Check system"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ],
+  "K": [
+   "The gearbox is separate from the engine and has its own oil. Check and change both, and set the primary chain."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "BSA Owners Club",
+   "url": "https://www.bsaoc.org/",
+   "what": "Owner club for BSA motorcycles, with tech help and parts."
+  }
+ ],
+ "heroName": "SLOPER"
+}

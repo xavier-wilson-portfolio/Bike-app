@@ -1,0 +1,60 @@
+{
+ "id": "znen-zn50qt-zn150t-2004",
+ "make": "Znen",
+ "model": "ZN50QT / ZN150T",
+ "name": "Znen ZN50QT / ZN150T",
+ "years": [
+  2004,
+  2026
+ ],
+ "match": [
+  "znen",
+  "zn50qt",
+  "zn150t",
+  "znen 50"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "49 or 150 cc air-cooled single (139QMB / GY6)",
+ "intro": "Chinese scooters sold in the US and Europe.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Wiring",
+   "Check connectors"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "ZNEN"
+}

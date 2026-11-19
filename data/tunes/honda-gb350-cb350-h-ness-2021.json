@@ -1,0 +1,61 @@
+{
+ "id": "honda-gb350-cb350-h-ness-2021",
+ "make": "Honda",
+ "model": "GB350 / CB350 H'ness",
+ "name": "Honda GB350 / CB350 H'ness",
+ "years": [
+  2021,
+  2026
+ ],
+ "match": [
+  "gb350",
+  "hness",
+  "h'ness",
+  "cb350 hness",
+  "cb350rs"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "348 cc air-cooled long-stroke single, fuel injected",
+ "intro": "A retro single built in India for Asia and Japan. Simple and torquey.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Fuel injected",
+   "No carbs"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Charging",
+   "Check battery"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "GB350"
+}

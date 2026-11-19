@@ -1,0 +1,65 @@
+{
+ "id": "kawasaki-ar50-ar80-ar125-1981",
+ "make": "Kawasaki",
+ "model": "AR50 / AR80 / AR125",
+ "name": "Kawasaki AR50 / AR80 / AR125",
+ "years": [
+  1981,
+  1993
+ ],
+ "match": [
+  "ar50",
+  "ar80",
+  "ar125",
+  "ar 125",
+  "ar 50"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "49 to 124 cc two-stroke single",
+ "intro": "Small sporty two-strokes for European teens.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air or liquid cooled"
+  ],
+  [
+   "Oil injection",
+   "Bleed the pump"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Check the oil injection: the tank feeds the pump, the lines are bled, and the pump cable opens with the throttle."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KZRider forum",
+   "url": "https://www.kzrider.com/",
+   "what": "Owner forum for classic Kawasakis."
+  }
+ ],
+ "heroName": "AR125"
+}

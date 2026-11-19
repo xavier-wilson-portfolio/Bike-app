@@ -1,0 +1,63 @@
+{
+ "id": "honda-cb50-cb50j-1971",
+ "make": "Honda",
+ "model": "CB50 / CB50J",
+ "name": "Honda CB50 / CB50J",
+ "years": [
+  1971,
+  1980
+ ],
+ "match": [
+  "cb50",
+  "cb50j",
+  "cb 50"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "49 cc air-cooled OHC single",
+ "intro": "A miniature CB with a five-speed gearbox.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Six-volt",
+   "Check charging"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs points ignition. Clean, gap and time the points before you chase a carb problem."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Vintage Japanese Motorcycle Club",
+   "url": "https://www.vjmc.org/",
+   "what": "Club for owners of older Japanese bikes."
+  }
+ ],
+ "heroName": "CB50"
+}

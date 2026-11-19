@@ -1,0 +1,65 @@
+{
+ "id": "honda-cr480r-cr450r-1981",
+ "make": "Honda",
+ "model": "CR480R / CR450R",
+ "name": "Honda CR480R / CR450R",
+ "years": [
+  1981,
+  1983
+ ],
+ "match": [
+  "cr480r",
+  "cr450r",
+  "cr 480",
+  "cr 450"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "431 to 474 cc two-stroke single, premix",
+ "intro": "Big-bore Honda motocrossers before the CR500R.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Off-road models are not always in the NHTSA recall search. Ask a Honda dealer to run the VIN as well.",
+ "known": [],
+ "forums": [
+  {
+   "name": "XR's Only",
+   "url": "https://www.xrsonly.com/",
+   "what": "Parts and know-how for Honda XR dirt bikes."
+  }
+ ],
+ "heroName": "CR480R"
+}

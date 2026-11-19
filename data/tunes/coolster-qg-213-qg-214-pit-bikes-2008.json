@@ -1,0 +1,60 @@
+{
+ "id": "coolster-qg-213-qg-214-pit-bikes-2008",
+ "make": "Coolster",
+ "model": "QG-213 / QG-214 pit bikes",
+ "name": "Coolster QG-213 / QG-214 pit bikes",
+ "years": [
+  2008,
+  2026
+ ],
+ "match": [
+  "coolster",
+  "qg-213",
+  "qg-214",
+  "coolster 125"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "110 to 125 cc air-cooled horizontal single",
+ "intro": "Budget pit bikes sold in the US.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Oil",
+   "Change often"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "COOLSTER"
+}

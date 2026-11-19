@@ -1,0 +1,67 @@
+{
+ "id": "suzuki-rm370-rm400-rm465-rm500-1976",
+ "make": "Suzuki",
+ "model": "RM370 / RM400 / RM465 / RM500",
+ "name": "Suzuki RM370 / RM400 / RM465 / RM500",
+ "years": [
+  1976,
+  1984
+ ],
+ "match": [
+  "rm370",
+  "rm400",
+  "rm465",
+  "rm500",
+  "rm 400",
+  "rm 465"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "370 to 492 cc two-stroke single, premix",
+ "intro": "The big-bore RM motocrossers. Strong and hard to tame.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air or liquid cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "RM400"
+}

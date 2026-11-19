@@ -1,0 +1,59 @@
+{
+ "id": "suzuki-intruder-125-250-vl125-vl250-1999",
+ "make": "Suzuki",
+ "model": "Intruder 125 / 250 (VL125 / VL250)",
+ "name": "Suzuki Intruder 125 / 250 (VL125 / VL250)",
+ "years": [
+  1999,
+  2009
+ ],
+ "match": [
+  "vl125",
+  "vl250",
+  "intruder 125",
+  "intruder 250"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "125 or 249 cc liquid-cooled V-twin",
+ "intro": "Small V-twin cruisers sold in Europe and Japan.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Check clearance"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Suzuki Forums",
+   "url": "https://www.suzuki-forums.com/forums/",
+   "what": "General owner forum for Suzuki motorcycles."
+  }
+ ],
+ "heroName": "INTRUDER"
+}

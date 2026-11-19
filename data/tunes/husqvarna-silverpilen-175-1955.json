@@ -1,0 +1,64 @@
+{
+ "id": "husqvarna-silverpilen-175-1955",
+ "make": "Husqvarna",
+ "model": "Silverpilen 175",
+ "name": "Husqvarna Silverpilen 175",
+ "years": [
+  1955,
+  1960
+ ],
+ "match": [
+  "silverpilen",
+  "silver arrow",
+  "husqvarna 175"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "175 cc two-stroke single, light frame",
+ "intro": "A light, fast Swedish two-stroke that influenced later Husqvarna dirt bikes.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Points",
+   "Clean and gap"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ThumperTalk",
+   "url": "https://www.thumpertalk.com/",
+   "what": "Big dirt bike forum with model sections for most off-road bikes."
+  }
+ ],
+ "heroName": "SILVERPILEN"
+}

@@ -1,0 +1,59 @@
+{
+ "id": "honda-xlv750r-1983",
+ "make": "Honda",
+ "model": "XLV750R",
+ "name": "Honda XLV750R",
+ "years": [
+  1983,
+  1985
+ ],
+ "match": [
+  "xlv750",
+  "xlv750r",
+  "xlv 750"
+ ],
+ "style": "dualsport",
+ "drive": "shaft",
+ "engine": "749 cc air-cooled V-twin, shaft drive",
+ "intro": "A big Paris-Dakar-inspired trail bike with a V-twin. Rare and mostly sold in Europe.",
+ "focus": [
+  [
+   "V-twin",
+   "Air-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Charging",
+   "Check stator"
+  ],
+  [
+   "Shaft drive",
+   "Change oil"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "ADVrider",
+   "url": "https://www.advrider.com/f/",
+   "what": "Large adventure riding forum with model-specific threads."
+  }
+ ],
+ "heroName": "XLV750R"
+}

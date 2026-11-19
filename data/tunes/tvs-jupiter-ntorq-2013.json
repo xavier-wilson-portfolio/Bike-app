@@ -1,0 +1,60 @@
+{
+ "id": "tvs-jupiter-ntorq-2013",
+ "make": "TVS",
+ "model": "Jupiter / Ntorq",
+ "name": "TVS Jupiter / Ntorq",
+ "years": [
+  2013,
+  2026
+ ],
+ "match": [
+  "jupiter",
+  "ntorq",
+  "tvs jupiter",
+  "ntorq 125"
+ ],
+ "style": "scooter",
+ "drive": "belt",
+ "engine": "109 or 124 cc air-cooled single",
+ "intro": "Popular TVS scooters in India.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Carb or EFI",
+   "Check it"
+  ],
+  [
+   "CVT belt",
+   "Inspect"
+  ],
+  [
+   "Brakes",
+   "Check combined"
+  ],
+  [
+   "Body panels",
+   "Check clips"
+  ]
+ ],
+ "remove": [
+  "G-004",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Modern Vespa / scooter forums",
+   "url": "https://www.modernvespa.com/forum/",
+   "what": "Big general scooter forum with sections for Yamaha scooters."
+  }
+ ],
+ "heroName": "JUPITER"
+}

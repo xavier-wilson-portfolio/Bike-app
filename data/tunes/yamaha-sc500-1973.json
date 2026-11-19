@@ -1,0 +1,63 @@
+{
+ "id": "yamaha-sc500-1973",
+ "make": "Yamaha",
+ "model": "SC500",
+ "name": "Yamaha SC500",
+ "years": [
+  1973,
+  1974
+ ],
+ "match": [
+  "sc500",
+  "sc 500"
+ ],
+ "style": "dualsport",
+ "drive": "chain",
+ "engine": "492 cc two-stroke single motocrosser",
+ "intro": "An early big-bore Yamaha motocrosser with a monoshock prototype history.",
+ "focus": [
+  [
+   "Two-stroke",
+   "Air-cooled"
+  ],
+  [
+   "Premix",
+   "Check ratio"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Top end",
+   "Check piston"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs on premix. Mix the oil into the fuel at the ratio in the manual."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Yamaha Enduros forum",
+   "url": "https://www.yamaha-enduros.com/",
+   "what": "Owner forum for vintage Yamaha two-stroke enduros."
+  }
+ ],
+ "heroName": "SC500"
+}

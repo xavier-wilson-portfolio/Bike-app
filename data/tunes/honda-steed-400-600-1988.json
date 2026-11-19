@@ -1,0 +1,59 @@
+{
+ "id": "honda-steed-400-600-1988",
+ "make": "Honda",
+ "model": "Steed 400 / 600",
+ "name": "Honda Steed 400 / 600",
+ "years": [
+  1988,
+  2001
+ ],
+ "match": [
+  "steed",
+  "steed 400",
+  "steed 600",
+  "nc26"
+ ],
+ "style": "cruiser",
+ "drive": "chain",
+ "engine": "398 or 583 cc liquid-cooled V-twin",
+ "intro": "The Japanese cruiser that became the Shadow VLX elsewhere.",
+ "focus": [
+  [
+   "V-twin",
+   "Liquid-cooled"
+  ],
+  [
+   "Carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Screw adjusters"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {},
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Shadow Riders",
+   "url": "https://www.shadowriders.com/",
+   "what": "Owner forum for Honda Shadows and other Honda cruisers."
+  }
+ ],
+ "heroName": "STEED"
+}

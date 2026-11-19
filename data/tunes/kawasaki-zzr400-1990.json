@@ -1,0 +1,62 @@
+{
+ "id": "kawasaki-zzr400-1990",
+ "make": "Kawasaki",
+ "model": "ZZR400",
+ "name": "Kawasaki ZZR400",
+ "years": [
+  1990,
+  2007
+ ],
+ "match": [
+  "zzr400",
+  "zzr 400",
+  "zx400n"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "399 cc liquid-cooled inline four",
+ "intro": "A small sport tourer for Japan and Europe.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KawiForums",
+   "url": "https://www.kawiforums.com/",
+   "what": "Owner forum for Kawasaki motorcycles."
+  }
+ ],
+ "heroName": "ZZR400"
+}

@@ -1,0 +1,64 @@
+{
+ "id": "fn-m70-m86-m12-singles-and-military-1926",
+ "make": "FN",
+ "model": "M70 / M86 / M12 singles and military",
+ "name": "FN M70 / M86 / M12 singles and military",
+ "years": [
+  1926,
+  1945
+ ],
+ "match": [
+  "fn m70",
+  "fn m86",
+  "fn m12",
+  "fn sahara"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "350 to 1000 cc side-valve or OHV, singles and flat twin",
+ "intro": "FN's interwar singles and the M12 military sidecar outfit.",
+ "focus": [
+  [
+   "Engine",
+   "Air-cooled"
+  ],
+  [
+   "Valves",
+   "Set them"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain or shaft",
+   "Check drive"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "AMCA forum",
+   "url": "https://forum.antiquemotorcycle.org/bboard/",
+   "what": "Antique Motorcycle Club of America forum, with a Panhead section."
+  }
+ ],
+ "heroName": "FN"
+}

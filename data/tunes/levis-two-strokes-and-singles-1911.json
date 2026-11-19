@@ -1,0 +1,63 @@
+{
+ "id": "levis-two-strokes-and-singles-1911",
+ "make": "Levis",
+ "model": "Two-strokes and singles",
+ "name": "Levis Two-strokes and singles",
+ "years": [
+  1911,
+  1940
+ ],
+ "match": [
+  "levis",
+  "levis two stroke"
+ ],
+ "style": "standard",
+ "drive": "chain",
+ "engine": "211 to 600 cc two- and four-stroke singles",
+ "intro": "A Birmingham maker famous for its early two-strokes.",
+ "focus": [
+  [
+   "Single",
+   "Air-cooled"
+  ],
+  [
+   "Oil",
+   "Check type"
+  ],
+  [
+   "Magneto",
+   "Check it"
+  ],
+  [
+   "Carb",
+   "Clean and jet"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005",
+  "H-004",
+  "H-003"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "B": [
+   "It runs a magneto. Check the points, the condenser and the slip ring before you blame the carb."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Any recalls on bikes this old were closed long ago.",
+ "known": [],
+ "forums": [
+  {
+   "name": "Britbike forum",
+   "url": "https://www.britbike.com/forums/",
+   "what": "Forum for classic British motorcycles."
+  }
+ ],
+ "heroName": "LEVIS"
+}

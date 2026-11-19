@@ -1,0 +1,62 @@
+{
+ "id": "kawasaki-zxr400-1989",
+ "make": "Kawasaki",
+ "model": "ZXR400",
+ "name": "Kawasaki ZXR400",
+ "years": [
+  1989,
+  2003
+ ],
+ "match": [
+  "zxr400",
+  "zxr 400",
+  "zx400l"
+ ],
+ "style": "sport",
+ "drive": "chain",
+ "engine": "398 cc liquid-cooled 16-valve inline four",
+ "intro": "A small race-replica four sold in Europe and Japan. Revs high and needs its carbs right.",
+ "focus": [
+  [
+   "Inline four",
+   "Liquid-cooled"
+  ],
+  [
+   "Four carbs",
+   "Clean and sync"
+  ],
+  [
+   "Valves",
+   "Shim check"
+  ],
+  [
+   "Cooling",
+   "Coolant and fan"
+  ],
+  [
+   "Chain drive",
+   "Slack and lube"
+  ]
+ ],
+ "remove": [
+  "G-005"
+ ],
+ "patch": {},
+ "add": [],
+ "lessons": {
+  "G": [
+   "Rebuild one carb at a time and keep each one's parts apart."
+  ]
+ },
+ "recalls": [],
+ "recallNote": "Run your VIN at nhtsa.gov/recalls before you start. Recalls on these models change over time.",
+ "known": [],
+ "forums": [
+  {
+   "name": "KawiForums",
+   "url": "https://www.kawiforums.com/",
+   "what": "Owner forum for Kawasaki motorcycles."
+  }
+ ],
+ "heroName": "ZXR400"
+}
