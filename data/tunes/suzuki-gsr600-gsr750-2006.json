@@ -57,5 +57,12 @@
  ],
  "silhouette": "suzuki-gsr600-gsr750-2006",
  "areas": [],
- "heroName": "GSR750"
+ "heroName": "GSR750",
+ "hero": {
+  "src": "img/hero/suzuki-gsr600-gsr750-2006.jpg",
+  "artist": "JakM1",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_GSR_600_(2006).jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

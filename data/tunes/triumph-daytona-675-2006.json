@@ -105,5 +105,12 @@
  ],
  "silhouette": "triumph-daytona-675-2006",
  "areas": [],
- "heroName": "DAYTONA 675"
+ "heroName": "DAYTONA 675",
+ "hero": {
+  "src": "img/hero/triumph-daytona-675-2006.jpg",
+  "artist": "Dédélembrouille",
+  "page": "https://commons.wikimedia.org/wiki/File:Triumph_Daytona_675_SE.jpg",
+  "lic": "CC BY 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by/3.0"
+ }
 }

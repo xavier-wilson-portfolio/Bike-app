@@ -63,5 +63,12 @@
  ],
  "silhouette": "adler-mb-200-mb-250-1953",
  "areas": [],
- "heroName": "ADLER"
+ "heroName": "ADLER",
+ "hero": {
+  "src": "img/hero/adler-mb-200-mb-250-1953.jpg",
+  "artist": "Lothar Spurzem",
+  "page": "https://commons.wikimedia.org/wiki/File:Adler_MB_200_(2017-07-02_Sp).JPG",
+  "lic": "CC BY-SA 2.0 de",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0/de/deed.en"
+ }
 }

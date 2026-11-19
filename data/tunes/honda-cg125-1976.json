@@ -58,5 +58,12 @@
  ],
  "silhouette": "honda-cg125-1976",
  "areas": [],
- "heroName": "CG125"
+ "heroName": "CG125",
+ "hero": {
+  "src": "img/hero/honda-cg125-1976.jpg",
+  "artist": "もんまえ あきら",
+  "page": "https://commons.wikimedia.org/wiki/File:%E3%83%9B%E3%83%B3%E3%83%80_CG125.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

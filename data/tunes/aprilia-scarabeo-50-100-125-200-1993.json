@@ -55,5 +55,12 @@
  ],
  "silhouette": "aprilia-scarabeo-50-100-125-200-1993",
  "areas": [],
- "heroName": "SCARABEO"
+ "heroName": "SCARABEO",
+ "hero": {
+  "src": "img/hero/aprilia-scarabeo-50-100-125-200-1993.jpg",
+  "artist": "Ryan Dickey",
+  "page": "https://commons.wikimedia.org/wiki/File:Aprilia_Scarabeo_50_Beige.jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
 }

@@ -57,5 +57,12 @@
  ],
  "silhouette": "honda-cb400ss-2001",
  "areas": [],
- "heroName": "CB400SS"
+ "heroName": "CB400SS",
+ "hero": {
+  "src": "img/hero/honda-cb400ss-2001.jpg",
+  "artist": "Z250R",
+  "page": "https://commons.wikimedia.org/wiki/File:CB400SS.JPG",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

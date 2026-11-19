@@ -54,5 +54,12 @@
  ],
  "silhouette": "boss-hoss-v8-cruiser-1990",
  "areas": [],
- "heroName": "BOSS HOSS"
+ "heroName": "BOSS HOSS",
+ "hero": {
+  "src": "img/hero/boss-hoss-v8-cruiser-1990.jpg",
+  "artist": "JoachimKohler-HB",
+  "page": "https://commons.wikimedia.org/wiki/File:BossHoss_6.2_ltr._V8.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

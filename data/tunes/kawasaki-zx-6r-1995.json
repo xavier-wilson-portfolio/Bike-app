@@ -74,5 +74,12 @@
  ],
  "silhouette": "kawasaki-zx-6r-1995",
  "areas": [],
- "heroName": "ZX-6R"
+ "heroName": "ZX-6R",
+ "hero": {
+  "src": "img/hero/kawasaki-zx-6r-1995.jpg",
+  "artist": "Alex Borland",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki-ninja-zx-6r-ZX600J.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
 }

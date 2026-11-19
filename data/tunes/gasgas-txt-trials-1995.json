@@ -67,5 +67,12 @@
  ],
  "silhouette": "gasgas-txt-trials-1995",
  "areas": [],
- "heroName": "TXT"
+ "heroName": "TXT",
+ "hero": {
+  "src": "img/hero/gasgas-txt-trials-1995.jpg",
+  "artist": "Y Sekiai",
+  "page": "https://commons.wikimedia.org/wiki/File:GASGAS_TXT_PRO_250.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

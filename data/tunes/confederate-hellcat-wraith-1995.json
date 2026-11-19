@@ -58,5 +58,12 @@
  ],
  "silhouette": "confederate-hellcat-wraith-1995",
  "areas": [],
- "heroName": "HELLCAT"
+ "heroName": "HELLCAT",
+ "hero": {
+  "src": "img/hero/confederate-hellcat-wraith-1995.jpg",
+  "artist": "Brian Snelson from Hockley, Essex, England",
+  "page": "https://commons.wikimedia.org/wiki/File:Confederate_Wraith_B120_at_2007_Goodwood_Festival_of_Speed.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

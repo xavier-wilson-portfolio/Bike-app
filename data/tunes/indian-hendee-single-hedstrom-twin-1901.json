@@ -62,5 +62,12 @@
  ],
  "silhouette": "indian-hendee-single-hedstrom-twin-1901",
  "areas": [],
- "heroName": "HENDEE"
+ "heroName": "HENDEE",
+ "hero": {
+  "src": "img/hero/indian-hendee-single-hedstrom-twin-1901.jpg",
+  "artist": "Bevanw58",
+  "page": "https://commons.wikimedia.org/wiki/File:Indian_Hedstrom_V_twin.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

@@ -55,5 +55,12 @@
  ],
  "silhouette": "tvs-apache-rtr-310-2023",
  "areas": [],
- "heroName": "RTR 310"
+ "heroName": "RTR 310",
+ "hero": {
+  "src": "img/hero/tvs-apache-rtr-310-2023.jpg",
+  "artist": "Crazyranga",
+  "page": "https://commons.wikimedia.org/wiki/File:Apache_rtr_310.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

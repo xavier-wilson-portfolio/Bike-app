@@ -63,5 +63,12 @@
  ],
  "silhouette": "tao-motor-gy6-50-150-scooter-2005",
  "areas": [],
- "heroName": "GY6"
+ "heroName": "GY6",
+ "hero": {
+  "src": "img/hero/tao-motor-gy6-50-150-scooter-2005.jpg",
+  "artist": "玄史生",
+  "page": "https://commons.wikimedia.org/wiki/File:Taipei_County_Police_Patrol_Motorcycle_20091213a.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

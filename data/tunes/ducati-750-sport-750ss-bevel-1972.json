@@ -64,5 +64,12 @@
  ],
  "silhouette": "ducati-750-sport-750ss-bevel-1972",
  "areas": [],
- "heroName": "750 SPORT"
+ "heroName": "750 SPORT",
+ "hero": {
+  "src": "img/hero/ducati-750-sport-750ss-bevel-1972.jpg",
+  "artist": "Matti Blume",
+  "page": "https://commons.wikimedia.org/wiki/File:Ducati_750_Super_Sport,_Berlin_(1X7A3952).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

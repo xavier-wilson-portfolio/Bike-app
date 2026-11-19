@@ -58,5 +58,12 @@
  ],
  "silhouette": "honda-cb223s-ftr223-2000",
  "areas": [],
- "heroName": "FTR223"
+ "heroName": "FTR223",
+ "hero": {
+  "src": "img/hero/honda-cb223s-ftr223-2000.jpg",
+  "artist": "ウェルワィ",
+  "page": "https://commons.wikimedia.org/wiki/File:Cb223s.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
 }

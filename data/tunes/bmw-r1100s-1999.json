@@ -61,5 +61,12 @@
  ],
  "silhouette": "bmw-r1100s-1999",
  "areas": [],
- "heroName": "R1100S"
+ "heroName": "R1100S",
+ "hero": {
+  "src": "img/hero/bmw-r1100s-1999.jpg",
+  "artist": "Wikisympathisant",
+  "page": "https://commons.wikimedia.org/wiki/File:2023-08-02_Barcelona_BMW_R1100S_rear-side.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

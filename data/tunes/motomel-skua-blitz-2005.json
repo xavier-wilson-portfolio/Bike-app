@@ -57,5 +57,12 @@
  ],
  "silhouette": "motomel-skua-blitz-2005",
  "areas": [],
- "heroName": "MOTOMEL"
+ "heroName": "MOTOMEL",
+ "hero": {
+  "src": "img/hero/motomel-skua-blitz-2005.jpg",
+  "artist": "Bruno Rene Vargas",
+  "page": "https://commons.wikimedia.org/wiki/File:Motomel_Skua_250_PRO.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

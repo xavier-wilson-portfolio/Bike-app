@@ -57,5 +57,12 @@
  ],
  "silhouette": "honda-cbf1000-2006",
  "areas": [],
- "heroName": "CBF1000"
+ "heroName": "CBF1000",
+ "hero": {
+  "src": "img/hero/honda-cbf1000-2006.jpg",
+  "artist": "Addvisor",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CBF1000_in_Bulhary.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

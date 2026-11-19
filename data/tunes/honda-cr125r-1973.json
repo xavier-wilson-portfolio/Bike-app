@@ -65,5 +65,12 @@
  ],
  "silhouette": "honda-cr125r-1973",
  "areas": [],
- "heroName": "CR125R"
+ "heroName": "CR125R",
+ "hero": {
+  "src": "img/hero/honda-cr125r-1973.jpg",
+  "artist": "jim simonson",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CR125_side.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

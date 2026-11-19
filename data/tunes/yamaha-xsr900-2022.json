@@ -62,5 +62,12 @@
  "forums": [],
  "silhouette": "yamaha-xsr900-2022",
  "areas": [],
- "heroName": "XSR900"
+ "heroName": "XSR900",
+ "hero": {
+  "src": "img/hero/yamaha-xsr900-2022.jpg",
+  "artist": "Chanokchon",
+  "page": "https://commons.wikimedia.org/wiki/File:2022_Yamaha_XSR900.png",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

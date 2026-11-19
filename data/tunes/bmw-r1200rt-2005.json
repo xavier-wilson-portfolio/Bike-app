@@ -104,5 +104,12 @@
  ],
  "silhouette": "bmw-r1200rt-2005",
  "areas": [],
- "heroName": "R1200RT"
+ "heroName": "R1200RT",
+ "hero": {
+  "src": "img/hero/bmw-r1200rt-2005.jpg",
+  "artist": "Hans45",
+  "page": "https://commons.wikimedia.org/wiki/File:BMW_2010_R1200RT_Special.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

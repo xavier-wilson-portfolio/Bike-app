@@ -60,5 +60,12 @@
  ],
  "silhouette": "honda-xl70-1974",
  "areas": [],
- "heroName": "XL70"
+ "heroName": "XL70",
+ "hero": {
+  "src": "img/hero/honda-xl70-1974.jpg",
+  "artist": "Ltpreston at English Wikipedia",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_SL70.JPG",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

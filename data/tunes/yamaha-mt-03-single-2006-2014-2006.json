@@ -56,5 +56,12 @@
  ],
  "silhouette": "yamaha-mt-03-single-2006-2014-2006",
  "areas": [],
- "heroName": "MT-03"
+ "heroName": "MT-03",
+ "hero": {
+  "src": "img/hero/yamaha-mt-03-single-2006-2014-2006.jpg",
+  "artist": "Retired electrician",
+  "page": "https://commons.wikimedia.org/wiki/File:Moscow,_Yamaha_MT-03,_June_2025_01.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
 }

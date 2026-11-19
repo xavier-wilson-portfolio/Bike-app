@@ -56,5 +56,12 @@
  ],
  "silhouette": "kawasaki-kx450f-2006",
  "areas": [],
- "heroName": "KX450F"
+ "heroName": "KX450F",
+ "hero": {
+  "src": "img/hero/kawasaki-kx450f-2006.jpg",
+  "artist": "Rainmaker47",
+  "page": "https://commons.wikimedia.org/wiki/File:2014_Kawasaki_KX450F_KGTW.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

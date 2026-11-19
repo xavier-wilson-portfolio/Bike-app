@@ -58,5 +58,12 @@
  ],
  "silhouette": "honda-cb125f-glr125-2015",
  "areas": [],
- "heroName": "CB125F"
+ "heroName": "CB125F",
+ "hero": {
+  "src": "img/hero/honda-cb125f-glr125-2015.jpg",
+  "artist": "Grf",
+  "page": "https://commons.wikimedia.org/wiki/File:CBF125_01.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

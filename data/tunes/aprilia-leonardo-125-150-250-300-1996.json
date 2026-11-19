@@ -57,5 +57,12 @@
  ],
  "silhouette": "aprilia-leonardo-125-150-250-300-1996",
  "areas": [],
- "heroName": "LEONARDO"
+ "heroName": "LEONARDO",
+ "hero": {
+  "src": "img/hero/aprilia-leonardo-125-150-250-300-1996.jpg",
+  "artist": "AnthonyWiki",
+  "page": "https://commons.wikimedia.org/wiki/File:SRreplicablackcolor.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

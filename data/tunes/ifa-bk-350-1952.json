@@ -63,5 +63,12 @@
  ],
  "silhouette": "ifa-bk-350-1952",
  "areas": [],
- "heroName": "BK 350"
+ "heroName": "BK 350",
+ "hero": {
+  "src": "img/hero/ifa-bk-350-1952.jpg",
+  "artist": "Joachim Köhler",
+  "page": "https://commons.wikimedia.org/wiki/File:ZweiRadMuseumNSU_IFA_BK350_(bearb_Sp).jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
 }

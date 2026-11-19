@@ -57,5 +57,12 @@
  ],
  "silhouette": "heinkel-tourist-1953",
  "areas": [],
- "heroName": "TOURIST"
+ "heroName": "TOURIST",
+ "hero": {
+  "src": "img/hero/heinkel-tourist-1953.jpg",
+  "artist": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Heinkel_Tourist_175_,_Bj._1956_0.jpg",
+  "lic": "CC BY-SA 2.0 de",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0/de/deed.en"
+ }
 }

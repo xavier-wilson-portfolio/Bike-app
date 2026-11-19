@@ -66,5 +66,12 @@
  ],
  "silhouette": "bmw-r1100rt-r1150rt-1996",
  "areas": [],
- "heroName": "R1150RT"
+ "heroName": "R1150RT",
+ "hero": {
+  "src": "img/hero/bmw-r1100rt-r1150rt-1996.jpg",
+  "artist": "Freebeemer",
+  "page": "https://commons.wikimedia.org/wiki/File:BMW_R1150RT_2.JPG",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

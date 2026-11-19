@@ -76,5 +76,12 @@
  ],
  "silhouette": "honda-vfr750f-interceptor-1986",
  "areas": [],
- "heroName": "VFR750F"
+ "heroName": "VFR750F",
+ "hero": {
+  "src": "img/hero/honda-vfr750f-interceptor-1986.jpg",
+  "artist": "Rainmaker47",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_VFR750F_in_the_Honda_Collection_Hall..JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

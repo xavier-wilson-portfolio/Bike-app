@@ -52,5 +52,12 @@
  "forums": [],
  "silhouette": "suzuki-gz250-1999",
  "areas": [],
- "heroName": "GZ250"
+ "heroName": "GZ250",
+ "hero": {
+  "src": "img/hero/suzuki-gz250-1999.jpg",
+  "artist": "Pablo Forcén Soler (Forcy)",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_GZ250_Marauder.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

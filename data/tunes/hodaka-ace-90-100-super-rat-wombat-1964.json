@@ -68,5 +68,12 @@
  ],
  "silhouette": "hodaka-ace-90-100-super-rat-wombat-1964",
  "areas": [],
- "heroName": "HODAKA"
+ "heroName": "HODAKA",
+ "hero": {
+  "src": "img/hero/hodaka-ace-90-100-super-rat-wombat-1964.jpg",
+  "artist": "Cyclonehol",
+  "page": "https://commons.wikimedia.org/wiki/File:Roehr_VanTech_Hodaka_100.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

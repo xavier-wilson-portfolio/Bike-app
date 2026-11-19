@@ -57,5 +57,12 @@
  ],
  "silhouette": "piaggio-carnaby-medley-2007",
  "areas": [],
- "heroName": "MEDLEY"
+ "heroName": "MEDLEY",
+ "hero": {
+  "src": "img/hero/piaggio-carnaby-medley-2007.jpg",
+  "artist": "AVMOTO",
+  "page": "https://commons.wikimedia.org/wiki/File:Piaggio_Medley_S200_2025.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

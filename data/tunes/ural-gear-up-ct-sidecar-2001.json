@@ -63,5 +63,12 @@
  ],
  "silhouette": "ural-gear-up-ct-sidecar-2001",
  "areas": [],
- "heroName": "URAL"
+ "heroName": "URAL",
+ "hero": {
+  "src": "img/hero/ural-gear-up-ct-sidecar-2001.jpg",
+  "artist": "dave_7 from Lethbridge, Canada",
+  "page": "https://commons.wikimedia.org/wiki/File:Ural_Gear-Up_motorcycle_(14427890683).jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

@@ -61,5 +61,12 @@
  ],
  "silhouette": "honda-cm185-cm200-cm250-twinstar-1978",
  "areas": [],
- "heroName": "TWINSTAR"
+ "heroName": "TWINSTAR",
+ "hero": {
+  "src": "img/hero/honda-cm185-cm200-cm250-twinstar-1978.jpg",
+  "artist": "M536",
+  "page": "https://commons.wikimedia.org/wiki/File:Hondarebel250.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

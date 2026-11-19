@@ -95,5 +95,12 @@
  ],
  "silhouette": "bmw-k1200lt-1999",
  "areas": [],
- "heroName": "K1200LT"
+ "heroName": "K1200LT",
+ "hero": {
+  "src": "img/hero/bmw-k1200lt-1999.jpg",
+  "artist": "Pil56",
+  "page": "https://commons.wikimedia.org/wiki/File:K1200lt-3.jpg",
+  "lic": "CC BY 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by/3.0"
+ }
 }

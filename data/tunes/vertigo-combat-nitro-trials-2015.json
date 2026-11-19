@@ -57,5 +57,12 @@
  ],
  "silhouette": "vertigo-combat-nitro-trials-2015",
  "areas": [],
- "heroName": "VERTIGO"
+ "heroName": "VERTIGO",
+ "hero": {
+  "src": "img/hero/vertigo-combat-nitro-trials-2015.jpg",
+  "artist": "Peprovira",
+  "page": "https://commons.wikimedia.org/wiki/File:Vertigo_Combat_300cc_2017.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

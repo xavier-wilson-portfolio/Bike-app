@@ -58,5 +58,12 @@
  ],
  "silhouette": "vespa-cosa-1988",
  "areas": [],
- "heroName": "COSA"
+ "heroName": "COSA",
+ "hero": {
+  "src": "img/hero/vespa-cosa-1988.jpg",
+  "artist": "Markus Zinnecker",
+  "page": "https://commons.wikimedia.org/wiki/File:Vespacosa200gs.JPG",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

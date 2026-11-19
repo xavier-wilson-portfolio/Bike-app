@@ -57,5 +57,12 @@
  ],
  "silhouette": "yamaha-crux-libero-2001",
  "areas": [],
- "heroName": "CRUX"
+ "heroName": "CRUX",
+ "hero": {
+  "src": "img/hero/yamaha-crux-libero-2001.jpg",
+  "artist": "Rapilaneksanthosh",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_Crux_R.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

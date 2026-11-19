@@ -63,5 +63,12 @@
  ],
  "silhouette": "kawasaki-gpz750-turbo-1984",
  "areas": [],
- "heroName": "GPZ750 TURBO"
+ "heroName": "GPZ750 TURBO",
+ "hero": {
+  "src": "img/hero/kawasaki-gpz750-turbo-1984.jpg",
+  "artist": "Addvisor",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_GPZ_750_DSCF0335_01.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

@@ -58,5 +58,12 @@
  ],
  "silhouette": "kawasaki-klr600-1984",
  "areas": [],
- "heroName": "KLR600"
+ "heroName": "KLR600",
+ "hero": {
+  "src": "img/hero/kawasaki-klr600-1984.jpg",
+  "artist": "No machine-readable author provided. JokerJH~commonswiki assumed (based on copyright claims).",
+  "page": "https://commons.wikimedia.org/wiki/File:KLR650C.jpg",
+  "lic": "CC BY 2.5",
+  "licUrl": "https://creativecommons.org/licenses/by/2.5"
+ }
 }

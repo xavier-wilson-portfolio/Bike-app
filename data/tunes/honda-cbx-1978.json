@@ -68,5 +68,12 @@
  ],
  "silhouette": "honda-cbx-1978",
  "areas": [],
- "heroName": "CBX"
+ "heroName": "CBX",
+ "hero": {
+  "src": "img/hero/honda-cbx-1978.jpg",
+  "artist": "Miwok from France",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_1000_CBX_(19703657920).jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
 }

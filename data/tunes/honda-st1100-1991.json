@@ -62,5 +62,12 @@
  ],
  "silhouette": "honda-st1100-1991",
  "areas": [],
- "heroName": "ST1100"
+ "heroName": "ST1100",
+ "hero": {
+  "src": "img/hero/honda-st1100-1991.jpg",
+  "artist": "The original uploader was Dédélembrouille at French Wikipedia.",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_1100_ST_Pan_European.JPG",
+  "lic": "CC BY-SA 2.5",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.5"
+ }
 }

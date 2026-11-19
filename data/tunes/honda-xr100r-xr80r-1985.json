@@ -60,5 +60,12 @@
  ],
  "silhouette": "honda-xr100r-xr80r-1985",
  "areas": [],
- "heroName": "XR100R"
+ "heroName": "XR100R",
+ "hero": {
+  "src": "img/hero/honda-xr100r-xr80r-1985.jpg",
+  "artist": "jim simonson",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_XR100_sideview.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

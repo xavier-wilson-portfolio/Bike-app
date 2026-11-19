@@ -57,5 +57,12 @@
  ],
  "silhouette": "royal-enfield-bear-650-2025",
  "areas": [],
- "heroName": "BEAR 650"
+ "heroName": "BEAR 650",
+ "hero": {
+  "src": "img/hero/royal-enfield-bear-650-2025.jpg",
+  "artist": "XDVRACE",
+  "page": "https://commons.wikimedia.org/wiki/File:Royal_Enfield_Bear_650_2026.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

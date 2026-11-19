@@ -63,5 +63,12 @@
  ],
  "silhouette": "harley-davidson-tri-glide-freewheeler-2009",
  "areas": [],
- "heroName": "TRI GLIDE"
+ "heroName": "TRI GLIDE",
+ "hero": {
+  "src": "img/hero/harley-davidson-tri-glide-freewheeler-2009.jpg",
+  "artist": "Cullen328",
+  "page": "https://commons.wikimedia.org/wiki/File:Harley_Davidson_Tri_Glide_taken_2013.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

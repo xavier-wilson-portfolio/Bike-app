@@ -64,5 +64,12 @@
  ],
  "silhouette": "yamaha-lb80-chappy-1973",
  "areas": [],
- "heroName": "CHAPPY"
+ "heroName": "CHAPPY",
+ "hero": {
+  "src": "img/hero/yamaha-lb80-chappy-1973.jpg",
+  "artist": "David Monniaux",
+  "page": "https://commons.wikimedia.org/wiki/File:Chappy_p1040220.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
 }

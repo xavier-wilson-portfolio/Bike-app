@@ -65,5 +65,12 @@
  ],
  "silhouette": "suzuki-gt185-gt250-1973",
  "areas": [],
- "heroName": "GT250"
+ "heroName": "GT250",
+ "hero": {
+  "src": "img/hero/suzuki-gt185-gt250-1973.jpg",
+  "artist": "Stephencdickson",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_GT250.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

@@ -109,5 +109,12 @@
  ],
  "silhouette": "yamaha-xs650",
  "areas": [],
- "heroName": "XS650"
+ "heroName": "XS650",
+ "hero": {
+  "src": "img/hero/yamaha-xs650.jpg",
+  "artist": "SG2012",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_XS650_(1977).jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

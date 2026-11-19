@@ -62,5 +62,12 @@
  ],
  "silhouette": "mbk-booster-nitro-1990",
  "areas": [],
- "heroName": "BOOSTER"
+ "heroName": "BOOSTER",
+ "hero": {
+  "src": "img/hero/mbk-booster-nitro-1990.jpg",
+  "artist": "Cjp24",
+  "page": "https://commons.wikimedia.org/wiki/File:MBK_Booster,_yellow.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

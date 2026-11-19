@@ -54,5 +54,12 @@
  "forums": [],
  "silhouette": "yamaha-fz1-2001",
  "areas": [],
- "heroName": "FZ1"
+ "heroName": "FZ1",
+ "hero": {
+  "src": "img/hero/yamaha-fz1-2001.jpg",
+  "artist": "Glen MacLarty",
+  "page": "https://commons.wikimedia.org/wiki/File:2007_Yamaha_FZ1_blue.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

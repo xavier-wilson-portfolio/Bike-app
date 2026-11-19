@@ -61,5 +61,12 @@
  ],
  "silhouette": "kawasaki-eliminator-600-900-zl-1985",
  "areas": [],
- "heroName": "ELIMINATOR"
+ "heroName": "ELIMINATOR",
+ "hero": {
+  "src": "img/hero/kawasaki-eliminator-600-900-zl-1985.jpg",
+  "artist": "Momcilostokanovic",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_el_250_photo_Moma_SM.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

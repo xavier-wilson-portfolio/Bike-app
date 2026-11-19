@@ -66,5 +66,12 @@
  ],
  "silhouette": "honda-z50-mini-trail-1968",
  "areas": [],
- "heroName": "Z50"
+ "heroName": "Z50",
+ "hero": {
+  "src": "img/hero/honda-z50-mini-trail-1968.jpg",
+  "artist": "Maitotee",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_monkey_Z50.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

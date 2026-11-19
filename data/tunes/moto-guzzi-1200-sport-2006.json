@@ -61,5 +61,12 @@
  ],
  "silhouette": "moto-guzzi-1200-sport-2006",
  "areas": [],
- "heroName": "1200 SPORT"
+ "heroName": "1200 SPORT",
+ "hero": {
+  "src": "img/hero/moto-guzzi-1200-sport-2006.jpg",
+  "artist": "Thesupermat",
+  "page": "https://commons.wikimedia.org/wiki/File:Paris_-_Salon_de_la_moto_2011_-_Moto_Guzzi_-_1200_Sport_8V_ABS_Corsa_-_001.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

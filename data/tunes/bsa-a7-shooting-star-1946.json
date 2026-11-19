@@ -66,5 +66,12 @@
  ],
  "silhouette": "bsa-a7-shooting-star-1946",
  "areas": [],
- "heroName": "SHOOTING STAR"
+ "heroName": "SHOOTING STAR",
+ "hero": {
+  "src": "img/hero/bsa-a7-shooting-star-1946.jpg",
+  "artist": "ozz13x",
+  "page": "https://commons.wikimedia.org/wiki/File:BSA_(8037010249).jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

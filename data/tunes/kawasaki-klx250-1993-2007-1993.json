@@ -59,5 +59,12 @@
  ],
  "silhouette": "kawasaki-klx250-1993-2007-1993",
  "areas": [],
- "heroName": "KLX250"
+ "heroName": "KLX250",
+ "hero": {
+  "src": "img/hero/kawasaki-klx250-1993-2007-1993.jpg",
+  "artist": "Los688",
+  "page": "https://commons.wikimedia.org/wiki/File:JGSDF_reconnaissance_bicycle_(Kawasaki_KLX250)_20140615-04.JPG",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
 }

@@ -59,5 +59,12 @@
  ],
  "silhouette": "suzuki-gsx-r125-gsx-s125-2017",
  "areas": [],
- "heroName": "GSX-R125"
+ "heroName": "GSX-R125",
+ "hero": {
+  "src": "img/hero/suzuki-gsx-r125-gsx-s125-2017.jpg",
+  "artist": "Danrok",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_GSX-S125_side_view.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

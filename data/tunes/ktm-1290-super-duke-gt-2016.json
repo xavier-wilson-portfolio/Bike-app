@@ -58,5 +58,12 @@
  ],
  "silhouette": "ktm-1290-super-duke-gt-2016",
  "areas": [],
- "heroName": "SUPER DUKE GT"
+ "heroName": "SUPER DUKE GT",
+ "hero": {
+  "src": "img/hero/ktm-1290-super-duke-gt-2016.jpg",
+  "artist": "KTM AG",
+  "page": "https://commons.wikimedia.org/wiki/File:KTM_1290_Super_Duke_(RGB).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

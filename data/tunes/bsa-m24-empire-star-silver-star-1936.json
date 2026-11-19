@@ -65,5 +65,12 @@
  ],
  "silhouette": "bsa-m24-empire-star-silver-star-1936",
  "areas": [],
- "heroName": "EMPIRE STAR"
+ "heroName": "EMPIRE STAR",
+ "hero": {
+  "src": "img/hero/bsa-m24-empire-star-silver-star-1936.jpg",
+  "artist": "Yesterdays Antique Motorcycles",
+  "page": "https://commons.wikimedia.org/wiki/File:1939_BSA_M23_Silver_Star_500cc-OHV_motorcycle_right_side_3.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

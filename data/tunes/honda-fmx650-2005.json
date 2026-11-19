@@ -56,5 +56,12 @@
  ],
  "silhouette": "honda-fmx650-2005",
  "areas": [],
- "heroName": "FMX650"
+ "heroName": "FMX650",
+ "hero": {
+  "src": "img/hero/honda-fmx650-2005.jpg",
+  "artist": "Addvisor",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_FMX650.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

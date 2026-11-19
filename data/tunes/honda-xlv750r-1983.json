@@ -57,5 +57,12 @@
  ],
  "silhouette": "honda-xlv750r-1983",
  "areas": [],
- "heroName": "XLV750R"
+ "heroName": "XLV750R",
+ "hero": {
+  "src": "img/hero/honda-xlv750r-1983.jpg",
+  "artist": "Eiche rustikal",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_XLV750R(D)_1.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

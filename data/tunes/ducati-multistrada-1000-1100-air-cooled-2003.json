@@ -68,5 +68,12 @@
  ],
  "silhouette": "ducati-multistrada-1000-1100-air-cooled-2003",
  "areas": [],
- "heroName": "MULTISTRADA"
+ "heroName": "MULTISTRADA",
+ "hero": {
+  "src": "img/hero/ducati-multistrada-1000-1100-air-cooled-2003.jpg",
+  "artist": "Brian Snelson from Hockley, Essex, England",
+  "page": "https://commons.wikimedia.org/wiki/File:Ducati_DS1100_-_Flickr_-_exfordy-crop.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

@@ -58,5 +58,12 @@
  ],
  "silhouette": "keeway-rkv-superlight-125-200-2008",
  "areas": [],
- "heroName": "KEEWAY"
+ "heroName": "KEEWAY",
+ "hero": {
+  "src": "img/hero/keeway-rkv-superlight-125-200-2008.jpg",
+  "artist": "Corvettec6r",
+  "page": "https://commons.wikimedia.org/wiki/File:Keeway_RKF_125.jpg",
+  "lic": "CC BY 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by/4.0"
+ }
 }

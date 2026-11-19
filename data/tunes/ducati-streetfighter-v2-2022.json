@@ -61,5 +61,12 @@
  ],
  "silhouette": "ducati-streetfighter-v2-2022",
  "areas": [],
- "heroName": "STREETFIGHTER V2"
+ "heroName": "STREETFIGHTER V2",
+ "hero": {
+  "src": "img/hero/ducati-streetfighter-v2-2022.jpg",
+  "artist": "Mdv042",
+  "page": "https://commons.wikimedia.org/wiki/File:2022_Ducati_Streetfighter_V2.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

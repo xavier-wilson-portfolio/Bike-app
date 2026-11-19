@@ -63,5 +63,12 @@
  ],
  "silhouette": "yamaha-dt125r-dt125re-1988",
  "areas": [],
- "heroName": "DT125R"
+ "heroName": "DT125R",
+ "hero": {
+  "src": "img/hero/yamaha-dt125r-dt125re-1988.jpg",
+  "artist": "Rabe167",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_DT125_R_4bl_1998.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

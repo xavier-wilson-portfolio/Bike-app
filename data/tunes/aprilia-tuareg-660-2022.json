@@ -56,5 +56,12 @@
  ],
  "silhouette": "aprilia-tuareg-660-2022",
  "areas": [],
- "heroName": "TUAREG"
+ "heroName": "TUAREG",
+ "hero": {
+  "src": "img/hero/aprilia-tuareg-660-2022.jpg",
+  "artist": "Makoia",
+  "page": "https://commons.wikimedia.org/wiki/File:Aprilia_Tuareg_660_(bearb_Sp).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

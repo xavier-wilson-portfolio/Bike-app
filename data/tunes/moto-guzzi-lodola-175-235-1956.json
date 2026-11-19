@@ -58,5 +58,12 @@
  ],
  "silhouette": "moto-guzzi-lodola-175-235-1956",
  "areas": [],
- "heroName": "LODOLA"
+ "heroName": "LODOLA",
+ "hero": {
+  "src": "img/hero/moto-guzzi-lodola-175-235-1956.jpg",
+  "artist": "Moto Guzzi (costruttore), Guzzi Carlo (progettista)",
+  "page": "https://commons.wikimedia.org/wiki/File:Motocicletta_-_Museo_scienza_tecnologia_Milano_08710_dia.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

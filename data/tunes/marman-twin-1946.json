@@ -56,5 +56,12 @@
  ],
  "silhouette": "marman-twin-1946",
  "areas": [],
- "heroName": "MARMAN"
+ "heroName": "MARMAN",
+ "hero": {
+  "src": "img/hero/marman-twin-1946.jpg",
+  "artist": "Unklals Augie Heuschkel",
+  "page": "https://commons.wikimedia.org/wiki/File:Unklmarman1.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

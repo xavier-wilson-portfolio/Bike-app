@@ -64,5 +64,12 @@
  ],
  "silhouette": "zundapp-ks-50-ks-125-gts-50-1963",
  "areas": [],
- "heroName": "KS 50"
+ "heroName": "KS 50",
+ "hero": {
+  "src": "img/hero/zundapp-ks-50-ks-125-gts-50-1963.jpg",
+  "artist": "Joost J. Bakker  IJmuiden",
+  "page": "https://commons.wikimedia.org/wiki/File:Zundapp_KS_50.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

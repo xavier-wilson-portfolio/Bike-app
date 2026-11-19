@@ -57,5 +57,12 @@
  ],
  "silhouette": "kawasaki-kaze-blitz-underbone-1995",
  "areas": [],
- "heroName": "KAZE"
+ "heroName": "KAZE",
+ "hero": {
+  "src": "img/hero/kawasaki-kaze-blitz-underbone-1995.jpg",
+  "artist": "M.rJirapat",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_KAZE_125.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

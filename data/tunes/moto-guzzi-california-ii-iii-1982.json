@@ -65,5 +65,12 @@
  ],
  "silhouette": "moto-guzzi-california-ii-iii-1982",
  "areas": [],
- "heroName": "CALIFORNIA"
+ "heroName": "CALIFORNIA",
+ "hero": {
+  "src": "img/hero/moto-guzzi-california-ii-iii-1982.jpg",
+  "artist": "Quelle: \tUser:Elkawe       /   Freisteller, Bildbearbeitung &amp; Retusche von Auge=mit",
+  "page": "https://commons.wikimedia.org/wiki/File:Moto_Guzzi_California_III_Seitenansicht_noBG.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

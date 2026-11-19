@@ -57,5 +57,12 @@
  ],
  "silhouette": "zanella-rx-150-patagonian-eagle-2000",
  "areas": [],
- "heroName": "ZANELLA"
+ "heroName": "ZANELLA",
+ "hero": {
+  "src": "img/hero/zanella-rx-150-patagonian-eagle-2000.jpg",
+  "artist": "Gordon Leggett",
+  "page": "https://commons.wikimedia.org/wiki/File:2019-02-27_Moto_Zanella_Patagonian_Blackstreet_150_Custom_motorcycle.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

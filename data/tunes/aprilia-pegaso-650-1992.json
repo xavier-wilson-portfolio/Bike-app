@@ -57,5 +57,12 @@
  ],
  "silhouette": "aprilia-pegaso-650-1992",
  "areas": [],
- "heroName": "PEGASO"
+ "heroName": "PEGASO",
+ "hero": {
+  "src": "img/hero/aprilia-pegaso-650-1992.jpg",
+  "artist": "Kajet897",
+  "page": "https://commons.wikimedia.org/wiki/File:APRILIA_PEGASO_I.E._650_2003_rok.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
 }

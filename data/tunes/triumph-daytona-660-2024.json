@@ -56,5 +56,12 @@
  ],
  "silhouette": "triumph-daytona-660-2024",
  "areas": [],
- "heroName": "DAYTONA 660"
+ "heroName": "DAYTONA 660",
+ "hero": {
+  "src": "img/hero/triumph-daytona-660-2024.jpg",
+  "artist": "Kidfly182",
+  "page": "https://commons.wikimedia.org/wiki/File:Triumph_Daytona_660.jpg",
+  "lic": "CC BY 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by/4.0"
+ }
 }

@@ -60,5 +60,12 @@
  ],
  "silhouette": "honda-crf150f-crf230f-2003",
  "areas": [],
- "heroName": "CRF230F"
+ "heroName": "CRF230F",
+ "hero": {
+  "src": "img/hero/honda-crf150f-crf230f-2003.jpg",
+  "artist": "Motocross14906 at English Wikipedia",
+  "page": "https://commons.wikimedia.org/wiki/File:2006HondaCRF150F002.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

@@ -58,5 +58,12 @@
  ],
  "silhouette": "aermacchi-chimera-ala-verde-ala-d-oro-1956",
  "areas": [],
- "heroName": "AERMACCHI"
+ "heroName": "AERMACCHI",
+ "hero": {
+  "src": "img/hero/aermacchi-chimera-ala-verde-ala-d-oro-1956.jpg",
+  "artist": "Silosarg",
+  "page": "https://commons.wikimedia.org/wiki/File:Aermacchi_Chimera_1960_Barber.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

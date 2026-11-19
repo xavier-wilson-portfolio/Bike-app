@@ -63,5 +63,12 @@
  ],
  "silhouette": "bmw-r1200r-r1250r-2006",
  "areas": [],
- "heroName": "R1250R"
+ "heroName": "R1250R",
+ "hero": {
+  "src": "img/hero/bmw-r1200r-r1250r-2006.jpg",
+  "artist": "Riddler3123",
+  "page": "https://commons.wikimedia.org/wiki/File:BMW_R_1250_R_.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

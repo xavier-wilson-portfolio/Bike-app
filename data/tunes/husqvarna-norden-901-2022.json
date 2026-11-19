@@ -56,5 +56,12 @@
  ],
  "silhouette": "husqvarna-norden-901-2022",
  "areas": [],
- "heroName": "NORDEN"
+ "heroName": "NORDEN",
+ "hero": {
+  "src": "img/hero/husqvarna-norden-901-2022.jpg",
+  "artist": "MDzakovic",
+  "page": "https://commons.wikimedia.org/wiki/File:Husqvarna_901_Norden.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

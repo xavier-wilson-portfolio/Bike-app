@@ -58,5 +58,12 @@
  ],
  "silhouette": "honda-cx500-turbo-cx650-turbo-1982",
  "areas": [],
- "heroName": "CX TURBO"
+ "heroName": "CX TURBO",
+ "hero": {
+  "src": "img/hero/honda-cx500-turbo-cx650-turbo-1982.jpg",
+  "artist": "Rainmaker47",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CX500_Turbo_honda_collection_hall.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

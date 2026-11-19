@@ -60,5 +60,12 @@
  ],
  "silhouette": "swm-superdual-gran-milano-2016",
  "areas": [],
- "heroName": "SUPERDUAL"
+ "heroName": "SUPERDUAL",
+ "hero": {
+  "src": "img/hero/swm-superdual-gran-milano-2016.jpg",
+  "artist": "Corvettec6r",
+  "page": "https://commons.wikimedia.org/wiki/File:SWM_Gran_Milano_440.jpg",
+  "lic": "CC BY 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by/4.0"
+ }
 }

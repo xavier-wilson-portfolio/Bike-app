@@ -96,5 +96,12 @@
  ],
  "silhouette": "suzuki-burgman-400-650-1999",
  "areas": [],
- "heroName": "BURGMAN"
+ "heroName": "BURGMAN",
+ "hero": {
+  "src": "img/hero/suzuki-burgman-400-650-1999.jpg",
+  "artist": "Gunnar Richter Namenlos.net",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_Burgman_400.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

@@ -61,5 +61,12 @@
  ],
  "silhouette": "honda-dio-1988",
  "areas": [],
- "heroName": "DIO"
+ "heroName": "DIO",
+ "hero": {
+  "src": "img/hero/honda-dio-1988.jpg",
+  "artist": "Rajiv6212",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_Dio_HET_2013.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

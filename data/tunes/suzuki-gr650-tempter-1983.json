@@ -58,5 +58,12 @@
  ],
  "silhouette": "suzuki-gr650-tempter-1983",
  "areas": [],
- "heroName": "GR650"
+ "heroName": "GR650",
+ "hero": {
+  "src": "img/hero/suzuki-gr650-tempter-1983.jpg",
+  "artist": "Jürgen Ihle (Alteisenjo at de.wikipedia)",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_GR650_AEJ_side.jpg",
+  "lic": "CC BY-SA 3.0 de",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en"
+ }
 }

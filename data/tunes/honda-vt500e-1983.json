@@ -56,5 +56,12 @@
  ],
  "silhouette": "honda-vt500e-1983",
  "areas": [],
- "heroName": "VT500E"
+ "heroName": "VT500E",
+ "hero": {
+  "src": "img/hero/honda-vt500e-1983.jpg",
+  "artist": "AnglerPC11",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_vt500e_pc11_1984_cropped.jpg",
+  "lic": "CC BY 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by/3.0"
+ }
 }

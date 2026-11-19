@@ -61,5 +61,12 @@
  ],
  "silhouette": "triumph-tiger-cub-t20-1954",
  "areas": [],
- "heroName": "TIGER CUB"
+ "heroName": "TIGER CUB",
+ "hero": {
+  "src": "img/hero/triumph-tiger-cub-t20-1954.jpg",
+  "artist": "order_242 from Chile",
+  "page": "https://commons.wikimedia.org/wiki/File:Triumph_Tiger_Cub_200_1960_(8983422944).jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
 }

@@ -62,5 +62,12 @@
  ],
  "silhouette": "triumph-model-p-model-n-ricardo-vintage-1915",
  "areas": [],
- "heroName": "MODEL P"
+ "heroName": "MODEL P",
+ "hero": {
+  "src": "img/hero/triumph-model-p-model-n-ricardo-vintage-1915.jpg",
+  "artist": "Yesterdays Antique Motorcycles",
+  "page": "https://commons.wikimedia.org/wiki/File:1925_Triumph_Model_P_500cc-side_valve_motorcycle_right_side.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

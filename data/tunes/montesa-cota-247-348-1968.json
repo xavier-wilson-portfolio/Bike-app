@@ -66,5 +66,12 @@
  ],
  "silhouette": "montesa-cota-247-348-1968",
  "areas": [],
- "heroName": "COTA"
+ "heroName": "COTA",
+ "hero": {
+  "src": "img/hero/montesa-cota-247-348-1968.jpg",
+  "artist": "Peprovira",
+  "page": "https://commons.wikimedia.org/wiki/File:Montesa_Cota_247_1968.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

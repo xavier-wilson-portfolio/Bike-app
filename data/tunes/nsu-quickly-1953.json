@@ -63,5 +63,12 @@
  ],
  "silhouette": "nsu-quickly-1953",
  "areas": [],
- "heroName": "QUICKLY"
+ "heroName": "QUICKLY",
+ "hero": {
+  "src": "img/hero/nsu-quickly-1953.jpg",
+  "artist": "Elmschrat",
+  "page": "https://commons.wikimedia.org/wiki/File:NSU_Quickly_touchup.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

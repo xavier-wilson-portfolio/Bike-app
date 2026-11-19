@@ -57,5 +57,12 @@
  ],
  "silhouette": "honda-cb125t-twin-1978",
  "areas": [],
- "heroName": "CB125T"
+ "heroName": "CB125T",
+ "hero": {
+  "src": "img/hero/honda-cb125t-twin-1978.jpg",
+  "artist": "User:Tokino",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_cb125t.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
 }

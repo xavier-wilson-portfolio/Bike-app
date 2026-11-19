@@ -63,5 +63,12 @@
  ],
  "silhouette": "yamaha-rt100-rt180-1990",
  "areas": [],
- "heroName": "RT180"
+ "heroName": "RT180",
+ "hero": {
+  "src": "img/hero/yamaha-rt100-rt180-1990.jpg",
+  "artist": "Carlos Chalarca",
+  "page": "https://commons.wikimedia.org/wiki/File:Moto_Sobre_La_V%C3%ADa_(94757793).jpeg",
+  "lic": "CC BY 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by/3.0"
+ }
 }

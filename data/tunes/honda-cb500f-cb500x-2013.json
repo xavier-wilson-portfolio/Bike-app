@@ -87,5 +87,12 @@
  "forums": [],
  "silhouette": "honda-cb500f-cb500x-2013",
  "areas": [],
- "heroName": "CB500X"
+ "heroName": "CB500X",
+ "hero": {
+  "src": "img/hero/honda-cb500f-cb500x-2013.jpg",
+  "artist": "Wikisympathisant",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CB500X_2024-05-23.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

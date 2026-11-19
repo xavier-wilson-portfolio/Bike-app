@@ -61,5 +61,12 @@
  ],
  "silhouette": "benelli-tnt-300-302s-leoncino-500-2017",
  "areas": [],
- "heroName": "LEONCINO"
+ "heroName": "LEONCINO",
+ "hero": {
+  "src": "img/hero/benelli-tnt-300-302s-leoncino-500-2017.jpg",
+  "artist": "Valter Panaroni",
+  "page": "https://commons.wikimedia.org/wiki/File:Leoncino_500.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
 }

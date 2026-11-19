@@ -63,5 +63,12 @@
  ],
  "silhouette": "honda-cbr600f2-f3-1991",
  "areas": [],
- "heroName": "CBR600F3"
+ "heroName": "CBR600F3",
+ "hero": {
+  "src": "img/hero/honda-cbr600f2-f3-1991.jpg",
+  "artist": "Maxquijano (talk)",
+  "page": "https://commons.wikimedia.org/wiki/File:Cbr600f3.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

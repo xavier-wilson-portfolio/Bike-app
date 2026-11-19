@@ -80,5 +80,12 @@
  ],
  "silhouette": "moto-guzzi-v7-2008",
  "areas": [],
- "heroName": "V7"
+ "heroName": "V7",
+ "hero": {
+  "src": "img/hero/moto-guzzi-v7-2008.jpg",
+  "artist": "Achim Raschka (talk)",
+  "page": "https://commons.wikimedia.org/wiki/File:13-05-05_Oldtimerteffen_Liblar_MotoGuzzi_01.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

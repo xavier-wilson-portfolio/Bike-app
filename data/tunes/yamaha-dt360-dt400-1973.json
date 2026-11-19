@@ -66,5 +66,12 @@
  ],
  "silhouette": "yamaha-dt360-dt400-1973",
  "areas": [],
- "heroName": "DT400"
+ "heroName": "DT400",
+ "hero": {
+  "src": "img/hero/yamaha-dt360-dt400-1973.jpg",
+  "artist": "Texon",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_DT_50_Mx.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

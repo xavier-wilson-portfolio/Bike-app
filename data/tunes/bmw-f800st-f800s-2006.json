@@ -60,5 +60,12 @@
  ],
  "silhouette": "bmw-f800st-f800s-2006",
  "areas": [],
- "heroName": "F800ST"
+ "heroName": "F800ST",
+ "hero": {
+  "src": "img/hero/bmw-f800st-f800s-2006.jpg",
+  "artist": "Stillhere140",
+  "page": "https://commons.wikimedia.org/wiki/File:2007_BMW_F800ST_motorcycle_at_sunset.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

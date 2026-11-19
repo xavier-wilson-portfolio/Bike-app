@@ -68,5 +68,12 @@
  ],
  "silhouette": "lambretta-li-tv-sx-1958",
  "areas": [],
- "heroName": "LAMBRETTA"
+ "heroName": "LAMBRETTA",
+ "hero": {
+  "src": "img/hero/lambretta-li-tv-sx-1958.jpg",
+  "artist": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Lambretta_Li_150_I_tipo_a.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
 }

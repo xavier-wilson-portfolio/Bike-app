@@ -57,5 +57,12 @@
  ],
  "silhouette": "honda-xr650r-2000",
  "areas": [],
- "heroName": "XR650R"
+ "heroName": "XR650R",
+ "hero": {
+  "src": "img/hero/honda-xr650r-2000.jpg",
+  "artist": "KuddelmuddelBlubb",
+  "page": "https://commons.wikimedia.org/wiki/File:XR650R_ED-Type_in_Snow_Wikipedia.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

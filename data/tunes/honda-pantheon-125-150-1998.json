@@ -57,5 +57,12 @@
  ],
  "silhouette": "honda-pantheon-125-150-1998",
  "areas": [],
- "heroName": "PANTHEON"
+ "heroName": "PANTHEON",
+ "hero": {
+  "src": "img/hero/honda-pantheon-125-150-1998.jpg",
+  "artist": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_FES_Pantheon_125_seitlich.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
 }

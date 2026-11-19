@@ -57,5 +57,12 @@
  ],
  "silhouette": "honda-tlr200-reflex-1986",
  "areas": [],
- "heroName": "TLR200"
+ "heroName": "TLR200",
+ "hero": {
+  "src": "img/hero/honda-tlr200-reflex-1986.jpg",
+  "artist": "Shohei ninomiya",
+  "page": "https://commons.wikimedia.org/wiki/File:TLR200.JPG",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

@@ -63,5 +63,12 @@
  ],
  "silhouette": "beta-evo-trials-2009",
  "areas": [],
- "heroName": "EVO"
+ "heroName": "EVO",
+ "hero": {
+  "src": "img/hero/beta-evo-trials-2009.jpg",
+  "artist": "Mick",
+  "page": "https://commons.wikimedia.org/wiki/File:Beta_trial_motorcycle.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

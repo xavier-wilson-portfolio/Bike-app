@@ -64,5 +64,12 @@
  ],
  "silhouette": "rudge-ulster-special-1929",
  "areas": [],
- "heroName": "ULSTER"
+ "heroName": "ULSTER",
+ "hero": {
+  "src": "img/hero/rudge-ulster-special-1929.jpg",
+  "artist": "Foto: Jonn Leffmann",
+  "page": "https://commons.wikimedia.org/wiki/File:Rudge_Ulster_-_500_cc_-_1937_-_Ystad_-_2023.jpg",
+  "lic": "CC BY 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by/3.0"
+ }
 }

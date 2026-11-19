@@ -61,5 +61,12 @@
  ],
  "silhouette": "fn-four-1905",
  "areas": [],
- "heroName": "FN FOUR"
+ "heroName": "FN FOUR",
+ "hero": {
+  "src": "img/hero/fn-four-1905.jpg",
+  "artist": "Stanislav Kozlovskiy",
+  "page": "https://commons.wikimedia.org/wiki/File:FN_Four.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

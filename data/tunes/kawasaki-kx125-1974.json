@@ -62,5 +62,12 @@
  ],
  "silhouette": "kawasaki-kx125-1974",
  "areas": [],
- "heroName": "KX125"
+ "heroName": "KX125",
+ "hero": {
+  "src": "img/hero/kawasaki-kx125-1974.jpg",
+  "artist": "Tokumeigakarinoaoshima",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_KX450F_in_2014_AMA_Supercross_An_FIM_World_Championship.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

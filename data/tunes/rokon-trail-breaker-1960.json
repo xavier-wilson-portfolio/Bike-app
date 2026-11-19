@@ -60,5 +60,12 @@
  ],
  "silhouette": "rokon-trail-breaker-1960",
  "areas": [],
- "heroName": "ROKON"
+ "heroName": "ROKON",
+ "hero": {
+  "src": "img/hero/rokon-trail-breaker-1960.jpg",
+  "artist": "AlfvanBeem\nderivative work: MagentaGreen",
+  "page": "https://commons.wikimedia.org/wiki/File:Rokon_Trail_Blaser_pic2B.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
 }

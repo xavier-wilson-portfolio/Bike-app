@@ -60,5 +60,12 @@
  ],
  "silhouette": "honda-hornet-250-cb250f-1996",
  "areas": [],
- "heroName": "HORNET 250"
+ "heroName": "HORNET 250",
+ "hero": {
+  "src": "img/hero/honda-hornet-250-cb250f-1996.jpg",
+  "artist": "Aprilia rs125r",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_hornet250.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

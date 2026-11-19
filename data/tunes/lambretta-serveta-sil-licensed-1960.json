@@ -63,5 +63,12 @@
  ],
  "silhouette": "lambretta-serveta-sil-licensed-1960",
  "areas": [],
- "heroName": "SERVETA"
+ "heroName": "SERVETA",
+ "hero": {
+  "src": "img/hero/lambretta-serveta-sil-licensed-1960.jpg",
+  "artist": "hongsta",
+  "page": "https://commons.wikimedia.org/wiki/File:1966_Innocenti_Lambretta_Li125_Special_Metallic_Blue_1.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

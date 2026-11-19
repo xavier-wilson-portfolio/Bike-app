@@ -56,5 +56,12 @@
  ],
  "silhouette": "mahindra-mojo-300-2015",
  "areas": [],
- "heroName": "MOJO"
+ "heroName": "MOJO",
+ "hero": {
+  "src": "img/hero/mahindra-mojo-300-2015.jpg",
+  "artist": "Dominic400",
+  "page": "https://commons.wikimedia.org/wiki/File:Mahindra_Mojo_UT_300_-_Blue.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

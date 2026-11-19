@@ -63,5 +63,12 @@
  ],
  "silhouette": "suzuki-ts400-apache-1972",
  "areas": [],
- "heroName": "APACHE"
+ "heroName": "APACHE",
+ "hero": {
+  "src": "img/hero/suzuki-ts400-apache-1972.jpg",
+  "artist": "Ligabo",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_400_TS.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

@@ -63,5 +63,12 @@
  ],
  "silhouette": "voskhod-175-1966",
  "areas": [],
- "heroName": "VOSKHOD"
+ "heroName": "VOSKHOD",
+ "hero": {
+  "src": "img/hero/voskhod-175-1966.jpg",
+  "artist": "Stolbovsky",
+  "page": "https://commons.wikimedia.org/wiki/File:Voskhod-3M.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

@@ -68,5 +68,12 @@
  "forums": [],
  "silhouette": "suzuki-boulevard-c50-2005",
  "areas": [],
- "heroName": "C50"
+ "heroName": "C50",
+ "hero": {
+  "src": "img/hero/suzuki-boulevard-c50-2005.jpg",
+  "artist": "Warrakkk",
+  "page": "https://commons.wikimedia.org/wiki/File:2005_Suzuki_Boulevard_C50.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

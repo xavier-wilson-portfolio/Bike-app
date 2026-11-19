@@ -56,5 +56,12 @@
  ],
  "silhouette": "peugeot-satelis-125-300-400-2006",
  "areas": [],
- "heroName": "SATELIS"
+ "heroName": "SATELIS",
+ "hero": {
+  "src": "img/hero/peugeot-satelis-125-300-400-2006.jpg",
+  "artist": "Yann",
+  "page": "https://commons.wikimedia.org/wiki/File:Scooter_Peugeot_Satelis_125_Compressor.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
 }

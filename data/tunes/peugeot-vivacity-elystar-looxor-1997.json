@@ -58,5 +58,12 @@
  ],
  "silhouette": "peugeot-vivacity-elystar-looxor-1997",
  "areas": [],
- "heroName": "VIVACITY"
+ "heroName": "VIVACITY",
+ "hero": {
+  "src": "img/hero/peugeot-vivacity-elystar-looxor-1997.jpg",
+  "artist": "Banan van Dyk",
+  "page": "https://commons.wikimedia.org/wiki/File:Peugeot_Vivacity_50_1.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

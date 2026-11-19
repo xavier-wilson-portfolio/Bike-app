@@ -58,5 +58,12 @@
  ],
  "silhouette": "triumph-tiger-900-2020",
  "areas": [],
- "heroName": "TIGER 900"
+ "heroName": "TIGER 900",
+ "hero": {
+  "src": "img/hero/triumph-tiger-900-2020.jpg",
+  "artist": "Corvettec6r",
+  "page": "https://commons.wikimedia.org/wiki/File:Triumph_Tiger_900.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

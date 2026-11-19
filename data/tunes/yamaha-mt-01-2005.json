@@ -57,5 +57,12 @@
  ],
  "silhouette": "yamaha-mt-01-2005",
  "areas": [],
- "heroName": "MT-01"
+ "heroName": "MT-01",
+ "hero": {
+  "src": "img/hero/yamaha-mt-01-2005.jpg",
+  "artist": "Nitot",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_MT-01_-_2006_model_-_front_right.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

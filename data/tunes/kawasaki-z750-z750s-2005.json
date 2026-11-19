@@ -59,5 +59,12 @@
  ],
  "silhouette": "kawasaki-z750-z750s-2005",
  "areas": [],
- "heroName": "Z750"
+ "heroName": "Z750",
+ "hero": {
+  "src": "img/hero/kawasaki-z750-z750s-2005.jpg",
+  "artist": "Tonivix",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_Z750_Black.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

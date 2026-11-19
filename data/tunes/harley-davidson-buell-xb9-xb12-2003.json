@@ -67,5 +67,12 @@
  ],
  "silhouette": "harley-davidson-buell-xb9-xb12-2003",
  "areas": [],
- "heroName": "BUELL XB"
+ "heroName": "BUELL XB",
+ "hero": {
+  "src": "img/hero/harley-davidson-buell-xb9-xb12-2003.jpg",
+  "artist": "Silosarg",
+  "page": "https://commons.wikimedia.org/wiki/File:Buell_XB12S_Lightning_2009_Barber.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

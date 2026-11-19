@@ -64,5 +64,12 @@
  ],
  "silhouette": "douglas-2-3-4-hp-wd-flat-twins-1907",
  "areas": [],
- "heroName": "DOUGLAS"
+ "heroName": "DOUGLAS",
+ "hero": {
+  "src": "img/hero/douglas-2-3-4-hp-wd-flat-twins-1907.jpg",
+  "artist": "Yesterdays Antique Motorcycles",
+  "page": "https://commons.wikimedia.org/wiki/File:1910_Douglas_Model_C_2%C2%BE_HP_right.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

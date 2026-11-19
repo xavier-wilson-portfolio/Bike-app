@@ -61,5 +61,12 @@
  ],
  "silhouette": "honda-cb125s-1971",
  "areas": [],
- "heroName": "CB125S"
+ "heroName": "CB125S",
+ "hero": {
+  "src": "img/hero/honda-cb125s-1971.jpg",
+  "artist": "Dictouray at en.wikipedia.\n\nLater version was cropped  by Brianhe at en.wikipedia.",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CB125.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
 }

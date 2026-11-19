@@ -64,5 +64,12 @@
  ],
  "silhouette": "bsa-g14-y13-v-twins-1936",
  "areas": [],
- "heroName": "BSA V-TWIN"
+ "heroName": "BSA V-TWIN",
+ "hero": {
+  "src": "img/hero/bsa-g14-y13-v-twins-1936.jpg",
+  "artist": "SG2012",
+  "page": "https://commons.wikimedia.org/wiki/File:BSA_G14_(1935).jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

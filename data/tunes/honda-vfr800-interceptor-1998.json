@@ -91,5 +91,12 @@
  ],
  "silhouette": "honda-vfr800-interceptor-1998",
  "areas": [],
- "heroName": "VFR800"
+ "heroName": "VFR800",
+ "hero": {
+  "src": "img/hero/honda-vfr800-interceptor-1998.jpg",
+  "artist": "Joe",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_VFR800_red.jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
 }

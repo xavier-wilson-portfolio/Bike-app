@@ -59,5 +59,12 @@
  ],
  "silhouette": "honda-cb500-twin-pc32-1994",
  "areas": [],
- "heroName": "CB500"
+ "heroName": "CB500",
+ "hero": {
+  "src": "img/hero/honda-cb500-twin-pc32-1994.jpg",
+  "artist": "Callinator",
+  "page": "https://commons.wikimedia.org/wiki/File:CB500.JPG",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

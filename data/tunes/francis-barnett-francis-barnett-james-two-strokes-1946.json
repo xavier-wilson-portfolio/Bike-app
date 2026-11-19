@@ -67,5 +67,12 @@
  ],
  "silhouette": "francis-barnett-francis-barnett-james-two-strokes-1946",
  "areas": [],
- "heroName": "FRANCIS-BARNETT"
+ "heroName": "FRANCIS-BARNETT",
+ "hero": {
+  "src": "img/hero/francis-barnett-francis-barnett-james-two-strokes-1946.jpg",
+  "artist": "Ronald Saunders from Warrington, UK",
+  "page": "https://commons.wikimedia.org/wiki/File:Flickr_-_ronsaunders47_-_JAMES_CAPTAIN._197cc_SINGLE_TWO_STROKE..jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
 }

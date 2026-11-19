@@ -67,5 +67,12 @@
  ],
  "silhouette": "indian-scout-1920-1931-101-1920",
  "areas": [],
- "heroName": "SCOUT"
+ "heroName": "SCOUT",
+ "hero": {
+  "src": "img/hero/indian-scout-1920-1931-101-1920.jpg",
+  "artist": "order_242 from Chile",
+  "page": "https://commons.wikimedia.org/wiki/File:Indian_Scout_101_1928_(14744787028).jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
 }

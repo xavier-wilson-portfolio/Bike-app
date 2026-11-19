@@ -66,5 +66,12 @@
  ],
  "silhouette": "aprilia-sr50-rally-50-1996",
  "areas": [],
- "heroName": "SR50"
+ "heroName": "SR50",
+ "hero": {
+  "src": "img/hero/aprilia-sr50-rally-50-1996.jpg",
+  "artist": "Nprefontaine at en.wikipedia",
+  "page": "https://commons.wikimedia.org/wiki/File:Aprilia_SR50_Factory.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

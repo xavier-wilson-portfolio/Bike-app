@@ -61,5 +61,12 @@
  ],
  "silhouette": "indian-four-ace-1927",
  "areas": [],
- "heroName": "INDIAN FOUR"
+ "heroName": "INDIAN FOUR",
+ "hero": {
+  "src": "img/hero/indian-four-ace-1927.jpg",
+  "artist": "Rikita",
+  "page": "https://commons.wikimedia.org/wiki/File:Indian_four_437M.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

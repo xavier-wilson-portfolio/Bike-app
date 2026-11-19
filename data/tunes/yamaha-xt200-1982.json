@@ -57,5 +57,12 @@
  ],
  "silhouette": "yamaha-xt200-1982",
  "areas": [],
- "heroName": "XT200"
+ "heroName": "XT200",
+ "hero": {
+  "src": "img/hero/yamaha-xt200-1982.jpg",
+  "artist": "Cjp24",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_XT_500_(1).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

@@ -61,5 +61,12 @@
  ],
  "silhouette": "lambretta-v-special-new-2018",
  "areas": [],
- "heroName": "V-SPECIAL"
+ "heroName": "V-SPECIAL",
+ "hero": {
+  "src": "img/hero/lambretta-v-special-new-2018.jpg",
+  "artist": "Kenneth Lee",
+  "page": "https://commons.wikimedia.org/wiki/File:2021_Lambretta_V-Special.jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
 }

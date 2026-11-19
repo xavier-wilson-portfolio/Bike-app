@@ -73,5 +73,12 @@
  "forums": [],
  "silhouette": "suzuki-v-strom-650-2012",
  "areas": [],
- "heroName": "V-STROM"
+ "heroName": "V-STROM",
+ "hero": {
+  "src": "img/hero/suzuki-v-strom-650-2012.jpg",
+  "artist": "Benkorashii",
+  "page": "https://commons.wikimedia.org/wiki/File:V-Strom_650.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

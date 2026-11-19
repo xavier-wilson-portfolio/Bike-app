@@ -58,5 +58,12 @@
  ],
  "silhouette": "bajaj-platina-discover-boxer-1997",
  "areas": [],
- "heroName": "PLATINA"
+ "heroName": "PLATINA",
+ "hero": {
+  "src": "img/hero/bajaj-platina-discover-boxer-1997.jpg",
+  "artist": "Rameshpayan27",
+  "page": "https://commons.wikimedia.org/wiki/File:Bajaj_Platina_110_cc.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

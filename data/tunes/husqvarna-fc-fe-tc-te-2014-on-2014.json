@@ -67,5 +67,12 @@
  ],
  "silhouette": "husqvarna-fc-fe-tc-te-2014-on-2014",
  "areas": [],
- "heroName": "HUSQVARNA"
+ "heroName": "HUSQVARNA",
+ "hero": {
+  "src": "img/hero/husqvarna-fc-fe-tc-te-2014-on-2014.jpg",
+  "artist": "802xr",
+  "page": "https://commons.wikimedia.org/wiki/File:Husqvarna_FE250.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

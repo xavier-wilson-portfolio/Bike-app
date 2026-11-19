@@ -59,5 +59,12 @@
  ],
  "silhouette": "kawasaki-gpz1000rx-1986",
  "areas": [],
- "heroName": "GPZ1000RX"
+ "heroName": "GPZ1000RX",
+ "hero": {
+  "src": "img/hero/kawasaki-gpz1000rx-1986.jpg",
+  "artist": "Antonio Giuseppe Valenti",
+  "page": "https://commons.wikimedia.org/wiki/File:Iarumasami%27s_Kawasaki_GPZ1000RX_C.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

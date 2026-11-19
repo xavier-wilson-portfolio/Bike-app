@@ -54,5 +54,12 @@
  ],
  "silhouette": "honda-vtr250-1998-2017-1998",
  "areas": [],
- "heroName": "VTR250"
+ "heroName": "VTR250",
+ "hero": {
+  "src": "img/hero/honda-vtr250-1998-2017-1998.jpg",
+  "artist": "Joderconlacuenta",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_VTR_250cc_a%C3%B1o_1999.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

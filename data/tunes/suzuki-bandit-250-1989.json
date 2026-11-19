@@ -60,5 +60,12 @@
  ],
  "silhouette": "suzuki-bandit-250-1989",
  "areas": [],
- "heroName": "BANDIT 250"
+ "heroName": "BANDIT 250",
+ "hero": {
+  "src": "img/hero/suzuki-bandit-250-1989.jpg",
+  "artist": "Shohei ninomiya",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_bandit_250.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

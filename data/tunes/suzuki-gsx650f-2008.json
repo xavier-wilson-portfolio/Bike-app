@@ -57,5 +57,12 @@
  ],
  "silhouette": "suzuki-gsx650f-2008",
  "areas": [],
- "heroName": "GSX650F"
+ "heroName": "GSX650F",
+ "hero": {
+  "src": "img/hero/suzuki-gsx650f-2008.jpg",
+  "artist": "Cjp24",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_GSX650F,_black.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

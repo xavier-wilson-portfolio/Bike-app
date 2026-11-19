@@ -71,5 +71,12 @@
  "forums": [],
  "silhouette": "yamaha-yzf-r3-2015",
  "areas": [],
- "heroName": "R3"
+ "heroName": "R3",
+ "hero": {
+  "src": "img/hero/yamaha-yzf-r3-2015.jpg",
+  "artist": "Kuro202",
+  "page": "https://commons.wikimedia.org/wiki/File:YZF-R3_2015.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

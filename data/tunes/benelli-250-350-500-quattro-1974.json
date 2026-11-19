@@ -63,5 +63,12 @@
  ],
  "silhouette": "benelli-250-350-500-quattro-1974",
  "areas": [],
- "heroName": "QUATTRO"
+ "heroName": "QUATTRO",
+ "hero": {
+  "src": "img/hero/benelli-250-350-500-quattro-1974.jpg",
+  "artist": "Steve Glover",
+  "page": "https://commons.wikimedia.org/wiki/File:Benelli_250_2C_(1980).jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

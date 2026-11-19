@@ -65,5 +65,12 @@
  "forums": [],
  "silhouette": "kawasaki-concours-14-2008",
  "areas": [],
- "heroName": "CONCOURS"
+ "heroName": "CONCOURS",
+ "hero": {
+  "src": "img/hero/kawasaki-concours-14-2008.jpg",
+  "artist": "PekePON",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki-1400GTR_2007TMCS.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

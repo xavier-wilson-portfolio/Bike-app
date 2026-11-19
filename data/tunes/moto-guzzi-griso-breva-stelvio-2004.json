@@ -65,5 +65,12 @@
  ],
  "silhouette": "moto-guzzi-griso-breva-stelvio-2004",
  "areas": [],
- "heroName": "GRISO"
+ "heroName": "GRISO",
+ "hero": {
+  "src": "img/hero/moto-guzzi-griso-breva-stelvio-2004.jpg",
+  "artist": "Fabian Sandner",
+  "page": "https://commons.wikimedia.org/wiki/File:Moto_Guzzi_Griso_1100_72dpi_03.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

@@ -62,5 +62,12 @@
  ],
  "silhouette": "honda-cbr929rr-cbr954rr-2000",
  "areas": [],
- "heroName": "CBR954RR"
+ "heroName": "CBR954RR",
+ "hero": {
+  "src": "img/hero/honda-cbr929rr-cbr954rr-2000.jpg",
+  "artist": "KarleHorn",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CBR_RR_Fireblade.JPG",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

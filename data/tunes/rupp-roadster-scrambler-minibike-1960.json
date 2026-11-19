@@ -58,5 +58,12 @@
  ],
  "silhouette": "rupp-roadster-scrambler-minibike-1960",
  "areas": [],
- "heroName": "RUPP"
+ "heroName": "RUPP",
+ "hero": {
+  "src": "img/hero/rupp-roadster-scrambler-minibike-1960.jpg",
+  "artist": "Steelpulse90",
+  "page": "https://commons.wikimedia.org/wiki/File:1972_Rupp_Roadster_2_Purple.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

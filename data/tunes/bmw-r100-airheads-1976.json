@@ -97,5 +97,12 @@
  ],
  "silhouette": "bmw-r100-airheads-1976",
  "areas": [],
- "heroName": "R100"
+ "heroName": "R100",
+ "hero": {
+  "src": "img/hero/bmw-r100-airheads-1976.jpg",
+  "artist": "JanH015",
+  "page": "https://commons.wikimedia.org/wiki/File:BMW_R100RS.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

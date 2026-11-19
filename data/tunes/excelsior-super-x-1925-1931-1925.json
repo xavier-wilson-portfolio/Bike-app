@@ -62,5 +62,12 @@
  ],
  "silhouette": "excelsior-super-x-1925-1931-1925",
  "areas": [],
- "heroName": "SUPER X"
+ "heroName": "SUPER X",
+ "hero": {
+  "src": "img/hero/excelsior-super-x-1925-1931-1925.jpg",
+  "artist": "Thesupermat",
+  "page": "https://commons.wikimedia.org/wiki/File:Paris_-_Bonhams_2016_-_Excelsior_750_cm3_Super-X_-_1928_-_004.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

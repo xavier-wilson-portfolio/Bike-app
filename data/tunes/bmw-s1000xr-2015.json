@@ -57,5 +57,12 @@
  ],
  "silhouette": "bmw-s1000xr-2015",
  "areas": [],
- "heroName": "S1000XR"
+ "heroName": "S1000XR",
+ "hero": {
+  "src": "img/hero/bmw-s1000xr-2015.jpg",
+  "artist": "Andrew Napier",
+  "page": "https://commons.wikimedia.org/wiki/File:BMW_S_1000_XR.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

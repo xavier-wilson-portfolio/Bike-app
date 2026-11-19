@@ -60,5 +60,12 @@
  ],
  "silhouette": "suzuki-intruder-800-volusia-c50-1992",
  "areas": [],
- "heroName": "INTRUDER"
+ "heroName": "INTRUDER",
+ "hero": {
+  "src": "img/hero/suzuki-intruder-800-volusia-c50-1992.jpg",
+  "artist": "Helena",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_Intruder_800_black.jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
 }

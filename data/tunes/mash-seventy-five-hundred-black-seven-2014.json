@@ -58,5 +58,12 @@
  ],
  "silhouette": "mash-seventy-five-hundred-black-seven-2014",
  "areas": [],
- "heroName": "MASH"
+ "heroName": "MASH",
+ "hero": {
+  "src": "img/hero/mash-seventy-five-hundred-black-seven-2014.jpg",
+  "artist": "Mash motociklai",
+  "page": "https://commons.wikimedia.org/wiki/File:Mash_Seventy_Five_(1).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

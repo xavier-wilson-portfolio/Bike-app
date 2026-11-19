@@ -58,5 +58,12 @@
  ],
  "silhouette": "triumph-trophy-900-1200-hinckley-1991",
  "areas": [],
- "heroName": "TROPHY"
+ "heroName": "TROPHY",
+ "hero": {
+  "src": "img/hero/triumph-trophy-900-1200-hinckley-1991.jpg",
+  "artist": "Cjp24",
+  "page": "https://commons.wikimedia.org/wiki/File:Triumph_Trophy_1200,_green.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

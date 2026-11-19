@@ -59,5 +59,12 @@
  ],
  "silhouette": "vespa-946-2013",
  "areas": [],
- "heroName": "946"
+ "heroName": "946",
+ "hero": {
+  "src": "img/hero/vespa-946-2013.jpg",
+  "artist": "DJ Wolf, vespaforum.de",
+  "page": "https://commons.wikimedia.org/wiki/File:Vespa_946_schraeg.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

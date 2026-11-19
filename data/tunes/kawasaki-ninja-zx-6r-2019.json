@@ -65,5 +65,12 @@
  "forums": [],
  "silhouette": "kawasaki-ninja-zx-6r-2019",
  "areas": [],
- "heroName": "ZX-6R"
+ "heroName": "ZX-6R",
+ "hero": {
+  "src": "img/hero/kawasaki-ninja-zx-6r-2019.jpg",
+  "artist": "Sound Media",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_Ninja_ZX-6R_ZX636G.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
 }

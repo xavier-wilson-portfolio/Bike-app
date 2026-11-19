@@ -58,5 +58,12 @@
  ],
  "silhouette": "honda-sh300i-2007",
  "areas": [],
- "heroName": "SH300I"
+ "heroName": "SH300I",
+ "hero": {
+  "src": "img/hero/honda-sh300i-2007.jpg",
+  "artist": "Khaosaming",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_SH300i_2008.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

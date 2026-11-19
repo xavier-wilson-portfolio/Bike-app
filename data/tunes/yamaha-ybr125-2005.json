@@ -57,5 +57,12 @@
  ],
  "silhouette": "yamaha-ybr125-2005",
  "areas": [],
- "heroName": "YBR125"
+ "heroName": "YBR125",
+ "hero": {
+  "src": "img/hero/yamaha-ybr125-2005.jpg",
+  "artist": "Nevilleg",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_YBR125_(Fuel_Injection_-_EU_Spec).JPG",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

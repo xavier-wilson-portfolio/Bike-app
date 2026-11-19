@@ -58,5 +58,12 @@
  ],
  "silhouette": "peugeot-trekker-tweet-kisbee-2000",
  "areas": [],
- "heroName": "TWEET"
+ "heroName": "TWEET",
+ "hero": {
+  "src": "img/hero/peugeot-trekker-tweet-kisbee-2000.jpg",
+  "artist": "kokorowashinjin",
+  "page": "https://commons.wikimedia.org/wiki/File:Peugeot_Trekker.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

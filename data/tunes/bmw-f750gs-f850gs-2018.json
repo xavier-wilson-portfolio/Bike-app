@@ -72,5 +72,12 @@
  ],
  "silhouette": "bmw-f750gs-f850gs-2018",
  "areas": [],
- "heroName": "F850GS"
+ "heroName": "F850GS",
+ "hero": {
+  "src": "img/hero/bmw-f750gs-f850gs-2018.jpg",
+  "artist": "Gadfium",
+  "page": "https://commons.wikimedia.org/wiki/File:BMW_F850GS_right_side.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
 }

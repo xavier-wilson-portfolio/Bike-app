@@ -74,5 +74,12 @@
  ],
  "silhouette": "royal-enfield-classic-350-500-2009",
  "areas": [],
- "heroName": "CLASSIC 350"
+ "heroName": "CLASSIC 350",
+ "hero": {
+  "src": "img/hero/royal-enfield-classic-350-500-2009.jpg",
+  "artist": "Tirthrajnbarot",
+  "page": "https://commons.wikimedia.org/wiki/File:Royal_Enfield_Classic_350.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

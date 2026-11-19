@@ -62,5 +62,12 @@
  ],
  "silhouette": "bsa-b50-b44-victor-1965",
  "areas": [],
- "heroName": "VICTOR"
+ "heroName": "VICTOR",
+ "hero": {
+  "src": "img/hero/bsa-b50-b44-victor-1965.jpg",
+  "artist": "TR001",
+  "page": "https://commons.wikimedia.org/wiki/File:BSA_B44_ss.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

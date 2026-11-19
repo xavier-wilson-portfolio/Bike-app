@@ -65,5 +65,12 @@
  ],
  "silhouette": "aprilia-rs-250-rs-50-1995",
  "areas": [],
- "heroName": "RS 250"
+ "heroName": "RS 250",
+ "hero": {
+  "src": "img/hero/aprilia-rs-250-rs-50-1995.jpg",
+  "artist": "Momko2610",
+  "page": "https://commons.wikimedia.org/wiki/File:Aprilia_RS_50_Tetsuya.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

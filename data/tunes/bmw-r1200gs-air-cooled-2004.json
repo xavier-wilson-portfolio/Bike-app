@@ -61,5 +61,12 @@
  ],
  "silhouette": "bmw-r1200gs-air-cooled-2004",
  "areas": [],
- "heroName": "R1200GS"
+ "heroName": "R1200GS",
+ "hero": {
+  "src": "img/hero/bmw-r1200gs-air-cooled-2004.jpg",
+  "artist": "\"S de Santi\"",
+  "page": "https://commons.wikimedia.org/wiki/File:BMW_R1200GS_Adventure_rear_right_view.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

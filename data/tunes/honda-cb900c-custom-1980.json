@@ -57,5 +57,12 @@
  ],
  "silhouette": "honda-cb900c-custom-1980",
  "areas": [],
- "heroName": "CB900C"
+ "heroName": "CB900C",
+ "hero": {
+  "src": "img/hero/honda-cb900c-custom-1980.jpg",
+  "artist": "IQRemix from Canada",
+  "page": "https://commons.wikimedia.org/wiki/File:New_Royal_Alberta_Museum_(44463679454).jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
 }

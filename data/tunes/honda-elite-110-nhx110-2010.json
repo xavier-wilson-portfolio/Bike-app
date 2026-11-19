@@ -58,5 +58,12 @@
  ],
  "silhouette": "honda-elite-110-nhx110-2010",
  "areas": [],
- "heroName": "ELITE 110"
+ "heroName": "ELITE 110",
+ "hero": {
+  "src": "img/hero/honda-elite-110-nhx110-2010.jpg",
+  "artist": "Jiří Škorec",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_Lead_NHX-110.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

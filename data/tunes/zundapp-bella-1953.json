@@ -63,5 +63,12 @@
  ],
  "silhouette": "zundapp-bella-1953",
  "areas": [],
- "heroName": "BELLA"
+ "heroName": "BELLA",
+ "hero": {
+  "src": "img/hero/zundapp-bella-1953.jpg",
+  "artist": "Spurzem - Lothar Spurzem",
+  "page": "https://commons.wikimedia.org/wiki/File:Z%C3%BCndapp_Bella_R_154_(2008-05-21)_Seitenansicht_ret.jpg",
+  "lic": "CC BY-SA 2.0 de",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0/de/deed.en"
+ }
 }

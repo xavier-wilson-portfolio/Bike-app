@@ -57,5 +57,12 @@
  ],
  "silhouette": "triumph-tiger-110-t110-1954",
  "areas": [],
- "heroName": "TIGER 110"
+ "heroName": "TIGER 110",
+ "hero": {
+  "src": "img/hero/triumph-tiger-110-t110-1954.jpg",
+  "artist": "SG2012",
+  "page": "https://commons.wikimedia.org/wiki/File:Triumph_Tiger_T110_(1956).jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

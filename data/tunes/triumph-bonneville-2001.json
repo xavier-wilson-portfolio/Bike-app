@@ -82,5 +82,12 @@
  ],
  "silhouette": "triumph-bonneville-2001",
  "areas": [],
- "heroName": "BONNEVILLE"
+ "heroName": "BONNEVILLE",
+ "hero": {
+  "src": "img/hero/triumph-bonneville-2001.jpg",
+  "artist": "TR001",
+  "page": "https://commons.wikimedia.org/wiki/File:Triumph_Bonneville_T100_(2008).JPG",
+  "lic": "CC BY 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by/3.0"
+ }
 }

@@ -57,5 +57,12 @@
  ],
  "silhouette": "ossa-tr280i-2011",
  "areas": [],
- "heroName": "TR280I"
+ "heroName": "TR280I",
+ "hero": {
+  "src": "img/hero/ossa-tr280i-2011.jpg",
+  "artist": "Peprovira",
+  "page": "https://commons.wikimedia.org/wiki/File:Ossa_TR280i_2015.JPG",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

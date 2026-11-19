@@ -62,5 +62,12 @@
  "forums": [],
  "silhouette": "kawasaki-zrx1100-1200-1997",
  "areas": [],
- "heroName": "ZRX"
+ "heroName": "ZRX",
+ "hero": {
+  "src": "img/hero/kawasaki-zrx1100-1200-1997.jpg",
+  "artist": "ウェルワィ",
+  "page": "https://commons.wikimedia.org/wiki/File:Zrx1200daeg.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
 }

@@ -58,5 +58,12 @@
  ],
  "silhouette": "ktm-rc-390-2015",
  "areas": [],
- "heroName": "RC 390"
+ "heroName": "RC 390",
+ "hero": {
+  "src": "img/hero/ktm-rc-390-2015.jpg",
+  "artist": "Andrew Pons",
+  "page": "https://commons.wikimedia.org/wiki/File:KTM_RC390_Photo-1449426468159-d96dbf08f19f_2015.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
 }

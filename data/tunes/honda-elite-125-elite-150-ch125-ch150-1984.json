@@ -58,5 +58,12 @@
  ],
  "silhouette": "honda-elite-125-elite-150-ch125-ch150-1984",
  "areas": [],
- "heroName": "ELITE 150"
+ "heroName": "ELITE 150",
+ "hero": {
+  "src": "img/hero/honda-elite-125-elite-150-ch125-ch150-1984.jpg",
+  "artist": "Tcjames.yu",
+  "page": "https://commons.wikimedia.org/wiki/File:Elite150_Deluxe.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

@@ -58,5 +58,12 @@
  ],
  "silhouette": "mondial-175-200-250-fb-mondial-classic-1949",
  "areas": [],
- "heroName": "MONDIAL"
+ "heroName": "MONDIAL",
+ "hero": {
+  "src": "img/hero/mondial-175-200-250-fb-mondial-classic-1949.jpg",
+  "artist": "El Caganer",
+  "page": "https://commons.wikimedia.org/wiki/File:MV_Agusta_175_CSS_Squalo_1957.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

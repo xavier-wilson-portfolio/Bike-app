@@ -56,5 +56,12 @@
  ],
  "silhouette": "benelli-imperiale-400-2021",
  "areas": [],
- "heroName": "IMPERIALE"
+ "heroName": "IMPERIALE",
+ "hero": {
+  "src": "img/hero/benelli-imperiale-400-2021.jpg",
+  "artist": "Mojmir Churavy",
+  "page": "https://commons.wikimedia.org/wiki/File:Motorcycle_Benelli_Imperiale_400_Tetin_Czech_Republic_2020.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

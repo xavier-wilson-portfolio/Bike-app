@@ -57,5 +57,12 @@
  ],
  "silhouette": "mz-mastiff-silver-star-500-660-1993",
  "areas": [],
- "heroName": "MASTIFF"
+ "heroName": "MASTIFF",
+ "hero": {
+  "src": "img/hero/mz-mastiff-silver-star-500-660-1993.jpg",
+  "artist": "Ed Wolstenholme",
+  "page": "https://commons.wikimedia.org/wiki/File:MZ_Mastiff_660.jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
 }

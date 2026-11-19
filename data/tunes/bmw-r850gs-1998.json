@@ -60,5 +60,12 @@
  ],
  "silhouette": "bmw-r850gs-1998",
  "areas": [],
- "heroName": "R850GS"
+ "heroName": "R850GS",
+ "hero": {
+  "src": "img/hero/bmw-r850gs-1998.jpg",
+  "artist": "Lothar Spurzem",
+  "page": "https://commons.wikimedia.org/wiki/File:BMW_R_1100_GS_(2008-02-07_3716_Sp_2).JPG",
+  "lic": "CC BY-SA 3.0 de",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en"
+ }
 }

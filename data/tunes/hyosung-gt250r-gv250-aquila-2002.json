@@ -52,5 +52,12 @@
  "forums": [],
  "silhouette": "hyosung-gt250r-gv250-aquila-2002",
  "areas": [],
- "heroName": "AQUILA"
+ "heroName": "AQUILA",
+ "hero": {
+  "src": "img/hero/hyosung-gt250r-gv250-aquila-2002.jpg",
+  "artist": "Chainsaw48",
+  "page": "https://commons.wikimedia.org/wiki/File:2015_Hyosung_GT250R.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

@@ -59,5 +59,12 @@
  ],
  "silhouette": "aprilia-scarabeo-500-atlantic-500-2001",
  "areas": [],
- "heroName": "ATLANTIC"
+ "heroName": "ATLANTIC",
+ "hero": {
+  "src": "img/hero/aprilia-scarabeo-500-atlantic-500-2001.jpg",
+  "artist": "Triskel99",
+  "page": "https://commons.wikimedia.org/wiki/File:Aprilia_Atlantic.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

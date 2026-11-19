@@ -74,5 +74,12 @@
  "forums": [],
  "silhouette": "yamaha-yzf-r6-2006",
  "areas": [],
- "heroName": "R6"
+ "heroName": "R6",
+ "hero": {
+  "src": "img/hero/yamaha-yzf-r6-2006.jpg",
+  "artist": "No machine-readable author provided. P Stalder~commonswiki assumed (based on copyright claims).",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_YZF_R6_2006_red.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
 }

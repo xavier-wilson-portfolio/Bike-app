@@ -72,5 +72,12 @@
  ],
  "silhouette": "kawasaki-vulcan-1500-nomad-drifter-1998",
  "areas": [],
- "heroName": "NOMAD"
+ "heroName": "NOMAD",
+ "hero": {
+  "src": "img/hero/kawasaki-vulcan-1500-nomad-drifter-1998.jpg",
+  "artist": "Addvisor",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_VN_1500_Drifter_DSCF3971.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

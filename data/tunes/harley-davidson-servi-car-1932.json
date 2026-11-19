@@ -63,5 +63,12 @@
  ],
  "silhouette": "harley-davidson-servi-car-1932",
  "areas": [],
- "heroName": "SERVI-CAR"
+ "heroName": "SERVI-CAR",
+ "hero": {
+  "src": "img/hero/harley-davidson-servi-car-1932.jpg",
+  "artist": "AlfvanBeem",
+  "page": "https://commons.wikimedia.org/wiki/File:Old_Harley_davidson_trike_pic5.JPG",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
 }

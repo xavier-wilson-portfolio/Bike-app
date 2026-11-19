@@ -56,5 +56,12 @@
  ],
  "silhouette": "gilera-gp800-2007",
  "areas": [],
- "heroName": "GP800"
+ "heroName": "GP800",
+ "hero": {
+  "src": "img/hero/gilera-gp800-2007.jpg",
+  "artist": "Corvettec6r",
+  "page": "https://commons.wikimedia.org/wiki/File:Gilera_GP800.jpg",
+  "lic": "CC BY 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by/4.0"
+ }
 }

@@ -66,5 +66,12 @@
  ],
  "silhouette": "ducati-hypermotard-1100-796-2007",
  "areas": [],
- "heroName": "HYPERMOTARD"
+ "heroName": "HYPERMOTARD",
+ "hero": {
+  "src": "img/hero/ducati-hypermotard-1100-796-2007.jpg",
+  "artist": "Cjp24",
+  "page": "https://commons.wikimedia.org/wiki/File:Ducati_1100_Evo_SP_(2).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

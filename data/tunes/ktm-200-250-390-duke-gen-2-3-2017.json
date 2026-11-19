@@ -59,5 +59,12 @@
  ],
  "silhouette": "ktm-200-250-390-duke-gen-2-3-2017",
  "areas": [],
- "heroName": "DUKE"
+ "heroName": "DUKE",
+ "hero": {
+  "src": "img/hero/ktm-200-250-390-duke-gen-2-3-2017.jpg",
+  "artist": "Retired electrician",
+  "page": "https://commons.wikimedia.org/wiki/File:Moscow,_KTM_Duke_390_motorcycle_September_2024_04.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
 }

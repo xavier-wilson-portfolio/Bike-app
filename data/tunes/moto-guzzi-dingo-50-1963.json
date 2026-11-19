@@ -62,5 +62,12 @@
  ],
  "silhouette": "moto-guzzi-dingo-50-1963",
  "areas": [],
- "heroName": "DINGO"
+ "heroName": "DINGO",
+ "hero": {
+  "src": "img/hero/moto-guzzi-dingo-50-1963.jpg",
+  "artist": "CheminduCret",
+  "page": "https://commons.wikimedia.org/wiki/File:Moto_Guzzi_Dingo_50_3V_red.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
 }

@@ -58,5 +58,12 @@
  ],
  "silhouette": "tvs-jupiter-ntorq-2013",
  "areas": [],
- "heroName": "JUPITER"
+ "heroName": "JUPITER",
+ "hero": {
+  "src": "img/hero/tvs-jupiter-ntorq-2013.jpg",
+  "artist": "SnapMeUp",
+  "page": "https://commons.wikimedia.org/wiki/File:TVS_Jupiter_Scooter.jpg",
+  "lic": "CC BY 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by/4.0"
+ }
 }

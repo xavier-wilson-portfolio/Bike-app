@@ -58,5 +58,12 @@
  ],
  "silhouette": "kawasaki-ksr110-2003",
  "areas": [],
- "heroName": "KSR110"
+ "heroName": "KSR110",
+ "hero": {
+  "src": "img/hero/kawasaki-ksr110-2003.jpg",
+  "artist": "PekePON",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_KSR110.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

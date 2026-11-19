@@ -63,5 +63,12 @@
  ],
  "silhouette": "moto-guzzi-cardellino-zigolo-1953",
  "areas": [],
- "heroName": "ZIGOLO"
+ "heroName": "ZIGOLO",
+ "hero": {
+  "src": "img/hero/moto-guzzi-cardellino-zigolo-1953.jpg",
+  "artist": "Palauenc05",
+  "page": "https://commons.wikimedia.org/wiki/File:Moto_guzzi_cardellino_1957.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

@@ -57,5 +57,12 @@
  ],
  "silhouette": "bmw-g450x-2008",
  "areas": [],
- "heroName": "G450X"
+ "heroName": "G450X",
+ "hero": {
+  "src": "img/hero/bmw-g450x-2008.jpg",
+  "artist": "https://www.flickr.com/photos/63019370@N06/",
+  "page": "https://commons.wikimedia.org/wiki/File:BMW_G450X.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

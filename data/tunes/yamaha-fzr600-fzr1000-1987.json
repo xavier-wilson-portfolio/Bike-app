@@ -78,5 +78,12 @@
  ],
  "silhouette": "yamaha-fzr600-fzr1000-1987",
  "areas": [],
- "heroName": "FZR1000"
+ "heroName": "FZR1000",
+ "hero": {
+  "src": "img/hero/yamaha-fzr600-fzr1000-1987.jpg",
+  "artist": "Kuro8124",
+  "page": "https://commons.wikimedia.org/wiki/File:YAMAHA_FZR1000_1991.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

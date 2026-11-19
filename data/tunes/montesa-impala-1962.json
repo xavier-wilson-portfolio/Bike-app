@@ -62,5 +62,12 @@
  ],
  "silhouette": "montesa-impala-1962",
  "areas": [],
- "heroName": "IMPALA"
+ "heroName": "IMPALA",
+ "hero": {
+  "src": "img/hero/montesa-impala-1962.jpg",
+  "artist": "Peprovira",
+  "page": "https://commons.wikimedia.org/wiki/File:Montesa_Impala_Kenya_1966.JPG",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

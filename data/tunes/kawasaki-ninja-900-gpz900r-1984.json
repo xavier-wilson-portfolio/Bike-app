@@ -65,5 +65,12 @@
  ],
  "silhouette": "kawasaki-ninja-900-gpz900r-1984",
  "areas": [],
- "heroName": "GPZ900R"
+ "heroName": "GPZ900R",
+ "hero": {
+  "src": "img/hero/kawasaki-ninja-900-gpz900r-1984.jpg",
+  "artist": "Tokumeigakarinoaoshima",
+  "page": "https://commons.wikimedia.org/wiki/File:The_rearview_of_Kawasaki_GPz900R%22Ninja%22_mid-year_1984.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

@@ -64,5 +64,12 @@
  ],
  "silhouette": "honda-cbr1000f-hurricane-1987",
  "areas": [],
- "heroName": "CBR1000F"
+ "heroName": "CBR1000F",
+ "hero": {
+  "src": "img/hero/honda-cbr1000f-hurricane-1987.jpg",
+  "artist": "Mr.choppers",
+  "page": "https://commons.wikimedia.org/wiki/File:1994_Honda_CBR1000F_Hurricane,_rear_left_side.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

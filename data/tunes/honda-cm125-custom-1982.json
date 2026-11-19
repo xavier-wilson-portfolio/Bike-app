@@ -57,5 +57,12 @@
  ],
  "silhouette": "honda-cm125-custom-1982",
  "areas": [],
- "heroName": "CM125"
+ "heroName": "CM125",
+ "hero": {
+  "src": "img/hero/honda-cm125-custom-1982.jpg",
+  "artist": "Radio handbook at English Wikipedia",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CM125.JPEG",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

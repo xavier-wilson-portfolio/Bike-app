@@ -68,5 +68,12 @@
  "forums": [],
  "silhouette": "honda-cbr1000rr-2004",
  "areas": [],
- "heroName": "CBR1000RR"
+ "heroName": "CBR1000RR",
+ "hero": {
+  "src": "img/hero/honda-cbr1000rr-2004.jpg",
+  "artist": "Rama.",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CBR1000RR_Fireblade.jpg",
+  "lic": "CC BY-SA 2.0 fr",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en"
+ }
 }

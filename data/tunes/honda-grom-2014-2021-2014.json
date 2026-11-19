@@ -56,5 +56,12 @@
  "forums": [],
  "silhouette": "honda-grom-2014-2021-2014",
  "areas": [],
- "heroName": "GROM"
+ "heroName": "GROM",
+ "hero": {
+  "src": "img/hero/honda-grom-2014-2021-2014.jpg",
+  "artist": "TAKA@P.P.R.S",
+  "page": "https://commons.wikimedia.org/wiki/File:TOKYO_AUTO_SALON_2014_with_NAPAC_079_(11928387993).jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
 }

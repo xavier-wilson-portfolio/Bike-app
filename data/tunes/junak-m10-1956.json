@@ -57,5 +57,12 @@
  ],
  "silhouette": "junak-m10-1956",
  "areas": [],
- "heroName": "JUNAK"
+ "heroName": "JUNAK",
+ "hero": {
+  "src": "img/hero/junak-m10-1956.jpg",
+  "artist": "Hubert Śmietanka vel Hiuppo",
+  "page": "https://commons.wikimedia.org/wiki/File:PL_Junak_M07.jpg",
+  "lic": "CC BY-SA 2.5",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.5"
+ }
 }

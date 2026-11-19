@@ -79,5 +79,12 @@
  ],
  "silhouette": "honda-vfr1200f-2010",
  "areas": [],
- "heroName": "VFR1200F"
+ "heroName": "VFR1200F",
+ "hero": {
+  "src": "img/hero/honda-vfr1200f-2010.jpg",
+  "artist": "Retired electrician",
+  "page": "https://commons.wikimedia.org/wiki/File:Moscow,_Honda_VFR1200F_Sept_2025_04.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
 }

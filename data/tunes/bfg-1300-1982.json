@@ -56,5 +56,12 @@
  ],
  "silhouette": "bfg-1300-1982",
  "areas": [],
- "heroName": "BFG"
+ "heroName": "BFG",
+ "hero": {
+  "src": "img/hero/bfg-1300-1982.jpg",
+  "artist": "POWillrich",
+  "page": "https://commons.wikimedia.org/wiki/File:BFG_1300_Seitenansicht.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

@@ -58,5 +58,12 @@
  ],
  "silhouette": "bsa-gold-star-650-2022-2022",
  "areas": [],
- "heroName": "GOLD STAR"
+ "heroName": "GOLD STAR",
+ "hero": {
+  "src": "img/hero/bsa-gold-star-650-2022-2022.jpg",
+  "artist": "Ronald Saunders from Warrington, UK",
+  "page": "https://commons.wikimedia.org/wiki/File:Flickr_-_ronsaunders47_-_BSA_ROCKET_GOLD_STAR._650_cc._TWIN._1962-63..jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
 }

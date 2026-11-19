@@ -89,5 +89,12 @@
  ],
  "silhouette": "harley-davidson-dyna-2006",
  "areas": [],
- "heroName": "DYNA"
+ "heroName": "DYNA",
+ "hero": {
+  "src": "img/hero/harley-davidson-dyna-2006.jpg",
+  "artist": "ozz13x",
+  "page": "https://commons.wikimedia.org/wiki/File:Harley_Davidson_Super_Glide_(7760042940).jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

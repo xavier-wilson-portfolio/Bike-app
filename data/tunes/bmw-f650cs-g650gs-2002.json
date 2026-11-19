@@ -58,5 +58,12 @@
  ],
  "silhouette": "bmw-f650cs-g650gs-2002",
  "areas": [],
- "heroName": "G650GS"
+ "heroName": "G650GS",
+ "hero": {
+  "src": "img/hero/bmw-f650cs-g650gs-2002.jpg",
+  "artist": "stevelyon",
+  "page": "https://commons.wikimedia.org/wiki/File:G650GS_-_40430963180.jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
 }

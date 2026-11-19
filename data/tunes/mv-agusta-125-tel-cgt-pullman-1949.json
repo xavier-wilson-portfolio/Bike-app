@@ -58,5 +58,12 @@
  ],
  "silhouette": "mv-agusta-125-tel-cgt-pullman-1949",
  "areas": [],
- "heroName": "MV 125"
+ "heroName": "MV 125",
+ "hero": {
+  "src": "img/hero/mv-agusta-125-tel-cgt-pullman-1949.jpg",
+  "artist": "Klaus Nahr   / Freisteller, Bildbearbeitung &amp; Retusche von Auge=mit",
+  "page": "https://commons.wikimedia.org/wiki/File:MV_Agusta_125_TEL_noBG.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

@@ -63,5 +63,12 @@
  ],
  "silhouette": "triumph-tiger-100-tr5-trophy-pre-unit-500-1946",
  "areas": [],
- "heroName": "TIGER 100"
+ "heroName": "TIGER 100",
+ "hero": {
+  "src": "img/hero/triumph-tiger-100-tr5-trophy-pre-unit-500-1946.jpg",
+  "artist": "Yesterdays Antique Motorcycles",
+  "page": "https://commons.wikimedia.org/wiki/File:1951_Triumph_TR5_Trophy_right_side.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

@@ -67,5 +67,12 @@
  ],
  "silhouette": "yamaha-yds-3-big-bear-250-1964",
  "areas": [],
- "heroName": "BIG BEAR"
+ "heroName": "BIG BEAR",
+ "hero": {
+  "src": "img/hero/yamaha-yds-3-big-bear-250-1964.jpg",
+  "artist": "Ronald Saunders from Warrington, UK",
+  "page": "https://commons.wikimedia.org/wiki/File:Flickr_-_ronsaunders47_-_THE_YAMAHA_YDS3_1966._TWO_STROKE_TWIN..jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
 }

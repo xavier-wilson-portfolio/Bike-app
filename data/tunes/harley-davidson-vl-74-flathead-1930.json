@@ -67,5 +67,12 @@
  ],
  "silhouette": "harley-davidson-vl-74-flathead-1930",
  "areas": [],
- "heroName": "VL 74"
+ "heroName": "VL 74",
+ "hero": {
+  "src": "img/hero/harley-davidson-vl-74-flathead-1930.jpg",
+  "artist": "Michael Barera",
+  "page": "https://commons.wikimedia.org/wiki/File:Harley-Davidson_Museum_December_2023_24_(1936_VLH--Side-Valve_V-Twin).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

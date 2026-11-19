@@ -58,5 +58,12 @@
  ],
  "silhouette": "ktm-1390-super-duke-r-2024",
  "areas": [],
- "heroName": "1390 SDR"
+ "heroName": "1390 SDR",
+ "hero": {
+  "src": "img/hero/ktm-1390-super-duke-r-2024.jpg",
+  "artist": "Chakkapong Charnfun",
+  "page": "https://commons.wikimedia.org/wiki/File:KTM_All_New_Duke_390_2018_Rama_5_(cropped).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

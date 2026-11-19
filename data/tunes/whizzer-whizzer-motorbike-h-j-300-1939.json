@@ -60,5 +60,12 @@
  ],
  "silhouette": "whizzer-whizzer-motorbike-h-j-300-1939",
  "areas": [],
- "heroName": "WHIZZER"
+ "heroName": "WHIZZER",
+ "hero": {
+  "src": "img/hero/whizzer-whizzer-motorbike-h-j-300-1939.jpg",
+  "artist": "Kenneth C. Zirkel",
+  "page": "https://commons.wikimedia.org/wiki/File:1955_Schwinn_Whizzer_motorized_bicycle.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

@@ -71,5 +71,12 @@
  ],
  "silhouette": "honda-adv150-adv160-2020",
  "areas": [],
- "heroName": "ADV160"
+ "heroName": "ADV160",
+ "hero": {
+  "src": "img/hero/honda-adv150-adv160-2020.jpg",
+  "artist": "Captainmorlypogi1959",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_ADV_Motorcycle_2023.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

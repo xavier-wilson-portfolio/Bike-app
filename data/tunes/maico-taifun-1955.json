@@ -61,5 +61,12 @@
  ],
  "silhouette": "maico-taifun-1955",
  "areas": [],
- "heroName": "TAIFUN"
+ "heroName": "TAIFUN",
+ "hero": {
+  "src": "img/hero/maico-taifun-1955.jpg",
+  "artist": "Fomanu",
+  "page": "https://commons.wikimedia.org/wiki/File:Motorrad_Maico_Taifun.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

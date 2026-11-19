@@ -62,5 +62,12 @@
  ],
  "silhouette": "cagiva-freccia-c12-1987",
  "areas": [],
- "heroName": "FRECCIA"
+ "heroName": "FRECCIA",
+ "hero": {
+  "src": "img/hero/cagiva-freccia-c12-1987.jpg",
+  "artist": "Joost J. Bakker from IJmuiden",
+  "page": "https://commons.wikimedia.org/wiki/File:Aprilia_AF1_125_FUTURA_1990.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

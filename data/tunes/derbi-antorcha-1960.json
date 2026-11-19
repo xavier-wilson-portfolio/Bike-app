@@ -61,5 +61,12 @@
  ],
  "silhouette": "derbi-antorcha-1960",
  "areas": [],
- "heroName": "ANTORCHA"
+ "heroName": "ANTORCHA",
+ "hero": {
+  "src": "img/hero/derbi-antorcha-1960.jpg",
+  "artist": "Antramir",
+  "page": "https://commons.wikimedia.org/wiki/File:Derbi_Antorcha_2012_528.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

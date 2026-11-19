@@ -60,5 +60,12 @@
  ],
  "silhouette": "norton-commando-961-new-2010",
  "areas": [],
- "heroName": "COMMANDO 961"
+ "heroName": "COMMANDO 961",
+ "hero": {
+  "src": "img/hero/norton-commando-961-new-2010.jpg",
+  "artist": "Daniel Hartwig from San Mateo, CA, USA",
+  "page": "https://commons.wikimedia.org/wiki/File:Norton_Commando_961_arrival_(16971719982).jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

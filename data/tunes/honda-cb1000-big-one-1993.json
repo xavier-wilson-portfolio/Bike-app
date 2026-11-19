@@ -59,5 +59,12 @@
  ],
  "silhouette": "honda-cb1000-big-one-1993",
  "areas": [],
- "heroName": "BIG ONE"
+ "heroName": "BIG ONE",
+ "hero": {
+  "src": "img/hero/honda-cb1000-big-one-1993.jpg",
+  "artist": "Monaroman68",
+  "page": "https://commons.wikimedia.org/wiki/File:My_1994_Honda_CB1000FS_001.jpg",
+  "lic": "CC BY 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by/3.0"
+ }
 }

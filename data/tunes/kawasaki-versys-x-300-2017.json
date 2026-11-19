@@ -71,5 +71,12 @@
  ],
  "silhouette": "kawasaki-versys-x-300-2017",
  "areas": [],
- "heroName": "VERSYS-X"
+ "heroName": "VERSYS-X",
+ "hero": {
+  "src": "img/hero/kawasaki-versys-x-300-2017.jpg",
+  "artist": "Sgroey",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_Versys-X_300.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

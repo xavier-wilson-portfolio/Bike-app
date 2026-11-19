@@ -59,5 +59,12 @@
  ],
  "silhouette": "honda-wave-100-110-125-1995",
  "areas": [],
- "heroName": "WAVE"
+ "heroName": "WAVE",
+ "hero": {
+  "src": "img/hero/honda-wave-100-110-125-1995.jpg",
+  "artist": "Khaosaming",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_Wave_125_S_2007.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
 }

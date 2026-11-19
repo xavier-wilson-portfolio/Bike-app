@@ -57,5 +57,12 @@
  ],
  "silhouette": "honda-vtr250-1988",
  "areas": [],
- "heroName": "VTR250"
+ "heroName": "VTR250",
+ "hero": {
+  "src": "img/hero/honda-vtr250-1988.jpg",
+  "artist": "PekePON",
+  "page": "https://commons.wikimedia.org/wiki/File:HONDA_VTR250_2003_Pearl_Shining_Yellow.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

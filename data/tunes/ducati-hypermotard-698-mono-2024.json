@@ -56,5 +56,12 @@
  ],
  "silhouette": "ducati-hypermotard-698-mono-2024",
  "areas": [],
- "heroName": "698 MONO"
+ "heroName": "698 MONO",
+ "hero": {
+  "src": "img/hero/ducati-hypermotard-698-mono-2024.jpg",
+  "artist": "Earthshaker13",
+  "page": "https://commons.wikimedia.org/wiki/File:Ducati_Hypermotard_698_Mono_RVE_at_EICMA_2023_-_left_view.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

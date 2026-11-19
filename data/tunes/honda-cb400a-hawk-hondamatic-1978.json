@@ -58,5 +58,12 @@
  ],
  "silhouette": "honda-cb400a-hawk-hondamatic-1978",
  "areas": [],
- "heroName": "CB400A"
+ "heroName": "CB400A",
+ "hero": {
+  "src": "img/hero/honda-cb400a-hawk-hondamatic-1978.jpg",
+  "artist": "Original uploader was Slarty-bart-farst at en.wikipedia",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CB750.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+ }
 }

@@ -57,5 +57,12 @@
  ],
  "silhouette": "jawa-classic-42-perak-classic-legends-2018",
  "areas": [],
- "heroName": "JAWA"
+ "heroName": "JAWA",
+ "hero": {
+  "src": "img/hero/jawa-classic-42-perak-classic-legends-2018.jpg",
+  "artist": "Gpkp",
+  "page": "https://commons.wikimedia.org/wiki/File:Jawa_42_Bobber_(India)_2025.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

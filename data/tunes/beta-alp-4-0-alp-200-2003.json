@@ -58,5 +58,12 @@
  ],
  "silhouette": "beta-alp-4-0-alp-200-2003",
  "areas": [],
- "heroName": "ALP"
+ "heroName": "ALP",
+ "hero": {
+  "src": "img/hero/beta-alp-4-0-alp-200-2003.jpg",
+  "artist": "Jix31",
+  "page": "https://commons.wikimedia.org/wiki/File:Beta_Alp_4.0.jpg",
+  "lic": "CC BY 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by/4.0"
+ }
 }

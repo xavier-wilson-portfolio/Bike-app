@@ -66,5 +66,12 @@
  ],
  "silhouette": "suzuki-rv90-rv125-vanvan-1972",
  "areas": [],
- "heroName": "VANVAN"
+ "heroName": "VANVAN",
+ "hero": {
+  "src": "img/hero/suzuki-rv90-rv125-vanvan-1972.jpg",
+  "artist": "青木ヶ原樹海",
+  "page": "https://commons.wikimedia.org/wiki/File:%E3%83%90%E3%83%B3%E3%83%90%E3%83%B350(1975%E5%B9%B4%E5%BC%8F).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

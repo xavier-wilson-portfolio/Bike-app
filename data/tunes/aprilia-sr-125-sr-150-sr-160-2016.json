@@ -58,5 +58,12 @@
  ],
  "silhouette": "aprilia-sr-125-sr-150-sr-160-2016",
  "areas": [],
- "heroName": "SR 160"
+ "heroName": "SR 160",
+ "hero": {
+  "src": "img/hero/aprilia-sr-125-sr-150-sr-160-2016.jpg",
+  "artist": "Stuart.midgley",
+  "page": "https://commons.wikimedia.org/wiki/File:Aprilia_SR50_Factory_Side_View.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

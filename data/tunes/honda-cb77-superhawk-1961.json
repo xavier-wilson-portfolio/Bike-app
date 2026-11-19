@@ -64,5 +64,12 @@
  ],
  "silhouette": "honda-cb77-superhawk-1961",
  "areas": [],
- "heroName": "SUPER HAWK"
+ "heroName": "SUPER HAWK",
+ "hero": {
+  "src": "img/hero/honda-cb77-superhawk-1961.jpg",
+  "artist": "SG2012",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CB77_Super_Hawk_(1964)_-_29086471981.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

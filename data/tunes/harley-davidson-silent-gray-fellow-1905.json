@@ -63,5 +63,12 @@
  ],
  "silhouette": "harley-davidson-silent-gray-fellow-1905",
  "areas": [],
- "heroName": "SILENT GRAY"
+ "heroName": "SILENT GRAY",
+ "hero": {
+  "src": "img/hero/harley-davidson-silent-gray-fellow-1905.jpg",
+  "artist": "DrReload",
+  "page": "https://commons.wikimedia.org/wiki/File:1911HarleyDavidson%22SilentGrayFellow%22.jpg",
+  "lic": "CC BY 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by/4.0"
+ }
 }

@@ -64,5 +64,12 @@
  ],
  "silhouette": "simson-s50-s51-1975",
  "areas": [],
- "heroName": "S51"
+ "heroName": "S51",
+ "hero": {
+  "src": "img/hero/simson-s50-s51-1975.jpg",
+  "artist": "Matti Blume",
+  "page": "https://commons.wikimedia.org/wiki/File:Pfingsttreffen_Puetnitz_2018,_Ribnitz-Damgarten_(1X7A2312).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

@@ -65,5 +65,12 @@
  ],
  "silhouette": "moto-guzzi-1000-sp-spada-1978",
  "areas": [],
- "heroName": "SPADA"
+ "heroName": "SPADA",
+ "hero": {
+  "src": "img/hero/moto-guzzi-1000-sp-spada-1978.jpg",
+  "artist": "Kobarat",
+  "page": "https://commons.wikimedia.org/wiki/File:SP_1000_1_81.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

@@ -65,5 +65,12 @@
  ],
  "silhouette": "ariel-arrow-leader-1958",
  "areas": [],
- "heroName": "ARROW"
+ "heroName": "ARROW",
+ "hero": {
+  "src": "img/hero/ariel-arrow-leader-1958.jpg",
+  "artist": "SG2012",
+  "page": "https://commons.wikimedia.org/wiki/File:Ariel_Leader_(1960).jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

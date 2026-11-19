@@ -58,5 +58,12 @@
  ],
  "silhouette": "harley-davidson-buell-1125r-1125cr-2008",
  "areas": [],
- "heroName": "1125R"
+ "heroName": "1125R",
+ "hero": {
+  "src": "img/hero/harley-davidson-buell-1125r-1125cr-2008.jpg",
+  "artist": "ATFIII",
+  "page": "https://commons.wikimedia.org/wiki/File:Midnight_Black_2009_Buell_1125R.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

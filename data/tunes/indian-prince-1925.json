@@ -60,5 +60,12 @@
  ],
  "silhouette": "indian-prince-1925",
  "areas": [],
- "heroName": "PRINCE"
+ "heroName": "PRINCE",
+ "hero": {
+  "src": "img/hero/indian-prince-1925.jpg",
+  "artist": "Peprovira",
+  "page": "https://commons.wikimedia.org/wiki/File:Indian_Prince_350cc_1925.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

@@ -61,5 +61,12 @@
  ],
  "silhouette": "beta-rr-400-450-525-ktm-engine-2005",
  "areas": [],
- "heroName": "RR 525"
+ "heroName": "RR 525",
+ "hero": {
+  "src": "img/hero/beta-rr-400-450-525-ktm-engine-2005.jpg",
+  "artist": "BetaVale92",
+  "page": "https://commons.wikimedia.org/wiki/File:Beta_50_RR_Enduro.JPG",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

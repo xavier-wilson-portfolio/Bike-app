@@ -66,5 +66,12 @@
  ],
  "silhouette": "allstate-allstate-puch-175-250-1951",
  "areas": [],
- "heroName": "ALLSTATE"
+ "heroName": "ALLSTATE",
+ "hero": {
+  "src": "img/hero/allstate-allstate-puch-175-250-1951.jpg",
+  "artist": "Andydevon",
+  "page": "https://commons.wikimedia.org/wiki/File:Puch-250-SGS-1960-1.jpg",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
 }

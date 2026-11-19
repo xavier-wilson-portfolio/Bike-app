@@ -58,5 +58,12 @@
  ],
  "silhouette": "hero-karizma-xtreme-2003",
  "areas": [],
- "heroName": "KARIZMA"
+ "heroName": "KARIZMA",
+ "hero": {
+  "src": "img/hero/hero-karizma-xtreme-2003.jpg",
+  "artist": "SmrutiRSahoo2929",
+  "page": "https://commons.wikimedia.org/wiki/File:Hero_honda_Karizma_by_smruti.jpg",
+  "lic": "CC BY 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by/4.0"
+ }
 }

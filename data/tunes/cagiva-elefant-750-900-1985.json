@@ -57,5 +57,12 @@
  ],
  "silhouette": "cagiva-elefant-750-900-1985",
  "areas": [],
- "heroName": "ELEFANT"
+ "heroName": "ELEFANT",
+ "hero": {
+  "src": "img/hero/cagiva-elefant-750-900-1985.jpg",
+  "artist": "Nicholas Gemini",
+  "page": "https://commons.wikimedia.org/wiki/File:Cagiva_motorcycles@Motodays_2017.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

@@ -68,5 +68,12 @@
  ],
  "silhouette": "beta-rr-250-300-two-stroke-2013",
  "areas": [],
- "heroName": "300 RR"
+ "heroName": "300 RR",
+ "hero": {
+  "src": "img/hero/beta-rr-250-300-two-stroke-2013.jpg",
+  "artist": "BetaVale92",
+  "page": "https://commons.wikimedia.org/wiki/File:Beta_50_RR_Enduro.JPG",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

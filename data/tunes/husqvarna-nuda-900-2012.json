@@ -57,5 +57,12 @@
  ],
  "silhouette": "husqvarna-nuda-900-2012",
  "areas": [],
- "heroName": "NUDA"
+ "heroName": "NUDA",
+ "hero": {
+  "src": "img/hero/husqvarna-nuda-900-2012.jpg",
+  "artist": "MidoriWorks",
+  "page": "https://commons.wikimedia.org/wiki/File:Husqvarna_NUDA_900.JPG",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

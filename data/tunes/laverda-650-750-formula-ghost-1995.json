@@ -57,5 +57,12 @@
  ],
  "silhouette": "laverda-650-750-formula-ghost-1995",
  "areas": [],
- "heroName": "LAVERDA"
+ "heroName": "LAVERDA",
+ "hero": {
+  "src": "img/hero/laverda-650-750-formula-ghost-1995.jpg",
+  "artist": "Mike Schinkel",
+  "page": "https://commons.wikimedia.org/wiki/File:Laverda_650_yellow.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

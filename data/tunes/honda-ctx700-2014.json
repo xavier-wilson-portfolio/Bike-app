@@ -76,5 +76,12 @@
  "forums": [],
  "silhouette": "honda-ctx700-2014",
  "areas": [],
- "heroName": "CTX700"
+ "heroName": "CTX700",
+ "hero": {
+  "src": "img/hero/honda-ctx700-2014.jpg",
+  "artist": "Helmut.klassen",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CTX_700_N.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

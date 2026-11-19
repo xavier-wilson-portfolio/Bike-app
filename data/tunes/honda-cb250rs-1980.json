@@ -58,5 +58,12 @@
  ],
  "silhouette": "honda-cb250rs-1980",
  "areas": [],
- "heroName": "CB250RS"
+ "heroName": "CB250RS",
+ "hero": {
+  "src": "img/hero/honda-cb250rs-1980.jpg",
+  "artist": "T.cornall at English Wikipedia",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_cb250rs_1984.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

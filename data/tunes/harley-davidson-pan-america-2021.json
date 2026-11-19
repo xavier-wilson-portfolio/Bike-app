@@ -72,5 +72,12 @@
  "forums": [],
  "silhouette": "harley-davidson-pan-america-2021",
  "areas": [],
- "heroName": "PAN AMERICA"
+ "heroName": "PAN AMERICA",
+ "hero": {
+  "src": "img/hero/harley-davidson-pan-america-2021.jpg",
+  "artist": "Olinone",
+  "page": "https://commons.wikimedia.org/wiki/File:Harley-Davidson_Pan_America_(2023).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

@@ -57,5 +57,12 @@
  ],
  "silhouette": "kawasaki-estrella-250-1992",
  "areas": [],
- "heroName": "ESTRELLA"
+ "heroName": "ESTRELLA",
+ "hero": {
+  "src": "img/hero/kawasaki-estrella-250-1992.jpg",
+  "artist": "Priwo",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki-Estrella-01.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

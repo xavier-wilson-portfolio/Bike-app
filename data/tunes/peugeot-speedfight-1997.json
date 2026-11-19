@@ -58,5 +58,12 @@
  ],
  "silhouette": "peugeot-speedfight-1997",
  "areas": [],
- "heroName": "SPEEDFIGHT"
+ "heroName": "SPEEDFIGHT",
+ "hero": {
+  "src": "img/hero/peugeot-speedfight-1997.jpg",
+  "artist": "Captured by the user FirstAdmiral.",
+  "page": "https://commons.wikimedia.org/wiki/File:Speedfight_3_Rot-Silber.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

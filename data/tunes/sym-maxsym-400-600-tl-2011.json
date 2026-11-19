@@ -57,5 +57,12 @@
  ],
  "silhouette": "sym-maxsym-400-600-tl-2011",
  "areas": [],
- "heroName": "MAXSYM"
+ "heroName": "MAXSYM",
+ "hero": {
+  "src": "img/hero/sym-maxsym-400-600-tl-2011.jpg",
+  "artist": "Corvettec6r",
+  "page": "https://commons.wikimedia.org/wiki/File:SYM_Maxsym_400_(2nd_gen)_in_Avellino.jpg",
+  "lic": "CC BY 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by/4.0"
+ }
 }

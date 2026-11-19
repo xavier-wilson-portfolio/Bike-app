@@ -59,5 +59,12 @@
  ],
  "silhouette": "bmw-r1200rs-r1250rs-2015",
  "areas": [],
- "heroName": "R1250RS"
+ "heroName": "R1250RS",
+ "hero": {
+  "src": "img/hero/bmw-r1200rs-r1250rs-2015.jpg",
+  "artist": "Addvisor",
+  "page": "https://commons.wikimedia.org/wiki/File:BMW_R1200RS_back.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

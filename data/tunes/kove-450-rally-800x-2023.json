@@ -60,5 +60,12 @@
  ],
  "silhouette": "kove-450-rally-800x-2023",
  "areas": [],
- "heroName": "KOVE"
+ "heroName": "KOVE",
+ "hero": {
+  "src": "img/hero/kove-450-rally-800x-2023.jpg",
+  "artist": "MotorideSA",
+  "page": "https://commons.wikimedia.org/wiki/File:Kove_800X_GT.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

@@ -81,5 +81,12 @@
  "forums": [],
  "silhouette": "kawasaki-ninja-zx-10r-2004",
  "areas": [],
- "heroName": "ZX-10R"
+ "heroName": "ZX-10R",
+ "hero": {
+  "src": "img/hero/kawasaki-ninja-zx-10r-2004.jpg",
+  "artist": "Cjp24",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawasaki_ZX-10R_(1).jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

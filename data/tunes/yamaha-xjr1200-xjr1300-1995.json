@@ -57,5 +57,12 @@
  ],
  "silhouette": "yamaha-xjr1200-xjr1300-1995",
  "areas": [],
- "heroName": "XJR1300"
+ "heroName": "XJR1300",
+ "hero": {
+  "src": "img/hero/yamaha-xjr1200-xjr1300-1995.jpg",
+  "artist": "Rainmaker47",
+  "page": "https://commons.wikimedia.org/wiki/File:1998_Yamaha_XJR1300.JPG",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

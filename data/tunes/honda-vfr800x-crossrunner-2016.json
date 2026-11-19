@@ -57,5 +57,12 @@
  ],
  "silhouette": "honda-vfr800x-crossrunner-2016",
  "areas": [],
- "heroName": "CROSSRUNNER"
+ "heroName": "CROSSRUNNER",
+ "hero": {
+  "src": "img/hero/honda-vfr800x-crossrunner-2016.jpg",
+  "artist": "order_242 from Chile",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_Crossrunner_2013_(9527533974).jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
 }

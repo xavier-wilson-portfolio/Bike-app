@@ -60,5 +60,12 @@
  ],
  "silhouette": "zundapp-ks-750-ks-601-1950",
  "areas": [],
- "heroName": "ZUNDAPP"
+ "heroName": "ZUNDAPP",
+ "hero": {
+  "src": "img/hero/zundapp-ks-750-ks-601-1950.jpg",
+  "artist": "Alf van Beem",
+  "page": "https://commons.wikimedia.org/wiki/File:1952_Z%C3%BCndapp_Gespann_KS_601_592cc_34hp_125kmh_Der_legend%C3%A4re_Gr%C3%BCne_Elefant_bild_1.JPG",
+  "lic": "CC0",
+  "licUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ }
 }

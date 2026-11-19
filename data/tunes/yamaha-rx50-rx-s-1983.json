@@ -67,5 +67,12 @@
  ],
  "silhouette": "yamaha-rx50-rx-s-1983",
  "areas": [],
- "heroName": "RX50"
+ "heroName": "RX50",
+ "hero": {
+  "src": "img/hero/yamaha-rx50-rx-s-1983.jpg",
+  "artist": "hyperhaus",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_RX-S_100.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

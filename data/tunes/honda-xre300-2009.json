@@ -57,5 +57,12 @@
  ],
  "silhouette": "honda-xre300-2009",
  "areas": [],
- "heroName": "XRE300"
+ "heroName": "XRE300",
+ "hero": {
+  "src": "img/hero/honda-xre300-2009.jpg",
+  "artist": "Borowskki",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_XRE300_ano2010.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

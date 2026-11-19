@@ -60,5 +60,12 @@
  ],
  "silhouette": "honda-cb250n-cb400n-super-dream-1978",
  "areas": [],
- "heroName": "SUPER DREAM"
+ "heroName": "SUPER DREAM",
+ "hero": {
+  "src": "img/hero/honda-cb250n-cb400n-super-dream-1978.jpg",
+  "artist": "Rainmaker47",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CB400N_in_the_Honda_Collection_Hall.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

@@ -61,5 +61,12 @@
  ],
  "silhouette": "bmw-r51-3-r67-plunger-1951",
  "areas": [],
- "heroName": "R67"
+ "heroName": "R67",
+ "hero": {
+  "src": "img/hero/bmw-r51-3-r67-plunger-1951.jpg",
+  "artist": "Jörg Hornfischer",
+  "page": "https://commons.wikimedia.org/wiki/File:BMW-R51-2.jpg",
+  "lic": "CC BY-SA 3.0 de",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en"
+ }
 }

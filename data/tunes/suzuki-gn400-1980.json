@@ -58,5 +58,12 @@
  ],
  "silhouette": "suzuki-gn400-1980",
  "areas": [],
- "heroName": "GN400"
+ "heroName": "GN400",
+ "hero": {
+  "src": "img/hero/suzuki-gn400-1980.jpg",
+  "artist": "Wusel007\nDate=2008-05-24\n\nThe original uploader was Wusel007 at German Wikipedia.",
+  "page": "https://commons.wikimedia.org/wiki/File:GN400.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

@@ -65,5 +65,12 @@
  ],
  "silhouette": "yamaha-yz465-yz490-1980",
  "areas": [],
- "heroName": "YZ490"
+ "heroName": "YZ490",
+ "hero": {
+  "src": "img/hero/yamaha-yz465-yz490-1980.jpg",
+  "artist": "Coadster68",
+  "page": "https://commons.wikimedia.org/wiki/File:YZ250.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

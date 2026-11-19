@@ -57,5 +57,12 @@
  ],
  "silhouette": "honda-ctx1300-2014",
  "areas": [],
- "heroName": "CTX1300"
+ "heroName": "CTX1300",
+ "hero": {
+  "src": "img/hero/honda-ctx1300-2014.jpg",
+  "artist": "Thesupermat",
+  "page": "https://commons.wikimedia.org/wiki/File:Salon_de_la_Moto_et_du_Scooter_de_Paris_2013_-_Honda_-_CTX_-_001.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

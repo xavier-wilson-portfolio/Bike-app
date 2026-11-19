@@ -58,5 +58,12 @@
  ],
  "silhouette": "harley-davidson-xlcr-cafe-racer-1977",
  "areas": [],
- "heroName": "XLCR"
+ "heroName": "XLCR",
+ "hero": {
+  "src": "img/hero/harley-davidson-xlcr-cafe-racer-1977.jpg",
+  "artist": "Mike Schinkel",
+  "page": "https://commons.wikimedia.org/wiki/File:1977_Harley_Davidson_XLCR_01.jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

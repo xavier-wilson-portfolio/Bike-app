@@ -63,5 +63,12 @@
  ],
  "silhouette": "simson-schwalbe-kr51-1964",
  "areas": [],
- "heroName": "SCHWALBE"
+ "heroName": "SCHWALBE",
+ "hero": {
+  "src": "img/hero/simson-schwalbe-kr51-1964.jpg",
+  "artist": "Metal-star at German Wikipedia",
+  "page": "https://commons.wikimedia.org/wiki/File:Simson_Schwalbe_KR51_2.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

@@ -62,5 +62,12 @@
  ],
  "silhouette": "nsu-konsul-osl-1936",
  "areas": [],
- "heroName": "KONSUL"
+ "heroName": "KONSUL",
+ "hero": {
+  "src": "img/hero/nsu-konsul-osl-1936.jpg",
+  "artist": "Lothar Spurzem",
+  "page": "https://commons.wikimedia.org/wiki/File:NSU_Konsul_I_01_(Foto_Sp_2011-06-19).jpg",
+  "lic": "CC BY-SA 2.0 de",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0/de/deed.en"
+ }
 }

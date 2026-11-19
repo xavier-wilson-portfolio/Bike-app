@@ -56,5 +56,12 @@
  ],
  "silhouette": "yamaha-sr125-1982",
  "areas": [],
- "heroName": "SR125"
+ "heroName": "SR125",
+ "hero": {
+  "src": "img/hero/yamaha-sr125-1982.jpg",
+  "artist": "Kuro8124",
+  "page": "https://commons.wikimedia.org/wiki/File:YAMAHA_SR125.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }
