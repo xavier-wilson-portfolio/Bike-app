@@ -58,5 +58,14 @@
    "what": "Owner forum for MV Agusta models, old and new."
   }
  ],
- "heroName": "750 AMERICA"
+ "silhouette": "mv-agusta-750s-750-america-1971",
+ "areas": [],
+ "heroName": "750 AMERICA",
+ "hero": {
+  "src": "img/hero/mv-agusta-750s-750-america-1971.jpg",
+  "artist": "Klaus Nahr   / Freisteller, Bildbearbeitung &amp; Retusche von Auge=mit",
+  "page": "https://commons.wikimedia.org/wiki/File:MV_Agusta_750_S_noBG.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

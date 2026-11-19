@@ -66,5 +66,14 @@
    "what": "Big dirt bike forum with model sections for most off-road bikes."
   }
  ],
- "heroName": "CAN-AM"
+ "silhouette": "can-am-qualifier-mx-sonic-two-stroke-1973",
+ "areas": [],
+ "heroName": "CAN-AM",
+ "hero": {
+  "src": "img/hero/can-am-qualifier-mx-sonic-two-stroke-1973.jpg",
+  "artist": "Peprovira",
+  "page": "https://commons.wikimedia.org/wiki/File:Can-Am_370_MX-5_1979.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

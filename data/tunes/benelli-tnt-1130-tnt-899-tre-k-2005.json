@@ -59,5 +59,14 @@
    "what": "Large riding forum with threads on most European makes, old and new."
   }
  ],
- "heroName": "TNT 1130"
+ "silhouette": "benelli-tnt-1130-tnt-899-tre-k-2005",
+ "areas": [],
+ "heroName": "TNT 1130",
+ "hero": {
+  "src": "img/hero/benelli-tnt-1130-tnt-899-tre-k-2005.jpg",
+  "artist": "RL GNZLZ",
+  "page": "https://commons.wikimedia.org/wiki/File:Benelli_TNT_899.jpg",
+  "lic": "CC BY-SA 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+ }
 }

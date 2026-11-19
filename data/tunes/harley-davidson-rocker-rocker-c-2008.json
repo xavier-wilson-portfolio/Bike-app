@@ -60,5 +60,14 @@
    "what": "Large owner forum for all Harley-Davidson models."
   }
  ],
- "heroName": "ROCKER"
+ "silhouette": "harley-davidson-rocker-rocker-c-2008",
+ "areas": [],
+ "heroName": "ROCKER",
+ "hero": {
+  "src": "img/hero/harley-davidson-rocker-rocker-c-2008.jpg",
+  "artist": "George E. Koronaios",
+  "page": "https://commons.wikimedia.org/wiki/File:2008_Harley-Davidson_Rocker_in_Athens_on_11-14-2023.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

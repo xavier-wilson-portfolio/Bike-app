@@ -61,5 +61,14 @@
    "what": "Forum for classic British motorcycles."
   }
  ],
- "heroName": "VENOM"
+ "silhouette": "velocette-venom-thruxton-viper-1955",
+ "areas": [],
+ "heroName": "VENOM",
+ "hero": {
+  "src": "img/hero/velocette-venom-thruxton-viper-1955.jpg",
+  "artist": "Thomas's Pics",
+  "page": "https://commons.wikimedia.org/wiki/File:Velocette_Thruxton_(15250217061).jpg",
+  "lic": "CC BY 2.0",
+  "licUrl": "https://creativecommons.org/licenses/by/2.0"
+ }
 }

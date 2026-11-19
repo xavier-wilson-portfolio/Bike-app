@@ -61,5 +61,14 @@
    "what": "Club for owners of older Japanese bikes."
   }
  ],
- "heroName": "SUPER CUB"
+ "silhouette": "honda-c100-super-cub-50-1958",
+ "areas": [],
+ "heroName": "SUPER CUB",
+ "hero": {
+  "src": "img/hero/honda-c100-super-cub-50-1958.jpg",
+  "artist": "Mj-bird",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_super_cub,_1st_Gen._1958,_Left_side.jpg",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

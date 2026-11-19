@@ -55,5 +55,14 @@
    "what": "US owner club for Moto Guzzi."
   }
  ],
- "heroName": "NEVADA"
+ "silhouette": "moto-guzzi-nevada-750-1991",
+ "areas": [],
+ "heroName": "NEVADA",
+ "hero": {
+  "src": "img/hero/moto-guzzi-nevada-750-1991.jpg",
+  "artist": "Tutkamestari",
+  "page": "https://commons.wikimedia.org/wiki/File:Moto_Guzzi_Nevada_Anniversario_as_custom.JPG",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

@@ -57,5 +57,14 @@
    "what": "Owner forum for modern and classic Triumphs."
   }
  ],
- "heroName": "TRIDENT"
+ "silhouette": "triumph-trident-750-900-hinckley-1991",
+ "areas": [],
+ "heroName": "TRIDENT",
+ "hero": {
+  "src": "img/hero/triumph-trident-750-900-hinckley-1991.jpg",
+  "artist": "Dédélembrouille",
+  "page": "https://commons.wikimedia.org/wiki/File:Triumph_900_Tiger.JPG",
+  "lic": "CC BY-SA 2.5",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.5"
+ }
 }

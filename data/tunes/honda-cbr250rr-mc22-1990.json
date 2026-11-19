@@ -57,5 +57,14 @@
    "what": "Owner forum for Honda CBR models."
   }
  ],
- "heroName": "CBR250RR"
+ "silhouette": "honda-cbr250rr-mc22-1990",
+ "areas": [],
+ "heroName": "CBR250RR",
+ "hero": {
+  "src": "img/hero/honda-cbr250rr-mc22-1990.jpg",
+  "artist": "Ryuki8409",
+  "page": "https://commons.wikimedia.org/wiki/File:CBR250RR_MC22.JPG",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

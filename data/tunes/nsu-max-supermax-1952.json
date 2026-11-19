@@ -57,5 +57,14 @@
    "what": "Large riding forum with threads on most European makes, old and new."
   }
  ],
- "heroName": "NSU MAX"
+ "silhouette": "nsu-max-supermax-1952",
+ "areas": [],
+ "heroName": "NSU MAX",
+ "hero": {
+  "src": "img/hero/nsu-max-supermax-1952.jpg",
+  "artist": "Roman877",
+  "page": "https://commons.wikimedia.org/wiki/File:NSU_Max_1955.JPG",
+  "lic": "CC BY-SA 3.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ }
 }

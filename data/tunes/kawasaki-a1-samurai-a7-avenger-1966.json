@@ -66,5 +66,14 @@
    "what": "Club for owners of older Japanese bikes."
   }
  ],
- "heroName": "SAMURAI"
+ "silhouette": "kawasaki-a1-samurai-a7-avenger-1966",
+ "areas": [],
+ "heroName": "SAMURAI",
+ "hero": {
+  "src": "img/hero/kawasaki-a1-samurai-a7-avenger-1966.jpg",
+  "artist": "Rainmaker47",
+  "page": "https://commons.wikimedia.org/wiki/File:1968_Kawasaki_Avenger_(A7)_KGTW.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

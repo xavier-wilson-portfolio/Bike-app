@@ -56,5 +56,14 @@
    "what": "Parts and know-how for Honda XR dirt bikes."
   }
  ],
- "heroName": "XR200R"
+ "silhouette": "honda-xr200r-1981",
+ "areas": [],
+ "heroName": "XR200R",
+ "hero": {
+  "src": "img/hero/honda-xr200r-1981.jpg",
+  "artist": "Borowskki",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_XR_200R_ES_Brazil.jpg",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

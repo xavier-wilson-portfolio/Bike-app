@@ -61,5 +61,14 @@
    "what": "Club for owners of older Japanese bikes."
   }
  ],
- "heroName": "RE5"
+ "silhouette": "suzuki-re5-rotary-1975",
+ "areas": [],
+ "heroName": "RE5",
+ "hero": {
+  "src": "img/hero/suzuki-re5-rotary-1975.jpg",
+  "artist": "Rikita",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_RE-5_(type_A)_in_Honda_Collection.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

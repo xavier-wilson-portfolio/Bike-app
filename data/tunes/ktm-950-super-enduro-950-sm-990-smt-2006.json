@@ -57,5 +57,14 @@
    "what": "Large adventure riding forum with model-specific threads."
   }
  ],
- "heroName": "950 SE"
+ "silhouette": "ktm-950-super-enduro-950-sm-990-smt-2006",
+ "areas": [],
+ "heroName": "950 SE",
+ "hero": {
+  "src": "img/hero/ktm-950-super-enduro-950-sm-990-smt-2006.jpg",
+  "artist": "Piero at Dutch Wikipedia",
+  "page": "https://commons.wikimedia.org/wiki/File:KTM_LC_8_950_SM.JPG",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

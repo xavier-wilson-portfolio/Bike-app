@@ -55,5 +55,14 @@
    "what": "Owner forum for KTM street and adventure bikes."
   }
  ],
- "heroName": "SVARTPILEN"
+ "silhouette": "husqvarna-svartpilen-801-vitpilen-801-2024",
+ "areas": [],
+ "heroName": "SVARTPILEN",
+ "hero": {
+  "src": "img/hero/husqvarna-svartpilen-801-vitpilen-801-2024.jpg",
+  "artist": "AVMOTO",
+  "page": "https://commons.wikimedia.org/wiki/File:Husqvarna_Vitpilen_801.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }

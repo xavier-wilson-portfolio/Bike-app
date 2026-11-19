@@ -57,5 +57,14 @@
    "what": "Club for owners of older Japanese bikes."
   }
  ],
- "heroName": "CB-1"
+ "silhouette": "honda-cb-1-cb400f-1989",
+ "areas": [],
+ "heroName": "CB-1",
+ "hero": {
+  "src": "img/hero/honda-cb-1-cb400f-1989.jpg",
+  "artist": "JuliusRoch",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_CB-1.JPG",
+  "lic": "Public domain",
+  "licUrl": ""
+ }
 }

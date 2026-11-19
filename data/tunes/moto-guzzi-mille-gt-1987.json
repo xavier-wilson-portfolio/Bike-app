@@ -60,5 +60,14 @@
    "what": "US owner club for Moto Guzzi."
   }
  ],
- "heroName": "MILLE GT"
+ "silhouette": "moto-guzzi-mille-gt-1987",
+ "areas": [],
+ "heroName": "MILLE GT",
+ "hero": {
+  "src": "img/hero/moto-guzzi-mille-gt-1987.jpg",
+  "artist": "Lothar Spurzem",
+  "page": "https://commons.wikimedia.org/wiki/File:Moto_Guzzi_Mille_GT,_Bj._1987-88,_am_15.07.2006.jpg",
+  "lic": "CC BY-SA 2.0 de",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/2.0/de/deed.en"
+ }
 }

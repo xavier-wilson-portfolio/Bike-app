@@ -63,5 +63,14 @@
    "what": "Owner forum for vintage Yamaha two-stroke enduros."
   }
  ],
- "heroName": "RD250"
+ "silhouette": "yamaha-rd250-rd125-1973",
+ "areas": [],
+ "heroName": "RD250",
+ "hero": {
+  "src": "img/hero/yamaha-rd250-rd125-1973.jpg",
+  "artist": "Cjp24",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamaha_RD_125_DX,_red.jpg",
+  "lic": "CC BY-SA 4.0",
+  "licUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
 }
