@@ -21,19 +21,26 @@
       const r = el.getBoundingClientRect(), q = clamp((vh - (r.top + r.height / 2)) / (vh * .7));
       el.style.setProperty("--lift", (30 * Math.sin(Math.PI * q)).toFixed(1));
     });
+    document.querySelectorAll("[data-win]").forEach(w => {
+      const c = document.querySelector(".rd-circle"), cur = parseFloat(w.style.getPropertyValue("--win")) || 0;
+      if (!c || innerWidth <= 1100) { w.style.setProperty("--win", "0px"); return; }
+      const cr = c.getBoundingClientRect(), wr = w.getBoundingClientRect();
+      if (wr.left < innerWidth * .35) { w.style.setProperty("--win", "0px"); return; }   // stacked under the text: leave it
+      w.style.setProperty("--win", ((cr.top + cr.height / 2) - (wr.top - cur + wr.height / 2)).toFixed(0) + "px");
+    });
     document.querySelectorAll("[data-strip]").forEach(el => {
-      const r = el.getBoundingClientRect(), t = clamp((vh - r.bottom) / 320), imgs = el.querySelectorAll(".bk img"), n = imgs.length;
+      const r = el.getBoundingClientRect(), t = clamp((vh - r.bottom) / 320), imgs = el.querySelectorAll(".bk img,.bk i"), n = imgs.length;
       imgs.forEach((im, i) => {
         const o = clamp(t * 1.8 - (n - 1 - i) * .14);
         im.style.setProperty("--bx", (o * 900).toFixed(0) + "px"); im.style.setProperty("--bsk", (t > 0 && o < 1 ? -12 : 0) + "deg");
-        im.style.opacity = (0.55 * (1 - o)).toFixed(2);
+        im.style.opacity = (1 - o).toFixed(2);
       });
     });
   }
   const on = () => { if (!raf) raf = requestAnimationFrame(tick); };
   let bound = false;
   window.rvFx = function () {
-    if (reduce) return;
+    if (reduce) { requestAnimationFrame(() => document.querySelectorAll("[data-win]").length && tick()); return; }
     if (!bound) { bound = true; addEventListener("scroll", on, { passive: true }); addEventListener("resize", on); }
     on();
   };

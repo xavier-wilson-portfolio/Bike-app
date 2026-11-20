@@ -64,7 +64,7 @@
 .rd-strip>div{max-width:1240px;margin:0 auto;padding:40px 32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px}
 .rd-strip p{flex:1 1 280px;margin:0;font-size:16px;color:#2C5F7C}.rd-strip p strong{display:block;font-family:var(--f-display);font-weight:400;font-size:23px;color:#2C4253}
 .rd-strip .bk{flex:2 1 560px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px}
-.rd-strip .bk img{height:46px;width:auto;opacity:.55;transform:translateX(var(--bx,0px)) skewX(var(--bsk,0deg));transition:transform .15s linear,opacity .15s linear;filter:invert(62%) sepia(28%) saturate(420%) hue-rotate(166deg) brightness(95%)}
+.rd-strip .bk i{display:block;height:46px;width:84px;background:#2C4253;-webkit-mask:var(--m) center/contain no-repeat;mask:var(--m) center/contain no-repeat;transform:translateX(var(--bx,0px)) skewX(var(--bsk,0deg));transition:transform .15s linear,opacity .15s linear}
 .rd-feats{max-width:1240px;margin:0 auto;padding:104px 32px 40px;display:flex;flex-direction:column;gap:104px}
 .rd-row{display:flex;flex-wrap:wrap;align-items:center;gap:56px}.rd-row.rev{flex-wrap:wrap-reverse}
 .rd-row .tx{flex:1 1 380px;min-width:0}.rd-row h2{margin:10px 0 0;font-size:clamp(24px,2.81vw,34px);line-height:1.12}.rd-row h2 em,.rd-plans h2 em{font-style:normal;color:#2C5F7C}
@@ -271,3 +271,12 @@ h1.disp,.sec,.page-h h1{font-family:var(--f-display);font-weight:400;letter-spac
 .is-garage .shop-cm{background:#fff;border:1px solid #E2DCCD;border-radius:12px;padding:16px 22px;margin-top:14px;box-shadow:0 14px 34px rgba(44,66,83,.17),0 2px 6px rgba(44,66,83,.10)}
 @media (hover:hover){.is-garage .shop-band:hover{transform:translateY(-4px)}}
 .gx-nav button{white-space:nowrap}
+
+/* garage box like the mockup: speedometer, then the text, then the bike graphic */
+.bench{grid-template-columns:250px minmax(0,1fr)}
+.bench .bench-dial{order:0;justify-self:start}.bench .bench-txt{order:1}
+.bench .bench-art{right:-30px;bottom:-40px;width:min(560px,46%)}
+@media (max-width:760px){.bench{grid-template-columns:1fr}}
+/* garage card pictures */
+.gx-art.cut img{inset:6% 6%;width:88%;height:88%}
+.gx-art.photo{background:#E6F1F8}.gx-art.photo img{inset:5px;width:calc(100% - 10px);height:calc(100% - 10px);object-fit:cover;border-radius:8px}

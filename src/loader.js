@@ -514,12 +514,13 @@
           <span class="gt-meta">${b && b.generic ? "Maintenance and records" : g && g.total ? `${g.done} of ${g.total} steps` : "Not started"}<span>${esc(who(p))}</span></span></button>
         ${p.role === "owner" && readyFor(p) ? `<div class="gt-ready"><span>The ${esc(bikeName(readyFor(p)))} page is ready.</span><button class="btn tan sm" data-connect="${esc(p.id)}">Connect</button></div>` : ""}${p.role === "owner" ? `<div class="gt-acts"><button class="linkbtn" data-share="${esc(p.id)}">Share</button><button class="linkbtn" data-rename="${esc(p.id)}">Rename</button><button class="linkbtn" data-transfer="${esc(p.id)}">Sold it?</button><button class="linkbtn gt-del" data-del="${esc(p.id)}">Delete</button></div>` : `<div class="gt-acts"><button class="linkbtn gt-del" data-leave="${esc(p.id)}">Remove from my garage</button></div>`}</article>`; };
     const fb = feat && bikeOf(feat.bike_id), fg = feat && prog[feat.id];
-    const artSrc = p => { const b = bikeOf(p.bike_id), f = silFile(genSil[p.id]) || b && !b.generic && silFile(b.silhouette) || silFile("bike-" + styleOf(p)) || silFile("bike-standard"); return f ? "img/sil/" + f : ""; };
+    const artSrc = p => { const b = bikeOf(p.bike_id); if (b && b.hero) return b.hero; const f = silFile(genSil[p.id]) || b && !b.generic && silFile(b.silhouette) || silFile("bike-" + styleOf(p)) || silFile("bike-standard"); return f ? "img/sil/" + f : ""; };
     const tagOf = p => { const g = prog[p.id]; return isLog(p) ? "Logging" : g && g.total && g.done >= g.total ? "Done" : g && g.done ? "Restoring · " + Math.round(pctOf(p)) + "%" : "Not started"; };
     const subOf = p => { const b = bikeOf(p.bike_id); return isLog(p) ? "Maintenance log · " + (STYLE_NAME[styleOf(p)] || "Standard") : isUni(p) ? uniTxt(p) : genLabel[p.id] || (b && !b.generic ? [p.name && p.name !== bikeName(b) ? bikeName(b) : "", b.variant].filter(Boolean).join(", ") : "") || "Your bike"; };
-    const card = p => `<button class="gx-bike" data-project="${esc(p.id)}" data-q="${esc([p.name, subOf(p)].join(" ").toLowerCase())}"><span class="gx-art">${artSrc(p) ? `<img src="${artSrc(p)}" alt="">` : ""}${isPin(p) ? `<span class="gx-pin">Pinned</span>` : ""}</span>
+    const card = p => `<button class="gx-bike" data-project="${esc(p.id)}" data-q="${esc([p.name, subOf(p)].join(" ").toLowerCase())}"><span class="gx-art${PHOTO[p.id] ? " photo" : bikeOf(p.bike_id)?.hero ? " cut" : ""}" data-art="${esc(p.id)}">${PHOTO[p.id] ? `<img src="${PHOTO[p.id]}" alt="">` : artSrc(p) ? `<img src="${artSrc(p)}" alt="">` : ""}${isPin(p) ? `<span class="gx-pin">Pinned</span>` : ""}</span>
       <span class="gx-bt"><b>${esc(p.name || bikeName(bikeOf(p.bike_id)))}</b><span>${esc(subOf(p))}</span><em>${esc(tagOf(p))}</em></span></button>`;
     const SHOW = 4, first4 = data.slice(0, SHOW), more = data.length - first4.length;
+    const PHOTO = {};
     const SI = d => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
     const shortcut = (sec, t, d, ic) => `<button class="gx-sc" data-gxsec="${sec}"><span class="gx-ico">${SI(ic)}</span><span><b>${t}</b><span>${d}</span></span></button>`;
     const info = (t, d, btn, a, ic) => `<div class="gx-info"><span class="gx-ico">${SI(ic)}</span><b>${t}</b><p>${d}</p><button class="gx-chip" ${a}>${btn}</button></div>`;
@@ -560,6 +561,17 @@
       <p class="g-legal"><a href="?privacy">Privacy Policy</a> · <a href="?terms">Terms of Service</a> · <button class="linkbtn g-del" data-delacct>Delete my account</button></p>`, { wide: true, garage: true, shop: !!myShop });
     const adm = document.getElementById("admHQ"); if (adm) window.rvAdmin.mount(adm, sb, note);
     if (window.rvFx) rvFx(app);
+    // the photo each owner put on their bike's home page goes on its garage card
+    (async () => {
+      try {
+        const ids = data.map(p => p.id); if (!ids.length) return;
+        const { data: ms } = await sb.from("records").select("project_id,hp:data->>heroPhoto").eq("coll", "meta").in("project_id", ids);
+        const want = (ms || []).filter(m => m.hp); if (!want.length) return;
+        const { data: ds } = await sb.from("records").select("project_id,rec_id,file:data->>file").eq("coll", "docs").in("rec_id", want.map(m => m.hp)).in("project_id", want.map(m => m.project_id));
+        want.forEach(m => { const d = (ds || []).find(x => x.project_id === m.project_id && x.rec_id === m.hp); if (!d || !d.file || !d.file.startsWith("data:image")) return;
+          PHOTO[m.project_id] = d.file; document.querySelectorAll(`[data-art="${CSS.escape(m.project_id)}"]`).forEach(a => { a.classList.add("photo"); a.innerHTML = `<img src="${d.file}" alt="">` + (a.querySelector(".gx-pin") ? a.querySelector(".gx-pin").outerHTML : ""); }); });
+      } catch (e) {}
+    })();
     const mb = app.querySelector("[data-gxmenu]"), mn = document.getElementById("gxMenu");
     if (mb && mn) {
       const setM = on => { mn.hidden = !on; mb.setAttribute("aria-expanded", on); if (on) { const f = mn.querySelector("button"); f && f.focus(); } };
@@ -960,7 +972,7 @@
         </div>
       </section>
       <section class="rd-strip" data-strip><div><p><strong>Built for your bike, whatever it is.</strong>Search by year, make and model. The course is tailored to it.</p>
-        <div class="bk" aria-hidden="true">${["bike-cafe", "bike-cruiser", "bike-sport", "bike-adventure", "bike-dualsport", "bike-scooter"].map(n => sil(n) ? `<img src="${sil(n)}" alt="">` : "").join("")}</div></div></section>
+        <div class="bk" aria-hidden="true">${["bike-cafe", "bike-cruiser", "bike-sport", "bike-adventure", "bike-dualsport", "bike-scooter"].map(n => sil(n) ? `<i style="--m:url(${sil(n)})"></i>` : "").join("")}</div></div></section>
       <section class="rd-feats" id="ld-features">
         <div class="rd-row"><div class="tx"><p class="rd-k">Restoration course</p><h2>Know exactly <em>what to do next.</em></h2><p>Fourteen parts, in the order a restorer would do them. Every step says what to do and why, and the mechanic is a click away if you get stuck.</p></div>
           <div class="rd-sep blue rd-course" data-sep><div class="hd"><b>Part 6 · Carburetors</b><span>2 of 4 done</span></div><div class="rd-steps">
