@@ -874,7 +874,7 @@
         <div class="rd-main">
           <div class="rd-copy">
             <p class="rd-k"><i></i>Restoration and maintenance</p>
-            <h1 class="rd-h1" data-glint>Restore what <em>matters.</em><span class="glint" aria-hidden="true">Restore what matters.</span></h1>
+            <h1 class="rd-h1" data-glint>Restore what <em>matters.</em><span class="glint" aria-hidden="true" data-t="Restore what matters."></span></h1>
             <p class="rd-lede">A step-by-step restoration course built around your bike, and a service log that keeps every part, receipt and mile in one garage.</p>
             <form class="rd-ride rd-pop" id="ldRide"><p>What do you ride?</p>
               <div class="rd-ride-f"><div><label for="ldY">Year</label><input id="ldY" name="y" inputmode="numeric" placeholder="1977" autocomplete="off"></div><div><label for="ldM">Make</label><input id="ldM" name="m" placeholder="Suzuki" autocomplete="off"></div><div><label for="ldO">Model</label><input id="ldO" name="o" placeholder="GS750" autocomplete="off"></div></div>
