@@ -298,3 +298,20 @@ h1.disp,.sec,.page-h h1{font-family:var(--f-display);font-weight:400;letter-spac
 .rv-dragging{position:relative;z-index:50;pointer-events:none;transition:none!important;box-shadow:0 30px 60px rgba(23,35,44,.35)!important;cursor:grabbing}
 .rv-sorting [data-sort-id]:not(.rv-dragging){transition:transform .2s ease}
 .gx-hint{margin:8px 0 0;font-size:13px;color:#5B6B78}
+/* garage cards: one open area plus a small menu, and the rest of the bikes slide in below */
+.gx-bike{cursor:default}
+.gx-open{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;flex:1 1 auto;width:100%}
+.gx-open:focus-visible{outline:2px solid #2C5F7C;outline-offset:-2px;border-radius:12px}
+.gx-dots{all:unset;box-sizing:border-box;cursor:pointer;position:absolute;top:8px;right:8px;width:34px;height:34px;display:grid;place-items:center;border-radius:8px;background:rgba(255,255,255,.92);color:#2C4253;box-shadow:0 2px 8px rgba(23,35,44,.18);opacity:0;transition:opacity .15s ease}
+.gx-dots svg{width:18px;height:18px;fill:currentColor}
+.gx-bike:hover .gx-dots,.gx-dots:focus-visible,.gx-dots[aria-expanded="true"]{opacity:1}
+@media (hover:none){.gx-dots{opacity:1}}
+.gx-dots:focus-visible{outline:2px solid #2C5F7C;outline-offset:2px}
+.gx-pop{position:absolute;top:46px;right:8px;z-index:5;min-width:180px;background:#fff;border:1px solid #E2DCCD;border-radius:10px;box-shadow:0 18px 40px rgba(23,35,44,.25);padding:6px;display:flex;flex-direction:column}
+.gx-pop[hidden]{display:none}
+.gx-pop button{all:unset;cursor:pointer;padding:9px 12px;border-radius:7px;font-size:14px;font-weight:600;color:#2C4253}.gx-pop button:hover,.gx-pop button:focus-visible{background:#F1F7FB}
+.gx-pop .gx-del{color:var(--red,#B3261E)}
+.gx-bike{overflow:visible}.gx-bike .gx-art{border-radius:12px 12px 0 0;overflow:hidden}
+.gx-in{animation:gxIn .35s ease both}
+@keyframes gxIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.gx-in{animation:none}}
