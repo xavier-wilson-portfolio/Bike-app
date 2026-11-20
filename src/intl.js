@@ -369,7 +369,7 @@
         <p class="rv-note">Everything you've logged stays the same. It's shown in these units, and new numbers you type are read in them too.</p></section>
       <section><h3>Currency</h3>${sel("rvCur", CURS.map(([c, n]) => [c, c + " · " + curName(c, n)]), ST.cur, true)}
         <p class="rv-note">Changes the symbol and number style. Amounts aren't converted, so prices you typed stay as you typed them. Revora plan prices stay in US dollars.</p></section>
-      <section><h3>Appearance</h3><div class="rv-seg" role="radiogroup" aria-label="Theme">${[["light", "Light"], ["dark", "Dark"], ["system", "Match my device"]].map(([v, l]) => `<button type="button" role="radio" aria-checked="${th === v}" class="${th === v ? "on" : ""}" data-rvtheme="${v}">${l}</button>`).join("")}</div></section>
+      <section><h3>Appearance</h3><div class="rv-seg" role="radiogroup" aria-label="Theme">${[["light", "Light"], ["dark", "Dark"], ["system", "Match my device"]].map(([v, l]) => `<button type="button" role="radio" aria-checked="${th === v}" class="${th === v ? "on" : ""}" data-rvtheme="${v}">${l}</button>`).join("")}</div><button type="button" class="rv-more" data-rvlook style="display:block;margin-top:10px">Colors, fonts, layout and speedometer</button></section>
       ${inApp ? `<section><button type="button" class="rv-more" data-rvmore>Bike settings, budget and backups</button></section>` : ""}
       ${acct ? acct.html("rest") : ""}
     </div>`;
@@ -393,6 +393,7 @@
     UNIT_ROWS.forEach(([q]) => { bg.querySelector("#rvU-" + q).onchange = e => { save({ [q]: e.target.value }); refreshAll(); redraw(); }; });
     bg.querySelector("#rvCur").onchange = e => { save({ cur: e.target.value }); refreshAll(); };
     bg.querySelectorAll("[data-rvtheme]").forEach(b => b.onclick = () => { setTheme(b.dataset.rvtheme); redraw(); });
+    const lk = bg.querySelector("[data-rvlook]"); if (lk) lk.onclick = () => { closePanel(); if (window.rvOpenLook) rvOpenLook(); };
     const more = bg.querySelector("[data-rvmore]"); if (more) more.onclick = () => { closePanel(); go("settings"); };
     if (window.rvAccountSettings && !(typeof VIEWS === "object" && VIEWS && VIEWS.settings && typeof go === "function")) rvAccountSettings.bind(bg, closePanel);
   }

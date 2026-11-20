@@ -124,10 +124,21 @@ function renderMobMenu() {
     <div class="moblist">${SECTIONS.filter(s => s.id === "home" || s.main).map(s => `<button class="mlink ${cur === s.id ? "on" : ""}" data-goto="${s.id}">${ic(s.i)}<span><b>${esc(s.t)}${typeof secLock === "function" ? secLock(s.id) : ""}</b><small>${esc(s.d || "Overview and progress")}</small></span></button>`).join("")}</div>
     ${NAV_GROUPS.filter(([k]) => SECTIONS.some(s => s.grp === k)).map(([k, l]) => `<div class="eyebrow" style="margin-top:14px">${esc(l)}</div><div class="moblist grp">${SECTIONS.filter(s => s.grp === k).map(s => `<button class="mlink ${cur === s.id ? "on" : ""}" data-goto="${s.id}">${ic(s.i)}<span><b>${esc(s.t)}${typeof secLock === "function" ? secLock(s.id) : ""}</b></span></button>`).join("")}</div>`).join("")}
     <button class="mob-fb mob-ins" onclick="rvInstall && rvInstall()">${ic("download")}<span><b>Install the app</b><small>Revora on your home screen</small></span>${ic("next")}</button>
-    <button class="mob-fb" data-feedback>${ic("chat")}<span><b>Send feedback</b><small>Tell us what to fix or add</small></span>${ic("next")}</button></div>`;
+    <button class="mob-fb" data-feedback>${ic("chat")}<span><b>Send feedback</b><small>Tell us what to fix or add</small></span>${ic("next")}</button>
+    <button class="mob-fb mob-look" onclick="window.rvOpenLook && (closeMenus(), rvOpenLook())">${ic("tune")}<span><b>Customize appearance</b><small>Colors, fonts, layout and speedometer</small></span>${ic("next")}</button></div>`;
   $("#mobX").onclick = closeMenus;
 }
+// left icon rail on wide screens: the house shows, the other sections slide down when you hover it
+function renderRail() {
+  if (typeof SECTIONS === "undefined") return;
+  let r = document.getElementById("rvRail");
+  if (!r) { r = document.createElement("nav"); r.id = "rvRail"; r.className = "rv-rail"; r.setAttribute("aria-label", "Sections"); document.body.appendChild(r); }
+  const cur = R.sec === "lesson" ? "course" : R.sec;
+  r.innerHTML = SECTIONS.filter(s => s.id === "home" || s.main).map((s, i) => `<button type="button" class="rl${cur === s.id ? " on" : ""}${i ? " more" : ""}" style="--i:${i}" data-rl="${s.id}" title="${esc(s.t)}" aria-label="${esc(s.t)}"${cur === s.id ? ' aria-current="page"' : ""}>${ic(s.i)}</button>`).join("");
+  r.querySelectorAll("[data-rl]").forEach(b => b.onclick = () => go(b.dataset.rl));
+}
 function renderNav() {
+  try { renderRail(); } catch (e) {}
   const cur = R.sec === "lesson" ? "course" : R.sec, inMore = !!SEC[cur]?.grp, mg = $("#mega");
   $("#nav").innerHTML = SECTIONS.filter(s => s.main).map(s => `<button class="nl ${cur === s.id ? "on" : ""}" data-goto="${s.id}" ${cur === s.id ? 'aria-current="page"' : ""}>${esc(s.t)}</button>`).join("") +
     `<button class="nl ${inMore ? "on" : ""} ${mg && !mg.hidden ? "open" : ""}" data-more aria-expanded="${mg && !mg.hidden}">More ${ic("chev")}</button>`;
