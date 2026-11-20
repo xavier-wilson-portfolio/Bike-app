@@ -45,3 +45,24 @@
     on();
   };
 })();
+
+/* project top box: size the photo column so a 16:9 photo is exactly as tall as the box. Nothing gets cut and there's no gap. */
+(function () {
+  function fit(h) {
+    if (!h || innerWidth < 1021) { if (h) h.style.removeProperty("--phw"); return; }
+    const l = h.querySelector(".mh-hero-l"), W = h.clientWidth; if (!l || !W) return;
+    let lo = 0.42, hi = 0.6;
+    for (let i = 0; i < 12; i++) {
+      const f = (lo + hi) / 2; h.style.setProperty("--phw", (f * 100).toFixed(2) + "%");
+      const ph = (f * W - 18) * 9 / 16 + 18, th = l.scrollHeight;
+      if (ph < th) lo = f; else hi = f;
+    }
+    h.style.setProperty("--phw", (hi * 100).toFixed(2) + "%");
+  }
+  let busy = false;
+  function all() { if (busy) return; busy = true; document.querySelectorAll(".mh-hero").forEach(fit); busy = false; }
+  addEventListener("resize", all);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(all);
+  new MutationObserver(() => { if (document.querySelector(".mh-hero:not([data-fit])")) { document.querySelectorAll(".mh-hero:not([data-fit])").forEach(h => h.setAttribute("data-fit", "1")); all(); } }).observe(document.documentElement, { childList: true, subtree: true });
+  window.rvFitHero = all;
+})();
