@@ -423,11 +423,3 @@ html[data-sec="home"] .subbar{display:none}
 .mh-row.mg4 .rs-specs{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin-top:4px}
 .mh-row.mg4 .rs-specs>div{background:#E6F1F8;border-radius:8px;padding:12px 14px}.mh-row.mg4 .rs-specs b{display:block;font-family:var(--f-display);font-weight:400;font-size:14px}.mh-row.mg4 .rs-specs span{display:block;margin-top:4px;font-size:13px;color:#3A4A57}
 .mg-course{background:#E6F1F8;border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:8px;align-items:flex-start}.mg-course b{font-family:var(--f-display);font-weight:400;font-size:16px}
-/* project photo: the box takes the picture's shape, so the whole bike shows and it still fills the box */
-@media (min-width:1021px){
-  html .mh-hero{grid-template-columns:minmax(0,1fr) minmax(0,min(64%,940px))!important;align-items:end}
-  .mh-hero .mh-stage{display:block;padding:20px 7px 7px 0;height:auto;align-self:end}
-  .mh-hero .mh-stage .herophoto{width:100%;height:auto;min-height:0!important;aspect-ratio:16/9;flex:none}
-  .mh-hero .mh-stage .herophoto > img:not(.hp-cut):not(.hp-art){position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-}
-@media (max-width:1020px){.mh-hero .mh-stage{padding-bottom:64px}.mh-hero .mh-stage .herophoto{min-height:0!important;aspect-ratio:16/9}}
