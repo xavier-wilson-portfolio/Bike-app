@@ -493,8 +493,8 @@
     if (!data.length && cHomes.length && !myShop && ls.get("rv.clientHome") !== "own") return rvClient.home(ctx(), cHomes);
     const prog = await projectProgress(data.map(p => p.id));
     // projects on the general bike: which request they're waiting on, and whether that bike's page is ready
-    const gen = data.filter(p => bikeOf(p.bike_id)?.generic || bikeOf(p.bike_id)?.universal), genKey = {}, genStyle = {}, genSil = {}, genLabel = {};
-    if (gen.length) { const { data: ms } = await sb.from("records").select("project_id,key:data->>requestKey,style:data->>style,sil:data->>silhouette,yr:data->>year,mk:data->>make,md:data->>model").eq("coll", "meta").in("project_id", gen.map(p => p.id)); (ms || []).forEach(m => { genKey[m.project_id] = m.key; genStyle[m.project_id] = m.style; genSil[m.project_id] = m.sil; genLabel[m.project_id] = [m.yr, m.mk, m.md].filter(Boolean).join(" "); }); }
+    const gen = data.filter(p => bikeOf(p.bike_id)?.generic || bikeOf(p.bike_id)?.universal), genKey = {}, genStyle = {}, genSil = {}, genLabel = {}, genYMM = {};
+    if (gen.length) { const { data: ms } = await sb.from("records").select("project_id,key:data->>requestKey,style:data->>style,sil:data->>silhouette,yr:data->>year,mk:data->>make,md:data->>model").eq("coll", "meta").in("project_id", gen.map(p => p.id)); (ms || []).forEach(m => { genKey[m.project_id] = m.key; genStyle[m.project_id] = m.style; genSil[m.project_id] = m.sil; genLabel[m.project_id] = [m.yr, m.mk, m.md].filter(Boolean).join(" "); genYMM[m.project_id] = { year: m.yr, make: m.mk, model: m.md }; }); }
     const isLog = p => bikeOf(p.bike_id)?.generic && !genKey[p.id];
     const isUni = p => !!bikeOf(p.bike_id)?.universal, uniTxt = p => (bikeOf(p.bike_id)?.styleName || "") + " restoration";
     const readyFor = p => bikeOf(p.bike_id)?.generic ? packForKey(genKey[p.id]) : null;
@@ -517,10 +517,10 @@
     const artSrc = p => { const b = bikeOf(p.bike_id); if (b && b.hero) return b.hero; const f = silFile(genSil[p.id]) || b && !b.generic && silFile(b.silhouette) || silFile("bike-" + styleOf(p)) || silFile("bike-standard"); return f ? "img/sil/" + f : ""; };
     const tagOf = p => { const g = prog[p.id]; return isLog(p) ? "Logging" : g && g.total && g.done >= g.total ? "Done" : g && g.done ? "Restoring · " + Math.round(pctOf(p)) + "%" : "Not started"; };
     const subOf = p => { const b = bikeOf(p.bike_id); return isLog(p) ? "Maintenance log · " + (STYLE_NAME[styleOf(p)] || "Standard") : isUni(p) ? uniTxt(p) : genLabel[p.id] || (b && !b.generic ? [p.name && p.name !== bikeName(b) ? bikeName(b) : "", b.variant].filter(Boolean).join(", ") : "") || "Your bike"; };
-    const card = p => `<button class="gx-bike" data-project="${esc(p.id)}" data-q="${esc([p.name, subOf(p)].join(" ").toLowerCase())}"><span class="gx-art${PHOTO[p.id] ? " photo" : bikeOf(p.bike_id)?.hero ? " cut" : ""}" data-art="${esc(p.id)}">${PHOTO[p.id] ? `<img src="${PHOTO[p.id]}" alt="">` : artSrc(p) ? `<img src="${artSrc(p)}" alt="">` : ""}${isPin(p) ? `<span class="gx-pin">Pinned</span>` : ""}</span>
+    const card = p => `<button class="gx-bike" data-project="${esc(p.id)}" data-q="${esc([p.name, subOf(p)].join(" ").toLowerCase())}"><span class="gx-art${PHOTO[p.id] || LIB[p.id] ? " photo" : bikeOf(p.bike_id)?.hero ? " cut" : ""}" data-art="${esc(p.id)}">${PHOTO[p.id] || LIB[p.id] ? `<img src="${PHOTO[p.id] || LIB[p.id]}" alt="">` : artSrc(p) ? `<img src="${artSrc(p)}" alt="">` : ""}${isPin(p) ? `<span class="gx-pin">Pinned</span>` : ""}</span>
       <span class="gx-bt"><b>${esc(p.name || bikeName(bikeOf(p.bike_id)))}</b><span>${esc(subOf(p))}</span><em>${esc(tagOf(p))}</em></span></button>`;
     const SHOW = 4, first4 = data.slice(0, SHOW), more = data.length - first4.length;
-    const PHOTO = {};
+    const PHOTO = {}, LIB = {};
     const SI = d => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
     const shortcut = (sec, t, d, ic) => `<button class="gx-sc" data-gxsec="${sec}"><span class="gx-ico">${SI(ic)}</span><span><b>${t}</b><span>${d}</span></span></button>`;
     const info = (t, d, btn, a, ic) => `<div class="gx-info"><span class="gx-ico">${SI(ic)}</span><b>${t}</b><p>${d}</p><button class="gx-chip" ${a}>${btn}</button></div>`;
@@ -561,6 +561,23 @@
       <p class="g-legal"><a href="?privacy">Privacy Policy</a> · <a href="?terms">Terms of Service</a> · <button class="linkbtn g-del" data-delacct>Delete my account</button></p>`, { wide: true, garage: true, shop: !!myShop });
     const adm = document.getElementById("admHQ"); if (adm) window.rvAdmin.mount(adm, sb, note);
     if (window.rvFx) rvFx(app);
+    // each bike's library photo (img/hero), found the same way the project page finds it
+    (async () => {
+      try {
+        if (!TUNES) TUNES = await getJson("tunes/index.json?v=" + (window.RV_BUILD || ""));
+        data.forEach(p => {
+          if (PHOTO[p.id]) return;
+          const b = bikeOf(p.bike_id), L = genYMM[p.id] || (b && !b.generic && !b.universal ? { year: b.year, make: b.make, model: b.model } : null);
+          if (!L || !L.make || !L.model) return;
+          const mk = norm(L.make), md = norm(L.model), y = +L.year || 0;
+          const t = (TUNES || []).find(t => norm(t.make) === mk && [t.model, ...(t.match || [])].some(m => norm(m) === md) && (!y || (y >= t.years[0] && y <= t.years[1])));
+          if (!t) return;
+          const src = "img/hero/" + encodeURIComponent(t.id) + ".jpg", im = new Image();
+          im.onload = () => { if (PHOTO[p.id]) return; LIB[p.id] = src; document.querySelectorAll(`[data-art="${CSS.escape(p.id)}"]`).forEach(a => { const pin = a.querySelector(".gx-pin"); a.className = "gx-art photo"; a.innerHTML = `<img src="${src}" alt="">` + (pin ? pin.outerHTML : ""); }); };
+          im.src = src;
+        });
+      } catch (e) {}
+    })();
     // the photo each owner put on their bike's home page goes on its garage card
     (async () => {
       try {
@@ -965,7 +982,7 @@
             <div class="rd-win-top"><div style="display:flex;align-items:center;gap:8px"><img src="img/revora-word.svg" alt=""><span class="rd-chip" style="background:#D9BF8E;color:#17232C">My garage</span><span class="rd-chip" style="background:#F6EEDD;color:#7A5A1E">Shop</span></div><div class="rd-win-bar"><i><b></b></i><span>66%</span></div></div>
             <div style="padding:16px"><div class="rd-win-hero rd-metal rd-pop" style="box-shadow:inset 0 1px 0 rgba(255,255,255,.28)">
               <div class="t"><p class="k">Restoration course</p><p class="n">2007 Honda CBR600RR</p><div class="rd-tags"><span class="tt">Sport</span><span>Part 3 of 14</span><span>66% done</span></div><div class="acts"><span class="a">Continue Part 3</span><span class="b">Parts diagrams</span></div></div>
-              <div class="ph"><div>${sil("honda-cbr600rr-2007") ? `<img src="${sil("honda-cbr600rr-2007")}" alt="">` : sil("bike-sport") ? `<img src="${sil("bike-sport")}" alt="">` : ""}</div></div>
+              <div class="ph"><div class="photo"><img src="img/hero/honda-cbr600rr-2007.jpg" alt=""></div></div>
               <div class="rd-shine" data-shine></div></div>
               <div class="rd-tiles"><div><p class="k">Course</p><p class="v">66%</p><p>49 of 64 steps</p></div><div><p class="k">Up next</p><p class="v s">Research, budget &amp; order</p><p>Part 3 · 2 of 3 steps</p></div><div><p class="k">Parts finished</p><p class="v">0 <small style="font-size:13px;color:#5B6B78">/ 78</small></p></div><div><p class="k">Money spent</p><p class="v">$3,316</p><p>of $5,400 budget</p></div></div></div>
           </div>
