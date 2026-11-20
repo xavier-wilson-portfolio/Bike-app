@@ -462,3 +462,11 @@ html[data-sec="home"] .subbar{display:none}
 .rv-nl-box h2{margin:8px 0 12px;font-family:var(--f-display);font-weight:400;font-size:26px;color:#17232C}
 .rv-nl-box p{margin:0 0 10px;color:#3A4A57;line-height:1.55}
 .rv-nl-acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+/* a box that lifted stays lifted while the mouse is in the few pixels it rose out of (fx.js adds .rv-hold), so it never bounces */
+@media (hover:hover){
+  :is(.panel,.mh-panel,.card,.kpi,.lesson,.gcard,.gtile,.gtile2,.cl-card,.cl-run,.contcard,.cv-card,.cv-shop,.dcard,.gal-card,.lib-guide,.md-card,.mtcard,.ph-card,.pl-card,.planrow,.pp-card,.pv-card,.pv-opt,.rc-card,.rcl-card,.rm-how,.shop,.st,.step3,.sx-bike,.sx-remind,.tcard,.tip,.vcard,.wk-safe,.wk-sum,.wo-decide,.fin,.focus-banner,.rs-cur,.rs-nx,.guide,.process li,.bench,.gfoot>div,.shop-band,.sx-kpi,.sx-panel).rv-hold{transform:translateY(-4px)}
+  :is(.mh-stat,.gx-bike,.gx-more,.gx-add,.gx-sc,.gx-info,.rd-pop,.gt).rv-hold{transform:translateY(-5px)}
+  :is(.gx-t,.rd-hop,.mob-in .moblist .mlink).rv-hold{transform:translateY(-3px)}
+  .rd-btn.rv-hold{transform:translateY(-2px)}
+  .modal .rv-hold,.lk .rv-hold{transform:none}
+}

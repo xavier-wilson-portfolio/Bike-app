@@ -79,6 +79,32 @@
   // refit whenever the hero's width changes or new content is drawn (fonts, images, text)
   let raf = 0; const soon = () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(all); };
   const ro = window.ResizeObserver ? new ResizeObserver(() => { let w = 0; document.querySelectorAll(".mh-hero").forEach(h => w += h.clientWidth); if (w !== ro.w) { ro.w = w; soon(); } }) : null;
-  let rraf = 0; new MutationObserver(() => { cancelAnimationFrame(rraf); rraf = requestAnimationFrame(() => { try { rail(); } catch (e) {} }); document.querySelectorAll(".mh-hero:not([data-fit])").forEach(h => { h.setAttribute("data-fit", "1"); if (ro) ro.observe(h); soon(); setTimeout(all, 400); setTimeout(all, 1500); }); }).observe(document.documentElement, { childList: true, subtree: true });
+  // runs before the browser paints the new page, so the photo and the house icon land in place without a visible jump
+  new MutationObserver(() => {
+    const fresh = document.querySelectorAll(".mh-hero:not([data-fit])");
+    fresh.forEach(h => { h.setAttribute("data-fit", "1"); if (ro) ro.observe(h); fit(h); });
+    try { rail(); } catch (e) {}
+  }).observe(document.documentElement, { childList: true, subtree: true });
   window.rvFitHero = all;
+})();
+
+/* hover lift without the bounce: when a box rises, the mouse near its bottom edge would fall out of it, drop it, and catch it again.
+   Keep it up while the mouse is still inside where the box was. */
+(function () {
+  if (!window.matchMedia || !matchMedia("(hover:hover)").matches) return;
+  const LIFT = ".panel,.mh-panel,.mh-stat,.card,.kpi,.lesson,.gcard,.gtile,.gtile2,.cl-card,.cl-run,.contcard,.cv-card,.cv-shop,.dcard,.gal-card,.lib-guide,.md-card,.mtcard,.ph-card,.pl-card,.planrow,.pp-card,.pv-card,.pv-opt,.rc-card,.rcl-card,.rm-how,.shop,.st,.step3,.sx-bike,.sx-kpi,.sx-panel,.sx-remind,.tcard,.tip,.vcard,.wk-safe,.wk-sum,.wo-decide,.fin,.focus-banner,.rs-cur,.rs-nx,.guide,.process li,.gx-bike,.gx-more,.gx-add,.gx-sc,.gx-info,.rd-pop,.bench,.gfoot>div,.shop-band,.gx-t,.rd-btn,.rd-hop,.gt,.mob-in .moblist .mlink";
+  let held = [];
+  const drop = keep => { held = held.filter(e => { if (keep.includes(e)) return true; e.classList.remove("rv-hold"); return false; }); };
+  document.addEventListener("pointermove", e => {
+    if (e.pointerType && e.pointerType !== "mouse") return;
+    const over = []; let n = e.target && e.target.closest ? e.target.closest(LIFT) : null;
+    while (n) { over.push(n); n = n.parentElement && n.parentElement.closest(LIFT); }
+    over.forEach(x => { if (!held.includes(x)) { x.classList.add("rv-hold"); held.push(x); } });
+    // a held box the mouse just slipped out of: keep it if the mouse is within 8px below its lifted edge
+    const keep = held.filter(x => { if (over.includes(x)) return true; if (!x.isConnected) return false; const r = x.getBoundingClientRect(); return e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom + 8; });
+    drop(keep);
+  }, { passive: true });
+  document.addEventListener("pointerleave", () => drop([]));
+  addEventListener("blur", () => drop([]));
+  addEventListener("scroll", () => { if (held.length) drop([]); }, { passive: true });
 })();
