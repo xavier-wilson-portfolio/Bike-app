@@ -425,8 +425,8 @@ html[data-sec="home"] .subbar{display:none}
 .mg-course{background:#E6F1F8;border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:8px;align-items:flex-start}.mg-course b{font-family:var(--f-display);font-weight:400;font-size:16px}
 /* project photo: the box takes the picture's shape, so the whole bike shows and it still fills the box */
 @media (min-width:1021px){
-  html .mh-hero{grid-template-columns:minmax(0,1fr) minmax(0,min(58%,820px))!important;align-items:start}
-  .mh-hero .mh-stage{display:block;padding:7px 7px 88px;height:auto;align-self:start}
+  html .mh-hero{grid-template-columns:minmax(0,1fr) minmax(0,min(64%,940px))!important;align-items:end}
+  .mh-hero .mh-stage{display:block;padding:20px 7px 7px 0;height:auto;align-self:end}
   .mh-hero .mh-stage .herophoto{width:100%;height:auto;min-height:0!important;aspect-ratio:16/9;flex:none}
   .mh-hero .mh-stage .herophoto > img:not(.hp-cut):not(.hp-art){position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 }
