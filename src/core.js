@@ -7,6 +7,7 @@ const BIKE = Object.assign({ id: "bike", year: "", make: "", model: "", short: "
 if (BIKE.universal && window.RV_BIKE_LABEL) { const L = window.RV_BIKE_LABEL; Object.assign(BIKE, { year: L.year || "", make: L.make || "", model: L.model || "", name: [L.year, L.make, L.model].filter(Boolean).join(" ") || BIKE.name, short: L.model || BIKE.short, variant: (BIKE.styleName || "") + " restoration", silhouette: L.silhouette || "", goal: "restore", drive: (BIKE.drives || []).includes(L.drive) ? L.drive : BIKE.drive }); }
 // the bike's own tune (data/tunes): its name for the course panel, its tips, recalls and known problems
 const TUNE = (BIKE.universal && window.RV_TUNE) || null;
+if (window.RV_PHOTO && !BIKE.photo) BIKE.photo = window.RV_PHOTO;   // the library photo, for any kind of project
 if (TUNE) {
   BIKE.tune = TUNE;
   if (TUNE.focus) BIKE.styleFocus = TUNE.focus.slice();

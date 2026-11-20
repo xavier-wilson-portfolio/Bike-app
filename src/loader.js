@@ -1203,6 +1203,13 @@
     }
     window.RV_TUNE = null;
     if ((bikeOf(bikeId)?.universal || bikeOf(bikeId)?.generic) && window.RV_BIKE_LABEL) { try { window.RV_TUNE = await findTune(window.RV_BIKE_LABEL); } catch (e) {} }
+    // the bike's photo from the library (img/hero): every kind of project shows it, not only restorations
+    window.RV_PHOTO = null;
+    try {
+      const pb = bikeOf(bikeId), L = window.RV_TUNE ? null : (pb && !pb.generic && !pb.universal && !pb.hero ? { year: pb.year, make: pb.make, model: pb.model } : null);
+      const T = window.RV_TUNE || (L ? await findTune(L) : null);
+      if (T && T.hero && T.hero.src) window.RV_PHOTO = Object.assign({ name: T.name }, T.hero);
+    } catch (e) {}
     try { await loadScript("app.js?v=" + (window.RV_BUILD || Date.now())); } catch (e) { return fail("Couldn't load the app. Check your internet and try again."); }
     // trying it without an account: a strip that says it's only on this browser, and that a free account keeps it
     if (!cloud && !window.RV_DEMO && sb && !session && !document.querySelector(".demo-bar")) {
