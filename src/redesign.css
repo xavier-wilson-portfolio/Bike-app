@@ -434,7 +434,9 @@ html[data-sec="home"] .subbar{display:none}
 @media (max-width:1020px){.mh-hero .mh-stage .herophoto{min-height:0!important;aspect-ratio:16/9}.mh-hero .mh-stage{padding-bottom:64px}}
 /* computer view: a shorter top box, no snap-a-receipt button in it */
 @media (min-width:1021px){
-  .mh-hero .mh-hero-l{padding:30px 40px 96px}
+  .mh-hero .mh-hero-l{padding:24px 36px 84px}
+  .mh-hero h1{font-size:34px;margin-top:8px}
+  .mh-hero .mh-chips{margin-top:14px}
   .mh-hero-l>p{margin-top:16px}
   .mh-hero .mh-acts{margin-top:20px}
   .mh-hero [data-snap]{display:none}

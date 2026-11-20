@@ -51,18 +51,24 @@
   function fit(h) {
     if (!h || innerWidth < 1021) { if (h) h.style.removeProperty("--phw"); return; }
     const l = h.querySelector(".mh-hero-l"), W = h.clientWidth; if (!l || !W) return;
-    let lo = 0.42, hi = 0.6;
-    for (let i = 0; i < 12; i++) {
-      const f = (lo + hi) / 2; h.style.setProperty("--phw", (f * 100).toFixed(2) + "%");
-      const ph = (f * W - 18) * 9 / 16 + 18, th = l.scrollHeight;
-      if (ph < th) lo = f; else hi = f;
+    // the smallest photo width whose height reaches the text's height, so the gap above it matches the gap on the right
+    let pick = 0, best = 1e9;
+    for (let f = 0.40; f <= 0.7001; f += 0.01) {
+      h.style.setProperty("--phw", (f * 100).toFixed(2) + "%");
+      const short = l.scrollHeight - ((f * W - 18) * 9 / 16 + 18);
+      if (short <= 0) { pick = f; break; }
+      if (short < best) { best = short; pick = f; }
     }
-    h.style.setProperty("--phw", (hi * 100).toFixed(2) + "%");
+    h.style.setProperty("--phw", (pick * 100).toFixed(2) + "%");
   }
   let busy = false;
   function all() { if (busy) return; busy = true; document.querySelectorAll(".mh-hero").forEach(fit); busy = false; }
   addEventListener("resize", all);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(all);
-  new MutationObserver(() => { if (document.querySelector(".mh-hero:not([data-fit])")) { document.querySelectorAll(".mh-hero:not([data-fit])").forEach(h => h.setAttribute("data-fit", "1")); all(); } }).observe(document.documentElement, { childList: true, subtree: true });
+  addEventListener("load", all);
+  // refit whenever the hero's width changes or new content is drawn (fonts, images, text)
+  let raf = 0; const soon = () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(all); };
+  const ro = window.ResizeObserver ? new ResizeObserver(() => { let w = 0; document.querySelectorAll(".mh-hero").forEach(h => w += h.clientWidth); if (w !== ro.w) { ro.w = w; soon(); } }) : null;
+  new MutationObserver(() => { document.querySelectorAll(".mh-hero:not([data-fit])").forEach(h => { h.setAttribute("data-fit", "1"); if (ro) ro.observe(h); soon(); setTimeout(all, 400); setTimeout(all, 1500); }); }).observe(document.documentElement, { childList: true, subtree: true });
   window.rvFitHero = all;
 })();
