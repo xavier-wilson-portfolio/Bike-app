@@ -237,6 +237,9 @@
     const ic = logo.querySelector(".brand-icon"); if (ic) ic.src = "img/revora-icon-gold.svg";
     if (wm) wm.src = "img/revora-word-gold.svg";
     logo.classList.add("tk-gold");
+    // the greeting name turns gold too, with the 8 tier colors sliding in under it
+    const nm = document.querySelector(".gh-name");
+    if (nm && !nm.classList.contains("rd-collector")) { nm.classList.add("rd-collector"); nm.title = "Series 01 collector: all 8 cards"; nm.insertAdjacentHTML("beforeend", '<span class="rd-cline" aria-hidden="true"></span>'); }
   }
 
   window.rvTokens = { scan, afterSignIn, band, reveal, CARDS, TIERS };
