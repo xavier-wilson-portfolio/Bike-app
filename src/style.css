@@ -6,8 +6,8 @@
   --red:#C23F3A; --red-bg:#FBE9E7; --green:#2F7A59; --green-bg:#E3F2EA; --amber:#A86C0C; --amber-bg:#FBF0DC; --gray:#6F7C83; --gray-bg:#EEF1F2;
   --st-red:#D9534F; --st-green:#398564; --st-amber:#D99B35; --st-gray:#9AA5AB;
   --shadow:0 1px 2px rgba(35,55,70,.05),0 6px 20px rgba(35,55,70,.06); --shadow-lg:0 2px 6px rgba(35,55,70,.06),0 18px 48px rgba(35,55,70,.10);
-  --f-display:"Barlow Semi Condensed","Barlow","Arial Narrow",system-ui,sans-serif;
-  --f-ui:"Nunito Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --f-display:var(--rv-f-display,"Barlow Semi Condensed","Barlow","Arial Narrow",system-ui,sans-serif);
+  --f-ui:var(--rv-f-ui,"Nunito Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif);
   --f-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
   --r:10px; --stage-bg:linear-gradient(180deg,#F8FAFC 0%,#EEF3F6 72%,#E8EEF2 100%); --art-bg:#FFFFFF;
 }
@@ -672,7 +672,7 @@ h2.sec svg{width:20px;height:20px;flex:none}
 @media (max-width:600px){.howto{padding-left:16px}}
 
 /* ===== v7: white page, black type, light-blue accent ===== */
-html,body{background:#fff;color:var(--fg)}
+html,body{background:var(--bg);color:var(--fg)}
 .top,.subbar,.foot,.hero2,.band{background:#fff}
 .foot{border-top:3px solid var(--blue)}
 .progress i{background:linear-gradient(90deg,#9ACBE6,#5FA4CC)}

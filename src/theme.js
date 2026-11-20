@@ -23,7 +23,7 @@ window.themeSettingsHtml = () => {
   const cur = themeGet();
   return `<div class="panel stack"><h2 class="sec">Appearance</h2>
     <div class="seg" role="radiogroup" aria-label="Theme">${THEMES.map(([v, l]) => `<button type="button" role="radio" aria-checked="${cur === v}" class="${cur === v ? "on" : ""}" data-theme-pick="${v}">${l}</button>`).join("")}</div>
-    <p class="muted" style="margin:0;font-size:12.5px">Dark is easier on the eyes in the garage at night. Match my device follows your phone or computer's setting.</p></div>`;
+    <button type="button" class="btn" data-look-open>Colors, fonts, layout and speedometer</button><p class="muted" style="margin:0;font-size:12.5px">Dark is easier on the eyes in the garage at night. Match my device follows your phone or computer's setting.</p></div>`;
 };
 (function () {
   const r0 = VIEWS.settings.render, b0 = VIEWS.settings.bind;
@@ -33,6 +33,7 @@ window.themeSettingsHtml = () => {
   };
   VIEWS.settings.bind = function (root) {
     b0.apply(this, arguments);
+    $$("[data-look-open]", root).forEach(b => b.onclick = () => window.rvOpenLook && rvOpenLook());
     $$("[data-theme-pick]", root).forEach(b => b.onclick = () => {
       themeSet(b.dataset.themePick);
       $$("[data-theme-pick]", root).forEach(x => { const on = x === b; x.classList.toggle("on", on); x.setAttribute("aria-checked", on); });

@@ -423,6 +423,7 @@
   }
   // a tachometer: the needle shows how much of the course is done, 0 to 100
   function tach(pct) {
+    if (window.rvGauge) return rvGauge(pct);   // the speedometer picked in Appearance
     const R = 92, cx = 110, cy = 110, a0 = 240, sweep = 240, rad = d => (d - 90) * Math.PI / 180;
     const pt = (deg, r) => [cx + r * Math.cos(rad(deg)), cy + r * Math.sin(rad(deg))].map(v => v.toFixed(2));
     const arc = (from, to, r) => { const [x1, y1] = pt(from, r), [x2, y2] = pt(to, r); return `M${x1} ${y1} A${r} ${r} 0 ${to - from > 180 ? 1 : 0} 1 ${x2} ${y2}`; };
@@ -1191,7 +1192,7 @@
         if (session) await flushPendingReq();
         if (session && Date.now() - new Date(session.user.created_at) < 36e5 && !ls.get("rv.joinedEv")) { ls.set("rv.joinedEv", "1"); track("account_new", (session.user.app_metadata || {}).provider || ""); }
         if (session) { try { await moveGuestBikes(); } catch (e) {} }
-        await loadPrefs();
+        await loadPrefs(); if (window.rvLookFromAccount) rvLookFromAccount(PREFS);
         if (recovering) return;
       }
     }

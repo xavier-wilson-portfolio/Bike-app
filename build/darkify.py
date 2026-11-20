@@ -58,6 +58,43 @@ def dark_of(kind, c):
     return None
 
 
+# ---- customizable look: brand colors become variables the Appearance settings can change ----
+# Each brand color gets --rv-<family>-<HEX>, falling back to the original color, so the default look is unchanged.
+# The app moves every color in a family together, keeping each one's offset from the family's base color.
+LOOK = {}
+ROOT_FAM = {'--bg': 'bg', '--surface': 'card', '--fg': 'text', '--muted': 'text', '--faint': 'text', '--navy': 'main', '--navy-2': 'main',
+            '--blue': 'soft', '--blue-ink': 'soft', '--tan': 'soft', '--tan-2': 'soft', '--tan-soft': 'soft', '--tan-ink': 'soft', '--panel': 'soft', '--panel-2': 'soft'}
+
+
+def family(kind, c):
+    if 'rgba' in c or c.startswith('rgb'): return None
+    r, g, b, a = parse(c)
+    if a is not None: return None
+    h, l, s = hls(r, g, b); h *= 360
+    if l > .985: return 'card' if kind in ('bg', 'cvar') else None
+    if s < .08: return None
+    if 100 <= h <= 170 or h < 20 or h > 340: return None          # status greens and reds stay
+    if 25 <= h <= 50:
+        return None if (s >= .75 and l < .5) else 'accent'         # strong ambers are warnings
+    if 185 <= h <= 225:
+        if kind == 'ink':
+            if s < .4 and l <= .62: return 'text'
+            return 'soft' if s >= .3 else None
+        if l <= .3: return 'main'
+        if l < .6: return 'soft' if s >= .4 else ('main' if s >= .2 else None)
+        return 'soft' if s >= .3 else None
+    return None
+
+
+def brand(kind, c, fam=None):
+    fam = fam or family(kind, c)
+    if not fam: return c
+    hx = fmt(*parse(c)).lstrip('#')
+    name = f'--rv-{fam}-{hx}'
+    LOOK[name] = (fam, '#' + hx)
+    return f'var({name},{c})'
+
+
 def kind_of(prop):
     if prop.startswith('--'):     # colors kept in a rule's own variables: tints are surfaces, *-ink is text
         return 'ink' if prop.endswith('ink') else 'cvar'
@@ -94,21 +131,28 @@ def darkify(css):
             new = []
             # text on a fixed accent fill (tan or blue buttons, colored badges) keeps its dark ink
             bgm = re.search(r'background(?:-color)?\s*:([^;]*)', decls)
-            accent = False
+            accent = False; on_fam = None
             if bgm:
                 bv = bgm.group(1)
+                vm = re.search(r'var\(--(?:b-)?(tan|blue|navy)', bv)
+                if vm: on_fam = 'main' if vm.group(1) == 'navy' else 'soft'
+                for c in COLOR.findall(bv):
+                    on_fam = on_fam or family('bg', c)
                 if re.search(r'var\(--(b-)?(tan|blue|st-\w+|green|red|amber)(-2)?\)', bv) and 'gradient' not in bv: accent = True
                 for c in COLOR.findall(bv):
                     if dark_of('bg', c) is None and hls(*parse(c)[:3])[1] > .45 and (parse(c)[3] is None or parse(c)[3] > .6): accent = True
             for p in parts:
                 pm = PROPS.match(p.strip())
-                if pm and kind_of(pm.group(1)) and not (accent and kind_of(pm.group(1)) == 'ink'):
+                if pm and accent and kind_of(pm.group(1)) == 'ink' and on_fam in ('main', 'soft', 'accent'):
+                    # text sitting on a brand fill flips to black or white when that fill is customized
+                    p = COLOR.sub(lambda cm: f'var(--rv-on-{on_fam},{cm.group(0)})', p)
+                elif pm and kind_of(pm.group(1)) and not (accent and kind_of(pm.group(1)) == 'ink'):
                     kind = kind_of(pm.group(1))
                     def rep(cm):
                         c = cm.group(0); d = dark_of(kind, c)
-                        if d is None: return c
+                        if d is None: return brand(kind, c)
                         key = (kind, c.lower().replace(' ', ''))
-                        if key not in names: names[key] = ('--dk%d' % len(names), c, d)
+                        if key not in names: names[key] = ('--dk%d' % len(names), c, d, brand(kind, c))
                         return 'var(%s)' % names[key][0]
                     p = COLOR.sub(rep, p)
                     if kind == 'ink':
@@ -118,13 +162,20 @@ def darkify(css):
         stack.append(sel)
         out.append(head + '{' + decls); pos = end
     out.append(css[pos:])
-    light = ';'.join([f'{n}:{c}' for n, c, d in names.values()] + ['--ink-navy:var(--navy)', '--ink-navy-2:var(--navy-2)', '--ink-b-navy:var(--b-navy,#17232C)'])
-    dark = ';'.join([f'{n}:{d}' for n, c, d in names.values()] + ['--ink-navy:var(--fg)', '--ink-navy-2:#C9D4DB', '--ink-b-navy:var(--fg)'])
+    names_v = lambda: [v[:3] for v in names.values()]
+    light = ';'.join([f'{v[0]}:{v[3]}' for v in names.values()] + ['--ink-navy:var(--navy)', '--ink-navy-2:var(--navy-2)', '--ink-b-navy:var(--b-navy,#17232C)'])
+    dark = ';'.join([f'{n}:{d}' for n, c, d in names_v()] + ['--ink-navy:var(--fg)', '--ink-navy-2:#C9D4DB', '--ink-b-navy:var(--fg)'])
+    def root_fix(m):
+        body = re.sub(r'(--[\w-]+)\s*:\s*(#[0-9a-fA-F]{6})\b', lambda v: v.group(1) + ':' + (brand('cvar', v.group(2), ROOT_FAM[v.group(1)]) if v.group(1) in ROOT_FAM else v.group(2)), m.group(2))
+        return m.group(1) + body
+    out_css = ''.join(out)
+    out_css = re.sub(r'(:root\{color-scheme:light;)([^}]*)', root_fix, out_css, count=1)
+    out = [out_css]
     # paper documents and bike art stay light inside dark mode: give them back every light value
     base = {}
     for m in re.finditer(r':root\s*\{([^}]*)\}', css):
         for k, v in re.findall(r'(--[\w-]+)\s*:\s*([^;]+)', m.group(1)): base[k] = v.strip()
-    base.update({n: c for n, c, d in names.values()})
+    base.update({n: c for n, c, d in names_v()})
     base.update({'--b-blue-soft': '#E6F1F8', '--b-tan-soft': '#F6EEDD', '--ink-navy': '#111418', '--ink-navy-2': '#2A3037', '--ink-b-navy': '#17232C'})
     paper = ':root[data-theme="dark"] :is(' + PAPER + '){' + ';'.join(f'{k}:{v}' for k, v in base.items()) + ';color-scheme:light;color:var(--fg)}'
     return f':root{{{light}}}\n:root[data-theme="dark"]{{{dark}}}\n' + ''.join(out) + '\n' + paper + '\n', len(names)
