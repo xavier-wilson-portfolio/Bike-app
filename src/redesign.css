@@ -399,3 +399,16 @@ html[data-sec="home"] .subbar{display:none}
 .rs-cur .rs-cur-t{gap:6px}.rs-cur .rs-n{font-size:13px;font-weight:600;color:#5B6B78}
 .rs-specs>*{background:#E6F1F8!important;border:0!important;border-radius:8px!important}.rs-specs b{font-family:var(--f-display);font-weight:400}
 @media (max-width:760px){.mh-hero .mh-hero-l{padding:26px 22px 20px}.mh-stats{margin:-36px 8px 0}}
+
+/* ===== house icon with no box, content runs edge to edge next to the rail ===== */
+.rv-rail .rl,.rv-rail .rl.on,.rv-rail .rl:not(.on):hover{background:transparent;box-shadow:none;border:0}
+.rv-rail .rl:hover{color:#17232C}
+@media (min-width:900px){
+  html.has-rail .main{padding-left:64px}
+  html.has-rail .main > .content{max-width:none;margin-left:0;margin-right:0;padding-left:8px;padding-right:28px}
+  html.has-rail .main > .content > *{max-width:none;margin-left:0;margin-right:0}
+}
+@media (min-width:900px){
+  html.has-rail .mh-hero{grid-template-columns:minmax(0,1fr) minmax(0,min(57%,720px))}
+}
+@media (min-width:900px){html.has-rail .top-in{max-width:none;margin-left:0;margin-right:0}}
