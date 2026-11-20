@@ -519,9 +519,13 @@
     const artSrc = p => { const b = bikeOf(p.bike_id); if (b && b.hero) return b.hero; const f = silFile(genSil[p.id]) || b && !b.generic && silFile(b.silhouette) || silFile("bike-" + styleOf(p)) || silFile("bike-standard"); return f ? "img/sil/" + f : ""; };
     const tagOf = p => { const g = prog[p.id]; return isLog(p) ? "Logging" : g && g.total && g.done >= g.total ? "Done" : g && g.done ? "Restoring · " + Math.round(pctOf(p)) + "%" : "Not started"; };
     const subOf = p => { const b = bikeOf(p.bike_id); return isLog(p) ? "Maintenance log · " + (STYLE_NAME[styleOf(p)] || "Standard") : isUni(p) ? uniTxt(p) : genLabel[p.id] || (b && !b.generic ? [p.name && p.name !== bikeName(b) ? bikeName(b) : "", b.variant].filter(Boolean).join(", ") : "") || "Your bike"; };
-    const card = p => `<button class="gx-bike" data-sort-id="${esc(p.id)}" data-project="${esc(p.id)}" data-q="${esc([p.name, subOf(p)].join(" ").toLowerCase())}"><span class="gx-art${PHOTO[p.id] || LIB[p.id] ? " photo" : bikeOf(p.bike_id)?.hero ? " cut" : ""}" data-art="${esc(p.id)}">${PHOTO[p.id] || LIB[p.id] ? `<img src="${PHOTO[p.id] || LIB[p.id]}" alt="">` : artSrc(p) ? `<img src="${artSrc(p)}" alt="">` : ""}${isPin(p) ? `<span class="gx-pin">Pinned</span>` : ""}</span>
-      <span class="gx-bt"><b>${esc(p.name || bikeName(bikeOf(p.bike_id)))}</b><span>${esc(subOf(p))}</span><em>${esc(tagOf(p))}</em></span></button>`;
+    const card = p => { const nm = esc(p.name || bikeName(bikeOf(p.bike_id))); return `<article class="gx-bike" data-sort-id="${esc(p.id)}" data-q="${esc([p.name, subOf(p)].join(" ").toLowerCase())}"><button class="gx-open" data-project="${esc(p.id)}" aria-label="Open ${nm}"><span class="gx-art${PHOTO[p.id] || LIB[p.id] ? " photo" : bikeOf(p.bike_id)?.hero ? " cut" : ""}" data-art="${esc(p.id)}">${PHOTO[p.id] || LIB[p.id] ? `<img src="${PHOTO[p.id] || LIB[p.id]}" alt="">` : artSrc(p) ? `<img src="${artSrc(p)}" alt="">` : ""}${isPin(p) ? `<span class="gx-pin">Pinned</span>` : ""}</span>
+      <span class="gx-bt"><b>${nm}</b><span>${esc(subOf(p))}</span><em>${esc(tagOf(p))}</em></span></button>
+      <button class="gx-dots" type="button" data-gxdots="${esc(p.id)}" aria-label="More for ${nm}" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="19" cy="12" r="1.8"/></svg></button>
+      <div class="gx-pop" role="menu" hidden><button role="menuitem" data-pin="${esc(p.id)}" aria-pressed="${isPin(p)}">${isPin(p) ? "Unpin" : "Pin to the top"}</button>${p.role === "owner" ? `<button role="menuitem" data-share="${esc(p.id)}">Share</button><button role="menuitem" data-rename="${esc(p.id)}">Rename</button><button role="menuitem" data-transfer="${esc(p.id)}">Sold it?</button><button role="menuitem" class="gx-del" data-del="${esc(p.id)}">Delete</button>` : `<button role="menuitem" class="gx-del" data-leave="${esc(p.id)}">Remove from my garage</button>`}</div></article>`; };
     const SHOW = 4, first4 = data.slice(0, SHOW), more = data.length - first4.length;
+    const moreCard = () => more > 0 ? `<button class="gx-more" data-gxall><b>+${more}</b><span>more bike${more === 1 ? "" : "s"}</span><small>See all ${data.length}</small></button>` : "";
+    const addCard = () => `<button class="gx-add" data-nav="new"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></i><b>Add a bike</b><small>Start a new project</small></button>`;
     const PHOTO = {}, LIB = {};
     const SI = d => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
     const shortcut = (sec, t, d, ic) => `<button class="gx-sc" data-gxsec="${sec}"><span class="gx-ico">${SI(ic)}</span><span><b>${t}</b><span>${d}</span></span></button>`;
@@ -541,7 +545,7 @@
       </section>
       ${dealBand()}
       ${data.length ? `<section class="gx-bikes" id="gxBikes"><div class="gx-h"><h2>Your bikes</h2><span><button class="linkbtn" data-nav="new">+ New project</button>${data.length > 1 ? `<button class="linkbtn" data-gxall>See all ${data.length}</button>` : ""}</span></div>
-        <div class="gx-grid">${first4.map(card).join("")}${more > 0 ? `<button class="gx-more" data-gxall><b>+${more}</b><span>more bike${more === 1 ? "" : "s"}</span><small>See all ${data.length}</small></button>` : ""}<button class="gx-add" data-nav="new"><i>${SI('<path d="M12 5v14M5 12h14"/>')}</i><b>Add a bike</b><small>Start a new project</small></button></div>
+        <div class="gx-grid">${first4.map(card).join("")}${moreCard()}${addCard()}</div>
         <p class="gx-none" id="gxNone" hidden>No bikes match that search.</p>${data.length > 1 ? `<p class="gx-hint">Hold a bike and drag it to move it. The first bike leads your garage.</p>` : ""}</section>` : ""}
       ${shopBand(myShop, allP.length - data.length)}${clientBand(cHomes)}
       ${window.rvAdmin && window.rvPlanOf && myPlan().admin ? `<div id="admHQ"></div>` : ""}
@@ -603,13 +607,12 @@
     }
     app.querySelectorAll("[data-href]").forEach(b => b.onclick = () => { location.href = b.dataset.href; });
     app.querySelectorAll("[data-gxsec]").forEach(b => b.onclick = () => { if (!feat) return; ls.set("rv.openSec", b.dataset.gxsec); goUrl({ project: feat.id }); });
-    app.querySelectorAll("[data-gxall]").forEach(b => b.onclick = () => allBikes());
     const q = document.getElementById("gxQ");
     if (q) q.oninput = () => {
       const v = q.value.trim().toLowerCase(), grid = app.querySelector(".gx-grid");
       if (!grid) return;
-      if (v && !grid.dataset.full) { grid.dataset.full = "1"; grid.innerHTML = data.map(card).join(""); }
-      if (!v && grid.dataset.full) { delete grid.dataset.full; grid.innerHTML = first4.map(card).join("") + (more > 0 ? `<button class="gx-more" data-gxall><b>+${more}</b><span>more bike${more === 1 ? "" : "s"}</span><small>See all ${data.length}</small></button>` : "") + `<button class="gx-add" data-nav="new"><i>${SI('<path d="M12 5v14M5 12h14"/>')}</i><b>Add a bike</b><small>Start a new project</small></button>`; grid.querySelectorAll("[data-gxall]").forEach(b => b.onclick = () => allBikes()); enableSort(grid); }
+      if (v && !grid.dataset.full) { grid.dataset.full = "1"; grid.innerHTML = data.map(card).join(""); wireGrid(grid); }
+      if (!v && grid.dataset.full) { delete grid.dataset.full; grid.innerHTML = (grid.dataset.all ? data : first4).map(card).join("") + (grid.dataset.all ? "" : moreCard()) + addCard(); wireGrid(grid); }
       let n = 0; grid.querySelectorAll(".gx-bike").forEach(c => { const on = !v || c.dataset.q.includes(v); c.hidden = !on; if (on) n++; });
       document.getElementById("gxNone").hidden = !(v && !n);
     };
@@ -619,7 +622,7 @@
       let suppressClick = false;
       box.addEventListener("click", e => { if (suppressClick) { e.preventDefault(); e.stopPropagation(); suppressClick = false; } }, true);
       box.querySelectorAll("[data-sort-id]").forEach(el => el.addEventListener("pointerdown", e => {
-        if (e.button !== 0 || e.target.closest("[data-pin],[data-share],[data-rename],[data-transfer],[data-del],[data-leave],[data-connect],input,select")) return;
+        if (e.button !== 0 || e.target.closest("[data-gxdots],.gx-pop,[data-pin],[data-share],[data-rename],[data-transfer],[data-del],[data-leave],[data-connect],input,select")) return;
         const touch = e.pointerType !== "mouse", sx = e.clientX, sy = e.clientY, r0 = el.getBoundingClientRect(), ox = sx - r0.left, oy = sy - r0.top;
         let on = false, timer = null, lx = sx, ly = sy;
         const blockScroll = ev => { if (on) ev.preventDefault(); };
@@ -653,13 +656,35 @@
         if (touch) timer = setTimeout(begin, 320);
       }));
     }
-    enableSort(app.querySelector(".gx-grid"));
+    function wireGrid(grid) {
+      enableSort(grid); bindCards(grid);
+      grid.querySelectorAll("[data-gxall]").forEach(b => b.onclick = () => allBikes());
+      grid.querySelectorAll("[data-gxdots]").forEach(b => b.onclick = e => {
+        e.stopPropagation(); const pop = b.nextElementSibling, open = pop.hidden;
+        grid.querySelectorAll(".gx-pop").forEach(x => x.hidden = true); grid.querySelectorAll("[data-gxdots]").forEach(x => x.setAttribute("aria-expanded", "false"));
+        pop.hidden = !open; b.setAttribute("aria-expanded", open); if (open) { const f = pop.querySelector("button"); f && f.focus(); }
+      });
+      grid.querySelectorAll(".gx-pop").forEach(pop => pop.onkeydown = e => { if (e.key === "Escape") { pop.hidden = true; pop.previousElementSibling.focus(); } });
+    }
+    document.addEventListener("click", e => { if (!e.target.closest(".gx-pop,[data-gxdots]")) document.querySelectorAll(".gx-pop").forEach(x => x.hidden = true); });
+    wireGrid(app.querySelector(".gx-grid"));
+    app.querySelectorAll(".gx-h [data-gxall]").forEach(b => b.onclick = () => allBikes());
     // every bike, with pins and the owner actions
     function allBikes() {
-      const host = document.getElementById("gxBikes"); if (!host) return;
-      host.innerHTML = `<div class="gx-h"><h2>All your bikes</h2><span><button class="linkbtn" data-nav="new">+ New project</button><button class="linkbtn" data-gxback>Show fewer</button></span></div><div class="gts">${data.map(tag).join("")}</div>`;
-      host.querySelector("[data-gxback]").onclick = () => showProjects();
-      bindCards(host); enableSort(host.querySelector(".gts")); host.scrollIntoView({ behavior: "smooth", block: "start" });
+      const grid = app.querySelector(".gx-grid"); if (!grid) return;
+      grid.dataset.all = "1";
+      grid.innerHTML = data.map(card).join("") + addCard();
+      app.querySelectorAll("[data-gxall]").forEach(b => { if (b.closest(".gx-h")) { b.textContent = "Show fewer"; b.onclick = () => fewer(); } });
+      wireGrid(grid);
+      grid.querySelectorAll(".gx-bike").forEach((c, k) => { if (k >= SHOW) { c.classList.add("gx-in"); c.style.animationDelay = (k - SHOW) * 50 + "ms"; } });
+      const nxt = grid.children[SHOW]; if (nxt) nxt.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+    function fewer() {
+      const grid = app.querySelector(".gx-grid"); if (!grid) return;
+      delete grid.dataset.all;
+      grid.innerHTML = first4.map(card).join("") + moreCard() + addCard();
+      app.querySelectorAll(".gx-h [data-gxall]").forEach(b => { b.textContent = `See all ${data.length}`; b.onclick = () => allBikes(); });
+      wireGrid(grid);
     }
     if (window.rvTokens) rvTokens.band(sb, document.getElementById("tokBand"));
     app.querySelectorAll("[data-crm]").forEach(b => b.onclick = () => goUrl({ crm: 1 }));
