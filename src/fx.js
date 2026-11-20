@@ -40,8 +40,8 @@
   const on = () => { if (!raf) raf = requestAnimationFrame(tick); };
   let bound = false;
   window.rvFx = function () {
-    if (reduce) { requestAnimationFrame(() => document.querySelectorAll("[data-win]").length && tick()); return; }
-    if (!bound) { bound = true; addEventListener("scroll", on, { passive: true }); addEventListener("resize", on); }
+    if (reduce) { const c = () => document.querySelectorAll("[data-win]").length && tick(); requestAnimationFrame(c); addEventListener("load", c); if (document.fonts && document.fonts.ready) document.fonts.ready.then(c); return; }
+    if (!bound) { bound = true; addEventListener("scroll", on, { passive: true }); addEventListener("resize", on); addEventListener("load", on); if (document.fonts && document.fonts.ready) document.fonts.ready.then(on); document.querySelectorAll("[data-win] img").forEach(i => i.complete || i.addEventListener("load", on)); }
     on();
   };
 })();
