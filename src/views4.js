@@ -64,6 +64,7 @@ VIEWS.home = {
           <div class="mh-acts"><button class="btn mh-pri" data-lesson="${nx.id}">${ic("play")} ${fresh ? "Start Part 1" : "Continue Part " + (nxi + 1)}</button><button class="btn mh-sec" data-go="${X.diagrams3d ? "viewer" : "diagrams"}">${ic(X.diagrams3d ? "cube" : "layers")} ${diagLbl}</button></div>
         </div>
         <div class="mh-stage">${heroPhotoHtml()}</div>
+        <div class="rd-shine" data-shine></div>
       </div>
       <div class="mh-stats">
         ${stat("ring c-green", ic("book") + "Course", `${ring}<span>${pct}%</span>`, `${done} of ${ts.length} steps done`, 'data-go="course"')}
@@ -97,7 +98,7 @@ VIEWS.home = {
       ${BIKE.tune && ((BIKE.tune.known || []).length || (BIKE.tune.recalls || []).length) ? tuneKnownHtml(BIKE.tune) : ""}
     </section>`;
   },
-  bind(root) { bindHeroPhoto(root); bindSetup(root); bindTables(root); bindLessonLinks(root); bindStepChecks(root); }
+  bind(root) { if (window.rvFx) rvFx(root); bindHeroPhoto(root); bindSetup(root); bindTables(root); bindLessonLinks(root); bindStepChecks(root); }
 };
 
 /* ---------- Paint studio ---------- */

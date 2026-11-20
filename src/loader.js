@@ -51,7 +51,7 @@
     const right = !sb ? "" : session
       ? `<div class="pk-acct"><button class="linkbtn" data-nav="projects">Your garage</button>${window.rvPlanOf ? `<button class="pk-plan" data-plans>${esc((planInfo(myPlan().id).name || "Free") + (myPlan().trial ? " trial" : ""))}</button>` : ""}<span class="muted">${esc(profile?.display_name || session.user.email)}</span><button class="btn sm" data-act="signout">Sign out</button></div>`
       : `<div class="pk-acct"><button class="btn sm" data-nav="signin">Sign in</button><button class="btn sm pri" data-nav="signup">Create account</button></div>`;
-    app.innerHTML = `<div class="pick${opts.garage ? " is-garage" : ""}"><div class="pk-top"><button class="pk-logo" data-nav="home" aria-label="Revora home"><img class="brand-icon" src="img/revora-icon.svg" alt=""><img class="wordmark" src="img/revora-word.svg" alt="Revora"></button>${right}</div><div class="pick-in ${opts.wide ? "wide" : ""}">${inner}</div></div>`;
+    app.innerHTML = `<div class="pick${opts.garage ? " is-garage" : ""}${opts.auth ? " is-auth" : ""}"><div class="pk-top"><button class="pk-logo" data-nav="home" aria-label="Revora home"><img class="brand-icon" src="img/revora-icon.svg" alt=""><img class="wordmark" src="img/revora-word.svg" alt="Revora"></button>${right}</div><div class="pick-in ${opts.wide ? "wide" : ""}">${inner}</div>${opts.auth ? `<button class="linkbtn rd-back" data-nav="home">Back to home</button>` : ""}</div>`;
   }
   const fail = msg => !navigator.onLine ? frame(`<h1 class="disp">You're offline</h1><p class="muted">Revora needs a connection to load your bikes. Check your Wi-Fi or data, then try again.</p><button class="btn pri" data-act="reload">Try again</button>`) : frame(`<h1 class="disp">Something went wrong</h1><p class="muted">${esc(msg)}</p><button class="btn pri" data-act="reload">Try again</button>`);
   const spin = () => frame(`<div class="spinner"></div>`);
@@ -295,7 +295,7 @@
   function showAuth(kind) {
     const T = { signin: ["Sign in", "Sign in"], signup: ["Create your account", "Create account"], forgot: ["Reset your password", "Email me a reset link"], newpass: ["Choose a new password", "Save password"] }[kind];
     document.title = T[0] + " · Revora";
-    frame(`<h1 class="disp">${T[0]}</h1>${kind === "signup" ? `<p class="muted">Free for one bike, no card needed. Your bike's service log, reminders, parts and receipts in one place, saved to your account so you never lose them.</p>` : ""}
+    frame(`${kind === "signin" || kind === "signup" ? `<div class="rd-tabs" role="group" aria-label="Sign in or create account"><button type="button" data-nav="signin" aria-pressed="${kind === "signin"}">Sign in</button><button type="button" data-nav="signup" aria-pressed="${kind === "signup"}">Create account</button></div>` : ""}<h1 class="disp">${kind === "signin" ? "Welcome back" : T[0]}</h1>${kind === "signin" ? `<p class="muted">Sign in to pick up where you left off.</p>` : ""}${kind === "signup" ? `<p class="muted">Free for one bike, no card needed. Your bike's service log, reminders, parts and receipts in one place, saved to your account so you never lose them.</p>` : ""}
       ${(kind === "signin" || kind === "signup") && IN_APP ? `<div class="pk-inapp"><b>You're in ${esc(IN_APP_NAME)}'s browser</b><span>Google sign-in doesn't work inside ${esc(IN_APP_NAME)}. Use your email below, it takes a few seconds. Or open this page in ${/android/i.test(UA) ? "Chrome" : "Safari"} to use Google.</span><div class="pk-inapp-b">${/android/i.test(UA) ? `<a class="btn sm" href="intent://${esc(location.host + location.pathname + "?auth=" + kind)}#Intent;scheme=https;package=com.android.chrome;end">Open in Chrome</a>` : ""}<button class="btn sm" type="button" data-copylink>Copy link</button></div><span class="muted pk-small">${/android/i.test(UA) ? "Or tap the menu (⋮) and pick Open in browser." : "Or tap ••• (or the share icon) and pick Open in browser / Open in Safari."}</span></div>` : ""}
       ${(kind === "signin" || kind === "signup") && !IN_APP ? `<button class="btn big pk-google" type="button" data-google><svg viewBox="0 0 48 48" width="20" height="20" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.3-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.3-.4-3.5z"/></svg>Continue with Google</button><div class="pk-or"><span>or use your email</span></div>` : ""}
       <form class="pk-form" id="authF" novalidate>
@@ -309,7 +309,7 @@
         <button class="btn pri big" type="submit">${T[1]}</button>
         ${kind === "signup" || kind === "signin" ? `<span class="muted pk-small pk-agree">By continuing, you agree to Revora's <a href="?terms" target="_blank" rel="noopener">Terms</a> and <a href="?privacy" target="_blank" rel="noopener">Privacy Policy</a>.</span>` : ""}
       </form>
-      <div class="pk-links">${kind === "signin" ? `<button class="linkbtn" data-nav="forgot">Forgot your password?</button><span>No account? <button class="linkbtn" data-nav="signup">Create one</button></span>` : kind === "signup" ? `<span>Already have an account? <button class="linkbtn" data-nav="signin">Sign in</button></span>${guestLinks()}` : `<button class="linkbtn" data-nav="signin">Back to sign in</button>`}</div>`);
+      <div class="pk-links">${kind === "signin" ? `<button class="linkbtn" data-nav="forgot">Forgot your password?</button><span>No account? <button class="linkbtn" data-nav="signup">Create one</button></span>` : kind === "signup" ? `<span>Already have an account? <button class="linkbtn" data-nav="signin">Sign in</button></span>${guestLinks()}` : `<button class="linkbtn" data-nav="signin">Back to sign in</button>`}</div>`, { auth: true });
     const f = document.getElementById("authF"), err = document.getElementById("authErr");
     if ((kind === "signup" || kind === "signin") && window.rvClient) rvClient.authBanner(ctx());
     const gb = app.querySelector("[data-google]"), cl = app.querySelector("[data-copylink]");
@@ -497,7 +497,7 @@
         ${p.role === "owner" && readyFor(p) ? `<div class="gt-ready"><span>The ${esc(bikeName(readyFor(p)))} page is ready.</span><button class="btn tan sm" data-connect="${esc(p.id)}">Connect</button></div>` : ""}${p.role === "owner" ? `<div class="gt-acts"><button class="linkbtn" data-share="${esc(p.id)}">Share</button><button class="linkbtn" data-rename="${esc(p.id)}">Rename</button><button class="linkbtn" data-transfer="${esc(p.id)}">Sold it?</button><button class="linkbtn gt-del" data-del="${esc(p.id)}">Delete</button></div>` : `<div class="gt-acts"><button class="linkbtn gt-del" data-leave="${esc(p.id)}">Remove from my garage</button></div>`}</article>`; };
     const fb = feat && bikeOf(feat.bike_id), fg = feat && prog[feat.id];
     frame(`<section class="gh">
-        <div class="gh-hi"><h1 class="gh-title">${esc(greeting())}${first ? `, ${esc(first)}` : ""}.</h1>
+        <div class="gh-hi"><h1 class="gh-title">${esc(greeting())}${first ? `, <span class="gh-name">${esc(first)}</span>` : ""}.</h1>
           <p class="muted">${data.length ? (data.length === 1 ? "One bike in your garage." : `${data.length} bikes in your garage.`) : "Your garage is empty. Add the bike you're working on to get started."}</p></div>
         ${feat ? `<div class="bench${isLog(feat) ? " nodial" : ""}">
           ${isLog(feat) ? "" : `<div class="bench-dial">${tach(pctOf(feat))}</div>`}
@@ -505,7 +505,7 @@
             <h2>${esc(feat.name || bikeName(fb))}</h2><span class="bench-bike">${isLog(feat) ? "Maintenance log" : isUni(feat) ? esc(uniTxt(feat)) : fb && fb.generic ? (readyFor(feat) ? "The " + esc(bikeName(readyFor(feat))) + " page is ready to connect" : "We're building this bike's page") : esc([feat.name && feat.name !== bikeName(fb) ? bikeName(fb) : "", fb && fb.variant].filter(Boolean).join(", "))}</span>
             ${fg && fg.next ? `<div class="bench-next"><span>Next step</span><b>${esc(fg.next)}</b></div>` : fg && fg.total ? `<div class="bench-next"><span>Course</span><b>Every step is done. Time to ride.</b></div>` : ""}
             <div class="bench-go">${fb && fb.generic && readyFor(feat) && feat.role === "owner" ? `<button class="btn tan big" data-connect="${esc(feat.id)}">Connect to its page</button><button class="btn ghost-l" data-project="${esc(feat.id)}">Open project</button>` : `<button class="btn tan big" data-project="${esc(feat.id)}">Open project</button>`}<button class="btn ghost-l" data-nav="new">Start another bike</button></div></div>
-          ${benchArt(fb, genStyle[feat.id], genSil[feat.id])}</div>`
+          ${benchArt(fb, genStyle[feat.id], genSil[feat.id])}<div class="rd-shine" data-shine></div></div>`
         : `<div class="bench empty"><div class="bench-txt"><h2>Add your bike</h2><p>Restoring it? Get its parts diagrams, part numbers and a step-by-step course. Just keeping it running? Get a maintenance log with parts, jobs and receipts.</p>
             <div class="bench-go"><button class="btn tan big" data-nav="new">Add your bike</button></div></div>${benchArt()}</div>`}
       </section>
@@ -526,6 +526,7 @@
       <section class="gsocial"><div><b>Follow Revora</b><span>Builds, tips and what's new in the app. Tag us in your project.</span></div>${socialsHtml("light")}</section>
       <p class="g-legal"><a href="?privacy">Privacy Policy</a> · <a href="?terms">Terms of Service</a> · <button class="linkbtn g-del" data-delacct>Delete my account</button></p>`, { wide: true, garage: true });
     const adm = document.getElementById("admHQ"); if (adm) window.rvAdmin.mount(adm, sb, note);
+    if (window.rvFx) rvFx(app);
     if (window.rvTokens) rvTokens.band(sb, document.getElementById("tokBand"));
     app.querySelectorAll("[data-crm]").forEach(b => b.onclick = () => goUrl({ crm: 1 }));
     app.querySelectorAll("[data-cmode]").forEach(b => b.onclick = () => { const on = !rvShopLock.customerMode(); rvShopLock.setCustomerMode(on); note(on ? "Customer mode is on. Opening the shop login." : "Customer mode is off."); if (on) goUrl({ crm: 1 }); else showProjects(); });
@@ -858,34 +859,74 @@
       ["wheel", "Tire and chain wear", "Readings and photos over time, and roughly how many miles are left.", "Free"],
       ["camera", "Build page", "A public page for your bike with photos, the story, mods and a before-and-after slider. Post the link anywhere.", "Free"]];
     const sil = n => { const f = (CFG.sil || []).find(x => x.replace(/\.\w+$/, "") === n); return f ? "img/sil/" + f : ""; };
-    app.innerHTML = `<div class="ld">
-      <header class="ld-top"><a class="pk-logo" href="${esc(url({}))}" aria-label="Revora"><img class="brand-icon" src="img/revora-icon.svg" alt=""><img class="wordmark" src="img/revora-word.svg" alt="Revora"></a>
-        <nav class="ld-nav"><a href="#ld-features">Features</a><a href="?builds">Builds</a><a href="#ld-plans">Plans</a><a href="?about">About</a><button class="btn sm" data-nav="signin">Sign in</button><button class="btn sm tan" data-nav="signup">Get started</button></nav></header>
-      <section class="ld-hero"><div class="ld-hero-t"><div class="ld-stage" aria-hidden="true"><div class="ld-glow"></div>${["bike-cafe", "bike-sport", "bike-adventure", "bike-cruiser", "bike-standard", "bike-touring", "bike-dualsport", "bike-scooter"].map((n, i) => sil(n) ? `<img class="ld-sb" style="animation-delay:${i * 5.5}s" src="${sil(n)}" alt="">` : "").join("")}
-            ${[[["amb", "Valve check", "due in 1,200 mi"], ["blu", "Carb rebuild", "step 4 of 9"]], [["amb", "Chain lube", "due in 150 mi"], ["grn", "Recalls", "all clear"]], [["amb", "Tire pressure", "check before your trip"], ["grn", "Air filter", "changed 2 weeks ago"]], [["amb", "Oil change", "due in 320 mi"], ["blu", "Insurance", "renews in 12 days"]], [["amb", "Brake fluid", "due in 3 months"], ["blu", "Receipt read", "$84.20 saved"]], [["blu", "Spring wake-up", "6 of 11 done"], ["grn", "Registration", "renewed"]], [["amb", "Rear tire", "about 900 mi left"], ["grn", "Recalls", "all clear"]], [["amb", "Battery", "charge it this week"], ["grn", "Service log", "12 entries"]]].map((pr, i) => `<div class="ld-cg" style="animation-delay:${i * 5.5}s;--d:${i * 5.5}s">${pr.map((c, j) => `<div class="ld-chip c${j + 1}"><i class="${c[0]}"></i><span><b>${c[1]}</b>${c[2]}</span></div>`).join("")}</div>`).join("")}</div><span class="ld-k">For riders, restorers and shops</span>
-          <h1>Restore it. Ride it. Keep every record.</h1>
-          <p class="ld-pm">Service log, reminders, recalls and a restoration course for any bike.</p>
-          <p class="ld-pd">Revora keeps your bike's whole life in one place: services and reminders, receipts read by AI, recalls, mods, papers, and a step-by-step restoration course for any bike.</p>
-          <form class="ld-ride" id="ldRide"><label for="ldRideQ">What do you ride?</label><div class="ld-ride-r"><input id="ldRideQ" name="q" type="search" placeholder="e.g. 2015 Harley Sportster" autocomplete="off"><button class="btn tan big" type="submit">Start my garage</button></div><span>Free, no card. See what's due on your bike in under a minute.</span></form>
-          <div class="ld-cta"><button class="btn ghost-l big" data-nav="signup">Create free account</button><button class="btn ghost-l big" data-demo>Try the demo</button><button class="btn ghost-l big" data-nav="signin">Sign in</button></div>
-          <span class="ld-small">Free for one bike, no card needed. Restorer free for 30 days, cancel any time.</span><div class="ld-follow"><span>Follow Revora</span>${socialsHtml("dark")}</div></div>
-        <div class="ld-art">${["bike-cafe", "bike-adventure", "bike-cruiser"].map((n, i) => sil(n) ? `<img class="ld-s s${i}" src="${sil(n)}" alt="">` : "").join("")}${[[["amb", "Valve check", "due in 1,200 mi"], ["blu", "Carb rebuild", "step 4 of 9"]], [["amb", "Tire pressure", "check before your trip"], ["grn", "Air filter", "changed 2 weeks ago"]], [["amb", "Oil change", "due in 320 mi"]]].map((pr, i) => `<div class="ld-dg g${i}" style="animation-delay:${i * 7}s;--d:${i * 7}s" aria-hidden="true">${pr.map((c, j) => `<div class="ld-chip d${j + 1}"><i class="${c[0]}"></i><span><b>${c[1]}</b>${c[2]}</span></div>`).join("")}</div>`).join("")}</div></section>
-      ${!(matchMedia("(display-mode: standalone)").matches || navigator.standalone) ? `<section class="ins-band ld-ins"><img src="img/app-192.png" alt="" width="44" height="44"><div><b>Get the Revora app</b><span>Free. Put it on your home screen and it opens like any other app.</span></div><div class="ins-acts"><button class="btn tan" data-act="install">Install the app</button><button class="linkbtn" data-act="ins-later">Not now</button></div></section>` : ""}
-      <section class="ld-strip"><div><b>Any bike</b><span>Search the library or add yours by year, make and model</span></div><div><b>8 kinds of bike</b><span>Courses tailored to cruisers, sport bikes, scooters and more</span></div><div><b>Your records stay yours</b><span>Export or print them any time</span></div></section>
-      <section class="ld-sec" id="ld-features"><h2>Everything your bike needs, in one place</h2><p class="ld-sub">Start with the free maintenance log. Add more when you want it.</p>
-        <div class="ld-grid">${F.map(([i, t, d, p]) => `<article class="ld-f"><span class="ld-fi">${I(ICO[i])}</span><b>${t}</b><span>${d}</span><em class="ld-p ${p.toLowerCase()}">${p}</em></article>`).join("")}</div></section>
-      <section class="ld-sec ld-how"><h2>How it works</h2><div class="ld-steps">
-        <div><span>1</span><b>Add your bike</b><p>Search for it or type the year, make and model. Pick whether you're restoring it or keeping it running.</p></div>
-        <div><span>2</span><b>Log as you go</b><p>Snap receipts, log services and fill-ups, and tick off checklists. It takes seconds.</p></div>
-        <div><span>3</span><b>Know what's next</b><p>Reminders, recall alerts and renewal dates come to you, and the history report builds itself.</p></div></div></section>
-      <section class="ld-sec" id="ld-plans"><h2>Plans</h2><p class="ld-sub">Start free. New members get 25% off for their first 24 hours.</p>${window.rvPlansHtml({ yearly, mode: "choose" })}<p class="ld-about-l">Who's behind Revora? <a href="?about">Read about us</a></p></section>
-      <section class="ld-end"><h2>Your bike's whole story, kept right.</h2><button class="btn tan big" data-nav="signup">Get started free</button><span class="ld-small">Free for one bike. No card needed.</span><button class="linkbtn" data-demo>Try the demo first</button></section>
-      <footer class="ld-foot"><span>Revora</span><span>Made for people who work on their own bikes.</span>${socialsHtml("light")}<span class="ld-legal"><a href="?about">About</a> · <a href="?privacy">Privacy</a> · <a href="?terms">Terms</a> · <a href="mailto:info@revoragarage.com">info@revoragarage.com</a></span></footer></div>`;
+    const A = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+    const soc = SOCIALS.map(([n, u, d]) => `<a class="rd-hop" href="${u}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>${n}</a>`).join("");
+    const bottom = ["bike-dualsport", "bike-cruiser", "bike-cafe", "bike-adventure", "bike-sport", "bike-scooter"].map(n => sil(n) ? `<img src="${sil(n)}" alt="">` : "").join("");
+    app.innerHTML = `<div class="rd">
+      <section class="rd-hero">
+        <div class="rd-deco" aria-hidden="true">
+          <svg class="rd-circle" viewBox="0 0 800 800"><circle cx="400" cy="400" r="330" fill="none" stroke="#EFE5D2" stroke-width="70"/><path d="M 166.7 633.3 A 330 330 0 1 1 633.3 633.3" fill="none" stroke="#2C4253" stroke-width="2" opacity="0.18"/><g stroke="#D9BF8E" stroke-width="10"><line x1="652" y1="562" x2="690" y2="586"/><line x1="672" y1="508" x2="714" y2="522"/><line x1="682" y1="452" x2="726" y2="456"/></g></svg>
+          <div class="rd-bikes">${bottom}</div>
+        </div>
+        <header class="rd-top"><a class="logo" href="${esc(url({}))}" aria-label="Revora Garage home"><img src="img/revora-word.svg" alt="Revora"></a>
+          <nav class="rd-nav" aria-label="Main"><a class="hide-s" href="#ld-features">Features</a><a class="hide-s" href="#ld-plans">Plans</a><a class="hide-s" href="?about">About</a><a href="?builds" class="hide-s">Builds</a><a href="#" data-nav="signin">Sign in</a>
+            <button class="rd-btn sm" data-nav="signup">Get started${A}</button><button class="rd-gear" type="button" aria-label="Settings" data-rvset><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></button></nav></header>
+        <div class="rd-main">
+          <div class="rd-copy">
+            <p class="rd-k"><i></i>Restoration and maintenance</p>
+            <h1 class="rd-h1" data-glint>Restore what <em>matters.</em><span class="glint" aria-hidden="true">Restore what matters.</span></h1>
+            <p class="rd-lede">A step-by-step restoration course built around your bike, and a service log that keeps every part, receipt and mile in one garage.</p>
+            <form class="rd-ride rd-pop" id="ldRide"><p>What do you ride?</p>
+              <div class="rd-ride-f"><div><label for="ldY">Year</label><input id="ldY" name="y" inputmode="numeric" placeholder="1977" autocomplete="off"></div><div><label for="ldM">Make</label><input id="ldM" name="m" placeholder="Suzuki" autocomplete="off"></div><div><label for="ldO">Model</label><input id="ldO" name="o" placeholder="GS750" autocomplete="off"></div></div>
+              <p class="rd-pop-l">Popular: ${[["1977", "Suzuki", "GS750"], ["2007", "Honda", "CBR600RR"], ["2015", "Harley-Davidson", "Sportster"], ["2018", "Yamaha", "MT-07"]].map(([y, m, o]) => `<button type="button" data-ride="${y}|${m}|${o}">${m === "Harley-Davidson" ? "Harley" : m} ${o}</button>`).join("<i>·</i>")}</p>
+              <div class="rd-ride-b"><span><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Free for one bike. No card needed.</span><button class="rd-btn" type="submit">Start my garage${A}</button></div></form>
+            <div class="rd-links"><button class="rd-hop" data-nav="signup">Create free account</button><button class="rd-hop" data-demo>Try the demo</button><button class="rd-hop" data-nav="signin">Sign in</button></div>
+            <p class="rd-small">Free for one bike, no card needed. Restorer free for 30 days, cancel any time.</p>
+            <p class="rd-k rd-follow">Follow Revora</p><div class="rd-soc">${soc}</div>
+          </div>
+          <div class="rd-win" data-win role="img" aria-label="A Revora project page for a 2007 Honda CBR600RR, 66 percent through its restoration course">
+            <div class="rd-win-top"><div style="display:flex;align-items:center;gap:8px"><img src="img/revora-word.svg" alt=""><span class="rd-chip" style="background:#D9BF8E;color:#17232C">My garage</span><span class="rd-chip" style="background:#F6EEDD;color:#7A5A1E">Shop</span></div><div class="rd-win-bar"><i><b></b></i><span>66%</span></div></div>
+            <div style="padding:16px"><div class="rd-win-hero rd-metal rd-pop" style="box-shadow:inset 0 1px 0 rgba(255,255,255,.28)">
+              <div class="t"><p class="k">Restoration course</p><p class="n">2007 Honda CBR600RR</p><div class="rd-tags"><span class="tt">Sport</span><span>Part 3 of 14</span><span>66% done</span></div><div class="acts"><span class="a">Continue Part 3</span><span class="b">Parts diagrams</span></div></div>
+              <div class="ph"><div>${sil("honda-cbr600rr-2007") ? `<img src="${sil("honda-cbr600rr-2007")}" alt="">` : sil("bike-sport") ? `<img src="${sil("bike-sport")}" alt="">` : ""}</div></div>
+              <div class="rd-shine" data-shine></div></div>
+              <div class="rd-tiles"><div><p class="k">Course</p><p class="v">66%</p><p>49 of 64 steps</p></div><div><p class="k">Up next</p><p class="v s">Research, budget &amp; order</p><p>Part 3 · 2 of 3 steps</p></div><div><p class="k">Parts finished</p><p class="v">0 <small style="font-size:13px;color:#5B6B78">/ 78</small></p></div><div><p class="k">Money spent</p><p class="v">$3,316</p><p>of $5,400 budget</p></div></div></div>
+          </div>
+        </div>
+      </section>
+      <section class="rd-strip" data-strip><div><p><strong>Built for your bike, whatever it is.</strong>Search by year, make and model. The course is tailored to it.</p>
+        <div class="bk" aria-hidden="true">${["bike-cafe", "bike-cruiser", "bike-sport", "bike-adventure", "bike-dualsport", "bike-scooter"].map(n => sil(n) ? `<img src="${sil(n)}" alt="">` : "").join("")}</div></div></section>
+      <section class="rd-feats" id="ld-features">
+        <div class="rd-row"><div class="tx"><p class="rd-k">Restoration course</p><h2>Know exactly <em>what to do next.</em></h2><p>Fourteen parts, in the order a restorer would do them. Every step says what to do and why, and the mechanic is a click away if you get stuck.</p></div>
+          <div class="rd-sep blue rd-course" data-sep><div class="hd"><b>Part 6 · Carburetors</b><span>2 of 4 done</span></div><div class="rd-steps">
+            <div class="rd-step done rd-pop"><span class="ok"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>Remove the carb bank</span></div>
+            <div class="rd-step done rd-pop"><span class="ok"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>Strip and soak each carb</span></div>
+            <div class="rd-step now rd-pop"><span class="o"></span><b>Fit new jets, needles and float valves</b><span class="nw">Now</span></div>
+            <div class="rd-step todo rd-pop"><span class="o"></span><span>Set float height and refit</span></div></div>
+            <div class="ft"><span class="a">Open step</span><span class="b">Ask the mechanic</span></div></div></div>
+        <div class="rd-row rev"><div class="rd-sep blue rd-log" data-sep><div class="hd"><i><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg></i><div><b>Receipt read</b><span>4 items · $148.00 · filed under Carb rebuild</span></div></div>
+            <div style="overflow-x:auto"><table><thead><tr><th scope="col">Service</th><th scope="col">Miles</th><th scope="col" class="r">Cost</th></tr></thead><tbody>
+              <tr><td><strong>Carb rebuild</strong><br><small>Nov 2 · 4 rebuild kits</small></td><td>21,412</td><td class="r">$148.00</td></tr>
+              <tr><td><strong>Fork seals and oil</strong><br><small>Oct 18 · 2 seals, fork oil</small></td><td>21,390</td><td class="r">$62.40</td></tr>
+              <tr><td><strong>Chain and sprockets</strong><br><small>Oct 3 · 530 chain kit</small></td><td>21,388</td><td class="r">$189.95</td></tr></tbody></table></div></div>
+          <div class="tx"><p class="rd-k">Service log</p><h2>Snap the receipt. <em>Revora files it.</em></h2><p>Parts, prices and mileage land on the right service. When you sell, hand the buyer a clean history report instead of a shoebox.</p></div></div>
+        <div class="rd-row"><div class="tx"><p class="rd-k">Reminders and recalls</p><h2>A heads-up <em>before it's due.</em></h2><p>Revora learns how much you ride and tells you before oil, chain, brakes or tires come due. Safety recalls for your exact bike come straight from NHTSA.</p></div>
+          <div class="rd-sep tan rd-rem" data-sep><div><i class="a"></i><div><b>Oil and filter</b><span>Due in 320 miles</span></div><em>Log it</em></div><div><i></i><div><b>Valve clearance check</b><span>Due in 1,200 miles</span></div></div><div><i></i><div><b>Registration renewal</b><span>Reminder 2 weeks before it runs out</span></div></div><div><i class="c"></i><div><b>Recalls</b><span>No open recalls for your bike · checked today</span></div></div></div></div>
+      </section>
+      <section class="rd-founder" id="ld-about"><div class="rd-metal rd-pop"><q>I started Revora while restoring my 1977 GS750. Keeping track of what I'd replaced and what I'd spent was harder than the wrenching, so I built the place to keep it.</q>
+        <div class="who"><b>Xavier</b><span>Founder, Revora Garage</span><a href="?about">Read the story</a></div><div class="rd-shine" data-shine></div></div></section>
+      <section class="rd-plans" id="ld-plans"><h2>Start free. <em>Upgrade when the project grows.</em></h2><p class="sub">New members get 25% off for their first 24 hours.</p>${window.rvPlansHtml({ yearly, mode: "choose" })}</section>
+      <section class="rd-end rd-metal"><div class="in"><div><h2>Add your bike. <em>It takes a minute.</em></h2><p>Free for one bike. No card needed.</p></div><button class="rd-gold rd-pop" data-nav="signup">Start my garage</button></div>
+        <footer class="rd-foot"><img src="img/revora-word-white.svg" alt="Revora"><nav aria-label="Footer">${SOCIALS.map(([n, u]) => `<a href="${u}" target="_blank" rel="noopener">${n}</a>`).join("")}<a href="?about">About</a><a href="?privacy">Privacy</a><a href="?terms">Terms</a><a href="mailto:info@revoragarage.com">info@revoragarage.com</a></nav></footer>
+        <div class="rd-shine" data-shine></div></section></div>`;
+    app.querySelectorAll("[data-rvset]").forEach(b => b.onclick = () => window.rvOpenSettings && rvOpenSettings());
+    app.querySelectorAll("[data-ride]").forEach(b => b.onclick = () => { const [y, m, o] = b.dataset.ride.split("|"), f = document.getElementById("ldRide"); f.y.value = y; f.m.value = m; f.o.value = o; f.querySelector("[type=submit]").focus(); });
+    if (window.rvFx) rvFx(app);
     app.querySelectorAll("[data-pl-bill]").forEach(b => b.onclick = () => { showLanding(b.dataset.plBill === "y"); document.getElementById("ld-plans").scrollIntoView(); });
     app.querySelectorAll("[data-pl-pick]").forEach(b => b.onclick = () => showAuth("signup"));
     app.querySelectorAll("[data-demo]").forEach(b => b.onclick = () => goUrl({ demo: 1 }));
     const rf = document.getElementById("ldRide");
-    if (rf) rf.onsubmit = e => { e.preventDefault(); const v = rf.q.value.trim(); track("ride_start", v); goUrl(v ? { pick: 1, goal: "maintain", q: v } : { pick: 1, goal: "maintain" }); };
+    if (rf) rf.onsubmit = e => { e.preventDefault(); const v = (rf.q ? rf.q.value : [rf.y.value, rf.m.value, rf.o.value].join(" ")).trim().replace(/\s+/g, " "); track("ride_start", v); goUrl(v ? { pick: 1, goal: "maintain", q: v } : { pick: 1, goal: "maintain" }); };
     track("landing_view", "", true);
   }
 

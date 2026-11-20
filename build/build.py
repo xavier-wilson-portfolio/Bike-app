@@ -67,12 +67,12 @@ print('library', lib_n)
 shutil.copytree(ROOT / 'img', out / 'img', dirs_exist_ok=True)
 if (ROOT / 'data' / 'i18n').exists(): shutil.copytree(ROOT / 'data' / 'i18n', out / 'i18n', dirs_exist_ok=True)
 
-css = (src / 'style.css').read_text()
+css = (src / 'style.css').read_text() + '\n' + (src / 'redesign.css').read_text()
 import sys; sys.path.insert(0, str(ROOT / 'build')); from darkify import darkify, LOOK
 css, n_dark = darkify(css)
 look_head = 'window.RV_LOOK_VARS=' + json.dumps([[k, f, h] for k, (f, h) in sorted(LOOK.items())], separators=(',', ':')) + ';\n' + (src / 'look_head.js').read_text()
 print('dark colors', n_dark)
-loader = (src / 'cloud.js').read_text() + '\n' + (src / 'report_view.js').read_text() + '\n' + (src / 'build_view.js').read_text() + '\n' + (src / 'wo_view.js').read_text() + '\n' + (src / 'plans_view.js').read_text() + '\n' + (src / 'shop_view.js').read_text() + '\n' + (src / 'admin_view.js').read_text() + '\n' + (src / 'shop_due.js').read_text() + '\n' + (src / 'shop_jobs.js').read_text() + '\n' + (src / 'shop_import.js').read_text() + '\n' + (src / 'shopcrm_view.js').read_text() + '\n' + (src / 'client_view.js').read_text() + '\n' + (src / 'shop_lock.js').read_text() + '\n' + (src / 'legal.js').read_text() + '\n' + (src / 'tokens.js').read_text() + '\n' + (src / 'loader.js').read_text() + '\n' + (src / 'intl.js').read_text() + '\n' + (src / 'look_gauge.js').read_text() + '\n' + (src / 'look_ui.js').read_text()
+loader = (src / 'cloud.js').read_text() + '\n' + (src / 'report_view.js').read_text() + '\n' + (src / 'build_view.js').read_text() + '\n' + (src / 'wo_view.js').read_text() + '\n' + (src / 'plans_view.js').read_text() + '\n' + (src / 'shop_view.js').read_text() + '\n' + (src / 'admin_view.js').read_text() + '\n' + (src / 'shop_due.js').read_text() + '\n' + (src / 'shop_jobs.js').read_text() + '\n' + (src / 'shop_import.js').read_text() + '\n' + (src / 'shopcrm_view.js').read_text() + '\n' + (src / 'client_view.js').read_text() + '\n' + (src / 'shop_lock.js').read_text() + '\n' + (src / 'legal.js').read_text() + '\n' + (src / 'tokens.js').read_text() + '\n' + (src / 'loader.js').read_text() + '\n' + (src / 'intl.js').read_text() + '\n' + (src / 'fx.js').read_text()+ '\n' + (src / 'look_gauge.js').read_text() + '\n' + (src / 'look_ui.js').read_text()
 cfg_file = ROOT / 'data' / 'config.json'   # public settings only: Supabase URL and publishable key
 cfg = json.loads(cfg_file.read_text()) if cfg_file.exists() else {}
 import hashlib
