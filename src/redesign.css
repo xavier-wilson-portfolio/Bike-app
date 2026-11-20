@@ -444,3 +444,21 @@ html[data-sec="home"] .subbar{display:none}
 /* the photo credit sits just above the stat boxes, never under them */
 @media (min-width:1021px){.mh-hero .mh-stage .hp-cap{bottom:var(--capb,90px)}}
 @media (min-width:1021px) and (max-width:1400px){.mh-hero h1{font-size:30px}.mh-hero-l>p{font-size:16px}}
+
+/* ===== every word fits inside its box, whatever font is chosen ===== */
+.mh-row>*,.mh-row .mh-panel,.mh-stats>*,.rs-specs>*,.mh-tl li,.mh-tli{min-width:0}
+.mh-panel,.mh-stat,.mh-hero-l{overflow-wrap:break-word}
+.mh-panel :is(b,h2,h3,p,span,a,button,li),.mh-stat :is(b,span,p,strong){overflow-wrap:break-word;hyphens:auto}
+.rs-specs b{font-size:clamp(14px,1.25vw,18px)!important;line-height:1.15;hyphens:manual!important}
+.mh-tli b,.mh-tli span{white-space:normal}
+.mh-panel{overflow:hidden}
+/* lighter outlines on the project boxes */
+.rs-cur,.rs-cur{border-color:#8FA3B3!important}
+.mh-panel.p-due{border-top-color:#8FA3B3}
+/* one-time "new look" note for existing members */
+.rv-nl{position:fixed;inset:0;z-index:9000;background:rgba(23,35,44,.45);display:grid;place-items:center;padding:20px}
+.rv-nl-box{background:#fff;border-radius:14px;max-width:460px;width:100%;padding:28px 28px 24px;box-shadow:0 24px 60px rgba(23,35,44,.35);border-top:5px solid #D9BF8E}
+.rv-nl-k{margin:0;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8A6B32;font-weight:700}
+.rv-nl-box h2{margin:8px 0 12px;font-family:var(--f-display);font-weight:400;font-size:26px;color:#17232C}
+.rv-nl-box p{margin:0 0 10px;color:#3A4A57;line-height:1.55}
+.rv-nl-acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}

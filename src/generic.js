@@ -87,7 +87,7 @@ if (GENERIC) {
         </div>
         <div class="mh-row mg4">
           <section class="mh-panel p-parts"><div class="mh-ph"><h2>Bike specs</h2>${SPEC_SOURCE.url ? `<a class="linkbtn" href="${esc(SPEC_SOURCE.url)}" target="_blank" rel="noopener">Source</a>` : ""}</div>
-            <div class="rs-specs">${(SPECS.length ? SPECS : [[m.year || "—", "model year"], [esc(m.make || BIKE.make || "—"), "make"], [esc(m.model || BIKE.model || "—"), "model"], [styleName || "—", "style"], [o ? milesFmt(o.miles) + " mi" : "—", "odometer"]]).map(([v, l]) => `<div><b>${esc(String(v))}</b><span>${esc(String(l))}</span></div>`).join("")}</div>
+            <div class="rs-specs">${(SPECS.length ? SPECS : [[m.year || "—", "model year"], [esc(m.make || BIKE.make || "—"), "make"], [esc(m.model || BIKE.model || "—"), "model"], [styleName || "—", "style"], [o ? milesFmt(o.miles) + " mi" : "—", "odometer"]]).map(([v, l]) => `<div><b>${esc(String(v)).replace(/\//g, "/<wbr>")}</b><span>${esc(String(l))}</span></div>`).join("")}</div>
           </section>
           <section class="mh-panel p-hist"><div class="mh-ph"><h2>Recent activity</h2><button class="linkbtn" data-mh="hist">Work log</button></div>
             ${hist.length ? `<ol class="mh-tl">${hist.map(r => `<li><button class="mh-tli" data-open="maintenance|${esc(r.id)}"><span class="mh-tld">${esc(fmtDate(r.date))}${n(r.odometer) ? ` · ${milesFmt(r.odometer)} mi` : ""}</span><b>${esc(r.service)}</b></button></li>`).join("")}</ol>`
