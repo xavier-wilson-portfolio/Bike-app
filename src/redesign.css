@@ -336,3 +336,6 @@ h1.disp,.sec,.page-h h1{font-family:var(--f-display);font-weight:400;letter-spac
 @media (min-width:900px){.rv-rail{display:flex}}
 @media (min-width:900px) and (max-width:1399px){html.has-rail .main{padding-left:64px}}
 @media (max-width:899px){.rv-rail{display:none}}
+/* project top box: smooth metal, no grid lines */
+.mh-hero::before{background:none!important;display:none}
+.bench::before{background:none!important;display:none}
