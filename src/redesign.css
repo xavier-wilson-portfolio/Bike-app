@@ -281,3 +281,5 @@ h1.disp,.sec,.page-h h1{font-family:var(--f-display);font-weight:400;letter-spac
 .gx-art.cut img{inset:6% 6%;width:88%;height:88%}
 .gx-art.photo{background:#E6F1F8}.gx-art.photo img{inset:5px;width:calc(100% - 10px);height:calc(100% - 10px);object-fit:cover;border-radius:8px}
 .rd-win-hero .ph div.photo{background:none;display:block}.rd-win-hero .ph div.photo img{width:100%;height:100%;object-fit:cover;border-radius:8px;display:block}
+/* photos fill the top of the garage card edge to edge, like the mockup */
+.gx-art.photo img{inset:0;width:100%;height:100%;object-fit:cover;border-radius:0}
