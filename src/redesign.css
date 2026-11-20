@@ -441,3 +441,6 @@ html[data-sec="home"] .subbar{display:none}
   .mh-hero .mh-acts{margin-top:20px}
   .mh-hero [data-snap]{display:none}
 }
+/* the photo credit sits just above the stat boxes, never under them */
+@media (min-width:1021px){.mh-hero .mh-stage .hp-cap{bottom:var(--capb,90px)}}
+@media (min-width:1021px) and (max-width:1400px){.mh-hero h1{font-size:30px}.mh-hero-l>p{font-size:16px}}
