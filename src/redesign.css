@@ -399,38 +399,3 @@ html[data-sec="home"] .subbar{display:none}
 .rs-cur .rs-cur-t{gap:6px}.rs-cur .rs-n{font-size:13px;font-weight:600;color:#5B6B78}
 .rs-specs>*{background:#E6F1F8!important;border:0!important;border-radius:8px!important}.rs-specs b{font-family:var(--f-display);font-weight:400}
 @media (max-width:760px){.mh-hero .mh-hero-l{padding:26px 22px 20px}.mh-stats{margin:-36px 8px 0}}
-
-/* ===== bike pictures are never zoomed or cropped: the whole photo always shows ===== */
-.herophoto img,.herophoto.graded img,.herophoto.has img{object-fit:contain!important;object-position:50% 50%!important;background:#101A23}
-.herophoto.graded img{position:static;width:100%;height:auto;aspect-ratio:16/9}
-.mh-hero .mh-stage .herophoto{display:flex;align-items:center;background:transparent}
-.gx-art.photo img,.rd-win-hero .ph div.photo img{object-fit:contain!important}
-.gx-art.photo{background:#E6F1F8}
-.rd-win-hero .ph div.photo{aspect-ratio:16/9}
-.herophoto img,.herophoto.graded img,.herophoto.has img{background:transparent;height:auto!important;aspect-ratio:auto!important;max-height:100%;border-radius:8px}
-.mh-hero .mh-stage .herophoto{justify-content:center;height:100%}
-.mh-hero .mh-stage>.herophoto{display:flex!important;align-items:center!important;justify-content:center;height:auto;align-self:center;border:0;box-shadow:none;background:transparent}
-/* the photo fills its whole space again: the space takes the photo's own 16:9 shape, so nothing is cut off */
-.mh-hero{grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);align-items:center}
-.mh-hero .mh-hero-l{padding:36px 40px 84px}
-.mh-hero .mh-stage{padding:7px;align-self:stretch;display:flex;align-items:center}
-.mh-hero .mh-stage>.herophoto{width:100%;aspect-ratio:16/9;height:auto!important;border-radius:8px;overflow:hidden}
-.mh-hero .mh-stage>.herophoto img{width:100%!important;height:100%!important;max-height:none;object-fit:contain!important;border-radius:8px}
-@media (max-width:900px){.mh-hero{grid-template-columns:1fr}.mh-hero .mh-hero-l{padding:26px 22px 20px}}
-.mh-hero .mh-stage>.herophoto,.mh-stage .herophoto{min-height:0!important;flex:0 0 auto}
-.mh-hero{grid-template-columns:minmax(0,1fr) minmax(0,1.45fr)}
-.mh-hero .mh-hero-l{padding:32px 36px 84px}
-.mh-hero h1{font-size:clamp(28px,2.6vw,38px)}
-.mh-hero-l>p{font-size:16px;margin-top:16px}
-.mh-chips{margin-top:14px}.mh-acts{margin-top:20px}
-/* keep the four tiles from covering the bottom of the photo */
-.mh-hero .mh-stage{align-items:flex-start;padding:7px 7px 84px}
-@media (max-width:900px){.mh-hero .mh-stage{padding:7px 7px 44px}}
-/* positioned like the CBR600RR mockup: bigger text on the left, the photo centered in the space above the tiles */
-.mh-hero{grid-template-columns:minmax(0,1fr) minmax(0,1.3fr)}
-.mh-hero .mh-hero-l{padding:40px 42px 112px}
-.mh-hero h1{font-size:40px}
-.mh-hero-l>p{font-size:18px;margin-top:22px}
-.mh-chips{margin-top:18px}.mh-acts{margin-top:28px}
-.mh-hero .mh-stage{align-items:center;padding:7px 7px 81px}
-@media (max-width:900px){.mh-hero{grid-template-columns:1fr}.mh-hero .mh-hero-l{padding:26px 22px 20px}.mh-hero h1{font-size:30px}.mh-hero .mh-stage{padding:7px 7px 44px}}
