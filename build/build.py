@@ -77,7 +77,7 @@ loader = (src / 'cloud.js').read_text() + '\n' + (src / 'report_view.js').read_t
 cfg_file = ROOT / 'data' / 'config.json'   # public settings only: Supabase URL and publishable key
 cfg = json.loads(cfg_file.read_text()) if cfg_file.exists() else {}
 import hashlib
-build_id = hashlib.sha1((app + css).encode()).hexdigest()[:10]
+build_id = hashlib.sha1((app + css + loader + look_head + (src / 'sw.js').read_text()).encode()).hexdigest()[:10]   # any change at all gives a new version, so installed apps update
 loader = 'window.RV_BUILD = "' + build_id + '";\n' + loader
 sil = sorted(p.name for p in (ROOT / 'img' / 'sil').glob('*') if p.suffix in ('.webp', '.png', '.jpg', '.svg'))   # black silhouette covers that exist
 loader = 'window.RV_CONFIG = ' + json.dumps({**{k: cfg.get(k) for k in ['supabaseUrl', 'supabaseKey', 'aff', 'plansLive', 'payLinks', 'billingPortal', 'primaryHost', 'shopApi', 'trialLink', 'remindersApi', 'libraryApi', 'dealCodes', 'dealFrom', 'dealHours', 'dealShortFrom', 'dealShortHours'] if cfg.get(k)}, 'sil': sil, 'silCredit': json.loads((ROOT / 'img' / 'sil' / 'credits.json').read_text()) if (ROOT / 'img' / 'sil' / 'credits.json').exists() else {}}) + ';\n' + loader
