@@ -315,3 +315,24 @@ h1.disp,.sec,.page-h h1{font-family:var(--f-display);font-weight:400;letter-spac
 .gx-in{animation:gxIn .35s ease both}
 @keyframes gxIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){.gx-in{animation:none}}
+
+/* ===== clean progress line in the top bar, like the mockup ===== */
+.progline{gap:12px}
+.progline .pl-track{height:6px;border-radius:3px;background:#E6F1F8}
+.progline .pl-track i{background:#D9BF8E;border-radius:3px}
+.progline .pl-pc{font-family:var(--f-display);font-weight:400;font-size:12px;color:#2C4253}
+.progline .pl-bike,.progline .pl-flag,.progline .pl-track b{display:none}
+
+/* ===== side rail like the mockup: just the house, the rest slide down on hover ===== */
+.rv-rail{top:132px;left:14px;gap:4px;padding:0;align-items:center}
+.rv-rail .rl{width:44px;height:44px;border-radius:10px;background:transparent;border:0;box-shadow:none;color:#2C4253}
+.rv-rail .rl svg{width:17px;height:17px;stroke-width:2}
+.rv-rail .rl:first-child svg{width:22px;height:22px;stroke-width:1.6}
+.rv-rail .rl:not(.on):hover{background:#EFE8D9}
+.rv-rail .rl.on{background:transparent;color:#2C4253;box-shadow:inset 0 -2px 0 #D9BF8E}
+.rv-rail .rl.more{opacity:0;transform:translateY(-8px);transition:opacity .35s ease,transform .35s ease;transition-delay:calc(var(--i) * 30ms)}
+.rv-rail:hover .rl.more,.rv-rail:focus-within .rl.more{opacity:1;transform:none}
+/* make room for it on every screen wide enough, not only very wide ones */
+@media (min-width:900px){.rv-rail{display:flex}}
+@media (min-width:900px) and (max-width:1399px){html.has-rail .main{padding-left:64px}}
+@media (max-width:899px){.rv-rail{display:none}}
