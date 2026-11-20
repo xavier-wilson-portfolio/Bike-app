@@ -51,6 +51,24 @@
     const right = !sb ? "" : session
       ? `<div class="pk-acct"><button class="linkbtn" data-nav="projects">Your garage</button>${window.rvPlanOf ? `<button class="pk-plan" data-plans>${esc((planInfo(myPlan().id).name || "Free") + (myPlan().trial ? " trial" : ""))}</button>` : ""}<span class="muted">${esc(profile?.display_name || session.user.email)}</span><button class="btn sm" data-act="signout">Sign out</button></div>`
       : `<div class="pk-acct"><button class="btn sm" data-nav="signin">Sign in</button><button class="btn sm pri" data-nav="signup">Create account</button></div>`;
+    const gxI = d => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+    if (opts.garage && session) {
+      const pl = window.rvPlanOf ? esc((planInfo(myPlan().id).name || "Free") + (myPlan().trial ? " trial" : "")) : "";
+      const M = [["My garage", '<path d="M3 11l9-7 9 7v9a1 1 0 01-1 1h-5v-6H9v6H4a1 1 0 01-1-1z"/>', 'data-nav="projects"'], ...(opts.shop ? [["Shop", '<path d="M3 9l1.5-5h15L21 9"/><path d="M4 9v11h16V9"/><path d="M3 9h18"/><path d="M9 20v-6h6v6"/>', "data-crm"]] : []),
+        ["Add a bike", '<path d="M12 5v14M5 12h14"/>', 'data-nav="new"'], ["Plans", '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/>', "data-plans"],
+        ["Builds", '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/>', 'data-href="?builds"'], ["Collector cards", '<rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="11" r="3"/>', 'data-gxgo="tokBand"'],
+        ["Text alerts", '<path d="M4 5h16v11H9l-5 4z"/>', "data-texts"], ["About Revora", '<circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/>', 'data-href="?about"']];
+      app.innerHTML = `<div class="pick is-garage"><header class="pk-top gx-top"><button class="pk-logo" data-nav="home" aria-label="Revora home"><img class="brand-icon" src="img/revora-icon.svg" alt=""><img class="wordmark" src="img/revora-word.svg" alt="Revora"></button>
+        <nav class="gx-nav" aria-label="Main"><button data-nav="projects" aria-current="page">My garage</button>${opts.shop ? `<button data-crm>Shop</button>` : ""}</nav>
+        <input class="gx-q" id="gxQ" type="search" placeholder="Search your bikes" aria-label="Search your bikes" autocomplete="off">
+        <button class="gx-ic" type="button" data-gxmenu aria-label="Open menu" aria-expanded="false">${gxI('<path d="M4 7h16M4 12h16M4 17h16"/>')}</button>
+        <div class="gx-menu" id="gxMenu" role="dialog" aria-label="Menu" hidden><div class="gx-mh"><b>Menu</b><button class="gx-ic" type="button" data-gxclose aria-label="Close menu">${gxI('<path d="M6 6l12 12M18 6L6 18"/>')}</button></div>
+          <div class="gx-acct"><span>Signed in as <b>${esc(profile?.display_name || session.user.email)}</b>${pl ? ` <button class="pk-plan" data-plans>${pl}</button>` : ""}</span><button class="linkbtn" data-act="signout">Sign out</button></div>
+          <div class="gx-tiles">${M.map(([t, d, a]) => `<button type="button" class="gx-t" ${a}>${gxI(d)}<span>${t}</span></button>`).join("")}</div>
+          <button type="button" class="gx-look" data-gxlook>${gxI('<circle cx="13.5" cy="6.5" r="1.5"/><circle cx="17.5" cy="10.5" r="1.5"/><circle cx="8.5" cy="7.5" r="1.5"/><circle cx="6.5" cy="12.5" r="1.5"/><path d="M12 2a10 10 0 000 20c1.1 0 2-.9 2-2 0-.5-.2-1-.5-1.3-.3-.4-.5-.8-.5-1.3 0-1.1.9-2 2-2h2.4A5.6 5.6 0 0022 10c0-4.4-4.5-8-10-8z"/>')}<span><b>Customize appearance</b><small>Colors, fonts, layout and speedometer</small></span></button></div></header>
+        <div class="pick-in wide">${inner}</div></div>`;
+      return;
+    }
     app.innerHTML = `<div class="pick${opts.garage ? " is-garage" : ""}${opts.auth ? " is-auth" : ""}"><div class="pk-top"><button class="pk-logo" data-nav="home" aria-label="Revora home"><img class="brand-icon" src="img/revora-icon.svg" alt=""><img class="wordmark" src="img/revora-word.svg" alt="Revora"></button>${right}</div><div class="pick-in ${opts.wide ? "wide" : ""}">${inner}</div>${opts.auth ? `<button class="linkbtn rd-back" data-nav="home">Back to home</button>` : ""}</div>`;
   }
   const fail = msg => !navigator.onLine ? frame(`<h1 class="disp">You're offline</h1><p class="muted">Revora needs a connection to load your bikes. Check your Wi-Fi or data, then try again.</p><button class="btn pri" data-act="reload">Try again</button>`) : frame(`<h1 class="disp">Something went wrong</h1><p class="muted">${esc(msg)}</p><button class="btn pri" data-act="reload">Try again</button>`);
@@ -496,6 +514,15 @@
           <span class="gt-meta">${b && b.generic ? "Maintenance and records" : g && g.total ? `${g.done} of ${g.total} steps` : "Not started"}<span>${esc(who(p))}</span></span></button>
         ${p.role === "owner" && readyFor(p) ? `<div class="gt-ready"><span>The ${esc(bikeName(readyFor(p)))} page is ready.</span><button class="btn tan sm" data-connect="${esc(p.id)}">Connect</button></div>` : ""}${p.role === "owner" ? `<div class="gt-acts"><button class="linkbtn" data-share="${esc(p.id)}">Share</button><button class="linkbtn" data-rename="${esc(p.id)}">Rename</button><button class="linkbtn" data-transfer="${esc(p.id)}">Sold it?</button><button class="linkbtn gt-del" data-del="${esc(p.id)}">Delete</button></div>` : `<div class="gt-acts"><button class="linkbtn gt-del" data-leave="${esc(p.id)}">Remove from my garage</button></div>`}</article>`; };
     const fb = feat && bikeOf(feat.bike_id), fg = feat && prog[feat.id];
+    const artSrc = p => { const b = bikeOf(p.bike_id), f = silFile(genSil[p.id]) || b && !b.generic && silFile(b.silhouette) || silFile("bike-" + styleOf(p)) || silFile("bike-standard"); return f ? "img/sil/" + f : ""; };
+    const tagOf = p => { const g = prog[p.id]; return isLog(p) ? "Logging" : g && g.total && g.done >= g.total ? "Done" : g && g.done ? "Restoring · " + Math.round(pctOf(p)) + "%" : "Not started"; };
+    const subOf = p => { const b = bikeOf(p.bike_id); return isLog(p) ? "Maintenance log · " + (STYLE_NAME[styleOf(p)] || "Standard") : isUni(p) ? uniTxt(p) : genLabel[p.id] || (b && !b.generic ? [p.name && p.name !== bikeName(b) ? bikeName(b) : "", b.variant].filter(Boolean).join(", ") : "") || "Your bike"; };
+    const card = p => `<button class="gx-bike" data-project="${esc(p.id)}" data-q="${esc([p.name, subOf(p)].join(" ").toLowerCase())}"><span class="gx-art">${artSrc(p) ? `<img src="${artSrc(p)}" alt="">` : ""}${isPin(p) ? `<span class="gx-pin">Pinned</span>` : ""}</span>
+      <span class="gx-bt"><b>${esc(p.name || bikeName(bikeOf(p.bike_id)))}</b><span>${esc(subOf(p))}</span><em>${esc(tagOf(p))}</em></span></button>`;
+    const SHOW = 4, first4 = data.slice(0, SHOW), more = data.length - first4.length;
+    const SI = d => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+    const shortcut = (sec, t, d, ic) => `<button class="gx-sc" data-gxsec="${sec}"><span class="gx-ico">${SI(ic)}</span><span><b>${t}</b><span>${d}</span></span></button>`;
+    const info = (t, d, btn, a, ic) => `<div class="gx-info"><span class="gx-ico">${SI(ic)}</span><b>${t}</b><p>${d}</p><button class="gx-chip" ${a}>${btn}</button></div>`;
     frame(`<section class="gh">
         <div class="gh-hi"><h1 class="gh-title">${esc(greeting())}${first ? `, <span class="gh-name">${esc(first)}</span>` : ""}.</h1>
           <p class="muted">${data.length ? (data.length === 1 ? "One bike in your garage." : `${data.length} bikes in your garage.`) : "Your garage is empty. Add the bike you're working on to get started."}</p></div>
@@ -507,26 +534,61 @@
             <div class="bench-go">${fb && fb.generic && readyFor(feat) && feat.role === "owner" ? `<button class="btn tan big" data-connect="${esc(feat.id)}">Connect to its page</button><button class="btn ghost-l" data-project="${esc(feat.id)}">Open project</button>` : `<button class="btn tan big" data-project="${esc(feat.id)}">Open project</button>`}<button class="btn ghost-l" data-nav="new">Start another bike</button></div></div>
           ${benchArt(fb, genStyle[feat.id], genSil[feat.id])}<div class="rd-shine" data-shine></div></div>`
         : `<div class="bench empty"><div class="bench-txt"><h2>Add your bike</h2><p>Restoring it? Get its parts diagrams, part numbers and a step-by-step course. Just keeping it running? Get a maintenance log with parts, jobs and receipts.</p>
-            <div class="bench-go"><button class="btn tan big" data-nav="new">Add your bike</button></div></div>${benchArt()}</div>`}
+            <div class="bench-go"><button class="btn tan big" data-nav="new">Add your bike</button></div></div>${benchArt()}<div class="rd-shine" data-shine></div></div>`}
       </section>
       ${dealBand()}
+      ${data.length ? `<section class="gx-bikes" id="gxBikes"><div class="gx-h"><h2>Your bikes</h2><span><button class="linkbtn" data-nav="new">+ New project</button>${data.length > 1 ? `<button class="linkbtn" data-gxall>See all ${data.length}</button>` : ""}</span></div>
+        <div class="gx-grid">${first4.map(card).join("")}${more > 0 ? `<button class="gx-more" data-gxall><b>+${more}</b><span>more bike${more === 1 ? "" : "s"}</span><small>See all ${data.length}</small></button>` : ""}<button class="gx-add" data-nav="new"><i>${SI('<path d="M12 5v14M5 12h14"/>')}</i><b>Add a bike</b><small>Start a new project</small></button></div>
+        <p class="gx-none" id="gxNone" hidden>No bikes match that search.</p></section>` : ""}
       ${shopBand(myShop, allP.length - data.length)}${clientBand(cHomes)}
       ${window.rvAdmin && window.rvPlanOf && myPlan().admin ? `<div id="admHQ"></div>` : ""}
       <div id="woBoard"></div>
       <div id="tokBand"></div>
-      ${data.length ? `<section class="garage"><div class="garage-h"><h2>Your garage</h2><button class="btn sm" data-nav="new">+ New project</button></div>
-        <div class="gts">${data.map(tag).join("")}<button class="gt gt-new" data-nav="new"><b>Add a bike</b><span>Start a new project for another bike</span></button></div></section>` : ""}
       ${window.rvShop ? rvShop.html({ kind: "parts", title: "Shop for parts", sub: "Search the big parts stores for any of your bikes. You buy on the store's own site.", bikes: [...new Set(data.map(p => { const b = bikeOf(p.bike_id); return genLabel[p.id] || (b && !b.generic && !b.universal ? bikeName(b) : p.name); }).filter(Boolean))] }) : ""}
-      ${!(matchMedia("(display-mode: standalone)").matches || navigator.standalone) ? `<section class="ins-band"><img src="img/app-192.png" alt="" width="44" height="44"><div><b>Put Revora on your home screen</b><span>It opens like an app, full screen, one tap from your phone's home screen.</span></div><div class="ins-acts"><button class="btn tan" data-act="install">Install the app</button><button class="linkbtn" data-act="ins-later">Not now</button></div></section>` : ""}
-      <section class="gfoot"><div><b>Working with a team?</b><span>Share a project and everyone sees the same parts, steps and photos, live. Owners can give edit or view access.</span></div>
-        <div><b>Builds gallery</b><span>See what other riders are restoring and building, and put yours in it from your bike's Build page.</span><a class="linkbtn" href="?builds">Browse builds</a></div>
-        <div><b>Text alerts</b><span>Get service reminders and news about new features by text as well as email.</span><button class="linkbtn" data-texts>Set up texts</button></div>
-        <div><b>Plans</b><span>One bike is free for good. Paid plans add AI receipts, email reminders, share links and teams.</span><button class="linkbtn" data-plans>See plans</button></div>
-        <div><b>Any bike works</b><span>Restoring or maintaining a bike we don't list? Add it with its year, make and model. Restorations get a course built for its kind of bike.</span><button class="linkbtn" data-nav="browse">Add a bike</button></div></section>
-      <section class="gsocial"><div><b>Follow Revora</b><span>Builds, tips and what's new in the app. Tag us in your project.</span></div>${socialsHtml("light")}</section>
-      <p class="g-legal"><a href="?privacy">Privacy Policy</a> · <a href="?terms">Terms of Service</a> · <button class="linkbtn g-del" data-delacct>Delete my account</button></p>`, { wide: true, garage: true });
+      ${feat ? `<h2 class="gx-sh">Shortcuts</h2><div class="gx-scs">
+        ${shortcut("purchasing", "Shopping list", "Parts to buy, with prices", '<circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M3 4h2l2.5 11h11L21 8H6.5"/>')}
+        ${shortcut("docs", "Photos", "Before, during and after", '<rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/>')}
+        ${shortcut("checklists", "Safety checks", "Before every ride", '<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/>')}
+        ${shortcut("help", "Ask the mechanic", "Stuck on a step? Ask", '<path d="M4 5h16v11H9l-5 4z"/>')}</div>` : ""}
+      <div class="gx-infos">
+        ${info("Work on it together", "Share a project and everyone sees the same parts, steps and photos.", "Invite someone", feat && feat.role === "owner" ? `data-share="${esc(feat.id)}"` : 'data-nav="new"', '<circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0112 0"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14a5 5 0 015 6"/>')}
+        ${info("Text reminders", "Get service reminders by text as well as email.", "Set up texts", "data-texts", '<path d="M4 5h16v11H9l-5 4z"/>')}
+        ${info("Your plan", "See what each plan includes and switch any time.", "See plans", "data-plans", '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/>')}
+        ${info("Builds", "See what other riders are restoring and share yours.", "Browse builds", 'data-href="?builds"', '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/>')}</div>
+      ${!(matchMedia("(display-mode: standalone)").matches || navigator.standalone) ? `<section class="ins-band"><img src="img/app-192.png" alt="" width="44" height="44"><div><b>Put Revora on your home screen</b><span>It opens full screen, one tap from your phone's home screen.</span></div><div class="ins-acts"><button class="btn tan" data-act="install">Install it</button><button class="linkbtn" data-act="ins-later">Not now</button></div></section>` : ""}
+      <section class="gx-follow"><p><b>Follow Revora.</b> Builds, tips and what's new. Tag us in your project.</p>${socialsHtml("light")}</section>
+      <p class="g-legal"><a href="?privacy">Privacy Policy</a> · <a href="?terms">Terms of Service</a> · <button class="linkbtn g-del" data-delacct>Delete my account</button></p>`, { wide: true, garage: true, shop: !!myShop });
     const adm = document.getElementById("admHQ"); if (adm) window.rvAdmin.mount(adm, sb, note);
     if (window.rvFx) rvFx(app);
+    const mb = app.querySelector("[data-gxmenu]"), mn = document.getElementById("gxMenu");
+    if (mb && mn) {
+      const setM = on => { mn.hidden = !on; mb.setAttribute("aria-expanded", on); if (on) { const f = mn.querySelector("button"); f && f.focus(); } };
+      mb.onclick = e => { e.stopPropagation(); setM(mn.hidden); };
+      mn.querySelector("[data-gxclose]").onclick = () => { setM(false); mb.focus(); };
+      mn.onkeydown = e => { if (e.key === "Escape") { setM(false); mb.focus(); } };
+      document.addEventListener("click", e => { if (!mn.hidden && !mn.contains(e.target) && e.target !== mb) setM(false); });
+      const lk = mn.querySelector("[data-gxlook]"); if (lk) lk.onclick = () => { setM(false); window.rvOpenLook && rvOpenLook(); };
+      mn.querySelectorAll("[data-gxgo]").forEach(b => b.onclick = () => { setM(false); const t = document.getElementById(b.dataset.gxgo); if (t && t.firstChild) t.scrollIntoView({ behavior: "smooth", block: "center" }); else note("Scan the QR code on a Revora collector card to start your set."); });
+    }
+    app.querySelectorAll("[data-href]").forEach(b => b.onclick = () => { location.href = b.dataset.href; });
+    app.querySelectorAll("[data-gxsec]").forEach(b => b.onclick = () => { if (!feat) return; ls.set("rv.openSec", b.dataset.gxsec); goUrl({ project: feat.id }); });
+    app.querySelectorAll("[data-gxall]").forEach(b => b.onclick = () => allBikes());
+    const q = document.getElementById("gxQ");
+    if (q) q.oninput = () => {
+      const v = q.value.trim().toLowerCase(), grid = app.querySelector(".gx-grid");
+      if (!grid) return;
+      if (v && !grid.dataset.full) { grid.dataset.full = "1"; grid.innerHTML = data.map(card).join(""); }
+      if (!v && grid.dataset.full) { delete grid.dataset.full; grid.innerHTML = first4.map(card).join("") + (more > 0 ? `<button class="gx-more" data-gxall><b>+${more}</b><span>more bike${more === 1 ? "" : "s"}</span><small>See all ${data.length}</small></button>` : "") + `<button class="gx-add" data-nav="new"><i>${SI('<path d="M12 5v14M5 12h14"/>')}</i><b>Add a bike</b><small>Start a new project</small></button>`; grid.querySelectorAll("[data-gxall]").forEach(b => b.onclick = () => allBikes()); }
+      let n = 0; grid.querySelectorAll(".gx-bike").forEach(c => { const on = !v || c.dataset.q.includes(v); c.hidden = !on; if (on) n++; });
+      document.getElementById("gxNone").hidden = !(v && !n);
+    };
+    // every bike, with pins and the owner actions
+    function allBikes() {
+      const host = document.getElementById("gxBikes"); if (!host) return;
+      host.innerHTML = `<div class="gx-h"><h2>All your bikes</h2><span><button class="linkbtn" data-nav="new">+ New project</button><button class="linkbtn" data-gxback>Show fewer</button></span></div><div class="gts">${data.map(tag).join("")}</div>`;
+      host.querySelector("[data-gxback]").onclick = () => showProjects();
+      bindCards(host); host.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
     if (window.rvTokens) rvTokens.band(sb, document.getElementById("tokBand"));
     app.querySelectorAll("[data-crm]").forEach(b => b.onclick = () => goUrl({ crm: 1 }));
     app.querySelectorAll("[data-cmode]").forEach(b => b.onclick = () => { const on = !rvShopLock.customerMode(); rvShopLock.setCustomerMode(on); note(on ? "Customer mode is on. Opening the shop login." : "Customer mode is off."); if (on) goUrl({ crm: 1 }); else showProjects(); });
@@ -536,15 +598,18 @@
     app.querySelectorAll("[data-texts]").forEach(b => b.onclick = async () => { if (CONTACT === undefined) await loadContact(); phoneBox(false); });
     if (hasPlanL("shop") && data.length) woBoard(data);
     if (window.rvShop) rvShop.bind(app, {});
-    app.querySelectorAll("[data-connect]").forEach(b => b.onclick = e => { e.stopPropagation(); const p = data.find(x => x.id === b.dataset.connect); connectProject(p, readyFor(p)); });
-    app.querySelectorAll("[data-pin]").forEach(b => b.onclick = e => { e.stopPropagation(); const id = b.dataset.pin, cur = (PREFS.pinned || []).filter(x => x !== id); window.rvPrefs.set({ pinned: b.getAttribute("aria-pressed") === "true" ? cur : [id].concat(cur) }); showProjects(); });
-    app.querySelectorAll("[data-rename]").forEach(b => b.onclick = async () => {
+    function bindCards(root) {
+    root.querySelectorAll("[data-connect]").forEach(b => b.onclick = e => { e.stopPropagation(); const p = data.find(x => x.id === b.dataset.connect); connectProject(p, readyFor(p)); });
+    root.querySelectorAll("[data-pin]").forEach(b => b.onclick = e => { e.stopPropagation(); const id = b.dataset.pin, cur = (PREFS.pinned || []).filter(x => x !== id); window.rvPrefs.set({ pinned: b.getAttribute("aria-pressed") === "true" ? cur : [id].concat(cur) }); showProjects(); });
+    root.querySelectorAll("[data-rename]").forEach(b => b.onclick = async () => {
       const p = data.find(x => x.id === b.dataset.rename); const name = prompt("Project name", p.name || ""); if (name === null) return;
       const { error } = await sb.from("projects").update({ name: name.trim().slice(0, 80) }).eq("id", p.id); if (error) note(friendly(error), true); else showProjects();
     });
-    app.querySelectorAll("[data-del],[data-leave]").forEach(b => b.onclick = e => { e.stopPropagation(); const p = data.find(x => x.id === (b.dataset.del || b.dataset.leave)); deleteProjectBox(Object.assign({}, p, { label: p.name || bikeName(bikeOf(p.bike_id)) }), () => { if (ls.get("rv.project") === p.id) ls.set("rv.project", ""); window.rvPrefs.set({ pinned: (PREFS.pinned || []).filter(x => x !== p.id) }); showProjects(); }); });
-    app.querySelectorAll("[data-transfer]").forEach(b => b.onclick = () => transferBox(data.find(x => x.id === b.dataset.transfer)));
-    app.querySelectorAll("[data-share]").forEach(b => b.onclick = () => hasPlanL("restorer") ? shareBox(data.find(x => x.id === b.dataset.share)) : upsellBox("restorer", "Sharing projects is in Restorer", "Share a bike with friends or a shop so everyone sees the same parts, jobs and photos live."));
+    root.querySelectorAll("[data-del],[data-leave]").forEach(b => b.onclick = e => { e.stopPropagation(); const p = data.find(x => x.id === (b.dataset.del || b.dataset.leave)); deleteProjectBox(Object.assign({}, p, { label: p.name || bikeName(bikeOf(p.bike_id)) }), () => { if (ls.get("rv.project") === p.id) ls.set("rv.project", ""); window.rvPrefs.set({ pinned: (PREFS.pinned || []).filter(x => x !== p.id) }); showProjects(); }); });
+    root.querySelectorAll("[data-transfer]").forEach(b => b.onclick = () => transferBox(data.find(x => x.id === b.dataset.transfer)));
+    root.querySelectorAll("[data-share]").forEach(b => b.onclick = () => hasPlanL("restorer") ? shareBox(data.find(x => x.id === b.dataset.share)) : upsellBox("restorer", "Sharing projects is in Restorer", "Share a bike with friends or a shop so everyone sees the same parts, jobs and photos live."));
+    }
+    bindCards(app);
   }
   // Shop plan: every open work order across the garage, soonest due first
   async function woBoard(projects) {

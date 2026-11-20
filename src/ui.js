@@ -52,6 +52,8 @@ function parseHash(h) { h = (h || "").replace("#", ""); const m = h.match(/^less
   if (saved) { R.tab = saved.tab || {}; R.view = saved.view || {}; if (saved.lesson) R.lesson = saved.lesson; }
   // Every visit starts on the home page: ignore the last page and any #link in the address on load.
   void fromHash; R.sec = "home";
+  // a shortcut on the garage page can ask for one section once (Shopping list, Photos, Safety checks, Ask the mechanic)
+  try { const o = localStorage.getItem("rv.openSec"); localStorage.removeItem("rv.openSec"); if (o && SEC[o]) R.sec = o; } catch (e) {}
   if (location.hash) try { history.replaceState(null, "", location.pathname + location.search); } catch (e) {}
 })();
 // the plan tag next to "My garage": tap it to see plans
