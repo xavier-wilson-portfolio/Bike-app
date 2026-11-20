@@ -142,6 +142,7 @@ function renderRail() {
 }
 function renderNav() {
   try { renderRail(); } catch (e) {}
+  try { document.documentElement.dataset.sec = R.sec; } catch (e) {}
   const cur = R.sec === "lesson" ? "course" : R.sec, inMore = !!SEC[cur]?.grp, mg = $("#mega");
   $("#nav").innerHTML = SECTIONS.filter(s => s.main).map(s => `<button class="nl ${cur === s.id ? "on" : ""}" data-goto="${s.id}" ${cur === s.id ? 'aria-current="page"' : ""}>${esc(s.t)}</button>`).join("") +
     `<button class="nl ${inMore ? "on" : ""} ${mg && !mg.hidden ? "open" : ""}" data-more aria-expanded="${mg && !mg.hidden}">More ${ic("chev")}</button>`;
