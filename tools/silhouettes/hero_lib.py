@@ -21,6 +21,7 @@ def tan(img):
     a=a*(1-TAN_MIX)+tone*TAN_MIX
     return Image.fromarray(np.clip(a*255,0,255).astype(np.uint8))
 FRONT=False
+TW=None
 MAXTOP=0.35   # more than this hidden at the top and the name goes to the bottom, in front
 def hero(i,big,label,year=""):
     global W,H
@@ -40,7 +41,7 @@ def hero(i,big,label,year=""):
     # name: Inter Black Italic, stretched edge to edge across the top of the header, behind the bike
     FONT=FD+'Inter-BlackItalic.otf'; PAD=int(W*0.02)
     f=ImageFont.truetype(FONT,400); bb=d.textbbox((0,0),big,font=f)
-    f=ImageFont.truetype(FONT,int(400*(W-2*PAD)/(bb[2]-bb[0])))
+    f=ImageFont.truetype(FONT,int(400*(TW or W-2*PAD)/(bb[2]-bb[0])))
     bb=d.textbbox((0,0),big,font=f)
     if bb[3]-bb[1]>H*0.42: f=ImageFont.truetype(FONT,int(f.size*H*0.42/(bb[3]-bb[1]))); bb=d.textbbox((0,0),big,font=f)
     ts=((W-(bb[2]-bb[0]))/2-bb[0], PAD-bb[1])
