@@ -1329,6 +1329,30 @@
     PREFS.seen = [...new Set([...(local.seen || []), ...(data.prefs.seen || [])])];
     ls.set(prefKey(), JSON.stringify(PREFS));
   }
+  // one-time note for people who signed up before the redesign went live (Nov 20, 2026); once per account, on any device
+  function newLookNote() {
+    try {
+      if (!session || window.RV_DEMO || PREFS.newLookSeen || ls.get("rv.newLookSeen")) return;
+      if (new Date(session.user.created_at) >= new Date("2026-11-20T05:00:00Z")) return;
+      if (document.querySelector(".rv-nl")) return;
+      const close = () => { bg.remove(); ls.set("rv.newLookSeen", "1"); window.rvPrefs.set({ newLookSeen: true }); };
+      const bg = document.createElement("div"); bg.className = "rv-nl";
+      bg.innerHTML = `<div class="rv-nl-box" role="dialog" aria-modal="true" aria-labelledby="rvnlT">
+        <p class="rv-nl-k">Welcome back</p>
+        <h2 id="rvnlT">New look, same Revora</h2>
+        <p>We redesigned the site. Your bikes, steps, parts and receipts are all right where you left them.</p>
+        <p>You can also make it your own now. Pick your colors, fonts, page layout and speedometer style in <b>Customize appearance</b>, and it follows you to every page and device.</p>
+        <div class="rv-nl-acts"><button class="btn tan" data-nllook>Customize appearance</button><button class="btn ghost" data-nlok>Got it</button></div>
+      </div>`;
+      document.body.appendChild(bg);
+      bg.querySelector("[data-nlok]").onclick = close;
+      bg.querySelector("[data-nllook]").onclick = () => { close(); if (window.rvOpenLook) rvOpenLook(); };
+      bg.addEventListener("click", e => { if (e.target === bg) close(); });
+      document.addEventListener("keydown", function k(e) { if (e.key === "Escape" && document.body.contains(bg)) { close(); document.removeEventListener("keydown", k); } });
+      bg.querySelector("[data-nllook]").focus();
+      track("new_look_note", "");
+    } catch (e) {}
+  }
   window.rvPrefs = {
     get: () => PREFS,
     set(patch) {
@@ -1403,6 +1427,7 @@
         if (session && Date.now() - new Date(session.user.created_at) < 36e5 && !ls.get("rv.joinedEv")) { ls.set("rv.joinedEv", "1"); track("account_new", (session.user.app_metadata || {}).provider || ""); }
         if (session) { try { await moveGuestBikes(); } catch (e) {} }
         await loadPrefs(); if (window.rvLookFromAccount) rvLookFromAccount(PREFS);
+        if (session) setTimeout(newLookNote, 900);
         if (recovering) return;
       }
     }

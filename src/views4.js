@@ -84,10 +84,10 @@ VIEWS.home = {
       </div>
       <div class="mh-row">
         ${UNIVERSAL ? `<section class="mh-panel p-parts"><div class="mh-ph"><h2><span class="mh-hi">${ic("gauge")}</span>${BIKE.tune ? "Built for the " + esc(BIKE.tune.name) : "Tailored for a " + esc(String(BIKE.styleName || "bike").toLowerCase())}</h2><button class="linkbtn" data-go="guides">Guide ${ic("next")}</button></div>
-          <div class="rs-specs">${(BIKE.styleFocus || []).map(([v, l]) => `<div><b>${esc(v)}</b><span>${esc(l)}</span></div>`).join("")}</div>
+          <div class="rs-specs">${(BIKE.styleFocus || []).map(([v, l]) => `<div><b>${esc(v).replace(/\//g, "/<wbr>")}</b><span>${esc(l)}</span></div>`).join("")}</div>
           <p class="faint" style="margin:auto 0 0;font-size:12.5px">${esc(BIKE.styleIntro || "")} Mark any step that doesn't fit your bike as Cancelled, and take every number from its factory manual.</p>
         </section>` : `<section class="mh-panel p-parts"><div class="mh-ph"><h2><span class="mh-hi">${ic("gauge")}</span>Bike specs</h2><a class="linkbtn" href="${SPEC_SOURCE.url}" target="_blank" rel="noopener">Source ${ic("next")}</a></div>
-          <div class="rs-specs">${SPECS.map(([v, l]) => `<div><b>${esc(v)}</b><span>${esc(l)}</span></div>`).join("")}</div>
+          <div class="rs-specs">${SPECS.map(([v, l]) => `<div><b>${esc(v).replace(/\//g, "/<wbr>")}</b><span>${esc(l)}</span></div>`).join("")}</div>
           <p class="faint" style="margin:auto 0 0;font-size:12.5px">${esc(BIKE.specNote || "Published specs for the " + BIKE.name + ".")} Always check against your bike and its factory manual.</p>
         </section>`}
         <section class="mh-panel p-hist"><div class="mh-ph"><h2><span class="mh-hi">${ic("clock")}</span>Recent activity</h2><button class="linkbtn" data-go="team">Work log ${ic("next")}</button></div>
