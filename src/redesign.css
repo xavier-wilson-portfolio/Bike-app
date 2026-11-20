@@ -399,3 +399,14 @@ html[data-sec="home"] .subbar{display:none}
 .rs-cur .rs-cur-t{gap:6px}.rs-cur .rs-n{font-size:13px;font-weight:600;color:#5B6B78}
 .rs-specs>*{background:#E6F1F8!important;border:0!important;border-radius:8px!important}.rs-specs b{font-family:var(--f-display);font-weight:400}
 @media (max-width:760px){.mh-hero .mh-hero-l{padding:26px 22px 20px}.mh-stats{margin:-36px 8px 0}}
+
+/* ===== bike pictures are never zoomed or cropped: the whole photo always shows ===== */
+.herophoto img,.herophoto.graded img,.herophoto.has img{object-fit:contain!important;object-position:50% 50%!important;background:#101A23}
+.herophoto.graded img{position:static;width:100%;height:auto;aspect-ratio:16/9}
+.mh-hero .mh-stage .herophoto{display:flex;align-items:center;background:transparent}
+.gx-art.photo img,.rd-win-hero .ph div.photo img{object-fit:contain!important}
+.gx-art.photo{background:#E6F1F8}
+.rd-win-hero .ph div.photo{aspect-ratio:16/9}
+.herophoto img,.herophoto.graded img,.herophoto.has img{background:transparent;height:auto!important;aspect-ratio:auto!important;max-height:100%;border-radius:8px}
+.mh-hero .mh-stage .herophoto{justify-content:center;height:100%}
+.mh-hero .mh-stage>.herophoto{display:flex!important;align-items:center!important;justify-content:center;height:auto;align-self:center;border:0;box-shadow:none;background:transparent}
