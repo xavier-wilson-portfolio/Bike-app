@@ -60,15 +60,25 @@
       if (short < best) { best = short; pick = f; }
     }
     h.style.setProperty("--phw", (pick * 100).toFixed(2) + "%");
+    // the photo credit: 8px above where the stat boxes start
+    const st = h.parentElement && h.parentElement.querySelector(".mh-stats");
+    if (st) { const over = Math.max(0, h.getBoundingClientRect().bottom - st.getBoundingClientRect().top); h.style.setProperty("--capb", Math.round(over + 8) + "px"); }
   }
   let busy = false;
-  function all() { if (busy) return; busy = true; document.querySelectorAll(".mh-hero").forEach(fit); busy = false; }
+  // the house icon on the side: its top lines up with the top of the first box on the page
+  function rail() {
+    const r = document.querySelector(".rv-rail"), c = document.querySelector("#content"), f = c && [...c.children].find(x => x.offsetHeight > 0);
+    if (!r || !f) return;
+    const ic = r.querySelector(".rl svg"), rl = r.querySelector(".rl"), inner = ic && rl ? ic.getBoundingClientRect().top - r.getBoundingClientRect().top : 0;
+    r.style.top = Math.round(f.getBoundingClientRect().top + scrollY - inner) + "px";
+  }
+  function all() { if (busy) return; busy = true; document.querySelectorAll(".mh-hero").forEach(fit); try { rail(); } catch (e) {} busy = false; }
   addEventListener("resize", all);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(all);
   addEventListener("load", all);
   // refit whenever the hero's width changes or new content is drawn (fonts, images, text)
   let raf = 0; const soon = () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(all); };
   const ro = window.ResizeObserver ? new ResizeObserver(() => { let w = 0; document.querySelectorAll(".mh-hero").forEach(h => w += h.clientWidth); if (w !== ro.w) { ro.w = w; soon(); } }) : null;
-  new MutationObserver(() => { document.querySelectorAll(".mh-hero:not([data-fit])").forEach(h => { h.setAttribute("data-fit", "1"); if (ro) ro.observe(h); soon(); setTimeout(all, 400); setTimeout(all, 1500); }); }).observe(document.documentElement, { childList: true, subtree: true });
+  let rraf = 0; new MutationObserver(() => { cancelAnimationFrame(rraf); rraf = requestAnimationFrame(() => { try { rail(); } catch (e) {} }); document.querySelectorAll(".mh-hero:not([data-fit])").forEach(h => { h.setAttribute("data-fit", "1"); if (ro) ro.observe(h); soon(); setTimeout(all, 400); setTimeout(all, 1500); }); }).observe(document.documentElement, { childList: true, subtree: true });
   window.rvFitHero = all;
 })();
