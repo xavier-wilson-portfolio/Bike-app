@@ -17,11 +17,11 @@ function silHero() {
 // Library bikes ship a finished header (name behind the bike); an owner's own photo gets the same grade with the name across the top.
 const heroName = () => String((BIKE.tune && BIKE.tune.heroName) || BIKE.short || BIKE.model || "").toUpperCase();
 function tuneHeroHtml(d) {
-  const T = BIKE.tune && BIKE.tune.hero, W = ME.canWrite, name = esc(heroName());
+  const T = (BIKE.tune && BIKE.tune.hero) || BIKE.photo, W = ME.canWrite, name = esc(heroName());
   if (d) return `<figure class="herophoto has graded"><img src="${d.file}" alt="${esc(d.title || "Photo of the " + (meta().bike || BIKE.name))}"><span class="hp-name" aria-hidden="true">${name}</span>
     ${W ? `<div class="hp-tools"><button class="btn sm" id="hpChange">${ic("image")} Change photo</button><button class="btn sm" id="hpRemove">${T ? "Use the stock photo" : "Remove photo"}</button></div>` : ""}</figure>`;
   if (!T) return null;
-  return `<figure class="herophoto has graded stock" tabindex="0"><img src="${esc(T.src)}" alt="Photo of a ${esc(BIKE.tune.name)}" width="1600" height="900">
+  return `<figure class="herophoto has graded stock" tabindex="0"><img src="${esc(T.src)}" alt="Photo of a ${esc((BIKE.tune && BIKE.tune.name) || (BIKE.photo && BIKE.photo.name) || BIKE.name)}" width="1600" height="900">
     <figcaption class="hp-cap">Photo: <a href="${esc(T.page)}" target="_blank" rel="noopener">${esc(T.artist)}</a>, <a href="${esc(T.licUrl)}" target="_blank" rel="noopener">${esc(T.lic)}</a></figcaption>
     ${W ? `<div class="hp-tools"><button class="btn sm" id="hpAdd">${ic("image")} Use my own photo</button></div>` : ""}</figure>`;
 }

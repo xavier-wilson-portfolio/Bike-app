@@ -40,6 +40,7 @@ for pdir in sorted((ROOT / 'data' / 'packs').iterdir()):
     if (pdir / 'baseline.json').exists():
         shutil.copy(pdir / 'baseline.json', od / 'baseline.json')
     index.append({k: bike.get(k) for k in ['id', 'year', 'make', 'model', 'variant', 'name', 'short', 'match', 'extras', 'status', 'generic', 'universal', 'styleName', 'reqKeys', 'style', 'silhouette']}
+                 | {'hero': (bike.get('hero') or {}).get('src')}
                  | {'diagrams': len(cms)})
 (out / 'packs' / 'index.json').write_text(json.dumps(index, separators=(',', ':'), ensure_ascii=False))
 
