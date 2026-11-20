@@ -501,12 +501,14 @@
     const first = String(profile?.display_name || session.user.email || "").split(/[\s@]/)[0];
     const pins = (PREFS.pinned || []).filter(id => data.some(p => p.id === id)), isPin = p => pins.includes(p.id);
     data.sort((a, b) => (isPin(a) ? pins.indexOf(a.id) : 1e6) - (isPin(b) ? pins.indexOf(b.id) : 1e6));
+    const order = (PREFS.garageOrder || []).filter(id => data.some(p => p.id === id)), ordIx = id => { const i = order.indexOf(id); return i < 0 ? 1e6 : i; };
+    if (order.length) data.sort((a, b) => ordIx(a.id) - ordIx(b.id));
     const styleOf = p => { const b = bikeOf(p.bike_id); return genStyle[p.id] || (b && b.style) || "standard"; };
     const theme = p => "th-" + styleOf(p);
-    const lastId = ls.get("rv.project"), feat = data.find(p => p.id === lastId) || data[0];
+    const lastId = ls.get("rv.project"), feat = order.length ? data[0] : data.find(p => p.id === lastId) || data[0];   // a bike dragged to the first spot leads the garage
     const pctOf = p => { const g = prog[p.id]; return g && g.total ? g.done / g.total * 100 : 0; };
     const who = p => p.role === "owner" ? (p.members > 1 ? `You and ${p.members - 1} other${p.members > 2 ? "s" : ""}` : "Just you") : p.role === "viewer" ? "Shared with you, view only" : "Shared with you";
-    const tag = p => { const b = bikeOf(p.bike_id), g = prog[p.id], pc = pctOf(p); return `<article class="gt ${theme(p)}${isPin(p) ? " pinned" : ""}">
+    const tag = p => { const b = bikeOf(p.bike_id), g = prog[p.id], pc = pctOf(p); return `<article class="gt ${theme(p)}${isPin(p) ? " pinned" : ""}" data-sort-id="${esc(p.id)}">
         <button class="gt-pin" data-pin="${esc(p.id)}" aria-pressed="${isPin(p)}" aria-label="${isPin(p) ? "Unpin" : "Pin"} ${esc(p.name || bikeName(b))}" title="${isPin(p) ? "Unpin" : "Pin to the top"}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></button>
         <button class="gt-open" data-project="${esc(p.id)}" aria-label="Open ${esc(p.name || bikeName(b))}">
           <span class="gt-bike">${isPin(p) ? `<span class="gt-pintag">Pinned</span>` : ""}${isLog(p) ? "Maintenance log · " + esc(STYLE_NAME[styleOf(p)] || "Standard") : isUni(p) ? esc(uniTxt(p)) : b && b.generic ? (readyFor(p) ? "Bike page ready" : "Maintenance log · " + esc(STYLE_NAME[styleOf(p)] || "Standard")) : esc((p.name && p.name !== bikeName(b)) ? bikeName(b) : (b && b.variant) || "")}</span><b class="gt-name">${esc(p.name || bikeName(b))}</b>
@@ -517,7 +519,7 @@
     const artSrc = p => { const b = bikeOf(p.bike_id); if (b && b.hero) return b.hero; const f = silFile(genSil[p.id]) || b && !b.generic && silFile(b.silhouette) || silFile("bike-" + styleOf(p)) || silFile("bike-standard"); return f ? "img/sil/" + f : ""; };
     const tagOf = p => { const g = prog[p.id]; return isLog(p) ? "Logging" : g && g.total && g.done >= g.total ? "Done" : g && g.done ? "Restoring · " + Math.round(pctOf(p)) + "%" : "Not started"; };
     const subOf = p => { const b = bikeOf(p.bike_id); return isLog(p) ? "Maintenance log · " + (STYLE_NAME[styleOf(p)] || "Standard") : isUni(p) ? uniTxt(p) : genLabel[p.id] || (b && !b.generic ? [p.name && p.name !== bikeName(b) ? bikeName(b) : "", b.variant].filter(Boolean).join(", ") : "") || "Your bike"; };
-    const card = p => `<button class="gx-bike" data-project="${esc(p.id)}" data-q="${esc([p.name, subOf(p)].join(" ").toLowerCase())}"><span class="gx-art${PHOTO[p.id] || LIB[p.id] ? " photo" : bikeOf(p.bike_id)?.hero ? " cut" : ""}" data-art="${esc(p.id)}">${PHOTO[p.id] || LIB[p.id] ? `<img src="${PHOTO[p.id] || LIB[p.id]}" alt="">` : artSrc(p) ? `<img src="${artSrc(p)}" alt="">` : ""}${isPin(p) ? `<span class="gx-pin">Pinned</span>` : ""}</span>
+    const card = p => `<button class="gx-bike" data-sort-id="${esc(p.id)}" data-project="${esc(p.id)}" data-q="${esc([p.name, subOf(p)].join(" ").toLowerCase())}"><span class="gx-art${PHOTO[p.id] || LIB[p.id] ? " photo" : bikeOf(p.bike_id)?.hero ? " cut" : ""}" data-art="${esc(p.id)}">${PHOTO[p.id] || LIB[p.id] ? `<img src="${PHOTO[p.id] || LIB[p.id]}" alt="">` : artSrc(p) ? `<img src="${artSrc(p)}" alt="">` : ""}${isPin(p) ? `<span class="gx-pin">Pinned</span>` : ""}</span>
       <span class="gx-bt"><b>${esc(p.name || bikeName(bikeOf(p.bike_id)))}</b><span>${esc(subOf(p))}</span><em>${esc(tagOf(p))}</em></span></button>`;
     const SHOW = 4, first4 = data.slice(0, SHOW), more = data.length - first4.length;
     const PHOTO = {}, LIB = {};
@@ -529,7 +531,7 @@
           <p class="muted">${data.length ? (data.length === 1 ? "One bike in your garage." : `${data.length} bikes in your garage.`) : "Your garage is empty. Add the bike you're working on to get started."}</p></div>
         ${feat ? `<div class="bench${isLog(feat) ? " nodial" : ""}">
           ${isLog(feat) ? "" : `<div class="bench-dial">${tach(pctOf(feat))}</div>`}
-          <div class="bench-txt"><span class="bench-k">${lastId === feat.id ? "Last opened" : "Newest project"}</span>
+          <div class="bench-txt"><span class="bench-k">${lastId === feat.id ? "Last opened" : order.length ? "First in your garage" : "Newest project"}</span>
             <h2>${esc(feat.name || bikeName(fb))}</h2><span class="bench-bike">${isLog(feat) ? "Maintenance log" : isUni(feat) ? esc(uniTxt(feat)) : fb && fb.generic ? (readyFor(feat) ? "The " + esc(bikeName(readyFor(feat))) + " page is ready to connect" : "We're building this bike's page") : esc([feat.name && feat.name !== bikeName(fb) ? bikeName(fb) : "", fb && fb.variant].filter(Boolean).join(", "))}</span>
             ${fg && fg.next ? `<div class="bench-next"><span>Next step</span><b>${esc(fg.next)}</b></div>` : fg && fg.total ? `<div class="bench-next"><span>Course</span><b>Every step is done. Time to ride.</b></div>` : ""}
             <div class="bench-go">${fb && fb.generic && readyFor(feat) && feat.role === "owner" ? `<button class="btn tan big" data-connect="${esc(feat.id)}">Connect to its page</button><button class="btn ghost-l" data-project="${esc(feat.id)}">Open project</button>` : `<button class="btn tan big" data-project="${esc(feat.id)}">Open project</button>`}<button class="btn ghost-l" data-nav="new">Start another bike</button></div></div>
@@ -540,7 +542,7 @@
       ${dealBand()}
       ${data.length ? `<section class="gx-bikes" id="gxBikes"><div class="gx-h"><h2>Your bikes</h2><span><button class="linkbtn" data-nav="new">+ New project</button>${data.length > 1 ? `<button class="linkbtn" data-gxall>See all ${data.length}</button>` : ""}</span></div>
         <div class="gx-grid">${first4.map(card).join("")}${more > 0 ? `<button class="gx-more" data-gxall><b>+${more}</b><span>more bike${more === 1 ? "" : "s"}</span><small>See all ${data.length}</small></button>` : ""}<button class="gx-add" data-nav="new"><i>${SI('<path d="M12 5v14M5 12h14"/>')}</i><b>Add a bike</b><small>Start a new project</small></button></div>
-        <p class="gx-none" id="gxNone" hidden>No bikes match that search.</p></section>` : ""}
+        <p class="gx-none" id="gxNone" hidden>No bikes match that search.</p>${data.length > 1 ? `<p class="gx-hint">Hold a bike and drag it to move it. The first bike leads your garage.</p>` : ""}</section>` : ""}
       ${shopBand(myShop, allP.length - data.length)}${clientBand(cHomes)}
       ${window.rvAdmin && window.rvPlanOf && myPlan().admin ? `<div id="admHQ"></div>` : ""}
       <div id="woBoard"></div>
@@ -607,16 +609,57 @@
       const v = q.value.trim().toLowerCase(), grid = app.querySelector(".gx-grid");
       if (!grid) return;
       if (v && !grid.dataset.full) { grid.dataset.full = "1"; grid.innerHTML = data.map(card).join(""); }
-      if (!v && grid.dataset.full) { delete grid.dataset.full; grid.innerHTML = first4.map(card).join("") + (more > 0 ? `<button class="gx-more" data-gxall><b>+${more}</b><span>more bike${more === 1 ? "" : "s"}</span><small>See all ${data.length}</small></button>` : "") + `<button class="gx-add" data-nav="new"><i>${SI('<path d="M12 5v14M5 12h14"/>')}</i><b>Add a bike</b><small>Start a new project</small></button>`; grid.querySelectorAll("[data-gxall]").forEach(b => b.onclick = () => allBikes()); }
+      if (!v && grid.dataset.full) { delete grid.dataset.full; grid.innerHTML = first4.map(card).join("") + (more > 0 ? `<button class="gx-more" data-gxall><b>+${more}</b><span>more bike${more === 1 ? "" : "s"}</span><small>See all ${data.length}</small></button>` : "") + `<button class="gx-add" data-nav="new"><i>${SI('<path d="M12 5v14M5 12h14"/>')}</i><b>Add a bike</b><small>Start a new project</small></button>`; grid.querySelectorAll("[data-gxall]").forEach(b => b.onclick = () => allBikes()); enableSort(grid); }
       let n = 0; grid.querySelectorAll(".gx-bike").forEach(c => { const on = !v || c.dataset.q.includes(v); c.hidden = !on; if (on) n++; });
       document.getElementById("gxNone").hidden = !(v && !n);
     };
+    // hold a bike and drag it to a new spot (mouse: press and move; touch: hold for a moment, then move)
+    function enableSort(box) {
+      if (!box) return;
+      let suppressClick = false;
+      box.addEventListener("click", e => { if (suppressClick) { e.preventDefault(); e.stopPropagation(); suppressClick = false; } }, true);
+      box.querySelectorAll("[data-sort-id]").forEach(el => el.addEventListener("pointerdown", e => {
+        if (e.button !== 0 || e.target.closest("[data-pin],[data-share],[data-rename],[data-transfer],[data-del],[data-leave],[data-connect],input,select")) return;
+        const touch = e.pointerType !== "mouse", sx = e.clientX, sy = e.clientY, r0 = el.getBoundingClientRect(), ox = sx - r0.left, oy = sy - r0.top;
+        let on = false, timer = null, lx = sx, ly = sy;
+        const blockScroll = ev => { if (on) ev.preventDefault(); };
+        const begin = () => { on = true; el.classList.add("rv-dragging"); box.classList.add("rv-sorting"); try { el.setPointerCapture(e.pointerId); } catch (x) {} if (navigator.vibrate) try { navigator.vibrate(15); } catch (x) {} place(lx, ly); };
+        const place = (x, y) => {
+          el.style.transform = ""; const r = el.getBoundingClientRect();
+          el.style.transform = `translate(${x - ox - r.left}px,${y - oy - r.top}px) scale(1.04)`;
+          const under = document.elementFromPoint(x, y), t = under && under.closest("[data-sort-id]");
+          if (t && t !== el && t.parentNode === el.parentNode) {
+            const tr = t.getBoundingClientRect(), after = (x - tr.left) / tr.width > .5 || (y - tr.top) / tr.height > .8;
+            el.parentNode.insertBefore(el, after ? t.nextSibling : t);
+            el.style.transform = ""; const r2 = el.getBoundingClientRect(); el.style.transform = `translate(${x - ox - r2.left}px,${y - oy - r2.top}px) scale(1.04)`;
+          }
+        };
+        const move = ev => {
+          lx = ev.clientX; ly = ev.clientY;
+          if (!on) { const d = Math.hypot(lx - sx, ly - sy); if (touch) { if (d > 10) stop(false); return; } if (d < 6) return; begin(); }
+          ev.preventDefault(); place(lx, ly);
+        };
+        const stop = done => {
+          clearTimeout(timer); removeEventListener("pointermove", move); removeEventListener("pointerup", up); removeEventListener("pointercancel", cancel); removeEventListener("touchmove", blockScroll);
+          if (!on) return;
+          on = false; el.classList.remove("rv-dragging"); box.classList.remove("rv-sorting"); el.style.transform = ""; suppressClick = true; setTimeout(() => suppressClick = false, 400);
+          if (!done) return;
+          const shown = [...el.parentNode.querySelectorAll("[data-sort-id]")].map(x => x.dataset.sortId), rest = data.map(p => p.id).filter(id => !shown.includes(id));
+          const next = shown.concat(rest);
+          if (next.join() !== data.map(p => p.id).join()) { window.rvPrefs.set({ garageOrder: next }); showProjects(); }
+        };
+        const up = () => stop(true), cancel = () => stop(false);
+        addEventListener("pointermove", move, { passive: false }); addEventListener("pointerup", up); addEventListener("pointercancel", cancel); addEventListener("touchmove", blockScroll, { passive: false });
+        if (touch) timer = setTimeout(begin, 320);
+      }));
+    }
+    enableSort(app.querySelector(".gx-grid"));
     // every bike, with pins and the owner actions
     function allBikes() {
       const host = document.getElementById("gxBikes"); if (!host) return;
       host.innerHTML = `<div class="gx-h"><h2>All your bikes</h2><span><button class="linkbtn" data-nav="new">+ New project</button><button class="linkbtn" data-gxback>Show fewer</button></span></div><div class="gts">${data.map(tag).join("")}</div>`;
       host.querySelector("[data-gxback]").onclick = () => showProjects();
-      bindCards(host); host.scrollIntoView({ behavior: "smooth", block: "start" });
+      bindCards(host); enableSort(host.querySelector(".gts")); host.scrollIntoView({ behavior: "smooth", block: "start" });
     }
     if (window.rvTokens) rvTokens.band(sb, document.getElementById("tokBand"));
     app.querySelectorAll("[data-crm]").forEach(b => b.onclick = () => goUrl({ crm: 1 }));
@@ -629,7 +672,7 @@
     if (window.rvShop) rvShop.bind(app, {});
     function bindCards(root) {
     root.querySelectorAll("[data-connect]").forEach(b => b.onclick = e => { e.stopPropagation(); const p = data.find(x => x.id === b.dataset.connect); connectProject(p, readyFor(p)); });
-    root.querySelectorAll("[data-pin]").forEach(b => b.onclick = e => { e.stopPropagation(); const id = b.dataset.pin, cur = (PREFS.pinned || []).filter(x => x !== id); window.rvPrefs.set({ pinned: b.getAttribute("aria-pressed") === "true" ? cur : [id].concat(cur) }); showProjects(); });
+    root.querySelectorAll("[data-pin]").forEach(b => b.onclick = e => { e.stopPropagation(); const id = b.dataset.pin, cur = (PREFS.pinned || []).filter(x => x !== id); const pinning = b.getAttribute("aria-pressed") !== "true"; window.rvPrefs.set(Object.assign({ pinned: pinning ? [id].concat(cur) : cur }, pinning && PREFS.garageOrder ? { garageOrder: [id].concat(PREFS.garageOrder.filter(x => x !== id)) } : {})); showProjects(); });
     root.querySelectorAll("[data-rename]").forEach(b => b.onclick = async () => {
       const p = data.find(x => x.id === b.dataset.rename); const name = prompt("Project name", p.name || ""); if (name === null) return;
       const { error } = await sb.from("projects").update({ name: name.trim().slice(0, 80) }).eq("id", p.id); if (error) note(friendly(error), true); else showProjects();

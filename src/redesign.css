@@ -283,3 +283,18 @@ h1.disp,.sec,.page-h h1{font-family:var(--f-display);font-weight:400;letter-spac
 .rd-win-hero .ph div.photo{background:none;display:block}.rd-win-hero .ph div.photo img{width:100%;height:100%;object-fit:cover;border-radius:8px;display:block}
 /* photos fill the top of the garage card edge to edge, like the mockup */
 .gx-art.photo img{inset:0;width:100%;height:100%;object-fit:cover;border-radius:0}
+
+/* ===== every box lifts when you hover it (project pages and the rest of the app) ===== */
+@media (hover:hover){
+  :is(.panel,.mh-panel,.mh-stat,.card,.kpi,.lesson,.gcard,.gtile,.gtile2,.cl-card,.cl-run,.contcard,.cv-card,.cv-shop,.dcard,.gal-card,.lib-guide,.md-card,.mtcard,.ph-card,.pl-card,.planrow,.pp-card,.pv-card,.pv-opt,.rc-card,.rcl-card,.rm-how,.shop,.st,.step3,.sx-bike,.sx-kpi,.sx-panel,.sx-remind,.tcard,.tip,.vcard,.wk-safe,.wk-sum,.wo-decide,.fin,.focus-banner,.rs-cur,.rs-nx,.guide,.process li){transition:transform .22s ease,box-shadow .22s ease}
+  :is(.panel,.mh-panel,.mh-stat,.card,.kpi,.lesson,.gcard,.gtile,.gtile2,.cl-card,.cl-run,.contcard,.cv-card,.cv-shop,.dcard,.gal-card,.lib-guide,.md-card,.mtcard,.ph-card,.pl-card,.planrow,.pp-card,.pv-card,.pv-opt,.rc-card,.rcl-card,.rm-how,.shop,.st,.step3,.sx-bike,.sx-kpi,.sx-panel,.sx-remind,.tcard,.tip,.vcard,.wk-safe,.wk-sum,.wo-decide,.fin,.focus-banner,.rs-cur,.rs-nx,.guide,.process li):hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(44,66,83,.18),0 3px 8px rgba(44,66,83,.10)}
+  .modal :is(.panel,.card,.st):hover,.lk :is(.lk-p):hover{transform:none}
+}
+@media (prefers-reduced-motion:reduce){:is(.panel,.mh-panel,.mh-stat,.card,.kpi,.st):hover{transform:none!important}}
+
+/* ===== garage: drag a bike to a new spot ===== */
+.gx-grid [data-sort-id],.gx-bikes .gts [data-sort-id]{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;touch-action:manipulation}
+.gx-grid [data-sort-id] img{-webkit-user-drag:none;pointer-events:none}
+.rv-dragging{position:relative;z-index:50;pointer-events:none;transition:none!important;box-shadow:0 30px 60px rgba(23,35,44,.35)!important;cursor:grabbing}
+.rv-sorting [data-sort-id]:not(.rv-dragging){transition:transform .2s ease}
+.gx-hint{margin:8px 0 0;font-size:13px;color:#5B6B78}
