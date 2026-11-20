@@ -432,3 +432,10 @@ html[data-sec="home"] .subbar{display:none}
   .mh-hero .mh-stage .herophoto > img:not(.hp-cut):not(.hp-art){position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 }
 @media (max-width:1020px){.mh-hero .mh-stage .herophoto{min-height:0!important;aspect-ratio:16/9}.mh-hero .mh-stage{padding-bottom:64px}}
+/* computer view: a shorter top box, no snap-a-receipt button in it */
+@media (min-width:1021px){
+  .mh-hero .mh-hero-l{padding:30px 40px 96px}
+  .mh-hero-l>p{margin-top:16px}
+  .mh-hero .mh-acts{margin-top:20px}
+  .mh-hero [data-snap]{display:none}
+}
