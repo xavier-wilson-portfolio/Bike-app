@@ -412,3 +412,21 @@ html[data-sec="home"] .subbar{display:none}
   html.has-rail .mh-hero{grid-template-columns:minmax(0,1fr) minmax(0,min(57%,720px))}
 }
 @media (min-width:900px){html.has-rail .top-in{max-width:none;margin-left:0;margin-right:0}}
+
+/* ===== clean like the mockup: white search box, the house stays at the top, whole bike photos ===== */
+.top .search{flex:0 0 200px;height:40px;align-items:center;background:#fff;border:1px solid rgba(44,66,83,.12);border-radius:8px;box-shadow:none}
+.top .search input{width:100%;height:38px;box-sizing:border-box;padding:0 14px;border:0;border-radius:8px;background:transparent;color:#2C4253;font-size:14px;box-shadow:none;outline:0}
+.top .search:focus-within{border-color:#2C5F7C}
+@media (min-width:601px){.top .search{display:flex}}
+.rv-rail{position:absolute}
+/* the project photo: always the whole picture, never zoomed or cut */
+.mh-hero .mh-stage{display:flex;align-items:center;padding:7px 7px 88px}
+.mh-hero .mh-stage .herophoto{flex:1 1 auto;width:100%;height:auto;min-height:0!important;aspect-ratio:auto;background:transparent}
+.mh-hero .mh-stage .herophoto > img:not(.hp-cut):not(.hp-art){position:static;display:block;width:100%;height:auto;object-fit:contain;border-radius:8px}
+@media (max-width:1020px){.mh-hero .mh-stage{padding:8px 8px 60px}}
+/* garage cards: the whole photo */
+.gx-art.photo img{object-fit:contain}
+/* maintenance-log home: the same four boxes as the course home */
+.mh-row.mg4 .rs-specs{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin-top:4px}
+.mh-row.mg4 .rs-specs>div{background:#E6F1F8;border-radius:8px;padding:12px 14px}.mh-row.mg4 .rs-specs b{display:block;font-family:var(--f-display);font-weight:400;font-size:14px}.mh-row.mg4 .rs-specs span{display:block;margin-top:4px;font-size:13px;color:#3A4A57}
+.mg-course{background:#E6F1F8;border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:8px;align-items:flex-start}.mg-course b{font-family:var(--f-display);font-weight:400;font-size:16px}
