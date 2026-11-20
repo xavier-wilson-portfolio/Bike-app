@@ -11,6 +11,10 @@ self.addEventListener("fetch", e => {
     e.respondWith(fetch(r).then(res => { const c = res.clone(); caches.open(V).then(x => x.put("./index.html", c)); return res; }).catch(() => caches.match("./index.html")));
     return;
   }
+  if (/\/img\/hero\//.test(u.pathname)) {                                   // bike photos: newest first, the saved copy when offline
+    e.respondWith(caches.open(V).then(c => fetch(r).then(res => { if (res.ok) c.put(r, res.clone()); return res; }).catch(() => c.match(r))));
+    return;
+  }
   if (/\/(app\.js|img\/|packs\/[^/]+\/pack\.json|packs\/index\.json)/.test(u.pathname)) {   // versioned files: cache, refresh in the background
     e.respondWith(caches.open(V).then(c => c.match(r).then(hit => { const net = fetch(r).then(res => { if (res.ok) c.put(r, res.clone()); return res; }).catch(() => hit); return hit || net; })));
   }

@@ -1543,7 +1543,12 @@
     },
     drop() { try { localStorage.removeItem("rv.pendingRoute"); } catch (e) {} }
   };
-  if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+  if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) window.addEventListener("load", () => {
+    // the installed app: when a new version of the site lands, swap to it right away instead of on the next open
+    const had = !!navigator.serviceWorker.controller; let done = false;
+    navigator.serviceWorker.addEventListener("controllerchange", () => { if (had && !done) { done = true; location.reload(); } });
+    navigator.serviceWorker.register("sw.js").then(r => r.update()).catch(() => {});
+  });
 
   start();
 })();
